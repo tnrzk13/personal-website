@@ -58,12 +58,6 @@
 </div>
 
 <style>
-  :global(body) {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
   .parallax-container {
     position: fixed;
     width: 100%;
