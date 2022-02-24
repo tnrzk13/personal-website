@@ -3,7 +3,7 @@ var ghpages = require("gh-pages");
 ghpages.publish(
   "public",
   {
-    branch: "gh-pages",
+    branch: "main",
     repo: "https://github.com/tnrzk13/personal-website.git",
     user: {
       name: "tnrzk13",
