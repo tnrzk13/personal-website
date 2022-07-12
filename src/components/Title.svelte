@@ -116,13 +116,7 @@
       font-size: 3vw;
       padding-top: 0.5em;
       text-align: center;
-      background-image: linear-gradient(
-        180deg,
-        #1600a7,
-        #eb419e,
-        #1600a7,
-        #eb419e
-      );
+      background-image: linear-gradient(180deg, white, #c531ad, white, #c531ad);
       // background-clip: text;
       -webkit-background-clip: text;
       color: transparent;

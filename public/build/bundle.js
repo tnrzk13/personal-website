@@ -560,7 +560,7 @@ var app = (function () {
     const { window: window_1 } = globals;
     const file$c = "src\\components\\Title.svelte";
 
-    function get_each_context$2(ctx, list, i) {
+    function get_each_context$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
     	child_ctx[9] = list[i];
     	return child_ctx;
@@ -577,7 +577,7 @@ var app = (function () {
     			set_style(img, "transform", "translate(0," + -/*y*/ ctx[1] * (/*layer*/ ctx[9] - 1) / (/*layers*/ ctx[2].length - 1) + "px)");
     			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + /*layer*/ ctx[9] + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[9]);
-    			attr_dev(img, "class", "svelte-17j6axv");
+    			attr_dev(img, "class", "svelte-fs1vwr");
     			add_location(img, file$c, 56, 6, 2113);
     		},
     		m: function mount(target, anchor) {
@@ -615,7 +615,7 @@ var app = (function () {
     			set_style(img, "transform", "translate(0," + -/*y*/ ctx[1] + "px)");
     			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + /*layer*/ ctx[9] + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[9]);
-    			attr_dev(img, "class", "svelte-17j6axv");
+    			attr_dev(img, "class", "svelte-fs1vwr");
     			add_location(img, file$c, 50, 6, 1951);
     		},
     		m: function mount(target, anchor) {
@@ -653,7 +653,7 @@ var app = (function () {
     			set_style(img, "transform", "translate(0," + -/*y*/ ctx[1] * (/*layer*/ ctx[9] - 1) / (/*layers*/ ctx[2].length - 1) + "px)");
     			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[9] + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[9]);
-    			attr_dev(img, "class", "svelte-17j6axv");
+    			attr_dev(img, "class", "svelte-fs1vwr");
     			add_location(img, file$c, 43, 6, 1723);
     		},
     		m: function mount(target, anchor) {
@@ -713,19 +713,19 @@ var app = (function () {
     			div4 = element("div");
     			i = element("i");
     			t8 = space();
-    			attr_dev(div0, "class", "textLayer-preamble svelte-17j6axv");
+    			attr_dev(div0, "class", "textLayer-preamble svelte-fs1vwr");
     			add_location(div0, file$c, 35, 8, 1268);
-    			attr_dev(div1, "class", "textLayer-title svelte-17j6axv");
+    			attr_dev(div1, "class", "textLayer-title svelte-fs1vwr");
     			add_location(div1, file$c, 36, 8, 1326);
-    			attr_dev(div2, "class", "textLayer-subtitle svelte-17j6axv");
+    			attr_dev(div2, "class", "textLayer-subtitle svelte-fs1vwr");
     			add_location(div2, file$c, 37, 8, 1378);
-    			attr_dev(div3, "class", "textLayer-description svelte-17j6axv");
+    			attr_dev(div3, "class", "textLayer-description svelte-fs1vwr");
     			add_location(div3, file$c, 38, 8, 1436);
     			attr_dev(i, "class", "fa-solid fa-angles-down");
     			add_location(i, file$c, 39, 32, 1524);
-    			attr_dev(div4, "class", "scrolldown svelte-17j6axv");
+    			attr_dev(div4, "class", "scrolldown svelte-fs1vwr");
     			add_location(div4, file$c, 39, 8, 1500);
-    			attr_dev(div5, "class", "textLayer svelte-17j6axv");
+    			attr_dev(div5, "class", "textLayer svelte-fs1vwr");
     			add_location(div5, file$c, 34, 6, 1235);
     		},
     		m: function mount(target, anchor) {
@@ -771,7 +771,7 @@ var app = (function () {
     			set_style(img, "transform", "translate(0," + -/*y*/ ctx[1] * /*layer*/ ctx[9] / (/*layers*/ ctx[2].length - 1) + "px)");
     			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[9] + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[9]);
-    			attr_dev(img, "class", "svelte-17j6axv");
+    			attr_dev(img, "class", "svelte-fs1vwr");
     			add_location(img, file$c, 28, 6, 1017);
     		},
     		m: function mount(target, anchor) {
@@ -799,7 +799,7 @@ var app = (function () {
     }
 
     // (27:2) {#each layers as layer}
-    function create_each_block$2(ctx) {
+    function create_each_block$3(ctx) {
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
@@ -833,7 +833,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block$2.name,
+    		id: create_each_block$3.name,
     		type: "each",
     		source: "(27:2) {#each layers as layer}",
     		ctx
@@ -859,7 +859,7 @@ var app = (function () {
     	let each_blocks = [];
 
     	for (let i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+    		each_blocks[i] = create_each_block$3(get_each_context$3(ctx, each_value, i));
     	}
 
     	const block = {
@@ -870,7 +870,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "parallax-container svelte-17j6axv");
+    			attr_dev(div, "class", "parallax-container svelte-fs1vwr");
     			set_style(div, "height", /*containerHeight*/ ctx[0] - /*y*/ ctx[1] + "px");
     			add_location(div, file$c, 22, 0, 714);
     		},
@@ -909,12 +909,12 @@ var app = (function () {
     				let i;
 
     				for (i = 0; i < each_value.length; i += 1) {
-    					const child_ctx = get_each_context$2(ctx, each_value, i);
+    					const child_ctx = get_each_context$3(ctx, each_value, i);
 
     					if (each_blocks[i]) {
     						each_blocks[i].p(child_ctx, dirty);
     					} else {
-    						each_blocks[i] = create_each_block$2(child_ctx);
+    						each_blocks[i] = create_each_block$3(child_ctx);
     						each_blocks[i].c();
     						each_blocks[i].m(div, null);
     					}
@@ -1037,64 +1037,303 @@ var app = (function () {
 
     const file$b = "src\\components\\AboutMe.svelte";
 
+    function get_each_context$2(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[4] = list[i];
+    	child_ctx[6] = i;
+    	return child_ctx;
+    }
+
+    function get_each_context_1$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[4] = list[i];
+    	child_ctx[6] = i;
+    	return child_ctx;
+    }
+
+    // (33:10) {#each techs1 as tech, index}
+    function create_each_block_1$1(ctx) {
+    	let li;
+    	let t_value = /*tech*/ ctx[4] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t = text(t_value);
+    			add_location(li, file$b, 33, 12, 1379);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1$1.name,
+    		type: "each",
+    		source: "(33:10) {#each techs1 as tech, index}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (38:10) {#each techs2 as tech, index}
+    function create_each_block$2(ctx) {
+    	let li;
+    	let t_value = /*tech*/ ctx[4] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t = text(t_value);
+    			add_location(li, file$b, 38, 12, 1528);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$2.name,
+    		type: "each",
+    		source: "(38:10) {#each techs2 as tech, index}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
     function create_fragment$c(ctx) {
-    	let div1;
+    	let div6;
     	let div0;
     	let t0;
     	let br0;
     	let br1;
     	let t1;
-    	let br2;
+    	let div5;
+    	let div3;
+    	let div1;
     	let t2;
+    	let br2;
     	let br3;
     	let t3;
+    	let br4;
+    	let t4;
+    	let br5;
+    	let t5;
+    	let br6;
+    	let br7;
+    	let t6;
+    	let div2;
+    	let ul0;
+    	let t7;
+    	let ul1;
+    	let t8;
+    	let div4;
+    	let img;
+    	let img_src_value;
+    	let each_value_1 = /*techs1*/ ctx[1];
+    	validate_each_argument(each_value_1);
+    	let each_blocks_1 = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
+    	}
+
+    	let each_value = /*techs2*/ ctx[2];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+    	}
 
     	const block = {
     		c: function create() {
-    			div1 = element("div");
+    			div6 = element("div");
     			div0 = element("div");
-    			t0 = text("Hello! I'm Tony and I like creating things using data. My interest began\r\n    during my first co-op term as an accountant, when I needed to manipulate\r\n    data in Excel. It went from keyboard shortcuts to VBA to quickly\r\n    transferring out of my accounting program!\r\n    ");
+    			t0 = text("About Me ");
     			br0 = element("br");
     			br1 = element("br");
-    			t1 = text("\r\n    What’s happened since then? I’ve had the privilege of working as a Full Stack\r\n    Developer, a Data Specialist, and even an Innovation Catalyst! I recently enjoyed\r\n    my relaxing post-graduation break and now I’m looking for a company to join for\r\n    my next adventure.\r\n    ");
+    			t1 = space();
+    			div5 = element("div");
+    			div3 = element("div");
+    			div1 = element("div");
+    			t2 = text("Hi! I'm Tony and I like creating things using data. My interest began\r\n        during my first co-op term as an accountant, when I needed to manipulate\r\n        data in Excel. It went from keyboard shortcuts to VBA to quickly\r\n        transferring out of my accounting program!\r\n        ");
     			br2 = element("br");
-    			t2 = space();
     			br3 = element("br");
-    			t3 = text("\r\n    Here are a few technologies I’ve been working with: - Python - JavaScript - Svelte\r\n    - SQL - Node JS");
-    			add_location(br0, file$b, 15, 4, 576);
-    			add_location(br1, file$b, 15, 10, 582);
-    			add_location(br2, file$b, 20, 4, 873);
-    			add_location(br3, file$b, 20, 11, 880);
-    			attr_dev(div0, "class", "text");
-    			add_location(div0, file$b, 10, 2, 278);
-    			attr_dev(div1, "class", "aboutMe svelte-1x4xwlp");
-    			set_style(div1, "top", /*foregroundTop*/ ctx[0] + "px");
-    			add_location(div1, file$b, 9, 0, 221);
+    			t3 = text("\r\n        What’s happened since then? I’ve had the privilege of working as a Full Stack\r\n        Developer, a Data Specialist, and even an Innovation Catalyst! I recently\r\n        enjoyed my relaxing post-graduation break and now I’m looking for a company\r\n        to join for my next adventure.\r\n        ");
+    			br4 = element("br");
+    			t4 = space();
+    			br5 = element("br");
+    			t5 = text("\r\n        Here are a few technologies I’ve been working with:\r\n        ");
+    			br6 = element("br");
+    			br7 = element("br");
+    			t6 = space();
+    			div2 = element("div");
+    			ul0 = element("ul");
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t7 = space();
+    			ul1 = element("ul");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t8 = space();
+    			div4 = element("div");
+    			img = element("img");
+    			add_location(br0, file$b, 13, 40, 406);
+    			add_location(br1, file$b, 13, 46, 412);
+    			attr_dev(div0, "class", "title col-md-9  svelte-gjhnfz");
+    			add_location(div0, file$b, 13, 2, 368);
+    			add_location(br2, file$b, 21, 8, 817);
+    			add_location(br3, file$b, 21, 14, 823);
+    			add_location(br4, file$b, 26, 8, 1134);
+    			add_location(br5, file$b, 26, 15, 1141);
+    			add_location(br6, file$b, 28, 8, 1218);
+    			add_location(br7, file$b, 28, 14, 1224);
+    			attr_dev(div1, "class", "description svelte-gjhnfz");
+    			add_location(div1, file$b, 16, 6, 495);
+    			attr_dev(ul0, "class", "list-unstyled col-md-6");
+    			add_location(ul0, file$b, 31, 8, 1289);
+    			attr_dev(ul1, "class", "list-unstyled col-md-6");
+    			add_location(ul1, file$b, 36, 8, 1438);
+    			attr_dev(div2, "class", "row techlist1 svelte-gjhnfz");
+    			add_location(div2, file$b, 30, 6, 1252);
+    			attr_dev(div3, "class", "text col-md-7 svelte-gjhnfz");
+    			add_location(div3, file$b, 15, 4, 460);
+    			attr_dev(img, "class", "aboutmeimg svelte-gjhnfz");
+    			if (!src_url_equal(img.src, img_src_value = "images/aboutme/self2.png")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "tony kwok");
+    			add_location(img, file$b, 44, 6, 1646);
+    			attr_dev(div4, "class", "imgdiv col-md-5 svelte-gjhnfz");
+    			add_location(div4, file$b, 43, 4, 1609);
+    			attr_dev(div5, "class", "row col-md-9 svelte-gjhnfz");
+    			add_location(div5, file$b, 14, 2, 428);
+    			attr_dev(div6, "class", "aboutMe svelte-gjhnfz");
+    			set_style(div6, "top", /*foregroundTop*/ ctx[0] + "px");
+    			add_location(div6, file$b, 12, 0, 311);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div1, anchor);
-    			append_dev(div1, div0);
+    			insert_dev(target, div6, anchor);
+    			append_dev(div6, div0);
     			append_dev(div0, t0);
     			append_dev(div0, br0);
     			append_dev(div0, br1);
-    			append_dev(div0, t1);
-    			append_dev(div0, br2);
-    			append_dev(div0, t2);
-    			append_dev(div0, br3);
-    			append_dev(div0, t3);
+    			append_dev(div6, t1);
+    			append_dev(div6, div5);
+    			append_dev(div5, div3);
+    			append_dev(div3, div1);
+    			append_dev(div1, t2);
+    			append_dev(div1, br2);
+    			append_dev(div1, br3);
+    			append_dev(div1, t3);
+    			append_dev(div1, br4);
+    			append_dev(div1, t4);
+    			append_dev(div1, br5);
+    			append_dev(div1, t5);
+    			append_dev(div1, br6);
+    			append_dev(div1, br7);
+    			append_dev(div3, t6);
+    			append_dev(div3, div2);
+    			append_dev(div2, ul0);
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(ul0, null);
+    			}
+
+    			append_dev(div2, t7);
+    			append_dev(div2, ul1);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(ul1, null);
+    			}
+
+    			append_dev(div5, t8);
+    			append_dev(div5, div4);
+    			append_dev(div4, img);
     		},
     		p: function update(ctx, [dirty]) {
+    			if (dirty & /*techs1*/ 2) {
+    				each_value_1 = /*techs1*/ ctx[1];
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$1(ctx, each_value_1, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_1[i] = create_each_block_1$1(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(ul0, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+
+    				each_blocks_1.length = each_value_1.length;
+    			}
+
+    			if (dirty & /*techs2*/ 4) {
+    				each_value = /*techs2*/ ctx[2];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$2(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$2(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(ul1, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+
     			if (dirty & /*foregroundTop*/ 1) {
-    				set_style(div1, "top", /*foregroundTop*/ ctx[0] + "px");
+    				set_style(div6, "top", /*foregroundTop*/ ctx[0] + "px");
     			}
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div1);
+    			if (detaching) detach_dev(div6);
+    			destroy_each(each_blocks_1, detaching);
+    			destroy_each(each_blocks, detaching);
     		}
     	};
 
@@ -1120,23 +1359,32 @@ var app = (function () {
     		$$invalidate(0, foregroundTop = window.screen.availWidth * 0.5625);
     	}
 
+    	let techs1 = ["Python", "Javascript", "Svelte"];
+    	let techs2 = ["SQL", "Node.JS"];
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<AboutMe> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ foregroundTop, getForegroundStart });
+    	$$self.$capture_state = () => ({
+    		foregroundTop,
+    		getForegroundStart,
+    		techs1,
+    		techs2
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('foregroundTop' in $$props) $$invalidate(0, foregroundTop = $$props.foregroundTop);
+    		if ('techs1' in $$props) $$invalidate(1, techs1 = $$props.techs1);
+    		if ('techs2' in $$props) $$invalidate(2, techs2 = $$props.techs2);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [foregroundTop];
+    	return [foregroundTop, techs1, techs2];
     }
 
     class AboutMe extends SvelteComponentDev {
@@ -4191,9 +4439,9 @@ var app = (function () {
     			t = space();
     			div0 = element("div");
     			create_component(aboutme.$$.fragment);
-    			attr_dev(div0, "class", "content svelte-q57i86");
-    			add_location(div0, file, 17, 2, 532);
-    			attr_dev(div1, "class", "container svelte-q57i86");
+    			attr_dev(div0, "class", "content svelte-qx2fba");
+    			add_location(div0, file, 17, 2, 538);
+    			attr_dev(div1, "class", "container-fluid svelte-qx2fba");
     			add_location(div1, file, 15, 0, 492);
     		},
     		l: function claim(nodes) {

@@ -13,7 +13,7 @@
   console.log(foregroundTop);
 </script>
 
-<div class="container">
+<div class="container-fluid">
   <Title />
   <div class="content">
     <AboutMe />
@@ -23,10 +23,10 @@
 </div>
 
 <style lang="scss">
-  .container {
+  .container-fluid {
     position: relative;
     width: 100%;
-    text-align: center;
+    // text-align: center;
     padding: 0;
     margin: 0;
   }
