@@ -15,7 +15,7 @@
 
 <div class="container-fluid">
   <Title />
-  <div class="content">
+  <div class="content" style="top: {foregroundTop}px;">
     <AboutMe />
     <!-- <Intro /> -->
     <!-- <Info /> -->
@@ -32,11 +32,12 @@
   }
 
   .content {
+    position: absolute;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
-    height: auto;
-    background-color: black;
-    // background-image: linear-gradient(rgb(6, 0, 87), purple, gold);
+    background-image: linear-gradient(rgb(6, 0, 87), purple, gold);
     color: black;
   }
 </style>

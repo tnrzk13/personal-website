@@ -1,16 +1,17 @@
 <script>
-  window.onload = getForegroundStart;
-  window.onresize = getForegroundStart;
-  let foregroundTop;
-  function getForegroundStart() {
-    foregroundTop = window.screen.availWidth * 0.5625;
-  }
+  // window.onload = getForegroundStart;
+  // window.onresize = getForegroundStart;
+  // let foregroundTop;
+  // function getForegroundStart() {
+  //   foregroundTop = window.screen.availWidth * 0.5625;
+  // }
 
   let techs1 = ["Python", "Javascript", "Svelte"];
   let techs2 = ["SQL", "Node.JS"];
 </script>
 
-<div class="aboutMe" style="top: {foregroundTop}px;">
+<!-- <div class="aboutMe" style="top: {foregroundTop}px;"> -->
+<div class="aboutMe">
   <div class="title col-md-9 ">About Me <br /><br /></div>
   <div class="row col-md-9">
     <div class="text col-md-7">
@@ -49,13 +50,9 @@
 
 <style lang="scss">
   .aboutMe {
-    position: absolute;
     width: 100%;
-    height: 900px;
-    /* background-color: black; */
-    background-image: linear-gradient(rgb(6, 0, 87), purple, gold);
+    height: auto;
     color: white;
-    /* border-radius: 0 0 1.5em 1.5em; */
     padding: 0;
     margin: 0;
 
