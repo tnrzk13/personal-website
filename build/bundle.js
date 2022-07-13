@@ -1039,29 +1039,29 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[4] = list[i];
-    	child_ctx[6] = i;
+    	child_ctx[2] = list[i];
+    	child_ctx[4] = i;
     	return child_ctx;
     }
 
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[4] = list[i];
-    	child_ctx[6] = i;
+    	child_ctx[2] = list[i];
+    	child_ctx[4] = i;
     	return child_ctx;
     }
 
-    // (33:10) {#each techs1 as tech, index}
+    // (34:10) {#each techs1 as tech, index}
     function create_each_block_1$1(ctx) {
     	let li;
-    	let t_value = /*tech*/ ctx[4] + "";
+    	let t_value = /*tech*/ ctx[2] + "";
     	let t;
 
     	const block = {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$b, 33, 12, 1379);
+    			add_location(li, file$b, 34, 12, 1429);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -1077,24 +1077,24 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(33:10) {#each techs1 as tech, index}",
+    		source: "(34:10) {#each techs1 as tech, index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (38:10) {#each techs2 as tech, index}
+    // (39:10) {#each techs2 as tech, index}
     function create_each_block$2(ctx) {
     	let li;
-    	let t_value = /*tech*/ ctx[4] + "";
+    	let t_value = /*tech*/ ctx[2] + "";
     	let t;
 
     	const block = {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$b, 38, 12, 1528);
+    			add_location(li, file$b, 39, 12, 1578);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -1110,7 +1110,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(38:10) {#each techs2 as tech, index}",
+    		source: "(39:10) {#each techs2 as tech, index}",
     		ctx
     	});
 
@@ -1146,7 +1146,7 @@ var app = (function () {
     	let div4;
     	let img;
     	let img_src_value;
-    	let each_value_1 = /*techs1*/ ctx[1];
+    	let each_value_1 = /*techs1*/ ctx[0];
     	validate_each_argument(each_value_1);
     	let each_blocks_1 = [];
 
@@ -1154,7 +1154,7 @@ var app = (function () {
     		each_blocks_1[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
     	}
 
-    	let each_value = /*techs2*/ ctx[2];
+    	let each_value = /*techs2*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -1201,37 +1201,36 @@ var app = (function () {
     			t8 = space();
     			div4 = element("div");
     			img = element("img");
-    			add_location(br0, file$b, 13, 40, 406);
-    			add_location(br1, file$b, 13, 46, 412);
-    			attr_dev(div0, "class", "title col-md-9  svelte-gjhnfz");
-    			add_location(div0, file$b, 13, 2, 368);
-    			add_location(br2, file$b, 21, 8, 817);
-    			add_location(br3, file$b, 21, 14, 823);
-    			add_location(br4, file$b, 26, 8, 1134);
-    			add_location(br5, file$b, 26, 15, 1141);
-    			add_location(br6, file$b, 28, 8, 1218);
-    			add_location(br7, file$b, 28, 14, 1224);
-    			attr_dev(div1, "class", "description svelte-gjhnfz");
-    			add_location(div1, file$b, 16, 6, 495);
+    			add_location(br0, file$b, 14, 40, 456);
+    			add_location(br1, file$b, 14, 46, 462);
+    			attr_dev(div0, "class", "title col-md-9  svelte-13g96s7");
+    			add_location(div0, file$b, 14, 2, 418);
+    			add_location(br2, file$b, 22, 8, 867);
+    			add_location(br3, file$b, 22, 14, 873);
+    			add_location(br4, file$b, 27, 8, 1184);
+    			add_location(br5, file$b, 27, 15, 1191);
+    			add_location(br6, file$b, 29, 8, 1268);
+    			add_location(br7, file$b, 29, 14, 1274);
+    			attr_dev(div1, "class", "description svelte-13g96s7");
+    			add_location(div1, file$b, 17, 6, 545);
     			attr_dev(ul0, "class", "list-unstyled col-md-6");
-    			add_location(ul0, file$b, 31, 8, 1289);
+    			add_location(ul0, file$b, 32, 8, 1339);
     			attr_dev(ul1, "class", "list-unstyled col-md-6");
-    			add_location(ul1, file$b, 36, 8, 1438);
-    			attr_dev(div2, "class", "row techlist1 svelte-gjhnfz");
-    			add_location(div2, file$b, 30, 6, 1252);
-    			attr_dev(div3, "class", "text col-md-7 svelte-gjhnfz");
-    			add_location(div3, file$b, 15, 4, 460);
-    			attr_dev(img, "class", "aboutmeimg svelte-gjhnfz");
+    			add_location(ul1, file$b, 37, 8, 1488);
+    			attr_dev(div2, "class", "row techlist1 svelte-13g96s7");
+    			add_location(div2, file$b, 31, 6, 1302);
+    			attr_dev(div3, "class", "text col-md-7 svelte-13g96s7");
+    			add_location(div3, file$b, 16, 4, 510);
+    			attr_dev(img, "class", "aboutmeimg svelte-13g96s7");
     			if (!src_url_equal(img.src, img_src_value = "images/aboutme/self2.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "tony kwok");
-    			add_location(img, file$b, 44, 6, 1646);
-    			attr_dev(div4, "class", "imgdiv col-md-5 svelte-gjhnfz");
-    			add_location(div4, file$b, 43, 4, 1609);
-    			attr_dev(div5, "class", "row col-md-9 svelte-gjhnfz");
-    			add_location(div5, file$b, 14, 2, 428);
-    			attr_dev(div6, "class", "aboutMe svelte-gjhnfz");
-    			set_style(div6, "top", /*foregroundTop*/ ctx[0] + "px");
-    			add_location(div6, file$b, 12, 0, 311);
+    			add_location(img, file$b, 45, 6, 1696);
+    			attr_dev(div4, "class", "imgdiv col-md-5 svelte-13g96s7");
+    			add_location(div4, file$b, 44, 4, 1659);
+    			attr_dev(div5, "class", "row col-md-9 svelte-13g96s7");
+    			add_location(div5, file$b, 15, 2, 478);
+    			attr_dev(div6, "class", "aboutMe svelte-13g96s7");
+    			add_location(div6, file$b, 13, 0, 393);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1276,8 +1275,8 @@ var app = (function () {
     			append_dev(div4, img);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*techs1*/ 2) {
-    				each_value_1 = /*techs1*/ ctx[1];
+    			if (dirty & /*techs1*/ 1) {
+    				each_value_1 = /*techs1*/ ctx[0];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -1300,8 +1299,8 @@ var app = (function () {
     				each_blocks_1.length = each_value_1.length;
     			}
 
-    			if (dirty & /*techs2*/ 4) {
-    				each_value = /*techs2*/ ctx[2];
+    			if (dirty & /*techs2*/ 2) {
+    				each_value = /*techs2*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
 
@@ -1322,10 +1321,6 @@ var app = (function () {
     				}
 
     				each_blocks.length = each_value.length;
-    			}
-
-    			if (dirty & /*foregroundTop*/ 1) {
-    				set_style(div6, "top", /*foregroundTop*/ ctx[0] + "px");
     			}
     		},
     		i: noop,
@@ -1351,14 +1346,6 @@ var app = (function () {
     function instance$c($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('AboutMe', slots, []);
-    	window.onload = getForegroundStart;
-    	window.onresize = getForegroundStart;
-    	let foregroundTop;
-
-    	function getForegroundStart() {
-    		$$invalidate(0, foregroundTop = window.screen.availWidth * 0.5625);
-    	}
-
     	let techs1 = ["Python", "Javascript", "Svelte"];
     	let techs2 = ["SQL", "Node.JS"];
     	const writable_props = [];
@@ -1367,24 +1354,18 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<AboutMe> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({
-    		foregroundTop,
-    		getForegroundStart,
-    		techs1,
-    		techs2
-    	});
+    	$$self.$capture_state = () => ({ techs1, techs2 });
 
     	$$self.$inject_state = $$props => {
-    		if ('foregroundTop' in $$props) $$invalidate(0, foregroundTop = $$props.foregroundTop);
-    		if ('techs1' in $$props) $$invalidate(1, techs1 = $$props.techs1);
-    		if ('techs2' in $$props) $$invalidate(2, techs2 = $$props.techs2);
+    		if ('techs1' in $$props) $$invalidate(0, techs1 = $$props.techs1);
+    		if ('techs2' in $$props) $$invalidate(1, techs2 = $$props.techs2);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [foregroundTop, techs1, techs2];
+    	return [techs1, techs2];
     }
 
     class AboutMe extends SvelteComponentDev {
@@ -4439,9 +4420,10 @@ var app = (function () {
     			t = space();
     			div0 = element("div");
     			create_component(aboutme.$$.fragment);
-    			attr_dev(div0, "class", "content svelte-qx2fba");
+    			attr_dev(div0, "class", "content svelte-qlyac9");
+    			set_style(div0, "top", /*foregroundTop*/ ctx[0] + "px");
     			add_location(div0, file, 17, 2, 538);
-    			attr_dev(div1, "class", "container-fluid svelte-qx2fba");
+    			attr_dev(div1, "class", "container-fluid svelte-qlyac9");
     			add_location(div1, file, 15, 0, 492);
     		},
     		l: function claim(nodes) {
@@ -4455,7 +4437,11 @@ var app = (function () {
     			mount_component(aboutme, div0, null);
     			current = true;
     		},
-    		p: noop,
+    		p: function update(ctx, [dirty]) {
+    			if (!current || dirty & /*foregroundTop*/ 1) {
+    				set_style(div0, "top", /*foregroundTop*/ ctx[0] + "px");
+    			}
+    		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(title.$$.fragment, local);
@@ -4493,7 +4479,7 @@ var app = (function () {
     	let foregroundTop = window.screen.availWidth * 0.5625;
 
     	function getForegroundStart() {
-    		foregroundTop = window.screen.availWidth * 0.5625;
+    		$$invalidate(0, foregroundTop = window.screen.availWidth * 0.5625);
     	}
 
     	console.log(foregroundTop);
@@ -4513,14 +4499,14 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('foregroundTop' in $$props) foregroundTop = $$props.foregroundTop;
+    		if ('foregroundTop' in $$props) $$invalidate(0, foregroundTop = $$props.foregroundTop);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [];
+    	return [foregroundTop];
     }
 
     class App extends SvelteComponentDev {
