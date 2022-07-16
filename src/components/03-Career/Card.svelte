@@ -1,10 +1,7 @@
 <script>
-  import Card from "./Card.svelte";
 </script>
 
-<div class="card">
-  <Card />
-</div>
+<div class="card" />
 
 <style>
   .card {
