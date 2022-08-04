@@ -1,49 +1,76 @@
 <script>
-  // window.onload = getForegroundStart;
-  // window.onresize = getForegroundStart;
-  // let foregroundTop;
-  // function getForegroundStart() {
-  //   foregroundTop = window.screen.availWidth * 0.5625;
-  // }
-
   let techs1 = ["Python", "Javascript", "Svelte"];
   let techs2 = ["SQL", "Node.JS"];
 </script>
 
 <!-- <div class="aboutMe" style="top: {foregroundTop}px;"> -->
-<div class="aboutMe">
-  <div class="title col-md-9 ">About Me <br /><br /></div>
+<div id="aboutme" class="aboutMe container-fluid">
+  <div class="empty row" />
+  <h1 class="title col-md-9">About me</h1>
   <div class="row col-md-9">
     <div class="text col-md-7">
       <div class="description">
-        Hi! I'm Tony and I like creating things using data. My interest began
-        during my first co-op term as an accountant, when I needed to manipulate
-        data in Excel. It went from keyboard shortcuts to VBA to quickly
-        transferring out of my accounting program!
+        My interest began during my first co-op term as an accountant, when I
+        needed to manipulate data in Excel. It went from keyboard shortcuts to
+        VBA to quickly transferring out of my accounting program!
         <br /><br />
-        What’s happened since then? I’ve had the privilege of working as a Full Stack
-        Developer, a Data Specialist, and even an Innovation Catalyst! I recently
-        enjoyed my relaxing post-graduation break and now I’m looking for a company
-        to join for my next adventure.
+        I’ve had the privilege of working as a Full Stack Developer, a Data Specialist,
+        and even an Innovation Catalyst! I recently enjoyed my relaxing post-graduation
+        break and now I’m looking for a company to join for my next adventure.
         <br /> <br />
         Here are a few technologies I’ve been working with:
         <br /><br />
       </div>
-      <div class="row techlist1">
-        <ul class="list-unstyled col-md-6">
+      <div class="row techlist1 m-0 p-0">
+        <div class="row">
           {#each techs1 as tech, index}
-            <li>{tech}</li>
+            <div class="techstack">{tech}</div>
           {/each}
-        </ul>
-        <ul class="list-unstyled col-md-6">
           {#each techs2 as tech, index}
-            <li>{tech}</li>
+            <div class="techstack">{tech}</div>
           {/each}
-        </ul>
+        </div>
       </div>
     </div>
     <div class="imgdiv col-md-5">
-      <img class="aboutmeimg" src="images/aboutme/self2.png" alt="tony kwok" />
+      <div class="aboutmeimg-container">
+        <img
+          class="aboutmeimg"
+          src="images/02-aboutme/self2.png"
+          alt="tony kwok"
+        />
+      </div>
+      <!-- <div class="tech-container js-container">
+        <img src="images/02-aboutme/js.png" alt="tech stack" class="tech js" />
+      </div>
+      <div class="tech-container nodejs-container">
+        <img
+          src="images/02-aboutme/nodejs.png"
+          alt="tech stack"
+          class="tech nodejs"
+        />
+      </div>
+      <div class="tech-container python-container">
+        <img
+          src="images/02-aboutme/python.png"
+          alt="tech stack"
+          class="tech python"
+        />
+      </div>
+      <div class="tech-container sql-container">
+        <img
+          src="images/02-aboutme/sql.png"
+          alt="tech stack"
+          class="tech sql"
+        />
+      </div>
+      <div class="tech-container svelte-container">
+        <img
+          src="images/02-aboutme/svelte.png"
+          alt="tech stack"
+          class="tech svelte"
+        />
+      </div> -->
     </div>
   </div>
 </div>
@@ -55,34 +82,78 @@
     color: white;
     padding: 0;
     margin: 0;
+    // border: 5px solid red;
+    // border: 1px solid transparent;
 
-    .title {
-      margin: 0 auto;
-      padding: 0;
-      font-family: "Montserrat", sans-serif;
-      font-size: 2em;
+    .imgdiv {
+      position: relative;
+      box-sizing: border-box;
+      // border: 5px solid white;
+      display: grid;
+      .aboutmeimg-container {
+        justify-self: center;
+        align-self: center;
+        img.aboutmeimg {
+          max-width: 15em;
+          height: auto;
+        }
+      }
+      .tech-container {
+        position: absolute;
+      }
+      img.tech {
+        max-width: 5em;
+        height: auto;
+      }
+      .js-container {
+        top: 10%;
+        left: 10%;
+      }
+      .nodejs-container {
+        top: 40%;
+        left: 7%;
+      }
+      .python-container {
+        top: 62%;
+        left: 17%;
+      }
+      .sql-container {
+        top: 23%;
+        right: 13%;
+      }
+      .svelte-container {
+        top: 56%;
+        right: 20%;
+      }
+      img.js {
+        border-radius: 50%;
+      }
+    }
+
+    .empty {
+      height: 20em;
+    }
+
+    h1.title {
+      margin: 0 auto 1em auto;
     }
     .row {
       margin: 0 auto;
     }
     .text {
       box-sizing: border-box;
-      // margin: 0 auto;
-      // padding: 0;
       font-family: "Open Sans", sans-serif;
       font-size: 1em;
+
+      .techstack {
+        width: auto;
+        background-color: #303443;
+        border-radius: 1rem;
+        margin: 0.25rem 0.5rem 0.25rem 0;
+      }
     }
     .description {
       box-sizing: border-box;
-    }
-    .imgdiv {
-      // margin: 0 auto;
-      box-sizing: border-box;
-    }
-    .aboutmeimg {
-      background: transparent;
-      max-width: 15em;
-      height: auto;
     }
   }
 </style>

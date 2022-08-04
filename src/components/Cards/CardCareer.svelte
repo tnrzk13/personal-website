@@ -1,0 +1,66 @@
+<script>
+  export let imgurl;
+  export let title;
+  export let subtitle;
+  export let points;
+  export let logoColor;
+
+  // $: console.log(points);
+</script>
+
+<div class="div container-fluid">
+  <div class="card m-2 cb1 text-center">
+    <div class="card-body">
+      <div class="circle-logo" style="background-image: {logoColor}">
+        <img class="logo" src={imgurl} alt="company logo" />
+      </div>
+      <h4 class="card-title">{title}</h4>
+      <h6 class="card-subtitle">{subtitle}</h6>
+      <p class="card-text">
+        {#each points as point, index}
+          <li>{point}</li>
+        {/each}
+      </p>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .card {
+    color: white;
+
+    border-radius: 1rem;
+    border: none;
+    // border: 1px solid transparent;
+
+    background-color: transparent;
+  }
+  .card-body {
+    text-align: left;
+    h4 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.25rem;
+      padding: 1.5rem 0 0.5rem 0;
+    }
+    h6 {
+      font-size: 1.15rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+  .circle-logo {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    display: grid;
+    img.logo {
+      width: 4em;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      align-self: center;
+      justify-self: center;
+      filter: grayscale(100%);
+      // filter: brightness(0%);
+    }
+  }
+</style>

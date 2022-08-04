@@ -1,5 +1,50 @@
+:root {
+  --blue: rgb(4,4,13);
+  --gradient-happy-fisher: linear-gradient(to bottom right, #89f7fe, #66a6ff);
+  --gradient-quepal: linear-gradient(to bottom right, #38ef7d, #11998e);
+  --gradient-piglet: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+  --gradient-plum-plate: linear-gradient(to bottom right, #667eea, #764ba2);
+  --gradient-cosmic-fusion: linear-gradient(to bottom right, #ff00cc, #333399);
+  --gradient-lunada: linear-gradient(to bottom right, #a5fecb, #20dbff, #5433ff);
+  --gradient-telegram: linear-gradient(to top left, #1c9292, #f2fcfe);
+  --gradient-amin: linear-gradient(to top left, #8e2de2, #1cb5e0);
+
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+h1.title {
+  padding-left: 0.35em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  margin: 8em auto 1em auto;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+}
+
+@keyframes -global-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes -global-slide-out-fwd-center {
+  0% {
+    transform: translateZ(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(600px);
+    opacity: 0;
+  }
 }
