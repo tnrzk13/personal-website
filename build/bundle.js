@@ -1314,7 +1314,7 @@ var app = (function () {
     			attr_dev(div, "id", "title");
     			attr_dev(div, "class", "parallax-container svelte-fs1vwr");
     			set_style(div, "height", /*containerHeight*/ ctx[0] - /*y*/ ctx[3] + "px");
-    			add_location(div, file$d, 18, 2, 453);
+    			add_location(div, file$d, 18, 2, 457);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1405,7 +1405,7 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + (/*layer*/ ctx[7] - 1) + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[7] - 1));
     			attr_dev(img, "class", "svelte-fs1vwr");
-    			add_location(img, file$d, 64, 8, 2127);
+    			add_location(img, file$d, 64, 8, 2131);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1445,7 +1445,7 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + (/*layer*/ ctx[7] - 1) + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[7] - 1));
     			attr_dev(img, "class", "svelte-fs1vwr");
-    			add_location(img, file$d, 58, 8, 1940);
+    			add_location(img, file$d, 58, 8, 1944);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1485,7 +1485,7 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + (/*layer*/ ctx[7] - 1) + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[7] - 1));
     			attr_dev(img, "class", "svelte-fs1vwr");
-    			add_location(img, file$d, 51, 8, 1690);
+    			add_location(img, file$d, 51, 8, 1694);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1591,7 +1591,7 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[7] + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[7]);
     			attr_dev(img, "class", "svelte-fs1vwr");
-    			add_location(img, file$d, 25, 8, 626);
+    			add_location(img, file$d, 25, 8, 630);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1668,19 +1668,19 @@ var app = (function () {
     			i = element("i");
     			t8 = space();
     			attr_dev(div0, "class", "textLayer-preamble svelte-fs1vwr");
-    			add_location(div0, file$d, 33, 12, 930);
+    			add_location(div0, file$d, 33, 12, 934);
     			attr_dev(div1, "class", "textLayer-title svelte-fs1vwr");
-    			add_location(div1, file$d, 34, 12, 996);
+    			add_location(div1, file$d, 34, 12, 1000);
     			attr_dev(div2, "class", "textLayer-subtitle svelte-fs1vwr");
-    			add_location(div2, file$d, 35, 12, 1054);
+    			add_location(div2, file$d, 35, 12, 1058);
     			attr_dev(div3, "class", "textLayer-description svelte-fs1vwr");
-    			add_location(div3, file$d, 42, 12, 1282);
+    			add_location(div3, file$d, 42, 12, 1286);
     			attr_dev(i, "class", "fa-solid fa-angles-down");
-    			add_location(i, file$d, 47, 36, 1554);
+    			add_location(i, file$d, 47, 36, 1558);
     			attr_dev(div4, "class", "scrolldown svelte-fs1vwr");
-    			add_location(div4, file$d, 47, 12, 1530);
+    			add_location(div4, file$d, 47, 12, 1534);
     			attr_dev(div5, "class", "textLayer svelte-fs1vwr");
-    			add_location(div5, file$d, 32, 10, 893);
+    			add_location(div5, file$d, 32, 10, 897);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div5, anchor);
@@ -2005,7 +2005,7 @@ var app = (function () {
     	let { pageHalfDown = 1000 } = $$props;
     	const layers = [...Array(numLayers$1).keys()];
     	let y; //The window scrolling
-    	let texts = ["data", "style", "code", "thought"];
+    	let texts = ["data.", "style.", "code.", "thought."];
     	const writable_props = ['containerHeight', 'boolAnimateText', 'pageHalfDown'];
 
     	Object.keys($$props).forEach(key => {
@@ -7032,7 +7032,7 @@ var app = (function () {
     	let typeTexts = [];
 
     	texts.forEach(element => {
-    		typeTexts.push(new TypeText(element + ".", "type&delete"));
+    		typeTexts.push(new TypeText(element, "type&delete"));
     	});
 
     	const writable_props = ['texts'];
@@ -7111,7 +7111,7 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + /*layer*/ ctx[14] + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[14]);
     			attr_dev(img, "class", "svelte-88tktz");
-    			add_location(img, file$5, 68, 6, 2283);
+    			add_location(img, file$5, 68, 6, 2284);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -7151,7 +7151,7 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[14] + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[14]);
     			attr_dev(img, "class", "svelte-88tktz");
-    			add_location(img, file$5, 60, 6, 1997);
+    			add_location(img, file$5, 60, 6, 1998);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -7228,31 +7228,31 @@ var app = (function () {
     			button.textContent = "Say Hello";
     			t7 = space();
     			attr_dev(div0, "class", "textLayer-preamble svelte-88tktz");
-    			add_location(div0, file$5, 39, 8, 1073);
+    			add_location(div0, file$5, 39, 8, 1074);
     			attr_dev(div1, "class", "textLayer-title svelte-88tktz");
-    			add_location(div1, file$5, 40, 8, 1132);
+    			add_location(div1, file$5, 40, 8, 1133);
     			attr_dev(div2, "class", "textLayer-description svelte-88tktz");
-    			add_location(div2, file$5, 41, 8, 1197);
+    			add_location(div2, file$5, 41, 8, 1198);
     			attr_dev(i, "class", "fa-brands fa-linkedin fa-md");
-    			add_location(i, file$5, 49, 14, 1609);
+    			add_location(i, file$5, 49, 14, 1610);
     			attr_dev(a0, "href", "https://www.linkedin.com/in/tony-k-kwok/");
     			attr_dev(a0, "class", "svelte-88tktz");
-    			add_location(a0, file$5, 48, 12, 1542);
+    			add_location(a0, file$5, 48, 12, 1543);
     			attr_dev(div3, "class", "linkedin-container col-md-3 svelte-88tktz");
-    			add_location(div3, file$5, 47, 10, 1487);
+    			add_location(div3, file$5, 47, 10, 1488);
     			attr_dev(button, "class", "btn btn-grad btn-lg svelte-88tktz");
-    			add_location(button, file$5, 54, 14, 1842);
+    			add_location(button, file$5, 54, 14, 1843);
     			attr_dev(a1, "href", "mailto:tnrzk13@gmail.com?subject=" + /*subject*/ ctx[5]);
     			attr_dev(a1, "id", "emailLink");
     			attr_dev(a1, "class", "svelte-88tktz");
-    			add_location(a1, file$5, 53, 12, 1758);
+    			add_location(a1, file$5, 53, 12, 1759);
     			attr_dev(div4, "class", "button-container-column col-md-9");
-    			add_location(div4, file$5, 52, 10, 1698);
+    			add_location(div4, file$5, 52, 10, 1699);
     			attr_dev(div5, "class", "button-container row");
-    			add_location(div5, file$5, 46, 8, 1441);
+    			add_location(div5, file$5, 46, 8, 1442);
     			attr_dev(div6, "class", "textLayer svelte-88tktz");
     			set_style(div6, "transform", "translate(0," + (/*imgHeight*/ ctx[2] - /*yScroll*/ ctx[1]) + "px)");
-    			add_location(div6, file$5, 35, 6, 958);
+    			add_location(div6, file$5, 35, 6, 959);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div6, anchor);
@@ -7396,7 +7396,7 @@ var app = (function () {
     			}
 
     			attr_dev(div, "class", "parallax-container svelte-88tktz");
-    			add_location(div, file$5, 32, 0, 860);
+    			add_location(div, file$5, 32, 0, 861);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7503,7 +7503,7 @@ var app = (function () {
     	let { containerHeight, contactYOffset } = $$props;
     	const layers = [...Array(numLayers).keys()];
     	let subject = "Getting in touch from your website";
-    	let texts = ["Get in Touch"];
+    	let texts = ["Get in Touch!"];
     	let contactDiv = document.getElementById("contact");
     	let contactTop, yDiff, y, yScroll, imgHeight, offsetRatio;
 
