@@ -1,21 +1,49 @@
 <script>
+  import TextType from "./TextType/TextTypeContact.svelte";
+
+  export let containerHeight, contactYOffset;
+
   const numLayers = 15;
   const layers = [...Array(numLayers).keys()];
   const textLayer = 14;
 
-  let preamble = "Interested?";
-  let title = "Get in Touch";
-  let description =
-    "I'm currently looking for my next adventure. Contact me if you have any questions, or if you just want to say hello! My inbox is always open for you.";
+  let subject = "Getting in touch from your website";
+  let texts = ["Get in Touch"];
+  let contactDiv = document.getElementById("contact");
+
+  let contactTop, yDiff, y, yScroll, imgHeight, offsetRatio;
+  const update = () => {
+    contactTop = contactDiv.offsetTop;
+    yDiff = y - contactTop;
+    imgHeight = containerHeight - contactYOffset;
+    offsetRatio = contactYOffset / containerHeight;
+    yScroll = Math.max(0, yDiff);
+  };
+  window.onload = update();
+  window.onresize = update();
+
+  $: {
+    yDiff = y - contactTop;
+    yScroll = Math.max(0, yDiff);
+  }
 </script>
+
+<svelte:window bind:scrollY={y} />
 
 <div class="parallax-container">
   {#each layers as layer}
     {#if layer === textLayer}
-      <div class="textLayer">
-        <div class="textLayer-preamble">{preamble}</div>
-        <div class="textLayer-title">{title}</div>
-        <div class="textLayer-description">{description}</div>
+      <div
+        class="textLayer"
+        style="transform: translate(0,{imgHeight - yScroll}px)"
+      >
+        <div class="textLayer-preamble">Interested?</div>
+        <div class="textLayer-title"><TextType {texts} /></div>
+        <div class="textLayer-description">
+          I'm currently looking for my next adventure. Contact me if you have
+          any questions, or if you just want to say hello! My inbox is always
+          open for you.
+        </div>
         <div class="button-container row">
           <div class="linkedin-container col-md-3">
             <a href="https://www.linkedin.com/in/tony-k-kwok/">
@@ -23,19 +51,32 @@
             </a>
           </div>
           <div class="button-container-column col-md-9">
-            <button class="btn btn-grad btn-lg">Say Hello</button>
+            <a href="mailto:tnrzk13@gmail.com?subject={subject}" id="emailLink">
+              <button class="btn btn-grad btn-lg">Say Hello</button>
+            </a>
           </div>
         </div>
       </div>
     {:else if layer < 10}
-      <img src="images/intro/00{layer}.png" alt="parallax layer {layer}" />
+      <img
+        style="transform: translate(0,{imgHeight *
+          (layer / (layers.length - 1)) -
+          (yScroll * (1 + offsetRatio) * layer) / (layers.length - 1)}px)"
+        src="images/intro/00{layer}.png"
+        alt="parallax layer {layer}"
+      />
     {:else}
-      <img src="images/intro/0{layer}.png" alt="parallax layer {layer}" />
+      <img
+        style="transform: translate(0,{(imgHeight * layer) /
+          (layers.length - 1) -
+          (yScroll * (1 + offsetRatio) * layer) / (layers.length - 1)}px)"
+        src="images/intro/0{layer}.png"
+        alt="parallax layer {layer}"
+      />
     {/if}
   {/each}
 </div>
 
-<!-- <div id="background-bottom" /> -->
 <style lang="scss">
   #background-bottom {
     position: absolute;
@@ -85,6 +126,10 @@
       font-size: 1.3vw;
       right: 80%;
       font-family: "Montserrat", sans-serif;
+    }
+
+    a#emailLink {
+      text-decoration: none;
     }
 
     .button-container {

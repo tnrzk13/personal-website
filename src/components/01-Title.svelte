@@ -1,25 +1,21 @@
 <script>
+  import TextType from "./TextType/TextTypeTitle.svelte";
+
+  export let containerHeight;
+  export let boolAnimateText = true;
+  export let pageHalfDown = 1000;
+
   const numLayers = 15;
   const layers = [...Array(numLayers).keys()];
   const textLayer = 4;
 
   let y; //The window scrolling
-  let preamble = "Hi, my name is";
-  let title = "Tony Kwok.";
-  let subtitle = "I build things with data.";
-  let description =
-    "I'm a software developer specializing in building solutions to problems using data. Currently, I'm looking to join a company for my next adventure.";
-
-  export let containerHeight;
-  export let pageHeight;
-  // $: {
-  //   console.log(pageHeight - containerHeight);
-  // }
+  let texts = ["data", "style", "code", "thought"];
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-{#if y <= Math.max(0, pageHeight - containerHeight)}
+{#if y <= Math.max(0, pageHalfDown)}
   <div
     id="title"
     class="parallax-container"
@@ -35,10 +31,20 @@
       {:else if layer === textLayer}
         {#if y < containerHeight}
           <div class="textLayer">
-            <div class="textLayer-preamble">{preamble}</div>
-            <div class="textLayer-title">{title}</div>
-            <div class="textLayer-subtitle">{subtitle}</div>
-            <div class="textLayer-description">{description}</div>
+            <div class="textLayer-preamble">Hi, my name is</div>
+            <div class="textLayer-title">Tony Kwok</div>
+            <div class="textLayer-subtitle">
+              I build things with {#if boolAnimateText}
+                <TextType {texts} />
+              {:else}
+                data.
+              {/if}
+            </div>
+            <div class="textLayer-description">
+              I'm a software developer who builds solutions to problems using
+              data. Currently, I'm looking to join a company for my next
+              adventure.
+            </div>
             <div class="scrolldown"><i class="fa-solid fa-angles-down" /></div>
           </div>
         {/if}
@@ -51,7 +57,7 @@
         />
       {:else if layer === 14}
         <img
-          style="transform: translate(0,{-y}px)"
+          style="transform: translate(0,{-y + 10}px)"
           src="images/intro/0{layer - 1}.png"
           alt="parallax layer {layer - 1}"
         />

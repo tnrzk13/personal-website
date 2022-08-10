@@ -7,11 +7,6 @@
   let newY = 0;
   let showNavBar = false;
 
-  let nav = document.getElementById("navbar");
-  window.onload = function () {
-    nav = document.getElementById("navbar");
-  };
-
   // $: {
   //   if (newY > y && y > titleHeight - 1) showNavBar = true;
   //   else showNavBar = false;
@@ -73,6 +68,8 @@
 
     backdrop-filter: blur(10px);
     background-color: transparent;
+
+    z-index: 998;
 
     img {
       width: auto;

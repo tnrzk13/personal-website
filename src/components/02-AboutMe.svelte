@@ -14,9 +14,9 @@
         needed to manipulate data in Excel. It went from keyboard shortcuts to
         VBA to quickly transferring out of my accounting program!
         <br /><br />
-        I’ve had the privilege of working as a Full Stack Developer, a Data Specialist,
-        and even an Innovation Catalyst! I recently enjoyed my relaxing post-graduation
-        break and now I’m looking for a company to join for my next adventure.
+        Since then, I've worked as a Full Stack Developer, a Data Specialist, and
+        even an Innovation Catalyst! I recently enjoyed my post-graduation break
+        and now I’m looking for a company to join for my next adventure.
         <br /> <br />
         Here are a few technologies I’ve been working with:
         <br /><br />

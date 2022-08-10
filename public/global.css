@@ -1,5 +1,6 @@
 :root {
-  --blue: rgb(4,4,13);
+  --blue: rgb(6, 0, 87);
+  --darkblue: rgb(4,4,13);
   --gradient-happy-fisher: linear-gradient(to bottom right, #89f7fe, #66a6ff);
   --gradient-quepal: linear-gradient(to bottom right, #38ef7d, #11998e);
   --gradient-piglet: linear-gradient(to bottom right, #ffdde1, #ee9ca7);

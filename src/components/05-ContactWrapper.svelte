@@ -1,17 +1,22 @@
 <script>
   import Contact from "./05-Contact.svelte";
 
-  export let titleHeight;
+  export let contactHeight, containerHeight;
+  export let contactYOffset = 100;
+  export let pageHalfDown = 1000;
 
   let y;
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-{#if y > titleHeight}
-  <div class="background-extension" style="bottom: {titleHeight}px;" />
-  <div class="contact-wrapper">
-    <Contact />
+{#if y > Math.max(0, pageHalfDown)}
+  <div class="background-extension" style="bottom: {contactHeight - 1}px;" />
+  <div
+    class="contact-wrapper"
+    style="transform: translateY({contactYOffset}px);"
+  >
+    <Contact {containerHeight} {contactYOffset} />
   </div>
 {/if}
 
