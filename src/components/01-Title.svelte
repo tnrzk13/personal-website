@@ -10,7 +10,7 @@
   const textLayer = 4;
 
   let y; //The window scrolling
-  let texts = ["data", "style", "code", "thought"];
+  let texts = ["data.", "style.", "code.", "thought."];
 </script>
 
 <svelte:window bind:scrollY={y} />

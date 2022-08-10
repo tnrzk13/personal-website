@@ -10,7 +10,7 @@
 
   let typeTexts = [];
   texts.forEach((element) => {
-    typeTexts.push(new TypeText(element + ".", "type&delete"));
+    typeTexts.push(new TypeText(element, "type&delete"));
   });
 </script>
 

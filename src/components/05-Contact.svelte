@@ -8,7 +8,7 @@
   const textLayer = 14;
 
   let subject = "Getting in touch from your website";
-  let texts = ["Get in Touch"];
+  let texts = ["Get in Touch!"];
   let contactDiv = document.getElementById("contact");
 
   let contactTop, yDiff, y, yScroll, imgHeight, offsetRatio;
