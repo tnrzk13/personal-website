@@ -11,7 +11,7 @@
 <svelte:window bind:scrollY={y} />
 
 {#if y > Math.max(0, pageHalfDown)}
-  <div class="background-extension" style="bottom: {contactHeight - 1}px;" />
+  <div class="background-extension" style="bottom: {contactHeight}px;" />
   <div
     class="contact-wrapper"
     style="transform: translateY({contactYOffset}px);"

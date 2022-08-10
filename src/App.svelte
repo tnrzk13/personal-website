@@ -11,33 +11,53 @@
   import { beforeUpdate, tick } from "svelte";
 
   let titleHeight,
-    // scrollHeight,
-    contentContainerHalfDown,
+    scrollHeight,
     contactHeight,
     pageHalfDown,
     contactYOffset,
     body,
-    contentContainer;
+    contentContainer,
+    contentContainerHeight;
+  contentContainerHeight = 0;
 
   // wait for document.body to load first
-  // beforeUpdate(async () => {
-  //   await tick();
-  //   scrollHeight = document.body.scrollHeight;
-  // });
+  beforeUpdate(async () => {
+    await tick();
+    body = document.body;
+    scrollHeight = body.offsetHeight;
+    contentContainer = document.getElementById("content-container");
+    contentContainerHeight = contentContainer.offsetHeight;
+    pageHalfDown = contentContainerHeight / 2;
+  });
 
   // Changes title height, gets scroll height
   let manageHeights = () => {
     body = document.body;
-    contentContainer = document.getElementById("content-container");
-
-    titleHeight = body.scrollWidth * 0.5625;
+    titleHeight = body.offsetWidth * 0.5625;
     contactYOffset = titleHeight / 3;
-    contactHeight = titleHeight - contactYOffset - body.offsetHeight * 0.075;
-    // scrollHeight = body.offsetHeight;
-    contentContainerHalfDown = contentContainer.offsetHeight / 2;
-    pageHalfDown = contentContainerHalfDown + titleHeight;
+    scrollHeight = body.offsetHeight;
+    contactHeight = titleHeight - contactYOffset;
   };
-  window.onload = manageHeights;
+  window.onload = manageHeights();
+  window.onresize = () => {
+    titleHeight = body.offsetWidth * 0.5625;
+    contactYOffset = titleHeight / 3;
+    scrollHeight = body.offsetHeight;
+    contactHeight = titleHeight - contactYOffset;
+    contentContainerHeight = contentContainer.clientHeight;
+    pageHalfDown = contentContainerHeight / 2;
+  };
+
+  // $: {
+  //   console.log(
+  //     titleHeight,
+  //     contactYOffset,
+  //     scrollHeight,
+  //     contactHeight,
+  //     contentContainerHeight,
+  //     pageHalfDown
+  //   );
+  // }
 
   let boolFadeAnimation, boolShowLoadingScreen, boolAnimateText;
   const triggerDevMode = (isOn) => {
@@ -48,9 +68,12 @@
     boolFadeAnimation = false;
   };
   triggerDevMode(false);
+
+  let y;
 </script>
 
-<svelte:window on:resize={manageHeights} />
+<svelte:window bind:scrollY={y} />
+<!-- <svelte:window on:resize={manageHeights} /> -->
 
 <div class="container-fluid">
   <Title containerHeight={titleHeight} {pageHalfDown} {boolAnimateText} />
@@ -72,8 +95,8 @@
     />
   </div>
 </div>
-<Navbar {titleHeight} />
 
+<!-- <Navbar {titleHeight} /> -->
 <style lang="scss">
   .container-fluid {
     position: relative;

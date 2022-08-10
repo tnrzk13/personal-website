@@ -9,7 +9,7 @@
   const layers = [...Array(numLayers).keys()];
   const textLayer = 4;
 
-  let y; //The window scrolling
+  let y;
   let texts = ["data.", "style.", "code.", "thought."];
 </script>
 
@@ -24,9 +24,11 @@
     {#each layers as layer}
       {#if layer < textLayer}
         <img
+          id="img-parallax-{layer}"
           style="transform: translate(0,{(-y * layer) / (layers.length - 1)}px)"
           src="images/intro/00{layer}.png"
           alt="parallax layer {layer}"
+          height={containerHeight}
         />
       {:else if layer === textLayer}
         {#if y < containerHeight}
@@ -60,12 +62,14 @@
             (layers.length - 1)}px)"
           src="images/intro/00{layer - 1}.png"
           alt="parallax layer {layer - 1}"
+          height={containerHeight}
         />
       {:else if layer === 14}
         <img
           style="transform: translate(0,{-y + 10}px)"
           src="images/intro/0{layer - 1}.png"
           alt="parallax layer {layer - 1}"
+          height={containerHeight}
         />
       {:else}
         <img
@@ -73,6 +77,7 @@
             (layers.length - 1)}px)"
           src="images/intro/0{layer - 1}.png"
           alt="parallax layer {layer - 1}"
+          height={containerHeight}
         />
       {/if}
     {/each}
@@ -99,7 +104,7 @@
       color: black;
       left: 1.5em;
       right: 54%;
-      top: 1em;
+      top: 10%;
       line-height: normal;
       padding-top: 0;
       margin-top: 0;

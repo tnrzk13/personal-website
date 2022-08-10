@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   import TextType from "./TextType/TextType.svelte";
 
   export let containerHeight, contactYOffset;
@@ -9,8 +10,8 @@
 
   let subject = "Getting in touch from your website";
   let texts = ["Get in Touch!"];
-  let contactDiv = document.getElementById("contact");
 
+  let contactDiv = document.getElementById("contact");
   let contactTop, yDiff, y, yScroll, imgHeight, offsetRatio;
   const update = () => {
     contactTop = contactDiv.offsetTop;
@@ -18,13 +19,26 @@
     imgHeight = containerHeight - contactYOffset;
     offsetRatio = contactYOffset / containerHeight;
     yScroll = Math.max(0, yDiff);
+    // console.log("update");
   };
-  window.onload = update();
+
+  onMount(() => {
+    update();
+  });
   window.onresize = update();
 
   $: {
     yDiff = y - contactTop;
     yScroll = Math.max(0, yDiff);
+
+    // console.log(
+    //   containerHeight,
+    //   contactTop,
+    //   contactTop + containerHeight,
+    //   y
+    //   // imgHeight,
+    //   // yScroll
+    // );
   }
 </script>
 
@@ -72,6 +86,7 @@
           (yScroll * (1 + offsetRatio) * layer) / (layers.length - 1)}px)"
         src="images/intro/00{layer}.png"
         alt="parallax layer {layer}"
+        height={containerHeight}
       />
     {:else}
       <img
@@ -80,6 +95,7 @@
           (yScroll * (1 + offsetRatio) * layer) / (layers.length - 1)}px)"
         src="images/intro/0{layer}.png"
         alt="parallax layer {layer}"
+        height={containerHeight}
       />
     {/if}
   {/each}
