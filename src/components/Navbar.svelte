@@ -4,14 +4,8 @@
   export let titleHeight;
 
   let y; //The window scrolling
-  let newY = 0;
   let showNavBar = false;
 
-  // $: {
-  //   if (newY > y && y > titleHeight - 1) showNavBar = true;
-  //   else showNavBar = false;
-  //   newY = y;
-  // }
   $: {
     if (y > titleHeight - 1) showNavBar = true;
     else showNavBar = false;
