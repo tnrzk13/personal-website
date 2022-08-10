@@ -1,5 +1,5 @@
 <script>
-  export let texts;
+  export let texts, delay, num_loops, repeat_n_words, blinker_iter_count;
   import AnimateType from "./AnimateType.svelte";
 
   class TypeText {
@@ -12,12 +12,13 @@
   texts.forEach((element) => {
     typeTexts.push(new TypeText(element, "type&delete"));
   });
+  texts = typeTexts;
 </script>
 
 <AnimateType
-  texts={typeTexts}
-  delay={100}
-  num_loops={2}
-  repeat_n_words={1}
-  blinker_iter_count={9}
+  {texts}
+  {delay}
+  {num_loops}
+  {repeat_n_words}
+  {blinker_iter_count}
 />

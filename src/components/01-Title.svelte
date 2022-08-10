@@ -1,5 +1,5 @@
 <script>
-  import TextType from "./TextType/TextTypeTitle.svelte";
+  import TextType from "./TextType/TextType.svelte";
 
   export let containerHeight;
   export let boolAnimateText = true;
@@ -35,7 +35,13 @@
             <div class="textLayer-title">Tony Kwok</div>
             <div class="textLayer-subtitle">
               I build things with {#if boolAnimateText}
-                <TextType {texts} />
+                <TextType
+                  {texts}
+                  delay={100}
+                  num_loops={2}
+                  repeat_n_words={1}
+                  blinker_iter_count={14}
+                />
               {:else}
                 data.
               {/if}

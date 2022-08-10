@@ -1,5 +1,5 @@
 <script>
-  import TextType from "./TextType/TextTypeContact.svelte";
+  import TextType from "./TextType/TextType.svelte";
 
   export let containerHeight, contactYOffset;
 
@@ -38,7 +38,15 @@
         style="transform: translate(0,{imgHeight - yScroll}px)"
       >
         <div class="textLayer-preamble">Interested?</div>
-        <div class="textLayer-title"><TextType {texts} /></div>
+        <div class="textLayer-title">
+          <TextType
+            {texts}
+            delay={100}
+            num_loops={2}
+            repeat_n_words={1}
+            blinker_iter_count={9}
+          />
+        </div>
         <div class="textLayer-description">
           I'm currently looking for my next adventure. Contact me if you have
           any questions, or if you just want to say hello! My inbox is always
