@@ -9454,6 +9454,8 @@ var app = (function () {
     	let div1_style_value;
     	let t4;
     	let contactwrapper;
+    	let t5;
+    	let navbar;
     	let current;
     	let mounted;
     	let dispose;
@@ -9505,6 +9507,11 @@ var app = (function () {
     			$$inline: true
     		});
 
+    	navbar = new Navbar({
+    			props: { titleHeight: /*titleHeight*/ ctx[0] },
+    			$$inline: true
+    		});
+
     	const block = {
     		c: function create() {
     			div3 = element("div");
@@ -9521,6 +9528,8 @@ var app = (function () {
     			div1 = element("div");
     			t4 = space();
     			create_component(contactwrapper.$$.fragment);
+    			t5 = space();
+    			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "svelte-zo7ols");
     			add_location(div0, file, 80, 4, 2547);
@@ -9552,6 +9561,8 @@ var app = (function () {
     			append_dev(div2, div1);
     			append_dev(div2, t4);
     			mount_component(contactwrapper, div2, null);
+    			insert_dev(target, t5, anchor);
+    			mount_component(navbar, target, anchor);
     			current = true;
 
     			if (!mounted) {
@@ -9617,6 +9628,10 @@ var app = (function () {
     			if (!current || dirty & /*titleHeight*/ 1) {
     				set_style(div2, "top", /*titleHeight*/ ctx[0] + "px");
     			}
+
+    			const navbar_changes = {};
+    			if (dirty & /*titleHeight*/ 1) navbar_changes.titleHeight = /*titleHeight*/ ctx[0];
+    			navbar.$set(navbar_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -9625,6 +9640,7 @@ var app = (function () {
     			transition_in(saoswrapper1.$$.fragment, local);
     			transition_in(saoswrapper2.$$.fragment, local);
     			transition_in(contactwrapper.$$.fragment, local);
+    			transition_in(navbar.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -9633,6 +9649,7 @@ var app = (function () {
     			transition_out(saoswrapper1.$$.fragment, local);
     			transition_out(saoswrapper2.$$.fragment, local);
     			transition_out(contactwrapper.$$.fragment, local);
+    			transition_out(navbar.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -9642,6 +9659,8 @@ var app = (function () {
     			destroy_component(saoswrapper1);
     			destroy_component(saoswrapper2);
     			destroy_component(contactwrapper);
+    			if (detaching) detach_dev(t5);
+    			destroy_component(navbar, detaching);
     			mounted = false;
     			dispose();
     		}
