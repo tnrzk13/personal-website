@@ -34,7 +34,7 @@
         {#if y < containerHeight}
           <div class="textLayer">
             <div class="textLayer-preamble">Hi, my name is</div>
-            <div class="textLayer-title">Tony Kwok</div>
+            <div class="textLayer-title">Tony Kwok.</div>
             <div class="textLayer-subtitle">
               I build things with {#if boolAnimateText}
                 <TextType

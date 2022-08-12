@@ -133,11 +133,10 @@
       color: black;
       left: 1.5em;
       right: 54%;
-      bottom: 4.5em;
+      bottom: 5em;
       line-height: normal;
       padding-top: 0;
       margin-top: 0;
-      // border: 3px solid black;
       display: grid;
     }
 
