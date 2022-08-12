@@ -1487,7 +1487,7 @@ var app = (function () {
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[7] - 1));
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-38dbf8");
-    			add_location(img, file$d, 74, 8, 2429);
+    			add_location(img, file$d, 74, 8, 2430);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1532,7 +1532,7 @@ var app = (function () {
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[7] - 1));
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-38dbf8");
-    			add_location(img, file$d, 67, 8, 2206);
+    			add_location(img, file$d, 67, 8, 2207);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1577,7 +1577,7 @@ var app = (function () {
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[7] - 1));
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-38dbf8");
-    			add_location(img, file$d, 59, 8, 1920);
+    			add_location(img, file$d, 59, 8, 1921);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1757,7 +1757,7 @@ var app = (function () {
     			div0.textContent = "Hi, my name is";
     			t1 = space();
     			div1 = element("div");
-    			div1.textContent = "Tony Kwok";
+    			div1.textContent = "Tony Kwok.";
     			t3 = space();
     			div2 = element("div");
     			t4 = text("I build things with ");
@@ -1774,13 +1774,13 @@ var app = (function () {
     			attr_dev(div1, "class", "textLayer-title svelte-38dbf8");
     			add_location(div1, file$d, 36, 12, 1045);
     			attr_dev(div2, "class", "textLayer-subtitle svelte-38dbf8");
-    			add_location(div2, file$d, 37, 12, 1103);
+    			add_location(div2, file$d, 37, 12, 1104);
     			attr_dev(div3, "class", "textLayer-description svelte-38dbf8");
-    			add_location(div3, file$d, 50, 12, 1512);
+    			add_location(div3, file$d, 50, 12, 1513);
     			attr_dev(i, "class", "fa-solid fa-angles-down");
-    			add_location(i, file$d, 55, 36, 1784);
+    			add_location(i, file$d, 55, 36, 1785);
     			attr_dev(div4, "class", "scrolldown svelte-38dbf8");
-    			add_location(div4, file$d, 55, 12, 1760);
+    			add_location(div4, file$d, 55, 12, 1761);
     			attr_dev(div5, "class", "textLayer svelte-38dbf8");
     			add_location(div5, file$d, 34, 10, 942);
     		},
@@ -7094,7 +7094,7 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + /*layer*/ ctx[14] + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[14]);
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
-    			attr_dev(img, "class", "svelte-v4q3ot");
+    			attr_dev(img, "class", "svelte-88tktz");
     			add_location(img, file$5, 92, 6, 2837);
     		},
     		m: function mount(target, anchor) {
@@ -7140,7 +7140,7 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[14] + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[14]);
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
-    			attr_dev(img, "class", "svelte-v4q3ot");
+    			attr_dev(img, "class", "svelte-88tktz");
     			add_location(img, file$5, 80, 6, 2436);
     		},
     		m: function mount(target, anchor) {
@@ -7228,31 +7228,31 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Say Hello";
     			t7 = space();
-    			attr_dev(div0, "class", "textLayer-preamble svelte-v4q3ot");
+    			attr_dev(div0, "class", "textLayer-preamble svelte-88tktz");
     			add_location(div0, file$5, 51, 8, 1335);
-    			attr_dev(div1, "class", "textLayer-title svelte-v4q3ot");
+    			attr_dev(div1, "class", "textLayer-title svelte-88tktz");
     			add_location(div1, file$5, 52, 8, 1394);
-    			attr_dev(div2, "class", "textLayer-description svelte-v4q3ot");
+    			attr_dev(div2, "class", "textLayer-description svelte-88tktz");
     			add_location(div2, file$5, 61, 8, 1636);
     			attr_dev(i, "class", "fa-brands fa-linkedin fa-md");
     			add_location(i, file$5, 69, 14, 2048);
     			attr_dev(a0, "href", "https://www.linkedin.com/in/tony-k-kwok/");
-    			attr_dev(a0, "class", "svelte-v4q3ot");
+    			attr_dev(a0, "class", "svelte-88tktz");
     			add_location(a0, file$5, 68, 12, 1981);
-    			attr_dev(div3, "class", "linkedin-container col-md-3 svelte-v4q3ot");
+    			attr_dev(div3, "class", "linkedin-container col-md-3 svelte-88tktz");
     			add_location(div3, file$5, 67, 10, 1926);
-    			attr_dev(button, "class", "btn btn-grad btn-lg svelte-v4q3ot");
+    			attr_dev(button, "class", "btn btn-grad btn-lg svelte-88tktz");
     			add_location(button, file$5, 74, 14, 2281);
     			attr_dev(a1, "href", "mailto:tnrzk13@gmail.com?subject=" + /*subject*/ ctx[7]);
     			attr_dev(a1, "id", "emailLink");
-    			attr_dev(a1, "class", "svelte-v4q3ot");
+    			attr_dev(a1, "class", "svelte-88tktz");
     			add_location(a1, file$5, 73, 12, 2197);
     			attr_dev(div4, "class", "button-container-column col-md-9");
     			add_location(div4, file$5, 72, 10, 2137);
     			attr_dev(div5, "class", "button-container row");
     			add_location(div5, file$5, 66, 8, 1880);
     			attr_dev(div6, "id", "parallax-" + /*layer*/ ctx[14]);
-    			attr_dev(div6, "class", "textLayer svelte-v4q3ot");
+    			attr_dev(div6, "class", "textLayer svelte-88tktz");
     			set_style(div6, "transform", "translateY(" + Math.max(-/*contactYOffset*/ ctx[1], /*imgHeight*/ ctx[4] - /*yScroll*/ ctx[3]) + "px)");
     			attr_dev(div6, "height", div6_height_value = "" + (/*containerHeight*/ ctx[0] + "px"));
     			add_location(div6, file$5, 42, 6, 1092);
@@ -7402,7 +7402,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "parallax-container svelte-v4q3ot");
+    			attr_dev(div, "class", "parallax-container svelte-88tktz");
     			add_location(div, file$5, 39, 0, 994);
     		},
     		l: function claim(nodes) {
