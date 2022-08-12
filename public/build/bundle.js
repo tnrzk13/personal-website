@@ -5962,29 +5962,25 @@ var app = (function () {
     // (15:8) {#each techstack as tech}
     function create_each_block$3(ctx) {
     	let div;
-    	let t0_value = /*tech*/ ctx[3] + "";
-    	let t0;
-    	let t1;
+    	let t_value = /*tech*/ ctx[3] + "";
+    	let t;
 
     	const block = {
     		c: function create() {
     			div = element("div");
-    			t0 = text(t0_value);
-    			t1 = space();
+    			t = text(t_value);
     			attr_dev(div, "class", "techstack svelte-124qgff");
     			add_location(div, file$8, 15, 10, 369);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
-    			append_dev(div, t0);
-    			insert_dev(target, t1, anchor);
+    			append_dev(div, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*techstack*/ 4 && t0_value !== (t0_value = /*tech*/ ctx[3] + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*techstack*/ 4 && t_value !== (t_value = /*tech*/ ctx[3] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
-    			if (detaching) detach_dev(t1);
     		}
     	};
 
@@ -6628,21 +6624,21 @@ var app = (function () {
     			t1 = space();
     			img1 = element("img");
     			attr_dev(div0, "class", "proj-description col-md-5");
-    			add_location(div0, file$6, 50, 12, 2137);
-    			attr_dev(img0, "class", "main main-odd svelte-10rqxm");
+    			add_location(div0, file$6, 50, 12, 2093);
+    			attr_dev(img0, "class", "main main-odd svelte-y57ije");
     			if (!src_url_equal(img0.src, img0_src_value = /*imgurl1*/ ctx[3])) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "project");
-    			add_location(img0, file$6, 55, 16, 2396);
-    			attr_dev(div1, "class", "main-img-container-odd col-md-10 offset-md-2 svelte-10rqxm");
-    			add_location(div1, file$6, 54, 14, 2320);
-    			attr_dev(img1, "class", "card card-odd svelte-10rqxm");
+    			add_location(img0, file$6, 57, 16, 2410);
+    			attr_dev(div1, "class", "main-img-container-odd col-md-10 offset-md-2 media-main-img-container svelte-y57ije");
+    			add_location(div1, file$6, 54, 14, 2276);
+    			attr_dev(img1, "class", "card card-odd media-card svelte-y57ije");
     			if (!src_url_equal(img1.src, img1_src_value = /*imgurl2*/ ctx[4])) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "project 2");
-    			add_location(img1, file$6, 57, 14, 2491);
-    			attr_dev(div2, "class", "img-container col-md-7 svelte-10rqxm");
-    			add_location(div2, file$6, 53, 12, 2268);
-    			attr_dev(div3, "class", "row project-container svelte-10rqxm");
-    			add_location(div3, file$6, 49, 10, 2088);
+    			add_location(img1, file$6, 59, 14, 2505);
+    			attr_dev(div2, "class", "img-container col-md-7 svelte-y57ije");
+    			add_location(div2, file$6, 53, 12, 2224);
+    			attr_dev(div3, "class", "row project-container svelte-y57ije");
+    			add_location(div3, file$6, 49, 10, 2044);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -6683,7 +6679,7 @@ var app = (function () {
     	return block;
     }
 
-    // (37:8) {#if index % 2 === 0}
+    // (35:8) {#if index % 2 === 0}
     function create_if_block$6(ctx) {
     	let div3;
     	let div1;
@@ -6718,22 +6714,22 @@ var app = (function () {
     			t1 = space();
     			div2 = element("div");
     			create_component(cardproject.$$.fragment);
-    			attr_dev(img0, "class", "main svelte-10rqxm");
+    			attr_dev(img0, "class", "main svelte-y57ije");
     			if (!src_url_equal(img0.src, img0_src_value = /*imgurl1*/ ctx[3])) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "project");
-    			add_location(img0, file$6, 40, 16, 1754);
-    			attr_dev(div0, "class", "main-img-container col-md-10");
-    			add_location(div0, file$6, 39, 14, 1694);
-    			attr_dev(img1, "class", "card svelte-10rqxm");
+    			add_location(img0, file$6, 40, 16, 1699);
+    			attr_dev(div0, "class", "main-img-container col-md-10 media-main-img-container svelte-y57ije");
+    			add_location(div0, file$6, 37, 14, 1581);
+    			attr_dev(img1, "class", "card media-card svelte-y57ije");
     			if (!src_url_equal(img1.src, img1_src_value = /*imgurl2*/ ctx[4])) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "project 2");
-    			add_location(img1, file$6, 42, 14, 1840);
-    			attr_dev(div1, "class", "img-container col-md-7 svelte-10rqxm");
-    			add_location(div1, file$6, 38, 12, 1642);
+    			add_location(img1, file$6, 42, 14, 1785);
+    			attr_dev(div1, "class", "img-container col-md-7 svelte-y57ije");
+    			add_location(div1, file$6, 36, 12, 1529);
     			attr_dev(div2, "class", "proj-description col-md-5");
-    			add_location(div2, file$6, 44, 12, 1924);
-    			attr_dev(div3, "class", "row project-container svelte-10rqxm");
-    			add_location(div3, file$6, 37, 10, 1593);
+    			add_location(div2, file$6, 44, 12, 1880);
+    			attr_dev(div3, "class", "row project-container svelte-y57ije");
+    			add_location(div3, file$6, 35, 10, 1480);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -6767,14 +6763,14 @@ var app = (function () {
     		block,
     		id: create_if_block$6.name,
     		type: "if",
-    		source: "(37:8) {#if index % 2 === 0}",
+    		source: "(35:8) {#if index % 2 === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (36:6) {#each projList as { title, imgurl1, imgurl2, text, techstack }
+    // (34:6) {#each projList as { title, imgurl1, imgurl2, text, techstack }
     function create_each_block$2(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -6799,8 +6795,8 @@ var app = (function () {
     			t = space();
     			br0 = element("br");
     			br1 = element("br");
-    			add_location(br0, file$6, 61, 8, 2613);
-    			add_location(br1, file$6, 61, 14, 2619);
+    			add_location(br0, file$6, 67, 8, 2704);
+    			add_location(br1, file$6, 67, 14, 2710);
     		},
     		m: function mount(target, anchor) {
     			if_blocks[current_block_type_index].m(target, anchor);
@@ -6833,7 +6829,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(36:6) {#each projList as { title, imgurl1, imgurl2, text, techstack }",
+    		source: "(34:6) {#each projList as { title, imgurl1, imgurl2, text, techstack }",
     		ctx
     	});
 
@@ -6963,10 +6959,10 @@ var app = (function () {
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9");
     			add_location(h1, file$6, 30, 2, 1240);
-    			attr_dev(div0, "class", "projects container-fluid col-md-9 svelte-10rqxm");
+    			attr_dev(div0, "class", "projects container-fluid col-md-9 svelte-y57ije");
     			add_location(div0, file$6, 31, 2, 1284);
     			attr_dev(div1, "id", "projects");
-    			attr_dev(div1, "class", "container-fluid svelte-10rqxm");
+    			attr_dev(div1, "class", "container-fluid svelte-y57ije");
     			add_location(div1, file$6, 29, 0, 1193);
     		},
     		l: function claim(nodes) {

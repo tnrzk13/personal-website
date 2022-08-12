@@ -14,7 +14,6 @@
       <div class="row">
         {#each techstack as tech}
           <div class="techstack">{tech}</div>
-          <!-- <li>{tech}</li> -->
         {/each}
       </div>
     </div>
@@ -22,9 +21,6 @@
 </div>
 
 <style lang="scss">
-  // .container-fluid {
-  //   border: 3px solid white;
-  // }
   .card {
     color: white;
 

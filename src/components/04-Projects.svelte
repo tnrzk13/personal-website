@@ -31,16 +31,16 @@
   <h1 class="title col-md-9">Projects</h1>
   <div class="projects container-fluid col-md-9">
     <SimpleGrid cols={1}>
-      <!-- {#each projList as proj, index}
-        <ProjectInstance projectIndex={index} project={proj} /> -->
       {#each projList as { title, imgurl1, imgurl2, text, techstack }, index}
         {#if index % 2 === 0}
           <div class="row project-container">
             <div class="img-container col-md-7">
-              <div class="main-img-container col-md-10">
+              <div
+                class="main-img-container col-md-10 media-main-img-container"
+              >
                 <img class="main" src={imgurl1} alt="project" />
               </div>
-              <img class="card" src={imgurl2} alt="project 2" />
+              <img class="card media-card" src={imgurl2} alt="project 2" />
             </div>
             <div class="proj-description col-md-5">
               <CardProject {title} {text} {techstack} />
@@ -52,10 +52,16 @@
               <CardProject {title} {text} {techstack} />
             </div>
             <div class="img-container col-md-7">
-              <div class="main-img-container-odd col-md-10 offset-md-2">
+              <div
+                class="main-img-container-odd col-md-10 offset-md-2 media-main-img-container"
+              >
                 <img class="main main-odd" src={imgurl1} alt="project" />
               </div>
-              <img class="card card-odd" src={imgurl2} alt="project 2" />
+              <img
+                class="card card-odd media-card"
+                src={imgurl2}
+                alt="project 2"
+              />
             </div>
           </div>
         {/if}
@@ -66,6 +72,14 @@
 </div>
 
 <style lang="scss">
+  @media (max-width: 767px) {
+    .media-main-img-container {
+      padding: 0 1em;
+    }
+    .media-card {
+      margin: 0 1em;
+    }
+  }
   #projects {
     border: 1px solid transparent;
   }
