@@ -109,6 +109,7 @@
       display: flex;
       flex-direction: column;
       color: white;
+      overflow: visible;
 
       #content {
         background-image: linear-gradient(var(--blue), var(--darkblue));

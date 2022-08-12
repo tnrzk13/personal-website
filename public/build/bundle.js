@@ -9539,17 +9539,17 @@ var app = (function () {
     			t5 = space();
     			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
-    			attr_dev(div0, "class", "svelte-bzg1pw");
+    			attr_dev(div0, "class", "svelte-jnqx4x");
     			add_location(div0, file, 77, 4, 2479);
     			attr_dev(div1, "id", "contact");
     			attr_dev(div1, "style", div1_style_value = "height: calc(" + (/*titleHeight*/ ctx[1] - /*contactYOffset*/ ctx[3]) + "px); )");
-    			attr_dev(div1, "class", "svelte-bzg1pw");
+    			attr_dev(div1, "class", "svelte-jnqx4x");
     			add_location(div1, file, 82, 4, 2713);
     			attr_dev(div2, "id", "content-container");
     			set_style(div2, "top", /*titleHeight*/ ctx[1] + "px");
-    			attr_dev(div2, "class", "svelte-bzg1pw");
+    			attr_dev(div2, "class", "svelte-jnqx4x");
     			add_location(div2, file, 76, 2, 2415);
-    			attr_dev(div3, "class", "container-fluid svelte-bzg1pw");
+    			attr_dev(div3, "class", "container-fluid svelte-jnqx4x");
     			add_location(div3, file, 74, 0, 2306);
     		},
     		l: function claim(nodes) {
