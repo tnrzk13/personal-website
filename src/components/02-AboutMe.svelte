@@ -23,10 +23,10 @@
       </div>
       <div class="row techlist1 m-0 p-0">
         <div class="row">
-          {#each techs1 as tech, index}
+          {#each techs1 as tech}
             <div class="techstack">{tech}</div>
           {/each}
-          {#each techs2 as tech, index}
+          {#each techs2 as tech}
             <div class="techstack">{tech}</div>
           {/each}
         </div>
@@ -76,19 +76,21 @@
 </div>
 
 <style lang="scss">
+  @media (max-width: 767px) {
+    .imgdiv {
+      padding-top: 2em;
+    }
+  }
   .aboutMe {
     width: 100%;
     height: auto;
     color: white;
     padding: 0;
     margin: 0;
-    // border: 5px solid red;
-    // border: 1px solid transparent;
 
     .imgdiv {
       position: relative;
       box-sizing: border-box;
-      // border: 5px solid white;
       display: grid;
       .aboutmeimg-container {
         justify-self: center;
