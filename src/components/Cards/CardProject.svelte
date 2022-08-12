@@ -46,7 +46,7 @@
     }
 
     a:hover {
-      color: blue;
+      filter: brightness(50%);
     }
 
     .techstack {
