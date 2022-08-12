@@ -11,22 +11,24 @@
   import { beforeUpdate, tick } from "svelte";
 
   let titleHeight,
-    scrollHeight,
     contactHeight,
     pageHalfDown,
     contactYOffset,
     body,
     contentContainer,
-    contentContainerHeight;
+    contentContainerHeight,
+    content,
+    contentHeight;
   contentContainerHeight = 0;
 
   // wait for document.body to load first
   beforeUpdate(async () => {
     await tick();
     body = document.body;
-    scrollHeight = body.offsetHeight;
     contentContainer = document.getElementById("content-container");
+    content = document.getElementById("content");
     contentContainerHeight = contentContainer.offsetHeight;
+    contentHeight = content.offsetHeight;
     pageHalfDown = contentContainerHeight / 2;
   });
 
@@ -35,29 +37,26 @@
     body = document.body;
     titleHeight = body.offsetWidth * 0.5625;
     contactYOffset = titleHeight / 3;
-    scrollHeight = body.offsetHeight;
+    contactYOffset = 0;
     contactHeight = titleHeight - contactYOffset;
   };
   window.onload = manageHeights();
   window.onresize = () => {
     titleHeight = body.offsetWidth * 0.5625;
     contactYOffset = titleHeight / 3;
-    scrollHeight = body.offsetHeight;
     contactHeight = titleHeight - contactYOffset;
     contentContainerHeight = contentContainer.clientHeight;
     pageHalfDown = contentContainerHeight / 2;
   };
 
-  // $: {
-  //   console.log(
-  //     titleHeight,
-  //     contactYOffset,
-  //     scrollHeight,
-  //     contactHeight,
-  //     contentContainerHeight,
-  //     pageHalfDown
-  //   );
-  // }
+  $: {
+    let clObject = {
+      contentContainerHeight: contentContainerHeight,
+      contentHeight: contentHeight,
+      contactHeight: contactHeight,
+    };
+    console.log(clObject);
+  }
 
   let boolFadeAnimation, boolShowLoadingScreen, boolAnimateText;
   const triggerDevMode = (isOn) => {
@@ -73,7 +72,6 @@
 </script>
 
 <svelte:window bind:scrollY={y} />
-<!-- <svelte:window on:resize={manageHeights} /> -->
 
 <div class="container-fluid">
   <Title containerHeight={titleHeight} {pageHalfDown} {boolAnimateText} />
@@ -95,6 +93,7 @@
     />
   </div>
 </div>
+
 <Navbar {titleHeight} />
 
 <style lang="scss">
@@ -117,6 +116,10 @@
         position: relative;
         z-index: 2;
         border-radius: 0 0 50% 50% / 0 0 3em 3em;
+      }
+
+      #contact {
+        background-color: transparent;
       }
     }
   }

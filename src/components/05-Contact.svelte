@@ -12,14 +12,15 @@
   let texts = ["Get in Touch!"];
 
   let contactDiv = document.getElementById("contact");
-  let contactTop, yDiff, y, yScroll, imgHeight, offsetRatio;
+  let contactTop, y, yScroll, imgHeight, offsetRatio;
+  let contactHeight;
+
   const update = () => {
     contactTop = contactDiv.offsetTop;
-    yDiff = y - contactTop;
+    contactHeight = contactDiv.offsetHeight;
     imgHeight = containerHeight - contactYOffset;
     offsetRatio = contactYOffset / containerHeight;
-    yScroll = Math.max(0, yDiff);
-    // console.log("update");
+    yScroll = Math.max(0, y - contactTop);
   };
 
   onMount(() => {
@@ -28,17 +29,9 @@
   window.onresize = update();
 
   $: {
-    yDiff = y - contactTop;
-    yScroll = Math.max(0, yDiff);
+    yScroll = Math.max(0, y - contactTop);
 
-    // console.log(
-    //   containerHeight,
-    //   contactTop,
-    //   contactTop + containerHeight,
-    //   y
-    //   // imgHeight,
-    //   // yScroll
-    // );
+    // console.log(contactTop, contactTop + contactHeight, y);
   }
 </script>
 
@@ -48,17 +41,19 @@
   {#each layers as layer}
     {#if layer === textLayer}
       <div
+        id="parallax-{layer}"
         class="textLayer"
-        style="transform: translate(0,{imgHeight - yScroll}px)"
+        style="transform: translateY({Math.max(0, imgHeight - yScroll)}px)"
+        height="{containerHeight}px"
       >
         <div class="textLayer-preamble">Interested?</div>
         <div class="textLayer-title">
           <TextType
             {texts}
             delay={100}
-            num_loops={2}
+            num_loops={999}
             repeat_n_words={1}
-            blinker_iter_count={9}
+            blinker_iter_count={"infinite"}
           />
         </div>
         <div class="textLayer-description">
@@ -81,18 +76,24 @@
       </div>
     {:else if layer < 10}
       <img
-        style="transform: translate(0,{imgHeight *
-          (layer / (layers.length - 1)) -
-          (yScroll * (1 + offsetRatio) * layer) / (layers.length - 1)}px)"
+        id="parallax-{layer}"
+        style="transform: translateY({Math.max(
+          0,
+          (imgHeight * layer) / (layers.length - 1) -
+            (yScroll * (1 + offsetRatio) * layer) / (layers.length - 1)
+        )}px)"
         src="images/intro/00{layer}.png"
         alt="parallax layer {layer}"
         height={containerHeight}
       />
     {:else}
       <img
-        style="transform: translate(0,{(imgHeight * layer) /
-          (layers.length - 1) -
-          (yScroll * (1 + offsetRatio) * layer) / (layers.length - 1)}px)"
+        id="parallax-{layer}"
+        style="transform: translateY({Math.max(
+          0,
+          (imgHeight * layer) / (layers.length - 1) -
+            (yScroll * (1 + offsetRatio) * layer) / (layers.length - 1)
+        )}px)"
         src="images/intro/0{layer}.png"
         alt="parallax layer {layer}"
         height={containerHeight}
@@ -129,7 +130,7 @@
       color: black;
       left: 1.5em;
       right: 54%;
-      bottom: 5em;
+      bottom: 4.5em;
       line-height: normal;
       padding-top: 0;
       margin-top: 0;

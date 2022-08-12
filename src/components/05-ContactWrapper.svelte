@@ -12,10 +12,7 @@
 
 {#if y > Math.max(0, pageHalfDown)}
   <div class="background-extension" style="bottom: {contactHeight}px;" />
-  <div
-    class="contact-wrapper"
-    style="transform: translateY({contactYOffset}px);"
-  >
+  <div id="contact-wrapper" style="transform: translateY({contactYOffset}px);">
     <Contact {containerHeight} {contactYOffset} />
   </div>
 {/if}
@@ -29,7 +26,7 @@
     background-color: #94b5f7;
   }
 
-  .contact-wrapper {
+  #contact-wrapper {
     background-color: white;
     position: fixed;
     bottom: 0;
