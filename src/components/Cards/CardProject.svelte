@@ -1,15 +1,17 @@
 <script>
-  export let title;
-  export let text;
-  export let techstack;
-
-  // $: console.log(points);
+  export let title, url, text, techstack;
 </script>
 
 <div class="div container-fluid">
   <div class="card m-2 cb1 text-center">
     <div class="card-body">
-      <h4 class="title">{title}</h4>
+      {#if url === ""}
+        <h4 class="title">{title}</h4>
+      {:else}
+        <a href={url}>
+          <h4 class="title">{title}</h4>
+        </a>
+      {/if}
       <p class="text">{text}</p>
       <div class="row">
         {#each techstack as tech}
@@ -31,11 +33,22 @@
   }
   .card-body {
     text-align: left;
-    h4 {
-      font-family: "Montserrat", sans-serif;
-      font-size: 1.25rem;
-      padding: 1.5rem 0 0.5rem 0;
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      h4 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.25rem;
+        padding: 1.5rem 0 0.5rem 0;
+      }
     }
+
+    a:hover {
+      color: blue;
+    }
+
     .techstack {
       width: auto;
       background-color: #303443;
