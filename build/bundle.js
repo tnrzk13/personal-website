@@ -2584,7 +2584,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$b, 20, 10, 593);
+    			add_location(li, file$b, 20, 10, 604);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -2652,24 +2652,24 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(img, "class", "logo svelte-12owhoo");
+    			attr_dev(img, "class", "logo svelte-1cupo5k");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl*/ ctx[0])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "company logo");
-    			add_location(img, file$b, 14, 8, 354);
-    			attr_dev(div0, "class", "circle-logo svelte-12owhoo");
+    			add_location(img, file$b, 14, 8, 365);
+    			attr_dev(div0, "class", "circle-logo svelte-1cupo5k");
     			set_style(div0, "background-image", /*logoColor*/ ctx[4]);
-    			add_location(div0, file$b, 13, 6, 281);
-    			attr_dev(h4, "class", "card-title svelte-12owhoo");
-    			add_location(h4, file$b, 16, 6, 428);
-    			attr_dev(h6, "class", "card-subtitle svelte-12owhoo");
-    			add_location(h6, file$b, 17, 6, 471);
+    			add_location(div0, file$b, 13, 6, 292);
+    			attr_dev(h4, "class", "card-title svelte-1cupo5k");
+    			add_location(h4, file$b, 16, 6, 439);
+    			attr_dev(h6, "class", "card-subtitle svelte-1cupo5k");
+    			add_location(h6, file$b, 17, 6, 482);
     			attr_dev(p, "class", "card-text");
-    			add_location(p, file$b, 18, 6, 520);
-    			attr_dev(div1, "class", "card-body svelte-12owhoo");
-    			add_location(div1, file$b, 12, 4, 250);
-    			attr_dev(div2, "class", "card m-2 cb1 text-center svelte-12owhoo");
-    			add_location(div2, file$b, 11, 2, 206);
-    			attr_dev(div3, "class", "div container-fluid");
+    			add_location(p, file$b, 18, 6, 531);
+    			attr_dev(div1, "class", "card-body svelte-1cupo5k");
+    			add_location(div1, file$b, 12, 4, 261);
+    			attr_dev(div2, "class", "card m-2 cb1 text-center svelte-1cupo5k");
+    			add_location(div2, file$b, 11, 2, 217);
+    			attr_dev(div3, "class", "container-fluid card-container svelte-1cupo5k");
     			add_location(div3, file$b, 10, 0, 169);
     		},
     		l: function claim(nodes) {
@@ -5831,12 +5831,13 @@ var app = (function () {
     			t1 = space();
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
-    			attr_dev(h1, "class", "title col-md-9 svelte-1tnsdoa");
+    			attr_dev(h1, "class", "title col-md-9 svelte-rz1yuc");
     			add_location(h1, file$9, 56, 2, 1713);
-    			attr_dev(div0, "class", "card container-fluid col-md-10 svelte-1tnsdoa");
+    			attr_dev(div0, "id", "card-list-container");
+    			attr_dev(div0, "class", "card container-fluid col-md-9 svelte-rz1yuc");
     			add_location(div0, file$9, 57, 2, 1755);
     			attr_dev(div1, "id", "career");
-    			attr_dev(div1, "class", "container-fluid svelte-1tnsdoa");
+    			attr_dev(div1, "class", "container-fluid svelte-rz1yuc");
     			add_location(div1, file$9, 55, 0, 1668);
     		},
     		l: function claim(nodes) {
