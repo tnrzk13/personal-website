@@ -7081,7 +7081,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (89:4) {:else}
+    // (92:4) {:else}
     function create_else_block$2(ctx) {
     	let img;
     	let img_src_value;
@@ -7090,19 +7090,19 @@ var app = (function () {
     		c: function create() {
     			img = element("img");
     			attr_dev(img, "id", "parallax-" + /*layer*/ ctx[14]);
-    			set_style(img, "transform", "translateY(" + Math.max(0, /*imgHeight*/ ctx[3] * /*layer*/ ctx[14] / (/*layers*/ ctx[5].length - 1) - /*yScroll*/ ctx[2] * (1 + /*offsetRatio*/ ctx[4]) * /*layer*/ ctx[14] / (/*layers*/ ctx[5].length - 1)) + "px)");
+    			set_style(img, "transform", "translateY(" + Math.max(-/*contactYOffset*/ ctx[1], /*imgHeight*/ ctx[4] * /*layer*/ ctx[14] / (/*layers*/ ctx[6].length - 1) - /*yScroll*/ ctx[3] * (1 + /*offsetRatio*/ ctx[5]) * /*layer*/ ctx[14] / (/*layers*/ ctx[6].length - 1)) + "px)");
     			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + /*layer*/ ctx[14] + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[14]);
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-v4q3ot");
-    			add_location(img, file$5, 89, 6, 2776);
+    			add_location(img, file$5, 92, 6, 2837);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*imgHeight, yScroll, offsetRatio*/ 28) {
-    				set_style(img, "transform", "translateY(" + Math.max(0, /*imgHeight*/ ctx[3] * /*layer*/ ctx[14] / (/*layers*/ ctx[5].length - 1) - /*yScroll*/ ctx[2] * (1 + /*offsetRatio*/ ctx[4]) * /*layer*/ ctx[14] / (/*layers*/ ctx[5].length - 1)) + "px)");
+    			if (dirty & /*contactYOffset, imgHeight, yScroll, offsetRatio*/ 58) {
+    				set_style(img, "transform", "translateY(" + Math.max(-/*contactYOffset*/ ctx[1], /*imgHeight*/ ctx[4] * /*layer*/ ctx[14] / (/*layers*/ ctx[6].length - 1) - /*yScroll*/ ctx[3] * (1 + /*offsetRatio*/ ctx[5]) * /*layer*/ ctx[14] / (/*layers*/ ctx[6].length - 1)) + "px)");
     			}
 
     			if (dirty & /*containerHeight*/ 1) {
@@ -7120,14 +7120,14 @@ var app = (function () {
     		block,
     		id: create_else_block$2.name,
     		type: "else",
-    		source: "(89:4) {:else}",
+    		source: "(92:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (77:25) 
+    // (80:25) 
     function create_if_block_1(ctx) {
     	let img;
     	let img_src_value;
@@ -7136,19 +7136,19 @@ var app = (function () {
     		c: function create() {
     			img = element("img");
     			attr_dev(img, "id", "parallax-" + /*layer*/ ctx[14]);
-    			set_style(img, "transform", "translateY(" + Math.max(0, /*imgHeight*/ ctx[3] * /*layer*/ ctx[14] / (/*layers*/ ctx[5].length - 1) - /*yScroll*/ ctx[2] * (1 + /*offsetRatio*/ ctx[4]) * /*layer*/ ctx[14] / (/*layers*/ ctx[5].length - 1)) + "px)");
+    			set_style(img, "transform", "translateY(" + Math.max(-/*contactYOffset*/ ctx[1], /*imgHeight*/ ctx[4] * /*layer*/ ctx[14] / (/*layers*/ ctx[6].length - 1) - /*yScroll*/ ctx[3] * (1 + /*offsetRatio*/ ctx[5]) * /*layer*/ ctx[14] / (/*layers*/ ctx[6].length - 1)) + "px)");
     			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[14] + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[14]);
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-v4q3ot");
-    			add_location(img, file$5, 77, 6, 2389);
+    			add_location(img, file$5, 80, 6, 2436);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*imgHeight, yScroll, offsetRatio*/ 28) {
-    				set_style(img, "transform", "translateY(" + Math.max(0, /*imgHeight*/ ctx[3] * /*layer*/ ctx[14] / (/*layers*/ ctx[5].length - 1) - /*yScroll*/ ctx[2] * (1 + /*offsetRatio*/ ctx[4]) * /*layer*/ ctx[14] / (/*layers*/ ctx[5].length - 1)) + "px)");
+    			if (dirty & /*contactYOffset, imgHeight, yScroll, offsetRatio*/ 58) {
+    				set_style(img, "transform", "translateY(" + Math.max(-/*contactYOffset*/ ctx[1], /*imgHeight*/ ctx[4] * /*layer*/ ctx[14] / (/*layers*/ ctx[6].length - 1) - /*yScroll*/ ctx[3] * (1 + /*offsetRatio*/ ctx[5]) * /*layer*/ ctx[14] / (/*layers*/ ctx[6].length - 1)) + "px)");
     			}
 
     			if (dirty & /*containerHeight*/ 1) {
@@ -7166,7 +7166,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(77:25) ",
+    		source: "(80:25) ",
     		ctx
     	});
 
@@ -7197,7 +7197,7 @@ var app = (function () {
 
     	texttype = new TextType({
     			props: {
-    				texts: /*texts*/ ctx[7],
+    				texts: /*texts*/ ctx[8],
     				delay: 100,
     				num_loops: 999,
     				repeat_n_words: 1,
@@ -7229,31 +7229,31 @@ var app = (function () {
     			button.textContent = "Say Hello";
     			t7 = space();
     			attr_dev(div0, "class", "textLayer-preamble svelte-v4q3ot");
-    			add_location(div0, file$5, 48, 8, 1288);
+    			add_location(div0, file$5, 51, 8, 1335);
     			attr_dev(div1, "class", "textLayer-title svelte-v4q3ot");
-    			add_location(div1, file$5, 49, 8, 1347);
+    			add_location(div1, file$5, 52, 8, 1394);
     			attr_dev(div2, "class", "textLayer-description svelte-v4q3ot");
-    			add_location(div2, file$5, 58, 8, 1589);
+    			add_location(div2, file$5, 61, 8, 1636);
     			attr_dev(i, "class", "fa-brands fa-linkedin fa-md");
-    			add_location(i, file$5, 66, 14, 2001);
+    			add_location(i, file$5, 69, 14, 2048);
     			attr_dev(a0, "href", "https://www.linkedin.com/in/tony-k-kwok/");
     			attr_dev(a0, "class", "svelte-v4q3ot");
-    			add_location(a0, file$5, 65, 12, 1934);
+    			add_location(a0, file$5, 68, 12, 1981);
     			attr_dev(div3, "class", "linkedin-container col-md-3 svelte-v4q3ot");
-    			add_location(div3, file$5, 64, 10, 1879);
+    			add_location(div3, file$5, 67, 10, 1926);
     			attr_dev(button, "class", "btn btn-grad btn-lg svelte-v4q3ot");
-    			add_location(button, file$5, 71, 14, 2234);
-    			attr_dev(a1, "href", "mailto:tnrzk13@gmail.com?subject=" + /*subject*/ ctx[6]);
+    			add_location(button, file$5, 74, 14, 2281);
+    			attr_dev(a1, "href", "mailto:tnrzk13@gmail.com?subject=" + /*subject*/ ctx[7]);
     			attr_dev(a1, "id", "emailLink");
     			attr_dev(a1, "class", "svelte-v4q3ot");
-    			add_location(a1, file$5, 70, 12, 2150);
+    			add_location(a1, file$5, 73, 12, 2197);
     			attr_dev(div4, "class", "button-container-column col-md-9");
-    			add_location(div4, file$5, 69, 10, 2090);
+    			add_location(div4, file$5, 72, 10, 2137);
     			attr_dev(div5, "class", "button-container row");
-    			add_location(div5, file$5, 63, 8, 1833);
+    			add_location(div5, file$5, 66, 8, 1880);
     			attr_dev(div6, "id", "parallax-" + /*layer*/ ctx[14]);
     			attr_dev(div6, "class", "textLayer svelte-v4q3ot");
-    			set_style(div6, "transform", "translateY(" + Math.max(0, /*imgHeight*/ ctx[3] - /*yScroll*/ ctx[2]) + "px)");
+    			set_style(div6, "transform", "translateY(" + Math.max(-/*contactYOffset*/ ctx[1], /*imgHeight*/ ctx[4] - /*yScroll*/ ctx[3]) + "px)");
     			attr_dev(div6, "height", div6_height_value = "" + (/*containerHeight*/ ctx[0] + "px"));
     			add_location(div6, file$5, 42, 6, 1092);
     		},
@@ -7278,8 +7278,8 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty & /*imgHeight, yScroll*/ 12) {
-    				set_style(div6, "transform", "translateY(" + Math.max(0, /*imgHeight*/ ctx[3] - /*yScroll*/ ctx[2]) + "px)");
+    			if (!current || dirty & /*contactYOffset, imgHeight, yScroll*/ 26) {
+    				set_style(div6, "transform", "translateY(" + Math.max(-/*contactYOffset*/ ctx[1], /*imgHeight*/ ctx[4] - /*yScroll*/ ctx[3]) + "px)");
     			}
 
     			if (!current || dirty & /*containerHeight*/ 1 && div6_height_value !== (div6_height_value = "" + (/*containerHeight*/ ctx[0] + "px"))) {
@@ -7382,7 +7382,7 @@ var app = (function () {
     	let mounted;
     	let dispose;
     	add_render_callback(/*onwindowscroll*/ ctx[10]);
-    	let each_value = /*layers*/ ctx[5];
+    	let each_value = /*layers*/ ctx[6];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -7429,15 +7429,15 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*y*/ 2 && !scrolling) {
+    			if (dirty & /*y*/ 4 && !scrolling) {
     				scrolling = true;
     				clearTimeout(scrolling_timeout);
-    				scrollTo(window_1$1.pageXOffset, /*y*/ ctx[1]);
+    				scrollTo(window_1$1.pageXOffset, /*y*/ ctx[2]);
     				scrolling_timeout = setTimeout(clear_scrolling, 100);
     			}
 
-    			if (dirty & /*layers, Math, imgHeight, yScroll, containerHeight, subject, texts, textLayer, offsetRatio*/ 253) {
-    				each_value = /*layers*/ ctx[5];
+    			if (dirty & /*layers, Math, contactYOffset, imgHeight, yScroll, containerHeight, subject, texts, textLayer, offsetRatio*/ 507) {
+    				each_value = /*layers*/ ctx[6];
     				validate_each_argument(each_value);
     				let i;
 
@@ -7518,9 +7518,9 @@ var app = (function () {
     	const update = () => {
     		$$invalidate(9, contactTop = contactDiv.offsetTop);
     		contactHeight = contactDiv.offsetHeight;
-    		$$invalidate(3, imgHeight = containerHeight - contactYOffset);
-    		$$invalidate(4, offsetRatio = contactYOffset / containerHeight);
-    		$$invalidate(2, yScroll = Math.max(0, y - contactTop));
+    		$$invalidate(4, imgHeight = containerHeight - contactYOffset);
+    		$$invalidate(5, offsetRatio = contactYOffset / containerHeight);
+    		$$invalidate(3, yScroll = Math.max(0, y - contactTop));
     	};
 
     	onMount(() => {
@@ -7535,12 +7535,12 @@ var app = (function () {
     	});
 
     	function onwindowscroll() {
-    		$$invalidate(1, y = window_1$1.pageYOffset);
+    		$$invalidate(2, y = window_1$1.pageYOffset);
     	}
 
     	$$self.$$set = $$props => {
     		if ('containerHeight' in $$props) $$invalidate(0, containerHeight = $$props.containerHeight);
-    		if ('contactYOffset' in $$props) $$invalidate(8, contactYOffset = $$props.contactYOffset);
+    		if ('contactYOffset' in $$props) $$invalidate(1, contactYOffset = $$props.contactYOffset);
     	};
 
     	$$self.$capture_state = () => ({
@@ -7565,15 +7565,15 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ('containerHeight' in $$props) $$invalidate(0, containerHeight = $$props.containerHeight);
-    		if ('contactYOffset' in $$props) $$invalidate(8, contactYOffset = $$props.contactYOffset);
-    		if ('subject' in $$props) $$invalidate(6, subject = $$props.subject);
-    		if ('texts' in $$props) $$invalidate(7, texts = $$props.texts);
+    		if ('contactYOffset' in $$props) $$invalidate(1, contactYOffset = $$props.contactYOffset);
+    		if ('subject' in $$props) $$invalidate(7, subject = $$props.subject);
+    		if ('texts' in $$props) $$invalidate(8, texts = $$props.texts);
     		if ('contactDiv' in $$props) contactDiv = $$props.contactDiv;
     		if ('contactTop' in $$props) $$invalidate(9, contactTop = $$props.contactTop);
-    		if ('y' in $$props) $$invalidate(1, y = $$props.y);
-    		if ('yScroll' in $$props) $$invalidate(2, yScroll = $$props.yScroll);
-    		if ('imgHeight' in $$props) $$invalidate(3, imgHeight = $$props.imgHeight);
-    		if ('offsetRatio' in $$props) $$invalidate(4, offsetRatio = $$props.offsetRatio);
+    		if ('y' in $$props) $$invalidate(2, y = $$props.y);
+    		if ('yScroll' in $$props) $$invalidate(3, yScroll = $$props.yScroll);
+    		if ('imgHeight' in $$props) $$invalidate(4, imgHeight = $$props.imgHeight);
+    		if ('offsetRatio' in $$props) $$invalidate(5, offsetRatio = $$props.offsetRatio);
     		if ('contactHeight' in $$props) contactHeight = $$props.contactHeight;
     	};
 
@@ -7582,15 +7582,16 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*y, contactTop*/ 514) {
+    		if ($$self.$$.dirty & /*y, contactTop*/ 516) {
     			{
-    				$$invalidate(2, yScroll = Math.max(0, y - contactTop));
+    				$$invalidate(3, yScroll = Math.max(0, y - contactTop));
     			} // console.log(contactTop, contactTop + contactHeight, y);
     		}
     	};
 
     	return [
     		containerHeight,
+    		contactYOffset,
     		y,
     		yScroll,
     		imgHeight,
@@ -7598,7 +7599,6 @@ var app = (function () {
     		layers,
     		subject,
     		texts,
-    		contactYOffset,
     		contactTop,
     		onwindowscroll
     	];
@@ -7607,7 +7607,7 @@ var app = (function () {
     class _05_Contact extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$6, create_fragment$6, safe_not_equal, { containerHeight: 0, contactYOffset: 8 });
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, { containerHeight: 0, contactYOffset: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -7623,7 +7623,7 @@ var app = (function () {
     			console.warn("<_05_Contact> was created without expected prop 'containerHeight'");
     		}
 
-    		if (/*contactYOffset*/ ctx[8] === undefined && !('contactYOffset' in props)) {
+    		if (/*contactYOffset*/ ctx[1] === undefined && !('contactYOffset' in props)) {
     			console.warn("<_05_Contact> was created without expected prop 'contactYOffset'");
     		}
     	}
@@ -9322,7 +9322,7 @@ var app = (function () {
     const { console: console_1, window: window_1 } = globals;
     const file = "src\\App.svelte";
 
-    // (80:6) <SaosWrapper {boolFadeAnimation}>
+    // (79:6) <SaosWrapper {boolFadeAnimation}>
     function create_default_slot_2(ctx) {
     	let aboutme;
     	let current;
@@ -9354,14 +9354,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(80:6) <SaosWrapper {boolFadeAnimation}>",
+    		source: "(79:6) <SaosWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (81:6) <SaosWrapper {boolFadeAnimation}>
+    // (80:6) <SaosWrapper {boolFadeAnimation}>
     function create_default_slot_1(ctx) {
     	let career;
     	let current;
@@ -9393,14 +9393,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(81:6) <SaosWrapper {boolFadeAnimation}>",
+    		source: "(80:6) <SaosWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (82:6) <SaosWrapper {boolFadeAnimation}>
+    // (81:6) <SaosWrapper {boolFadeAnimation}>
     function create_default_slot(ctx) {
     	let projects;
     	let current;
@@ -9432,7 +9432,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(82:6) <SaosWrapper {boolFadeAnimation}>",
+    		source: "(81:6) <SaosWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
@@ -9540,17 +9540,17 @@ var app = (function () {
     			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "svelte-bzg1pw");
-    			add_location(div0, file, 78, 4, 2504);
+    			add_location(div0, file, 77, 4, 2479);
     			attr_dev(div1, "id", "contact");
     			attr_dev(div1, "style", div1_style_value = "height: calc(" + (/*titleHeight*/ ctx[1] - /*contactYOffset*/ ctx[3]) + "px); )");
     			attr_dev(div1, "class", "svelte-bzg1pw");
-    			add_location(div1, file, 83, 4, 2738);
+    			add_location(div1, file, 82, 4, 2713);
     			attr_dev(div2, "id", "content-container");
     			set_style(div2, "top", /*titleHeight*/ ctx[1] + "px");
     			attr_dev(div2, "class", "svelte-bzg1pw");
-    			add_location(div2, file, 77, 2, 2440);
+    			add_location(div2, file, 76, 2, 2415);
     			attr_dev(div3, "class", "container-fluid svelte-bzg1pw");
-    			add_location(div3, file, 75, 0, 2331);
+    			add_location(div3, file, 74, 0, 2306);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9718,7 +9718,6 @@ var app = (function () {
     		body = document.body;
     		$$invalidate(1, titleHeight = body.offsetWidth * 0.5625);
     		$$invalidate(3, contactYOffset = titleHeight / 3);
-    		$$invalidate(3, contactYOffset = 0);
     		$$invalidate(0, contactHeight = titleHeight - contactYOffset);
     	};
 
