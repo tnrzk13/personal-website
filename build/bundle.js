@@ -5970,10 +5970,10 @@ var app = (function () {
     			a = element("a");
     			h4 = element("h4");
     			t = text(/*title*/ ctx[0]);
-    			attr_dev(h4, "class", "title svelte-5hz9yy");
+    			attr_dev(h4, "class", "title svelte-d4cayz");
     			add_location(h4, file$7, 11, 10, 285);
     			attr_dev(a, "href", /*url*/ ctx[1]);
-    			attr_dev(a, "class", "svelte-5hz9yy");
+    			attr_dev(a, "class", "svelte-d4cayz");
     			add_location(a, file$7, 10, 8, 259);
     		},
     		m: function mount(target, anchor) {
@@ -6013,7 +6013,7 @@ var app = (function () {
     		c: function create() {
     			h4 = element("h4");
     			t = text(/*title*/ ctx[0]);
-    			attr_dev(h4, "class", "title svelte-5hz9yy");
+    			attr_dev(h4, "class", "title svelte-d4cayz");
     			add_location(h4, file$7, 8, 8, 204);
     		},
     		m: function mount(target, anchor) {
@@ -6049,7 +6049,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			t = text(t_value);
-    			attr_dev(div, "class", "techstack svelte-5hz9yy");
+    			attr_dev(div, "class", "techstack svelte-d4cayz");
     			add_location(div, file$7, 17, 10, 448);
     		},
     		m: function mount(target, anchor) {
@@ -6120,9 +6120,9 @@ var app = (function () {
     			add_location(p, file$7, 14, 6, 350);
     			attr_dev(div0, "class", "row");
     			add_location(div0, file$7, 15, 6, 384);
-    			attr_dev(div1, "class", "card-body svelte-5hz9yy");
+    			attr_dev(div1, "class", "card-body svelte-d4cayz");
     			add_location(div1, file$7, 6, 4, 147);
-    			attr_dev(div2, "class", "card m-2 cb1 text-center svelte-5hz9yy");
+    			attr_dev(div2, "class", "card m-2 cb1 text-center svelte-d4cayz");
     			add_location(div2, file$7, 5, 2, 103);
     			attr_dev(div3, "class", "div container-fluid");
     			add_location(div3, file$7, 4, 0, 66);
