@@ -43,7 +43,10 @@
       <div
         id="parallax-{layer}"
         class="textLayer"
-        style="transform: translateY({Math.max(0, imgHeight - yScroll)}px)"
+        style="transform: translateY({Math.max(
+          -contactYOffset,
+          imgHeight - yScroll
+        )}px)"
         height="{containerHeight}px"
       >
         <div class="textLayer-preamble">Interested?</div>
@@ -78,7 +81,7 @@
       <img
         id="parallax-{layer}"
         style="transform: translateY({Math.max(
-          0,
+          -contactYOffset,
           (imgHeight * layer) / (layers.length - 1) -
             (yScroll * (1 + offsetRatio) * layer) / (layers.length - 1)
         )}px)"
@@ -90,7 +93,7 @@
       <img
         id="parallax-{layer}"
         style="transform: translateY({Math.max(
-          0,
+          -contactYOffset,
           (imgHeight * layer) / (layers.length - 1) -
             (yScroll * (1 + offsetRatio) * layer) / (layers.length - 1)
         )}px)"

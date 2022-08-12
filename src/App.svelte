@@ -37,7 +37,6 @@
     body = document.body;
     titleHeight = body.offsetWidth * 0.5625;
     contactYOffset = titleHeight / 3;
-    contactYOffset = 0;
     contactHeight = titleHeight - contactYOffset;
   };
   window.onload = manageHeights();
