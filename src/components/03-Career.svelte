@@ -55,7 +55,7 @@
 
 <div id="career" class="container-fluid">
   <h1 class="title col-md-9">Career</h1>
-  <div class="card container-fluid col-md-10">
+  <div id="card-list-container" class="card container-fluid col-md-9">
     <SimpleGrid cols={2}>
       {#each cardList as { imgurl, title, subtitle, points, logoColor }}
         <Card {imgurl} {title} {subtitle} {points} {logoColor} />
@@ -79,6 +79,10 @@
     .card {
       background-color: transparent;
       background-image: none;
+    }
+
+    #card-list-container {
+      padding: 0;
     }
   }
 </style>

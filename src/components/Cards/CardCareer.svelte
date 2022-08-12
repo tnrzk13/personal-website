@@ -8,7 +8,7 @@
   // $: console.log(points);
 </script>
 
-<div class="div container-fluid">
+<div class="container-fluid card-container">
   <div class="card m-2 cb1 text-center">
     <div class="card-body">
       <div class="circle-logo" style="background-image: {logoColor}">
@@ -26,41 +26,45 @@
 </div>
 
 <style lang="scss">
-  .card {
-    color: white;
+  .card-container {
+    padding: 0;
 
-    border-radius: 1rem;
-    border: none;
-    // border: 1px solid transparent;
+    .card {
+      color: white;
+      border-radius: 1rem;
+      border: none;
+      // border: 1px solid transparent;
 
-    background-color: transparent;
-  }
-  .card-body {
-    text-align: left;
-    h4 {
-      font-family: "Montserrat", sans-serif;
-      font-size: 1.25rem;
-      padding: 1.5rem 0 0.5rem 0;
+      background-color: transparent;
     }
-    h6 {
-      font-size: 1.15rem;
-      padding-bottom: 0.5rem;
+    .card-body {
+      text-align: left;
+      padding: 0;
+      h4 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.25rem;
+        padding: 1.5rem 0 0.5rem 0;
+      }
+      h6 {
+        font-size: 1.15rem;
+        padding-bottom: 0.5rem;
+      }
     }
-  }
-  .circle-logo {
-    width: 5em;
-    height: 5em;
-    border-radius: 50%;
-    display: grid;
-    img.logo {
-      width: 4em;
-      height: auto;
-      margin-left: auto;
-      margin-right: auto;
-      align-self: center;
-      justify-self: center;
-      filter: grayscale(100%);
-      // filter: brightness(0%);
+    .circle-logo {
+      width: 5em;
+      height: 5em;
+      border-radius: 50%;
+      display: grid;
+      img.logo {
+        width: 4em;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+        justify-self: center;
+        filter: grayscale(100%);
+        // filter: brightness(0%);
+      }
     }
   }
 </style>
