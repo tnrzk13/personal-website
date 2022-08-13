@@ -1,7 +1,7 @@
 <script>
-  import Contact from "./05-Contact.svelte";
+  import Contact from "./ContactDesktop.svelte";
 
-  export let contactHeight, containerHeight;
+  export let contactHeight, containerHeight, contactInfo;
   export let contactYOffset = 100;
   export let pageHalfDown = 1000;
 
@@ -13,7 +13,7 @@
 {#if y > Math.max(0, pageHalfDown)}
   <div class="background-extension" style="bottom: {contactHeight}px;" />
   <div id="contact-wrapper" style="transform: translateY({contactYOffset}px);">
-    <Contact {containerHeight} {contactYOffset} />
+    <Contact {containerHeight} {contactYOffset} {contactInfo} />
   </div>
 {/if}
 

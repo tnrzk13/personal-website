@@ -1,8 +1,9 @@
 <script>
   import { onMount } from "svelte";
-  import TextType from "./TextType/TextType.svelte";
+  import TextType from "../TextType/TextType.svelte";
 
   export let containerHeight, contactYOffset;
+  export let contactInfo;
 
   const numLayers = 15;
   const layers = [...Array(numLayers).keys()];
@@ -49,10 +50,10 @@
         )}px)"
         height="{containerHeight}px"
       >
-        <div class="textLayer-preamble">Interested?</div>
+        <div class="textLayer-preamble">{contactInfo.preamble}</div>
         <div class="textLayer-title">
           <TextType
-            {texts}
+            texts={contactInfo.texts}
             delay={100}
             num_loops={999}
             repeat_n_words={1}
@@ -60,9 +61,7 @@
           />
         </div>
         <div class="textLayer-description">
-          I'm currently looking for my next adventure. Contact me if you have
-          any questions, or if you just want to say hello! My inbox is always
-          open for you.
+          {contactInfo.description}
         </div>
         <div class="button-container row">
           <div class="linkedin-container col-md-3">

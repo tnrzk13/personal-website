@@ -4,7 +4,7 @@
   import AboutMe from "./components/02-AboutMe.svelte";
   import Career from "./components/03-Career.svelte";
   import Projects from "./components/04-Projects.svelte";
-  import ContactWrapper from "./components/05-ContactWrapper.svelte";
+  import ContactWrapper from "./components/05-Contact/ContactDesktopWrapper.svelte";
   import Navbar from "./components/Navbar.svelte";
   import Loader from "./components/Loader.svelte";
 
@@ -80,6 +80,14 @@
     description:
       "I'm a software developer who builds solutions to problems using data. Currently, I'm looking to join a company for my next adventure.",
   };
+  let contactInfo = {
+    preamble: "Interested?",
+    title: "",
+    subtitle: "",
+    texts: ["Get in Touch!"],
+    description:
+      "I'm currently looking for my next adventure. Contact me if you have any questions, or if you just want to say hello! My inbox is always open for you.",
+  };
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -107,6 +115,7 @@
         containerHeight={titleHeight}
         {contactYOffset}
         {pageHalfDown}
+        {contactInfo}
       />
     </div>
   </div>
@@ -123,12 +132,13 @@
         id="contact"
         style="height: calc({titleHeight - contactYOffset}px); )"
       />
-      <ContactWrapper
+      <!-- <ContactWrapper
         {contactHeight}
         containerHeight={titleHeight}
         {contactYOffset}
         {pageHalfDown}
-      />
+        {contactInfo}
+      /> -->
     </div>
   </div>
 {/if}
