@@ -1,5 +1,5 @@
 <script>
-  import Title from "./components/01-Title.svelte";
+  import Title from "./components/01-Title/TitleParallax.svelte";
   import AboutMe from "./components/02-AboutMe.svelte";
   import Career from "./components/03-Career.svelte";
   import Projects from "./components/04-Projects.svelte";
@@ -10,7 +10,8 @@
   import SaosWrapper from "./components/SaosWrapper.svelte";
   import { beforeUpdate, tick } from "svelte";
 
-  let titleHeight,
+  let y,
+    titleHeight,
     contactHeight,
     pageHalfDown,
     contactYOffset,
@@ -32,7 +33,6 @@
     pageHalfDown = contentContainerHeight / 2;
   });
 
-  // Changes title height, gets scroll height
   let manageHeights = () => {
     body = document.body;
     titleHeight = body.offsetWidth * 0.5625;
@@ -67,13 +67,25 @@
   };
   triggerDevMode(false);
 
-  let y;
+  let titleInfo = {
+    preamble: "Hi, my name is",
+    title: "Tony Kwok.",
+    subtitle: "I build things with ",
+    texts: ["data.", "style.", "code.", "thought."],
+    description:
+      "I'm a software developer who builds solutions to problems using data. Currently, I'm looking to join a company for my next adventure.",
+  };
 </script>
 
 <svelte:window bind:scrollY={y} />
 
 <div class="container-fluid">
-  <Title containerHeight={titleHeight} {pageHalfDown} {boolAnimateText} />
+  <Title
+    containerHeight={titleHeight}
+    {pageHalfDown}
+    {boolAnimateText}
+    {titleInfo}
+  />
   <div id="content-container" style="top: {titleHeight}px;">
     <div id="content">
       <SaosWrapper {boolFadeAnimation}><AboutMe /></SaosWrapper>

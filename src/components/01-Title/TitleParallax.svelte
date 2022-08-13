@@ -1,16 +1,16 @@
 <script>
-  import TextType from "./TextType/TextType.svelte";
+  import TextType from "../TextType/TextType.svelte";
 
   export let containerHeight;
   export let boolAnimateText = true;
   export let pageHalfDown = 1000;
+  export let titleInfo;
 
   const numLayers = 15;
   const layers = [...Array(numLayers).keys()];
   const textLayer = 4;
 
   let y;
-  let texts = ["data.", "style.", "code.", "thought."];
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -33,25 +33,23 @@
       {:else if layer === textLayer}
         {#if y < containerHeight}
           <div class="textLayer">
-            <div class="textLayer-preamble">Hi, my name is</div>
-            <div class="textLayer-title">Tony Kwok.</div>
+            <div class="textLayer-preamble">{titleInfo.preamble}</div>
+            <div class="textLayer-title">{titleInfo.title}</div>
             <div class="textLayer-subtitle">
-              I build things with {#if boolAnimateText}
+              {titleInfo.subtitle}{#if boolAnimateText}
                 <TextType
-                  {texts}
+                  texts={titleInfo.texts}
                   delay={100}
                   num_loops={2}
                   repeat_n_words={1}
                   blinker_iter_count={14}
                 />
               {:else}
-                data.
+                {titleInfo.texts[0]}
               {/if}
             </div>
             <div class="textLayer-description">
-              I'm a software developer who builds solutions to problems using
-              data. Currently, I'm looking to join a company for my next
-              adventure.
+              {titleInfo.description}
             </div>
             <div class="scrolldown"><i class="fa-solid fa-angles-down" /></div>
           </div>
