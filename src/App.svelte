@@ -1,5 +1,6 @@
 <script>
-  import Title from "./components/01-Title/TitleParallax.svelte";
+  import TitleDesktop from "./components/01-Title/TitleParallax.svelte";
+  import TitleMobile from "./components/01-Title/TitleMobile.svelte";
   import AboutMe from "./components/02-AboutMe.svelte";
   import Career from "./components/03-Career.svelte";
   import Projects from "./components/04-Projects.svelte";
@@ -11,6 +12,7 @@
   import { beforeUpdate, tick } from "svelte";
 
   let y,
+    windowWidth,
     titleHeight,
     contactHeight,
     pageHalfDown,
@@ -34,6 +36,7 @@
   });
 
   let manageHeights = () => {
+    windowWidth = window.innerWidth;
     body = document.body;
     titleHeight = body.offsetWidth * 0.5625;
     contactYOffset = titleHeight / 3;
@@ -41,6 +44,7 @@
   };
   window.onload = manageHeights();
   window.onresize = () => {
+    windowWidth = window.innerWidth;
     titleHeight = body.offsetWidth * 0.5625;
     contactYOffset = titleHeight / 3;
     contactHeight = titleHeight - contactYOffset;
@@ -53,6 +57,7 @@
       contentContainerHeight: contentContainerHeight,
       contentHeight: contentHeight,
       contactHeight: contactHeight,
+      windowWidth: windowWidth,
     };
     console.log(clObject);
   }
@@ -79,32 +84,54 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="container-fluid">
-  <Title
-    containerHeight={titleHeight}
-    {pageHalfDown}
-    {boolAnimateText}
-    {titleInfo}
-  />
-  <div id="content-container" style="top: {titleHeight}px;">
-    <div id="content">
-      <SaosWrapper {boolFadeAnimation}><AboutMe /></SaosWrapper>
-      <SaosWrapper {boolFadeAnimation}><Career /></SaosWrapper>
-      <SaosWrapper {boolFadeAnimation}><Projects /></SaosWrapper>
-    </div>
-    <div
-      id="contact"
-      style="height: calc({titleHeight - contactYOffset}px); )"
-    />
-    <ContactWrapper
-      {contactHeight}
+{#if windowWidth >= 768}
+  <div class="container-fluid">
+    <TitleDesktop
       containerHeight={titleHeight}
-      {contactYOffset}
       {pageHalfDown}
+      {boolAnimateText}
+      {titleInfo}
     />
+    <div id="content-container" style="top: {titleHeight}px;">
+      <div id="content">
+        <SaosWrapper {boolFadeAnimation}><AboutMe /></SaosWrapper>
+        <SaosWrapper {boolFadeAnimation}><Career /></SaosWrapper>
+        <SaosWrapper {boolFadeAnimation}><Projects /></SaosWrapper>
+      </div>
+      <div
+        id="contact"
+        style="height: calc({titleHeight - contactYOffset}px); )"
+      />
+      <ContactWrapper
+        {contactHeight}
+        containerHeight={titleHeight}
+        {contactYOffset}
+        {pageHalfDown}
+      />
+    </div>
   </div>
-</div>
-
+{:else}
+  <div class="container-fluid">
+    <TitleMobile {boolAnimateText} {titleInfo} />
+    <div id="content-container">
+      <div id="content">
+        <SaosWrapper {boolFadeAnimation}><AboutMe /></SaosWrapper>
+        <SaosWrapper {boolFadeAnimation}><Career /></SaosWrapper>
+        <SaosWrapper {boolFadeAnimation}><Projects /></SaosWrapper>
+      </div>
+      <div
+        id="contact"
+        style="height: calc({titleHeight - contactYOffset}px); )"
+      />
+      <ContactWrapper
+        {contactHeight}
+        containerHeight={titleHeight}
+        {contactYOffset}
+        {pageHalfDown}
+      />
+    </div>
+  </div>
+{/if}
 <Navbar {titleHeight} />
 
 <style lang="scss">

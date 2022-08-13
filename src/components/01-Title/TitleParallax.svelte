@@ -106,46 +106,44 @@
       line-height: normal;
       padding-top: 0;
       margin-top: 0;
-      // border: 3px solid black;
-    }
 
-    .textLayer-preamble {
-      font-size: 1.3vw;
-      font-family: "Montserrat", sans-serif;
-    }
-
-    .textLayer-title {
-      font-family: "Montserrat", sans-serif;
-    }
-
-    .textLayer-subtitle {
-      font-family: "Montserrat", sans-serif;
-      font-size: 5vw;
-    }
-
-    .textLayer-description {
-      font-size: 1.3vw;
-      right: 80%;
-      font-family: "Montserrat", sans-serif;
-    }
-
-    .scrolldown {
-      font-size: 3vw;
-      padding-top: 0.5em;
-      text-align: center;
-      background-image: linear-gradient(180deg, white, #c531ad, white, #c531ad);
-      // background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      background-size: 100% 300%;
-      animation: animateBg 2s infinite linear;
-    }
-    @keyframes animateBg {
-      0% {
-        background-position: bottom;
+      .textLayer-preamble {
+        font-size: 1.3vw;
       }
-      100% {
-        background-position: top;
+
+      .textLayer-subtitle {
+        font-size: 5vw;
+      }
+
+      .textLayer-description {
+        font-size: 1.3vw;
+        right: 80%;
+      }
+
+      .scrolldown {
+        font-size: 3vw;
+        padding-top: 0.5em;
+        text-align: center;
+        background-image: linear-gradient(
+          180deg,
+          white,
+          #c531ad,
+          white,
+          #c531ad
+        );
+        -webkit-background-clip: text;
+        color: transparent;
+        background-size: 100% 300%;
+        animation: animateBg 2s infinite linear;
+      }
+
+      @keyframes animateBg {
+        0% {
+          background-position: bottom;
+        }
+        100% {
+          background-position: top;
+        }
       }
     }
   }

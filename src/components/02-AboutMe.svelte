@@ -3,7 +3,6 @@
   let techs2 = ["SQL", "Node.JS"];
 </script>
 
-<!-- <div class="aboutMe" style="top: {foregroundTop}px;"> -->
 <div id="aboutme" class="aboutMe container-fluid">
   <div class="empty row" />
   <h1 class="title col-md-9">About me</h1>
