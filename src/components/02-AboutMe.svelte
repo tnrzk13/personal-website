@@ -3,7 +3,10 @@
   let techs2 = ["SQL", "Node.JS"];
 </script>
 
-<div id="aboutme" class="aboutMe container-fluid">
+<div
+  id="aboutme"
+  class="aboutMe container-fluid col-md-12 col-sm-10 offset-sm-1"
+>
   <div class="empty row" />
   <h1 class="title col-md-9">About me</h1>
   <div class="row col-md-9">
@@ -39,37 +42,6 @@
           alt="tony kwok"
         />
       </div>
-      <!-- <div class="tech-container js-container">
-        <img src="images/02-aboutme/js.png" alt="tech stack" class="tech js" />
-      </div>
-      <div class="tech-container nodejs-container">
-        <img
-          src="images/02-aboutme/nodejs.png"
-          alt="tech stack"
-          class="tech nodejs"
-        />
-      </div>
-      <div class="tech-container python-container">
-        <img
-          src="images/02-aboutme/python.png"
-          alt="tech stack"
-          class="tech python"
-        />
-      </div>
-      <div class="tech-container sql-container">
-        <img
-          src="images/02-aboutme/sql.png"
-          alt="tech stack"
-          class="tech sql"
-        />
-      </div>
-      <div class="tech-container svelte-container">
-        <img
-          src="images/02-aboutme/svelte.png"
-          alt="tech stack"
-          class="tech svelte"
-        />
-      </div> -->
     </div>
   </div>
 </div>
@@ -81,7 +53,6 @@
     }
   }
   .aboutMe {
-    width: 100%;
     height: auto;
     color: white;
     padding: 0;
@@ -98,36 +69,6 @@
           max-width: 15em;
           height: auto;
         }
-      }
-      .tech-container {
-        position: absolute;
-      }
-      img.tech {
-        max-width: 5em;
-        height: auto;
-      }
-      .js-container {
-        top: 10%;
-        left: 10%;
-      }
-      .nodejs-container {
-        top: 40%;
-        left: 7%;
-      }
-      .python-container {
-        top: 62%;
-        left: 17%;
-      }
-      .sql-container {
-        top: 23%;
-        right: 13%;
-      }
-      .svelte-container {
-        top: 56%;
-        right: 20%;
-      }
-      img.js {
-        border-radius: 50%;
       }
     }
 
