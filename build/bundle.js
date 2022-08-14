@@ -10620,7 +10620,8 @@ var app = (function () {
     	let scrolling_timeout;
     	let current_block_type_index;
     	let if_block;
-    	let if_block_anchor;
+    	let t;
+    	let navbar;
     	let current;
     	let mounted;
     	let dispose;
@@ -10636,17 +10637,24 @@ var app = (function () {
     	current_block_type_index = select_block_type(ctx);
     	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
 
+    	navbar = new Navbar({
+    			props: { titleHeight: /*titleHeight*/ ctx[2] },
+    			$$inline: true
+    		});
+
     	const block = {
     		c: function create() {
     			if_block.c();
-    			if_block_anchor = empty();
+    			t = space();
+    			create_component(navbar.$$.fragment);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			if_blocks[current_block_type_index].m(target, anchor);
-    			insert_dev(target, if_block_anchor, anchor);
+    			insert_dev(target, t, anchor);
+    			mount_component(navbar, target, anchor);
     			current = true;
 
     			if (!mounted) {
@@ -10691,21 +10699,28 @@ var app = (function () {
     				}
 
     				transition_in(if_block, 1);
-    				if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				if_block.m(t.parentNode, t);
     			}
+
+    			const navbar_changes = {};
+    			if (dirty & /*titleHeight*/ 4) navbar_changes.titleHeight = /*titleHeight*/ ctx[2];
+    			navbar.$set(navbar_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(if_block);
+    			transition_in(navbar.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(if_block);
+    			transition_out(navbar.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if_blocks[current_block_type_index].d(detaching);
-    			if (detaching) detach_dev(if_block_anchor);
+    			if (detaching) detach_dev(t);
+    			destroy_component(navbar, detaching);
     			mounted = false;
     			dispose();
     		}
