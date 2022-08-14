@@ -7,6 +7,10 @@
   <div class="textLayer col-sm-10 offset-sm-1">
     <div class="textLayer-preamble">{titleInfo.preamble}</div>
     <div class="textLayer-title">{titleInfo.title}</div>
+    <div class="textLayer-description">
+      {titleInfo.description}
+      <br />
+    </div>
     <div class="textLayer-subtitle">
       {titleInfo.subtitle}{#if boolAnimateText}
         <TextType
@@ -19,9 +23,6 @@
       {:else}
         {titleInfo.texts[0]}
       {/if}
-    </div>
-    <div class="textLayer-description">
-      {titleInfo.description}
     </div>
     <div class="scrolldown"><i class="fa-solid fa-angles-down" /></div>
   </div>
@@ -44,6 +45,7 @@
       }
 
       .textLayer-description {
+        padding: 1em 0;
         font-size: 0.5em;
       }
 
