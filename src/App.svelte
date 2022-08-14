@@ -144,8 +144,8 @@
     </div>
   </div>
 {/if}
+<Navbar {titleHeight} />
 
-<!-- <Navbar {titleHeight} /> -->
 <style lang="scss">
   .container-fluid {
     position: relative;
