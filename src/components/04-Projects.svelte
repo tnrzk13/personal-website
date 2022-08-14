@@ -101,12 +101,6 @@
     .proj-description {
       padding: 0;
     }
-    h4 {
-      font-family: "Montserrat", sans-serif;
-      font-size: 1.25rem;
-      padding: 1.5rem 0 0.5rem 0;
-    }
-
     .img-container {
       align-self: center;
       position: relative;
