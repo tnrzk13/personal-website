@@ -57,8 +57,8 @@
     font-size: 1.15rem;
     font-family: "Montserrat", sans-serif;
 
-    padding-right: 2em;
-    padding-left: 2em;
+    padding-right: 1em;
+    padding-left: 1em;
 
     backdrop-filter: blur(10px);
     background-color: transparent;

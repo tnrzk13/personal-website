@@ -8710,7 +8710,7 @@ var app = (function () {
     			button1.textContent = "Resume";
     			if (!src_url_equal(img.src, img_src_value = "images/navbar/gorilla.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo gorilla");
-    			attr_dev(img, "class", "svelte-1sflfgp");
+    			attr_dev(img, "class", "svelte-hgmdmv");
     			add_location(img, file$3, 23, 7, 464);
     			attr_dev(a0, "class", "navbar-brand");
     			attr_dev(a0, "href", ".");
@@ -8737,9 +8737,9 @@ var app = (function () {
     			attr_dev(a4, "class", "nav-item nav-link");
     			attr_dev(a4, "href", "#contact");
     			add_location(a4, file$3, 41, 8, 1128);
-    			attr_dev(button1, "class", "btn btn-grad svelte-1sflfgp");
+    			attr_dev(button1, "class", "btn btn-grad svelte-hgmdmv");
     			add_location(button1, file$3, 47, 10, 1344);
-    			attr_dev(a5, "class", "download-container svelte-1sflfgp");
+    			attr_dev(a5, "class", "download-container svelte-hgmdmv");
     			attr_dev(a5, "href", "download/Resume 2022 - Blue.pdf");
     			attr_dev(a5, "download", "TonyKwokResume");
     			add_location(a5, file$3, 42, 8, 1194);
@@ -8749,7 +8749,7 @@ var app = (function () {
     			attr_dev(div, "id", "navbarNav");
     			add_location(div, file$3, 36, 4, 830);
     			attr_dev(nav, "id", "navbar");
-    			attr_dev(nav, "class", "navbar navbar-expand-lg navbar-dark fixed-top svelte-1sflfgp");
+    			attr_dev(nav, "class", "navbar navbar-expand-lg navbar-dark fixed-top svelte-hgmdmv");
     			add_location(nav, file$3, 17, 2, 311);
     		},
     		m: function mount(target, anchor) {
