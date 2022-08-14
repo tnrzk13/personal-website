@@ -65,7 +65,7 @@
     padding-left: 1em;
 
     backdrop-filter: blur(10px);
-    background-color: transparent;
+    background-color: rgba($color: white, $alpha: 0.05);
 
     z-index: 998;
 

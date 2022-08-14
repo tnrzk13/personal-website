@@ -8716,7 +8716,7 @@ var app = (function () {
     			t10 = text("Resume");
     			if (!src_url_equal(img.src, img_src_value = "images/navbar/gorilla.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo gorilla");
-    			attr_dev(img, "class", "svelte-9kyrf0");
+    			attr_dev(img, "class", "svelte-wo6wlw");
     			add_location(img, file$3, 23, 7, 457);
     			attr_dev(a0, "class", "navbar-brand");
     			attr_dev(a0, "href", ".");
@@ -8746,13 +8746,13 @@ var app = (function () {
 
     			attr_dev(button1, "class", button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
     			? 'btn-grad-mobile'
-    			: 'btn-grad') + " svelte-9kyrf0");
+    			: 'btn-grad') + " svelte-wo6wlw");
 
     			add_location(button1, file$3, 49, 10, 1418);
 
     			attr_dev(a5, "class", a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
     			? "download-container-mobile"
-    			: "download-container") + " svelte-9kyrf0"));
+    			: "download-container") + " svelte-wo6wlw"));
 
     			attr_dev(a5, "href", "download/Resume 2022 - Blue.pdf");
     			attr_dev(a5, "download", "TonyKwokResume");
@@ -8763,7 +8763,7 @@ var app = (function () {
     			attr_dev(div, "id", "navbarNav");
     			add_location(div, file$3, 36, 4, 829);
     			attr_dev(nav, "id", "navbar");
-    			attr_dev(nav, "class", "navbar navbar-expand-lg navbar-dark fixed-top svelte-9kyrf0");
+    			attr_dev(nav, "class", "navbar navbar-expand-lg navbar-dark fixed-top svelte-wo6wlw");
     			add_location(nav, file$3, 17, 2, 304);
     		},
     		m: function mount(target, anchor) {
@@ -8792,13 +8792,13 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*boolMobileView*/ 1 && button1_class_value !== (button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
     			? 'btn-grad-mobile'
-    			: 'btn-grad') + " svelte-9kyrf0")) {
+    			: 'btn-grad') + " svelte-wo6wlw")) {
     				attr_dev(button1, "class", button1_class_value);
     			}
 
     			if (!current || dirty & /*boolMobileView*/ 1 && a5_class_value !== (a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
     			? "download-container-mobile"
-    			: "download-container") + " svelte-9kyrf0"))) {
+    			: "download-container") + " svelte-wo6wlw"))) {
     				attr_dev(a5, "class", a5_class_value);
     			}
     		},
