@@ -9,7 +9,6 @@
   const layers = [...Array(numLayers).keys()];
   const textLayer = 14;
 
-  let subject = "Getting in touch from your website";
   let texts = ["Get in Touch!"];
 
   let contactDiv = document.getElementById("contact");
@@ -70,7 +69,10 @@
             </a>
           </div>
           <div class="button-container-column col-md-9">
-            <a href="mailto:tnrzk13@gmail.com?subject={subject}" id="emailLink">
+            <a
+              href="mailto:tnrzk13@gmail.com?subject={contactInfo.subject}"
+              id="emailLink"
+            >
               <button class="btn btn-grad btn-lg">Say Hello</button>
             </a>
           </div>

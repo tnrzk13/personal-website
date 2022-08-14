@@ -45,7 +45,6 @@
 
       .textLayer-description {
         font-size: 0.5em;
-        right: 80%;
       }
 
       .scrolldown {

@@ -4,7 +4,7 @@
   import AboutMe from "./components/02-AboutMe.svelte";
   import Career from "./components/03-Career.svelte";
   import Projects from "./components/04-Projects.svelte";
-  import ContactWrapper from "./components/05-Contact/ContactDesktopWrapper.svelte";
+  import ContactWrapper from "./components/05-Contact/ContactWrapper.svelte";
   import Navbar from "./components/Navbar.svelte";
   import Loader from "./components/Loader.svelte";
 
@@ -12,7 +12,8 @@
   import { beforeUpdate, tick } from "svelte";
 
   let y,
-    windowWidth,
+    boolMobileView,
+    medScreenSize,
     titleHeight,
     contactHeight,
     pageHalfDown,
@@ -23,6 +24,8 @@
     content,
     contentHeight;
   contentContainerHeight = 0;
+  boolMobileView = true;
+  medScreenSize = 768;
 
   // wait for document.body to load first
   beforeUpdate(async () => {
@@ -36,7 +39,7 @@
   });
 
   let manageHeights = () => {
-    windowWidth = window.innerWidth;
+    boolMobileView = window.innerWidth < medScreenSize;
     body = document.body;
     titleHeight = body.offsetWidth * 0.5625;
     contactYOffset = titleHeight / 3;
@@ -44,7 +47,7 @@
   };
   window.onload = manageHeights();
   window.onresize = () => {
-    windowWidth = window.innerWidth;
+    boolMobileView = window.innerWidth < medScreenSize;
     titleHeight = body.offsetWidth * 0.5625;
     contactYOffset = titleHeight / 3;
     contactHeight = titleHeight - contactYOffset;
@@ -53,11 +56,10 @@
   };
 
   $: {
+    boolMobileView = window.innerWidth < medScreenSize;
+
     let clObject = {
-      contentContainerHeight: contentContainerHeight,
-      contentHeight: contentHeight,
-      contactHeight: contactHeight,
-      windowWidth: windowWidth,
+      boolMobileView: boolMobileView,
     };
     console.log(clObject);
   }
@@ -87,12 +89,33 @@
     texts: ["Get in Touch!"],
     description:
       "I'm currently looking for my next adventure. Contact me if you have any questions, or if you just want to say hello! My inbox is always open for you.",
+    subject: "Getting in touch from your website",
   };
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-{#if windowWidth >= 768}
+{#if boolMobileView}
+  <div class="container-fluid">
+    <TitleMobile {boolAnimateText} {titleInfo} />
+    <div id="content-container">
+      <div id="content">
+        <SaosWrapper {boolFadeAnimation}><AboutMe /></SaosWrapper>
+        <SaosWrapper {boolFadeAnimation}><Career /></SaosWrapper>
+        <SaosWrapper {boolFadeAnimation}><Projects /></SaosWrapper>
+      </div>
+      <div id="contact" style="height: 75vh;" />
+      <ContactWrapper
+        {contactHeight}
+        containerHeight={titleHeight}
+        {contactYOffset}
+        {pageHalfDown}
+        {contactInfo}
+        {boolMobileView}
+      />
+    </div>
+  </div>
+{:else}
   <div class="container-fluid">
     <TitleDesktop
       containerHeight={titleHeight}
@@ -116,34 +139,13 @@
         {contactYOffset}
         {pageHalfDown}
         {contactInfo}
+        {boolMobileView}
       />
-    </div>
-  </div>
-{:else}
-  <div class="container-fluid">
-    <TitleMobile {boolAnimateText} {titleInfo} />
-    <div id="content-container">
-      <div id="content">
-        <SaosWrapper {boolFadeAnimation}><AboutMe /></SaosWrapper>
-        <SaosWrapper {boolFadeAnimation}><Career /></SaosWrapper>
-        <SaosWrapper {boolFadeAnimation}><Projects /></SaosWrapper>
-      </div>
-      <div
-        id="contact"
-        style="height: calc({titleHeight - contactYOffset}px); )"
-      />
-      <!-- <ContactWrapper
-        {contactHeight}
-        containerHeight={titleHeight}
-        {contactYOffset}
-        {pageHalfDown}
-        {contactInfo}
-      /> -->
     </div>
   </div>
 {/if}
-<Navbar {titleHeight} />
 
+<!-- <Navbar {titleHeight} /> -->
 <style lang="scss">
   .container-fluid {
     position: relative;
