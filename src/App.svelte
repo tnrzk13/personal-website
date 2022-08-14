@@ -115,6 +115,7 @@
       />
     </div>
   </div>
+  <Navbar titleHeight={0} />
 {:else}
   <div class="container-fluid">
     <TitleDesktop
@@ -143,8 +144,8 @@
       />
     </div>
   </div>
+  <Navbar {titleHeight} />
 {/if}
-<Navbar {titleHeight} />
 
 <style lang="scss">
   .container-fluid {

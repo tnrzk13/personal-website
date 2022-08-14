@@ -9991,7 +9991,7 @@ var app = (function () {
     const { console: console_1, window: window_1 } = globals;
     const file = "src\\App.svelte";
 
-    // (118:0) {:else}
+    // (119:0) {:else}
     function create_else_block(ctx) {
     	let div3;
     	let titledesktop;
@@ -10008,6 +10008,8 @@ var app = (function () {
     	let div1_style_value;
     	let t4;
     	let contactwrapper;
+    	let t5;
+    	let navbar;
     	let current;
 
     	titledesktop = new TitleParallax({
@@ -10059,6 +10061,11 @@ var app = (function () {
     			$$inline: true
     		});
 
+    	navbar = new Navbar({
+    			props: { titleHeight: /*titleHeight*/ ctx[2] },
+    			$$inline: true
+    		});
+
     	const block = {
     		c: function create() {
     			div3 = element("div");
@@ -10075,19 +10082,21 @@ var app = (function () {
     			div1 = element("div");
     			t4 = space();
     			create_component(contactwrapper.$$.fragment);
+    			t5 = space();
+    			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "svelte-jnqx4x");
-    			add_location(div0, file, 126, 6, 4121);
+    			add_location(div0, file, 127, 6, 4151);
     			attr_dev(div1, "id", "contact");
     			attr_dev(div1, "style", div1_style_value = "height: calc(" + (/*titleHeight*/ ctx[2] - /*contactYOffset*/ ctx[5]) + "px); )");
     			attr_dev(div1, "class", "svelte-jnqx4x");
-    			add_location(div1, file, 131, 6, 4365);
+    			add_location(div1, file, 132, 6, 4395);
     			attr_dev(div2, "id", "content-container");
     			set_style(div2, "top", /*titleHeight*/ ctx[2] + "px");
     			attr_dev(div2, "class", "svelte-jnqx4x");
-    			add_location(div2, file, 125, 4, 4055);
+    			add_location(div2, file, 126, 4, 4085);
     			attr_dev(div3, "class", "container-fluid svelte-jnqx4x");
-    			add_location(div3, file, 118, 2, 3890);
+    			add_location(div3, file, 119, 2, 3920);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -10104,6 +10113,8 @@ var app = (function () {
     			append_dev(div2, div1);
     			append_dev(div2, t4);
     			mount_component(contactwrapper, div2, null);
+    			insert_dev(target, t5, anchor);
+    			mount_component(navbar, target, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
@@ -10152,6 +10163,10 @@ var app = (function () {
     			if (!current || dirty & /*titleHeight*/ 4) {
     				set_style(div2, "top", /*titleHeight*/ ctx[2] + "px");
     			}
+
+    			const navbar_changes = {};
+    			if (dirty & /*titleHeight*/ 4) navbar_changes.titleHeight = /*titleHeight*/ ctx[2];
+    			navbar.$set(navbar_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -10160,6 +10175,7 @@ var app = (function () {
     			transition_in(saoswrapper1.$$.fragment, local);
     			transition_in(saoswrapper2.$$.fragment, local);
     			transition_in(contactwrapper.$$.fragment, local);
+    			transition_in(navbar.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -10168,6 +10184,7 @@ var app = (function () {
     			transition_out(saoswrapper1.$$.fragment, local);
     			transition_out(saoswrapper2.$$.fragment, local);
     			transition_out(contactwrapper.$$.fragment, local);
+    			transition_out(navbar.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -10177,6 +10194,8 @@ var app = (function () {
     			destroy_component(saoswrapper1);
     			destroy_component(saoswrapper2);
     			destroy_component(contactwrapper);
+    			if (detaching) detach_dev(t5);
+    			destroy_component(navbar, detaching);
     		}
     	};
 
@@ -10184,7 +10203,7 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(118:0) {:else}",
+    		source: "(119:0) {:else}",
     		ctx
     	});
 
@@ -10207,6 +10226,8 @@ var app = (function () {
     	let div1;
     	let t4;
     	let contactwrapper;
+    	let t5;
+    	let navbar;
     	let current;
 
     	titlemobile = new TitleMobile({
@@ -10256,6 +10277,11 @@ var app = (function () {
     			$$inline: true
     		});
 
+    	navbar = new Navbar({
+    			props: { titleHeight: 0 },
+    			$$inline: true
+    		});
+
     	const block = {
     		c: function create() {
     			div3 = element("div");
@@ -10272,6 +10298,8 @@ var app = (function () {
     			div1 = element("div");
     			t4 = space();
     			create_component(contactwrapper.$$.fragment);
+    			t5 = space();
+    			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "svelte-jnqx4x");
     			add_location(div0, file, 101, 6, 3373);
@@ -10300,6 +10328,8 @@ var app = (function () {
     			append_dev(div2, div1);
     			append_dev(div2, t4);
     			mount_component(contactwrapper, div2, null);
+    			insert_dev(target, t5, anchor);
+    			mount_component(navbar, target, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
@@ -10345,6 +10375,7 @@ var app = (function () {
     			transition_in(saoswrapper1.$$.fragment, local);
     			transition_in(saoswrapper2.$$.fragment, local);
     			transition_in(contactwrapper.$$.fragment, local);
+    			transition_in(navbar.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -10353,6 +10384,7 @@ var app = (function () {
     			transition_out(saoswrapper1.$$.fragment, local);
     			transition_out(saoswrapper2.$$.fragment, local);
     			transition_out(contactwrapper.$$.fragment, local);
+    			transition_out(navbar.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -10362,6 +10394,8 @@ var app = (function () {
     			destroy_component(saoswrapper1);
     			destroy_component(saoswrapper2);
     			destroy_component(contactwrapper);
+    			if (detaching) detach_dev(t5);
+    			destroy_component(navbar, detaching);
     		}
     	};
 
@@ -10376,7 +10410,7 @@ var app = (function () {
     	return block;
     }
 
-    // (128:8) <SaosWrapper {boolFadeAnimation}>
+    // (129:8) <SaosWrapper {boolFadeAnimation}>
     function create_default_slot_5(ctx) {
     	let aboutme;
     	let current;
@@ -10408,14 +10442,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(128:8) <SaosWrapper {boolFadeAnimation}>",
+    		source: "(129:8) <SaosWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (129:8) <SaosWrapper {boolFadeAnimation}>
+    // (130:8) <SaosWrapper {boolFadeAnimation}>
     function create_default_slot_4(ctx) {
     	let career;
     	let current;
@@ -10447,14 +10481,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(129:8) <SaosWrapper {boolFadeAnimation}>",
+    		source: "(130:8) <SaosWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (130:8) <SaosWrapper {boolFadeAnimation}>
+    // (131:8) <SaosWrapper {boolFadeAnimation}>
     function create_default_slot_3(ctx) {
     	let projects;
     	let current;
@@ -10486,7 +10520,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(130:8) <SaosWrapper {boolFadeAnimation}>",
+    		source: "(131:8) <SaosWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
@@ -10620,8 +10654,7 @@ var app = (function () {
     	let scrolling_timeout;
     	let current_block_type_index;
     	let if_block;
-    	let t;
-    	let navbar;
+    	let if_block_anchor;
     	let current;
     	let mounted;
     	let dispose;
@@ -10637,24 +10670,17 @@ var app = (function () {
     	current_block_type_index = select_block_type(ctx);
     	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
 
-    	navbar = new Navbar({
-    			props: { titleHeight: /*titleHeight*/ ctx[2] },
-    			$$inline: true
-    		});
-
     	const block = {
     		c: function create() {
     			if_block.c();
-    			t = space();
-    			create_component(navbar.$$.fragment);
+    			if_block_anchor = empty();
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			if_blocks[current_block_type_index].m(target, anchor);
-    			insert_dev(target, t, anchor);
-    			mount_component(navbar, target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
     			current = true;
 
     			if (!mounted) {
@@ -10699,28 +10725,21 @@ var app = (function () {
     				}
 
     				transition_in(if_block, 1);
-    				if_block.m(t.parentNode, t);
+    				if_block.m(if_block_anchor.parentNode, if_block_anchor);
     			}
-
-    			const navbar_changes = {};
-    			if (dirty & /*titleHeight*/ 4) navbar_changes.titleHeight = /*titleHeight*/ ctx[2];
-    			navbar.$set(navbar_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(if_block);
-    			transition_in(navbar.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(if_block);
-    			transition_out(navbar.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if_blocks[current_block_type_index].d(detaching);
-    			if (detaching) detach_dev(t);
-    			destroy_component(navbar, detaching);
+    			if (detaching) detach_dev(if_block_anchor);
     			mounted = false;
     			dispose();
     		}
