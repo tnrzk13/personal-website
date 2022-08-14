@@ -3,7 +3,7 @@
   let techs2 = ["SQL", "Node.JS"];
 </script>
 
-<div id="aboutme" class="aboutMe col-md-12 col-sm-10 offset-sm-1">
+<div id="aboutme" class="aboutMe container-fluid col-sm-10 offset-sm-1">
   <div class="empty row" />
   <h1 class="title col-md-9">About me</h1>
   <div class="row col-md-9">
