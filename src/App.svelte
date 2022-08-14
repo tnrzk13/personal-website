@@ -117,7 +117,7 @@
       />
     </div>
   </div>
-  <Navbar titleHeight={0} />
+  <Navbar titleHeight={0} {boolMobileView} />
 {:else}
   <div class="container-fluid">
     <TitleDesktop
@@ -146,7 +146,7 @@
       />
     </div>
   </div>
-  <Navbar {titleHeight} />
+  <Navbar {titleHeight} {boolMobileView} />
 {/if}
 
 <style lang="scss">
