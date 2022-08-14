@@ -103,6 +103,9 @@ var app = (function () {
                 rest[k] = props[k];
         return rest;
     }
+    function null_to_empty(value) {
+        return value == null ? '' : value;
+    }
     function action_destroyer(action_result) {
         return action_result && is_function(action_result.destroy) ? action_result.destroy : noop;
     }
@@ -8679,6 +8682,9 @@ var app = (function () {
     	let t9;
     	let a5;
     	let button1;
+    	let t10;
+    	let button1_class_value;
+    	let a5_class_value;
     	let nav_transition;
     	let current;
 
@@ -8707,16 +8713,16 @@ var app = (function () {
     			t9 = space();
     			a5 = element("a");
     			button1 = element("button");
-    			button1.textContent = "Resume";
+    			t10 = text("Resume");
     			if (!src_url_equal(img.src, img_src_value = "images/navbar/gorilla.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo gorilla");
-    			attr_dev(img, "class", "svelte-hgmdmv");
-    			add_location(img, file$3, 23, 7, 464);
+    			attr_dev(img, "class", "svelte-9kyrf0");
+    			add_location(img, file$3, 23, 7, 457);
     			attr_dev(a0, "class", "navbar-brand");
     			attr_dev(a0, "href", ".");
-    			add_location(a0, file$3, 22, 4, 423);
+    			add_location(a0, file$3, 22, 4, 416);
     			attr_dev(span, "class", "navbar-toggler-icon");
-    			add_location(span, file$3, 34, 6, 779);
+    			add_location(span, file$3, 34, 6, 772);
     			attr_dev(button0, "class", "navbar-toggler");
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "data-bs-toggle", "collapse");
@@ -8724,33 +8730,41 @@ var app = (function () {
     			attr_dev(button0, "aria-controls", "navbarNav");
     			attr_dev(button0, "aria-expanded", "false");
     			attr_dev(button0, "aria-label", "Toggle navigation");
-    			add_location(button0, file$3, 25, 4, 538);
+    			add_location(button0, file$3, 25, 4, 531);
     			attr_dev(a1, "class", "nav-item nav-link");
     			attr_dev(a1, "href", "#aboutme");
-    			add_location(a1, file$3, 38, 8, 938);
+    			add_location(a1, file$3, 38, 8, 931);
     			attr_dev(a2, "class", "nav-item nav-link");
     			attr_dev(a2, "href", "#career");
-    			add_location(a2, file$3, 39, 8, 1002);
+    			add_location(a2, file$3, 39, 8, 995);
     			attr_dev(a3, "class", "nav-item nav-link");
     			attr_dev(a3, "href", "#projects");
-    			add_location(a3, file$3, 40, 8, 1066);
+    			add_location(a3, file$3, 40, 8, 1059);
     			attr_dev(a4, "class", "nav-item nav-link");
     			attr_dev(a4, "href", "#contact");
-    			add_location(a4, file$3, 41, 8, 1134);
-    			attr_dev(button1, "class", "btn btn-grad svelte-hgmdmv");
-    			add_location(button1, file$3, 47, 10, 1350);
-    			attr_dev(a5, "class", "download-container svelte-hgmdmv");
+    			add_location(a4, file$3, 41, 8, 1127);
+
+    			attr_dev(button1, "class", button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
+    			? 'btn-grad-mobile'
+    			: 'btn-grad') + " svelte-9kyrf0");
+
+    			add_location(button1, file$3, 49, 10, 1418);
+
+    			attr_dev(a5, "class", a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
+    			? "download-container-mobile"
+    			: "download-container") + " svelte-9kyrf0"));
+
     			attr_dev(a5, "href", "download/Resume 2022 - Blue.pdf");
     			attr_dev(a5, "download", "TonyKwokResume");
-    			add_location(a5, file$3, 42, 8, 1200);
+    			add_location(a5, file$3, 42, 8, 1193);
     			attr_dev(ul, "class", "navbar-nav ms-auto");
-    			add_location(ul, file$3, 37, 6, 897);
+    			add_location(ul, file$3, 37, 6, 890);
     			attr_dev(div, "class", "collapse navbar-collapse");
     			attr_dev(div, "id", "navbarNav");
-    			add_location(div, file$3, 36, 4, 836);
+    			add_location(div, file$3, 36, 4, 829);
     			attr_dev(nav, "id", "navbar");
-    			attr_dev(nav, "class", "navbar navbar-expand-lg navbar-dark fixed-top svelte-hgmdmv");
-    			add_location(nav, file$3, 17, 2, 311);
+    			attr_dev(nav, "class", "navbar navbar-expand-lg navbar-dark fixed-top svelte-9kyrf0");
+    			add_location(nav, file$3, 17, 2, 304);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, nav, anchor);
@@ -8772,7 +8786,21 @@ var app = (function () {
     			append_dev(ul, t9);
     			append_dev(ul, a5);
     			append_dev(a5, button1);
+    			append_dev(button1, t10);
     			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			if (!current || dirty & /*boolMobileView*/ 1 && button1_class_value !== (button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
+    			? 'btn-grad-mobile'
+    			: 'btn-grad') + " svelte-9kyrf0")) {
+    				attr_dev(button1, "class", button1_class_value);
+    			}
+
+    			if (!current || dirty & /*boolMobileView*/ 1 && a5_class_value !== (a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
+    			? "download-container-mobile"
+    			: "download-container") + " svelte-9kyrf0"))) {
+    				attr_dev(a5, "class", a5_class_value);
+    			}
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -8818,8 +8846,8 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	add_render_callback(/*onwindowscroll*/ ctx[3]);
-    	let if_block = /*showNavBar*/ ctx[1] && create_if_block$4(ctx);
+    	add_render_callback(/*onwindowscroll*/ ctx[4]);
+    	let if_block = /*showNavBar*/ ctx[2] && create_if_block$4(ctx);
 
     	const block = {
     		c: function create() {
@@ -8839,23 +8867,25 @@ var app = (function () {
     					scrolling = true;
     					clearTimeout(scrolling_timeout);
     					scrolling_timeout = setTimeout(clear_scrolling, 100);
-    					/*onwindowscroll*/ ctx[3]();
+    					/*onwindowscroll*/ ctx[4]();
     				});
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*y*/ 1 && !scrolling) {
+    			if (dirty & /*y*/ 2 && !scrolling) {
     				scrolling = true;
     				clearTimeout(scrolling_timeout);
-    				scrollTo(window.pageXOffset, /*y*/ ctx[0]);
+    				scrollTo(window.pageXOffset, /*y*/ ctx[1]);
     				scrolling_timeout = setTimeout(clear_scrolling, 100);
     			}
 
-    			if (/*showNavBar*/ ctx[1]) {
+    			if (/*showNavBar*/ ctx[2]) {
     				if (if_block) {
-    					if (dirty & /*showNavBar*/ 2) {
+    					if_block.p(ctx, dirty);
+
+    					if (dirty & /*showNavBar*/ 4) {
     						transition_in(if_block, 1);
     					}
     				} else {
@@ -8905,29 +8935,37 @@ var app = (function () {
     function instance$4($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Navbar', slots, []);
-    	let { titleHeight } = $$props;
-    	let y; //The window scrolling
+    	let { titleHeight, boolMobileView } = $$props;
+    	let y;
     	let showNavBar = false;
-    	const writable_props = ['titleHeight'];
+    	const writable_props = ['titleHeight', 'boolMobileView'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Navbar> was created with unknown prop '${key}'`);
     	});
 
     	function onwindowscroll() {
-    		$$invalidate(0, y = window.pageYOffset);
+    		$$invalidate(1, y = window.pageYOffset);
     	}
 
     	$$self.$$set = $$props => {
-    		if ('titleHeight' in $$props) $$invalidate(2, titleHeight = $$props.titleHeight);
+    		if ('titleHeight' in $$props) $$invalidate(3, titleHeight = $$props.titleHeight);
+    		if ('boolMobileView' in $$props) $$invalidate(0, boolMobileView = $$props.boolMobileView);
     	};
 
-    	$$self.$capture_state = () => ({ fade, titleHeight, y, showNavBar });
+    	$$self.$capture_state = () => ({
+    		fade,
+    		titleHeight,
+    		boolMobileView,
+    		y,
+    		showNavBar
+    	});
 
     	$$self.$inject_state = $$props => {
-    		if ('titleHeight' in $$props) $$invalidate(2, titleHeight = $$props.titleHeight);
-    		if ('y' in $$props) $$invalidate(0, y = $$props.y);
-    		if ('showNavBar' in $$props) $$invalidate(1, showNavBar = $$props.showNavBar);
+    		if ('titleHeight' in $$props) $$invalidate(3, titleHeight = $$props.titleHeight);
+    		if ('boolMobileView' in $$props) $$invalidate(0, boolMobileView = $$props.boolMobileView);
+    		if ('y' in $$props) $$invalidate(1, y = $$props.y);
+    		if ('showNavBar' in $$props) $$invalidate(2, showNavBar = $$props.showNavBar);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -8935,20 +8973,20 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*y, titleHeight*/ 5) {
+    		if ($$self.$$.dirty & /*y, titleHeight*/ 10) {
     			{
-    				if (y > titleHeight - 1) $$invalidate(1, showNavBar = true); else $$invalidate(1, showNavBar = false);
+    				if (y > titleHeight - 1) $$invalidate(2, showNavBar = true); else $$invalidate(2, showNavBar = false);
     			}
     		}
     	};
 
-    	return [y, showNavBar, titleHeight, onwindowscroll];
+    	return [boolMobileView, y, showNavBar, titleHeight, onwindowscroll];
     }
 
     class Navbar extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { titleHeight: 2 });
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { titleHeight: 3, boolMobileView: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -8960,8 +8998,12 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*titleHeight*/ ctx[2] === undefined && !('titleHeight' in props)) {
+    		if (/*titleHeight*/ ctx[3] === undefined && !('titleHeight' in props)) {
     			console.warn("<Navbar> was created without expected prop 'titleHeight'");
+    		}
+
+    		if (/*boolMobileView*/ ctx[0] === undefined && !('boolMobileView' in props)) {
+    			console.warn("<Navbar> was created without expected prop 'boolMobileView'");
     		}
     	}
 
@@ -8970,6 +9012,14 @@ var app = (function () {
     	}
 
     	set titleHeight(value) {
+    		throw new Error("<Navbar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get boolMobileView() {
+    		throw new Error("<Navbar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set boolMobileView(value) {
     		throw new Error("<Navbar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -10101,7 +10151,10 @@ var app = (function () {
     		});
 
     	navbar = new Navbar({
-    			props: { titleHeight: /*titleHeight*/ ctx[2] },
+    			props: {
+    				titleHeight: /*titleHeight*/ ctx[2],
+    				boolMobileView: /*boolMobileView*/ ctx[0]
+    			},
     			$$inline: true
     		});
 
@@ -10125,17 +10178,17 @@ var app = (function () {
     			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "svelte-jnqx4x");
-    			add_location(div0, file, 129, 6, 4190);
+    			add_location(div0, file, 129, 6, 4207);
     			attr_dev(div1, "id", "contact");
     			attr_dev(div1, "style", div1_style_value = "height: calc(" + (/*titleHeight*/ ctx[2] - /*contactYOffset*/ ctx[5]) + "px); )");
     			attr_dev(div1, "class", "svelte-jnqx4x");
-    			add_location(div1, file, 134, 6, 4434);
+    			add_location(div1, file, 134, 6, 4451);
     			attr_dev(div2, "id", "content-container");
     			set_style(div2, "top", /*titleHeight*/ ctx[2] + "px");
     			attr_dev(div2, "class", "svelte-jnqx4x");
-    			add_location(div2, file, 128, 4, 4124);
+    			add_location(div2, file, 128, 4, 4141);
     			attr_dev(div3, "class", "container-fluid svelte-jnqx4x");
-    			add_location(div3, file, 121, 2, 3959);
+    			add_location(div3, file, 121, 2, 3976);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -10205,6 +10258,7 @@ var app = (function () {
 
     			const navbar_changes = {};
     			if (dirty & /*titleHeight*/ 4) navbar_changes.titleHeight = /*titleHeight*/ ctx[2];
+    			if (dirty & /*boolMobileView*/ 1) navbar_changes.boolMobileView = /*boolMobileView*/ ctx[0];
     			navbar.$set(navbar_changes);
     		},
     		i: function intro(local) {
@@ -10317,7 +10371,10 @@ var app = (function () {
     		});
 
     	navbar = new Navbar({
-    			props: { titleHeight: 0 },
+    			props: {
+    				titleHeight: 0,
+    				boolMobileView: /*boolMobileView*/ ctx[0]
+    			},
     			$$inline: true
     		});
 
@@ -10406,6 +10463,9 @@ var app = (function () {
     			if (dirty & /*pageHalfDown*/ 16) contactwrapper_changes.pageHalfDown = /*pageHalfDown*/ ctx[4];
     			if (dirty & /*boolMobileView*/ 1) contactwrapper_changes.boolMobileView = /*boolMobileView*/ ctx[0];
     			contactwrapper.$set(contactwrapper_changes);
+    			const navbar_changes = {};
+    			if (dirty & /*boolMobileView*/ 1) navbar_changes.boolMobileView = /*boolMobileView*/ ctx[0];
+    			navbar.$set(navbar_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
