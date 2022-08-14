@@ -1,6 +1,7 @@
 <script>
   import CardProject from "./Cards/CardProject.svelte";
   import { SimpleGrid } from "@svelteuidev/core";
+  export let boolMobileView = false;
 
   class Project {
     constructor(title, imgurl1, imgurl2, url, text, techstack) {
@@ -33,7 +34,7 @@
   <div class="projects container-fluid col-md-9">
     <SimpleGrid cols={1}>
       {#each projList as { title, imgurl1, imgurl2, url, text, techstack }, index}
-        {#if index % 2 === 0}
+        {#if index % 2 === 0 || boolMobileView}
           <div class="row project-container">
             <div class="img-container col-md-7">
               <div class="main-img-container-even col-md-10 main-img-container">

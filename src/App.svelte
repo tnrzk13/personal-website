@@ -102,7 +102,9 @@
       <div id="content">
         <SaosWrapper {boolFadeAnimation}><AboutMe /></SaosWrapper>
         <SaosWrapper {boolFadeAnimation}><Career /></SaosWrapper>
-        <SaosWrapper {boolFadeAnimation}><Projects /></SaosWrapper>
+        <SaosWrapper {boolFadeAnimation}
+          ><Projects {boolMobileView} /></SaosWrapper
+        >
       </div>
       <div id="contact" style="height: 75vh;" />
       <ContactWrapper
