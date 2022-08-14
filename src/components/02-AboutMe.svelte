@@ -52,8 +52,10 @@
   .aboutMe {
     height: auto;
     color: white;
-    // padding: 0;
-    // margin: 0;
+
+    .techlist1 .row {
+      padding: 0;
+    }
 
     .imgdiv {
       position: relative;
