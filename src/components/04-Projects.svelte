@@ -28,7 +28,7 @@
   ];
 </script>
 
-<div id="projects" class="container-fluid">
+<div id="projects" class="container-fluid col-sm-10 offset-sm-1">
   <h1 class="title col-md-9">Projects</h1>
   <div class="projects container-fluid col-md-9">
     <SimpleGrid cols={1}>
@@ -97,6 +97,9 @@
   }
 
   .project-container {
+    .proj-description {
+      padding: 0;
+    }
     h4 {
       font-family: "Montserrat", sans-serif;
       font-size: 1.25rem;

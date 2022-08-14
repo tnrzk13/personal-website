@@ -53,7 +53,7 @@
   ];
 </script>
 
-<div id="career" class="container-fluid">
+<div id="career" class="container-fluid col-sm-10 col-sm-1">
   <h1 class="title col-md-9">Career</h1>
   <div id="card-list-container" class="card container-fluid col-md-9">
     <SimpleGrid cols={2}>
@@ -66,7 +66,7 @@
 
 <style lang="scss">
   h1.title {
-    padding-left: 0;
+    // padding-left: 0;
   }
   #career {
     border: 1px solid transparent;

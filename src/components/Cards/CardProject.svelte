@@ -23,37 +23,40 @@
 </div>
 
 <style lang="scss">
-  .card {
-    color: white;
+  .container-fluid {
+    padding: 0;
 
-    border-radius: 1rem;
-    // border: 1px solid transparent;
-
-    background-color: transparent;
-  }
-  .card-body {
-    text-align: left;
-
-    a {
-      text-decoration: none;
+    .card {
       color: white;
-
-      h4 {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.25rem;
-        padding: 1.5rem 0 0.5rem 0;
-      }
-    }
-
-    a:hover {
-      filter: brightness(50%);
-    }
-
-    .techstack {
-      width: auto;
-      background-color: #303443;
       border-radius: 1rem;
-      margin: 0.25rem 0.5rem 0.25rem 0.5rem;
+      background-color: transparent;
+    }
+
+    .card-body {
+      text-align: left;
+      padding: 1em 1em;
+
+      a {
+        text-decoration: none;
+        color: white;
+
+        h4 {
+          font-family: "Montserrat", sans-serif;
+          font-size: 1.25rem;
+          padding: 1.5rem 0 0.5rem 0;
+        }
+      }
+
+      a:hover {
+        filter: brightness(50%);
+      }
+
+      .techstack {
+        width: auto;
+        background-color: #303443;
+        border-radius: 1rem;
+        margin: 0.25rem 0.5rem 0.25rem 0.5rem;
+      }
     }
   }
 </style>

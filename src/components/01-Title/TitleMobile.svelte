@@ -37,7 +37,7 @@
       font-size: 3em;
       color: white;
       line-height: normal;
-      padding-top: 2em;
+      padding: 2em 0.25em 0 0.25em;
 
       .textLayer-preamble {
         font-size: 0.5em;
