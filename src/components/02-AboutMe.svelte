@@ -35,7 +35,7 @@
       <div class="aboutmeimg-container">
         <img
           class="aboutmeimg"
-          src="images/02-aboutme/self2.png"
+          src="images/02-aboutme/self.png"
           alt="tony kwok"
         />
       </div>
@@ -67,6 +67,7 @@
         img.aboutmeimg {
           max-width: 15em;
           height: auto;
+          border-radius: 50%;
         }
       }
     }
