@@ -6189,13 +6189,13 @@ var app = (function () {
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9");
-    			add_location(h1, file$9, 56, 2, 1732);
+    			add_location(h1, file$9, 56, 2, 1708);
     			attr_dev(div0, "id", "card-list-container");
     			attr_dev(div0, "class", "card container-fluid col-md-9 svelte-1ciet3r");
-    			add_location(div0, file$9, 57, 2, 1774);
+    			add_location(div0, file$9, 57, 2, 1750);
     			attr_dev(div1, "id", "career");
     			attr_dev(div1, "class", "container-fluid col-sm-10 col-sm-1 svelte-1ciet3r");
-    			add_location(div1, file$9, 55, 0, 1668);
+    			add_location(div1, file$9, 55, 0, 1644);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6260,8 +6260,8 @@ var app = (function () {
     	}
 
     	let cardList = [
-    		new CardClass("images/03-career/white/360insights.png", "Full Stack Developer", "360insights", ["Reduced debugging time by 10 mins", "Increased testing efficiency by 5%"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-telegram")),
-    		new CardClass("images/03-career/white/npx.png",
+    		new CardClass("images/03-career/360insights.png", "Full Stack Developer", "360insights", ["Reduced debugging time by 10 mins", "Increased testing efficiency by 5%"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-telegram")),
+    		new CardClass("images/03-career/npx.png",
     		"Innovation Catalyst Intern",
     		"Nuclear Promise X",
     		[
@@ -6269,8 +6269,8 @@ var app = (function () {
     				"Reduced data reporting time to zero"
     			],
     		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-lunada")),
-    		new CardClass("images/03-career/white/quarter4.png", "Database Specialist", "Quarter4", ["Cleaned data, allowing model prediction accuracy to rise >75%"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-cosmic-fusion")),
-    		new CardClass("images/03-career/white/marsh.png", "Business Application Developer", "Marsh", ["Automated 1hr of daily reporting"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-amin"))
+    		new CardClass("images/03-career/quarter4.png", "Database Specialist", "Quarter4", ["Cleaned data, allowing model prediction accuracy to rise >75%"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-cosmic-fusion")),
+    		new CardClass("images/03-career/marsh.png", "Business Application Developer", "Marsh", ["Automated 1hr of daily reporting"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-amin"))
     	];
 
     	const writable_props = [];
