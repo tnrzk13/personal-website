@@ -35,7 +35,7 @@
       <div class="aboutmeimg-container">
         <img
           class="aboutmeimg"
-          src="images/02-aboutme/self.png"
+          src="images/02-aboutme/self.avif"
           alt="tony kwok"
         />
       </div>

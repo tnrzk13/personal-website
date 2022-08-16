@@ -2758,7 +2758,7 @@ var app = (function () {
     			attr_dev(div4, "class", "text col-md-7 svelte-2qkzi");
     			add_location(div4, file$c, 9, 4, 292);
     			attr_dev(img, "class", "aboutmeimg svelte-2qkzi");
-    			if (!src_url_equal(img.src, img_src_value = "images/02-aboutme/self.png")) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = "images/02-aboutme/self.avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "tony kwok");
     			add_location(img, file$c, 35, 8, 1362);
     			attr_dev(div5, "class", "aboutmeimg-container svelte-2qkzi");
@@ -6189,13 +6189,13 @@ var app = (function () {
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9");
-    			add_location(h1, file$9, 56, 2, 1708);
+    			add_location(h1, file$9, 56, 2, 1712);
     			attr_dev(div0, "id", "card-list-container");
     			attr_dev(div0, "class", "card container-fluid col-md-9 svelte-1ciet3r");
-    			add_location(div0, file$9, 57, 2, 1750);
+    			add_location(div0, file$9, 57, 2, 1754);
     			attr_dev(div1, "id", "career");
     			attr_dev(div1, "class", "container-fluid col-sm-10 col-sm-1 svelte-1ciet3r");
-    			add_location(div1, file$9, 55, 0, 1644);
+    			add_location(div1, file$9, 55, 0, 1648);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6260,8 +6260,8 @@ var app = (function () {
     	}
 
     	let cardList = [
-    		new CardClass("images/03-career/360insights.png", "Full Stack Developer", "360insights", ["Reduced debugging time by 10 mins", "Increased testing efficiency by 5%"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-telegram")),
-    		new CardClass("images/03-career/npx.png",
+    		new CardClass("images/03-career/360insights.avif", "Full Stack Developer", "360insights", ["Reduced debugging time by 10 mins", "Increased testing efficiency by 5%"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-telegram")),
+    		new CardClass("images/03-career/npx.avif",
     		"Innovation Catalyst Intern",
     		"Nuclear Promise X",
     		[
@@ -6269,8 +6269,8 @@ var app = (function () {
     				"Reduced data reporting time to zero"
     			],
     		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-lunada")),
-    		new CardClass("images/03-career/quarter4.png", "Database Specialist", "Quarter4", ["Cleaned data, allowing model prediction accuracy to rise >75%"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-cosmic-fusion")),
-    		new CardClass("images/03-career/marsh.png", "Business Application Developer", "Marsh", ["Automated 1hr of daily reporting"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-amin"))
+    		new CardClass("images/03-career/quarter4.avif", "Database Specialist", "Quarter4", ["Cleaned data, allowing model prediction accuracy to rise >75%"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-cosmic-fusion")),
+    		new CardClass("images/03-career/marsh.avif", "Business Application Developer", "Marsh", ["Automated 1hr of daily reporting"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-amin"))
     	];
 
     	const writable_props = [];
@@ -6719,17 +6719,17 @@ var app = (function () {
     			t1 = space();
     			img = element("img");
     			attr_dev(div0, "class", "proj-description col-md-5 svelte-7164nc");
-    			add_location(div0, file$7, 56, 12, 2339);
+    			add_location(div0, file$7, 56, 12, 2343);
     			attr_dev(div1, "class", "main-img-container-odd col-md-10 offset-md-2 main-img-container svelte-7164nc");
-    			add_location(div1, file$7, 60, 14, 2528);
+    			add_location(div1, file$7, 60, 14, 2532);
     			attr_dev(img, "class", "card card-odd svelte-7164nc");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl2*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project 2");
-    			add_location(img, file$7, 71, 14, 2972);
+    			add_location(img, file$7, 71, 14, 2976);
     			attr_dev(div2, "class", "img-container col-md-7 svelte-7164nc");
-    			add_location(div2, file$7, 59, 12, 2476);
+    			add_location(div2, file$7, 59, 12, 2480);
     			attr_dev(div3, "class", "row project-container svelte-7164nc");
-    			add_location(div3, file$7, 55, 10, 2290);
+    			add_location(div3, file$7, 55, 10, 2294);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -6816,17 +6816,17 @@ var app = (function () {
     			div2 = element("div");
     			create_component(cardproject.$$.fragment);
     			attr_dev(div0, "class", "main-img-container-even col-md-10 main-img-container svelte-7164nc");
-    			add_location(div0, file$7, 39, 14, 1654);
+    			add_location(div0, file$7, 39, 14, 1658);
     			attr_dev(img, "class", "card svelte-7164nc");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl2*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project 2");
-    			add_location(img, file$7, 48, 14, 2036);
+    			add_location(img, file$7, 48, 14, 2040);
     			attr_dev(div1, "class", "img-container col-md-7 svelte-7164nc");
-    			add_location(div1, file$7, 38, 12, 1602);
+    			add_location(div1, file$7, 38, 12, 1606);
     			attr_dev(div2, "class", "proj-description col-md-5 svelte-7164nc");
-    			add_location(div2, file$7, 50, 12, 2120);
+    			add_location(div2, file$7, 50, 12, 2124);
     			attr_dev(div3, "class", "row project-container svelte-7164nc");
-    			add_location(div3, file$7, 37, 10, 1553);
+    			add_location(div3, file$7, 37, 10, 1557);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -6883,10 +6883,10 @@ var app = (function () {
     			attr_dev(img, "class", "main main-odd svelte-7164nc");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[4])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$7, 67, 20, 2830);
+    			add_location(img, file$7, 67, 20, 2834);
     			attr_dev(a, "href", /*url*/ ctx[6]);
     			attr_dev(a, "class", "svelte-7164nc");
-    			add_location(a, file$7, 66, 18, 2794);
+    			add_location(a, file$7, 66, 18, 2798);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -6920,7 +6920,7 @@ var app = (function () {
     			attr_dev(img, "class", "main main-odd svelte-7164nc");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[4])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$7, 64, 18, 2692);
+    			add_location(img, file$7, 64, 18, 2696);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -6955,10 +6955,10 @@ var app = (function () {
     			attr_dev(img, "class", "main svelte-7164nc");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[4])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$7, 44, 20, 1903);
+    			add_location(img, file$7, 44, 20, 1907);
     			attr_dev(a, "href", /*url*/ ctx[6]);
     			attr_dev(a, "class", "svelte-7164nc");
-    			add_location(a, file$7, 43, 18, 1867);
+    			add_location(a, file$7, 43, 18, 1871);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -6992,7 +6992,7 @@ var app = (function () {
     			attr_dev(img, "class", "main svelte-7164nc");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[4])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$7, 41, 18, 1774);
+    			add_location(img, file$7, 41, 18, 1778);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -7039,8 +7039,8 @@ var app = (function () {
     			t = space();
     			br0 = element("br");
     			br1 = element("br");
-    			add_location(br0, file$7, 75, 8, 3094);
-    			add_location(br1, file$7, 75, 14, 3100);
+    			add_location(br0, file$7, 75, 8, 3098);
+    			add_location(br1, file$7, 75, 14, 3104);
     		},
     		m: function mount(target, anchor) {
     			if_blocks[current_block_type_index].m(target, anchor);
@@ -7226,12 +7226,12 @@ var app = (function () {
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9");
-    			add_location(h1, file$7, 32, 2, 1290);
+    			add_location(h1, file$7, 32, 2, 1294);
     			attr_dev(div0, "class", "projects container-fluid col-md-9 svelte-7164nc");
-    			add_location(div0, file$7, 33, 2, 1334);
+    			add_location(div0, file$7, 33, 2, 1338);
     			attr_dev(div1, "id", "projects");
     			attr_dev(div1, "class", "container-fluid col-sm-10 offset-sm-1 svelte-7164nc");
-    			add_location(div1, file$7, 31, 0, 1221);
+    			add_location(div1, file$7, 31, 0, 1225);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7298,8 +7298,8 @@ var app = (function () {
     	}
 
     	let projList = [
-    		new Project("SoulDog", "images/04-project/souldog.PNG", "images/04-project/souldogcard.PNG", "https://souldog.herokuapp.com", 'Webapp linked to database designed to match abandoned dogs with new dog owners. Features include account creation, Google authentication, search, and posting. Awarded "top project of the class" in CS348: Database Systems.', ["Javascript", "React", "Node.JS", "Knex JS", "SQL"]),
-    		new Project("Wumpus World", "images/04-project/wumpus.PNG", "images/04-project/wumpuscard.PNG", "", "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.", ["Python"])
+    		new Project("SoulDog", "images/04-project/souldog.avif", "images/04-project/souldogcard.avif", "https://souldog.herokuapp.com", 'Webapp linked to database designed to match abandoned dogs with new dog owners. Features include account creation, Google authentication, search, and posting. Awarded "top project of the class" in CS348: Database Systems.', ["Javascript", "React", "Node.JS", "Knex JS", "SQL"]),
+    		new Project("Wumpus World", "images/04-project/wumpus.avif", "images/04-project/wumpuscard.avif", "", "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.", ["Python"])
     	];
 
     	const writable_props = ['boolMobileView'];

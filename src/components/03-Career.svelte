@@ -9,7 +9,7 @@
   }
   let cardList = [
     new CardClass(
-      "images/03-career/360insights.png",
+      "images/03-career/360insights.avif",
       "Full Stack Developer",
       "360insights",
       [
@@ -21,7 +21,7 @@
       )
     ),
     new CardClass(
-      "images/03-career/npx.png",
+      "images/03-career/npx.avif",
       "Innovation Catalyst Intern",
       "Nuclear Promise X",
       [
@@ -33,7 +33,7 @@
       )
     ),
     new CardClass(
-      "images/03-career/quarter4.png",
+      "images/03-career/quarter4.avif",
       "Database Specialist",
       "Quarter4",
       ["Cleaned data, allowing model prediction accuracy to rise >75%"],
@@ -42,7 +42,7 @@
       )
     ),
     new CardClass(
-      "images/03-career/marsh.png",
+      "images/03-career/marsh.avif",
       "Business Application Developer",
       "Marsh",
       ["Automated 1hr of daily reporting"],
