@@ -1486,11 +1486,11 @@ var app = (function () {
     		c: function create() {
     			img = element("img");
     			set_style(img, "transform", "translate(0," + -/*y*/ ctx[4] * (/*layer*/ ctx[7] - 1) / (/*layers*/ ctx[5].length - 1) + "px)");
-    			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + (/*layer*/ ctx[7] - 1) + ".png")) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + (/*layer*/ ctx[7] - 1) + ".avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[7] - 1));
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-1d59v6c");
-    			add_location(img, file$e, 72, 8, 2303);
+    			add_location(img, file$e, 72, 8, 2306);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1531,11 +1531,11 @@ var app = (function () {
     		c: function create() {
     			img = element("img");
     			set_style(img, "transform", "translate(0," + (-/*y*/ ctx[4] + 10) + "px)");
-    			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + (/*layer*/ ctx[7] - 1) + ".png")) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + (/*layer*/ ctx[7] - 1) + ".avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[7] - 1));
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-1d59v6c");
-    			add_location(img, file$e, 65, 8, 2080);
+    			add_location(img, file$e, 65, 8, 2082);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1576,11 +1576,11 @@ var app = (function () {
     		c: function create() {
     			img = element("img");
     			set_style(img, "transform", "translate(0," + -/*y*/ ctx[4] * (/*layer*/ ctx[7] - 1) / (/*layers*/ ctx[5].length - 1) + "px)");
-    			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + (/*layer*/ ctx[7] - 1) + ".png")) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + (/*layer*/ ctx[7] - 1) + ".avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[7] - 1));
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-1d59v6c");
-    			add_location(img, file$e, 57, 8, 1794);
+    			add_location(img, file$e, 57, 8, 1795);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1688,7 +1688,7 @@ var app = (function () {
     			img = element("img");
     			attr_dev(img, "id", "img-parallax-" + /*layer*/ ctx[7]);
     			set_style(img, "transform", "translate(0," + -/*y*/ ctx[4] * /*layer*/ ctx[7] / (/*layers*/ ctx[5].length - 1) + "px)");
-    			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[7] + ".png")) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[7] + ".avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[7]);
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-1d59v6c");
@@ -1780,19 +1780,19 @@ var app = (function () {
     			i = element("i");
     			t8 = space();
     			attr_dev(div0, "class", "textLayer-preamble svelte-1d59v6c");
-    			add_location(div0, file$e, 35, 12, 948);
+    			add_location(div0, file$e, 35, 12, 949);
     			attr_dev(div1, "class", "textLayer-title");
-    			add_location(div1, file$e, 36, 12, 1020);
+    			add_location(div1, file$e, 36, 12, 1021);
     			attr_dev(div2, "class", "textLayer-subtitle svelte-1d59v6c");
-    			add_location(div2, file$e, 37, 12, 1086);
+    			add_location(div2, file$e, 37, 12, 1087);
     			attr_dev(div3, "class", "textLayer-description svelte-1d59v6c");
-    			add_location(div3, file$e, 50, 12, 1526);
+    			add_location(div3, file$e, 50, 12, 1527);
     			attr_dev(i, "class", "fa-solid fa-angles-down");
-    			add_location(i, file$e, 53, 36, 1658);
+    			add_location(i, file$e, 53, 36, 1659);
     			attr_dev(div4, "class", "scrolldown svelte-1d59v6c");
-    			add_location(div4, file$e, 53, 12, 1634);
+    			add_location(div4, file$e, 53, 12, 1635);
     			attr_dev(div5, "class", "textLayer svelte-1d59v6c");
-    			add_location(div5, file$e, 34, 10, 911);
+    			add_location(div5, file$e, 34, 10, 912);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div5, anchor);
@@ -7375,11 +7375,11 @@ var app = (function () {
     			img = element("img");
     			attr_dev(img, "id", "parallax-" + /*layer*/ ctx[14]);
     			set_style(img, "transform", "translateY(" + Math.max(-/*contactYOffset*/ ctx[1], /*imgHeight*/ ctx[5] * /*layer*/ ctx[14] / (/*layers*/ ctx[7].length - 1) - /*yScroll*/ ctx[4] * (1 + /*offsetRatio*/ ctx[6]) * /*layer*/ ctx[14] / (/*layers*/ ctx[7].length - 1)) + "px)");
-    			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + /*layer*/ ctx[14] + ".png")) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + /*layer*/ ctx[14] + ".avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[14]);
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-1ngod9f");
-    			add_location(img, file$6, 93, 6, 2749);
+    			add_location(img, file$6, 93, 6, 2750);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -7421,7 +7421,7 @@ var app = (function () {
     			img = element("img");
     			attr_dev(img, "id", "parallax-" + /*layer*/ ctx[14]);
     			set_style(img, "transform", "translateY(" + Math.max(-/*contactYOffset*/ ctx[1], /*imgHeight*/ ctx[5] * /*layer*/ ctx[14] / (/*layers*/ ctx[7].length - 1) - /*yScroll*/ ctx[4] * (1 + /*offsetRatio*/ ctx[6]) * /*layer*/ ctx[14] / (/*layers*/ ctx[7].length - 1)) + "px)");
-    			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[14] + ".png")) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[14] + ".avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[14]);
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-1ngod9f");
