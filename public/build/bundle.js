@@ -7358,6 +7358,7 @@ var app = (function () {
     const file$7 = "src\\components\\05-Contact\\ContactText.svelte";
 
     function create_fragment$8(ctx) {
+    	let div7;
     	let div6;
     	let div0;
     	let t0_value = /*contactInfo*/ ctx[0].preamble + "";
@@ -7379,6 +7380,7 @@ var app = (function () {
     	let a1;
     	let button;
     	let a1_href_value;
+    	let div7_style_value;
     	let current;
 
     	texttype = new TextType({
@@ -7394,6 +7396,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			div7 = element("div");
     			div6 = element("div");
     			div0 = element("div");
     			t0 = text(t0_value);
@@ -7413,37 +7416,42 @@ var app = (function () {
     			a1 = element("a");
     			button = element("button");
     			button.textContent = "Say Hello";
-    			attr_dev(div0, "class", "textLayer-preamble svelte-f514u6");
-    			add_location(div0, file$7, 6, 2, 132);
-    			attr_dev(div1, "class", "textLayer-title svelte-f514u6");
-    			add_location(div1, file$7, 7, 2, 196);
-    			attr_dev(div2, "class", "textLayer-description svelte-f514u6");
-    			add_location(div2, file$7, 16, 2, 402);
+    			attr_dev(div0, "class", "textLayer-preamble svelte-1238yt8");
+    			add_location(div0, file$7, 7, 4, 243);
+    			attr_dev(div1, "class", "textLayer-title svelte-1238yt8");
+    			add_location(div1, file$7, 8, 4, 309);
+    			attr_dev(div2, "class", "textLayer-description svelte-1238yt8");
+    			add_location(div2, file$7, 17, 4, 533);
     			attr_dev(i, "class", "fa-brands fa-linkedin fa-md");
-    			add_location(i, file$7, 22, 8, 632);
+    			add_location(i, file$7, 23, 10, 775);
     			attr_dev(a0, "href", "https://www.linkedin.com/in/tony-k-kwok/");
-    			attr_dev(a0, "class", "svelte-f514u6");
-    			add_location(a0, file$7, 21, 6, 571);
-    			attr_dev(div3, "class", "linkedin-container col-md-3 svelte-f514u6");
-    			add_location(div3, file$7, 20, 4, 522);
-    			attr_dev(button, "class", "btn btn-grad btn-lg svelte-f514u6");
-    			add_location(button, file$7, 30, 8, 873);
+    			attr_dev(a0, "class", "svelte-1238yt8");
+    			add_location(a0, file$7, 22, 8, 712);
+    			attr_dev(div3, "class", "linkedin-container col-md-3 svelte-1238yt8");
+    			add_location(div3, file$7, 21, 6, 661);
+    			attr_dev(button, "class", "btn btn-grad btn-lg svelte-1238yt8");
+    			add_location(button, file$7, 31, 10, 1032);
     			attr_dev(a1, "href", a1_href_value = "mailto:tnrzk13@gmail.com?subject=" + /*contactInfo*/ ctx[0].subject);
     			attr_dev(a1, "id", "emailLink");
-    			attr_dev(a1, "class", "svelte-f514u6");
-    			add_location(a1, file$7, 26, 6, 757);
+    			attr_dev(a1, "class", "svelte-1238yt8");
+    			add_location(a1, file$7, 27, 8, 908);
     			attr_dev(div4, "class", "button-container-column col-md-9");
-    			add_location(div4, file$7, 25, 4, 703);
-    			attr_dev(div5, "class", "button-container row svelte-f514u6");
-    			add_location(div5, file$7, 19, 2, 482);
-    			attr_dev(div6, "class", "textLayer svelte-f514u6");
-    			add_location(div6, file$7, 5, 0, 105);
+    			add_location(div4, file$7, 26, 6, 852);
+    			attr_dev(div5, "class", "button-container row");
+    			add_location(div5, file$7, 20, 4, 619);
+    			attr_dev(div6, "class", "textLayer svelte-1238yt8");
+    			add_location(div6, file$7, 6, 2, 214);
+    			attr_dev(div7, "id", "contact");
+    			attr_dev(div7, "style", div7_style_value = "height: calc(" + (/*titleHeight*/ ctx[1] - /*contactYOffset*/ ctx[2]) + "px); )");
+    			attr_dev(div7, "class", "svelte-1238yt8");
+    			add_location(div7, file$7, 5, 0, 134);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div6, anchor);
+    			insert_dev(target, div7, anchor);
+    			append_dev(div7, div6);
     			append_dev(div6, div0);
     			append_dev(div0, t0);
     			append_dev(div6, t1);
@@ -7473,6 +7481,10 @@ var app = (function () {
     			if (!current || dirty & /*contactInfo*/ 1 && a1_href_value !== (a1_href_value = "mailto:tnrzk13@gmail.com?subject=" + /*contactInfo*/ ctx[0].subject)) {
     				attr_dev(a1, "href", a1_href_value);
     			}
+
+    			if (!current || dirty & /*titleHeight, contactYOffset*/ 6 && div7_style_value !== (div7_style_value = "height: calc(" + (/*titleHeight*/ ctx[1] - /*contactYOffset*/ ctx[2]) + "px); )")) {
+    				attr_dev(div7, "style", div7_style_value);
+    			}
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -7484,7 +7496,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div6);
+    			if (detaching) detach_dev(div7);
     			destroy_component(texttype);
     		}
     	};
@@ -7503,8 +7515,8 @@ var app = (function () {
     function instance$8($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('ContactText', slots, []);
-    	let { contactInfo } = $$props;
-    	const writable_props = ['contactInfo'];
+    	let { contactInfo, titleHeight, contactYOffset } = $$props;
+    	const writable_props = ['contactInfo', 'titleHeight', 'contactYOffset'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<ContactText> was created with unknown prop '${key}'`);
@@ -7512,25 +7524,39 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ('contactInfo' in $$props) $$invalidate(0, contactInfo = $$props.contactInfo);
+    		if ('titleHeight' in $$props) $$invalidate(1, titleHeight = $$props.titleHeight);
+    		if ('contactYOffset' in $$props) $$invalidate(2, contactYOffset = $$props.contactYOffset);
     	};
 
-    	$$self.$capture_state = () => ({ TextType, contactInfo });
+    	$$self.$capture_state = () => ({
+    		TextType,
+    		contactInfo,
+    		titleHeight,
+    		contactYOffset
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('contactInfo' in $$props) $$invalidate(0, contactInfo = $$props.contactInfo);
+    		if ('titleHeight' in $$props) $$invalidate(1, titleHeight = $$props.titleHeight);
+    		if ('contactYOffset' in $$props) $$invalidate(2, contactYOffset = $$props.contactYOffset);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [contactInfo];
+    	return [contactInfo, titleHeight, contactYOffset];
     }
 
     class ContactText extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$8, create_fragment$8, safe_not_equal, { contactInfo: 0 });
+
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, {
+    			contactInfo: 0,
+    			titleHeight: 1,
+    			contactYOffset: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -7545,6 +7571,14 @@ var app = (function () {
     		if (/*contactInfo*/ ctx[0] === undefined && !('contactInfo' in props)) {
     			console.warn("<ContactText> was created without expected prop 'contactInfo'");
     		}
+
+    		if (/*titleHeight*/ ctx[1] === undefined && !('titleHeight' in props)) {
+    			console.warn("<ContactText> was created without expected prop 'titleHeight'");
+    		}
+
+    		if (/*contactYOffset*/ ctx[2] === undefined && !('contactYOffset' in props)) {
+    			console.warn("<ContactText> was created without expected prop 'contactYOffset'");
+    		}
     	}
 
     	get contactInfo() {
@@ -7552,6 +7586,22 @@ var app = (function () {
     	}
 
     	set contactInfo(value) {
+    		throw new Error("<ContactText>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get titleHeight() {
+    		throw new Error("<ContactText>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set titleHeight(value) {
+    		throw new Error("<ContactText>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get contactYOffset() {
+    		throw new Error("<ContactText>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set contactYOffset(value) {
     		throw new Error("<ContactText>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -10058,10 +10108,10 @@ var app = (function () {
 
     // (122:0) {:else}
     function create_else_block(ctx) {
-    	let div3;
+    	let div2;
     	let titledesktop;
     	let t0;
-    	let div2;
+    	let div1;
     	let div0;
     	let saoswrapper0;
     	let t1;
@@ -10069,9 +10119,7 @@ var app = (function () {
     	let t2;
     	let saoswrapper2;
     	let t3;
-    	let div1;
     	let contacttext;
-    	let div1_style_value;
     	let t4;
     	let contactwrapper;
     	let t5;
@@ -10116,7 +10164,11 @@ var app = (function () {
     		});
 
     	contacttext = new ContactText({
-    			props: { contactInfo: /*contactInfo*/ ctx[9] },
+    			props: {
+    				contactInfo: /*contactInfo*/ ctx[9],
+    				titleHeight: /*titleHeight*/ ctx[2],
+    				contactYOffset: /*contactYOffset*/ ctx[5]
+    			},
     			$$inline: true
     		});
 
@@ -10142,10 +10194,10 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div3 = element("div");
+    			div2 = element("div");
     			create_component(titledesktop.$$.fragment);
     			t0 = space();
-    			div2 = element("div");
+    			div1 = element("div");
     			div0 = element("div");
     			create_component(saoswrapper0.$$.fragment);
     			t1 = space();
@@ -10153,42 +10205,36 @@ var app = (function () {
     			t2 = space();
     			create_component(saoswrapper2.$$.fragment);
     			t3 = space();
-    			div1 = element("div");
     			create_component(contacttext.$$.fragment);
     			t4 = space();
     			create_component(contactwrapper.$$.fragment);
     			t5 = space();
     			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
-    			attr_dev(div0, "class", "svelte-q8xm5i");
+    			attr_dev(div0, "class", "svelte-1uyt7tx");
     			add_location(div0, file, 130, 6, 4292);
-    			attr_dev(div1, "id", "contact");
-    			attr_dev(div1, "style", div1_style_value = "height: calc(" + (/*titleHeight*/ ctx[2] - /*contactYOffset*/ ctx[5]) + "px); )");
-    			attr_dev(div1, "class", "svelte-q8xm5i");
-    			add_location(div1, file, 135, 6, 4536);
-    			attr_dev(div2, "id", "content-container");
-    			set_style(div2, "top", /*titleHeight*/ ctx[2] + "px");
-    			attr_dev(div2, "class", "svelte-q8xm5i");
-    			add_location(div2, file, 129, 4, 4226);
-    			attr_dev(div3, "class", "container-fluid svelte-q8xm5i");
-    			add_location(div3, file, 122, 2, 4061);
+    			attr_dev(div1, "id", "content-container");
+    			set_style(div1, "top", /*titleHeight*/ ctx[2] + "px");
+    			attr_dev(div1, "class", "svelte-1uyt7tx");
+    			add_location(div1, file, 129, 4, 4226);
+    			attr_dev(div2, "class", "container-fluid svelte-1uyt7tx");
+    			add_location(div2, file, 122, 2, 4061);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div3, anchor);
-    			mount_component(titledesktop, div3, null);
-    			append_dev(div3, t0);
-    			append_dev(div3, div2);
-    			append_dev(div2, div0);
+    			insert_dev(target, div2, anchor);
+    			mount_component(titledesktop, div2, null);
+    			append_dev(div2, t0);
+    			append_dev(div2, div1);
+    			append_dev(div1, div0);
     			mount_component(saoswrapper0, div0, null);
     			append_dev(div0, t1);
     			mount_component(saoswrapper1, div0, null);
     			append_dev(div0, t2);
     			mount_component(saoswrapper2, div0, null);
-    			append_dev(div2, t3);
-    			append_dev(div2, div1);
+    			append_dev(div1, t3);
     			mount_component(contacttext, div1, null);
-    			append_dev(div2, t4);
-    			mount_component(contactwrapper, div2, null);
+    			append_dev(div1, t4);
+    			mount_component(contactwrapper, div1, null);
     			insert_dev(target, t5, anchor);
     			mount_component(navbar, target, anchor);
     			current = true;
@@ -10223,11 +10269,10 @@ var app = (function () {
     			}
 
     			saoswrapper2.$set(saoswrapper2_changes);
-
-    			if (!current || dirty & /*titleHeight, contactYOffset*/ 36 && div1_style_value !== (div1_style_value = "height: calc(" + (/*titleHeight*/ ctx[2] - /*contactYOffset*/ ctx[5]) + "px); )")) {
-    				attr_dev(div1, "style", div1_style_value);
-    			}
-
+    			const contacttext_changes = {};
+    			if (dirty & /*titleHeight*/ 4) contacttext_changes.titleHeight = /*titleHeight*/ ctx[2];
+    			if (dirty & /*contactYOffset*/ 32) contacttext_changes.contactYOffset = /*contactYOffset*/ ctx[5];
+    			contacttext.$set(contacttext_changes);
     			const contactwrapper_changes = {};
     			if (dirty & /*contactHeight*/ 8) contactwrapper_changes.contactHeight = /*contactHeight*/ ctx[3];
     			if (dirty & /*titleHeight*/ 4) contactwrapper_changes.containerHeight = /*titleHeight*/ ctx[2];
@@ -10237,7 +10282,7 @@ var app = (function () {
     			contactwrapper.$set(contactwrapper_changes);
 
     			if (!current || dirty & /*titleHeight*/ 4) {
-    				set_style(div2, "top", /*titleHeight*/ ctx[2] + "px");
+    				set_style(div1, "top", /*titleHeight*/ ctx[2] + "px");
     			}
 
     			const navbar_changes = {};
@@ -10267,7 +10312,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div3);
+    			if (detaching) detach_dev(div2);
     			destroy_component(titledesktop);
     			destroy_component(saoswrapper0);
     			destroy_component(saoswrapper1);
@@ -10384,16 +10429,15 @@ var app = (function () {
     			t5 = space();
     			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
-    			attr_dev(div0, "class", "svelte-q8xm5i");
+    			attr_dev(div0, "class", "svelte-1uyt7tx");
     			add_location(div0, file, 102, 6, 3458);
     			attr_dev(div1, "id", "contact");
     			set_style(div1, "height", "75vh");
-    			attr_dev(div1, "class", "svelte-q8xm5i");
     			add_location(div1, file, 109, 6, 3741);
     			attr_dev(div2, "id", "content-container");
-    			attr_dev(div2, "class", "svelte-q8xm5i");
+    			attr_dev(div2, "class", "svelte-1uyt7tx");
     			add_location(div2, file, 101, 4, 3422);
-    			attr_dev(div3, "class", "container-fluid svelte-q8xm5i");
+    			attr_dev(div3, "class", "container-fluid svelte-1uyt7tx");
     			add_location(div3, file, 99, 2, 3336);
     		},
     		m: function mount(target, anchor) {

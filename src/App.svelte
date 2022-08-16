@@ -133,12 +133,7 @@
         <SaosWrapper {boolFadeAnimation}><Career /></SaosWrapper>
         <SaosWrapper {boolFadeAnimation}><Projects /></SaosWrapper>
       </div>
-      <div
-        id="contact"
-        style="height: calc({titleHeight - contactYOffset}px); )"
-      >
-        <ContactText {contactInfo} />
-      </div>
+      <ContactText {contactInfo} {titleHeight} {contactYOffset} />
       <ContactWrapper
         {contactHeight}
         containerHeight={titleHeight}
@@ -173,11 +168,6 @@
         position: relative;
         z-index: 2;
         border-radius: 0 0 50% 50% / 0 0 3em 3em;
-      }
-
-      #contact {
-        background-color: transparent;
-        z-index: 999;
       }
     }
   }
