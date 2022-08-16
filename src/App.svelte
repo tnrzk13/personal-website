@@ -4,6 +4,7 @@
   import AboutMe from "./components/02-AboutMe.svelte";
   import Career from "./components/03-Career.svelte";
   import Projects from "./components/04-Projects.svelte";
+  import ContactText from "./components/05-Contact/ContactText.svelte";
   import ContactWrapper from "./components/05-Contact/ContactWrapper.svelte";
   import Navbar from "./components/Navbar.svelte";
   import Loader from "./components/Loader.svelte";
@@ -58,10 +59,10 @@
   $: {
     boolMobileView = window.innerWidth < medScreenSize;
 
-    let clObject = {
-      boolMobileView: boolMobileView,
-    };
-    console.log(clObject);
+    // let clObject = {
+    //   boolMobileView: boolMobileView,
+    // };
+    // console.log(clObject);
   }
 
   let boolFadeAnimation, boolShowLoadingScreen, boolAnimateText;
@@ -135,7 +136,9 @@
       <div
         id="contact"
         style="height: calc({titleHeight - contactYOffset}px); )"
-      />
+      >
+        <ContactText {contactInfo} />
+      </div>
       <ContactWrapper
         {contactHeight}
         containerHeight={titleHeight}
@@ -174,6 +177,7 @@
 
       #contact {
         background-color: transparent;
+        z-index: 999;
       }
     }
   }

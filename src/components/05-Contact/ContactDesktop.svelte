@@ -3,13 +3,9 @@
   import TextType from "../TextType/TextType.svelte";
 
   export let containerHeight, contactYOffset;
-  export let contactInfo;
 
-  const numLayers = 15;
+  const numLayers = 14;
   const layers = [...Array(numLayers).keys()];
-  const textLayer = 14;
-
-  let texts = ["Get in Touch!"];
 
   let contactDiv = document.getElementById("contact");
   let contactTop, y, yScroll, imgHeight, offsetRatio;
@@ -39,46 +35,7 @@
 
 <div class="parallax-container">
   {#each layers as layer}
-    {#if layer === textLayer}
-      <div
-        id="parallax-{layer}"
-        class="textLayer"
-        style="transform: translateY({Math.max(
-          -contactYOffset,
-          imgHeight - yScroll
-        )}px)"
-        height="{containerHeight}px"
-      >
-        <div class="textLayer-preamble">{contactInfo.preamble}</div>
-        <div class="textLayer-title">
-          <TextType
-            texts={contactInfo.texts}
-            delay={100}
-            num_loops={999}
-            repeat_n_words={1}
-            blinker_iter_count={"infinite"}
-          />
-        </div>
-        <div class="textLayer-description">
-          {contactInfo.description}
-        </div>
-        <div class="button-container row">
-          <div class="linkedin-container col-md-3">
-            <a href="https://www.linkedin.com/in/tony-k-kwok/">
-              <i class="fa-brands fa-linkedin fa-md" />
-            </a>
-          </div>
-          <div class="button-container-column col-md-9">
-            <a
-              href="mailto:tnrzk13@gmail.com?subject={contactInfo.subject}"
-              id="emailLink"
-            >
-              <button class="btn btn-grad btn-lg">Say Hello</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    {:else if layer < 10}
+    {#if layer < 10}
       <img
         id="parallax-{layer}"
         style="transform: translateY({Math.max(

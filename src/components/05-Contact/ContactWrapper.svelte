@@ -1,5 +1,5 @@
 <script>
-  import Contact from "./ContactDesktop.svelte";
+  import ContactDesktop from "./ContactDesktop.svelte";
   import ContactMobile from "./ContactMobile.svelte";
 
   export let contactHeight, containerHeight, contactInfo, boolMobileView;
@@ -22,7 +22,7 @@
       id="contact-wrapper"
       style="transform: translateY({contactYOffset}px);"
     >
-      <Contact {containerHeight} {contactYOffset} {contactInfo} />
+      <ContactDesktop {containerHeight} {contactYOffset} />
     </div>
   {/if}
 {/if}
