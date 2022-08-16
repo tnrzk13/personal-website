@@ -26,7 +26,7 @@
         <img
           id="img-parallax-{layer}"
           style="transform: translate(0,{(-y * layer) / (layers.length - 1)}px)"
-          src="images/intro/00{layer}.png"
+          src="images/intro/00{layer}.avif"
           alt="parallax layer {layer}"
           height={containerHeight}
         />
@@ -58,14 +58,14 @@
         <img
           style="transform: translate(0,{(-y * (layer - 1)) /
             (layers.length - 1)}px)"
-          src="images/intro/00{layer - 1}.png"
+          src="images/intro/00{layer - 1}.avif"
           alt="parallax layer {layer - 1}"
           height={containerHeight}
         />
       {:else if layer === 14}
         <img
           style="transform: translate(0,{-y + 10}px)"
-          src="images/intro/0{layer - 1}.png"
+          src="images/intro/0{layer - 1}.avif"
           alt="parallax layer {layer - 1}"
           height={containerHeight}
         />
@@ -73,7 +73,7 @@
         <img
           style="transform: translate(0,{(-y * (layer - 1)) /
             (layers.length - 1)}px)"
-          src="images/intro/0{layer - 1}.png"
+          src="images/intro/0{layer - 1}.avif"
           alt="parallax layer {layer - 1}"
           height={containerHeight}
         />

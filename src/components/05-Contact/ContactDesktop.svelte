@@ -86,7 +86,7 @@
           (imgHeight * layer) / (layers.length - 1) -
             (yScroll * (1 + offsetRatio) * layer) / (layers.length - 1)
         )}px)"
-        src="images/intro/00{layer}.png"
+        src="images/intro/00{layer}.avif"
         alt="parallax layer {layer}"
         height={containerHeight}
       />
@@ -98,7 +98,7 @@
           (imgHeight * layer) / (layers.length - 1) -
             (yScroll * (1 + offsetRatio) * layer) / (layers.length - 1)
         )}px)"
-        src="images/intro/0{layer}.png"
+        src="images/intro/0{layer}.avif"
         alt="parallax layer {layer}"
         height={containerHeight}
       />
