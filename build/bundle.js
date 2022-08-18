@@ -1426,7 +1426,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (132:27) 
+    // (124:27) 
     function create_if_block_7(ctx) {
     	let img;
     	let img_src_value;
@@ -1443,7 +1443,7 @@ var app = (function () {
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[17] - 1));
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-1d59v6c");
-    			add_location(img, file$f, 132, 6, 4070);
+    			add_location(img, file$f, 124, 6, 3856);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1470,14 +1470,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(132:27) ",
+    		source: "(124:27) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (123:26) 
+    // (115:26) 
     function create_if_block_6(ctx) {
     	let img;
     	let img_src_value;
@@ -1494,7 +1494,7 @@ var app = (function () {
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[17] - 1));
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-1d59v6c");
-    			add_location(img, file$f, 123, 6, 3744);
+    			add_location(img, file$f, 115, 6, 3530);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1521,14 +1521,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(123:26) ",
+    		source: "(115:26) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (114:46) 
+    // (106:46) 
     function create_if_block_5(ctx) {
     	let img;
     	let img_src_value;
@@ -1545,7 +1545,7 @@ var app = (function () {
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[17] - 1));
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-1d59v6c");
-    			add_location(img, file$f, 114, 6, 3418);
+    			add_location(img, file$f, 106, 6, 3204);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1572,14 +1572,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(114:46) ",
+    		source: "(106:46) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (90:68) 
+    // (82:68) 
     function create_if_block_2$1(ctx) {
     	let if_block_anchor;
     	let current;
@@ -1638,14 +1638,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(90:68) ",
+    		source: "(82:68) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (81:32) 
+    // (73:32) 
     function create_if_block_1$3(ctx) {
     	let img;
     	let img_src_value;
@@ -1662,7 +1662,7 @@ var app = (function () {
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[17]);
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-1d59v6c");
-    			add_location(img, file$f, 81, 6, 2192);
+    			add_location(img, file$f, 73, 6, 1978);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1689,14 +1689,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$3.name,
     		type: "if",
-    		source: "(81:32) ",
+    		source: "(73:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (72:4) {#if layer === 0}
+    // (64:4) {#if layer === 0}
     function create_if_block$b(ctx) {
     	let img;
     	let img_src_value;
@@ -1713,7 +1713,7 @@ var app = (function () {
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[17]);
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
     			attr_dev(img, "class", "svelte-1d59v6c");
-    			add_location(img, file$f, 72, 6, 1845);
+    			add_location(img, file$f, 64, 6, 1631);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1740,14 +1740,14 @@ var app = (function () {
     		block,
     		id: create_if_block$b.name,
     		type: "if",
-    		source: "(72:4) {#if layer === 0}",
+    		source: "(64:4) {#if layer === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (91:6) {#if y < containerHeight}
+    // (83:6) {#if y < containerHeight}
     function create_if_block_3(ctx) {
     	let div5;
     	let div0;
@@ -1803,19 +1803,19 @@ var app = (function () {
     			i = element("i");
     			t8 = space();
     			attr_dev(div0, "class", "textLayer-preamble svelte-1d59v6c");
-    			add_location(div0, file$f, 92, 10, 2616);
+    			add_location(div0, file$f, 84, 10, 2402);
     			attr_dev(div1, "class", "textLayer-title");
-    			add_location(div1, file$f, 93, 10, 2686);
+    			add_location(div1, file$f, 85, 10, 2472);
     			attr_dev(div2, "class", "textLayer-subtitle svelte-1d59v6c");
-    			add_location(div2, file$f, 94, 10, 2750);
+    			add_location(div2, file$f, 86, 10, 2536);
     			attr_dev(div3, "class", "textLayer-description svelte-1d59v6c");
-    			add_location(div3, file$f, 107, 10, 3164);
+    			add_location(div3, file$f, 99, 10, 2950);
     			attr_dev(i, "class", "fa-solid fa-angles-down");
-    			add_location(i, file$f, 110, 34, 3290);
+    			add_location(i, file$f, 102, 34, 3076);
     			attr_dev(div4, "class", "scrolldown svelte-1d59v6c");
-    			add_location(div4, file$f, 110, 10, 3266);
+    			add_location(div4, file$f, 102, 10, 3052);
     			attr_dev(div5, "class", "textLayer svelte-1d59v6c");
-    			add_location(div5, file$f, 91, 8, 2581);
+    			add_location(div5, file$f, 83, 8, 2367);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div5, anchor);
@@ -1888,14 +1888,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(91:6) {#if y < containerHeight}",
+    		source: "(83:6) {#if y < containerHeight}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (104:12) {:else}
+    // (96:12) {:else}
     function create_else_block$9(ctx) {
     	let t_value = /*titleInfo*/ ctx[1].texts[0] + "";
     	let t;
@@ -1921,14 +1921,14 @@ var app = (function () {
     		block,
     		id: create_else_block$9.name,
     		type: "else",
-    		source: "(104:12) {:else}",
+    		source: "(96:12) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (96:32) {#if boolAnimateText}
+    // (88:32) {#if boolAnimateText}
     function create_if_block_4(ctx) {
     	let texttype;
     	let current;
@@ -1975,14 +1975,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(96:32) {#if boolAnimateText}",
+    		source: "(88:32) {#if boolAnimateText}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (71:2) {#each layers as layer}
+    // (63:2) {#each layers as layer}
     function create_each_block$7(ctx) {
     	let show_if;
     	let current_block_type_index;
@@ -2088,7 +2088,7 @@ var app = (function () {
     		block,
     		id: create_each_block$7.name,
     		type: "each",
-    		source: "(71:2) {#each layers as layer}",
+    		source: "(63:2) {#each layers as layer}",
     		ctx
     	});
 
@@ -2133,7 +2133,7 @@ var app = (function () {
     			attr_dev(div, "class", "parallax-container svelte-1d59v6c");
     			set_style(div, "height", /*containerHeight*/ ctx[0] - /*y*/ ctx[4] + "px");
     			add_render_callback(() => /*div_elementresize_handler*/ ctx[11].call(div));
-    			add_location(div, file$f, 64, 0, 1654);
+    			add_location(div, file$f, 56, 0, 1440);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2357,8 +2357,7 @@ var app = (function () {
     			{
     				$$invalidate(5, boolShowContact = y > pageHalfDown);
     				update();
-    			} // let x = {
-    			//   contactYOffset: contactYOffset,
+    			}
     		}
     	};
 
@@ -10329,6 +10328,8 @@ var app = (function () {
     	let div0_resize_listener;
     	let t3;
     	let contacttext;
+    	let t4;
+    	let navbar;
     	let current;
 
     	parallax = new Parallax({
@@ -10379,6 +10380,14 @@ var app = (function () {
     			$$inline: true
     		});
 
+    	navbar = new Navbar({
+    			props: {
+    				titleHeight: /*titleHeight*/ ctx[0],
+    				boolMobileView: /*boolMobileView*/ ctx[9]
+    			},
+    			$$inline: true
+    		});
+
     	const block = {
     		c: function create() {
     			div2 = element("div");
@@ -10393,6 +10402,8 @@ var app = (function () {
     			create_component(saoswrapper2.$$.fragment);
     			t3 = space();
     			create_component(contacttext.$$.fragment);
+    			t4 = space();
+    			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "svelte-1uyt7tx");
     			add_render_callback(() => /*div0_elementresize_handler*/ ctx[13].call(div0));
@@ -10418,6 +10429,8 @@ var app = (function () {
     			div0_resize_listener = add_resize_listener(div0, /*div0_elementresize_handler*/ ctx[13].bind(div0));
     			append_dev(div1, t3);
     			mount_component(contacttext, div1, null);
+    			insert_dev(target, t4, anchor);
+    			mount_component(navbar, target, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
@@ -10460,6 +10473,11 @@ var app = (function () {
     			if (!current || dirty & /*titleHeight*/ 1) {
     				set_style(div1, "top", /*titleHeight*/ ctx[0] + "px");
     			}
+
+    			const navbar_changes = {};
+    			if (dirty & /*titleHeight*/ 1) navbar_changes.titleHeight = /*titleHeight*/ ctx[0];
+    			if (dirty & /*boolMobileView*/ 512) navbar_changes.boolMobileView = /*boolMobileView*/ ctx[9];
+    			navbar.$set(navbar_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -10468,6 +10486,7 @@ var app = (function () {
     			transition_in(saoswrapper1.$$.fragment, local);
     			transition_in(saoswrapper2.$$.fragment, local);
     			transition_in(contacttext.$$.fragment, local);
+    			transition_in(navbar.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -10476,6 +10495,7 @@ var app = (function () {
     			transition_out(saoswrapper1.$$.fragment, local);
     			transition_out(saoswrapper2.$$.fragment, local);
     			transition_out(contacttext.$$.fragment, local);
+    			transition_out(navbar.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -10486,6 +10506,8 @@ var app = (function () {
     			destroy_component(saoswrapper2);
     			div0_resize_listener();
     			destroy_component(contacttext);
+    			if (detaching) detach_dev(t4);
+    			destroy_component(navbar, detaching);
     		}
     	};
 
