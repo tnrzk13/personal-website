@@ -1,5 +1,4 @@
 <script>
-  import ContactDesktop from "./ContactDesktop.svelte";
   import ContactMobile from "./ContactMobile.svelte";
 
   export let contactHeight, containerHeight, contactInfo, boolMobileView;
@@ -12,30 +11,12 @@
 <svelte:window bind:scrollY={y} />
 
 {#if y > Math.max(0, pageHalfDown)}
-  {#if boolMobileView}
-    <div id="contact-wrapper">
-      <ContactMobile {contactInfo} />
-    </div>
-  {:else}
-    <div class="background-extension" style="bottom: {contactHeight}px;" />
-    <div
-      id="contact-wrapper"
-      style="transform: translateY({contactYOffset}px);"
-    >
-      <ContactDesktop {containerHeight} {contactYOffset} />
-    </div>
-  {/if}
+  <div id="contact-wrapper">
+    <ContactMobile {contactInfo} />
+  </div>
 {/if}
 
 <style lang="scss">
-  .background-extension {
-    position: fixed;
-    width: 100%;
-    height: 15vh;
-    z-index: 0;
-    background-color: #94b5f7;
-  }
-
   #contact-wrapper {
     position: fixed;
     bottom: 0;
