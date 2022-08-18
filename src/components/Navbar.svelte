@@ -10,6 +10,14 @@
     if (y > titleHeight - 1) showNavBar = true;
     else showNavBar = false;
   }
+
+  let lastScrollTop;
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) showNavBar = false;
+    else showNavBar = true;
+    lastScrollTop = scrollTop;
+  });
 </script>
 
 <svelte:window bind:scrollY={y} />
