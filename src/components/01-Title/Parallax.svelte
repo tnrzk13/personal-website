@@ -1,0 +1,210 @@
+<script context="module">
+  let parallaxHeight = 0;
+  export function getParallaxHeight() {
+    return parallaxHeight;
+  }
+</script>
+
+<script>
+  import { onMount } from "svelte";
+  import TextType from "../TextType/TextType.svelte";
+
+  export let containerHeight, titleInfo;
+  export let boolAnimateText = true;
+  export let pageHalfDown = 1000;
+  export let contactTop, contactYOffset;
+
+  const numLayers = 15;
+  const layers = [...Array(numLayers).keys()];
+  const textLayer = 4;
+  const numImgLayers = numLayers - 2;
+  let y, imgHeight, offsetRatio, yScroll;
+  let boolShowContact = false;
+
+  const update = () => {
+    imgHeight = containerHeight - contactYOffset;
+    offsetRatio = contactYOffset / containerHeight;
+    yScroll = Math.max(0, y - contactTop);
+  };
+  onMount(() => {
+    update();
+  });
+  window.onresize = update();
+
+  // calculates img shift when scrolling on the contact section
+  const getContactParallax = (layer) => {
+    const layerize = (x) => {
+      return (x * layer) / numImgLayers;
+    };
+    return Math.max(
+      0,
+      layerize(imgHeight) -
+        layerize(yScroll * (1 + offsetRatio)) +
+        contactYOffset -
+        // titlebar in web browser if not in fullscreen mode
+        (screen.height - window.innerHeight)
+    );
+  };
+
+  $: {
+    boolShowContact = y > pageHalfDown;
+    update();
+
+    // let x = {
+    //   contactYOffset: contactYOffset,
+    //   imgHeight: imgHeight,
+    //   yScroll: yScroll,
+    //   calc: imgHeight - yScroll * (1 + offsetRatio),
+    // };
+    // console.log(x);
+  }
+</script>
+
+<svelte:window bind:scrollY={y} />
+
+<div
+  id="title"
+  class="parallax-container"
+  style="height: {containerHeight - y}px;"
+  bind:clientHeight={parallaxHeight}
+>
+  {#each layers as layer}
+    {#if layer === 0}
+      <img
+        style="transform: translateY({boolShowContact
+          ? 'calc(' + getContactParallax(layer) + 'px - 3em)'
+          : (-y * layer) / (layers.length - 1) + 'px'})"
+        src="images/intro/00{layer}.avif"
+        alt="parallax layer {layer}"
+        height={containerHeight}
+      />
+    {:else if layer < textLayer}
+      <img
+        style="transform: translateY({boolShowContact
+          ? getContactParallax(layer)
+          : (-y * layer) / (layers.length - 1)}px)"
+        src="images/intro/00{layer}.avif"
+        alt="parallax layer {layer}"
+        height={containerHeight}
+      />
+    {:else if layer === textLayer && y <= Math.max(0, pageHalfDown)}
+      {#if y < containerHeight}
+        <div class="textLayer">
+          <div class="textLayer-preamble">{titleInfo.preamble}</div>
+          <div class="textLayer-title">{titleInfo.title}</div>
+          <div class="textLayer-subtitle">
+            {titleInfo.subtitle}{#if boolAnimateText}
+              <TextType
+                texts={titleInfo.texts}
+                delay={100}
+                num_loops={2}
+                repeat_n_words={1}
+                blinker_iter_count={14}
+              />
+            {:else}
+              {titleInfo.texts[0]}
+            {/if}
+          </div>
+          <div class="textLayer-description">
+            {titleInfo.description}
+          </div>
+          <div class="scrolldown"><i class="fa-solid fa-angles-down" /></div>
+        </div>
+      {/if}
+    {:else if layer > textLayer && layer < 11}
+      <img
+        style="transform: translateY({boolShowContact
+          ? getContactParallax(layer)
+          : (-y * (layer - 1)) / (layers.length - 1)}px)"
+        src="images/intro/00{layer - 1}.avif"
+        alt="parallax layer {layer - 1}"
+        height={containerHeight}
+      />
+    {:else if layer >= 11}
+      <img
+        style="transform: translateY({boolShowContact
+          ? getContactParallax(layer)
+          : (-y * (layer - 1)) / (layers.length - 1)}px)"
+        src="images/intro/0{layer - 1}.avif"
+        alt="parallax layer {layer - 1}"
+        height={containerHeight}
+      />
+    {:else if layer === 14}
+      <img
+        style="transform: translateY({boolShowContact
+          ? getContactParallax(layer)
+          : -y + 10}px)"
+        src="images/intro/0{layer - 1}.avif"
+        alt="parallax layer {layer - 1}"
+        height={containerHeight}
+      />
+    {/if}
+  {/each}
+</div>
+
+<style lang="scss">
+  .parallax-container {
+    position: fixed;
+    width: 100%;
+
+    img {
+      position: absolute;
+      width: 100%;
+      will-change: transform;
+      left: 0;
+    }
+
+    .textLayer {
+      position: absolute;
+      text-align: left;
+      font-size: 5vw;
+      font-family: "Montserrat", sans-serif;
+      color: black;
+      left: 1.5em;
+      right: 54%;
+      top: 10%;
+      line-height: normal;
+      padding-top: 0;
+      margin-top: 0;
+
+      .textLayer-preamble {
+        font-size: 1.3vw;
+      }
+
+      .textLayer-subtitle {
+        font-size: 5vw;
+      }
+
+      .textLayer-description {
+        font-size: 1.3vw;
+        right: 80%;
+      }
+
+      .scrolldown {
+        font-size: 3vw;
+        padding-top: 0.5em;
+        text-align: center;
+        background-image: linear-gradient(
+          180deg,
+          white,
+          #c531ad,
+          white,
+          #c531ad
+        );
+        -webkit-background-clip: text;
+        color: transparent;
+        background-size: 100% 300%;
+        animation: animateBg 2s infinite linear;
+      }
+
+      @keyframes animateBg {
+        0% {
+          background-position: bottom;
+        }
+        100% {
+          background-position: top;
+        }
+      }
+    }
+  }
+</style>

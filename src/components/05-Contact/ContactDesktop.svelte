@@ -1,6 +1,5 @@
 <script>
   import { onMount } from "svelte";
-  import TextType from "../TextType/TextType.svelte";
 
   export let containerHeight, contactYOffset;
 
@@ -9,11 +8,9 @@
 
   let contactDiv = document.getElementById("contact");
   let contactTop, y, yScroll, imgHeight, offsetRatio;
-  let contactHeight;
 
   const update = () => {
     contactTop = contactDiv.offsetTop;
-    contactHeight = contactDiv.offsetHeight;
     imgHeight = containerHeight - contactYOffset;
     offsetRatio = contactYOffset / containerHeight;
     yScroll = Math.max(0, y - contactTop);
@@ -26,8 +23,6 @@
 
   $: {
     yScroll = Math.max(0, y - contactTop);
-
-    // console.log(contactTop, contactTop + contactHeight, y);
   }
 </script>
 

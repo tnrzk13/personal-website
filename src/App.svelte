@@ -1,5 +1,7 @@
 <script>
-  import TitleDesktop from "./components/01-Title/TitleParallax.svelte";
+  import Parallax, {
+    getParallaxHeight,
+  } from "./components/01-Title/Parallax.svelte";
   import TitleMobile from "./components/01-Title/TitleMobile.svelte";
   import AboutMe from "./components/02-AboutMe.svelte";
   import Career from "./components/03-Career.svelte";
@@ -12,60 +14,52 @@
   import SaosWrapper from "./components/SaosWrapper.svelte";
   import { beforeUpdate, tick } from "svelte";
 
-  let y,
-    boolMobileView,
-    medScreenSize,
-    titleHeight,
-    contactHeight,
-    pageHalfDown,
-    contactYOffset,
-    body,
-    contentContainer,
-    contentContainerHeight,
-    content,
-    contentHeight;
-  contentContainerHeight = 0;
-  boolMobileView = true;
-  medScreenSize = 768;
+  // dev mode
+  let boolFadeAnimation, boolShowLoadingScreen, boolAnimateText;
+  // Heights
+  let titleHeight, contactHeight, contentHeight, parallaxHeight;
+  // scroll
+  let y;
+  // top of contact component
+  let contactTop = 999;
+  // calculated variables
+  let contactYOffset, body;
+  let pageHalfDown = 999;
+  // variables with initial values
+  let boolMobileView = true;
+  let medScreenSize = 768;
 
-  // wait for document.body to load first
-  beforeUpdate(async () => {
-    await tick();
-    body = document.body;
-    contentContainer = document.getElementById("content-container");
-    content = document.getElementById("content");
-    contentContainerHeight = contentContainer.offsetHeight;
-    contentHeight = content.offsetHeight;
-    pageHalfDown = contentContainerHeight / 2;
-  });
-
+  let contact, contactTrueTop;
   let manageHeights = () => {
-    boolMobileView = window.innerWidth < medScreenSize;
     body = document.body;
+    // get Heights
     titleHeight = body.offsetWidth * 0.5625;
-    contactYOffset = titleHeight / 3;
-    contactHeight = titleHeight - contactYOffset;
+    parallaxHeight = getParallaxHeight();
   };
-  window.onload = manageHeights();
+  window.onload = () => {
+    manageHeights();
+  };
   window.onresize = () => {
-    boolMobileView = window.innerWidth < medScreenSize;
-    titleHeight = body.offsetWidth * 0.5625;
-    contactYOffset = titleHeight / 3;
-    contactHeight = titleHeight - contactYOffset;
-    contentContainerHeight = contentContainer.clientHeight;
-    pageHalfDown = contentContainerHeight / 2;
+    manageHeights();
   };
 
   $: {
+    // calculations
     boolMobileView = window.innerWidth < medScreenSize;
+    contactYOffset = titleHeight / 3;
+    contactHeight = titleHeight - contactYOffset;
+    pageHalfDown = (titleHeight + contentHeight) / 2;
+    // contactTop
+    contactTop = getParallaxHeight() + contentHeight;
 
-    // let clObject = {
-    //   boolMobileView: boolMobileView,
+    // let x = {
+    //   contactTop: contactTop,
+    //   titleHeight: titleHeight,
+    //   contentHeight: contentHeight,
     // };
-    // console.log(clObject);
+    // console.log(x);
   }
 
-  let boolFadeAnimation, boolShowLoadingScreen, boolAnimateText;
   const triggerDevMode = (isOn) => {
     boolFadeAnimation = boolShowLoadingScreen = boolAnimateText = false;
     if (!isOn) {
@@ -121,30 +115,24 @@
   <Navbar titleHeight={0} {boolMobileView} />
 {:else}
   <div class="container-fluid">
-    <TitleDesktop
+    <Parallax
       containerHeight={titleHeight}
       {pageHalfDown}
       {boolAnimateText}
       {titleInfo}
+      {contactTop}
+      {contactYOffset}
     />
     <div id="content-container" style="top: {titleHeight}px;">
-      <div id="content">
+      <div id="content" bind:clientHeight={contentHeight}>
         <SaosWrapper {boolFadeAnimation}><AboutMe /></SaosWrapper>
         <SaosWrapper {boolFadeAnimation}><Career /></SaosWrapper>
         <SaosWrapper {boolFadeAnimation}><Projects /></SaosWrapper>
       </div>
       <ContactText {contactInfo} {titleHeight} {contactYOffset} />
-      <ContactWrapper
-        {contactHeight}
-        containerHeight={titleHeight}
-        {contactYOffset}
-        {pageHalfDown}
-        {contactInfo}
-        {boolMobileView}
-      />
     </div>
   </div>
-  <Navbar {titleHeight} {boolMobileView} />
+  <!-- <Navbar {titleHeight} {boolMobileView} /> -->
 {/if}
 
 <style lang="scss">
