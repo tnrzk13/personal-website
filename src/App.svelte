@@ -12,7 +12,6 @@
   import Loader from "./components/Loader.svelte";
 
   import SaosWrapper from "./components/SaosWrapper.svelte";
-  import { beforeUpdate, tick } from "svelte";
 
   // dev mode
   let boolFadeAnimation, boolShowLoadingScreen, boolAnimateText;
@@ -29,7 +28,6 @@
   let boolMobileView = true;
   let medScreenSize = 768;
 
-  let contact, contactTrueTop;
   let manageHeights = () => {
     body = document.body;
     // get Heights
@@ -52,12 +50,7 @@
     // contactTop
     contactTop = getParallaxHeight() + contentHeight;
 
-    // let x = {
-    //   contactTop: contactTop,
-    //   titleHeight: titleHeight,
-    //   contentHeight: contentHeight,
-    // };
-    // console.log(x);
+    console.log(titleHeight, contentHeight);
   }
 
   const triggerDevMode = (isOn) => {
@@ -94,7 +87,7 @@
   <div class="container-fluid">
     <TitleMobile {boolAnimateText} {titleInfo} />
     <div id="content-container">
-      <div id="content">
+      <div id="content" bind:clientHeight={contentHeight}>
         <SaosWrapper {boolFadeAnimation}><AboutMe /></SaosWrapper>
         <SaosWrapper {boolFadeAnimation}><Career /></SaosWrapper>
         <SaosWrapper {boolFadeAnimation}
@@ -102,14 +95,7 @@
         >
       </div>
       <div id="contact" style="height: 75vh;" />
-      <ContactWrapper
-        {contactHeight}
-        containerHeight={titleHeight}
-        {contactYOffset}
-        {pageHalfDown}
-        {contactInfo}
-        {boolMobileView}
-      />
+      <ContactWrapper {contactInfo} />
     </div>
   </div>
   <Navbar titleHeight={0} {boolMobileView} />

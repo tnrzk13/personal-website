@@ -1,26 +1,22 @@
 <script>
   import ContactMobile from "./ContactMobile.svelte";
 
-  export let contactHeight, containerHeight, contactInfo, boolMobileView;
-  export let contactYOffset = 100;
-  export let pageHalfDown = 1000;
+  export let contactInfo;
 
   let y;
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-{#if y > Math.max(0, pageHalfDown)}
-  <div id="contact-wrapper">
-    <ContactMobile {contactInfo} />
-  </div>
-{/if}
+<div id="contact-wrapper">
+  <ContactMobile {contactInfo} />
+</div>
 
 <style lang="scss">
   #contact-wrapper {
     position: fixed;
     bottom: 0;
-    z-index: 0;
+    z-index: -1;
     width: 100%;
   }
 </style>
