@@ -49,14 +49,6 @@
   $: {
     boolShowContact = y > pageHalfDown;
     update();
-
-    // let x = {
-    //   contactYOffset: contactYOffset,
-    //   imgHeight: imgHeight,
-    //   yScroll: yScroll,
-    //   calc: imgHeight - yScroll * (1 + offsetRatio),
-    // };
-    // console.log(x);
   }
 </script>
 

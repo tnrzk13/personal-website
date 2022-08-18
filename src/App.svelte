@@ -132,7 +132,7 @@
       <ContactText {contactInfo} {titleHeight} {contactYOffset} />
     </div>
   </div>
-  <!-- <Navbar {titleHeight} {boolMobileView} /> -->
+  <Navbar {titleHeight} {boolMobileView} />
 {/if}
 
 <style lang="scss">
