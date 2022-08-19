@@ -7676,34 +7676,34 @@ var app = (function () {
     			a1 = element("a");
     			button = element("button");
     			button.textContent = "Say Hello";
-    			attr_dev(div0, "class", "textLayer-preamble svelte-1238yt8");
+    			attr_dev(div0, "class", "textLayer-preamble svelte-b127i6");
     			add_location(div0, file$6, 7, 4, 243);
-    			attr_dev(div1, "class", "textLayer-title svelte-1238yt8");
+    			attr_dev(div1, "class", "textLayer-title svelte-b127i6");
     			add_location(div1, file$6, 8, 4, 309);
-    			attr_dev(div2, "class", "textLayer-description svelte-1238yt8");
+    			attr_dev(div2, "class", "textLayer-description svelte-b127i6");
     			add_location(div2, file$6, 17, 4, 533);
     			attr_dev(i, "class", "fa-brands fa-linkedin fa-md");
     			add_location(i, file$6, 23, 10, 775);
     			attr_dev(a0, "href", "https://www.linkedin.com/in/tony-k-kwok/");
-    			attr_dev(a0, "class", "svelte-1238yt8");
+    			attr_dev(a0, "class", "svelte-b127i6");
     			add_location(a0, file$6, 22, 8, 712);
-    			attr_dev(div3, "class", "linkedin-container col-md-3 svelte-1238yt8");
+    			attr_dev(div3, "class", "linkedin-container col-md-3 svelte-b127i6");
     			add_location(div3, file$6, 21, 6, 661);
-    			attr_dev(button, "class", "btn btn-grad btn-lg svelte-1238yt8");
+    			attr_dev(button, "class", "btn btn-grad btn-lg svelte-b127i6");
     			add_location(button, file$6, 31, 10, 1032);
     			attr_dev(a1, "href", a1_href_value = "mailto:tnrzk13@gmail.com?subject=" + /*contactInfo*/ ctx[0].subject);
     			attr_dev(a1, "id", "emailLink");
-    			attr_dev(a1, "class", "svelte-1238yt8");
+    			attr_dev(a1, "class", "svelte-b127i6");
     			add_location(a1, file$6, 27, 8, 908);
     			attr_dev(div4, "class", "button-container-column col-md-9");
     			add_location(div4, file$6, 26, 6, 852);
     			attr_dev(div5, "class", "button-container row");
     			add_location(div5, file$6, 20, 4, 619);
-    			attr_dev(div6, "class", "textLayer svelte-1238yt8");
+    			attr_dev(div6, "class", "textLayer svelte-b127i6");
     			add_location(div6, file$6, 6, 2, 214);
     			attr_dev(div7, "id", "contact");
     			attr_dev(div7, "style", div7_style_value = "height: calc(" + (/*titleHeight*/ ctx[1] - /*contactYOffset*/ ctx[2]) + "px); )");
-    			attr_dev(div7, "class", "svelte-1238yt8");
+    			attr_dev(div7, "class", "svelte-b127i6");
     			add_location(div7, file$6, 5, 0, 134);
     		},
     		l: function claim(nodes) {
@@ -8298,7 +8298,7 @@ var app = (function () {
     			t10 = text("Resume");
     			if (!src_url_equal(img.src, img_src_value = "images/navbar/gorilla.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo gorilla");
-    			attr_dev(img, "class", "svelte-1w6e7md");
+    			attr_dev(img, "class", "svelte-s5ui8v");
     			add_location(img, file$3, 26, 7, 628);
     			attr_dev(a0, "class", "navbar-brand");
     			attr_dev(a0, "href", ".");
@@ -8313,28 +8313,28 @@ var app = (function () {
     			attr_dev(button0, "aria-expanded", "false");
     			attr_dev(button0, "aria-label", "Toggle navigation");
     			add_location(button0, file$3, 28, 4, 702);
-    			attr_dev(a1, "class", "nav-item nav-link svelte-1w6e7md");
+    			attr_dev(a1, "class", "nav-item nav-link svelte-s5ui8v");
     			attr_dev(a1, "href", "#aboutme");
     			add_location(a1, file$3, 41, 8, 1102);
-    			attr_dev(a2, "class", "nav-item nav-link svelte-1w6e7md");
+    			attr_dev(a2, "class", "nav-item nav-link svelte-s5ui8v");
     			attr_dev(a2, "href", "#career");
     			add_location(a2, file$3, 42, 8, 1166);
-    			attr_dev(a3, "class", "nav-item nav-link svelte-1w6e7md");
+    			attr_dev(a3, "class", "nav-item nav-link svelte-s5ui8v");
     			attr_dev(a3, "href", "#projects");
     			add_location(a3, file$3, 43, 8, 1230);
-    			attr_dev(a4, "class", "nav-item nav-link svelte-1w6e7md");
+    			attr_dev(a4, "class", "nav-item nav-link svelte-s5ui8v");
     			attr_dev(a4, "href", "#contact");
     			add_location(a4, file$3, 44, 8, 1298);
 
     			attr_dev(button1, "class", button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
     			? 'btn-grad-mobile'
-    			: 'btn-grad') + " svelte-1w6e7md");
+    			: 'btn-grad') + " svelte-s5ui8v");
 
     			add_location(button1, file$3, 52, 10, 1589);
 
     			attr_dev(a5, "class", a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
     			? "download-container-mobile"
-    			: "download-container") + " svelte-1w6e7md"));
+    			: "download-container") + " svelte-s5ui8v"));
 
     			attr_dev(a5, "href", "download/Resume 2022 - Blue.pdf");
     			attr_dev(a5, "download", "TonyKwokResume");
@@ -8345,7 +8345,7 @@ var app = (function () {
     			attr_dev(div, "id", "navbarNav");
     			add_location(div, file$3, 39, 4, 1000);
     			attr_dev(nav, "id", "navbar");
-    			attr_dev(nav, "class", "navbar navbar-expand-lg navbar-dark fixed-top svelte-1w6e7md");
+    			attr_dev(nav, "class", "navbar navbar-expand-lg navbar-dark fixed-top svelte-s5ui8v");
     			add_location(nav, file$3, 20, 2, 475);
     		},
     		m: function mount(target, anchor) {
@@ -8374,13 +8374,13 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*boolMobileView*/ 1 && button1_class_value !== (button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
     			? 'btn-grad-mobile'
-    			: 'btn-grad') + " svelte-1w6e7md")) {
+    			: 'btn-grad') + " svelte-s5ui8v")) {
     				attr_dev(button1, "class", button1_class_value);
     			}
 
     			if (!current || dirty & /*boolMobileView*/ 1 && a5_class_value !== (a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
     			? "download-container-mobile"
-    			: "download-container") + " svelte-1w6e7md"))) {
+    			: "download-container") + " svelte-s5ui8v"))) {
     				attr_dev(a5, "class", a5_class_value);
     			}
     		},
