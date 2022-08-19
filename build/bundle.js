@@ -8187,7 +8187,7 @@ var app = (function () {
     const { window: window_1$1 } = globals;
     const file$3 = "src\\components\\Navbar.svelte";
 
-    // (25:0) {#if showNavBar}
+    // (20:0) {#if showNavBar}
     function create_if_block$4(ctx) {
     	let nav;
     	let a0;
@@ -8243,13 +8243,13 @@ var app = (function () {
     			t10 = text("Resume");
     			if (!src_url_equal(img.src, img_src_value = "images/navbar/gorilla.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo gorilla");
-    			attr_dev(img, "class", "svelte-1nr1f0a");
-    			add_location(img, file$3, 31, 7, 735);
+    			attr_dev(img, "class", "svelte-1w6e7md");
+    			add_location(img, file$3, 26, 7, 628);
     			attr_dev(a0, "class", "navbar-brand");
     			attr_dev(a0, "href", ".");
-    			add_location(a0, file$3, 30, 4, 694);
+    			add_location(a0, file$3, 25, 4, 587);
     			attr_dev(span, "class", "navbar-toggler-icon");
-    			add_location(span, file$3, 42, 6, 1050);
+    			add_location(span, file$3, 37, 6, 943);
     			attr_dev(button0, "class", "navbar-toggler");
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "data-bs-toggle", "collapse");
@@ -8257,41 +8257,41 @@ var app = (function () {
     			attr_dev(button0, "aria-controls", "navbarNav");
     			attr_dev(button0, "aria-expanded", "false");
     			attr_dev(button0, "aria-label", "Toggle navigation");
-    			add_location(button0, file$3, 33, 4, 809);
-    			attr_dev(a1, "class", "nav-item nav-link");
+    			add_location(button0, file$3, 28, 4, 702);
+    			attr_dev(a1, "class", "nav-item nav-link svelte-1w6e7md");
     			attr_dev(a1, "href", "#aboutme");
-    			add_location(a1, file$3, 46, 8, 1209);
-    			attr_dev(a2, "class", "nav-item nav-link");
+    			add_location(a1, file$3, 41, 8, 1102);
+    			attr_dev(a2, "class", "nav-item nav-link svelte-1w6e7md");
     			attr_dev(a2, "href", "#career");
-    			add_location(a2, file$3, 47, 8, 1273);
-    			attr_dev(a3, "class", "nav-item nav-link");
+    			add_location(a2, file$3, 42, 8, 1166);
+    			attr_dev(a3, "class", "nav-item nav-link svelte-1w6e7md");
     			attr_dev(a3, "href", "#projects");
-    			add_location(a3, file$3, 48, 8, 1337);
-    			attr_dev(a4, "class", "nav-item nav-link");
+    			add_location(a3, file$3, 43, 8, 1230);
+    			attr_dev(a4, "class", "nav-item nav-link svelte-1w6e7md");
     			attr_dev(a4, "href", "#contact");
-    			add_location(a4, file$3, 49, 8, 1405);
+    			add_location(a4, file$3, 44, 8, 1298);
 
     			attr_dev(button1, "class", button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
     			? 'btn-grad-mobile'
-    			: 'btn-grad') + " svelte-1nr1f0a");
+    			: 'btn-grad') + " svelte-1w6e7md");
 
-    			add_location(button1, file$3, 57, 10, 1696);
+    			add_location(button1, file$3, 52, 10, 1589);
 
     			attr_dev(a5, "class", a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
     			? "download-container-mobile"
-    			: "download-container") + " svelte-1nr1f0a"));
+    			: "download-container") + " svelte-1w6e7md"));
 
     			attr_dev(a5, "href", "download/Resume 2022 - Blue.pdf");
     			attr_dev(a5, "download", "TonyKwokResume");
-    			add_location(a5, file$3, 50, 8, 1471);
+    			add_location(a5, file$3, 45, 8, 1364);
     			attr_dev(ul, "class", "navbar-nav ms-auto");
-    			add_location(ul, file$3, 45, 6, 1168);
+    			add_location(ul, file$3, 40, 6, 1061);
     			attr_dev(div, "class", "collapse navbar-collapse");
     			attr_dev(div, "id", "navbarNav");
-    			add_location(div, file$3, 44, 4, 1107);
+    			add_location(div, file$3, 39, 4, 1000);
     			attr_dev(nav, "id", "navbar");
-    			attr_dev(nav, "class", "navbar navbar-expand-lg navbar-dark fixed-top svelte-1nr1f0a");
-    			add_location(nav, file$3, 25, 2, 582);
+    			attr_dev(nav, "class", "navbar navbar-expand-lg navbar-dark fixed-top svelte-1w6e7md");
+    			add_location(nav, file$3, 20, 2, 475);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, nav, anchor);
@@ -8319,13 +8319,13 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*boolMobileView*/ 1 && button1_class_value !== (button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
     			? 'btn-grad-mobile'
-    			: 'btn-grad') + " svelte-1nr1f0a")) {
+    			: 'btn-grad') + " svelte-1w6e7md")) {
     				attr_dev(button1, "class", button1_class_value);
     			}
 
     			if (!current || dirty & /*boolMobileView*/ 1 && a5_class_value !== (a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
     			? "download-container-mobile"
-    			: "download-container") + " svelte-1nr1f0a"))) {
+    			: "download-container") + " svelte-1w6e7md"))) {
     				attr_dev(a5, "class", a5_class_value);
     			}
     		},
@@ -8354,7 +8354,7 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(25:0) {#if showNavBar}",
+    		source: "(20:0) {#if showNavBar}",
     		ctx
     	});
 
@@ -8373,7 +8373,7 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	add_render_callback(/*onwindowscroll*/ ctx[4]);
+    	add_render_callback(/*onwindowscroll*/ ctx[3]);
     	let if_block = /*showNavBar*/ ctx[2] && create_if_block$4(ctx);
 
     	const block = {
@@ -8394,7 +8394,7 @@ var app = (function () {
     					scrolling = true;
     					clearTimeout(scrolling_timeout);
     					scrolling_timeout = setTimeout(clear_scrolling, 100);
-    					/*onwindowscroll*/ ctx[4]();
+    					/*onwindowscroll*/ ctx[3]();
     				});
 
     				mounted = true;
@@ -8462,7 +8462,7 @@ var app = (function () {
     function instance$4($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Navbar', slots, []);
-    	let { titleHeight, boolMobileView } = $$props;
+    	let { boolMobileView } = $$props;
     	let y;
     	let showNavBar = false;
     	let lastScrollTop;
@@ -8473,7 +8473,7 @@ var app = (function () {
     		lastScrollTop = scrollTop;
     	});
 
-    	const writable_props = ['titleHeight', 'boolMobileView'];
+    	const writable_props = ['boolMobileView'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Navbar> was created with unknown prop '${key}'`);
@@ -8484,13 +8484,11 @@ var app = (function () {
     	}
 
     	$$self.$$set = $$props => {
-    		if ('titleHeight' in $$props) $$invalidate(3, titleHeight = $$props.titleHeight);
     		if ('boolMobileView' in $$props) $$invalidate(0, boolMobileView = $$props.boolMobileView);
     	};
 
     	$$self.$capture_state = () => ({
     		fade,
-    		titleHeight,
     		boolMobileView,
     		y,
     		showNavBar,
@@ -8498,7 +8496,6 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('titleHeight' in $$props) $$invalidate(3, titleHeight = $$props.titleHeight);
     		if ('boolMobileView' in $$props) $$invalidate(0, boolMobileView = $$props.boolMobileView);
     		if ('y' in $$props) $$invalidate(1, y = $$props.y);
     		if ('showNavBar' in $$props) $$invalidate(2, showNavBar = $$props.showNavBar);
@@ -8509,21 +8506,13 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*y, titleHeight*/ 10) {
-    			{
-    				if (y > titleHeight - 1) $$invalidate(2, showNavBar = true); else $$invalidate(2, showNavBar = false);
-    			}
-    		}
-    	};
-
-    	return [boolMobileView, y, showNavBar, titleHeight, onwindowscroll];
+    	return [boolMobileView, y, showNavBar, onwindowscroll];
     }
 
     class Navbar extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { titleHeight: 3, boolMobileView: 0 });
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { boolMobileView: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -8535,21 +8524,9 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*titleHeight*/ ctx[3] === undefined && !('titleHeight' in props)) {
-    			console.warn("<Navbar> was created without expected prop 'titleHeight'");
-    		}
-
     		if (/*boolMobileView*/ ctx[0] === undefined && !('boolMobileView' in props)) {
     			console.warn("<Navbar> was created without expected prop 'boolMobileView'");
     		}
-    	}
-
-    	get titleHeight() {
-    		throw new Error("<Navbar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set titleHeight(value) {
-    		throw new Error("<Navbar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	get boolMobileView() {
@@ -9614,10 +9591,10 @@ var app = (function () {
 
     /* src\App.svelte generated by Svelte v3.49.0 */
 
-    const { console: console_1, window: window_1 } = globals;
+    const { window: window_1 } = globals;
     const file = "src\\App.svelte";
 
-    // (102:0) {:else}
+    // (99:0) {:else}
     function create_else_block(ctx) {
     	let div2;
     	let parallax;
@@ -9686,7 +9663,6 @@ var app = (function () {
 
     	navbar = new Navbar({
     			props: {
-    				titleHeight: /*titleHeight*/ ctx[0],
     				boolMobileView: /*boolMobileView*/ ctx[8]
     			},
     			$$inline: true
@@ -9711,13 +9687,13 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "svelte-1uyt7tx");
     			add_render_callback(() => /*div0_elementresize_handler_1*/ ctx[13].call(div0));
-    			add_location(div0, file, 112, 6, 3660);
+    			add_location(div0, file, 109, 6, 3594);
     			attr_dev(div1, "id", "content-container");
     			set_style(div1, "top", /*titleHeight*/ ctx[0] + "px");
     			attr_dev(div1, "class", "svelte-1uyt7tx");
-    			add_location(div1, file, 111, 4, 3594);
+    			add_location(div1, file, 108, 4, 3528);
     			attr_dev(div2, "class", "container-fluid svelte-1uyt7tx");
-    			add_location(div2, file, 102, 2, 3389);
+    			add_location(div2, file, 99, 2, 3323);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -9779,7 +9755,6 @@ var app = (function () {
     			}
 
     			const navbar_changes = {};
-    			if (dirty & /*titleHeight*/ 1) navbar_changes.titleHeight = /*titleHeight*/ ctx[0];
     			if (dirty & /*boolMobileView*/ 256) navbar_changes.boolMobileView = /*boolMobileView*/ ctx[8];
     			navbar.$set(navbar_changes);
     		},
@@ -9819,14 +9794,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(102:0) {:else}",
+    		source: "(99:0) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (86:0) {#if boolMobileView}
+    // (83:0) {#if boolMobileView}
     function create_if_block(ctx) {
     	let div3;
     	let titlemobile;
@@ -9889,7 +9864,6 @@ var app = (function () {
 
     	navbar = new Navbar({
     			props: {
-    				titleHeight: 0,
     				boolMobileView: /*boolMobileView*/ ctx[8]
     			},
     			$$inline: true
@@ -9916,15 +9890,15 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "svelte-1uyt7tx");
     			add_render_callback(() => /*div0_elementresize_handler*/ ctx[12].call(div0));
-    			add_location(div0, file, 89, 6, 2908);
+    			add_location(div0, file, 86, 6, 2858);
     			attr_dev(div1, "id", "contact");
     			set_style(div1, "height", "75vh");
-    			add_location(div1, file, 96, 6, 3225);
+    			add_location(div1, file, 93, 6, 3175);
     			attr_dev(div2, "id", "content-container");
     			attr_dev(div2, "class", "svelte-1uyt7tx");
-    			add_location(div2, file, 88, 4, 2872);
+    			add_location(div2, file, 85, 4, 2822);
     			attr_dev(div3, "class", "container-fluid svelte-1uyt7tx");
-    			add_location(div3, file, 86, 2, 2786);
+    			add_location(div3, file, 83, 2, 2736);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -10014,14 +9988,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(86:0) {#if boolMobileView}",
+    		source: "(83:0) {#if boolMobileView}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (114:8) <SaosWrapper {boolFadeAnimation}>
+    // (111:8) <SaosWrapper {boolFadeAnimation}>
     function create_default_slot_5(ctx) {
     	let aboutme;
     	let current;
@@ -10053,14 +10027,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(114:8) <SaosWrapper {boolFadeAnimation}>",
+    		source: "(111:8) <SaosWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (115:8) <SaosWrapper {boolFadeAnimation}>
+    // (112:8) <SaosWrapper {boolFadeAnimation}>
     function create_default_slot_4(ctx) {
     	let career;
     	let current;
@@ -10092,14 +10066,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(115:8) <SaosWrapper {boolFadeAnimation}>",
+    		source: "(112:8) <SaosWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (116:8) <SaosWrapper {boolFadeAnimation}>
+    // (113:8) <SaosWrapper {boolFadeAnimation}>
     function create_default_slot_3(ctx) {
     	let projects;
     	let current;
@@ -10131,14 +10105,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(116:8) <SaosWrapper {boolFadeAnimation}>",
+    		source: "(113:8) <SaosWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (91:8) <SaosWrapper {boolFadeAnimation}>
+    // (88:8) <SaosWrapper {boolFadeAnimation}>
     function create_default_slot_2(ctx) {
     	let aboutme;
     	let current;
@@ -10170,14 +10144,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(91:8) <SaosWrapper {boolFadeAnimation}>",
+    		source: "(88:8) <SaosWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (92:8) <SaosWrapper {boolFadeAnimation}>
+    // (89:8) <SaosWrapper {boolFadeAnimation}>
     function create_default_slot_1(ctx) {
     	let career;
     	let current;
@@ -10209,14 +10183,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(92:8) <SaosWrapper {boolFadeAnimation}>",
+    		source: "(89:8) <SaosWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (93:8) <SaosWrapper {boolFadeAnimation}            >
+    // (90:8) <SaosWrapper {boolFadeAnimation}            >
     function create_default_slot(ctx) {
     	let projects;
     	let current;
@@ -10259,7 +10233,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(93:8) <SaosWrapper {boolFadeAnimation}            >",
+    		source: "(90:8) <SaosWrapper {boolFadeAnimation}            >",
     		ctx
     	});
 
@@ -10451,7 +10425,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<App> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
     	function onwindowscroll() {
@@ -10536,8 +10510,6 @@ var app = (function () {
 
     				// contactTop
     				$$invalidate(6, contactTop = getParallaxHeight() + contentHeight);
-
-    				console.log(titleHeight, contentHeight);
     			}
     		}
     	};
