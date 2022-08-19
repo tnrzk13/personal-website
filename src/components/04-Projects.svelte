@@ -1,5 +1,5 @@
 <script>
-  import CardProject from "./Cards/CardProject.svelte";
+  import ProjectInstance from "./04-Projects/ProjectInstance.svelte";
   import { SimpleGrid } from "@svelteuidev/core";
   export let boolMobileView = false;
 
@@ -51,44 +51,8 @@
   <h1 class="title col-md-9">Leveling up with side projects</h1>
   <div class="projects container-fluid col-md-9">
     <SimpleGrid cols={1}>
-      {#each projList as { title, imgurl, urls, text, techstack }, index}
-        {#if index % 2 === 0 || boolMobileView}
-          <div class="row project-container">
-            <div class="img-container col-md-7">
-              <div class="main-img-container-even col-md-10 main-img-container">
-                {#if urls.boolUrlExists}
-                  <a href={urls.projectUrl}>
-                    <img class="main" src={imgurl} alt="project" />
-                  </a>
-                {:else}
-                  <img class="main" src={imgurl} alt="project" />
-                {/if}
-              </div>
-            </div>
-            <div class="proj-description col-md-5">
-              <CardProject {title} {urls} {text} {techstack} />
-            </div>
-          </div>
-        {:else}
-          <div class="row project-container">
-            <div class="proj-description col-md-5">
-              <CardProject {title} {urls} {text} {techstack} />
-            </div>
-            <div class="img-container col-md-7">
-              <div
-                class="main-img-container-odd col-md-10 offset-md-2 main-img-container"
-              >
-                {#if urls.boolUrlExists}
-                  <a href={urls.projectUrl}>
-                    <img class="main main-odd" src={imgurl} alt="project" />
-                  </a>
-                {:else}
-                  <img class="main main-odd" src={imgurl} alt="project" />
-                {/if}
-              </div>
-            </div>
-          </div>
-        {/if}
+      {#each projList as projectInfo, index}
+        <ProjectInstance projectIndex={index} {projectInfo} {boolMobileView} />
         <br /><br />
       {/each}
     </SimpleGrid>
@@ -96,15 +60,6 @@
 </div>
 
 <style lang="scss">
-  @media (max-width: 767px) {
-    .main-img-container {
-      padding: 0 1em;
-    }
-    .card {
-      margin: 0 1em;
-    }
-  }
-
   #projects {
     border: 1px solid transparent;
 
@@ -115,44 +70,5 @@
 
   .container-fluid {
     padding: 0;
-  }
-
-  .project-container {
-    .proj-description {
-      padding: 0;
-    }
-    .img-container {
-      align-self: center;
-      position: relative;
-
-      .main-img-container-odd {
-        right: 0;
-      }
-
-      img.main {
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        border-radius: 1rem;
-      }
-
-      img.card {
-        position: absolute;
-        width: 40%;
-        max-width: 15em;
-        top: 30%;
-        right: 0;
-        border-radius: 1em;
-      }
-
-      img.card-odd {
-        top: 30%;
-        left: 0;
-      }
-    }
-
-    .main-img-container:hover a {
-      filter: brightness(50%);
-    }
   }
 </style>

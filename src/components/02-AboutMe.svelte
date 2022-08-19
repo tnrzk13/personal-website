@@ -83,13 +83,6 @@
       box-sizing: border-box;
       font-family: "Open Sans", sans-serif;
       font-size: 1em;
-
-      .techstack {
-        width: auto;
-        background-color: #303443;
-        border-radius: 1rem;
-        margin: 0.25rem 0.5rem 0.25rem 0.5rem;
-      }
     }
     .description {
       box-sizing: border-box;
