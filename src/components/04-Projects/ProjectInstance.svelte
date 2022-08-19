@@ -10,8 +10,8 @@
   <div class="row project-container">
     <div class="img-container col-md-7">
       <div class="main-img-container-even col-md-10 main-img-container">
-        <FadeInWrapper {boolFadeAnimation}>
-          {#if projectInfo.urls.boolUrlExists}
+        {#if projectInfo.urls.boolUrlExists}
+          <FadeInWrapper {boolFadeAnimation}>
             <a href={projectInfo.urls.projectUrl}>
               <img
                 class="main glowing"
@@ -19,10 +19,10 @@
                 alt="project"
               />
             </a>
-          {:else}
-            <img class="main" src={projectInfo.imgurl} alt="project" />
-          {/if}
-        </FadeInWrapper>
+          </FadeInWrapper>
+        {:else}
+          <img class="main" src={projectInfo.imgurl} alt="project" />
+        {/if}
       </div>
     </div>
     <div class="proj-description col-md-5">
@@ -48,8 +48,8 @@
       <div
         class="main-img-container-odd col-md-10 offset-md-2 main-img-container"
       >
-        <FadeInWrapper {boolFadeAnimation}>
-          {#if projectInfo.urls.boolUrlExists}
+        {#if projectInfo.urls.boolUrlExists}
+          <FadeInWrapper {boolFadeAnimation}>
             <a href={projectInfo.urls.projectUrl}>
               <img
                 class="main main-odd glowing"
@@ -57,10 +57,10 @@
                 alt="project"
               />
             </a>
-          {:else}
-            <img class="main main-odd" src={projectInfo.imgurl} alt="project" />
-          {/if}
-        </FadeInWrapper>
+          </FadeInWrapper>
+        {:else}
+          <img class="main main-odd" src={projectInfo.imgurl} alt="project" />
+        {/if}
       </div>
     </div>
   </div>

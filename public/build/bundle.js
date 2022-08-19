@@ -7736,7 +7736,8 @@ var app = (function () {
     	let t;
     	let div2;
     	let div1;
-    	let fadeinwrapper;
+    	let current_block_type_index;
+    	let if_block;
     	let current;
 
     	cardproject = new CardProject({
@@ -7749,14 +7750,16 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	fadeinwrapper = new FadeInWrapper({
-    			props: {
-    				boolFadeAnimation: /*boolFadeAnimation*/ ctx[3],
-    				$$slots: { default: [create_default_slot_1] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
+    	const if_block_creators = [create_if_block_2, create_else_block_2];
+    	const if_blocks = [];
+
+    	function select_block_type_2(ctx, dirty) {
+    		if (/*projectInfo*/ ctx[1].urls.boolUrlExists) return 0;
+    		return 1;
+    	}
+
+    	current_block_type_index = select_block_type_2(ctx);
+    	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
 
     	const block = {
     		c: function create() {
@@ -7766,15 +7769,15 @@ var app = (function () {
     			t = space();
     			div2 = element("div");
     			div1 = element("div");
-    			create_component(fadeinwrapper.$$.fragment);
+    			if_block.c();
     			attr_dev(div0, "class", "proj-description col-md-5 svelte-1c6mf66");
-    			add_location(div0, file$7, 38, 4, 1210);
+    			add_location(div0, file$7, 38, 4, 1206);
     			attr_dev(div1, "class", "main-img-container-odd col-md-10 offset-md-2 main-img-container svelte-1c6mf66");
-    			add_location(div1, file$7, 47, 6, 1485);
+    			add_location(div1, file$7, 47, 6, 1481);
     			attr_dev(div2, "class", "img-container col-md-7 svelte-1c6mf66");
-    			add_location(div2, file$7, 46, 4, 1441);
+    			add_location(div2, file$7, 46, 4, 1437);
     			attr_dev(div3, "class", "row project-container svelte-1c6mf66");
-    			add_location(div3, file$7, 37, 2, 1169);
+    			add_location(div3, file$7, 37, 2, 1165);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -7783,7 +7786,7 @@ var app = (function () {
     			append_dev(div3, t);
     			append_dev(div3, div2);
     			append_dev(div2, div1);
-    			mount_component(fadeinwrapper, div1, null);
+    			if_blocks[current_block_type_index].m(div1, null);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
@@ -7793,30 +7796,47 @@ var app = (function () {
     			if (dirty & /*projectInfo*/ 2) cardproject_changes.text = /*projectInfo*/ ctx[1].text;
     			if (dirty & /*projectInfo*/ 2) cardproject_changes.techstack = /*projectInfo*/ ctx[1].techstack;
     			cardproject.$set(cardproject_changes);
-    			const fadeinwrapper_changes = {};
-    			if (dirty & /*boolFadeAnimation*/ 8) fadeinwrapper_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[3];
+    			let previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type_2(ctx);
 
-    			if (dirty & /*$$scope, projectInfo*/ 18) {
-    				fadeinwrapper_changes.$$scope = { dirty, ctx };
+    			if (current_block_type_index === previous_block_index) {
+    				if_blocks[current_block_type_index].p(ctx, dirty);
+    			} else {
+    				group_outros();
+
+    				transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    					if_blocks[previous_block_index] = null;
+    				});
+
+    				check_outros();
+    				if_block = if_blocks[current_block_type_index];
+
+    				if (!if_block) {
+    					if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    					if_block.c();
+    				} else {
+    					if_block.p(ctx, dirty);
+    				}
+
+    				transition_in(if_block, 1);
+    				if_block.m(div1, null);
     			}
-
-    			fadeinwrapper.$set(fadeinwrapper_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(cardproject.$$.fragment, local);
-    			transition_in(fadeinwrapper.$$.fragment, local);
+    			transition_in(if_block);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(cardproject.$$.fragment, local);
-    			transition_out(fadeinwrapper.$$.fragment, local);
+    			transition_out(if_block);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div3);
     			destroy_component(cardproject);
-    			destroy_component(fadeinwrapper);
+    			if_blocks[current_block_type_index].d();
     		}
     	};
 
@@ -7836,20 +7856,22 @@ var app = (function () {
     	let div3;
     	let div1;
     	let div0;
-    	let fadeinwrapper;
+    	let current_block_type_index;
+    	let if_block;
     	let t;
     	let div2;
     	let cardproject;
     	let current;
+    	const if_block_creators = [create_if_block_1, create_else_block$1];
+    	const if_blocks = [];
 
-    	fadeinwrapper = new FadeInWrapper({
-    			props: {
-    				boolFadeAnimation: /*boolFadeAnimation*/ ctx[3],
-    				$$slots: { default: [create_default_slot$1] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
+    	function select_block_type_1(ctx, dirty) {
+    		if (/*projectInfo*/ ctx[1].urls.boolUrlExists) return 0;
+    		return 1;
+    	}
+
+    	current_block_type_index = select_block_type_1(ctx);
+    	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
 
     	cardproject = new CardProject({
     			props: {
@@ -7866,7 +7888,7 @@ var app = (function () {
     			div3 = element("div");
     			div1 = element("div");
     			div0 = element("div");
-    			create_component(fadeinwrapper.$$.fragment);
+    			if_block.c();
     			t = space();
     			div2 = element("div");
     			create_component(cardproject.$$.fragment);
@@ -7875,7 +7897,7 @@ var app = (function () {
     			attr_dev(div1, "class", "img-container col-md-7 svelte-1c6mf66");
     			add_location(div1, file$7, 10, 4, 332);
     			attr_dev(div2, "class", "proj-description col-md-5 svelte-1c6mf66");
-    			add_location(div2, file$7, 27, 4, 921);
+    			add_location(div2, file$7, 27, 4, 917);
     			attr_dev(div3, "class", "row project-container svelte-1c6mf66");
     			add_location(div3, file$7, 9, 2, 291);
     		},
@@ -7883,21 +7905,39 @@ var app = (function () {
     			insert_dev(target, div3, anchor);
     			append_dev(div3, div1);
     			append_dev(div1, div0);
-    			mount_component(fadeinwrapper, div0, null);
+    			if_blocks[current_block_type_index].m(div0, null);
     			append_dev(div3, t);
     			append_dev(div3, div2);
     			mount_component(cardproject, div2, null);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			const fadeinwrapper_changes = {};
-    			if (dirty & /*boolFadeAnimation*/ 8) fadeinwrapper_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[3];
+    			let previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type_1(ctx);
 
-    			if (dirty & /*$$scope, projectInfo*/ 18) {
-    				fadeinwrapper_changes.$$scope = { dirty, ctx };
+    			if (current_block_type_index === previous_block_index) {
+    				if_blocks[current_block_type_index].p(ctx, dirty);
+    			} else {
+    				group_outros();
+
+    				transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    					if_blocks[previous_block_index] = null;
+    				});
+
+    				check_outros();
+    				if_block = if_blocks[current_block_type_index];
+
+    				if (!if_block) {
+    					if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    					if_block.c();
+    				} else {
+    					if_block.p(ctx, dirty);
+    				}
+
+    				transition_in(if_block, 1);
+    				if_block.m(div0, null);
     			}
 
-    			fadeinwrapper.$set(fadeinwrapper_changes);
     			const cardproject_changes = {};
     			if (dirty & /*projectInfo*/ 2) cardproject_changes.title = /*projectInfo*/ ctx[1].title;
     			if (dirty & /*projectInfo*/ 2) cardproject_changes.urls = /*projectInfo*/ ctx[1].urls;
@@ -7907,18 +7947,18 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(fadeinwrapper.$$.fragment, local);
+    			transition_in(if_block);
     			transition_in(cardproject.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(fadeinwrapper.$$.fragment, local);
+    			transition_out(if_block);
     			transition_out(cardproject.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div3);
-    			destroy_component(fadeinwrapper);
+    			if_blocks[current_block_type_index].d();
     			destroy_component(cardproject);
     		}
     	};
@@ -7934,7 +7974,7 @@ var app = (function () {
     	return block;
     }
 
-    // (60:10) {:else}
+    // (61:8) {:else}
     function create_else_block_2(ctx) {
     	let img;
     	let img_src_value;
@@ -7945,7 +7985,7 @@ var app = (function () {
     			attr_dev(img, "class", "main main-odd svelte-1c6mf66");
     			if (!src_url_equal(img.src, img_src_value = /*projectInfo*/ ctx[1].imgurl)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$7, 60, 12, 1933);
+    			add_location(img, file$7, 61, 10, 1953);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -7955,6 +7995,8 @@ var app = (function () {
     				attr_dev(img, "src", img_src_value);
     			}
     		},
+    		i: noop,
+    		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(img);
     		}
@@ -7964,15 +8006,72 @@ var app = (function () {
     		block,
     		id: create_else_block_2.name,
     		type: "else",
-    		source: "(60:10) {:else}",
+    		source: "(61:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (52:10) {#if projectInfo.urls.boolUrlExists}
+    // (51:8) {#if projectInfo.urls.boolUrlExists}
     function create_if_block_2(ctx) {
+    	let fadeinwrapper;
+    	let current;
+
+    	fadeinwrapper = new FadeInWrapper({
+    			props: {
+    				boolFadeAnimation: /*boolFadeAnimation*/ ctx[3],
+    				$$slots: { default: [create_default_slot_1] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(fadeinwrapper.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(fadeinwrapper, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const fadeinwrapper_changes = {};
+    			if (dirty & /*boolFadeAnimation*/ 8) fadeinwrapper_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[3];
+
+    			if (dirty & /*$$scope, projectInfo*/ 18) {
+    				fadeinwrapper_changes.$$scope = { dirty, ctx };
+    			}
+
+    			fadeinwrapper.$set(fadeinwrapper_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(fadeinwrapper.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(fadeinwrapper.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(fadeinwrapper, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_2.name,
+    		type: "if",
+    		source: "(51:8) {#if projectInfo.urls.boolUrlExists}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (52:10) <FadeInWrapper {boolFadeAnimation}>
+    function create_default_slot_1(ctx) {
     	let a;
     	let img;
     	let img_src_value;
@@ -7985,10 +8084,10 @@ var app = (function () {
     			attr_dev(img, "class", "main main-odd glowing svelte-1c6mf66");
     			if (!src_url_equal(img.src, img_src_value = /*projectInfo*/ ctx[1].imgurl)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$7, 53, 14, 1740);
+    			add_location(img, file$7, 53, 14, 1736);
     			attr_dev(a, "href", a_href_value = /*projectInfo*/ ctx[1].urls.projectUrl);
     			attr_dev(a, "class", "svelte-1c6mf66");
-    			add_location(a, file$7, 52, 12, 1686);
+    			add_location(a, file$7, 52, 12, 1682);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -8010,67 +8109,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_2.name,
-    		type: "if",
-    		source: "(52:10) {#if projectInfo.urls.boolUrlExists}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (51:8) <FadeInWrapper {boolFadeAnimation}>
-    function create_default_slot_1(ctx) {
-    	let if_block_anchor;
-
-    	function select_block_type_2(ctx, dirty) {
-    		if (/*projectInfo*/ ctx[1].urls.boolUrlExists) return create_if_block_2;
-    		return create_else_block_2;
-    	}
-
-    	let current_block_type = select_block_type_2(ctx);
-    	let if_block = current_block_type(ctx);
-
-    	const block = {
-    		c: function create() {
-    			if_block.c();
-    			if_block_anchor = empty();
-    		},
-    		m: function mount(target, anchor) {
-    			if_block.m(target, anchor);
-    			insert_dev(target, if_block_anchor, anchor);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (current_block_type === (current_block_type = select_block_type_2(ctx)) && if_block) {
-    				if_block.p(ctx, dirty);
-    			} else {
-    				if_block.d(1);
-    				if_block = current_block_type(ctx);
-
-    				if (if_block) {
-    					if_block.c();
-    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
-    				}
-    			}
-    		},
-    		d: function destroy(detaching) {
-    			if_block.d(detaching);
-    			if (detaching) detach_dev(if_block_anchor);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(51:8) <FadeInWrapper {boolFadeAnimation}>",
+    		source: "(52:10) <FadeInWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (22:10) {:else}
+    // (23:8) {:else}
     function create_else_block$1(ctx) {
     	let img;
     	let img_src_value;
@@ -8081,7 +8129,7 @@ var app = (function () {
     			attr_dev(img, "class", "main svelte-1c6mf66");
     			if (!src_url_equal(img.src, img_src_value = /*projectInfo*/ ctx[1].imgurl)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$7, 22, 12, 787);
+    			add_location(img, file$7, 23, 10, 811);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -8091,6 +8139,8 @@ var app = (function () {
     				attr_dev(img, "src", img_src_value);
     			}
     		},
+    		i: noop,
+    		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(img);
     		}
@@ -8100,15 +8150,72 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(22:10) {:else}",
+    		source: "(23:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (14:10) {#if projectInfo.urls.boolUrlExists}
+    // (13:8) {#if projectInfo.urls.boolUrlExists}
     function create_if_block_1(ctx) {
+    	let fadeinwrapper;
+    	let current;
+
+    	fadeinwrapper = new FadeInWrapper({
+    			props: {
+    				boolFadeAnimation: /*boolFadeAnimation*/ ctx[3],
+    				$$slots: { default: [create_default_slot$1] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(fadeinwrapper.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(fadeinwrapper, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const fadeinwrapper_changes = {};
+    			if (dirty & /*boolFadeAnimation*/ 8) fadeinwrapper_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[3];
+
+    			if (dirty & /*$$scope, projectInfo*/ 18) {
+    				fadeinwrapper_changes.$$scope = { dirty, ctx };
+    			}
+
+    			fadeinwrapper.$set(fadeinwrapper_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(fadeinwrapper.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(fadeinwrapper.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(fadeinwrapper, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1.name,
+    		type: "if",
+    		source: "(13:8) {#if projectInfo.urls.boolUrlExists}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (14:10) <FadeInWrapper {boolFadeAnimation}>
+    function create_default_slot$1(ctx) {
     	let a;
     	let img;
     	let img_src_value;
@@ -8146,60 +8253,9 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1.name,
-    		type: "if",
-    		source: "(14:10) {#if projectInfo.urls.boolUrlExists}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (13:8) <FadeInWrapper {boolFadeAnimation}>
-    function create_default_slot$1(ctx) {
-    	let if_block_anchor;
-
-    	function select_block_type_1(ctx, dirty) {
-    		if (/*projectInfo*/ ctx[1].urls.boolUrlExists) return create_if_block_1;
-    		return create_else_block$1;
-    	}
-
-    	let current_block_type = select_block_type_1(ctx);
-    	let if_block = current_block_type(ctx);
-
-    	const block = {
-    		c: function create() {
-    			if_block.c();
-    			if_block_anchor = empty();
-    		},
-    		m: function mount(target, anchor) {
-    			if_block.m(target, anchor);
-    			insert_dev(target, if_block_anchor, anchor);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (current_block_type === (current_block_type = select_block_type_1(ctx)) && if_block) {
-    				if_block.p(ctx, dirty);
-    			} else {
-    				if_block.d(1);
-    				if_block = current_block_type(ctx);
-
-    				if (if_block) {
-    					if_block.c();
-    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
-    				}
-    			}
-    		},
-    		d: function destroy(detaching) {
-    			if_block.d(detaching);
-    			if (detaching) detach_dev(if_block_anchor);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(13:8) <FadeInWrapper {boolFadeAnimation}>",
+    		source: "(14:10) <FadeInWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
@@ -8230,8 +8286,8 @@ var app = (function () {
     			t = space();
     			br0 = element("br");
     			br1 = element("br");
-    			add_location(br0, file$7, 67, 0, 2089);
-    			add_location(br1, file$7, 67, 6, 2095);
+    			add_location(br0, file$7, 67, 0, 2081);
+    			add_location(br1, file$7, 67, 6, 2087);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
