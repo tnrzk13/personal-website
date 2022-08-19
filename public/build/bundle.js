@@ -3477,6 +3477,7 @@ var app = (function () {
 
     	intersectionobserver = new IntersectionObserver$1({
     			props: {
+    				once: true,
     				element: /*node*/ ctx[1],
     				$$slots: {
     					default: [
@@ -3546,7 +3547,7 @@ var app = (function () {
     			span = element("span");
     			if (default_slot) default_slot.c();
     			attr_dev(span, "class", "fade-in");
-    			add_location(span, file$c, 12, 8, 337);
+    			add_location(span, file$c, 12, 8, 342);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -3608,7 +3609,7 @@ var app = (function () {
     	return block;
     }
 
-    // (10:2) <IntersectionObserver element={node} let:intersecting>
+    // (10:2) <IntersectionObserver once element={node} let:intersecting>
     function create_default_slot$6(ctx) {
     	let span;
     	let current;
@@ -3618,7 +3619,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			if (if_block) if_block.c();
-    			add_location(span, file$c, 10, 4, 278);
+    			add_location(span, file$c, 10, 4, 283);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -3670,7 +3671,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$6.name,
     		type: "slot",
-    		source: "(10:2) <IntersectionObserver element={node} let:intersecting>",
+    		source: "(10:2) <IntersectionObserver once element={node} let:intersecting>",
     		ctx
     	});
 
@@ -3911,26 +3912,26 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(img, "class", "logo svelte-1cupo5k");
+    			attr_dev(img, "class", "logo svelte-1aa82yt");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "company logo");
     			add_location(img, file$b, 19, 10, 575);
-    			attr_dev(div0, "class", "circle-logo svelte-1cupo5k");
+    			attr_dev(div0, "class", "circle-logo svelte-1aa82yt");
     			set_style(div0, "background-image", /*logoColor*/ ctx[5]);
     			add_location(div0, file$b, 18, 8, 500);
-    			attr_dev(h4, "class", "card-title svelte-1cupo5k");
+    			attr_dev(h4, "class", "card-title svelte-1aa82yt");
     			add_location(h4, file$b, 21, 8, 653);
-    			attr_dev(h6, "class", "card-subtitle svelte-1cupo5k");
+    			attr_dev(h6, "class", "card-subtitle svelte-1aa82yt");
     			add_location(h6, file$b, 22, 8, 698);
-    			attr_dev(div1, "class", "techstack-wrapper");
+    			attr_dev(div1, "class", "techstack-wrapper svelte-1aa82yt");
     			add_location(div1, file$b, 23, 8, 749);
     			attr_dev(p, "class", "card-text");
     			add_location(p, file$b, 26, 8, 843);
-    			attr_dev(div2, "class", "card-body svelte-1cupo5k");
+    			attr_dev(div2, "class", "card-body svelte-1aa82yt");
     			add_location(div2, file$b, 17, 6, 467);
-    			attr_dev(div3, "class", "card m-2 cb1 text-center svelte-1cupo5k");
+    			attr_dev(div3, "class", "card m-2 cb1 text-center svelte-1aa82yt");
     			add_location(div3, file$b, 16, 4, 421);
-    			attr_dev(div4, "class", "container-fluid card-container svelte-1cupo5k");
+    			attr_dev(div4, "class", "container-fluid card-container svelte-1aa82yt");
     			add_location(div4, file$b, 15, 2, 371);
     		},
     		m: function mount(target, anchor) {
