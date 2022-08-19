@@ -10,7 +10,6 @@
   import ContactWrapper from "./components/05-Contact/ContactWrapper.svelte";
   import Navbar from "./components/Navbar.svelte";
   import Loader from "./components/Loader.svelte";
-
   import SaosWrapper from "./components/SaosWrapper.svelte";
 
   // dev mode
@@ -49,8 +48,6 @@
     pageHalfDown = (titleHeight + contentHeight) / 2;
     // contactTop
     contactTop = getParallaxHeight() + contentHeight;
-
-    console.log(titleHeight, contentHeight);
   }
 
   const triggerDevMode = (isOn) => {
@@ -98,7 +95,7 @@
       <ContactWrapper {contactInfo} />
     </div>
   </div>
-  <Navbar titleHeight={0} {boolMobileView} />
+  <Navbar {boolMobileView} />
 {:else}
   <div class="container-fluid">
     <Parallax
@@ -118,7 +115,7 @@
       <ContactText {contactInfo} {titleHeight} {contactYOffset} />
     </div>
   </div>
-  <Navbar {titleHeight} {boolMobileView} />
+  <Navbar {boolMobileView} />
 {/if}
 
 <style lang="scss">

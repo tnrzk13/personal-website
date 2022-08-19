@@ -1,15 +1,10 @@
 <script>
   import { fade } from "svelte/transition";
 
-  export let titleHeight, boolMobileView;
+  export let boolMobileView;
 
   let y;
   let showNavBar = false;
-
-  $: {
-    if (y > titleHeight - 1) showNavBar = true;
-    else showNavBar = false;
-  }
 
   let lastScrollTop;
   window.addEventListener("scroll", function () {
@@ -68,23 +63,24 @@
   nav {
     font-size: 1.15rem;
     font-family: "Montserrat", sans-serif;
-
     padding-right: 1em;
     padding-left: 1em;
-
-    backdrop-filter: blur(10px);
-    background-color: rgba($color: white, $alpha: 0.05);
-
     z-index: 998;
 
     img {
       width: auto;
       height: 1.5em;
-      opacity: 50%;
     }
 
     img:hover {
-      opacity: 100%;
+      scale: 110%;
+    }
+
+    a.nav-item {
+      color: white;
+    }
+    a.nav-item:hover {
+      scale: 110%;
     }
 
     a.download-container {
