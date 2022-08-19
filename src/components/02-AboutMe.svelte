@@ -1,6 +1,7 @@
 <script>
-  let techs1 = ["Python", "Javascript", "Svelte"];
-  let techs2 = ["SQL", "Node.JS"];
+  import Techstack from "./Misc/Techstack.svelte";
+
+  let techstack = ["Python", "Javascript", "Svelte", "SQL", "Node.JS"];
 </script>
 
 <div id="aboutme" class="aboutMe container-fluid col-sm-10 offset-sm-1">
@@ -22,12 +23,7 @@
       </div>
       <div class="row techlist1 m-0 p-0">
         <div class="row">
-          {#each techs1 as tech}
-            <div class="techstack">{tech}</div>
-          {/each}
-          {#each techs2 as tech}
-            <div class="techstack">{tech}</div>
-          {/each}
+          <Techstack {techstack} />
         </div>
       </div>
     </div>
@@ -92,7 +88,7 @@
         width: auto;
         background-color: #303443;
         border-radius: 1rem;
-        margin: 0.25rem 0.5rem 0.25rem 0;
+        margin: 0.25rem 0.5rem 0.25rem 0.5rem;
       }
     }
     .description {

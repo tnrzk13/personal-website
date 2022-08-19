@@ -54,7 +54,6 @@
     if (!isOn) {
       boolFadeAnimation = boolShowLoadingScreen = boolAnimateText = true;
     }
-    boolFadeAnimation = false;
   };
   triggerDevMode(false);
 
@@ -85,7 +84,7 @@
     <div id="content-container">
       <div id="content" bind:clientHeight={contentHeight}>
         <AboutMe />
-        <Career />
+        <Career {boolFadeAnimation} />
         <Projects {boolMobileView} />
       </div>
       <div id="contact" style="height: 75vh;" />
@@ -106,7 +105,7 @@
     <div id="content-container" style="top: {titleHeight}px;">
       <div id="content" bind:clientHeight={contentHeight}>
         <AboutMe />
-        <Career />
+        <Career {boolFadeAnimation} />
         <Projects {boolMobileView} />
       </div>
       <ContactText {contactInfo} {titleHeight} {contactYOffset} />

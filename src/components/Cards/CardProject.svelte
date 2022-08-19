@@ -1,5 +1,6 @@
 <script>
   export let title, urls, text, techstack;
+  import Techstack from "../Misc/Techstack.svelte";
 </script>
 
 <div class="div container-fluid">
@@ -27,9 +28,7 @@
       <br /><br />
       <p class="text">{text}</p>
       <div class="row">
-        {#each techstack as tech}
-          <div class="techstack">{tech}</div>
-        {/each}
+        <Techstack {techstack} />
       </div>
     </div>
   </div>
@@ -62,13 +61,6 @@
         font-size: 1.5rem;
         padding: 1.5rem 0 0.5rem 0;
         display: inline;
-      }
-
-      .techstack {
-        width: auto;
-        background-color: #303443;
-        border-radius: 1rem;
-        margin: 0.25rem 0.5rem 0.25rem 0.5rem;
       }
     }
   }
