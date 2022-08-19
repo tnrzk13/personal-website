@@ -6514,7 +6514,7 @@ var app = (function () {
     		c: function create() {
     			h4 = element("h4");
     			t = text(/*title*/ ctx[0]);
-    			attr_dev(h4, "class", "title svelte-189etok");
+    			attr_dev(h4, "class", "title svelte-3nid1g");
     			add_location(h4, file$7, 22, 8, 596);
     		},
     		m: function mount(target, anchor) {
@@ -6569,17 +6569,17 @@ var app = (function () {
     			i1 = element("i");
     			attr_dev(i0, "class", "fa-solid fa-link");
     			add_location(i0, file$7, 11, 22, 313);
-    			attr_dev(h40, "class", "title svelte-189etok");
+    			attr_dev(h40, "class", "title svelte-3nid1g");
     			add_location(h40, file$7, 10, 12, 271);
     			attr_dev(a0, "href", a0_href_value = /*urls*/ ctx[1].projectUrl);
-    			attr_dev(a0, "class", "svelte-189etok");
+    			attr_dev(a0, "class", "svelte-3nid1g");
     			add_location(a0, file$7, 9, 10, 231);
     			attr_dev(i1, "class", "fa-brands fa-github");
     			add_location(i1, file$7, 17, 14, 486);
-    			attr_dev(h41, "class", "title svelte-189etok");
+    			attr_dev(h41, "class", "title svelte-3nid1g");
     			add_location(h41, file$7, 16, 12, 452);
     			attr_dev(a1, "href", a1_href_value = /*urls*/ ctx[1].codeUrl);
-    			attr_dev(a1, "class", "svelte-189etok");
+    			attr_dev(a1, "class", "svelte-3nid1g");
     			add_location(a1, file$7, 15, 10, 415);
     			add_location(span, file$7, 8, 8, 213);
     		},
@@ -6632,7 +6632,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			t = text(t_value);
-    			attr_dev(div, "class", "techstack svelte-189etok");
+    			attr_dev(div, "class", "techstack svelte-3nid1g");
     			add_location(div, file$7, 28, 10, 765);
     		},
     		m: function mount(target, anchor) {
@@ -6711,11 +6711,11 @@ var app = (function () {
     			add_location(p, file$7, 25, 6, 667);
     			attr_dev(div0, "class", "row");
     			add_location(div0, file$7, 26, 6, 701);
-    			attr_dev(div1, "class", "card-body svelte-189etok");
+    			attr_dev(div1, "class", "card-body svelte-3nid1g");
     			add_location(div1, file$7, 6, 4, 148);
-    			attr_dev(div2, "class", "card m-2 cb1 text-center svelte-189etok");
+    			attr_dev(div2, "class", "card m-2 cb1 text-center svelte-3nid1g");
     			add_location(div2, file$7, 5, 2, 104);
-    			attr_dev(div3, "class", "div container-fluid svelte-189etok");
+    			attr_dev(div3, "class", "div container-fluid svelte-3nid1g");
     			add_location(div3, file$7, 4, 0, 67);
     		},
     		l: function claim(nodes) {

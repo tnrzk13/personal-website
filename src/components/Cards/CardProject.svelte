@@ -34,9 +34,6 @@
 </div>
 
 <style lang="scss">
-  .link {
-    display: inline-block;
-  }
   .container-fluid {
     padding: 0;
 
