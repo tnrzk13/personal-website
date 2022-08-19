@@ -2787,8 +2787,8 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			t = text(t_value);
-    			attr_dev(div, "class", "techstack svelte-2qkzi");
-    			add_location(div, file$b, 25, 12, 1077);
+    			attr_dev(div, "class", "techstack svelte-j7ss6p");
+    			add_location(div, file$b, 25, 12, 1086);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2821,8 +2821,8 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			t = text(t_value);
-    			attr_dev(div, "class", "techstack svelte-2qkzi");
-    			add_location(div, file$b, 28, 12, 1179);
+    			attr_dev(div, "class", "techstack svelte-j7ss6p");
+    			add_location(div, file$b, 28, 12, 1188);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2895,7 +2895,7 @@ var app = (function () {
     			div0 = element("div");
     			t0 = space();
     			h1 = element("h1");
-    			h1.textContent = "About me";
+    			h1.textContent = "A little about me";
     			t2 = space();
     			div7 = element("div");
     			div4 = element("div");
@@ -2928,36 +2928,36 @@ var app = (function () {
     			div6 = element("div");
     			div5 = element("div");
     			img = element("img");
-    			attr_dev(div0, "class", "empty row svelte-2qkzi");
+    			attr_dev(div0, "class", "empty row svelte-j7ss6p");
     			add_location(div0, file$b, 6, 2, 187);
-    			attr_dev(h1, "class", "title col-md-9 svelte-2qkzi");
+    			attr_dev(h1, "class", "title col-md-9 svelte-j7ss6p");
     			add_location(h1, file$b, 7, 2, 216);
-    			add_location(br0, file$b, 14, 8, 588);
-    			add_location(br1, file$b, 14, 14, 594);
-    			add_location(br2, file$b, 18, 8, 849);
-    			add_location(br3, file$b, 18, 15, 856);
-    			add_location(br4, file$b, 20, 8, 933);
-    			add_location(br5, file$b, 20, 14, 939);
-    			attr_dev(div1, "class", "description svelte-2qkzi");
-    			add_location(div1, file$b, 10, 6, 327);
-    			attr_dev(div2, "class", "row svelte-2qkzi");
-    			add_location(div2, file$b, 23, 8, 1012);
-    			attr_dev(div3, "class", "row techlist1 m-0 p-0 svelte-2qkzi");
-    			add_location(div3, file$b, 22, 6, 967);
-    			attr_dev(div4, "class", "text col-md-7 svelte-2qkzi");
-    			add_location(div4, file$b, 9, 4, 292);
-    			attr_dev(img, "class", "aboutmeimg svelte-2qkzi");
+    			add_location(br0, file$b, 14, 8, 597);
+    			add_location(br1, file$b, 14, 14, 603);
+    			add_location(br2, file$b, 18, 8, 858);
+    			add_location(br3, file$b, 18, 15, 865);
+    			add_location(br4, file$b, 20, 8, 942);
+    			add_location(br5, file$b, 20, 14, 948);
+    			attr_dev(div1, "class", "description svelte-j7ss6p");
+    			add_location(div1, file$b, 10, 6, 336);
+    			attr_dev(div2, "class", "row svelte-j7ss6p");
+    			add_location(div2, file$b, 23, 8, 1021);
+    			attr_dev(div3, "class", "row techlist1 m-0 p-0 svelte-j7ss6p");
+    			add_location(div3, file$b, 22, 6, 976);
+    			attr_dev(div4, "class", "text col-md-7 svelte-j7ss6p");
+    			add_location(div4, file$b, 9, 4, 301);
+    			attr_dev(img, "class", "aboutmeimg svelte-j7ss6p");
     			if (!src_url_equal(img.src, img_src_value = "images/02-aboutme/self.avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "tony kwok");
-    			add_location(img, file$b, 35, 8, 1362);
-    			attr_dev(div5, "class", "aboutmeimg-container svelte-2qkzi");
-    			add_location(div5, file$b, 34, 6, 1318);
-    			attr_dev(div6, "class", "imgdiv col-md-5 svelte-2qkzi");
-    			add_location(div6, file$b, 33, 4, 1281);
-    			attr_dev(div7, "class", "row col-md-9 svelte-2qkzi");
-    			add_location(div7, file$b, 8, 2, 260);
+    			add_location(img, file$b, 35, 8, 1371);
+    			attr_dev(div5, "class", "aboutmeimg-container svelte-j7ss6p");
+    			add_location(div5, file$b, 34, 6, 1327);
+    			attr_dev(div6, "class", "imgdiv col-md-5 svelte-j7ss6p");
+    			add_location(div6, file$b, 33, 4, 1290);
+    			attr_dev(div7, "class", "row col-md-9 svelte-j7ss6p");
+    			add_location(div7, file$b, 8, 2, 269);
     			attr_dev(div8, "id", "aboutme");
-    			attr_dev(div8, "class", "aboutMe container-fluid col-sm-10 offset-sm-1 svelte-2qkzi");
+    			attr_dev(div8, "class", "aboutMe container-fluid col-sm-10 offset-sm-1 svelte-j7ss6p");
     			add_location(div8, file$b, 5, 0, 111);
     		},
     		l: function claim(nodes) {
@@ -6373,17 +6373,17 @@ var app = (function () {
     		c: function create() {
     			div1 = element("div");
     			h1 = element("h1");
-    			h1.textContent = "Career";
+    			h1.textContent = "My last couple adventures";
     			t1 = space();
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
-    			attr_dev(h1, "class", "title col-md-9");
+    			attr_dev(h1, "class", "title col-md-9 svelte-1pyb0ip");
     			add_location(h1, file$8, 56, 2, 1712);
     			attr_dev(div0, "id", "card-list-container");
-    			attr_dev(div0, "class", "card container-fluid col-md-9 svelte-1ciet3r");
-    			add_location(div0, file$8, 57, 2, 1754);
+    			attr_dev(div0, "class", "card container-fluid col-md-9 svelte-1pyb0ip");
+    			add_location(div0, file$8, 57, 2, 1773);
     			attr_dev(div1, "id", "career");
-    			attr_dev(div1, "class", "container-fluid col-sm-10 col-sm-1 svelte-1ciet3r");
+    			attr_dev(div1, "class", "container-fluid col-sm-10 col-sm-1 svelte-1pyb0ip");
     			add_location(div1, file$8, 55, 0, 1648);
     		},
     		l: function claim(nodes) {
@@ -6515,7 +6515,7 @@ var app = (function () {
     			h4 = element("h4");
     			t = text(/*title*/ ctx[0]);
     			attr_dev(h4, "class", "title svelte-3nid1g");
-    			add_location(h4, file$7, 22, 8, 596);
+    			add_location(h4, file$7, 22, 8, 605);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h4, anchor);
@@ -6568,20 +6568,20 @@ var app = (function () {
     			h41 = element("h4");
     			i1 = element("i");
     			attr_dev(i0, "class", "fa-solid fa-link");
-    			add_location(i0, file$7, 11, 22, 313);
+    			add_location(i0, file$7, 11, 22, 322);
     			attr_dev(h40, "class", "title svelte-3nid1g");
-    			add_location(h40, file$7, 10, 12, 271);
+    			add_location(h40, file$7, 10, 12, 280);
     			attr_dev(a0, "href", a0_href_value = /*urls*/ ctx[1].projectUrl);
     			attr_dev(a0, "class", "svelte-3nid1g");
-    			add_location(a0, file$7, 9, 10, 231);
+    			add_location(a0, file$7, 9, 10, 240);
     			attr_dev(i1, "class", "fa-brands fa-github");
-    			add_location(i1, file$7, 17, 14, 486);
+    			add_location(i1, file$7, 17, 14, 495);
     			attr_dev(h41, "class", "title svelte-3nid1g");
-    			add_location(h41, file$7, 16, 12, 452);
+    			add_location(h41, file$7, 16, 12, 461);
     			attr_dev(a1, "href", a1_href_value = /*urls*/ ctx[1].codeUrl);
     			attr_dev(a1, "class", "svelte-3nid1g");
-    			add_location(a1, file$7, 15, 10, 415);
-    			add_location(span, file$7, 8, 8, 213);
+    			add_location(a1, file$7, 15, 10, 424);
+    			add_location(span, file$7, 8, 8, 222);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -6633,7 +6633,7 @@ var app = (function () {
     			div = element("div");
     			t = text(t_value);
     			attr_dev(div, "class", "techstack svelte-3nid1g");
-    			add_location(div, file$7, 28, 10, 765);
+    			add_location(div, file$7, 28, 10, 774);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -6705,15 +6705,15 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(br0, file$7, 24, 6, 647);
-    			add_location(br1, file$7, 24, 12, 653);
+    			add_location(br0, file$7, 24, 6, 656);
+    			add_location(br1, file$7, 24, 12, 662);
     			attr_dev(p, "class", "text");
-    			add_location(p, file$7, 25, 6, 667);
+    			add_location(p, file$7, 25, 6, 676);
     			attr_dev(div0, "class", "row");
-    			add_location(div0, file$7, 26, 6, 701);
+    			add_location(div0, file$7, 26, 6, 710);
     			attr_dev(div1, "class", "card-body svelte-3nid1g");
-    			add_location(div1, file$7, 6, 4, 148);
-    			attr_dev(div2, "class", "card m-2 cb1 text-center svelte-3nid1g");
+    			add_location(div1, file$7, 6, 4, 157);
+    			attr_dev(div2, "class", "card border-0 m-2 cb1 text-center svelte-3nid1g");
     			add_location(div2, file$7, 5, 2, 104);
     			attr_dev(div3, "class", "div container-fluid svelte-3nid1g");
     			add_location(div3, file$7, 4, 0, 67);
@@ -6955,18 +6955,18 @@ var app = (function () {
     			if_block.c();
     			t1 = space();
     			img = element("img");
-    			attr_dev(div0, "class", "proj-description col-md-5 svelte-7164nc");
-    			add_location(div0, file$6, 65, 12, 2645);
-    			attr_dev(div1, "class", "main-img-container-odd col-md-10 offset-md-2 main-img-container svelte-7164nc");
-    			add_location(div1, file$6, 69, 14, 2835);
-    			attr_dev(img, "class", "card card-odd svelte-7164nc");
+    			attr_dev(div0, "class", "proj-description col-md-5 svelte-a7rqdw");
+    			add_location(div0, file$6, 65, 12, 2667);
+    			attr_dev(div1, "class", "main-img-container-odd col-md-10 offset-md-2 main-img-container svelte-a7rqdw");
+    			add_location(div1, file$6, 69, 14, 2857);
+    			attr_dev(img, "class", "card card-odd svelte-a7rqdw");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl2*/ ctx[6])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project 2");
-    			add_location(img, file$6, 80, 14, 3299);
-    			attr_dev(div2, "class", "img-container col-md-7 svelte-7164nc");
-    			add_location(div2, file$6, 68, 12, 2783);
-    			attr_dev(div3, "class", "row project-container svelte-7164nc");
-    			add_location(div3, file$6, 64, 10, 2596);
+    			add_location(img, file$6, 80, 14, 3321);
+    			attr_dev(div2, "class", "img-container col-md-7 svelte-a7rqdw");
+    			add_location(div2, file$6, 68, 12, 2805);
+    			attr_dev(div3, "class", "row project-container svelte-a7rqdw");
+    			add_location(div3, file$6, 64, 10, 2618);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -7052,18 +7052,18 @@ var app = (function () {
     			t1 = space();
     			div2 = element("div");
     			create_component(cardproject.$$.fragment);
-    			attr_dev(div0, "class", "main-img-container-even col-md-10 main-img-container svelte-7164nc");
-    			add_location(div0, file$6, 48, 14, 1939);
-    			attr_dev(img, "class", "card svelte-7164nc");
+    			attr_dev(div0, "class", "main-img-container-even col-md-10 main-img-container svelte-a7rqdw");
+    			add_location(div0, file$6, 48, 14, 1961);
+    			attr_dev(img, "class", "card svelte-a7rqdw");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl2*/ ctx[6])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project 2");
-    			add_location(img, file$6, 57, 14, 2341);
-    			attr_dev(div1, "class", "img-container col-md-7 svelte-7164nc");
-    			add_location(div1, file$6, 47, 12, 1887);
-    			attr_dev(div2, "class", "proj-description col-md-5 svelte-7164nc");
-    			add_location(div2, file$6, 59, 12, 2425);
-    			attr_dev(div3, "class", "row project-container svelte-7164nc");
-    			add_location(div3, file$6, 46, 10, 1838);
+    			add_location(img, file$6, 57, 14, 2363);
+    			attr_dev(div1, "class", "img-container col-md-7 svelte-a7rqdw");
+    			add_location(div1, file$6, 47, 12, 1909);
+    			attr_dev(div2, "class", "proj-description col-md-5 svelte-a7rqdw");
+    			add_location(div2, file$6, 59, 12, 2447);
+    			attr_dev(div3, "class", "row project-container svelte-a7rqdw");
+    			add_location(div3, file$6, 46, 10, 1860);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -7115,10 +7115,10 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			img = element("img");
-    			attr_dev(img, "class", "main main-odd svelte-7164nc");
+    			attr_dev(img, "class", "main main-odd svelte-a7rqdw");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$6, 77, 18, 3181);
+    			add_location(img, file$6, 77, 18, 3203);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -7150,13 +7150,13 @@ var app = (function () {
     		c: function create() {
     			a = element("a");
     			img = element("img");
-    			attr_dev(img, "class", "main main-odd svelte-7164nc");
+    			attr_dev(img, "class", "main main-odd svelte-a7rqdw");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$6, 74, 20, 3055);
+    			add_location(img, file$6, 74, 20, 3077);
     			attr_dev(a, "href", /*urls*/ ctx[7].projectUrl);
-    			attr_dev(a, "class", "svelte-7164nc");
-    			add_location(a, file$6, 73, 18, 3007);
+    			attr_dev(a, "class", "svelte-a7rqdw");
+    			add_location(a, file$6, 73, 18, 3029);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -7187,10 +7187,10 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			img = element("img");
-    			attr_dev(img, "class", "main svelte-7164nc");
+    			attr_dev(img, "class", "main svelte-a7rqdw");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$6, 54, 18, 2232);
+    			add_location(img, file$6, 54, 18, 2254);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -7222,13 +7222,13 @@ var app = (function () {
     		c: function create() {
     			a = element("a");
     			img = element("img");
-    			attr_dev(img, "class", "main svelte-7164nc");
+    			attr_dev(img, "class", "main svelte-a7rqdw");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$6, 51, 20, 2115);
+    			add_location(img, file$6, 51, 20, 2137);
     			attr_dev(a, "href", /*urls*/ ctx[7].projectUrl);
-    			attr_dev(a, "class", "svelte-7164nc");
-    			add_location(a, file$6, 50, 18, 2067);
+    			attr_dev(a, "class", "svelte-a7rqdw");
+    			add_location(a, file$6, 50, 18, 2089);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -7276,8 +7276,8 @@ var app = (function () {
     			t = space();
     			br0 = element("br");
     			br1 = element("br");
-    			add_location(br0, file$6, 84, 8, 3421);
-    			add_location(br1, file$6, 84, 14, 3427);
+    			add_location(br0, file$6, 84, 8, 3443);
+    			add_location(br1, file$6, 84, 14, 3449);
     		},
     		m: function mount(target, anchor) {
     			if_blocks[current_block_type_index].m(target, anchor);
@@ -7458,16 +7458,16 @@ var app = (function () {
     		c: function create() {
     			div1 = element("div");
     			h1 = element("h1");
-    			h1.textContent = "Projects";
+    			h1.textContent = "Leveling up with side projects";
     			t1 = space();
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
-    			attr_dev(h1, "class", "title col-md-9");
+    			attr_dev(h1, "class", "title col-md-9 svelte-a7rqdw");
     			add_location(h1, file$6, 41, 2, 1574);
-    			attr_dev(div0, "class", "projects container-fluid col-md-9 svelte-7164nc");
-    			add_location(div0, file$6, 42, 2, 1618);
+    			attr_dev(div0, "class", "projects container-fluid col-md-9 svelte-a7rqdw");
+    			add_location(div0, file$6, 42, 2, 1640);
     			attr_dev(div1, "id", "projects");
-    			attr_dev(div1, "class", "container-fluid col-sm-10 offset-sm-1 svelte-7164nc");
+    			attr_dev(div1, "class", "container-fluid col-sm-10 offset-sm-1 svelte-a7rqdw");
     			add_location(div1, file$6, 40, 0, 1505);
     		},
     		l: function claim(nodes) {
@@ -8939,14 +8939,14 @@ var app = (function () {
     			t4 = space();
     			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
-    			attr_dev(div0, "class", "svelte-1uyt7tx");
+    			attr_dev(div0, "class", "svelte-1va4fj5");
     			add_render_callback(() => /*div0_elementresize_handler_1*/ ctx[12].call(div0));
     			add_location(div0, file, 106, 6, 3369);
     			attr_dev(div1, "id", "content-container");
     			set_style(div1, "top", /*titleHeight*/ ctx[0] + "px");
-    			attr_dev(div1, "class", "svelte-1uyt7tx");
+    			attr_dev(div1, "class", "svelte-1va4fj5");
     			add_location(div1, file, 105, 4, 3303);
-    			attr_dev(div2, "class", "container-fluid svelte-1uyt7tx");
+    			attr_dev(div2, "class", "container-fluid svelte-1va4fj5");
     			add_location(div2, file, 96, 2, 3098);
     		},
     		m: function mount(target, anchor) {
@@ -9104,16 +9104,16 @@ var app = (function () {
     			t5 = space();
     			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
-    			attr_dev(div0, "class", "svelte-1uyt7tx");
+    			attr_dev(div0, "class", "svelte-1va4fj5");
     			add_render_callback(() => /*div0_elementresize_handler*/ ctx[11].call(div0));
     			add_location(div0, file, 85, 6, 2796);
     			attr_dev(div1, "id", "contact");
     			set_style(div1, "height", "75vh");
     			add_location(div1, file, 90, 6, 2950);
     			attr_dev(div2, "id", "content-container");
-    			attr_dev(div2, "class", "svelte-1uyt7tx");
+    			attr_dev(div2, "class", "svelte-1va4fj5");
     			add_location(div2, file, 84, 4, 2760);
-    			attr_dev(div3, "class", "container-fluid svelte-1uyt7tx");
+    			attr_dev(div3, "class", "container-fluid svelte-1va4fj5");
     			add_location(div3, file, 82, 2, 2674);
     		},
     		m: function mount(target, anchor) {

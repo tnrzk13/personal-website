@@ -1,7 +1,8 @@
 :root {
   --blue: rgb(6, 0, 87);
-  --darkblue: rgb(4,4,13);
+  --darkblue: #040d21;
   --gradient-happy-fisher: linear-gradient(to bottom right, #89f7fe, #66a6ff);
+  --gradient-happy-fisher-left: linear-gradient(to left, #89f7fe, #66a6ff);
   --gradient-quepal: linear-gradient(to bottom right, #38ef7d, #11998e);
   --gradient-piglet: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
   --gradient-plum-plate: linear-gradient(to bottom right, #667eea, #764ba2);
@@ -9,7 +10,15 @@
   --gradient-lunada: linear-gradient(to bottom right, #a5fecb, #20dbff, #5433ff);
   --gradient-telegram: linear-gradient(to top left, #1c9292, #f2fcfe);
   --gradient-amin: linear-gradient(to top left, #8e2de2, #1cb5e0);
+  --gradient-jack-dorsey-stock: linear-gradient(to bottom right, #380036, #0cbaba);
 
+  /* gradients for text */
+  --gradient-pink-flavour: linear-gradient(315deg, #ffc0cb 35%, #800080);
+  --gradient-cool-sky: linear-gradient(315deg, white 50%, #6dd5fa 80%);
+  --gradient-bora-bora: linear-gradient(315deg, #eaecc6 45%, #2bc0e4);
+  --gradient-pink-blue: linear-gradient( 68.6deg,  rgba(252,165,241,1) 1.8%, rgba(181,255,255,1));
+  --gradient-github-copilot: linear-gradient(315deg, #a77bf3 40%, #a0a8f1 , #48e9e6);
+  --gradient-relaxing-red: linear-gradient(315deg, #fffbd5 40%, #b20a2c);
 }
 
 * {
@@ -21,8 +30,11 @@
 h1.title {
   padding-left: 0.35em;
   font-family: "Montserrat", sans-serif;
-  font-size: 2.5em;
+  font-size: 4em;
   margin: 8em auto 1em auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: var(--gradient-cool-sky);
 }
 
 h4 {
