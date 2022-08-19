@@ -74,6 +74,7 @@
 
     img:hover {
       scale: 110%;
+      transition: 0.5s;
     }
 
     a.nav-item {
@@ -81,6 +82,7 @@
     }
     a.nav-item:hover {
       scale: 110%;
+      transition: 0.5s;
     }
 
     a.download-container {
@@ -115,6 +117,7 @@
     .btn:hover {
       background-position: right center; /* change the direction of the change here */
       text-decoration: none;
+      scale: 110%;
     }
 
     .btn:active {
