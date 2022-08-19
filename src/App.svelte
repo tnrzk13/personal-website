@@ -10,7 +10,6 @@
   import ContactWrapper from "./components/05-Contact/ContactWrapper.svelte";
   import Navbar from "./components/Navbar.svelte";
   import Loader from "./components/Loader.svelte";
-  import SaosWrapper from "./components/SaosWrapper.svelte";
 
   // dev mode
   let boolFadeAnimation, boolShowLoadingScreen, boolAnimateText;
@@ -85,11 +84,9 @@
     <TitleMobile {boolAnimateText} {titleInfo} />
     <div id="content-container">
       <div id="content" bind:clientHeight={contentHeight}>
-        <SaosWrapper {boolFadeAnimation}><AboutMe /></SaosWrapper>
-        <SaosWrapper {boolFadeAnimation}><Career /></SaosWrapper>
-        <SaosWrapper {boolFadeAnimation}
-          ><Projects {boolMobileView} /></SaosWrapper
-        >
+        <AboutMe />
+        <Career />
+        <Projects {boolMobileView} />
       </div>
       <div id="contact" style="height: 75vh;" />
       <ContactWrapper {contactInfo} />
@@ -108,9 +105,9 @@
     />
     <div id="content-container" style="top: {titleHeight}px;">
       <div id="content" bind:clientHeight={contentHeight}>
-        <SaosWrapper {boolFadeAnimation}><AboutMe /></SaosWrapper>
-        <SaosWrapper {boolFadeAnimation}><Career /></SaosWrapper>
-        <SaosWrapper {boolFadeAnimation}><Projects /></SaosWrapper>
+        <AboutMe />
+        <Career />
+        <Projects {boolMobileView} />
       </div>
       <ContactText {contactInfo} {titleHeight} {contactYOffset} />
     </div>
