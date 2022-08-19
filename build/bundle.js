@@ -2987,6 +2987,7 @@ var app = (function () {
     	let t8;
     	let div6;
     	let div5;
+    	let a;
     	let img;
     	let img_src_value;
     	let current;
@@ -3024,10 +3025,11 @@ var app = (function () {
     			t8 = space();
     			div6 = element("div");
     			div5 = element("div");
+    			a = element("a");
     			img = element("img");
-    			attr_dev(div0, "class", "empty row svelte-1a1ebrz");
+    			attr_dev(div0, "class", "empty row svelte-r1mzw0");
     			add_location(div0, file$d, 7, 2, 226);
-    			attr_dev(h1, "class", "title col-md-9 svelte-1a1ebrz");
+    			attr_dev(h1, "class", "title col-md-9 svelte-r1mzw0");
     			add_location(h1, file$d, 8, 2, 255);
     			add_location(br0, file$d, 15, 8, 636);
     			add_location(br1, file$d, 15, 14, 642);
@@ -3035,26 +3037,28 @@ var app = (function () {
     			add_location(br3, file$d, 19, 15, 904);
     			add_location(br4, file$d, 21, 8, 981);
     			add_location(br5, file$d, 21, 14, 987);
-    			attr_dev(div1, "class", "description svelte-1a1ebrz");
+    			attr_dev(div1, "class", "description svelte-r1mzw0");
     			add_location(div1, file$d, 11, 6, 375);
-    			attr_dev(div2, "class", "row svelte-1a1ebrz");
+    			attr_dev(div2, "class", "row svelte-r1mzw0");
     			add_location(div2, file$d, 24, 8, 1060);
-    			attr_dev(div3, "class", "row techlist1 m-0 p-0 svelte-1a1ebrz");
+    			attr_dev(div3, "class", "row techlist1 m-0 p-0 svelte-r1mzw0");
     			add_location(div3, file$d, 23, 6, 1015);
-    			attr_dev(div4, "class", "text col-md-7 svelte-1a1ebrz");
+    			attr_dev(div4, "class", "text col-md-7 svelte-r1mzw0");
     			add_location(div4, file$d, 10, 4, 340);
-    			attr_dev(img, "class", "aboutmeimg svelte-1a1ebrz");
+    			attr_dev(img, "class", "aboutmeimg svelte-r1mzw0");
     			if (!src_url_equal(img.src, img_src_value = "images/02-aboutme/self.avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "tony kwok");
-    			add_location(img, file$d, 31, 8, 1243);
-    			attr_dev(div5, "class", "aboutmeimg-container svelte-1a1ebrz");
+    			add_location(img, file$d, 32, 10, 1306);
+    			attr_dev(a, "href", "https://www.linkedin.com/in/tony-k-kwok/");
+    			add_location(a, file$d, 31, 8, 1243);
+    			attr_dev(div5, "class", "aboutmeimg-container svelte-r1mzw0");
     			add_location(div5, file$d, 30, 6, 1199);
-    			attr_dev(div6, "class", "imgdiv col-md-5 svelte-1a1ebrz");
+    			attr_dev(div6, "class", "imgdiv col-md-5 svelte-r1mzw0");
     			add_location(div6, file$d, 29, 4, 1162);
-    			attr_dev(div7, "class", "row col-md-9 svelte-1a1ebrz");
+    			attr_dev(div7, "class", "row col-md-9 svelte-r1mzw0");
     			add_location(div7, file$d, 9, 2, 308);
     			attr_dev(div8, "id", "aboutme");
-    			attr_dev(div8, "class", "aboutMe container-fluid col-sm-10 offset-sm-1 svelte-1a1ebrz");
+    			attr_dev(div8, "class", "aboutMe container-fluid col-sm-10 offset-sm-1 svelte-r1mzw0");
     			add_location(div8, file$d, 6, 0, 150);
     		},
     		l: function claim(nodes) {
@@ -3086,7 +3090,8 @@ var app = (function () {
     			append_dev(div7, t8);
     			append_dev(div7, div6);
     			append_dev(div6, div5);
-    			append_dev(div5, img);
+    			append_dev(div5, a);
+    			append_dev(a, img);
     			current = true;
     		},
     		p: noop,
