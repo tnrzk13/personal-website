@@ -6946,16 +6946,15 @@ var app = (function () {
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
     	child_ctx[4] = list[i].title;
-    	child_ctx[5] = list[i].imgurl1;
-    	child_ctx[6] = list[i].imgurl2;
-    	child_ctx[7] = list[i].urls;
-    	child_ctx[8] = list[i].text;
-    	child_ctx[9] = list[i].techstack;
-    	child_ctx[11] = i;
+    	child_ctx[5] = list[i].imgurl;
+    	child_ctx[6] = list[i].urls;
+    	child_ctx[7] = list[i].text;
+    	child_ctx[8] = list[i].techstack;
+    	child_ctx[10] = i;
     	return child_ctx;
     }
 
-    // (75:8) {:else}
+    // (72:8) {:else}
     function create_else_block_1(ctx) {
     	let div3;
     	let div0;
@@ -6968,15 +6967,15 @@ var app = (function () {
     	cardproject = new CardProject({
     			props: {
     				title: /*title*/ ctx[4],
-    				urls: /*urls*/ ctx[7],
-    				text: /*text*/ ctx[8],
-    				techstack: /*techstack*/ ctx[9]
+    				urls: /*urls*/ ctx[6],
+    				text: /*text*/ ctx[7],
+    				techstack: /*techstack*/ ctx[8]
     			},
     			$$inline: true
     		});
 
     	function select_block_type_2(ctx, dirty) {
-    		if (/*urls*/ ctx[7].boolUrlExists) return create_if_block_2;
+    		if (/*urls*/ ctx[6].boolUrlExists) return create_if_block_2;
     		return create_else_block_2;
     	}
 
@@ -6993,13 +6992,13 @@ var app = (function () {
     			div1 = element("div");
     			if_block.c();
     			attr_dev(div0, "class", "proj-description col-md-5 svelte-a7rqdw");
-    			add_location(div0, file$6, 76, 12, 3029);
+    			add_location(div0, file$6, 73, 12, 2863);
     			attr_dev(div1, "class", "main-img-container-odd col-md-10 offset-md-2 main-img-container svelte-a7rqdw");
-    			add_location(div1, file$6, 80, 14, 3219);
+    			add_location(div1, file$6, 77, 14, 3053);
     			attr_dev(div2, "class", "img-container col-md-7 svelte-a7rqdw");
-    			add_location(div2, file$6, 79, 12, 3167);
+    			add_location(div2, file$6, 76, 12, 3001);
     			attr_dev(div3, "class", "row project-container svelte-a7rqdw");
-    			add_location(div3, file$6, 75, 10, 2980);
+    			add_location(div3, file$6, 72, 10, 2814);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -7034,14 +7033,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(75:8) {:else}",
+    		source: "(72:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (58:8) {#if index % 2 === 0 || boolMobileView}
+    // (55:8) {#if index % 2 === 0 || boolMobileView}
     function create_if_block$3(ctx) {
     	let div3;
     	let div1;
@@ -7052,7 +7051,7 @@ var app = (function () {
     	let current;
 
     	function select_block_type_1(ctx, dirty) {
-    		if (/*urls*/ ctx[7].boolUrlExists) return create_if_block_1;
+    		if (/*urls*/ ctx[6].boolUrlExists) return create_if_block_1;
     		return create_else_block$1;
     	}
 
@@ -7062,9 +7061,9 @@ var app = (function () {
     	cardproject = new CardProject({
     			props: {
     				title: /*title*/ ctx[4],
-    				urls: /*urls*/ ctx[7],
-    				text: /*text*/ ctx[8],
-    				techstack: /*techstack*/ ctx[9]
+    				urls: /*urls*/ ctx[6],
+    				text: /*text*/ ctx[7],
+    				techstack: /*techstack*/ ctx[8]
     			},
     			$$inline: true
     		});
@@ -7079,13 +7078,13 @@ var app = (function () {
     			div2 = element("div");
     			create_component(cardproject.$$.fragment);
     			attr_dev(div0, "class", "main-img-container-even col-md-10 main-img-container svelte-a7rqdw");
-    			add_location(div0, file$6, 60, 14, 2389);
+    			add_location(div0, file$6, 57, 14, 2225);
     			attr_dev(div1, "class", "img-container col-md-7 svelte-a7rqdw");
-    			add_location(div1, file$6, 59, 12, 2337);
+    			add_location(div1, file$6, 56, 12, 2173);
     			attr_dev(div2, "class", "proj-description col-md-5 svelte-a7rqdw");
-    			add_location(div2, file$6, 70, 12, 2809);
+    			add_location(div2, file$6, 67, 12, 2643);
     			attr_dev(div3, "class", "row project-container svelte-a7rqdw");
-    			add_location(div3, file$6, 58, 10, 2288);
+    			add_location(div3, file$6, 55, 10, 2124);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -7120,14 +7119,14 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(58:8) {#if index % 2 === 0 || boolMobileView}",
+    		source: "(55:8) {#if index % 2 === 0 || boolMobileView}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (88:16) {:else}
+    // (85:16) {:else}
     function create_else_block_2(ctx) {
     	let img;
     	let img_src_value;
@@ -7136,9 +7135,9 @@ var app = (function () {
     		c: function create() {
     			img = element("img");
     			attr_dev(img, "class", "main main-odd svelte-a7rqdw");
-    			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[5])) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = /*imgurl*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$6, 88, 18, 3565);
+    			add_location(img, file$6, 85, 18, 3398);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -7153,14 +7152,14 @@ var app = (function () {
     		block,
     		id: create_else_block_2.name,
     		type: "else",
-    		source: "(88:16) {:else}",
+    		source: "(85:16) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (84:16) {#if urls.boolUrlExists}
+    // (81:16) {#if urls.boolUrlExists}
     function create_if_block_2(ctx) {
     	let a;
     	let img;
@@ -7171,12 +7170,12 @@ var app = (function () {
     			a = element("a");
     			img = element("img");
     			attr_dev(img, "class", "main main-odd svelte-a7rqdw");
-    			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[5])) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = /*imgurl*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$6, 85, 20, 3439);
-    			attr_dev(a, "href", /*urls*/ ctx[7].projectUrl);
+    			add_location(img, file$6, 82, 20, 3273);
+    			attr_dev(a, "href", /*urls*/ ctx[6].projectUrl);
     			attr_dev(a, "class", "svelte-a7rqdw");
-    			add_location(a, file$6, 84, 18, 3391);
+    			add_location(a, file$6, 81, 18, 3225);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -7192,14 +7191,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(84:16) {#if urls.boolUrlExists}",
+    		source: "(81:16) {#if urls.boolUrlExists}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (66:16) {:else}
+    // (63:16) {:else}
     function create_else_block$1(ctx) {
     	let img;
     	let img_src_value;
@@ -7208,9 +7207,9 @@ var app = (function () {
     		c: function create() {
     			img = element("img");
     			attr_dev(img, "class", "main svelte-a7rqdw");
-    			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[5])) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = /*imgurl*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$6, 66, 18, 2682);
+    			add_location(img, file$6, 63, 18, 2517);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -7225,14 +7224,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(66:16) {:else}",
+    		source: "(63:16) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (62:16) {#if urls.boolUrlExists}
+    // (59:16) {#if urls.boolUrlExists}
     function create_if_block_1(ctx) {
     	let a;
     	let img;
@@ -7243,12 +7242,12 @@ var app = (function () {
     			a = element("a");
     			img = element("img");
     			attr_dev(img, "class", "main svelte-a7rqdw");
-    			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[5])) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = /*imgurl*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$6, 63, 20, 2565);
-    			attr_dev(a, "href", /*urls*/ ctx[7].projectUrl);
+    			add_location(img, file$6, 60, 20, 2401);
+    			attr_dev(a, "href", /*urls*/ ctx[6].projectUrl);
     			attr_dev(a, "class", "svelte-a7rqdw");
-    			add_location(a, file$6, 62, 18, 2517);
+    			add_location(a, file$6, 59, 18, 2353);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -7264,14 +7263,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(62:16) {#if urls.boolUrlExists}",
+    		source: "(59:16) {#if urls.boolUrlExists}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (57:6) {#each projList as { title, imgurl1, imgurl2, urls, text, techstack }
+    // (54:6) {#each projList as { title, imgurl, urls, text, techstack }
     function create_each_block$1(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -7283,7 +7282,7 @@ var app = (function () {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*index*/ ctx[11] % 2 === 0 || /*boolMobileView*/ ctx[0]) return 0;
+    		if (/*index*/ ctx[10] % 2 === 0 || /*boolMobileView*/ ctx[0]) return 0;
     		return 1;
     	}
 
@@ -7296,8 +7295,8 @@ var app = (function () {
     			t = space();
     			br0 = element("br");
     			br1 = element("br");
-    			add_location(br0, file$6, 94, 8, 3730);
-    			add_location(br1, file$6, 94, 14, 3736);
+    			add_location(br0, file$6, 91, 8, 3562);
+    			add_location(br1, file$6, 91, 14, 3568);
     		},
     		m: function mount(target, anchor) {
     			if_blocks[current_block_type_index].m(target, anchor);
@@ -7354,14 +7353,14 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(57:6) {#each projList as { title, imgurl1, imgurl2, urls, text, techstack }",
+    		source: "(54:6) {#each projList as { title, imgurl, urls, text, techstack }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (56:4) <SimpleGrid cols={1}>
+    // (53:4) <SimpleGrid cols={1}>
     function create_default_slot(ctx) {
     	let each_1_anchor;
     	let current;
@@ -7450,7 +7449,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(56:4) <SimpleGrid cols={1}>",
+    		source: "(53:4) <SimpleGrid cols={1}>",
     		ctx
     	});
 
@@ -7483,12 +7482,12 @@ var app = (function () {
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9 svelte-a7rqdw");
-    			add_location(h1, file$6, 53, 2, 2002);
+    			add_location(h1, file$6, 50, 2, 1848);
     			attr_dev(div0, "class", "projects container-fluid col-md-9 svelte-a7rqdw");
-    			add_location(div0, file$6, 54, 2, 2068);
+    			add_location(div0, file$6, 51, 2, 1914);
     			attr_dev(div1, "id", "projects");
     			attr_dev(div1, "class", "container-fluid col-sm-10 offset-sm-1 svelte-a7rqdw");
-    			add_location(div1, file$6, 52, 0, 1933);
+    			add_location(div1, file$6, 49, 0, 1779);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7504,7 +7503,7 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			const simplegrid_changes = {};
 
-    			if (dirty & /*$$scope, boolMobileView*/ 4097) {
+    			if (dirty & /*$$scope, boolMobileView*/ 2049) {
     				simplegrid_changes.$$scope = { dirty, ctx };
     			}
 
@@ -7548,22 +7547,15 @@ var app = (function () {
     	}
 
     	class Project {
-    		constructor(title, imgurl1, imgurl2, urls, text, techstack) {
-    			Object.assign(this, {
-    				title,
-    				imgurl1,
-    				imgurl2,
-    				urls,
-    				text,
-    				techstack
-    			});
+    		constructor(title, imgurl, urls, text, techstack) {
+    			Object.assign(this, { title, imgurl, urls, text, techstack });
     		}
     	}
 
     	let projList = [
-    		new Project("This Website!", "images/04-project/website.avif", "images/04-project/websitecard.avif", new Urls(true, "https://tnrzk13.github.io/personal-website/", "https://github.com/tnrzk13/personal-website"), "Learned a new framework, brushed up on html and css, created and solved lots of bugs. Made with love.", ["Javascript", "Svelte"]),
-    		new Project("SoulDog", "images/04-project/souldog.avif", "images/04-project/souldogcard.avif", new Urls(true, "https://souldog.herokuapp.com", "https://github.com/aarshio/SoulDog-CS348"), 'Webapp linked to database designed to match abandoned dogs with new dog owners. Features include account creation, Google authentication, search, and posting. Awarded "top project of the class" in CS348: Database Systems.', ["Javascript", "React", "Node.JS", "Knex JS", "SQL"]),
-    		new Project("Wumpus World", "images/04-project/wumpus.avif", "images/04-project/wumpuscard.avif", new Urls(), "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.", ["Python"])
+    		new Project("This Website!", "images/04-project/website.avif", new Urls(true, "https://tnrzk13.github.io/personal-website/", "https://github.com/tnrzk13/personal-website"), "Learned a new framework, brushed up on html and css, created and solved lots of bugs. Made with love.", ["Javascript", "Svelte"]),
+    		new Project("SoulDog", "images/04-project/souldog.avif", new Urls(true, "https://souldog.herokuapp.com", "https://github.com/aarshio/SoulDog-CS348"), 'Webapp linked to database designed to match abandoned dogs with new dog owners. Features include account creation, Google authentication, search, and posting. Awarded "top project of the class" in CS348: Database Systems.', ["Javascript", "React", "Node.JS", "Knex JS", "SQL"]),
+    		new Project("Wumpus World", "images/04-project/wumpus.avif", new Urls(), "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.", ["Python"])
     	];
 
     	const writable_props = ['boolMobileView'];
