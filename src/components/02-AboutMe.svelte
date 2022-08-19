@@ -5,7 +5,7 @@
 
 <div id="aboutme" class="aboutMe container-fluid col-sm-10 offset-sm-1">
   <div class="empty row" />
-  <h1 class="title col-md-9">About me</h1>
+  <h1 class="title col-md-9">A little about me</h1>
   <div class="row col-md-9">
     <div class="text col-md-7">
       <div class="description">
@@ -77,7 +77,8 @@
     }
 
     h1.title {
-      margin: 0 auto 1em auto;
+      margin: 0 auto 0.5em auto;
+      background-image: var(--gradient-pink-blue);
     }
     .row {
       margin: 0 auto;

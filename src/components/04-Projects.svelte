@@ -39,7 +39,7 @@
 </script>
 
 <div id="projects" class="container-fluid col-sm-10 offset-sm-1">
-  <h1 class="title col-md-9">Projects</h1>
+  <h1 class="title col-md-9">Leveling up with side projects</h1>
   <div class="projects container-fluid col-md-9">
     <SimpleGrid cols={1}>
       {#each projList as { title, imgurl1, imgurl2, urls, text, techstack }, index}
@@ -100,6 +100,10 @@
 
   #projects {
     border: 1px solid transparent;
+
+    h1.title {
+      background-image: var(--gradient-relaxing-red);
+    }
   }
 
   .container-fluid {

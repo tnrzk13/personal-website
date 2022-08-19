@@ -3,7 +3,7 @@
 </script>
 
 <div class="div container-fluid">
-  <div class="card m-2 cb1 text-center">
+  <div class="card border-0 m-2 cb1 text-center">
     <div class="card-body">
       {#if urls.boolUrlExists}
         <span>

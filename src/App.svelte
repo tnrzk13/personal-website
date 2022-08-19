@@ -132,7 +132,7 @@
       overflow: visible;
 
       #content {
-        background-image: linear-gradient(var(--blue), var(--darkblue));
+        background-image: linear-gradient(var(--blue) 5%, var(--darkblue) 50%);
         position: relative;
         z-index: 2;
         border-radius: 0 0 50% 50% / 0 0 3em 3em;
