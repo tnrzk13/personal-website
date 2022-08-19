@@ -9,8 +9,8 @@
     }
   }
   class Project {
-    constructor(title, imgurl1, imgurl2, urls, text, techstack) {
-      Object.assign(this, { title, imgurl1, imgurl2, urls, text, techstack });
+    constructor(title, imgurl, urls, text, techstack) {
+      Object.assign(this, { title, imgurl, urls, text, techstack });
     }
   }
 
@@ -18,7 +18,6 @@
     new Project(
       "This Website!",
       "images/04-project/website.avif",
-      "images/04-project/websitecard.avif",
       new Urls(
         true,
         "https://tnrzk13.github.io/personal-website/",
@@ -30,7 +29,6 @@
     new Project(
       "SoulDog",
       "images/04-project/souldog.avif",
-      "images/04-project/souldogcard.avif",
       new Urls(
         true,
         "https://souldog.herokuapp.com",
@@ -42,7 +40,6 @@
     new Project(
       "Wumpus World",
       "images/04-project/wumpus.avif",
-      "images/04-project/wumpuscard.avif",
       new Urls(),
       "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.",
       ["Python"]
@@ -54,17 +51,17 @@
   <h1 class="title col-md-9">Leveling up with side projects</h1>
   <div class="projects container-fluid col-md-9">
     <SimpleGrid cols={1}>
-      {#each projList as { title, imgurl1, imgurl2, urls, text, techstack }, index}
+      {#each projList as { title, imgurl, urls, text, techstack }, index}
         {#if index % 2 === 0 || boolMobileView}
           <div class="row project-container">
             <div class="img-container col-md-7">
               <div class="main-img-container-even col-md-10 main-img-container">
                 {#if urls.boolUrlExists}
                   <a href={urls.projectUrl}>
-                    <img class="main" src={imgurl1} alt="project" />
+                    <img class="main" src={imgurl} alt="project" />
                   </a>
                 {:else}
-                  <img class="main" src={imgurl1} alt="project" />
+                  <img class="main" src={imgurl} alt="project" />
                 {/if}
               </div>
             </div>
@@ -83,10 +80,10 @@
               >
                 {#if urls.boolUrlExists}
                   <a href={urls.projectUrl}>
-                    <img class="main main-odd" src={imgurl1} alt="project" />
+                    <img class="main main-odd" src={imgurl} alt="project" />
                   </a>
                 {:else}
-                  <img class="main main-odd" src={imgurl1} alt="project" />
+                  <img class="main main-odd" src={imgurl} alt="project" />
                 {/if}
               </div>
             </div>
