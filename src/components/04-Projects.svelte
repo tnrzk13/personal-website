@@ -16,6 +16,18 @@
 
   let projList = [
     new Project(
+      "This Website!",
+      "images/04-project/website.avif",
+      "images/04-project/websitecard.avif",
+      new Urls(
+        true,
+        "https://tnrzk13.github.io/personal-website/",
+        "https://github.com/tnrzk13/personal-website"
+      ),
+      "Learned a new framework, brushed up on html and css, created and solved lots of bugs. Made with love.",
+      ["Javascript", "Svelte"]
+    ),
+    new Project(
       "SoulDog",
       "images/04-project/souldog.avif",
       "images/04-project/souldogcard.avif",
@@ -31,7 +43,7 @@
       "Wumpus World",
       "images/04-project/wumpus.avif",
       "images/04-project/wumpuscard.avif",
-      new Urls(false),
+      new Urls(),
       "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.",
       ["Python"]
     ),

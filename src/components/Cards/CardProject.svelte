@@ -13,11 +13,13 @@
             </h4>
           </a>
           &nbsp; &nbsp;
-          <a href={urls.codeUrl}>
-            <h4 class="title">
-              <i class="fa-brands fa-github" />
-            </h4>
-          </a>
+          {#if urls.codeUrl !== ""}
+            <a href={urls.codeUrl}>
+              <h4 class="title">
+                <i class="fa-brands fa-github" />
+              </h4>
+            </a>
+          {/if}
         </span>
       {:else}
         <h4 class="title">{title}</h4>

@@ -1623,7 +1623,7 @@ var app = (function () {
     }
 
     // (73:32) 
-    function create_if_block_1$2(ctx) {
+    function create_if_block_1$3(ctx) {
     	let img;
     	let img_src_value;
 
@@ -1664,7 +1664,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$2.name,
+    		id: create_if_block_1$3.name,
     		type: "if",
     		source: "(73:32) ",
     		ctx
@@ -1969,7 +1969,7 @@ var app = (function () {
 
     	const if_block_creators = [
     		create_if_block$7,
-    		create_if_block_1$2,
+    		create_if_block_1$3,
     		create_if_block_2$1,
     		create_if_block_5,
     		create_if_block_6,
@@ -4944,7 +4944,7 @@ var app = (function () {
     }
 
     // (64:22) 
-    function create_if_block_1$1(ctx) {
+    function create_if_block_1$2(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -5065,7 +5065,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$1.name,
+    		id: create_if_block_1$2.name,
     		type: "if",
     		source: "(64:22) ",
     		ctx
@@ -5317,7 +5317,7 @@ var app = (function () {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$5, create_if_block_1$1, create_else_block$3];
+    	const if_block_creators = [create_if_block$5, create_if_block_1$2, create_else_block$3];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -6505,7 +6505,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (22:6) {:else}
+    // (24:6) {:else}
     function create_else_block$2(ctx) {
     	let h4;
     	let t;
@@ -6515,7 +6515,7 @@ var app = (function () {
     			h4 = element("h4");
     			t = text(/*title*/ ctx[0]);
     			attr_dev(h4, "class", "title svelte-3nid1g");
-    			add_location(h4, file$7, 22, 8, 605);
+    			add_location(h4, file$7, 24, 8, 669);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h4, anchor);
@@ -6533,7 +6533,7 @@ var app = (function () {
     		block,
     		id: create_else_block$2.name,
     		type: "else",
-    		source: "(22:6) {:else}",
+    		source: "(24:6) {:else}",
     		ctx
     	});
 
@@ -6543,71 +6543,67 @@ var app = (function () {
     // (8:6) {#if urls.boolUrlExists}
     function create_if_block$4(ctx) {
     	let span;
-    	let a0;
-    	let h40;
+    	let a;
+    	let h4;
     	let t0;
     	let t1;
-    	let i0;
-    	let a0_href_value;
+    	let i;
+    	let a_href_value;
     	let t2;
-    	let a1;
-    	let h41;
-    	let i1;
-    	let a1_href_value;
+    	let if_block = /*urls*/ ctx[1].codeUrl !== "" && create_if_block_1$1(ctx);
 
     	const block = {
     		c: function create() {
     			span = element("span");
-    			a0 = element("a");
-    			h40 = element("h4");
+    			a = element("a");
+    			h4 = element("h4");
     			t0 = text(/*title*/ ctx[0]);
     			t1 = space();
-    			i0 = element("i");
+    			i = element("i");
     			t2 = text("\r\n             \r\n          ");
-    			a1 = element("a");
-    			h41 = element("h4");
-    			i1 = element("i");
-    			attr_dev(i0, "class", "fa-solid fa-link");
-    			add_location(i0, file$7, 11, 22, 322);
-    			attr_dev(h40, "class", "title svelte-3nid1g");
-    			add_location(h40, file$7, 10, 12, 280);
-    			attr_dev(a0, "href", a0_href_value = /*urls*/ ctx[1].projectUrl);
-    			attr_dev(a0, "class", "svelte-3nid1g");
-    			add_location(a0, file$7, 9, 10, 240);
-    			attr_dev(i1, "class", "fa-brands fa-github");
-    			add_location(i1, file$7, 17, 14, 495);
-    			attr_dev(h41, "class", "title svelte-3nid1g");
-    			add_location(h41, file$7, 16, 12, 461);
-    			attr_dev(a1, "href", a1_href_value = /*urls*/ ctx[1].codeUrl);
-    			attr_dev(a1, "class", "svelte-3nid1g");
-    			add_location(a1, file$7, 15, 10, 424);
+    			if (if_block) if_block.c();
+    			attr_dev(i, "class", "fa-solid fa-link");
+    			add_location(i, file$7, 11, 22, 322);
+    			attr_dev(h4, "class", "title svelte-3nid1g");
+    			add_location(h4, file$7, 10, 12, 280);
+    			attr_dev(a, "href", a_href_value = /*urls*/ ctx[1].projectUrl);
+    			attr_dev(a, "class", "svelte-3nid1g");
+    			add_location(a, file$7, 9, 10, 240);
     			add_location(span, file$7, 8, 8, 222);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
-    			append_dev(span, a0);
-    			append_dev(a0, h40);
-    			append_dev(h40, t0);
-    			append_dev(h40, t1);
-    			append_dev(h40, i0);
+    			append_dev(span, a);
+    			append_dev(a, h4);
+    			append_dev(h4, t0);
+    			append_dev(h4, t1);
+    			append_dev(h4, i);
     			append_dev(span, t2);
-    			append_dev(span, a1);
-    			append_dev(a1, h41);
-    			append_dev(h41, i1);
+    			if (if_block) if_block.m(span, null);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*title*/ 1) set_data_dev(t0, /*title*/ ctx[0]);
 
-    			if (dirty & /*urls*/ 2 && a0_href_value !== (a0_href_value = /*urls*/ ctx[1].projectUrl)) {
-    				attr_dev(a0, "href", a0_href_value);
+    			if (dirty & /*urls*/ 2 && a_href_value !== (a_href_value = /*urls*/ ctx[1].projectUrl)) {
+    				attr_dev(a, "href", a_href_value);
     			}
 
-    			if (dirty & /*urls*/ 2 && a1_href_value !== (a1_href_value = /*urls*/ ctx[1].codeUrl)) {
-    				attr_dev(a1, "href", a1_href_value);
+    			if (/*urls*/ ctx[1].codeUrl !== "") {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_1$1(ctx);
+    					if_block.c();
+    					if_block.m(span, null);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
     			}
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(span);
+    			if (if_block) if_block.d();
     		}
     	};
 
@@ -6622,7 +6618,53 @@ var app = (function () {
     	return block;
     }
 
-    // (28:8) {#each techstack as tech}
+    // (16:10) {#if urls.codeUrl !== ""}
+    function create_if_block_1$1(ctx) {
+    	let a;
+    	let h4;
+    	let i;
+    	let a_href_value;
+
+    	const block = {
+    		c: function create() {
+    			a = element("a");
+    			h4 = element("h4");
+    			i = element("i");
+    			attr_dev(i, "class", "fa-brands fa-github");
+    			add_location(i, file$7, 18, 16, 538);
+    			attr_dev(h4, "class", "title svelte-3nid1g");
+    			add_location(h4, file$7, 17, 14, 502);
+    			attr_dev(a, "href", a_href_value = /*urls*/ ctx[1].codeUrl);
+    			attr_dev(a, "class", "svelte-3nid1g");
+    			add_location(a, file$7, 16, 12, 463);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, a, anchor);
+    			append_dev(a, h4);
+    			append_dev(h4, i);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*urls*/ 2 && a_href_value !== (a_href_value = /*urls*/ ctx[1].codeUrl)) {
+    				attr_dev(a, "href", a_href_value);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(a);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$1.name,
+    		type: "if",
+    		source: "(16:10) {#if urls.codeUrl !== \\\"\\\"}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (30:8) {#each techstack as tech}
     function create_each_block$2(ctx) {
     	let div;
     	let t_value = /*tech*/ ctx[4] + "";
@@ -6633,7 +6675,7 @@ var app = (function () {
     			div = element("div");
     			t = text(t_value);
     			attr_dev(div, "class", "techstack svelte-3nid1g");
-    			add_location(div, file$7, 28, 10, 774);
+    			add_location(div, file$7, 30, 10, 838);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -6651,7 +6693,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(28:8) {#each techstack as tech}",
+    		source: "(30:8) {#each techstack as tech}",
     		ctx
     	});
 
@@ -6705,12 +6747,12 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(br0, file$7, 24, 6, 656);
-    			add_location(br1, file$7, 24, 12, 662);
+    			add_location(br0, file$7, 26, 6, 720);
+    			add_location(br1, file$7, 26, 12, 726);
     			attr_dev(p, "class", "text");
-    			add_location(p, file$7, 25, 6, 676);
+    			add_location(p, file$7, 27, 6, 740);
     			attr_dev(div0, "class", "row");
-    			add_location(div0, file$7, 26, 6, 710);
+    			add_location(div0, file$7, 28, 6, 774);
     			attr_dev(div1, "class", "card-body svelte-3nid1g");
     			add_location(div1, file$7, 6, 4, 157);
     			attr_dev(div2, "class", "card border-0 m-2 cb1 text-center svelte-3nid1g");
@@ -6913,7 +6955,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (64:8) {:else}
+    // (76:8) {:else}
     function create_else_block_1(ctx) {
     	let div3;
     	let div0;
@@ -6956,17 +6998,17 @@ var app = (function () {
     			t1 = space();
     			img = element("img");
     			attr_dev(div0, "class", "proj-description col-md-5 svelte-a7rqdw");
-    			add_location(div0, file$6, 65, 12, 2667);
+    			add_location(div0, file$6, 77, 12, 3095);
     			attr_dev(div1, "class", "main-img-container-odd col-md-10 offset-md-2 main-img-container svelte-a7rqdw");
-    			add_location(div1, file$6, 69, 14, 2857);
+    			add_location(div1, file$6, 81, 14, 3285);
     			attr_dev(img, "class", "card card-odd svelte-a7rqdw");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl2*/ ctx[6])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project 2");
-    			add_location(img, file$6, 80, 14, 3321);
+    			add_location(img, file$6, 92, 14, 3749);
     			attr_dev(div2, "class", "img-container col-md-7 svelte-a7rqdw");
-    			add_location(div2, file$6, 68, 12, 2805);
+    			add_location(div2, file$6, 80, 12, 3233);
     			attr_dev(div3, "class", "row project-container svelte-a7rqdw");
-    			add_location(div3, file$6, 64, 10, 2618);
+    			add_location(div3, file$6, 76, 10, 3046);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -7003,14 +7045,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(64:8) {:else}",
+    		source: "(76:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (46:8) {#if index % 2 === 0 || boolMobileView}
+    // (58:8) {#if index % 2 === 0 || boolMobileView}
     function create_if_block$3(ctx) {
     	let div3;
     	let div1;
@@ -7053,17 +7095,17 @@ var app = (function () {
     			div2 = element("div");
     			create_component(cardproject.$$.fragment);
     			attr_dev(div0, "class", "main-img-container-even col-md-10 main-img-container svelte-a7rqdw");
-    			add_location(div0, file$6, 48, 14, 1961);
+    			add_location(div0, file$6, 60, 14, 2389);
     			attr_dev(img, "class", "card svelte-a7rqdw");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl2*/ ctx[6])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project 2");
-    			add_location(img, file$6, 57, 14, 2363);
+    			add_location(img, file$6, 69, 14, 2791);
     			attr_dev(div1, "class", "img-container col-md-7 svelte-a7rqdw");
-    			add_location(div1, file$6, 47, 12, 1909);
+    			add_location(div1, file$6, 59, 12, 2337);
     			attr_dev(div2, "class", "proj-description col-md-5 svelte-a7rqdw");
-    			add_location(div2, file$6, 59, 12, 2447);
+    			add_location(div2, file$6, 71, 12, 2875);
     			attr_dev(div3, "class", "row project-container svelte-a7rqdw");
-    			add_location(div3, file$6, 46, 10, 1860);
+    			add_location(div3, file$6, 58, 10, 2288);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -7100,14 +7142,14 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(46:8) {#if index % 2 === 0 || boolMobileView}",
+    		source: "(58:8) {#if index % 2 === 0 || boolMobileView}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (77:16) {:else}
+    // (89:16) {:else}
     function create_else_block_2(ctx) {
     	let img;
     	let img_src_value;
@@ -7118,7 +7160,7 @@ var app = (function () {
     			attr_dev(img, "class", "main main-odd svelte-a7rqdw");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$6, 77, 18, 3203);
+    			add_location(img, file$6, 89, 18, 3631);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -7133,14 +7175,14 @@ var app = (function () {
     		block,
     		id: create_else_block_2.name,
     		type: "else",
-    		source: "(77:16) {:else}",
+    		source: "(89:16) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (73:16) {#if urls.boolUrlExists}
+    // (85:16) {#if urls.boolUrlExists}
     function create_if_block_2(ctx) {
     	let a;
     	let img;
@@ -7153,10 +7195,10 @@ var app = (function () {
     			attr_dev(img, "class", "main main-odd svelte-a7rqdw");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$6, 74, 20, 3077);
+    			add_location(img, file$6, 86, 20, 3505);
     			attr_dev(a, "href", /*urls*/ ctx[7].projectUrl);
     			attr_dev(a, "class", "svelte-a7rqdw");
-    			add_location(a, file$6, 73, 18, 3029);
+    			add_location(a, file$6, 85, 18, 3457);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -7172,14 +7214,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(73:16) {#if urls.boolUrlExists}",
+    		source: "(85:16) {#if urls.boolUrlExists}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (54:16) {:else}
+    // (66:16) {:else}
     function create_else_block$1(ctx) {
     	let img;
     	let img_src_value;
@@ -7190,7 +7232,7 @@ var app = (function () {
     			attr_dev(img, "class", "main svelte-a7rqdw");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$6, 54, 18, 2254);
+    			add_location(img, file$6, 66, 18, 2682);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -7205,14 +7247,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(54:16) {:else}",
+    		source: "(66:16) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (50:16) {#if urls.boolUrlExists}
+    // (62:16) {#if urls.boolUrlExists}
     function create_if_block_1(ctx) {
     	let a;
     	let img;
@@ -7225,10 +7267,10 @@ var app = (function () {
     			attr_dev(img, "class", "main svelte-a7rqdw");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$6, 51, 20, 2137);
+    			add_location(img, file$6, 63, 20, 2565);
     			attr_dev(a, "href", /*urls*/ ctx[7].projectUrl);
     			attr_dev(a, "class", "svelte-a7rqdw");
-    			add_location(a, file$6, 50, 18, 2089);
+    			add_location(a, file$6, 62, 18, 2517);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -7244,14 +7286,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(50:16) {#if urls.boolUrlExists}",
+    		source: "(62:16) {#if urls.boolUrlExists}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (45:6) {#each projList as { title, imgurl1, imgurl2, urls, text, techstack }
+    // (57:6) {#each projList as { title, imgurl1, imgurl2, urls, text, techstack }
     function create_each_block$1(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -7276,8 +7318,8 @@ var app = (function () {
     			t = space();
     			br0 = element("br");
     			br1 = element("br");
-    			add_location(br0, file$6, 84, 8, 3443);
-    			add_location(br1, file$6, 84, 14, 3449);
+    			add_location(br0, file$6, 96, 8, 3871);
+    			add_location(br1, file$6, 96, 14, 3877);
     		},
     		m: function mount(target, anchor) {
     			if_blocks[current_block_type_index].m(target, anchor);
@@ -7334,14 +7376,14 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(45:6) {#each projList as { title, imgurl1, imgurl2, urls, text, techstack }",
+    		source: "(57:6) {#each projList as { title, imgurl1, imgurl2, urls, text, techstack }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (44:4) <SimpleGrid cols={1}>
+    // (56:4) <SimpleGrid cols={1}>
     function create_default_slot(ctx) {
     	let each_1_anchor;
     	let current;
@@ -7430,7 +7472,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(44:4) <SimpleGrid cols={1}>",
+    		source: "(56:4) <SimpleGrid cols={1}>",
     		ctx
     	});
 
@@ -7463,12 +7505,12 @@ var app = (function () {
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9 svelte-a7rqdw");
-    			add_location(h1, file$6, 41, 2, 1574);
+    			add_location(h1, file$6, 53, 2, 2002);
     			attr_dev(div0, "class", "projects container-fluid col-md-9 svelte-a7rqdw");
-    			add_location(div0, file$6, 42, 2, 1640);
+    			add_location(div0, file$6, 54, 2, 2068);
     			attr_dev(div1, "id", "projects");
     			attr_dev(div1, "class", "container-fluid col-sm-10 offset-sm-1 svelte-a7rqdw");
-    			add_location(div1, file$6, 40, 0, 1505);
+    			add_location(div1, file$6, 52, 0, 1933);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7541,8 +7583,9 @@ var app = (function () {
     	}
 
     	let projList = [
+    		new Project("This Website!", "images/04-project/website.avif", "images/04-project/websitecard.avif", new Urls(true, "https://tnrzk13.github.io/personal-website/", "https://github.com/tnrzk13/personal-website"), "Learned a new framework, brushed up on html and css, created and solved lots of bugs. Made with love.", ["Javascript", "Svelte"]),
     		new Project("SoulDog", "images/04-project/souldog.avif", "images/04-project/souldogcard.avif", new Urls(true, "https://souldog.herokuapp.com", "https://github.com/aarshio/SoulDog-CS348"), 'Webapp linked to database designed to match abandoned dogs with new dog owners. Features include account creation, Google authentication, search, and posting. Awarded "top project of the class" in CS348: Database Systems.', ["Javascript", "React", "Node.JS", "Knex JS", "SQL"]),
-    		new Project("Wumpus World", "images/04-project/wumpus.avif", "images/04-project/wumpuscard.avif", new Urls(false), "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.", ["Python"])
+    		new Project("Wumpus World", "images/04-project/wumpus.avif", "images/04-project/wumpuscard.avif", new Urls(), "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.", ["Python"])
     	];
 
     	const writable_props = ['boolMobileView'];
