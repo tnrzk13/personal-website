@@ -6955,17 +6955,14 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (76:8) {:else}
+    // (75:8) {:else}
     function create_else_block_1(ctx) {
     	let div3;
     	let div0;
     	let cardproject;
-    	let t0;
+    	let t;
     	let div2;
     	let div1;
-    	let t1;
-    	let img;
-    	let img_src_value;
     	let current;
 
     	cardproject = new CardProject({
@@ -6991,35 +6988,27 @@ var app = (function () {
     			div3 = element("div");
     			div0 = element("div");
     			create_component(cardproject.$$.fragment);
-    			t0 = space();
+    			t = space();
     			div2 = element("div");
     			div1 = element("div");
     			if_block.c();
-    			t1 = space();
-    			img = element("img");
     			attr_dev(div0, "class", "proj-description col-md-5 svelte-a7rqdw");
-    			add_location(div0, file$6, 77, 12, 3095);
+    			add_location(div0, file$6, 76, 12, 3029);
     			attr_dev(div1, "class", "main-img-container-odd col-md-10 offset-md-2 main-img-container svelte-a7rqdw");
-    			add_location(div1, file$6, 81, 14, 3285);
-    			attr_dev(img, "class", "card card-odd svelte-a7rqdw");
-    			if (!src_url_equal(img.src, img_src_value = /*imgurl2*/ ctx[6])) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "project 2");
-    			add_location(img, file$6, 92, 14, 3749);
+    			add_location(div1, file$6, 80, 14, 3219);
     			attr_dev(div2, "class", "img-container col-md-7 svelte-a7rqdw");
-    			add_location(div2, file$6, 80, 12, 3233);
+    			add_location(div2, file$6, 79, 12, 3167);
     			attr_dev(div3, "class", "row project-container svelte-a7rqdw");
-    			add_location(div3, file$6, 76, 10, 3046);
+    			add_location(div3, file$6, 75, 10, 2980);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
     			append_dev(div3, div0);
     			mount_component(cardproject, div0, null);
-    			append_dev(div3, t0);
+    			append_dev(div3, t);
     			append_dev(div3, div2);
     			append_dev(div2, div1);
     			if_block.m(div1, null);
-    			append_dev(div2, t1);
-    			append_dev(div2, img);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
@@ -7045,7 +7034,7 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(76:8) {:else}",
+    		source: "(75:8) {:else}",
     		ctx
     	});
 
@@ -7057,10 +7046,7 @@ var app = (function () {
     	let div3;
     	let div1;
     	let div0;
-    	let t0;
-    	let img;
-    	let img_src_value;
-    	let t1;
+    	let t;
     	let div2;
     	let cardproject;
     	let current;
@@ -7089,21 +7075,15 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			if_block.c();
-    			t0 = space();
-    			img = element("img");
-    			t1 = space();
+    			t = space();
     			div2 = element("div");
     			create_component(cardproject.$$.fragment);
     			attr_dev(div0, "class", "main-img-container-even col-md-10 main-img-container svelte-a7rqdw");
     			add_location(div0, file$6, 60, 14, 2389);
-    			attr_dev(img, "class", "card svelte-a7rqdw");
-    			if (!src_url_equal(img.src, img_src_value = /*imgurl2*/ ctx[6])) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "project 2");
-    			add_location(img, file$6, 69, 14, 2791);
     			attr_dev(div1, "class", "img-container col-md-7 svelte-a7rqdw");
     			add_location(div1, file$6, 59, 12, 2337);
     			attr_dev(div2, "class", "proj-description col-md-5 svelte-a7rqdw");
-    			add_location(div2, file$6, 71, 12, 2875);
+    			add_location(div2, file$6, 70, 12, 2809);
     			attr_dev(div3, "class", "row project-container svelte-a7rqdw");
     			add_location(div3, file$6, 58, 10, 2288);
     		},
@@ -7112,9 +7092,7 @@ var app = (function () {
     			append_dev(div3, div1);
     			append_dev(div1, div0);
     			if_block.m(div0, null);
-    			append_dev(div1, t0);
-    			append_dev(div1, img);
-    			append_dev(div3, t1);
+    			append_dev(div3, t);
     			append_dev(div3, div2);
     			mount_component(cardproject, div2, null);
     			current = true;
@@ -7149,7 +7127,7 @@ var app = (function () {
     	return block;
     }
 
-    // (89:16) {:else}
+    // (88:16) {:else}
     function create_else_block_2(ctx) {
     	let img;
     	let img_src_value;
@@ -7160,7 +7138,7 @@ var app = (function () {
     			attr_dev(img, "class", "main main-odd svelte-a7rqdw");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$6, 89, 18, 3631);
+    			add_location(img, file$6, 88, 18, 3565);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -7175,14 +7153,14 @@ var app = (function () {
     		block,
     		id: create_else_block_2.name,
     		type: "else",
-    		source: "(89:16) {:else}",
+    		source: "(88:16) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (85:16) {#if urls.boolUrlExists}
+    // (84:16) {#if urls.boolUrlExists}
     function create_if_block_2(ctx) {
     	let a;
     	let img;
@@ -7195,10 +7173,10 @@ var app = (function () {
     			attr_dev(img, "class", "main main-odd svelte-a7rqdw");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl1*/ ctx[5])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$6, 86, 20, 3505);
+    			add_location(img, file$6, 85, 20, 3439);
     			attr_dev(a, "href", /*urls*/ ctx[7].projectUrl);
     			attr_dev(a, "class", "svelte-a7rqdw");
-    			add_location(a, file$6, 85, 18, 3457);
+    			add_location(a, file$6, 84, 18, 3391);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -7214,7 +7192,7 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(85:16) {#if urls.boolUrlExists}",
+    		source: "(84:16) {#if urls.boolUrlExists}",
     		ctx
     	});
 
@@ -7318,8 +7296,8 @@ var app = (function () {
     			t = space();
     			br0 = element("br");
     			br1 = element("br");
-    			add_location(br0, file$6, 96, 8, 3871);
-    			add_location(br1, file$6, 96, 14, 3877);
+    			add_location(br0, file$6, 94, 8, 3730);
+    			add_location(br1, file$6, 94, 14, 3736);
     		},
     		m: function mount(target, anchor) {
     			if_blocks[current_block_type_index].m(target, anchor);
