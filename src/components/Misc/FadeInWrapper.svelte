@@ -7,10 +7,10 @@
 </script>
 
 {#if boolFadeAnimation}
-  <IntersectionObserver once element={node} let:intersecting>
+  <IntersectionObserver element={node} let:intersecting>
     <span bind:this={node}>
       {#if intersecting}
-        <span class="fade-in" transition:fade={{ delay: 200 }}>
+        <span class="fade-in" transition:fade={{ delay: 100 }}>
           <slot />
         </span>
       {/if}
