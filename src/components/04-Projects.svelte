@@ -67,7 +67,6 @@
                   <img class="main" src={imgurl1} alt="project" />
                 {/if}
               </div>
-              <img class="card" src={imgurl2} alt="project 2" />
             </div>
             <div class="proj-description col-md-5">
               <CardProject {title} {urls} {text} {techstack} />
@@ -90,7 +89,6 @@
                   <img class="main main-odd" src={imgurl1} alt="project" />
                 {/if}
               </div>
-              <img class="card card-odd" src={imgurl2} alt="project 2" />
             </div>
           </div>
         {/if}
