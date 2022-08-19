@@ -3,9 +3,14 @@
   import { SimpleGrid } from "@svelteuidev/core";
   export let boolMobileView = false;
 
+  class Urls {
+    constructor(boolUrlExists = false, projectUrl = "", codeUrl = "") {
+      Object.assign(this, { boolUrlExists, projectUrl, codeUrl });
+    }
+  }
   class Project {
-    constructor(title, imgurl1, imgurl2, url, text, techstack) {
-      Object.assign(this, { title, imgurl1, imgurl2, url, text, techstack });
+    constructor(title, imgurl1, imgurl2, urls, text, techstack) {
+      Object.assign(this, { title, imgurl1, imgurl2, urls, text, techstack });
     }
   }
 
@@ -14,7 +19,11 @@
       "SoulDog",
       "images/04-project/souldog.avif",
       "images/04-project/souldogcard.avif",
-      "https://souldog.herokuapp.com",
+      new Urls(
+        true,
+        "https://souldog.herokuapp.com",
+        "https://github.com/aarshio/SoulDog-CS348"
+      ),
       'Webapp linked to database designed to match abandoned dogs with new dog owners. Features include account creation, Google authentication, search, and posting. Awarded "top project of the class" in CS348: Database Systems.',
       ["Javascript", "React", "Node.JS", "Knex JS", "SQL"]
     ),
@@ -22,7 +31,7 @@
       "Wumpus World",
       "images/04-project/wumpus.avif",
       "images/04-project/wumpuscard.avif",
-      "",
+      new Urls(false),
       "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.",
       ["Python"]
     ),
@@ -33,40 +42,40 @@
   <h1 class="title col-md-9">Projects</h1>
   <div class="projects container-fluid col-md-9">
     <SimpleGrid cols={1}>
-      {#each projList as { title, imgurl1, imgurl2, url, text, techstack }, index}
+      {#each projList as { title, imgurl1, imgurl2, urls, text, techstack }, index}
         {#if index % 2 === 0 || boolMobileView}
           <div class="row project-container">
             <div class="img-container col-md-7">
               <div class="main-img-container-even col-md-10 main-img-container">
-                {#if url === ""}
-                  <img class="main" src={imgurl1} alt="project" />
-                {:else}
-                  <a href={url}>
+                {#if urls.boolUrlExists}
+                  <a href={urls.projectUrl}>
                     <img class="main" src={imgurl1} alt="project" />
                   </a>
+                {:else}
+                  <img class="main" src={imgurl1} alt="project" />
                 {/if}
               </div>
               <img class="card" src={imgurl2} alt="project 2" />
             </div>
             <div class="proj-description col-md-5">
-              <CardProject {title} {url} {text} {techstack} />
+              <CardProject {title} {urls} {text} {techstack} />
             </div>
           </div>
         {:else}
           <div class="row project-container">
             <div class="proj-description col-md-5">
-              <CardProject {title} {url} {text} {techstack} />
+              <CardProject {title} {urls} {text} {techstack} />
             </div>
             <div class="img-container col-md-7">
               <div
                 class="main-img-container-odd col-md-10 offset-md-2 main-img-container"
               >
-                {#if url === ""}
-                  <img class="main main-odd" src={imgurl1} alt="project" />
-                {:else}
-                  <a href={url}>
+                {#if urls.boolUrlExists}
+                  <a href={urls.projectUrl}>
                     <img class="main main-odd" src={imgurl1} alt="project" />
                   </a>
+                {:else}
+                  <img class="main main-odd" src={imgurl1} alt="project" />
                 {/if}
               </div>
               <img class="card card-odd" src={imgurl2} alt="project 2" />
