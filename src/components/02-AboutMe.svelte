@@ -29,11 +29,13 @@
     </div>
     <div class="imgdiv col-md-5">
       <div class="aboutmeimg-container">
-        <img
-          class="aboutmeimg"
-          src="images/02-aboutme/self.avif"
-          alt="tony kwok"
-        />
+        <a href="https://www.linkedin.com/in/tony-k-kwok/">
+          <img
+            class="aboutmeimg"
+            src="images/02-aboutme/self.avif"
+            alt="tony kwok"
+          />
+        </a>
       </div>
     </div>
   </div>
@@ -64,6 +66,15 @@
           max-width: 15em;
           height: auto;
           border-radius: 50%;
+        }
+
+        img.aboutmeimg:hover {
+          scale: 110%;
+          transition: 0.5s;
+          box-shadow: 0 0 65px #6dd5fa, 0 0 0 1px rgb(255 255 255 / 10%),
+            0 2px 2px rgb(0 0 0 / 3%), 0 4px 4px rgb(0 0 0 / 4%),
+            0 10px 8px rgb(0 0 0 / 5%), 0 15px 15px rgb(0 0 0 / 6%),
+            0 30px 30px rgb(0 0 0 / 7%), 0 70px 65px rgb(0 0 0 / 9%);
         }
       }
     }
