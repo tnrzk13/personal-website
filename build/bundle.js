@@ -3484,7 +3484,6 @@ var app = (function () {
 
     	intersectionobserver = new IntersectionObserver$1({
     			props: {
-    				once: true,
     				element: /*node*/ ctx[7],
     				$$slots: {
     					default: [
@@ -3604,26 +3603,26 @@ var app = (function () {
     			attr_dev(img, "class", "logo svelte-1cupo5k");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "company logo");
-    			add_location(img, file$a, 24, 18, 838);
+    			add_location(img, file$a, 24, 18, 833);
     			attr_dev(div0, "class", "circle-logo svelte-1cupo5k");
     			set_style(div0, "background-image", /*logoColor*/ ctx[5]);
-    			add_location(div0, file$a, 23, 16, 755);
+    			add_location(div0, file$a, 23, 16, 750);
     			attr_dev(h4, "class", "card-title svelte-1cupo5k");
-    			add_location(h4, file$a, 26, 16, 932);
+    			add_location(h4, file$a, 26, 16, 927);
     			attr_dev(h6, "class", "card-subtitle svelte-1cupo5k");
-    			add_location(h6, file$a, 27, 16, 985);
+    			add_location(h6, file$a, 27, 16, 980);
     			attr_dev(div1, "class", "techstack-wrapper");
-    			add_location(div1, file$a, 28, 16, 1044);
+    			add_location(div1, file$a, 28, 16, 1039);
     			attr_dev(p, "class", "card-text");
-    			add_location(p, file$a, 31, 16, 1162);
+    			add_location(p, file$a, 31, 16, 1157);
     			attr_dev(div2, "class", "card-body svelte-1cupo5k");
-    			add_location(div2, file$a, 22, 14, 714);
+    			add_location(div2, file$a, 22, 14, 709);
     			attr_dev(div3, "class", "card m-2 cb1 text-center svelte-1cupo5k");
-    			add_location(div3, file$a, 21, 12, 660);
+    			add_location(div3, file$a, 21, 12, 655);
     			attr_dev(div4, "class", "container-fluid card-container svelte-1cupo5k");
-    			add_location(div4, file$a, 20, 10, 602);
+    			add_location(div4, file$a, 20, 10, 597);
     			attr_dev(span, "class", "fade-in");
-    			add_location(span, file$a, 19, 8, 535);
+    			add_location(span, file$a, 19, 8, 530);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -3735,7 +3734,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$a, 33, 20, 1255);
+    			add_location(li, file$a, 33, 20, 1250);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -3760,7 +3759,7 @@ var app = (function () {
     	return block;
     }
 
-    // (17:2) <IntersectionObserver once element={node} let:intersecting>
+    // (17:2) <IntersectionObserver element={node} let:intersecting>
     function create_default_slot$4(ctx) {
     	let span;
     	let current;
@@ -3770,7 +3769,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			if (if_block) if_block.c();
-    			add_location(span, file$a, 17, 4, 476);
+    			add_location(span, file$a, 17, 4, 471);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -3822,7 +3821,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$4.name,
     		type: "slot",
-    		source: "(17:2) <IntersectionObserver once element={node} let:intersecting>",
+    		source: "(17:2) <IntersectionObserver element={node} let:intersecting>",
     		ctx
     	});
 
