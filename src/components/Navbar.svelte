@@ -20,7 +20,9 @@
 {#if showNavBar}
   <nav
     id="navbar"
-    class="navbar navbar-expand-lg navbar-dark fixed-top"
+    class="navbar navbar-expand-md navbar-dark fixed-top {boolMobileView
+      ? 'nav-mobile-background'
+      : ''}"
     transition:fade
   >
     <a class="navbar-brand" href="."
@@ -60,6 +62,11 @@
 {/if}
 
 <style lang="scss">
+  .nav-mobile-background {
+    backdrop-filter: blur(10px);
+    background-color: rgba($color: white, $alpha: 0.05);
+  }
+
   nav {
     font-size: 1.15rem;
     font-family: "Montserrat", sans-serif;
