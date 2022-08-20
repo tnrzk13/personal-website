@@ -1,7 +1,5 @@
 <script>
-  import Parallax, {
-    getParallaxHeight,
-  } from "./components/01-Title/Parallax.svelte";
+  import Parallax from "./components/01-Title/Parallax.svelte";
   import TitleMobile from "./components/01-Title/TitleMobile.svelte";
   import AboutMe from "./components/02-AboutMe.svelte";
   import Career from "./components/03-Career.svelte";
@@ -14,7 +12,7 @@
   // dev mode
   let boolFadeAnimation, boolShowLoadingScreen, boolAnimateText;
   // Heights
-  let titleHeight, contactHeight, contentHeight, parallaxHeight;
+  let titleHeight, contactHeight, contentHeight;
   // scroll
   let y;
   // top of contact component
@@ -30,7 +28,6 @@
     body = document.body;
     // get Heights
     titleHeight = body.offsetWidth * 0.5625;
-    parallaxHeight = getParallaxHeight();
   };
   window.onload = () => {
     manageHeights();
@@ -46,7 +43,7 @@
     contactHeight = titleHeight - contactYOffset;
     pageHalfDown = (titleHeight + contentHeight) / 2;
     // contactTop
-    contactTop = getParallaxHeight() + contentHeight;
+    contactTop = Math.max(0, titleHeight - y) + contentHeight;
   }
 
   const triggerDevMode = (isOn) => {

@@ -1,10 +1,3 @@
-<script context="module">
-  let parallaxHeight = 0;
-  export function getParallaxHeight() {
-    return parallaxHeight;
-  }
-</script>
-
 <script>
   import { onMount } from "svelte";
   import TextType from "../TextType/TextType.svelte";
@@ -47,6 +40,8 @@
   };
 
   $: {
+    // console.log(imgHeight, yScroll, contactYOffset, contactTop);
+
     boolShowContact = y > pageHalfDown;
     update();
   }
@@ -55,10 +50,9 @@
 <svelte:window bind:scrollY={y} />
 
 <div
-  id="title"
+  id="parallax"
   class="parallax-container"
   style="height: {containerHeight - y}px;"
-  bind:clientHeight={parallaxHeight}
 >
   {#each layers as layer}
     {#if layer === 0}
