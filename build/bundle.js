@@ -9435,6 +9435,7 @@ var app = (function () {
     	let t10;
     	let button1_class_value;
     	let a5_class_value;
+    	let nav_class_value;
     	let nav_transition;
     	let current;
 
@@ -9466,13 +9467,13 @@ var app = (function () {
     			t10 = text("Resume");
     			if (!src_url_equal(img.src, img_src_value = "images/navbar/gorilla.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo gorilla");
-    			attr_dev(img, "class", "svelte-s5ui8v");
-    			add_location(img, file$2, 26, 7, 628);
+    			attr_dev(img, "class", "svelte-81pni0");
+    			add_location(img, file$2, 28, 7, 690);
     			attr_dev(a0, "class", "navbar-brand");
     			attr_dev(a0, "href", ".");
-    			add_location(a0, file$2, 25, 4, 587);
+    			add_location(a0, file$2, 27, 4, 649);
     			attr_dev(span, "class", "navbar-toggler-icon");
-    			add_location(span, file$2, 37, 6, 943);
+    			add_location(span, file$2, 39, 6, 1005);
     			attr_dev(button0, "class", "navbar-toggler");
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "data-bs-toggle", "collapse");
@@ -9480,40 +9481,40 @@ var app = (function () {
     			attr_dev(button0, "aria-controls", "navbarNav");
     			attr_dev(button0, "aria-expanded", "false");
     			attr_dev(button0, "aria-label", "Toggle navigation");
-    			add_location(button0, file$2, 28, 4, 702);
-    			attr_dev(a1, "class", "nav-item nav-link svelte-s5ui8v");
+    			add_location(button0, file$2, 30, 4, 764);
+    			attr_dev(a1, "class", "nav-item nav-link svelte-81pni0");
     			attr_dev(a1, "href", "#aboutme");
-    			add_location(a1, file$2, 41, 8, 1102);
-    			attr_dev(a2, "class", "nav-item nav-link svelte-s5ui8v");
+    			add_location(a1, file$2, 43, 8, 1164);
+    			attr_dev(a2, "class", "nav-item nav-link svelte-81pni0");
     			attr_dev(a2, "href", "#career");
-    			add_location(a2, file$2, 42, 8, 1166);
-    			attr_dev(a3, "class", "nav-item nav-link svelte-s5ui8v");
+    			add_location(a2, file$2, 44, 8, 1228);
+    			attr_dev(a3, "class", "nav-item nav-link svelte-81pni0");
     			attr_dev(a3, "href", "#projects");
-    			add_location(a3, file$2, 43, 8, 1230);
-    			attr_dev(a4, "class", "nav-item nav-link svelte-s5ui8v");
+    			add_location(a3, file$2, 45, 8, 1292);
+    			attr_dev(a4, "class", "nav-item nav-link svelte-81pni0");
     			attr_dev(a4, "href", "#contact");
-    			add_location(a4, file$2, 44, 8, 1298);
+    			add_location(a4, file$2, 46, 8, 1360);
 
     			attr_dev(button1, "class", button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
     			? 'btn-grad-mobile'
-    			: 'btn-grad') + " svelte-s5ui8v");
+    			: 'btn-grad') + " svelte-81pni0");
 
-    			add_location(button1, file$2, 52, 10, 1589);
+    			add_location(button1, file$2, 54, 10, 1651);
 
     			attr_dev(a5, "class", a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
     			? "download-container-mobile"
-    			: "download-container") + " svelte-s5ui8v"));
+    			: "download-container") + " svelte-81pni0"));
 
     			attr_dev(a5, "href", "download/Resume 2022 - Blue.pdf");
     			attr_dev(a5, "download", "TonyKwokResume");
-    			add_location(a5, file$2, 45, 8, 1364);
+    			add_location(a5, file$2, 47, 8, 1426);
     			attr_dev(ul, "class", "navbar-nav ms-auto");
-    			add_location(ul, file$2, 40, 6, 1061);
+    			add_location(ul, file$2, 42, 6, 1123);
     			attr_dev(div, "class", "collapse navbar-collapse");
     			attr_dev(div, "id", "navbarNav");
-    			add_location(div, file$2, 39, 4, 1000);
+    			add_location(div, file$2, 41, 4, 1062);
     			attr_dev(nav, "id", "navbar");
-    			attr_dev(nav, "class", "navbar navbar-expand-lg navbar-dark fixed-top svelte-s5ui8v");
+    			attr_dev(nav, "class", nav_class_value = "navbar navbar-expand-md navbar-dark fixed-top " + (/*boolMobileView*/ ctx[0] ? 'nav-mobile-background' : '') + " svelte-81pni0");
     			add_location(nav, file$2, 20, 2, 475);
     		},
     		m: function mount(target, anchor) {
@@ -9542,14 +9543,18 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*boolMobileView*/ 1 && button1_class_value !== (button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
     			? 'btn-grad-mobile'
-    			: 'btn-grad') + " svelte-s5ui8v")) {
+    			: 'btn-grad') + " svelte-81pni0")) {
     				attr_dev(button1, "class", button1_class_value);
     			}
 
     			if (!current || dirty & /*boolMobileView*/ 1 && a5_class_value !== (a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
     			? "download-container-mobile"
-    			: "download-container") + " svelte-s5ui8v"))) {
+    			: "download-container") + " svelte-81pni0"))) {
     				attr_dev(a5, "class", a5_class_value);
+    			}
+
+    			if (!current || dirty & /*boolMobileView*/ 1 && nav_class_value !== (nav_class_value = "navbar navbar-expand-md navbar-dark fixed-top " + (/*boolMobileView*/ ctx[0] ? 'nav-mobile-background' : '') + " svelte-81pni0")) {
+    				attr_dev(nav, "class", nav_class_value);
     			}
     		},
     		i: function intro(local) {
