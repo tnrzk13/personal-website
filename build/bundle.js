@@ -10110,14 +10110,14 @@ var app = (function () {
     			t4 = space();
     			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
-    			attr_dev(div0, "class", "content-desktop svelte-1ekca7i");
+    			attr_dev(div0, "class", "content-desktop svelte-1m6pum2");
     			add_render_callback(() => /*div0_elementresize_handler_1*/ ctx[13].call(div0));
     			add_location(div0, file, 114, 6, 3620);
     			attr_dev(div1, "id", "content-container");
     			set_style(div1, "top", /*titleHeight*/ ctx[0] + "px");
-    			attr_dev(div1, "class", "svelte-1ekca7i");
+    			attr_dev(div1, "class", "svelte-1m6pum2");
     			add_location(div1, file, 113, 4, 3554);
-    			attr_dev(div2, "class", "container-fluid svelte-1ekca7i");
+    			attr_dev(div2, "class", "container-fluid svelte-1m6pum2");
     			add_location(div2, file, 104, 2, 3349);
     		},
     		m: function mount(target, anchor) {
@@ -10284,16 +10284,16 @@ var app = (function () {
     			t5 = space();
     			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
-    			attr_dev(div0, "class", "content-mobile svelte-1ekca7i");
+    			attr_dev(div0, "class", "content-mobile svelte-1m6pum2");
     			add_render_callback(() => /*div0_elementresize_handler*/ ctx[12].call(div0));
     			add_location(div0, file, 89, 6, 2969);
     			attr_dev(div1, "id", "contact");
     			set_style(div1, "height", "75vh");
     			add_location(div1, file, 98, 6, 3201);
     			attr_dev(div2, "id", "content-container");
-    			attr_dev(div2, "class", "svelte-1ekca7i");
+    			attr_dev(div2, "class", "svelte-1m6pum2");
     			add_location(div2, file, 88, 4, 2933);
-    			attr_dev(div3, "class", "container-fluid svelte-1ekca7i");
+    			attr_dev(div3, "class", "container-fluid svelte-1m6pum2");
     			add_location(div3, file, 86, 2, 2847);
     		},
     		m: function mount(target, anchor) {
