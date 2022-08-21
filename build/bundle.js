@@ -1426,7 +1426,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (118:27) 
+    // (122:27) 
     function create_if_block_7(ctx) {
     	let img;
     	let img_src_value;
@@ -1442,8 +1442,8 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + (/*layer*/ ctx[16] - 1) + ".avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[16] - 1));
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
-    			attr_dev(img, "class", "svelte-1d59v6c");
-    			add_location(img, file$g, 118, 6, 3751);
+    			attr_dev(img, "class", "svelte-6qdwq0");
+    			add_location(img, file$g, 122, 6, 3836);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1470,14 +1470,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(118:27) ",
+    		source: "(122:27) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (109:26) 
+    // (113:26) 
     function create_if_block_6(ctx) {
     	let img;
     	let img_src_value;
@@ -1493,8 +1493,8 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + (/*layer*/ ctx[16] - 1) + ".avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[16] - 1));
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
-    			attr_dev(img, "class", "svelte-1d59v6c");
-    			add_location(img, file$g, 109, 6, 3425);
+    			attr_dev(img, "class", "svelte-6qdwq0");
+    			add_location(img, file$g, 113, 6, 3510);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1521,14 +1521,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(109:26) ",
+    		source: "(113:26) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (100:46) 
+    // (104:46) 
     function create_if_block_5(ctx) {
     	let img;
     	let img_src_value;
@@ -1544,8 +1544,8 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + (/*layer*/ ctx[16] - 1) + ".avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[16] - 1));
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
-    			attr_dev(img, "class", "svelte-1d59v6c");
-    			add_location(img, file$g, 100, 6, 3099);
+    			attr_dev(img, "class", "svelte-6qdwq0");
+    			add_location(img, file$g, 104, 6, 3184);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1572,14 +1572,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(100:46) ",
+    		source: "(104:46) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (76:68) 
+    // (80:68) 
     function create_if_block_2$1(ctx) {
     	let if_block_anchor;
     	let current;
@@ -1638,14 +1638,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(76:68) ",
+    		source: "(80:68) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (67:32) 
+    // (71:32) 
     function create_if_block_1$4(ctx) {
     	let img;
     	let img_src_value;
@@ -1661,8 +1661,8 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[16] + ".avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[16]);
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
-    			attr_dev(img, "class", "svelte-1d59v6c");
-    			add_location(img, file$g, 67, 6, 1873);
+    			attr_dev(img, "class", "svelte-6qdwq0");
+    			add_location(img, file$g, 71, 6, 1958);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1689,14 +1689,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$4.name,
     		type: "if",
-    		source: "(67:32) ",
+    		source: "(71:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (58:4) {#if layer === 0}
+    // (62:4) {#if layer === 0}
     function create_if_block$8(ctx) {
     	let img;
     	let img_src_value;
@@ -1712,8 +1712,8 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[16] + ".avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[16]);
     			attr_dev(img, "height", /*containerHeight*/ ctx[0]);
-    			attr_dev(img, "class", "svelte-1d59v6c");
-    			add_location(img, file$g, 58, 6, 1526);
+    			attr_dev(img, "class", "svelte-6qdwq0");
+    			add_location(img, file$g, 62, 6, 1611);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1740,14 +1740,14 @@ var app = (function () {
     		block,
     		id: create_if_block$8.name,
     		type: "if",
-    		source: "(58:4) {#if layer === 0}",
+    		source: "(62:4) {#if layer === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (77:6) {#if y < containerHeight}
+    // (81:6) {#if y < containerHeight}
     function create_if_block_3(ctx) {
     	let div5;
     	let div0;
@@ -1802,20 +1802,20 @@ var app = (function () {
     			div4 = element("div");
     			i = element("i");
     			t8 = space();
-    			attr_dev(div0, "class", "textLayer-preamble svelte-1d59v6c");
-    			add_location(div0, file$g, 78, 10, 2297);
+    			attr_dev(div0, "class", "textLayer-preamble svelte-6qdwq0");
+    			add_location(div0, file$g, 82, 10, 2382);
     			attr_dev(div1, "class", "textLayer-title");
-    			add_location(div1, file$g, 79, 10, 2367);
-    			attr_dev(div2, "class", "textLayer-subtitle svelte-1d59v6c");
-    			add_location(div2, file$g, 80, 10, 2431);
-    			attr_dev(div3, "class", "textLayer-description svelte-1d59v6c");
-    			add_location(div3, file$g, 93, 10, 2845);
+    			add_location(div1, file$g, 83, 10, 2452);
+    			attr_dev(div2, "class", "textLayer-subtitle svelte-6qdwq0");
+    			add_location(div2, file$g, 84, 10, 2516);
+    			attr_dev(div3, "class", "textLayer-description svelte-6qdwq0");
+    			add_location(div3, file$g, 97, 10, 2930);
     			attr_dev(i, "class", "fa-solid fa-angles-down");
-    			add_location(i, file$g, 96, 34, 2971);
-    			attr_dev(div4, "class", "scrolldown svelte-1d59v6c");
-    			add_location(div4, file$g, 96, 10, 2947);
-    			attr_dev(div5, "class", "textLayer svelte-1d59v6c");
-    			add_location(div5, file$g, 77, 8, 2262);
+    			add_location(i, file$g, 100, 34, 3056);
+    			attr_dev(div4, "class", "scrolldown svelte-6qdwq0");
+    			add_location(div4, file$g, 100, 10, 3032);
+    			attr_dev(div5, "class", "textLayer svelte-6qdwq0");
+    			add_location(div5, file$g, 81, 8, 2347);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div5, anchor);
@@ -1888,14 +1888,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(77:6) {#if y < containerHeight}",
+    		source: "(81:6) {#if y < containerHeight}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (90:12) {:else}
+    // (94:12) {:else}
     function create_else_block$5(ctx) {
     	let t_value = /*titleInfo*/ ctx[1].texts[0] + "";
     	let t;
@@ -1921,14 +1921,14 @@ var app = (function () {
     		block,
     		id: create_else_block$5.name,
     		type: "else",
-    		source: "(90:12) {:else}",
+    		source: "(94:12) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (82:32) {#if boolAnimateText}
+    // (86:32) {#if boolAnimateText}
     function create_if_block_4(ctx) {
     	let texttype;
     	let current;
@@ -1975,14 +1975,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(82:32) {#if boolAnimateText}",
+    		source: "(86:32) {#if boolAnimateText}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (57:2) {#each layers as layer}
+    // (61:2) {#each layers as layer}
     function create_each_block$5(ctx) {
     	let show_if;
     	let current_block_type_index;
@@ -2088,7 +2088,7 @@ var app = (function () {
     		block,
     		id: create_each_block$5.name,
     		type: "each",
-    		source: "(57:2) {#each layers as layer}",
+    		source: "(61:2) {#each layers as layer}",
     		ctx
     	});
 
@@ -2104,6 +2104,7 @@ var app = (function () {
 
     	let scrolling_timeout;
     	let div;
+    	let div_class_value;
     	let current;
     	let mounted;
     	let dispose;
@@ -2129,9 +2130,13 @@ var app = (function () {
     			}
 
     			attr_dev(div, "id", "parallax");
-    			attr_dev(div, "class", "parallax-container svelte-1d59v6c");
+
+    			attr_dev(div, "class", div_class_value = "parallax-container " + (/*boolShowContact*/ ctx[5]
+    			? 'contact-section'
+    			: 'title-section') + " svelte-6qdwq0");
+
     			set_style(div, "height", /*containerHeight*/ ctx[0] - /*y*/ ctx[4] + "px");
-    			add_location(div, file$g, 51, 0, 1370);
+    			add_location(div, file$g, 53, 0, 1389);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2190,6 +2195,12 @@ var app = (function () {
     				}
 
     				check_outros();
+    			}
+
+    			if (!current || dirty & /*boolShowContact*/ 32 && div_class_value !== (div_class_value = "parallax-container " + (/*boolShowContact*/ ctx[5]
+    			? 'contact-section'
+    			: 'title-section') + " svelte-6qdwq0")) {
+    				attr_dev(div, "class", div_class_value);
     			}
 
     			if (!current || dirty & /*containerHeight, y*/ 17) {
@@ -2258,7 +2269,9 @@ var app = (function () {
     		update();
     	});
 
-    	window.onresize = update();
+    	window.onresize = () => {
+    		update();
+    	};
 
     	// calculates img shift when scrolling on the contact section
     	const getContactParallax = layer => {
@@ -10051,10 +10064,10 @@ var app = (function () {
 
     /* src\App.svelte generated by Svelte v3.49.0 */
 
-    const { window: window_1 } = globals;
+    const { console: console_1, window: window_1 } = globals;
     const file = "src\\App.svelte";
 
-    // (92:0) {:else}
+    // (103:0) {:else}
     function create_else_block(ctx) {
     	let div2;
     	let parallax;
@@ -10077,10 +10090,10 @@ var app = (function () {
     			props: {
     				containerHeight: /*titleHeight*/ ctx[0],
     				pageHalfDown: /*pageHalfDown*/ ctx[7],
-    				boolAnimateText: /*boolAnimateText*/ ctx[5],
+    				boolAnimateText: /*boolAnimateText*/ ctx[6],
     				titleInfo: /*titleInfo*/ ctx[9],
-    				contactTop: /*contactTop*/ ctx[6],
-    				contactYOffset: /*contactYOffset*/ ctx[3]
+    				contactTop: /*contactTop*/ ctx[3],
+    				contactYOffset: /*contactYOffset*/ ctx[4]
     			},
     			$$inline: true
     		});
@@ -10089,7 +10102,7 @@ var app = (function () {
 
     	career = new _03_Career({
     			props: {
-    				boolFadeAnimation: /*boolFadeAnimation*/ ctx[4]
+    				boolFadeAnimation: /*boolFadeAnimation*/ ctx[5]
     			},
     			$$inline: true
     		});
@@ -10105,7 +10118,7 @@ var app = (function () {
     			props: {
     				contactInfo: /*contactInfo*/ ctx[10],
     				titleHeight: /*titleHeight*/ ctx[0],
-    				contactYOffset: /*contactYOffset*/ ctx[3]
+    				contactYOffset: /*contactYOffset*/ ctx[4]
     			},
     			$$inline: true
     		});
@@ -10136,13 +10149,13 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "svelte-1va4fj5");
     			add_render_callback(() => /*div0_elementresize_handler_1*/ ctx[13].call(div0));
-    			add_location(div0, file, 102, 6, 3275);
+    			add_location(div0, file, 113, 6, 3684);
     			attr_dev(div1, "id", "content-container");
     			set_style(div1, "top", /*titleHeight*/ ctx[0] + "px");
     			attr_dev(div1, "class", "svelte-1va4fj5");
-    			add_location(div1, file, 101, 4, 3209);
+    			add_location(div1, file, 112, 4, 3618);
     			attr_dev(div2, "class", "container-fluid svelte-1va4fj5");
-    			add_location(div2, file, 92, 2, 3004);
+    			add_location(div2, file, 103, 2, 3413);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10166,19 +10179,19 @@ var app = (function () {
     			const parallax_changes = {};
     			if (dirty & /*titleHeight*/ 1) parallax_changes.containerHeight = /*titleHeight*/ ctx[0];
     			if (dirty & /*pageHalfDown*/ 128) parallax_changes.pageHalfDown = /*pageHalfDown*/ ctx[7];
-    			if (dirty & /*boolAnimateText*/ 32) parallax_changes.boolAnimateText = /*boolAnimateText*/ ctx[5];
-    			if (dirty & /*contactTop*/ 64) parallax_changes.contactTop = /*contactTop*/ ctx[6];
-    			if (dirty & /*contactYOffset*/ 8) parallax_changes.contactYOffset = /*contactYOffset*/ ctx[3];
+    			if (dirty & /*boolAnimateText*/ 64) parallax_changes.boolAnimateText = /*boolAnimateText*/ ctx[6];
+    			if (dirty & /*contactTop*/ 8) parallax_changes.contactTop = /*contactTop*/ ctx[3];
+    			if (dirty & /*contactYOffset*/ 16) parallax_changes.contactYOffset = /*contactYOffset*/ ctx[4];
     			parallax.$set(parallax_changes);
     			const career_changes = {};
-    			if (dirty & /*boolFadeAnimation*/ 16) career_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[4];
+    			if (dirty & /*boolFadeAnimation*/ 32) career_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[5];
     			career.$set(career_changes);
     			const projects_changes = {};
     			if (dirty & /*boolMobileView*/ 256) projects_changes.boolMobileView = /*boolMobileView*/ ctx[8];
     			projects.$set(projects_changes);
     			const contacttext_changes = {};
     			if (dirty & /*titleHeight*/ 1) contacttext_changes.titleHeight = /*titleHeight*/ ctx[0];
-    			if (dirty & /*contactYOffset*/ 8) contacttext_changes.contactYOffset = /*contactYOffset*/ ctx[3];
+    			if (dirty & /*contactYOffset*/ 16) contacttext_changes.contactYOffset = /*contactYOffset*/ ctx[4];
     			contacttext.$set(contacttext_changes);
 
     			if (!current || dirty & /*titleHeight*/ 1) {
@@ -10225,14 +10238,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(92:0) {:else}",
+    		source: "(103:0) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (78:0) {#if boolMobileView}
+    // (89:0) {#if boolMobileView}
     function create_if_block(ctx) {
     	let div3;
     	let titlemobile;
@@ -10255,7 +10268,7 @@ var app = (function () {
 
     	titlemobile = new TitleMobile({
     			props: {
-    				boolAnimateText: /*boolAnimateText*/ ctx[5],
+    				boolAnimateText: /*boolAnimateText*/ ctx[6],
     				titleInfo: /*titleInfo*/ ctx[9]
     			},
     			$$inline: true
@@ -10265,7 +10278,7 @@ var app = (function () {
 
     	career = new _03_Career({
     			props: {
-    				boolFadeAnimation: /*boolFadeAnimation*/ ctx[4]
+    				boolFadeAnimation: /*boolFadeAnimation*/ ctx[5]
     			},
     			$$inline: true
     		});
@@ -10310,15 +10323,15 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "svelte-1va4fj5");
     			add_render_callback(() => /*div0_elementresize_handler*/ ctx[12].call(div0));
-    			add_location(div0, file, 81, 6, 2682);
+    			add_location(div0, file, 92, 6, 3091);
     			attr_dev(div1, "id", "contact");
     			set_style(div1, "height", "75vh");
-    			add_location(div1, file, 86, 6, 2856);
+    			add_location(div1, file, 97, 6, 3265);
     			attr_dev(div2, "id", "content-container");
     			attr_dev(div2, "class", "svelte-1va4fj5");
-    			add_location(div2, file, 80, 4, 2646);
+    			add_location(div2, file, 91, 4, 3055);
     			attr_dev(div3, "class", "container-fluid svelte-1va4fj5");
-    			add_location(div3, file, 78, 2, 2560);
+    			add_location(div3, file, 89, 2, 2969);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -10342,10 +10355,10 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const titlemobile_changes = {};
-    			if (dirty & /*boolAnimateText*/ 32) titlemobile_changes.boolAnimateText = /*boolAnimateText*/ ctx[5];
+    			if (dirty & /*boolAnimateText*/ 64) titlemobile_changes.boolAnimateText = /*boolAnimateText*/ ctx[6];
     			titlemobile.$set(titlemobile_changes);
     			const career_changes = {};
-    			if (dirty & /*boolFadeAnimation*/ 16) career_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[4];
+    			if (dirty & /*boolFadeAnimation*/ 32) career_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[5];
     			career.$set(career_changes);
     			const projects_changes = {};
     			if (dirty & /*boolMobileView*/ 256) projects_changes.boolMobileView = /*boolMobileView*/ ctx[8];
@@ -10390,7 +10403,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(78:0) {#if boolMobileView}",
+    		source: "(89:0) {#if boolMobileView}",
     		ctx
     	});
 
@@ -10524,7 +10537,7 @@ var app = (function () {
     	let contactTop = 999;
 
     	// calculated variables
-    	let contactYOffset, body;
+    	let contactYOffset;
 
     	let pageHalfDown = 999;
 
@@ -10534,10 +10547,18 @@ var app = (function () {
     	let medScreenSize = 768;
 
     	let manageHeights = () => {
-    		body = document.body;
-
     		// get Heights
-    		$$invalidate(0, titleHeight = body.offsetWidth * 0.5625);
+    		$$invalidate(0, titleHeight = window.innerWidth * 0.5625);
+
+    		// calculations
+    		$$invalidate(8, boolMobileView = window.innerWidth < medScreenSize);
+
+    		$$invalidate(4, contactYOffset = titleHeight / 3);
+    		contactHeight = titleHeight - contactYOffset;
+    		$$invalidate(7, pageHalfDown = (titleHeight + contentHeight) / 2);
+
+    		// contactTop
+    		$$invalidate(3, contactTop = contentHeight);
     	};
 
     	window.onload = () => {
@@ -10549,10 +10570,10 @@ var app = (function () {
     	};
 
     	const triggerDevMode = isOn => {
-    		$$invalidate(4, boolFadeAnimation = boolShowLoadingScreen = $$invalidate(5, boolAnimateText = false));
+    		$$invalidate(5, boolFadeAnimation = boolShowLoadingScreen = $$invalidate(6, boolAnimateText = false));
 
     		if (!isOn) {
-    			$$invalidate(4, boolFadeAnimation = boolShowLoadingScreen = $$invalidate(5, boolAnimateText = true));
+    			$$invalidate(5, boolFadeAnimation = boolShowLoadingScreen = $$invalidate(6, boolAnimateText = true));
     		}
     	};
 
@@ -10578,7 +10599,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<App> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
     	function onwindowscroll() {
@@ -10614,7 +10635,6 @@ var app = (function () {
     		y,
     		contactTop,
     		contactYOffset,
-    		body,
     		pageHalfDown,
     		boolMobileView,
     		medScreenSize,
@@ -10625,19 +10645,18 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('boolFadeAnimation' in $$props) $$invalidate(4, boolFadeAnimation = $$props.boolFadeAnimation);
+    		if ('boolFadeAnimation' in $$props) $$invalidate(5, boolFadeAnimation = $$props.boolFadeAnimation);
     		if ('boolShowLoadingScreen' in $$props) boolShowLoadingScreen = $$props.boolShowLoadingScreen;
-    		if ('boolAnimateText' in $$props) $$invalidate(5, boolAnimateText = $$props.boolAnimateText);
+    		if ('boolAnimateText' in $$props) $$invalidate(6, boolAnimateText = $$props.boolAnimateText);
     		if ('titleHeight' in $$props) $$invalidate(0, titleHeight = $$props.titleHeight);
     		if ('contactHeight' in $$props) contactHeight = $$props.contactHeight;
     		if ('contentHeight' in $$props) $$invalidate(1, contentHeight = $$props.contentHeight);
     		if ('y' in $$props) $$invalidate(2, y = $$props.y);
-    		if ('contactTop' in $$props) $$invalidate(6, contactTop = $$props.contactTop);
-    		if ('contactYOffset' in $$props) $$invalidate(3, contactYOffset = $$props.contactYOffset);
-    		if ('body' in $$props) body = $$props.body;
+    		if ('contactTop' in $$props) $$invalidate(3, contactTop = $$props.contactTop);
+    		if ('contactYOffset' in $$props) $$invalidate(4, contactYOffset = $$props.contactYOffset);
     		if ('pageHalfDown' in $$props) $$invalidate(7, pageHalfDown = $$props.pageHalfDown);
     		if ('boolMobileView' in $$props) $$invalidate(8, boolMobileView = $$props.boolMobileView);
-    		if ('medScreenSize' in $$props) $$invalidate(17, medScreenSize = $$props.medScreenSize);
+    		if ('medScreenSize' in $$props) $$invalidate(16, medScreenSize = $$props.medScreenSize);
     		if ('manageHeights' in $$props) manageHeights = $$props.manageHeights;
     		if ('titleInfo' in $$props) $$invalidate(9, titleInfo = $$props.titleInfo);
     		if ('contactInfo' in $$props) $$invalidate(10, contactInfo = $$props.contactInfo);
@@ -10648,17 +10667,23 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*titleHeight, contactYOffset, contentHeight, y*/ 15) {
+    		if ($$self.$$.dirty & /*titleHeight, contactYOffset, contentHeight, y, contactTop*/ 31) {
     			{
+    				// get Heights
+    				$$invalidate(0, titleHeight = window.innerWidth * 0.5625);
+
     				// calculations
     				$$invalidate(8, boolMobileView = window.innerWidth < medScreenSize);
 
-    				$$invalidate(3, contactYOffset = titleHeight / 3);
+    				$$invalidate(4, contactYOffset = titleHeight / 3);
     				contactHeight = titleHeight - contactYOffset;
     				$$invalidate(7, pageHalfDown = (titleHeight + contentHeight) / 2);
 
     				// contactTop
-    				$$invalidate(6, contactTop = Math.max(0, titleHeight - y) + contentHeight);
+    				$$invalidate(3, contactTop = contentHeight);
+
+    				// contactTop = document.getElementById("contact").offsetTop;
+    				console.log(y, contactTop, titleHeight, contentHeight);
     			}
     		}
     	};
@@ -10667,10 +10692,10 @@ var app = (function () {
     		titleHeight,
     		contentHeight,
     		y,
+    		contactTop,
     		contactYOffset,
     		boolFadeAnimation,
     		boolAnimateText,
-    		contactTop,
     		pageHalfDown,
     		boolMobileView,
     		titleInfo,
