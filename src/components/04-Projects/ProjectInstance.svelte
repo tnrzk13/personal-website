@@ -101,8 +101,9 @@
       }
     }
 
-    .main-img-container:hover a {
-      filter: brightness(50%);
+    img:hover {
+      scale: 110%;
+      transition: 0.5s;
     }
   }
 </style>

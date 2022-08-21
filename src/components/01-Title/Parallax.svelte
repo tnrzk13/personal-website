@@ -119,7 +119,7 @@
       <img
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
-          : -y}px)"
+          : -y + 10}px)"
         src="images/intro/0{layer - 1}.avif"
         alt="parallax layer {layer - 1}"
       />
