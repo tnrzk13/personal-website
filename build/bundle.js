@@ -1437,7 +1437,7 @@ var app = (function () {
 
     			set_style(img, "transform", "translateY(" + (/*boolShowContact*/ ctx[5]
     			? /*getContactParallax*/ ctx[7](/*layer*/ ctx[16])
-    			: -/*y*/ ctx[4]) + "px)");
+    			: -/*y*/ ctx[4] + 10) + "px)");
 
     			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + (/*layer*/ ctx[16] - 1) + ".avif")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[16] - 1));
@@ -1451,7 +1451,7 @@ var app = (function () {
     			if (dirty & /*boolShowContact, y*/ 48) {
     				set_style(img, "transform", "translateY(" + (/*boolShowContact*/ ctx[5]
     				? /*getContactParallax*/ ctx[7](/*layer*/ ctx[16])
-    				: -/*y*/ ctx[4]) + "px)");
+    				: -/*y*/ ctx[4] + 10) + "px)");
     			}
     		},
     		i: noop,
@@ -7749,13 +7749,13 @@ var app = (function () {
     			div2 = element("div");
     			div1 = element("div");
     			if_block.c();
-    			attr_dev(div0, "class", "proj-description col-md-5 svelte-1c6mf66");
+    			attr_dev(div0, "class", "proj-description col-md-5 svelte-1uite3s");
     			add_location(div0, file$7, 38, 4, 1206);
-    			attr_dev(div1, "class", "main-img-container-odd col-md-10 offset-md-2 main-img-container svelte-1c6mf66");
+    			attr_dev(div1, "class", "main-img-container-odd col-md-10 offset-md-2 main-img-container svelte-1uite3s");
     			add_location(div1, file$7, 47, 6, 1481);
-    			attr_dev(div2, "class", "img-container col-md-7 svelte-1c6mf66");
+    			attr_dev(div2, "class", "img-container col-md-7 svelte-1uite3s");
     			add_location(div2, file$7, 46, 4, 1437);
-    			attr_dev(div3, "class", "row project-container svelte-1c6mf66");
+    			attr_dev(div3, "class", "row project-container svelte-1uite3s");
     			add_location(div3, file$7, 37, 2, 1165);
     		},
     		m: function mount(target, anchor) {
@@ -7871,13 +7871,13 @@ var app = (function () {
     			t = space();
     			div2 = element("div");
     			create_component(cardproject.$$.fragment);
-    			attr_dev(div0, "class", "main-img-container-even col-md-10 main-img-container svelte-1c6mf66");
+    			attr_dev(div0, "class", "main-img-container-even col-md-10 main-img-container svelte-1uite3s");
     			add_location(div0, file$7, 11, 6, 376);
-    			attr_dev(div1, "class", "img-container col-md-7 svelte-1c6mf66");
+    			attr_dev(div1, "class", "img-container col-md-7 svelte-1uite3s");
     			add_location(div1, file$7, 10, 4, 332);
-    			attr_dev(div2, "class", "proj-description col-md-5 svelte-1c6mf66");
+    			attr_dev(div2, "class", "proj-description col-md-5 svelte-1uite3s");
     			add_location(div2, file$7, 27, 4, 917);
-    			attr_dev(div3, "class", "row project-container svelte-1c6mf66");
+    			attr_dev(div3, "class", "row project-container svelte-1uite3s");
     			add_location(div3, file$7, 9, 2, 291);
     		},
     		m: function mount(target, anchor) {
@@ -7961,7 +7961,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			img = element("img");
-    			attr_dev(img, "class", "main main-odd svelte-1c6mf66");
+    			attr_dev(img, "class", "main main-odd svelte-1uite3s");
     			if (!src_url_equal(img.src, img_src_value = /*projectInfo*/ ctx[1].imgurl)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
     			add_location(img, file$7, 61, 10, 1953);
@@ -8060,12 +8060,11 @@ var app = (function () {
     		c: function create() {
     			a = element("a");
     			img = element("img");
-    			attr_dev(img, "class", "main main-odd glowing svelte-1c6mf66");
+    			attr_dev(img, "class", "main main-odd glowing svelte-1uite3s");
     			if (!src_url_equal(img.src, img_src_value = /*projectInfo*/ ctx[1].imgurl)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
     			add_location(img, file$7, 53, 14, 1736);
     			attr_dev(a, "href", a_href_value = /*projectInfo*/ ctx[1].urls.projectUrl);
-    			attr_dev(a, "class", "svelte-1c6mf66");
     			add_location(a, file$7, 52, 12, 1682);
     		},
     		m: function mount(target, anchor) {
@@ -8105,7 +8104,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			img = element("img");
-    			attr_dev(img, "class", "main svelte-1c6mf66");
+    			attr_dev(img, "class", "main svelte-1uite3s");
     			if (!src_url_equal(img.src, img_src_value = /*projectInfo*/ ctx[1].imgurl)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
     			add_location(img, file$7, 23, 10, 811);
@@ -8204,12 +8203,11 @@ var app = (function () {
     		c: function create() {
     			a = element("a");
     			img = element("img");
-    			attr_dev(img, "class", "main glowing svelte-1c6mf66");
+    			attr_dev(img, "class", "main glowing svelte-1uite3s");
     			if (!src_url_equal(img.src, img_src_value = /*projectInfo*/ ctx[1].imgurl)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
     			add_location(img, file$7, 15, 14, 603);
     			attr_dev(a, "href", a_href_value = /*projectInfo*/ ctx[1].urls.projectUrl);
-    			attr_dev(a, "class", "svelte-1c6mf66");
     			add_location(a, file$7, 14, 12, 549);
     		},
     		m: function mount(target, anchor) {
