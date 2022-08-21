@@ -141,7 +141,7 @@
       display: flex;
       flex-direction: column;
       color: white;
-      overflow: visible;
+      overflow: hidden;
 
       #content {
         position: relative;
