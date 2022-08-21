@@ -35,14 +35,15 @@
       0,
       layerize(imgHeight) -
         layerize(yScroll * (1 + offsetRatio)) +
-        contactYOffset -
-        // titlebar in web browser if not in fullscreen mode
-        (screen.height - window.innerHeight)
+        contactYOffset
+      // titlebar in web browser if not in fullscreen mode
+      // (screen.height - window.innerHeight)
     );
   };
 
   $: {
     // console.log(imgHeight, yScroll, contactYOffset, contactTop);
+    console.log(containerHeight, y);
 
     boolShowContact = y > pageHalfDown;
     update();
@@ -56,7 +57,7 @@
   class="parallax-container {boolShowContact
     ? 'contact-section'
     : 'title-section'}"
-  style="height: {containerHeight - y}px;"
+  style="height: {boolShowContact ? containerHeight : containerHeight - y}px;"
 >
   {#each layers as layer}
     {#if layer === 0}

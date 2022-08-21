@@ -54,7 +54,7 @@
     contactTop = contentHeight;
     // contactTop = document.getElementById("contact").offsetTop;
 
-    console.log(y, contactTop, titleHeight, contentHeight);
+    // console.log(titleHeight, y);
   }
 
   const triggerDevMode = (isOn) => {
