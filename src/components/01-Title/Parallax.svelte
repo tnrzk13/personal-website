@@ -22,7 +22,9 @@
   onMount(() => {
     update();
   });
-  window.onresize = update();
+  window.onresize = () => {
+    update();
+  };
 
   // calculates img shift when scrolling on the contact section
   const getContactParallax = (layer) => {
@@ -51,7 +53,9 @@
 
 <div
   id="parallax"
-  class="parallax-container"
+  class="parallax-container {boolShowContact
+    ? 'contact-section'
+    : 'title-section'}"
   style="height: {containerHeight - y}px;"
 >
   {#each layers as layer}
@@ -129,6 +133,10 @@
 </div>
 
 <style lang="scss">
+  .contact-section {
+    bottom: 0;
+  }
+
   .parallax-container {
     position: fixed;
     width: 100%;

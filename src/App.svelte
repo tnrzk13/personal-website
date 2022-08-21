@@ -18,16 +18,22 @@
   // top of contact component
   let contactTop = 999;
   // calculated variables
-  let contactYOffset, body;
+  let contactYOffset;
   let pageHalfDown = 999;
   // variables with initial values
   let boolMobileView = true;
   let medScreenSize = 768;
 
   let manageHeights = () => {
-    body = document.body;
     // get Heights
-    titleHeight = body.offsetWidth * 0.5625;
+    titleHeight = window.innerWidth * 0.5625;
+    // calculations
+    boolMobileView = window.innerWidth < medScreenSize;
+    contactYOffset = titleHeight / 3;
+    contactHeight = titleHeight - contactYOffset;
+    pageHalfDown = (titleHeight + contentHeight) / 2;
+    // contactTop
+    contactTop = contentHeight;
   };
   window.onload = () => {
     manageHeights();
@@ -37,13 +43,18 @@
   };
 
   $: {
+    // get Heights
+    titleHeight = window.innerWidth * 0.5625;
     // calculations
     boolMobileView = window.innerWidth < medScreenSize;
     contactYOffset = titleHeight / 3;
     contactHeight = titleHeight - contactYOffset;
     pageHalfDown = (titleHeight + contentHeight) / 2;
     // contactTop
-    contactTop = Math.max(0, titleHeight - y) + contentHeight;
+    contactTop = contentHeight;
+    // contactTop = document.getElementById("contact").offsetTop;
+
+    console.log(y, contactTop, titleHeight, contentHeight);
   }
 
   const triggerDevMode = (isOn) => {
