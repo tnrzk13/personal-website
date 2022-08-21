@@ -66,7 +66,6 @@
           : (-y * layer) / (layers.length - 1) + 'px'})"
         src="images/intro/00{layer}.avif"
         alt="parallax layer {layer}"
-        height={containerHeight}
       />
     {:else if layer < textLayer}
       <img
@@ -75,7 +74,6 @@
           : (-y * layer) / (layers.length - 1)}px)"
         src="images/intro/00{layer}.avif"
         alt="parallax layer {layer}"
-        height={containerHeight}
       />
     {:else if layer === textLayer && y <= Math.max(0, pageHalfDown)}
       {#if y < containerHeight}
@@ -108,7 +106,6 @@
           : (-y * (layer - 1)) / (layers.length - 1)}px)"
         src="images/intro/00{layer - 1}.avif"
         alt="parallax layer {layer - 1}"
-        height={containerHeight}
       />
     {:else if layer >= 11}
       <img
@@ -117,16 +114,14 @@
           : (-y * (layer - 1)) / (layers.length - 1)}px)"
         src="images/intro/0{layer - 1}.avif"
         alt="parallax layer {layer - 1}"
-        height={containerHeight}
       />
     {:else if layer === 14}
       <img
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
-          : -y + 10}px)"
+          : -y}px)"
         src="images/intro/0{layer - 1}.avif"
         alt="parallax layer {layer - 1}"
-        height={containerHeight}
       />
     {/if}
   {/each}
@@ -144,6 +139,7 @@
     img {
       position: absolute;
       width: 100%;
+      height: auto;
       will-change: transform;
       left: 0;
     }

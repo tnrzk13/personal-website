@@ -44,7 +44,7 @@
 
   $: {
     // get Heights
-    titleHeight = window.innerWidth * 0.5625;
+    titleHeight = document.body.offsetWidth * 0.5625;
     // calculations
     boolMobileView = window.innerWidth < medScreenSize;
     contactYOffset = titleHeight / 3;
