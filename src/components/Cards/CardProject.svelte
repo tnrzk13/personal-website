@@ -27,9 +27,7 @@
       {/if}
       <br /><br />
       <p class="text">{text}</p>
-      <div class="row">
-        <Techstack {techstack} />
-      </div>
+      <Techstack {techstack} />
     </div>
   </div>
 </div>
