@@ -94,7 +94,7 @@
       >
         <AboutMe />
         <Career {boolFadeAnimation} />
-        <Projects {boolMobileView} />
+        <Projects />
       </div>
       <div id="contact" style="height: 75vh;" />
       <ContactWrapper {contactInfo} />
@@ -119,7 +119,7 @@
       >
         <AboutMe />
         <Career {boolFadeAnimation} />
-        <Projects {boolMobileView} />
+        <Projects />
       </div>
       <ContactText {contactInfo} {titleHeight} {contactYOffset} />
     </div>

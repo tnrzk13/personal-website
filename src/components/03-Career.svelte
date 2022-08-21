@@ -4,6 +4,8 @@
 
   export let boolFadeAnimation = false;
 
+  let smScreenSize = 576;
+
   class CardClass {
     constructor(imgurl, title, subtitle, techstack, points, logoColor) {
       Object.assign(this, {
@@ -69,7 +71,7 @@
 <div id="career" class="container-fluid col-sm-10 col-sm-1">
   <h1 class="title col-md-9">My last couple adventures</h1>
   <div id="card-list-container" class="card container-fluid col-md-9">
-    <SimpleGrid cols={2}>
+    <SimpleGrid cols={window.innerWidth < smScreenSize ? 1 : 2}>
       {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}
         <Card
           {imgurl}

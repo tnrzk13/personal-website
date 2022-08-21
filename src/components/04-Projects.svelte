@@ -1,7 +1,6 @@
 <script>
   import ProjectInstance from "./04-Projects/ProjectInstance.svelte";
   import { SimpleGrid } from "@svelteuidev/core";
-  export let boolMobileView = false;
 
   class Urls {
     constructor(boolUrlExists = false, projectUrl = "", codeUrl = "") {
@@ -52,7 +51,7 @@
   <div class="projects container-fluid col-md-9">
     <SimpleGrid cols={1}>
       {#each projList as projectInfo, index}
-        <ProjectInstance projectIndex={index} {projectInfo} {boolMobileView} />
+        <ProjectInstance projectIndex={index} {projectInfo} />
         <br /><br />
       {/each}
     </SimpleGrid>
@@ -66,9 +65,9 @@
     h1.title {
       background-image: var(--gradient-relaxing-red);
     }
-  }
 
-  .container-fluid {
-    padding: 0;
+    .projects {
+      padding: 0;
+    }
   }
 </style>

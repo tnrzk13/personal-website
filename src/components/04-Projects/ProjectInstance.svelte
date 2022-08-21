@@ -2,14 +2,16 @@
   import CardProject from "../Cards/CardProject.svelte";
   import FadeInWrapper from "../Misc/FadeInWrapper.svelte";
 
-  export let projectIndex, projectInfo, boolMobileView;
+  export let projectIndex, projectInfo;
   export let boolFadeAnimation = true;
+
+  let smScreenSize = 576;
 </script>
 
-{#if projectIndex % 2 === 0 || boolMobileView}
+{#if projectIndex % 2 === 0 || window.innerWidth < smScreenSize}
   <div class="row project-container">
-    <div class="img-container col-md-7">
-      <div class="main-img-container-even col-md-10 main-img-container">
+    <div class="img-container col-sm-7">
+      <div class="main-img-container-even col-sm-10 main-img-container">
         {#if projectInfo.urls.boolUrlExists}
           <FadeInWrapper {boolFadeAnimation}>
             <a href={projectInfo.urls.projectUrl}>
@@ -25,7 +27,7 @@
         {/if}
       </div>
     </div>
-    <div class="proj-description col-md-5">
+    <div class="proj-description col-sm-5">
       <CardProject
         title={projectInfo.title}
         urls={projectInfo.urls}
@@ -36,7 +38,7 @@
   </div>
 {:else}
   <div class="row project-container">
-    <div class="proj-description col-md-5">
+    <div class="proj-description col-sm-5">
       <CardProject
         title={projectInfo.title}
         urls={projectInfo.urls}
@@ -44,9 +46,9 @@
         techstack={projectInfo.techstack}
       />
     </div>
-    <div class="img-container col-md-7">
+    <div class="img-container col-sm-7">
       <div
-        class="main-img-container-odd col-md-10 offset-md-2 main-img-container"
+        class="main-img-container-odd col-sm-10 offset-sm-2 main-img-container"
       >
         {#if projectInfo.urls.boolUrlExists}
           <FadeInWrapper {boolFadeAnimation}>
