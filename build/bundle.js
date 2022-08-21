@@ -7477,9 +7477,9 @@ var app = (function () {
     }
 
     function create_fragment$8(ctx) {
-    	let div3;
     	let div2;
     	let div1;
+    	let div0;
     	let t0;
     	let br0;
     	let br1;
@@ -7487,7 +7487,6 @@ var app = (function () {
     	let p;
     	let t2;
     	let t3;
-    	let div0;
     	let techstack_1;
     	let current;
 
@@ -7506,9 +7505,9 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div3 = element("div");
     			div2 = element("div");
     			div1 = element("div");
+    			div0 = element("div");
     			if_block.c();
     			t0 = space();
     			br0 = element("br");
@@ -7517,37 +7516,33 @@ var app = (function () {
     			p = element("p");
     			t2 = text(/*text*/ ctx[2]);
     			t3 = space();
-    			div0 = element("div");
     			create_component(techstack_1.$$.fragment);
     			add_location(br0, file$8, 27, 6, 773);
     			add_location(br1, file$8, 27, 12, 779);
     			attr_dev(p, "class", "text");
     			add_location(p, file$8, 28, 6, 793);
-    			attr_dev(div0, "class", "row");
-    			add_location(div0, file$8, 29, 6, 827);
-    			attr_dev(div1, "class", "card-body svelte-1ec7p8i");
-    			add_location(div1, file$8, 7, 4, 210);
-    			attr_dev(div2, "class", "card border-0 m-2 cb1 text-center svelte-1ec7p8i");
-    			add_location(div2, file$8, 6, 2, 157);
-    			attr_dev(div3, "class", "div container-fluid svelte-1ec7p8i");
-    			add_location(div3, file$8, 5, 0, 120);
+    			attr_dev(div0, "class", "card-body svelte-1ec7p8i");
+    			add_location(div0, file$8, 7, 4, 210);
+    			attr_dev(div1, "class", "card border-0 m-2 cb1 text-center svelte-1ec7p8i");
+    			add_location(div1, file$8, 6, 2, 157);
+    			attr_dev(div2, "class", "div container-fluid svelte-1ec7p8i");
+    			add_location(div2, file$8, 5, 0, 120);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div3, anchor);
-    			append_dev(div3, div2);
+    			insert_dev(target, div2, anchor);
     			append_dev(div2, div1);
-    			if_block.m(div1, null);
-    			append_dev(div1, t0);
-    			append_dev(div1, br0);
-    			append_dev(div1, br1);
-    			append_dev(div1, t1);
-    			append_dev(div1, p);
-    			append_dev(p, t2);
-    			append_dev(div1, t3);
     			append_dev(div1, div0);
+    			if_block.m(div0, null);
+    			append_dev(div0, t0);
+    			append_dev(div0, br0);
+    			append_dev(div0, br1);
+    			append_dev(div0, t1);
+    			append_dev(div0, p);
+    			append_dev(p, t2);
+    			append_dev(div0, t3);
     			mount_component(techstack_1, div0, null);
     			current = true;
     		},
@@ -7560,7 +7555,7 @@ var app = (function () {
 
     				if (if_block) {
     					if_block.c();
-    					if_block.m(div1, t0);
+    					if_block.m(div0, t0);
     				}
     			}
 
@@ -7579,7 +7574,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div3);
+    			if (detaching) detach_dev(div2);
     			if_block.d();
     			destroy_component(techstack_1);
     		}
