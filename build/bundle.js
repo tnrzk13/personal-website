@@ -7002,28 +7002,28 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[3] = list[i].imgurl;
-    	child_ctx[4] = list[i].title;
-    	child_ctx[5] = list[i].subtitle;
-    	child_ctx[6] = list[i].techstack;
-    	child_ctx[7] = list[i].points;
-    	child_ctx[8] = list[i].logoColor;
+    	child_ctx[4] = list[i].imgurl;
+    	child_ctx[5] = list[i].title;
+    	child_ctx[6] = list[i].subtitle;
+    	child_ctx[7] = list[i].techstack;
+    	child_ctx[8] = list[i].points;
+    	child_ctx[9] = list[i].logoColor;
     	return child_ctx;
     }
 
-    // (73:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}
+    // (75:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}
     function create_each_block$2(ctx) {
     	let card;
     	let current;
 
     	card = new CardCareer({
     			props: {
-    				imgurl: /*imgurl*/ ctx[3],
-    				title: /*title*/ ctx[4],
-    				subtitle: /*subtitle*/ ctx[5],
-    				techstack: /*techstack*/ ctx[6],
-    				points: /*points*/ ctx[7],
-    				logoColor: /*logoColor*/ ctx[8],
+    				imgurl: /*imgurl*/ ctx[4],
+    				title: /*title*/ ctx[5],
+    				subtitle: /*subtitle*/ ctx[6],
+    				techstack: /*techstack*/ ctx[7],
+    				points: /*points*/ ctx[8],
+    				logoColor: /*logoColor*/ ctx[9],
     				boolFadeAnimation: /*boolFadeAnimation*/ ctx[0]
     			},
     			$$inline: true
@@ -7060,18 +7060,18 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(73:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}",
+    		source: "(75:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (72:4) <SimpleGrid cols={2}>
+    // (74:4) <SimpleGrid cols={window.innerWidth < smScreenSize ? 1 : 2}>
     function create_default_slot$2(ctx) {
     	let each_1_anchor;
     	let current;
-    	let each_value = /*cardList*/ ctx[1];
+    	let each_value = /*cardList*/ ctx[2];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -7100,8 +7100,8 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*cardList, boolFadeAnimation*/ 3) {
-    				each_value = /*cardList*/ ctx[1];
+    			if (dirty & /*cardList, boolFadeAnimation*/ 5) {
+    				each_value = /*cardList*/ ctx[2];
     				validate_each_argument(each_value);
     				let i;
 
@@ -7156,7 +7156,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(72:4) <SimpleGrid cols={2}>",
+    		source: "(74:4) <SimpleGrid cols={window.innerWidth < smScreenSize ? 1 : 2}>",
     		ctx
     	});
 
@@ -7173,7 +7173,7 @@ var app = (function () {
 
     	simplegrid = new SimpleGrid$1({
     			props: {
-    				cols: 2,
+    				cols: window.innerWidth < /*smScreenSize*/ ctx[1] ? 1 : 2,
     				$$slots: { default: [create_default_slot$2] },
     				$$scope: { ctx }
     			},
@@ -7189,13 +7189,13 @@ var app = (function () {
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9 svelte-1pyb0ip");
-    			add_location(h1, file$9, 69, 2, 1976);
+    			add_location(h1, file$9, 71, 2, 2005);
     			attr_dev(div0, "id", "card-list-container");
     			attr_dev(div0, "class", "card container-fluid col-md-9 svelte-1pyb0ip");
-    			add_location(div0, file$9, 70, 2, 2037);
+    			add_location(div0, file$9, 72, 2, 2066);
     			attr_dev(div1, "id", "career");
     			attr_dev(div1, "class", "container-fluid col-sm-10 col-sm-1 svelte-1pyb0ip");
-    			add_location(div1, file$9, 68, 0, 1912);
+    			add_location(div1, file$9, 70, 0, 1941);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7211,7 +7211,7 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			const simplegrid_changes = {};
 
-    			if (dirty & /*$$scope, boolFadeAnimation*/ 2049) {
+    			if (dirty & /*$$scope, boolFadeAnimation*/ 4097) {
     				simplegrid_changes.$$scope = { dirty, ctx };
     			}
 
@@ -7247,6 +7247,7 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('_03_Career', slots, []);
     	let { boolFadeAnimation = false } = $$props;
+    	let smScreenSize = 576;
 
     	class CardClass {
     		constructor(imgurl, title, subtitle, techstack, points, logoColor) {
@@ -7290,20 +7291,22 @@ var app = (function () {
     		Card: CardCareer,
     		SimpleGrid: SimpleGrid$1,
     		boolFadeAnimation,
+    		smScreenSize,
     		CardClass,
     		cardList
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('boolFadeAnimation' in $$props) $$invalidate(0, boolFadeAnimation = $$props.boolFadeAnimation);
-    		if ('cardList' in $$props) $$invalidate(1, cardList = $$props.cardList);
+    		if ('smScreenSize' in $$props) $$invalidate(1, smScreenSize = $$props.smScreenSize);
+    		if ('cardList' in $$props) $$invalidate(2, cardList = $$props.cardList);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [boolFadeAnimation, cardList];
+    	return [boolFadeAnimation, smScreenSize, cardList];
     }
 
     class _03_Career extends SvelteComponentDev {
@@ -7706,7 +7709,7 @@ var app = (function () {
     /* src\components\04-Projects\ProjectInstance.svelte generated by Svelte v3.49.0 */
     const file$7 = "src\\components\\04-Projects\\ProjectInstance.svelte";
 
-    // (37:0) {:else}
+    // (39:0) {:else}
     function create_else_block_1(ctx) {
     	let div3;
     	let div0;
@@ -7748,14 +7751,14 @@ var app = (function () {
     			div2 = element("div");
     			div1 = element("div");
     			if_block.c();
-    			attr_dev(div0, "class", "proj-description col-md-5 svelte-1uite3s");
-    			add_location(div0, file$7, 38, 4, 1206);
-    			attr_dev(div1, "class", "main-img-container-odd col-md-10 offset-md-2 main-img-container svelte-1uite3s");
-    			add_location(div1, file$7, 47, 6, 1481);
-    			attr_dev(div2, "class", "img-container col-md-7 svelte-1uite3s");
-    			add_location(div2, file$7, 46, 4, 1437);
+    			attr_dev(div0, "class", "proj-description col-sm-5 svelte-1uite3s");
+    			add_location(div0, file$7, 40, 4, 1237);
+    			attr_dev(div1, "class", "main-img-container-odd col-sm-10 offset-sm-2 main-img-container svelte-1uite3s");
+    			add_location(div1, file$7, 49, 6, 1512);
+    			attr_dev(div2, "class", "img-container col-sm-7 svelte-1uite3s");
+    			add_location(div2, file$7, 48, 4, 1468);
     			attr_dev(div3, "class", "row project-container svelte-1uite3s");
-    			add_location(div3, file$7, 37, 2, 1165);
+    			add_location(div3, file$7, 39, 2, 1196);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -7822,14 +7825,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(37:0) {:else}",
+    		source: "(39:0) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (9:0) {#if projectIndex % 2 === 0 || boolMobileView}
+    // (11:0) {#if projectIndex % 2 === 0 || window.innerWidth < smScreenSize}
     function create_if_block$3(ctx) {
     	let div3;
     	let div1;
@@ -7870,14 +7873,14 @@ var app = (function () {
     			t = space();
     			div2 = element("div");
     			create_component(cardproject.$$.fragment);
-    			attr_dev(div0, "class", "main-img-container-even col-md-10 main-img-container svelte-1uite3s");
-    			add_location(div0, file$7, 11, 6, 376);
-    			attr_dev(div1, "class", "img-container col-md-7 svelte-1uite3s");
-    			add_location(div1, file$7, 10, 4, 332);
-    			attr_dev(div2, "class", "proj-description col-md-5 svelte-1uite3s");
-    			add_location(div2, file$7, 27, 4, 917);
+    			attr_dev(div0, "class", "main-img-container-even col-sm-10 main-img-container svelte-1uite3s");
+    			add_location(div0, file$7, 13, 6, 407);
+    			attr_dev(div1, "class", "img-container col-sm-7 svelte-1uite3s");
+    			add_location(div1, file$7, 12, 4, 363);
+    			attr_dev(div2, "class", "proj-description col-sm-5 svelte-1uite3s");
+    			add_location(div2, file$7, 29, 4, 948);
     			attr_dev(div3, "class", "row project-container svelte-1uite3s");
-    			add_location(div3, file$7, 9, 2, 291);
+    			add_location(div3, file$7, 11, 2, 322);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -7945,14 +7948,14 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(9:0) {#if projectIndex % 2 === 0 || boolMobileView}",
+    		source: "(11:0) {#if projectIndex % 2 === 0 || window.innerWidth < smScreenSize}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (61:8) {:else}
+    // (63:8) {:else}
     function create_else_block_2(ctx) {
     	let img;
     	let img_src_value;
@@ -7963,7 +7966,7 @@ var app = (function () {
     			attr_dev(img, "class", "main main-odd svelte-1uite3s");
     			if (!src_url_equal(img.src, img_src_value = /*projectInfo*/ ctx[1].imgurl)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$7, 61, 10, 1953);
+    			add_location(img, file$7, 63, 10, 1984);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -7984,21 +7987,21 @@ var app = (function () {
     		block,
     		id: create_else_block_2.name,
     		type: "else",
-    		source: "(61:8) {:else}",
+    		source: "(63:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (51:8) {#if projectInfo.urls.boolUrlExists}
+    // (53:8) {#if projectInfo.urls.boolUrlExists}
     function create_if_block_2(ctx) {
     	let fadeinwrapper;
     	let current;
 
     	fadeinwrapper = new FadeInWrapper({
     			props: {
-    				boolFadeAnimation: /*boolFadeAnimation*/ ctx[3],
+    				boolFadeAnimation: /*boolFadeAnimation*/ ctx[2],
     				$$slots: { default: [create_default_slot_1] },
     				$$scope: { ctx }
     			},
@@ -8015,7 +8018,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const fadeinwrapper_changes = {};
-    			if (dirty & /*boolFadeAnimation*/ 8) fadeinwrapper_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[3];
+    			if (dirty & /*boolFadeAnimation*/ 4) fadeinwrapper_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[2];
 
     			if (dirty & /*$$scope, projectInfo*/ 18) {
     				fadeinwrapper_changes.$$scope = { dirty, ctx };
@@ -8041,14 +8044,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(51:8) {#if projectInfo.urls.boolUrlExists}",
+    		source: "(53:8) {#if projectInfo.urls.boolUrlExists}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (52:10) <FadeInWrapper {boolFadeAnimation}>
+    // (54:10) <FadeInWrapper {boolFadeAnimation}>
     function create_default_slot_1(ctx) {
     	let a;
     	let img;
@@ -8062,9 +8065,9 @@ var app = (function () {
     			attr_dev(img, "class", "main main-odd glowing svelte-1uite3s");
     			if (!src_url_equal(img.src, img_src_value = /*projectInfo*/ ctx[1].imgurl)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$7, 53, 14, 1736);
+    			add_location(img, file$7, 55, 14, 1767);
     			attr_dev(a, "href", a_href_value = /*projectInfo*/ ctx[1].urls.projectUrl);
-    			add_location(a, file$7, 52, 12, 1682);
+    			add_location(a, file$7, 54, 12, 1713);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -8088,14 +8091,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(52:10) <FadeInWrapper {boolFadeAnimation}>",
+    		source: "(54:10) <FadeInWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (23:8) {:else}
+    // (25:8) {:else}
     function create_else_block$1(ctx) {
     	let img;
     	let img_src_value;
@@ -8106,7 +8109,7 @@ var app = (function () {
     			attr_dev(img, "class", "main svelte-1uite3s");
     			if (!src_url_equal(img.src, img_src_value = /*projectInfo*/ ctx[1].imgurl)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$7, 23, 10, 811);
+    			add_location(img, file$7, 25, 10, 842);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -8127,21 +8130,21 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(23:8) {:else}",
+    		source: "(25:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (13:8) {#if projectInfo.urls.boolUrlExists}
+    // (15:8) {#if projectInfo.urls.boolUrlExists}
     function create_if_block_1(ctx) {
     	let fadeinwrapper;
     	let current;
 
     	fadeinwrapper = new FadeInWrapper({
     			props: {
-    				boolFadeAnimation: /*boolFadeAnimation*/ ctx[3],
+    				boolFadeAnimation: /*boolFadeAnimation*/ ctx[2],
     				$$slots: { default: [create_default_slot$1] },
     				$$scope: { ctx }
     			},
@@ -8158,7 +8161,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const fadeinwrapper_changes = {};
-    			if (dirty & /*boolFadeAnimation*/ 8) fadeinwrapper_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[3];
+    			if (dirty & /*boolFadeAnimation*/ 4) fadeinwrapper_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[2];
 
     			if (dirty & /*$$scope, projectInfo*/ 18) {
     				fadeinwrapper_changes.$$scope = { dirty, ctx };
@@ -8184,14 +8187,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(13:8) {#if projectInfo.urls.boolUrlExists}",
+    		source: "(15:8) {#if projectInfo.urls.boolUrlExists}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (14:10) <FadeInWrapper {boolFadeAnimation}>
+    // (16:10) <FadeInWrapper {boolFadeAnimation}>
     function create_default_slot$1(ctx) {
     	let a;
     	let img;
@@ -8205,9 +8208,9 @@ var app = (function () {
     			attr_dev(img, "class", "main glowing svelte-1uite3s");
     			if (!src_url_equal(img.src, img_src_value = /*projectInfo*/ ctx[1].imgurl)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "project");
-    			add_location(img, file$7, 15, 14, 603);
+    			add_location(img, file$7, 17, 14, 634);
     			attr_dev(a, "href", a_href_value = /*projectInfo*/ ctx[1].urls.projectUrl);
-    			add_location(a, file$7, 14, 12, 549);
+    			add_location(a, file$7, 16, 12, 580);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -8231,7 +8234,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(14:10) <FadeInWrapper {boolFadeAnimation}>",
+    		source: "(16:10) <FadeInWrapper {boolFadeAnimation}>",
     		ctx
     	});
 
@@ -8249,7 +8252,7 @@ var app = (function () {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*projectIndex*/ ctx[0] % 2 === 0 || /*boolMobileView*/ ctx[2]) return 0;
+    		if (/*projectIndex*/ ctx[0] % 2 === 0 || window.innerWidth < /*smScreenSize*/ ctx[3]) return 0;
     		return 1;
     	}
 
@@ -8262,8 +8265,8 @@ var app = (function () {
     			t = space();
     			br0 = element("br");
     			br1 = element("br");
-    			add_location(br0, file$7, 67, 0, 2081);
-    			add_location(br1, file$7, 67, 6, 2087);
+    			add_location(br0, file$7, 69, 0, 2112);
+    			add_location(br1, file$7, 69, 6, 2118);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8333,9 +8336,10 @@ var app = (function () {
     function instance$7($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('ProjectInstance', slots, []);
-    	let { projectIndex, projectInfo, boolMobileView } = $$props;
+    	let { projectIndex, projectInfo } = $$props;
     	let { boolFadeAnimation = true } = $$props;
-    	const writable_props = ['projectIndex', 'projectInfo', 'boolMobileView', 'boolFadeAnimation'];
+    	let smScreenSize = 576;
+    	const writable_props = ['projectIndex', 'projectInfo', 'boolFadeAnimation'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<ProjectInstance> was created with unknown prop '${key}'`);
@@ -8344,8 +8348,7 @@ var app = (function () {
     	$$self.$$set = $$props => {
     		if ('projectIndex' in $$props) $$invalidate(0, projectIndex = $$props.projectIndex);
     		if ('projectInfo' in $$props) $$invalidate(1, projectInfo = $$props.projectInfo);
-    		if ('boolMobileView' in $$props) $$invalidate(2, boolMobileView = $$props.boolMobileView);
-    		if ('boolFadeAnimation' in $$props) $$invalidate(3, boolFadeAnimation = $$props.boolFadeAnimation);
+    		if ('boolFadeAnimation' in $$props) $$invalidate(2, boolFadeAnimation = $$props.boolFadeAnimation);
     	};
 
     	$$self.$capture_state = () => ({
@@ -8353,22 +8356,22 @@ var app = (function () {
     		FadeInWrapper,
     		projectIndex,
     		projectInfo,
-    		boolMobileView,
-    		boolFadeAnimation
+    		boolFadeAnimation,
+    		smScreenSize
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('projectIndex' in $$props) $$invalidate(0, projectIndex = $$props.projectIndex);
     		if ('projectInfo' in $$props) $$invalidate(1, projectInfo = $$props.projectInfo);
-    		if ('boolMobileView' in $$props) $$invalidate(2, boolMobileView = $$props.boolMobileView);
-    		if ('boolFadeAnimation' in $$props) $$invalidate(3, boolFadeAnimation = $$props.boolFadeAnimation);
+    		if ('boolFadeAnimation' in $$props) $$invalidate(2, boolFadeAnimation = $$props.boolFadeAnimation);
+    		if ('smScreenSize' in $$props) $$invalidate(3, smScreenSize = $$props.smScreenSize);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [projectIndex, projectInfo, boolMobileView, boolFadeAnimation];
+    	return [projectIndex, projectInfo, boolFadeAnimation, smScreenSize];
     }
 
     class ProjectInstance extends SvelteComponentDev {
@@ -8378,8 +8381,7 @@ var app = (function () {
     		init(this, options, instance$7, create_fragment$7, safe_not_equal, {
     			projectIndex: 0,
     			projectInfo: 1,
-    			boolMobileView: 2,
-    			boolFadeAnimation: 3
+    			boolFadeAnimation: 2
     		});
 
     		dispatch_dev("SvelteRegisterComponent", {
@@ -8399,10 +8401,6 @@ var app = (function () {
     		if (/*projectInfo*/ ctx[1] === undefined && !('projectInfo' in props)) {
     			console.warn("<ProjectInstance> was created without expected prop 'projectInfo'");
     		}
-
-    		if (/*boolMobileView*/ ctx[2] === undefined && !('boolMobileView' in props)) {
-    			console.warn("<ProjectInstance> was created without expected prop 'boolMobileView'");
-    		}
     	}
 
     	get projectIndex() {
@@ -8418,14 +8416,6 @@ var app = (function () {
     	}
 
     	set projectInfo(value) {
-    		throw new Error("<ProjectInstance>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get boolMobileView() {
-    		throw new Error("<ProjectInstance>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set boolMobileView(value) {
     		throw new Error("<ProjectInstance>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
@@ -8445,12 +8435,12 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[4] = list[i];
-    	child_ctx[6] = i;
+    	child_ctx[3] = list[i];
+    	child_ctx[5] = i;
     	return child_ctx;
     }
 
-    // (54:6) {#each projList as projectInfo, index}
+    // (53:6) {#each projList as projectInfo, index}
     function create_each_block$1(ctx) {
     	let projectinstance;
     	let t;
@@ -8460,9 +8450,8 @@ var app = (function () {
 
     	projectinstance = new ProjectInstance({
     			props: {
-    				projectIndex: /*index*/ ctx[6],
-    				projectInfo: /*projectInfo*/ ctx[4],
-    				boolMobileView: /*boolMobileView*/ ctx[0]
+    				projectIndex: /*index*/ ctx[5],
+    				projectInfo: /*projectInfo*/ ctx[3]
     			},
     			$$inline: true
     		});
@@ -8473,8 +8462,8 @@ var app = (function () {
     			t = space();
     			br0 = element("br");
     			br1 = element("br");
-    			add_location(br0, file$6, 55, 8, 2139);
-    			add_location(br1, file$6, 55, 14, 2145);
+    			add_location(br0, file$6, 54, 8, 2084);
+    			add_location(br1, file$6, 54, 14, 2090);
     		},
     		m: function mount(target, anchor) {
     			mount_component(projectinstance, target, anchor);
@@ -8483,11 +8472,7 @@ var app = (function () {
     			insert_dev(target, br1, anchor);
     			current = true;
     		},
-    		p: function update(ctx, dirty) {
-    			const projectinstance_changes = {};
-    			if (dirty & /*boolMobileView*/ 1) projectinstance_changes.boolMobileView = /*boolMobileView*/ ctx[0];
-    			projectinstance.$set(projectinstance_changes);
-    		},
+    		p: noop,
     		i: function intro(local) {
     			if (current) return;
     			transition_in(projectinstance.$$.fragment, local);
@@ -8509,18 +8494,18 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(54:6) {#each projList as projectInfo, index}",
+    		source: "(53:6) {#each projList as projectInfo, index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (53:4) <SimpleGrid cols={1}>
+    // (52:4) <SimpleGrid cols={1}>
     function create_default_slot(ctx) {
     	let each_1_anchor;
     	let current;
-    	let each_value = /*projList*/ ctx[1];
+    	let each_value = /*projList*/ ctx[0];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -8549,8 +8534,8 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*projList, boolMobileView*/ 3) {
-    				each_value = /*projList*/ ctx[1];
+    			if (dirty & /*projList*/ 1) {
+    				each_value = /*projList*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
 
@@ -8605,7 +8590,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(53:4) <SimpleGrid cols={1}>",
+    		source: "(52:4) <SimpleGrid cols={1}>",
     		ctx
     	});
 
@@ -8637,13 +8622,13 @@ var app = (function () {
     			t1 = space();
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
-    			attr_dev(h1, "class", "title col-md-9 svelte-5g58fl");
-    			add_location(h1, file$6, 50, 2, 1862);
-    			attr_dev(div0, "class", "projects container-fluid col-md-9 svelte-5g58fl");
-    			add_location(div0, file$6, 51, 2, 1928);
+    			attr_dev(h1, "class", "title col-md-9 svelte-1jaadhi");
+    			add_location(h1, file$6, 49, 2, 1824);
+    			attr_dev(div0, "class", "projects container-fluid col-md-9 svelte-1jaadhi");
+    			add_location(div0, file$6, 50, 2, 1890);
     			attr_dev(div1, "id", "projects");
-    			attr_dev(div1, "class", "container-fluid col-sm-10 offset-sm-1 svelte-5g58fl");
-    			add_location(div1, file$6, 49, 0, 1793);
+    			attr_dev(div1, "class", "container-fluid col-sm-10 offset-sm-1 svelte-1jaadhi");
+    			add_location(div1, file$6, 48, 0, 1755);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8659,7 +8644,7 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			const simplegrid_changes = {};
 
-    			if (dirty & /*$$scope, boolMobileView*/ 129) {
+    			if (dirty & /*$$scope*/ 64) {
     				simplegrid_changes.$$scope = { dirty, ctx };
     			}
 
@@ -8694,7 +8679,6 @@ var app = (function () {
     function instance$6($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('_04_Projects', slots, []);
-    	let { boolMobileView = false } = $$props;
 
     	class Urls {
     		constructor(boolUrlExists = false, projectUrl = "", codeUrl = "") {
@@ -8714,41 +8698,35 @@ var app = (function () {
     		new Project("Wumpus World", "images/04-project/wumpus.avif", new Urls(), "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.", ["Python"])
     	];
 
-    	const writable_props = ['boolMobileView'];
+    	const writable_props = [];
 
     	Object_1.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<_04_Projects> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$$set = $$props => {
-    		if ('boolMobileView' in $$props) $$invalidate(0, boolMobileView = $$props.boolMobileView);
-    	};
-
     	$$self.$capture_state = () => ({
     		ProjectInstance,
     		SimpleGrid: SimpleGrid$1,
-    		boolMobileView,
     		Urls,
     		Project,
     		projList
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('boolMobileView' in $$props) $$invalidate(0, boolMobileView = $$props.boolMobileView);
-    		if ('projList' in $$props) $$invalidate(1, projList = $$props.projList);
+    		if ('projList' in $$props) $$invalidate(0, projList = $$props.projList);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [boolMobileView, projList];
+    	return [projList];
     }
 
     class _04_Projects extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$6, create_fragment$6, safe_not_equal, { boolMobileView: 0 });
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -8756,14 +8734,6 @@ var app = (function () {
     			options,
     			id: create_fragment$6.name
     		});
-    	}
-
-    	get boolMobileView() {
-    		throw new Error("<_04_Projects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set boolMobileView(value) {
-    		throw new Error("<_04_Projects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -10079,12 +10049,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	projects = new _04_Projects({
-    			props: {
-    				boolMobileView: /*boolMobileView*/ ctx[8]
-    			},
-    			$$inline: true
-    		});
+    	projects = new _04_Projects({ $$inline: true });
 
     	contacttext = new ContactText({
     			props: {
@@ -10121,13 +10086,13 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "content-desktop svelte-1m6pum2");
     			add_render_callback(() => /*div0_elementresize_handler_1*/ ctx[13].call(div0));
-    			add_location(div0, file, 114, 6, 3620);
+    			add_location(div0, file, 114, 6, 3603);
     			attr_dev(div1, "id", "content-container");
     			set_style(div1, "top", /*titleHeight*/ ctx[0] + "px");
     			attr_dev(div1, "class", "svelte-1m6pum2");
-    			add_location(div1, file, 113, 4, 3554);
+    			add_location(div1, file, 113, 4, 3537);
     			attr_dev(div2, "class", "container-fluid svelte-1m6pum2");
-    			add_location(div2, file, 104, 2, 3349);
+    			add_location(div2, file, 104, 2, 3332);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10158,9 +10123,6 @@ var app = (function () {
     			const career_changes = {};
     			if (dirty & /*boolFadeAnimation*/ 8) career_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[3];
     			career.$set(career_changes);
-    			const projects_changes = {};
-    			if (dirty & /*boolMobileView*/ 256) projects_changes.boolMobileView = /*boolMobileView*/ ctx[8];
-    			projects.$set(projects_changes);
     			const contacttext_changes = {};
     			if (dirty & /*titleHeight*/ 1) contacttext_changes.titleHeight = /*titleHeight*/ ctx[0];
     			if (dirty & /*contactYOffset*/ 4) contacttext_changes.contactYOffset = /*contactYOffset*/ ctx[2];
@@ -10255,12 +10217,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	projects = new _04_Projects({
-    			props: {
-    				boolMobileView: /*boolMobileView*/ ctx[8]
-    			},
-    			$$inline: true
-    		});
+    	projects = new _04_Projects({ $$inline: true });
 
     	contactwrapper = new ContactWrapper({
     			props: { contactInfo: /*contactInfo*/ ctx[10] },
@@ -10298,7 +10255,7 @@ var app = (function () {
     			add_location(div0, file, 89, 6, 2969);
     			attr_dev(div1, "id", "contact");
     			set_style(div1, "height", "75vh");
-    			add_location(div1, file, 98, 6, 3201);
+    			add_location(div1, file, 98, 6, 3184);
     			attr_dev(div2, "id", "content-container");
     			attr_dev(div2, "class", "svelte-1m6pum2");
     			add_location(div2, file, 88, 4, 2933);
@@ -10332,9 +10289,6 @@ var app = (function () {
     			const career_changes = {};
     			if (dirty & /*boolFadeAnimation*/ 8) career_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[3];
     			career.$set(career_changes);
-    			const projects_changes = {};
-    			if (dirty & /*boolMobileView*/ 256) projects_changes.boolMobileView = /*boolMobileView*/ ctx[8];
-    			projects.$set(projects_changes);
     			const navbar_changes = {};
     			if (dirty & /*boolMobileView*/ 256) navbar_changes.boolMobileView = /*boolMobileView*/ ctx[8];
     			navbar.$set(navbar_changes);
