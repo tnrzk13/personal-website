@@ -95,9 +95,11 @@
         <AboutMe />
         <Career {boolFadeAnimation} />
         <Projects />
+        <ContactWrapper {contactInfo} />
       </div>
-      <div id="contact" style="height: 75vh;" />
-      <ContactWrapper {contactInfo} />
+      <!-- <div id="contact">
+        <ContactWrapper {contactInfo} />
+      </div> -->
     </div>
   </div>
   <Navbar {boolMobileView} />
@@ -156,6 +158,11 @@
       .content-mobile {
         background-color: var(--darkblue);
       }
+    }
+
+    #contact {
+      width: 100%;
+      height: 100vh;
     }
   }
 </style>

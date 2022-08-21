@@ -40,13 +40,11 @@
 <style lang="scss">
   #contact-mobile-wrapper {
     height: 100vh;
-    display: flex;
     background-image: linear-gradient(
       109.6deg,
       rgba(62, 161, 219, 1) 11.2%,
       rgba(93, 52, 236, 1) 100.2%
     );
-
     .textLayer {
       align-self: center;
       text-align: left;
@@ -54,7 +52,7 @@
       font-size: 3em;
       color: white;
       line-height: normal;
-      padding: 2em 0.5em 0 0.5em;
+      padding: 3.5em 0.5em 0 0.5em;
 
       .textLayer-preamble {
         font-size: 0.5em;
@@ -74,12 +72,14 @@
         align-items: center;
 
         .linkedin-container {
-          a {
+          .fa-linkedin {
             text-decoration: none;
             color: white;
           }
-          a:hover {
-            filter: brightness(50%);
+          .fa-linkedin:hover {
+            color: black;
+            scale: 110%;
+            transition: 0.5s;
           }
         }
 
@@ -99,8 +99,7 @@
         }
 
         .btn-grad:hover {
-          color: #fff;
-          text-decoration: none;
+          scale: 110%;
         }
 
         .btn-grad:active {
