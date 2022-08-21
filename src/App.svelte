@@ -52,9 +52,6 @@
     pageHalfDown = (titleHeight + contentHeight) / 2;
     // contactTop
     contactTop = contentHeight;
-    // contactTop = document.getElementById("contact").offsetTop;
-
-    // console.log(titleHeight, y);
   }
 
   const triggerDevMode = (isOn) => {
@@ -90,7 +87,11 @@
   <div class="container-fluid">
     <TitleMobile {boolAnimateText} {titleInfo} />
     <div id="content-container">
-      <div id="content" bind:clientHeight={contentHeight}>
+      <div
+        id="content"
+        class="content-mobile"
+        bind:clientHeight={contentHeight}
+      >
         <AboutMe />
         <Career {boolFadeAnimation} />
         <Projects {boolMobileView} />
@@ -111,7 +112,11 @@
       {contactYOffset}
     />
     <div id="content-container" style="top: {titleHeight}px;">
-      <div id="content" bind:clientHeight={contentHeight}>
+      <div
+        id="content"
+        class="content-desktop"
+        bind:clientHeight={contentHeight}
+      >
         <AboutMe />
         <Career {boolFadeAnimation} />
         <Projects {boolMobileView} />
@@ -139,10 +144,17 @@
       overflow: visible;
 
       #content {
-        background-image: linear-gradient(var(--blue) 5%, var(--darkblue) 50%);
         position: relative;
         z-index: 2;
         border-radius: 0 0 50% 50% / 0 0 3em 3em;
+      }
+
+      .content-desktop {
+        background-image: linear-gradient(var(--blue) 5%, var(--darkblue) 50%);
+      }
+
+      .content-mobile {
+        background-color: var(--darkblue);
       }
     }
   }

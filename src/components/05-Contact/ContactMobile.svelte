@@ -40,8 +40,12 @@
 <style lang="scss">
   #contact-mobile-wrapper {
     height: 100vh;
-    background-color: var(--blue);
     display: flex;
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(62, 161, 219, 1) 11.2%,
+      rgba(93, 52, 236, 1) 100.2%
+    );
 
     .textLayer {
       align-self: center;
@@ -81,12 +85,6 @@
 
         .btn-grad {
           text-align: center;
-          background-image: linear-gradient(
-            to right,
-            #24c6dc 0%,
-            #514a9d 51%,
-            #24c6dc 100%
-          );
           margin: 1em;
           padding: 0.75em 2.5em;
           text-align: center;
@@ -95,12 +93,12 @@
           background-size: 200% auto;
           color: white;
           box-shadow: 0 0 20px #eee;
+          border: 3px solid white;
           border-radius: 10px;
           display: block;
         }
 
         .btn-grad:hover {
-          background-position: right center; /* change the direction of the change here */
           color: #fff;
           text-decoration: none;
         }

@@ -19,6 +19,7 @@
   --gradient-pink-blue: linear-gradient( 68.6deg,  rgba(252,165,241,1) 1.8%, rgba(181,255,255,1));
   --gradient-github-copilot: linear-gradient(315deg, #a77bf3 40%, #a0a8f1 , #48e9e6);
   --gradient-relaxing-red: linear-gradient(315deg, #fffbd5 40%, #b20a2c);
+  --gradient-mint-blue-dark: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
 }
 
 * {

@@ -42,9 +42,6 @@
   };
 
   $: {
-    // console.log(imgHeight, yScroll, contactYOffset, contactTop);
-    console.log(containerHeight, y);
-
     boolShowContact = y > pageHalfDown;
     update();
   }

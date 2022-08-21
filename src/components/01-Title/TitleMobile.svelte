@@ -24,53 +24,35 @@
         {titleInfo.texts[0]}
       {/if}
     </div>
-    <div class="scrolldown"><i class="fa-solid fa-angles-down" /></div>
   </div>
 </div>
 
 <style lang="scss">
   .textLayerWrapper {
-    background-color: var(--blue);
+    background-color: var(--darkblue);
 
     .textLayer {
       text-align: left;
       font-family: "Montserrat", sans-serif;
-      font-size: 3em;
+      font-size: 4rem;
       color: white;
       line-height: normal;
       padding: 2em 0.25em 0 0.25em;
 
-      .textLayer-preamble {
-        font-size: 0.5em;
+      .textLayer-preamble,
+      .textLayer-description {
+        font-size: 0.35em;
+      }
+
+      .textLayer-title,
+      .textLayer-subtitle {
+        color: transparent;
+        -webkit-background-clip: text;
+        background-image: var(--gradient-mint-blue-dark);
       }
 
       .textLayer-description {
         padding: 1em 0;
-        font-size: 0.5em;
-      }
-
-      .scrolldown {
-        padding-top: 0.5em;
-        text-align: center;
-        background-image: linear-gradient(
-          180deg,
-          white,
-          #c531ad,
-          white,
-          #c531ad
-        );
-        -webkit-background-clip: text;
-        color: transparent;
-        background-size: 100% 300%;
-        animation: animateBg 2s infinite linear;
-      }
-      @keyframes animateBg {
-        0% {
-          background-position: bottom;
-        }
-        100% {
-          background-position: top;
-        }
       }
     }
   }
