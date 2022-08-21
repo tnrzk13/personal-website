@@ -9056,35 +9056,34 @@ var app = (function () {
     			a1 = element("a");
     			button = element("button");
     			button.textContent = "Say Hello";
-    			attr_dev(div0, "class", "textLayer-preamble svelte-4pnck2");
+    			attr_dev(div0, "class", "textLayer-preamble svelte-6a4fco");
     			add_location(div0, file$4, 7, 4, 193);
     			attr_dev(div1, "class", "textLayer-title");
     			add_location(div1, file$4, 8, 4, 259);
     			add_location(br0, file$4, 19, 6, 559);
     			add_location(br1, file$4, 19, 12, 565);
-    			attr_dev(div2, "class", "textLayer-description svelte-4pnck2");
+    			attr_dev(div2, "class", "textLayer-description svelte-6a4fco");
     			add_location(div2, file$4, 17, 4, 483);
-    			attr_dev(i, "class", "fa-brands fa-linkedin fa-lg");
+    			attr_dev(i, "class", "fa-brands fa-linkedin fa-lg svelte-6a4fco");
     			add_location(i, file$4, 24, 10, 732);
     			attr_dev(a0, "href", "https://www.linkedin.com/in/tony-k-kwok/");
-    			attr_dev(a0, "class", "svelte-4pnck2");
     			add_location(a0, file$4, 23, 8, 669);
     			attr_dev(span0, "class", "linkedin-container");
     			add_location(span0, file$4, 22, 6, 626);
-    			attr_dev(button, "class", "btn btn-grad btn-lg svelte-4pnck2");
+    			attr_dev(button, "class", "btn btn-grad btn-lg svelte-6a4fco");
     			add_location(button, file$4, 32, 10, 975);
     			attr_dev(a1, "href", a1_href_value = "mailto:tnrzk13@gmail.com?subject=" + /*contactInfo*/ ctx[0].subject);
     			attr_dev(a1, "id", "emailLink");
-    			attr_dev(a1, "class", "svelte-4pnck2");
+    			attr_dev(a1, "class", "svelte-6a4fco");
     			add_location(a1, file$4, 28, 8, 851);
     			attr_dev(span1, "class", "button-container");
     			add_location(span1, file$4, 27, 6, 810);
-    			attr_dev(div3, "class", "links-container svelte-4pnck2");
+    			attr_dev(div3, "class", "links-container svelte-6a4fco");
     			add_location(div3, file$4, 21, 4, 589);
-    			attr_dev(div4, "class", "textLayer col-sm-10 offset-sm-1 svelte-4pnck2");
+    			attr_dev(div4, "class", "textLayer col-sm-10 offset-sm-1 svelte-6a4fco");
     			add_location(div4, file$4, 6, 2, 142);
     			attr_dev(div5, "id", "contact-mobile-wrapper");
-    			attr_dev(div5, "class", "svelte-4pnck2");
+    			attr_dev(div5, "class", "svelte-6a4fco");
     			add_location(div5, file$4, 5, 0, 105);
     		},
     		l: function claim(nodes) {
@@ -9236,7 +9235,6 @@ var app = (function () {
     			div = element("div");
     			create_component(contactmobile.$$.fragment);
     			attr_dev(div, "id", "contact-wrapper");
-    			attr_dev(div, "class", "svelte-f1fjgr");
     			add_location(div, file$3, 10, 0, 157);
     		},
     		l: function claim(nodes) {
@@ -10009,7 +10007,7 @@ var app = (function () {
     const { window: window_1 } = globals;
     const file = "src\\App.svelte";
 
-    // (104:0) {:else}
+    // (106:0) {:else}
     function create_else_block(ctx) {
     	let div2;
     	let parallax;
@@ -10084,15 +10082,15 @@ var app = (function () {
     			t4 = space();
     			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
-    			attr_dev(div0, "class", "content-desktop svelte-1m6pum2");
+    			attr_dev(div0, "class", "content-desktop svelte-1gsxggx");
     			add_render_callback(() => /*div0_elementresize_handler_1*/ ctx[13].call(div0));
-    			add_location(div0, file, 114, 6, 3603);
+    			add_location(div0, file, 116, 6, 3646);
     			attr_dev(div1, "id", "content-container");
     			set_style(div1, "top", /*titleHeight*/ ctx[0] + "px");
-    			attr_dev(div1, "class", "svelte-1m6pum2");
-    			add_location(div1, file, 113, 4, 3537);
-    			attr_dev(div2, "class", "container-fluid svelte-1m6pum2");
-    			add_location(div2, file, 104, 2, 3332);
+    			attr_dev(div1, "class", "svelte-1gsxggx");
+    			add_location(div1, file, 115, 4, 3580);
+    			attr_dev(div2, "class", "container-fluid svelte-1gsxggx");
+    			add_location(div2, file, 106, 2, 3375);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10172,7 +10170,7 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(104:0) {:else}",
+    		source: "(106:0) {:else}",
     		ctx
     	});
 
@@ -10181,22 +10179,20 @@ var app = (function () {
 
     // (86:0) {#if boolMobileView}
     function create_if_block(ctx) {
-    	let div3;
+    	let div2;
     	let titlemobile;
     	let t0;
-    	let div2;
+    	let div1;
     	let div0;
     	let aboutme;
     	let t1;
     	let career;
     	let t2;
     	let projects;
-    	let div0_resize_listener;
     	let t3;
-    	let div1;
-    	let t4;
     	let contactwrapper;
-    	let t5;
+    	let div0_resize_listener;
+    	let t4;
     	let navbar;
     	let current;
 
@@ -10233,10 +10229,10 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div3 = element("div");
+    			div2 = element("div");
     			create_component(titlemobile.$$.fragment);
     			t0 = space();
-    			div2 = element("div");
+    			div1 = element("div");
     			div0 = element("div");
     			create_component(aboutme.$$.fragment);
     			t1 = space();
@@ -10244,41 +10240,34 @@ var app = (function () {
     			t2 = space();
     			create_component(projects.$$.fragment);
     			t3 = space();
-    			div1 = element("div");
-    			t4 = space();
     			create_component(contactwrapper.$$.fragment);
-    			t5 = space();
+    			t4 = space();
     			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
-    			attr_dev(div0, "class", "content-mobile svelte-1m6pum2");
+    			attr_dev(div0, "class", "content-mobile svelte-1gsxggx");
     			add_render_callback(() => /*div0_elementresize_handler*/ ctx[12].call(div0));
     			add_location(div0, file, 89, 6, 2969);
-    			attr_dev(div1, "id", "contact");
-    			set_style(div1, "height", "75vh");
-    			add_location(div1, file, 98, 6, 3184);
-    			attr_dev(div2, "id", "content-container");
-    			attr_dev(div2, "class", "svelte-1m6pum2");
-    			add_location(div2, file, 88, 4, 2933);
-    			attr_dev(div3, "class", "container-fluid svelte-1m6pum2");
-    			add_location(div3, file, 86, 2, 2847);
+    			attr_dev(div1, "id", "content-container");
+    			attr_dev(div1, "class", "svelte-1gsxggx");
+    			add_location(div1, file, 88, 4, 2933);
+    			attr_dev(div2, "class", "container-fluid svelte-1gsxggx");
+    			add_location(div2, file, 86, 2, 2847);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div3, anchor);
-    			mount_component(titlemobile, div3, null);
-    			append_dev(div3, t0);
-    			append_dev(div3, div2);
-    			append_dev(div2, div0);
+    			insert_dev(target, div2, anchor);
+    			mount_component(titlemobile, div2, null);
+    			append_dev(div2, t0);
+    			append_dev(div2, div1);
+    			append_dev(div1, div0);
     			mount_component(aboutme, div0, null);
     			append_dev(div0, t1);
     			mount_component(career, div0, null);
     			append_dev(div0, t2);
     			mount_component(projects, div0, null);
+    			append_dev(div0, t3);
+    			mount_component(contactwrapper, div0, null);
     			div0_resize_listener = add_resize_listener(div0, /*div0_elementresize_handler*/ ctx[12].bind(div0));
-    			append_dev(div2, t3);
-    			append_dev(div2, div1);
-    			append_dev(div2, t4);
-    			mount_component(contactwrapper, div2, null);
-    			insert_dev(target, t5, anchor);
+    			insert_dev(target, t4, anchor);
     			mount_component(navbar, target, anchor);
     			current = true;
     		},
@@ -10313,14 +10302,14 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div3);
+    			if (detaching) detach_dev(div2);
     			destroy_component(titlemobile);
     			destroy_component(aboutme);
     			destroy_component(career);
     			destroy_component(projects);
-    			div0_resize_listener();
     			destroy_component(contactwrapper);
-    			if (detaching) detach_dev(t5);
+    			div0_resize_listener();
+    			if (detaching) detach_dev(t4);
     			destroy_component(navbar, detaching);
     		}
     	};
