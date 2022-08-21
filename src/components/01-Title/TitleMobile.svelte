@@ -12,7 +12,8 @@
       <br />
     </div>
     <div class="textLayer-subtitle">
-      {titleInfo.subtitle}{#if boolAnimateText}
+      {titleInfo.subtitle}
+      {#if boolAnimateText}
         <TextType
           texts={titleInfo.texts}
           delay={100}
@@ -24,6 +25,7 @@
         {titleInfo.texts[0]}
       {/if}
     </div>
+    <br /><br />
   </div>
 </div>
 
