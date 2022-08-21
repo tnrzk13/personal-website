@@ -10,7 +10,7 @@
   const numLayers = 15;
   const layers = [...Array(numLayers).keys()];
   const textLayer = 4;
-  const numImgLayers = numLayers - 2;
+  const numImgLayers = numLayers - 1;
   let y, imgHeight, offsetRatio, yScroll;
   let boolShowContact = false;
 
@@ -97,7 +97,7 @@
           <div class="scrolldown"><i class="fa-solid fa-angles-down" /></div>
         </div>
       {/if}
-    {:else if layer > textLayer && layer < 11}
+    {:else if layer >= textLayer && layer < 11}
       <img
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
