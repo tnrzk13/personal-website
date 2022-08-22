@@ -2224,8 +2224,8 @@ var app = (function () {
     	return block;
     }
 
-    const numLayers = 15;
-    const textLayer = 4;
+    const numLayers = 11;
+    const textLayer = 3;
 
     function instance$i($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;

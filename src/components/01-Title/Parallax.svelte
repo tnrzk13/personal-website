@@ -7,9 +7,9 @@
   export let pageHalfDown = 1000;
   export let contactTop, contactYOffset;
 
-  const numLayers = 15;
+  const numLayers = 11;
   const layers = [...Array(numLayers).keys()];
-  const textLayer = 4;
+  const textLayer = 3;
   const numImgLayers = numLayers - 1;
   let y, imgHeight, offsetRatio, yScroll;
   let boolShowContact = false;
