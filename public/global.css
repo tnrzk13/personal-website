@@ -36,6 +36,7 @@ h1.title {
   color: transparent;
   -webkit-background-clip: text;
   background-image: var(--gradient-cool-sky);
+  word-break: break-word;
 }
 
 h4 {
