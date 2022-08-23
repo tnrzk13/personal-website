@@ -1,5 +1,6 @@
 <script>
   import { fade } from "svelte/transition";
+  import { slide } from "svelte/transition";
 
   export let boolMobileView;
 
@@ -23,7 +24,7 @@
     class="navbar navbar-expand-md navbar-dark fixed-top {boolMobileView
       ? 'nav-mobile-background'
       : ''}"
-    transition:fade
+    transition:slide
   >
     <a class="navbar-brand" href="."
       ><img src="images/navbar/gorilla.png" alt="logo gorilla" /></a
