@@ -1914,7 +1914,7 @@ var app = (function () {
     				delay: 100,
     				num_loops: 2,
     				repeat_n_words: 1,
-    				blinker_iter_count: 14
+    				blinker_iter_count: 10
     			},
     			$$inline: true
     		});
@@ -10084,13 +10084,13 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "content-desktop svelte-1gsxggx");
     			add_render_callback(() => /*div0_elementresize_handler_1*/ ctx[13].call(div0));
-    			add_location(div0, file, 116, 6, 3646);
+    			add_location(div0, file, 116, 6, 3634);
     			attr_dev(div1, "id", "content-container");
     			set_style(div1, "top", /*titleHeight*/ ctx[0] + "px");
     			attr_dev(div1, "class", "svelte-1gsxggx");
-    			add_location(div1, file, 115, 4, 3580);
+    			add_location(div1, file, 115, 4, 3568);
     			attr_dev(div2, "class", "container-fluid svelte-1gsxggx");
-    			add_location(div2, file, 106, 2, 3375);
+    			add_location(div2, file, 106, 2, 3363);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10246,12 +10246,12 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "content-mobile svelte-1gsxggx");
     			add_render_callback(() => /*div0_elementresize_handler*/ ctx[12].call(div0));
-    			add_location(div0, file, 89, 6, 2969);
+    			add_location(div0, file, 89, 6, 2957);
     			attr_dev(div1, "id", "content-container");
     			attr_dev(div1, "class", "svelte-1gsxggx");
-    			add_location(div1, file, 88, 4, 2933);
+    			add_location(div1, file, 88, 4, 2921);
     			attr_dev(div2, "class", "container-fluid svelte-1gsxggx");
-    			add_location(div2, file, 86, 2, 2847);
+    			add_location(div2, file, 86, 2, 2835);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10498,7 +10498,7 @@ var app = (function () {
     		preamble: "Hi, my name is",
     		title: "Tony Kwok.",
     		subtitle: "I build things with ",
-    		texts: ["data.", "style.", "code.", "thought."],
+    		texts: ["data.", "style.", "code."],
     		description: "I'm a software developer who builds solutions to problems using data. Currently, I'm looking to join a company for my next adventure."
     	};
 

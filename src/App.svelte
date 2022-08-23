@@ -66,7 +66,7 @@
     preamble: "Hi, my name is",
     title: "Tony Kwok.",
     subtitle: "I build things with ",
-    texts: ["data.", "style.", "code.", "thought."],
+    texts: ["data.", "style.", "code."],
     description:
       "I'm a software developer who builds solutions to problems using data. Currently, I'm looking to join a company for my next adventure.",
   };

@@ -85,7 +85,7 @@
                 delay={100}
                 num_loops={2}
                 repeat_n_words={1}
-                blinker_iter_count={14}
+                blinker_iter_count={10}
               />
             {:else}
               {titleInfo.texts[0]}
