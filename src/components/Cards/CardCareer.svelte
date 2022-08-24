@@ -25,7 +25,7 @@
           <Techstack {techstack} />
         </div>
         <p class="card-text">
-          {#each points as point, index}
+          {#each points as point}
             <li>{point}</li>
           {/each}
         </p>
