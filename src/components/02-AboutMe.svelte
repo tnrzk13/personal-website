@@ -92,7 +92,6 @@
     }
     .text {
       box-sizing: border-box;
-      font-family: "Open Sans", sans-serif;
       font-size: 1em;
     }
     .description {
