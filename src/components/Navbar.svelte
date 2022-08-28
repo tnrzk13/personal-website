@@ -49,7 +49,7 @@
           class={boolMobileView
             ? "download-container-mobile"
             : "download-container"}
-          href="download/Resume 2022 - Blue.pdf"
+          href="download/Resume.pdf"
           download="TonyKwokResume"
         >
           <button class="btn {boolMobileView ? 'btn-grad-mobile' : 'btn-grad'}"
