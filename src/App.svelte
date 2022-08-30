@@ -123,7 +123,7 @@
       </div> -->
     </div>
   </div>
-  <Navbar {boolMobileView} />
+  <Navbar {boolMobileView} {browserName} />
 {:else}
   <div class="container-fluid">
     <Parallax

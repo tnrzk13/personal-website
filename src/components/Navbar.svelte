@@ -1,7 +1,7 @@
 <script>
   import { slide } from "svelte/transition";
 
-  export let boolMobileView;
+  export let boolMobileView, browserName;
 
   let y;
   let showNavBar = false;
@@ -64,6 +64,7 @@
 <style lang="scss">
   .nav-mobile-background {
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     background-color: rgba($color: white, $alpha: 0.05);
   }
 
