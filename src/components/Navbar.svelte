@@ -14,7 +14,7 @@
   });
 </script>
 
-{#if showNavBar}
+{#if !boolMobileView || showNavBar}
   <nav
     id="navbar"
     class="navbar navbar-expand-md navbar-dark fixed-top 
