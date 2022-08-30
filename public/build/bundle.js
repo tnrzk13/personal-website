@@ -9417,7 +9417,7 @@ var app = (function () {
     const { window: window_1$1 } = globals;
     const file$2 = "src\\components\\Navbar.svelte";
 
-    // (20:0) {#if showNavBar}
+    // (19:0) {#if showNavBar}
     function create_if_block$2(ctx) {
     	let nav;
     	let a0;
@@ -9474,13 +9474,13 @@ var app = (function () {
     			t10 = text("Resume");
     			if (!src_url_equal(img.src, img_src_value = "images/navbar/gorilla.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo gorilla");
-    			attr_dev(img, "class", "svelte-5albg9");
-    			add_location(img, file$2, 28, 7, 692);
+    			attr_dev(img, "class", "svelte-111855l");
+    			add_location(img, file$2, 26, 7, 684);
     			attr_dev(a0, "class", "navbar-brand");
     			attr_dev(a0, "href", ".");
-    			add_location(a0, file$2, 27, 4, 651);
+    			add_location(a0, file$2, 25, 4, 643);
     			attr_dev(span, "class", "navbar-toggler-icon");
-    			add_location(span, file$2, 39, 6, 1007);
+    			add_location(span, file$2, 37, 6, 999);
     			attr_dev(button0, "class", "navbar-toggler");
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "data-bs-toggle", "collapse");
@@ -9488,41 +9488,41 @@ var app = (function () {
     			attr_dev(button0, "aria-controls", "navbarNav");
     			attr_dev(button0, "aria-expanded", "false");
     			attr_dev(button0, "aria-label", "Toggle navigation");
-    			add_location(button0, file$2, 30, 4, 766);
-    			attr_dev(a1, "class", "nav-item nav-link svelte-5albg9");
+    			add_location(button0, file$2, 28, 4, 758);
+    			attr_dev(a1, "class", "nav-item nav-link svelte-111855l");
     			attr_dev(a1, "href", "#aboutme");
-    			add_location(a1, file$2, 43, 8, 1166);
-    			attr_dev(a2, "class", "nav-item nav-link svelte-5albg9");
+    			add_location(a1, file$2, 41, 8, 1158);
+    			attr_dev(a2, "class", "nav-item nav-link svelte-111855l");
     			attr_dev(a2, "href", "#career");
-    			add_location(a2, file$2, 44, 8, 1230);
-    			attr_dev(a3, "class", "nav-item nav-link svelte-5albg9");
+    			add_location(a2, file$2, 42, 8, 1222);
+    			attr_dev(a3, "class", "nav-item nav-link svelte-111855l");
     			attr_dev(a3, "href", "#projects");
-    			add_location(a3, file$2, 45, 8, 1294);
-    			attr_dev(a4, "class", "nav-item nav-link svelte-5albg9");
+    			add_location(a3, file$2, 43, 8, 1286);
+    			attr_dev(a4, "class", "nav-item nav-link svelte-111855l");
     			attr_dev(a4, "href", "#contact");
-    			add_location(a4, file$2, 46, 8, 1362);
+    			add_location(a4, file$2, 44, 8, 1354);
 
     			attr_dev(button1, "class", button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
     			? 'btn-grad-mobile'
-    			: 'btn-grad') + " svelte-5albg9");
+    			: 'btn-grad') + " svelte-111855l");
 
-    			add_location(button1, file$2, 54, 10, 1641);
+    			add_location(button1, file$2, 52, 10, 1633);
 
     			attr_dev(a5, "class", a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
     			? "download-container-mobile"
-    			: "download-container") + " svelte-5albg9"));
+    			: "download-container") + " svelte-111855l"));
 
     			attr_dev(a5, "href", "download/Resume.pdf");
     			attr_dev(a5, "download", "TonyKwokResume");
-    			add_location(a5, file$2, 47, 8, 1428);
+    			add_location(a5, file$2, 45, 8, 1420);
     			attr_dev(ul, "class", "navbar-nav ms-auto");
-    			add_location(ul, file$2, 42, 6, 1125);
+    			add_location(ul, file$2, 40, 6, 1117);
     			attr_dev(div, "class", "collapse navbar-collapse");
     			attr_dev(div, "id", "navbarNav");
-    			add_location(div, file$2, 41, 4, 1064);
+    			add_location(div, file$2, 39, 4, 1056);
     			attr_dev(nav, "id", "navbar");
-    			attr_dev(nav, "class", nav_class_value = "navbar navbar-expand-md navbar-dark fixed-top " + (/*boolMobileView*/ ctx[0] ? 'nav-mobile-background' : '') + " svelte-5albg9");
-    			add_location(nav, file$2, 20, 2, 476);
+    			attr_dev(nav, "class", nav_class_value = "navbar navbar-expand-md navbar-dark fixed-top " + (/*boolMobileView*/ ctx[0] ? 'nav-mobile-background' : '') + " svelte-111855l");
+    			add_location(nav, file$2, 19, 2, 474);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, nav, anchor);
@@ -9550,17 +9550,17 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*boolMobileView*/ 1 && button1_class_value !== (button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
     			? 'btn-grad-mobile'
-    			: 'btn-grad') + " svelte-5albg9")) {
+    			: 'btn-grad') + " svelte-111855l")) {
     				attr_dev(button1, "class", button1_class_value);
     			}
 
     			if (!current || dirty & /*boolMobileView*/ 1 && a5_class_value !== (a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
     			? "download-container-mobile"
-    			: "download-container") + " svelte-5albg9"))) {
+    			: "download-container") + " svelte-111855l"))) {
     				attr_dev(a5, "class", a5_class_value);
     			}
 
-    			if (!current || dirty & /*boolMobileView*/ 1 && nav_class_value !== (nav_class_value = "navbar navbar-expand-md navbar-dark fixed-top " + (/*boolMobileView*/ ctx[0] ? 'nav-mobile-background' : '') + " svelte-5albg9")) {
+    			if (!current || dirty & /*boolMobileView*/ 1 && nav_class_value !== (nav_class_value = "navbar navbar-expand-md navbar-dark fixed-top " + (/*boolMobileView*/ ctx[0] ? 'nav-mobile-background' : '') + " svelte-111855l")) {
     				attr_dev(nav, "class", nav_class_value);
     			}
     		},
@@ -9589,7 +9589,7 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(20:0) {#if showNavBar}",
+    		source: "(19:0) {#if showNavBar}",
     		ctx
     	});
 

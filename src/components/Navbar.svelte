@@ -1,6 +1,5 @@
 <script>
   import { slide } from "svelte/transition";
-
   export let boolMobileView;
 
   let y;
@@ -20,9 +19,8 @@
 {#if showNavBar}
   <nav
     id="navbar"
-    class="navbar navbar-expand-md navbar-dark fixed-top {boolMobileView
-      ? 'nav-mobile-background'
-      : ''}"
+    class="navbar navbar-expand-md navbar-dark fixed-top 
+      {boolMobileView ? 'nav-mobile-background' : ''}"
     transition:slide
   >
     <a class="navbar-brand" href="."
@@ -63,9 +61,11 @@
 
 <style lang="scss">
   .nav-mobile-background {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background-color: rgba($color: white, $alpha: 0.05);
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(62, 161, 219, 1) 11.2%,
+      rgba(93, 52, 236, 1) 100.2%
+    );
   }
 
   nav {
