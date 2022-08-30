@@ -1,5 +1,6 @@
 <script>
   import { slide } from "svelte/transition";
+  import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
   export let boolMobileView;
 
   let showNavBar = false;
@@ -20,9 +21,12 @@
       {boolMobileView ? 'nav-mobile-background' : ''}"
     transition:slide
   >
-    <a class="navbar-brand" href="."
-      ><img src="images/navbar/gorilla.png" alt="logo gorilla" /></a
-    >
+    <a class="navbar-brand" href=".">
+      <img
+        src="images/navbar/gorilla.{isBrowserSafari() ? 'png' : 'avif'}"
+        alt="logo gorilla"
+      />
+    </a>
     <button
       class="navbar-toggler"
       type="button"
