@@ -1,6 +1,7 @@
 <script>
   import ProjectInstance from "./04-Projects/ProjectInstance.svelte";
   import { SimpleGrid } from "@svelteuidev/core";
+  import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
 
   class Urls {
     constructor(boolUrlExists = false, projectUrl = "", codeUrl = "") {
@@ -16,7 +17,7 @@
   let projList = [
     new Project(
       "This Website!",
-      "images/04-project/website.avif",
+      "images/04-project/website." + (isBrowserSafari() ? "png" : "avif"),
       new Urls(
         true,
         "https://tnrzk13.github.io/personal-website/",
@@ -27,7 +28,7 @@
     ),
     new Project(
       "SoulDog",
-      "images/04-project/souldog.avif",
+      "images/04-project/souldog." + (isBrowserSafari() ? "png" : "avif"),
       new Urls(
         true,
         "https://souldog.herokuapp.com",
@@ -38,7 +39,7 @@
     ),
     new Project(
       "Wumpus World",
-      "images/04-project/wumpus.avif",
+      "images/04-project/wumpus." + (isBrowserSafari() ? "png" : "avif"),
       new Urls(),
       "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.",
       ["Python"]

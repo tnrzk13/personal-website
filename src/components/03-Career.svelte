@@ -1,6 +1,7 @@
 <script>
   import Card from "./Cards/CardCareer.svelte";
   import { SimpleGrid } from "@svelteuidev/core";
+  import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
 
   export let boolFadeAnimation = false;
 
@@ -20,7 +21,7 @@
   }
   let cardList = [
     new CardClass(
-      "images/03-career/360insights.avif",
+      "images/03-career/360insights." + (isBrowserSafari() ? "png" : "avif"),
       "Full Stack Developer",
       "360insights",
       ["Javascript", "Node.JS", "React"],
@@ -33,7 +34,7 @@
       )
     ),
     new CardClass(
-      "images/03-career/npx.avif",
+      "images/03-career/npx." + (isBrowserSafari() ? "png" : "avif"),
       "Innovation Catalyst Intern",
       "Nuclear Promise X",
       ["MSPowerApps", "PowerBI", "SQL", "Python"],
@@ -46,7 +47,7 @@
       )
     ),
     new CardClass(
-      "images/03-career/quarter4.avif",
+      "images/03-career/quarter4." + (isBrowserSafari() ? "png" : "avif"),
       "Database Specialist",
       "Quarter4",
       ["Python", "SQL"],
@@ -56,7 +57,7 @@
       )
     ),
     new CardClass(
-      "images/03-career/marsh.avif",
+      "images/03-career/marsh." + (isBrowserSafari() ? "png" : "avif"),
       "Business Application Developer",
       "Marsh",
       ["VBA"],

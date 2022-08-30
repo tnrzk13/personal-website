@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import TextType from "../TextType/TextType.svelte";
+  import { isBrowserSafari } from "../Browser/BrowserCheck.svelte";
 
   export let containerHeight, titleInfo;
   export let boolAnimateText = true;
@@ -20,7 +21,6 @@
     yScroll = Math.max(0, y - contactTop);
   };
   onMount(() => {
-    fnBrowserDetect();
     update();
   });
   window.onresize = () => {
@@ -40,29 +40,6 @@
       // titlebar in web browser if not in fullscreen mode
       // (screen.height - window.innerHeight)
     );
-  };
-
-  // check for browser
-  let boolSafari;
-  let fnBrowserDetect = () => {
-    let userAgent = navigator.userAgent;
-    let browserName;
-
-    if (userAgent.match(/chrome|chromium|crios/i)) {
-      browserName = "chrome";
-    } else if (userAgent.match(/firefox|fxios/i)) {
-      browserName = "firefox";
-    } else if (userAgent.match(/safari/i)) {
-      browserName = "safari";
-    } else if (userAgent.match(/opr\//i)) {
-      browserName = "opera";
-    } else if (userAgent.match(/edg/i)) {
-      browserName = "edge";
-    } else {
-      browserName = "No browser detection";
-    }
-
-    boolSafari = browserName === "safari";
   };
 
   $: {
@@ -86,7 +63,7 @@
         style="transform: translateY({boolShowContact
           ? 'calc(' + getContactParallax(layer) + 'px - 3em)'
           : (-y * layer) / (layers.length - 1) + 'px'})"
-        src="images/intro/00{layer}.{boolSafari ? 'png' : 'avif'}"
+        src="images/intro/00{layer}.{isBrowserSafari() ? 'png' : 'avif'}"
         alt="parallax layer {layer}"
       />
     {:else if layer < textLayer}
@@ -94,7 +71,7 @@
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
           : (-y * layer) / (layers.length - 1)}px)"
-        src="images/intro/00{layer}.{boolSafari ? 'png' : 'avif'}"
+        src="images/intro/00{layer}.{isBrowserSafari() ? 'png' : 'avif'}"
         alt="parallax layer {layer}"
       />
     {:else if layer === textLayer && y <= Math.max(0, pageHalfDown)}
@@ -126,7 +103,7 @@
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
           : (-y * (layer - 1)) / (layers.length - 1)}px)"
-        src="images/intro/00{layer - 1}.{boolSafari ? 'png' : 'avif'}"
+        src="images/intro/00{layer - 1}.{isBrowserSafari() ? 'png' : 'avif'}"
         alt="parallax layer {layer - 1}"
       />
     {:else if layer >= 11}
@@ -134,7 +111,7 @@
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
           : (-y * (layer - 1)) / (layers.length - 1)}px)"
-        src="images/intro/0{layer - 1}.{boolSafari ? 'png' : 'avif'}"
+        src="images/intro/0{layer - 1}.{isBrowserSafari() ? 'png' : 'avif'}"
         alt="parallax layer {layer - 1}"
       />
     {:else if layer === 14}
@@ -142,7 +119,7 @@
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
           : -y + 10}px)"
-        src="images/intro/0{layer - 1}.{boolSafari ? 'png' : 'avif'}"
+        src="images/intro/0{layer - 1}.{isBrowserSafari() ? 'png' : 'avif'}"
         alt="parallax layer {layer - 1}"
       />
     {/if}

@@ -1,5 +1,6 @@
 <script>
   import Techstack from "./Misc/Techstack.svelte";
+  import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
 
   let techstack = ["Python", "Javascript", "Svelte", "SQL", "Node.JS"];
 </script>
@@ -32,7 +33,7 @@
         <a href="https://www.linkedin.com/in/tony-k-kwok/">
           <img
             class="aboutmeimg"
-            src="images/02-aboutme/self.avif"
+            src="images/02-aboutme/self.{isBrowserSafari() ? 'png' : 'avif'}"
             alt="tony kwok"
           />
         </a>
