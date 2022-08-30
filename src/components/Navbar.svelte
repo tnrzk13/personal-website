@@ -2,7 +2,6 @@
   import { slide } from "svelte/transition";
   export let boolMobileView;
 
-  let y;
   let showNavBar = false;
 
   let lastScrollTop;
@@ -13,8 +12,6 @@
     lastScrollTop = scrollTop;
   });
 </script>
-
-<svelte:window bind:scrollY={y} />
 
 {#if showNavBar}
   <nav
