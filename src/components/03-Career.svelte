@@ -3,6 +3,7 @@
   import { SimpleGrid } from "@svelteuidev/core";
   import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
   import { text } from "svelte/internal";
+  import GradientButton from "./Button/GradientButton.svelte";
 
   export let boolFadeAnimation = false;
 
@@ -160,6 +161,22 @@
         />
       {/each}
     </SimpleGrid>
+    <br /><br /><br />
+    <div id="resume-container">
+      <div class="resume-leader col-sm-6 offset-sm-3">
+        <h4>Want to find out more? Download my resume here!</h4>
+      </div>
+      <div class="gradient-button-container col-sm-6 offset-sm-3">
+        <a href="download/Resume.pdf" download="TonyKwokResume">
+          <GradientButton
+            text="Download Resume"
+            buttonGradient={getComputedStyle(
+              document.querySelector(":root")
+            ).getPropertyValue("--gradient-button-red-blue")}
+          />
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -182,6 +199,19 @@
 
     #card-list-container {
       padding: 0;
+    }
+
+    #resume-container {
+      text-align: center;
+
+      .gradient-button-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      a {
+        text-decoration: none;
+      }
     }
   }
 </style>

@@ -51,9 +51,9 @@
           href="download/Resume.pdf"
           download="TonyKwokResume"
         >
-          <button class="btn {boolMobileView ? 'btn-grad-mobile' : 'btn-grad'}"
-            >Resume</button
-          >
+          <button class="btn {boolMobileView ? 'btn-grad-mobile' : 'btn-grad'}">
+            Resume
+          </button>
         </a>
       </ul>
     </div>
@@ -105,12 +105,7 @@
     }
 
     .btn-grad {
-      background-image: linear-gradient(
-        to right,
-        #fc354c 0%,
-        #0abfbc 51%,
-        #fc354c 100%
-      );
+      background-image: var(--gradient-button-red-blue);
       padding-right: 2em;
       padding-left: 2em;
       text-align: center;

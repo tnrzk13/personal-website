@@ -9,7 +9,6 @@
   export let points;
   export let logoColor;
   export let techstack;
-  let node;
 </script>
 
 <FadeInWrapper {boolFadeAnimation}>

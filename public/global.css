@@ -20,6 +20,9 @@
   --gradient-github-copilot: linear-gradient(315deg, #a77bf3 40%, #a0a8f1 , #48e9e6);
   --gradient-relaxing-red: linear-gradient(315deg, #fffbd5 40%, #b20a2c);
   --gradient-mint-blue-dark: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
+
+  /* button gradients */
+  --gradient-button-red-blue: linear-gradient(to right,#fc354c 0%,#0abfbc 51%,#fc354c 100%);
 }
 
 * {
