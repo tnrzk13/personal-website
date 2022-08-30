@@ -1704,7 +1704,7 @@ var app = (function () {
     }
 
     // (61:4) {#if layer === 0}
-    function create_if_block$8(ctx) {
+    function create_if_block$9(ctx) {
     	let img;
     	let img_src_value;
 
@@ -1740,7 +1740,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$8.name,
+    		id: create_if_block$9.name,
     		type: "if",
     		source: "(61:4) {#if layer === 0}",
     		ctx
@@ -1774,7 +1774,7 @@ var app = (function () {
     	let i;
     	let t8;
     	let current;
-    	const if_block_creators = [create_if_block_4, create_else_block$5];
+    	const if_block_creators = [create_if_block_4, create_else_block$6];
     	const if_blocks = [];
 
     	function select_block_type_1(ctx, dirty) {
@@ -1898,7 +1898,7 @@ var app = (function () {
     }
 
     // (91:12) {:else}
-    function create_else_block$5(ctx) {
+    function create_else_block$6(ctx) {
     	let t_value = /*titleInfo*/ ctx[1].texts[0] + "";
     	let t;
 
@@ -1921,7 +1921,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$5.name,
+    		id: create_else_block$6.name,
     		type: "else",
     		source: "(91:12) {:else}",
     		ctx
@@ -1993,7 +1993,7 @@ var app = (function () {
     	let current;
 
     	const if_block_creators = [
-    		create_if_block$8,
+    		create_if_block$9,
     		create_if_block_1$4,
     		create_if_block_2$1,
     		create_if_block_5,
@@ -2474,7 +2474,7 @@ var app = (function () {
     const file$f = "src\\components\\01-Title\\TitleMobile.svelte";
 
     // (24:6) {:else}
-    function create_else_block$4(ctx) {
+    function create_else_block$5(ctx) {
     	let t_value = /*titleInfo*/ ctx[0].texts[0] + "";
     	let t;
 
@@ -2497,7 +2497,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$4.name,
+    		id: create_else_block$5.name,
     		type: "else",
     		source: "(24:6) {:else}",
     		ctx
@@ -2507,7 +2507,7 @@ var app = (function () {
     }
 
     // (16:6) {#if boolAnimateText}
-    function create_if_block$7(ctx) {
+    function create_if_block$8(ctx) {
     	let texttype;
     	let current;
 
@@ -2551,7 +2551,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$7.name,
+    		id: create_if_block$8.name,
     		type: "if",
     		source: "(16:6) {#if boolAnimateText}",
     		ctx
@@ -2587,7 +2587,7 @@ var app = (function () {
     	let br1;
     	let br2;
     	let current;
-    	const if_block_creators = [create_if_block$7, create_else_block$4];
+    	const if_block_creators = [create_if_block$8, create_else_block$5];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -3511,7 +3511,7 @@ var app = (function () {
     const file$c = "src\\components\\Misc\\FadeInWrapper.svelte";
 
     // (9:0) {#if boolFadeAnimation}
-    function create_if_block$6(ctx) {
+    function create_if_block$7(ctx) {
     	let intersectionobserver;
     	let current;
 
@@ -3565,7 +3565,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$6.name,
+    		id: create_if_block$7.name,
     		type: "if",
     		source: "(9:0) {#if boolFadeAnimation}",
     		ctx
@@ -3721,7 +3721,7 @@ var app = (function () {
     function create_fragment$d(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*boolFadeAnimation*/ ctx[0] && create_if_block$6(ctx);
+    	let if_block = /*boolFadeAnimation*/ ctx[0] && create_if_block$7(ctx);
 
     	const block = {
     		c: function create() {
@@ -3745,7 +3745,7 @@ var app = (function () {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$6(ctx);
+    					if_block = create_if_block$7(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -3859,27 +3859,194 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (28:10) {#each points as point}
-    function create_each_block$3(ctx) {
-    	let li;
-    	let t_value = /*point*/ ctx[8] + "";
+    function get_each_context_1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[11] = list[i];
+    	return child_ctx;
+    }
+
+    // (33:16) {:else}
+    function create_else_block$4(ctx) {
+    	let span;
+    	let t_value = /*part*/ ctx[11].text + "";
     	let t;
 
     	const block = {
     		c: function create() {
-    			li = element("li");
+    			span = element("span");
     			t = text(t_value);
+    			attr_dev(span, "class", "point-part svelte-1lsj9ju");
+    			add_location(span, file$b, 33, 18, 1082);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, span, anchor);
+    			append_dev(span, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*points*/ 16 && t_value !== (t_value = /*part*/ ctx[11].text + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(span);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block$4.name,
+    		type: "else",
+    		source: "(33:16) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (31:16) {#if part.style === "bold"}
+    function create_if_block$6(ctx) {
+    	let b;
+    	let t_value = /*part*/ ctx[11].text + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			b = element("b");
+    			t = text(t_value);
+    			add_location(b, file$b, 31, 18, 1019);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, b, anchor);
+    			append_dev(b, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*points*/ 16 && t_value !== (t_value = /*part*/ ctx[11].text + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(b);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$6.name,
+    		type: "if",
+    		source: "(31:16) {#if part.style === \\\"bold\\\"}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (30:14) {#each point as part}
+    function create_each_block_1(ctx) {
+    	let if_block_anchor;
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*part*/ ctx[11].style === "bold") return create_if_block$6;
+    		return create_else_block$4;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type(ctx);
+
+    	const block = {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+    		m: function mount(target, anchor) {
+    			if_block.m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(ctx, dirty);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if_block.d(detaching);
+    			if (detaching) detach_dev(if_block_anchor);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1.name,
+    		type: "each",
+    		source: "(30:14) {#each point as part}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (28:10) {#each points as point}
+    function create_each_block$3(ctx) {
+    	let li;
+    	let t;
+    	let each_value_1 = /*point*/ ctx[8];
+    	validate_each_argument(each_value_1);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t = space();
     			add_location(li, file$b, 28, 12, 913);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(li, null);
+    			}
+
     			append_dev(li, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*points*/ 16 && t_value !== (t_value = /*point*/ ctx[8] + "")) set_data_dev(t, t_value);
+    			if (dirty & /*points*/ 16) {
+    				each_value_1 = /*point*/ ctx[8];
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block_1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(li, t);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value_1.length;
+    			}
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
+    			destroy_each(each_blocks, detaching);
     		}
     	};
 
@@ -3951,26 +4118,26 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(img, "class", "logo svelte-1aa82yt");
+    			attr_dev(img, "class", "logo svelte-1lsj9ju");
     			if (!src_url_equal(img.src, img_src_value = /*imgurl*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "company logo");
     			add_location(img, file$b, 19, 10, 575);
-    			attr_dev(div0, "class", "circle-logo svelte-1aa82yt");
+    			attr_dev(div0, "class", "circle-logo svelte-1lsj9ju");
     			set_style(div0, "background-image", /*logoColor*/ ctx[5]);
     			add_location(div0, file$b, 18, 8, 500);
-    			attr_dev(h4, "class", "card-title svelte-1aa82yt");
+    			attr_dev(h4, "class", "card-title svelte-1lsj9ju");
     			add_location(h4, file$b, 21, 8, 653);
-    			attr_dev(h6, "class", "card-subtitle svelte-1aa82yt");
+    			attr_dev(h6, "class", "card-subtitle svelte-1lsj9ju");
     			add_location(h6, file$b, 22, 8, 698);
-    			attr_dev(div1, "class", "techstack-wrapper svelte-1aa82yt");
+    			attr_dev(div1, "class", "techstack-wrapper svelte-1lsj9ju");
     			add_location(div1, file$b, 23, 8, 749);
     			attr_dev(p, "class", "card-text");
     			add_location(p, file$b, 26, 8, 843);
-    			attr_dev(div2, "class", "card-body svelte-1aa82yt");
+    			attr_dev(div2, "class", "card-body svelte-1lsj9ju");
     			add_location(div2, file$b, 17, 6, 467);
-    			attr_dev(div3, "class", "card m-2 cb1 text-center svelte-1aa82yt");
+    			attr_dev(div3, "class", "card m-2 cb1 text-center svelte-1lsj9ju");
     			add_location(div3, file$b, 16, 4, 421);
-    			attr_dev(div4, "class", "container-fluid card-container svelte-1aa82yt");
+    			attr_dev(div4, "class", "container-fluid card-container svelte-1lsj9ju");
     			add_location(div4, file$b, 15, 2, 371);
     		},
     		m: function mount(target, anchor) {
@@ -4091,7 +4258,7 @@ var app = (function () {
     			const fadeinwrapper_changes = {};
     			if (dirty & /*boolFadeAnimation*/ 1) fadeinwrapper_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[0];
 
-    			if (dirty & /*$$scope, points, techstack, subtitle, title, logoColor, imgurl*/ 2174) {
+    			if (dirty & /*$$scope, points, techstack, subtitle, title, logoColor, imgurl*/ 16510) {
     				fadeinwrapper_changes.$$scope = { dirty, ctx };
     			}
 
@@ -7059,28 +7226,28 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[4] = list[i].imgurl;
-    	child_ctx[5] = list[i].title;
-    	child_ctx[6] = list[i].subtitle;
-    	child_ctx[7] = list[i].techstack;
-    	child_ctx[8] = list[i].points;
-    	child_ctx[9] = list[i].logoColor;
+    	child_ctx[5] = list[i].imgurl;
+    	child_ctx[6] = list[i].title;
+    	child_ctx[7] = list[i].subtitle;
+    	child_ctx[8] = list[i].techstack;
+    	child_ctx[9] = list[i].points;
+    	child_ctx[10] = list[i].logoColor;
     	return child_ctx;
     }
 
-    // (76:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}
+    // (151:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}
     function create_each_block$2(ctx) {
     	let card;
     	let current;
 
     	card = new CardCareer({
     			props: {
-    				imgurl: /*imgurl*/ ctx[4],
-    				title: /*title*/ ctx[5],
-    				subtitle: /*subtitle*/ ctx[6],
-    				techstack: /*techstack*/ ctx[7],
-    				points: /*points*/ ctx[8],
-    				logoColor: /*logoColor*/ ctx[9],
+    				imgurl: /*imgurl*/ ctx[5],
+    				title: /*title*/ ctx[6],
+    				subtitle: /*subtitle*/ ctx[7],
+    				techstack: /*techstack*/ ctx[8],
+    				points: /*points*/ ctx[9],
+    				logoColor: /*logoColor*/ ctx[10],
     				boolFadeAnimation: /*boolFadeAnimation*/ ctx[0]
     			},
     			$$inline: true
@@ -7117,14 +7284,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(76:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}",
+    		source: "(151:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (75:4) <SimpleGrid cols={window.innerWidth < smScreenSize ? 1 : 2}>
+    // (150:4) <SimpleGrid cols={window.innerWidth < smScreenSize ? 1 : 2}>
     function create_default_slot$2(ctx) {
     	let each_1_anchor;
     	let current;
@@ -7213,7 +7380,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(75:4) <SimpleGrid cols={window.innerWidth < smScreenSize ? 1 : 2}>",
+    		source: "(150:4) <SimpleGrid cols={window.innerWidth < smScreenSize ? 1 : 2}>",
     		ctx
     	});
 
@@ -7246,13 +7413,13 @@ var app = (function () {
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9 svelte-1pyb0ip");
-    			add_location(h1, file$9, 72, 2, 2213);
+    			add_location(h1, file$9, 147, 2, 4201);
     			attr_dev(div0, "id", "card-list-container");
     			attr_dev(div0, "class", "card container-fluid col-md-9 svelte-1pyb0ip");
-    			add_location(div0, file$9, 73, 2, 2274);
+    			add_location(div0, file$9, 148, 2, 4262);
     			attr_dev(div1, "id", "career");
     			attr_dev(div1, "class", "container-fluid col-sm-10 col-sm-1 svelte-1pyb0ip");
-    			add_location(div1, file$9, 71, 0, 2149);
+    			add_location(div1, file$9, 146, 0, 4137);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7268,7 +7435,7 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			const simplegrid_changes = {};
 
-    			if (dirty & /*$$scope, boolFadeAnimation*/ 4097) {
+    			if (dirty & /*$$scope, boolFadeAnimation*/ 8193) {
     				simplegrid_changes.$$scope = { dirty, ctx };
     			}
 
@@ -7306,6 +7473,12 @@ var app = (function () {
     	let { boolFadeAnimation = false } = $$props;
     	let smScreenSize = 576;
 
+    	class PointPart {
+    		constructor(style, text) {
+    			Object.assian(this, { style, text });
+    		}
+    	}
+
     	class CardClass {
     		constructor(imgurl, title, subtitle, techstack, points, logoColor) {
     			Object.assign(this, {
@@ -7320,18 +7493,104 @@ var app = (function () {
     	}
 
     	let cardList = [
-    		new CardClass("images/03-career/360insights." + (isBrowserSafari() ? "png" : "avif"), "Full Stack Developer", "360insights", ["Javascript", "Node.JS", "React"], ["Reduced debugging time by 10 mins", "Increased testing efficiency by 5%"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-telegram")),
+    		new CardClass("images/03-career/360insights." + (isBrowserSafari() ? "png" : "avif"),
+    		"Full Stack Developer",
+    		"360insights",
+    		["Javascript", "Node.JS", "React"],
+    		[
+    				[
+    					{
+    						style: "none",
+    						text: "Created API to test availability of internal services using Node.js, "
+    					},
+    					{
+    						style: "bold",
+    						text: "reducing debugging time by 10 mins for the team"
+    					}
+    				],
+    				[
+    					{
+    						style: "none",
+    						text: "Developed React.js components for client sales portals, resulting in satisfied clients"
+    					}
+    				]
+    			],
+    		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-telegram")),
     		new CardClass("images/03-career/npx." + (isBrowserSafari() ? "png" : "avif"),
     		"Innovation Catalyst Intern",
     		"Nuclear Promise X",
     		["MSPowerApps", "PowerBI", "SQL", "Python"],
     		[
-    				"Prevented data conflicts costing over a day in restructuring",
-    				"Reduced data reporting time to zero"
+    				[
+    					{
+    						style: "bold",
+    						text: "Automated data reports to reduce data reporting time to zero"
+    					},
+    					{
+    						style: "none",
+    						text: ", using Power BI and Power Automate to feed data into a reporting app in real time"
+    					}
+    				],
+    				[
+    					{
+    						style: "none",
+    						text: "Developed UI standards and component library in Power Apps to "
+    					},
+    					{
+    						style: "bold",
+    						text: "increase app development efficiency by >20%"
+    					}
+    				],
+    				[
+    					{
+    						style: "none",
+    						text: "Redesigned database schema to solve and prevent future data conflicts"
+    					}
+    				]
     			],
     		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-lunada")),
-    		new CardClass("images/03-career/quarter4." + (isBrowserSafari() ? "png" : "avif"), "Database Specialist", "Quarter4", ["Python", "SQL"], ["Cleaned data, allowing model prediction accuracy to rise >75%"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-cosmic-fusion")),
-    		new CardClass("images/03-career/marsh." + (isBrowserSafari() ? "png" : "avif"), "Business Application Developer", "Marsh", ["VBA"], ["Automated 1hr of daily reporting"], getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-amin"))
+    		new CardClass("images/03-career/quarter4." + (isBrowserSafari() ? "png" : "avif"),
+    		"Database Specialist",
+    		"Quarter4",
+    		["Python", "SQL"],
+    		[
+    				[
+    					{
+    						style: "none",
+    						text: "Scraped and cleaned data using Pandas and MySQL, "
+    					},
+    					{
+    						style: "bold",
+    						text: "allowing model prediction accuracy to rise >75%"
+    					}
+    				],
+    				[
+    					{
+    						style: "none",
+    						text: "Created Markov chain for data description using python for end user to understand key data points"
+    					}
+    				]
+    			],
+    		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-cosmic-fusion")),
+    		new CardClass("images/03-career/marsh." + (isBrowserSafari() ? "png" : "avif"),
+    		"Business Application Developer",
+    		"Marsh",
+    		["VBA"],
+    		[
+    				[
+    					{
+    						style: "none",
+    						text: "Pitched, designed, and developed app for data reporting in SQL, VBA, MS Access"
+    					}
+    				],
+    				[
+    					{
+    						style: "bold",
+    						text: "Resulted in complete automation of 1hr of reporting time daily to the sales department, and the primary role of co-ops"
+    					}
+    				]
+    			],
+    		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-amin"))
     	];
 
     	const writable_props = ['boolFadeAnimation'];
@@ -7348,8 +7607,10 @@ var app = (function () {
     		Card: CardCareer,
     		SimpleGrid: SimpleGrid$1,
     		isBrowserSafari,
+    		text,
     		boolFadeAnimation,
     		smScreenSize,
+    		PointPart,
     		CardClass,
     		cardList
     	});
@@ -8520,8 +8781,8 @@ var app = (function () {
     			t = space();
     			br0 = element("br");
     			br1 = element("br");
-    			add_location(br0, file$6, 55, 8, 2257);
-    			add_location(br1, file$6, 55, 14, 2263);
+    			add_location(br0, file$6, 55, 8, 2305);
+    			add_location(br1, file$6, 55, 14, 2311);
     		},
     		m: function mount(target, anchor) {
     			mount_component(projectinstance, target, anchor);
@@ -8681,12 +8942,12 @@ var app = (function () {
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9 svelte-1jaadhi");
-    			add_location(h1, file$6, 50, 2, 1997);
+    			add_location(h1, file$6, 50, 2, 2045);
     			attr_dev(div0, "class", "projects container-fluid col-md-9 svelte-1jaadhi");
-    			add_location(div0, file$6, 51, 2, 2063);
+    			add_location(div0, file$6, 51, 2, 2111);
     			attr_dev(div1, "id", "projects");
     			attr_dev(div1, "class", "container-fluid col-sm-10 offset-sm-1 svelte-1jaadhi");
-    			add_location(div1, file$6, 49, 0, 1928);
+    			add_location(div1, file$6, 49, 0, 1976);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8751,7 +9012,7 @@ var app = (function () {
     	}
 
     	let projList = [
-    		new Project("This Website!", "images/04-project/website." + (isBrowserSafari() ? "png" : "avif"), new Urls(true, "https://tnrzk13.github.io/personal-website/", "https://github.com/tnrzk13/personal-website"), "Learned a new framework, brushed up on html and css, created and solved lots of bugs. Made with love.", ["Javascript", "Svelte"]),
+    		new Project("This Website!", "images/04-project/website." + (isBrowserSafari() ? "png" : "avif"), new Urls(true, "https://tnrzk13.github.io/personal-website/", "https://github.com/tnrzk13/personal-website"), "Learned a new framework, brushed up on html and css, created and solved lots of bugs. Came to the conclusion that Svelte.JS is the best JS framework.", ["Javascript", "Svelte"]),
     		new Project("SoulDog", "images/04-project/souldog." + (isBrowserSafari() ? "png" : "avif"), new Urls(true, "https://souldog.herokuapp.com", "https://github.com/aarshio/SoulDog-CS348"), 'Webapp linked to database designed to match abandoned dogs with new dog owners. Features include account creation, Google authentication, search, and posting. Awarded "top project of the class" in CS348: Database Systems.', ["Javascript", "React", "Node.JS", "Knex JS", "SQL"]),
     		new Project("Wumpus World", "images/04-project/wumpus." + (isBrowserSafari() ? "png" : "avif"), new Urls(), "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.", ["Python"])
     	];

@@ -26,7 +26,15 @@
         </div>
         <p class="card-text">
           {#each points as point}
-            <li>{point}</li>
+            <li>
+              {#each point as part}
+                {#if part.style === "bold"}
+                  <b>{part.text}</b>
+                {:else}
+                  <span class="point-part"> {part.text}</span>
+                {/if}
+              {/each}
+            </li>
           {/each}
         </p>
       </div>
@@ -60,6 +68,11 @@
       h6 {
         font-size: 1.15rem;
         padding-bottom: 0.5rem;
+        color: rgb(200, 200, 200);
+      }
+
+      span.point-part {
+        color: rgb(200, 200, 200);
       }
     }
     .circle-logo {

@@ -23,7 +23,7 @@
         "https://tnrzk13.github.io/personal-website/",
         "https://github.com/tnrzk13/personal-website"
       ),
-      "Learned a new framework, brushed up on html and css, created and solved lots of bugs. Made with love.",
+      "Learned a new framework, brushed up on html and css, created and solved lots of bugs. Came to the conclusion that Svelte.JS is the best JS framework.",
       ["Javascript", "Svelte"]
     ),
     new Project(

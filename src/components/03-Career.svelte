@@ -2,11 +2,17 @@
   import Card from "./Cards/CardCareer.svelte";
   import { SimpleGrid } from "@svelteuidev/core";
   import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
+  import { text } from "svelte/internal";
 
   export let boolFadeAnimation = false;
 
   let smScreenSize = 576;
 
+  class PointPart {
+    constructor(style, text) {
+      Object.assian(this, { style, text });
+    }
+  }
   class CardClass {
     constructor(imgurl, title, subtitle, techstack, points, logoColor) {
       Object.assign(this, {
@@ -26,8 +32,22 @@
       "360insights",
       ["Javascript", "Node.JS", "React"],
       [
-        "Reduced debugging time by 10 mins",
-        "Increased testing efficiency by 5%",
+        [
+          {
+            style: "none",
+            text: "Created API to test availability of internal services using Node.js, ",
+          },
+          {
+            style: "bold",
+            text: "reducing debugging time by 10 mins for the team",
+          },
+        ],
+        [
+          {
+            style: "none",
+            text: "Developed React.js components for client sales portals, resulting in satisfied clients",
+          },
+        ],
       ],
       getComputedStyle(document.querySelector(":root")).getPropertyValue(
         "--gradient-telegram"
@@ -39,8 +59,32 @@
       "Nuclear Promise X",
       ["MSPowerApps", "PowerBI", "SQL", "Python"],
       [
-        "Prevented data conflicts costing over a day in restructuring",
-        "Reduced data reporting time to zero",
+        [
+          {
+            style: "bold",
+            text: "Automated data reports to reduce data reporting time to zero",
+          },
+          {
+            style: "none",
+            text: ", using Power BI and Power Automate to feed data into a reporting app in real time",
+          },
+        ],
+        [
+          {
+            style: "none",
+            text: "Developed UI standards and component library in Power Apps to ",
+          },
+          {
+            style: "bold",
+            text: "increase app development efficiency by >20%",
+          },
+        ],
+        [
+          {
+            style: "none",
+            text: "Redesigned database schema to solve and prevent future data conflicts",
+          },
+        ],
       ],
       getComputedStyle(document.querySelector(":root")).getPropertyValue(
         "--gradient-lunada"
@@ -51,7 +95,24 @@
       "Database Specialist",
       "Quarter4",
       ["Python", "SQL"],
-      ["Cleaned data, allowing model prediction accuracy to rise >75%"],
+      [
+        [
+          {
+            style: "none",
+            text: "Scraped and cleaned data using Pandas and MySQL, ",
+          },
+          {
+            style: "bold",
+            text: "allowing model prediction accuracy to rise >75%",
+          },
+        ],
+        [
+          {
+            style: "none",
+            text: "Created Markov chain for data description using python for end user to understand key data points",
+          },
+        ],
+      ],
       getComputedStyle(document.querySelector(":root")).getPropertyValue(
         "--gradient-cosmic-fusion"
       )
@@ -61,7 +122,21 @@
       "Business Application Developer",
       "Marsh",
       ["VBA"],
-      ["Automated 1hr of daily reporting"],
+      [
+        [
+          {
+            style: "none",
+            text: "Pitched, designed, and developed app for data reporting in SQL, VBA, MS Access",
+          },
+        ],
+        [
+          {
+            style: "bold",
+            text: "Resulted in complete automation of 1hr of reporting time daily to the sales department, and the primary role of co-ops",
+          },
+        ],
+      ],
+
       getComputedStyle(document.querySelector(":root")).getPropertyValue(
         "--gradient-amin"
       )
