@@ -23,8 +23,6 @@
   // variables with initial values
   let boolMobileView = true;
   let medScreenSize = 768;
-  // browser detection
-  let browserName;
 
   let manageHeights = () => {
     // get Heights
@@ -39,28 +37,9 @@
   };
   window.onload = () => {
     manageHeights();
-    fnBrowserDetect();
   };
   window.onresize = () => {
     manageHeights();
-  };
-
-  let fnBrowserDetect = () => {
-    let userAgent = navigator.userAgent;
-
-    if (userAgent.match(/chrome|chromium|crios/i)) {
-      browserName = "chrome";
-    } else if (userAgent.match(/firefox|fxios/i)) {
-      browserName = "firefox";
-    } else if (userAgent.match(/safari/i)) {
-      browserName = "safari";
-    } else if (userAgent.match(/opr\//i)) {
-      browserName = "opera";
-    } else if (userAgent.match(/edg/i)) {
-      browserName = "edge";
-    } else {
-      browserName = "No browser detection";
-    }
   };
 
   $: {
@@ -133,7 +112,6 @@
       {titleInfo}
       {contactTop}
       {contactYOffset}
-      {browserName}
     />
     <div id="content-container" style="top: {titleHeight}px;">
       <div

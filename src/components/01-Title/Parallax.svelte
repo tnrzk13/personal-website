@@ -6,7 +6,6 @@
   export let boolAnimateText = true;
   export let pageHalfDown = 1000;
   export let contactTop, contactYOffset;
-  export let browserName;
 
   const numLayers = 11;
   const layers = [...Array(numLayers).keys()];
@@ -21,6 +20,7 @@
     yScroll = Math.max(0, y - contactTop);
   };
   onMount(() => {
+    fnBrowserDetect();
     update();
   });
   window.onresize = () => {
@@ -42,8 +42,28 @@
     );
   };
 
-  // is the browser safari?
-  let boolSafari = browserName === "safari";
+  // check for browser
+  let boolSafari;
+  let fnBrowserDetect = () => {
+    let userAgent = navigator.userAgent;
+    let browserName;
+
+    if (userAgent.match(/chrome|chromium|crios/i)) {
+      browserName = "chrome";
+    } else if (userAgent.match(/firefox|fxios/i)) {
+      browserName = "firefox";
+    } else if (userAgent.match(/safari/i)) {
+      browserName = "safari";
+    } else if (userAgent.match(/opr\//i)) {
+      browserName = "opera";
+    } else if (userAgent.match(/edg/i)) {
+      browserName = "edge";
+    } else {
+      browserName = "No browser detection";
+    }
+
+    boolSafari = browserName === "safari";
+  };
 
   $: {
     boolShowContact = y > pageHalfDown;
