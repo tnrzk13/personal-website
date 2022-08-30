@@ -23,6 +23,8 @@
 
   /* button gradients */
   --gradient-button-red-blue: linear-gradient(to right,#fc354c 0%,#0abfbc 51%,#fc354c 100%);
+  --gradient-button-blue-purple: linear-gradient(to right,#24c6dc 0%,#514a9d 51%,#24c6dc 100%);
+
 }
 
 * {

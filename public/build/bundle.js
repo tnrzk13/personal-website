@@ -9257,7 +9257,7 @@ var app = (function () {
     	let t5;
     	let div4;
     	let a1;
-    	let button;
+    	let gradientbutton;
     	let a1_href_value;
     	let div7_style_value;
     	let current;
@@ -9269,6 +9269,14 @@ var app = (function () {
     				num_loops: 999,
     				repeat_n_words: 1,
     				blinker_iter_count: "infinite"
+    			},
+    			$$inline: true
+    		});
+
+    	gradientbutton = new GradientButton({
+    			props: {
+    				text: "Say Hello",
+    				buttonGradient: getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-button-blue-purple")
     			},
     			$$inline: true
     		});
@@ -9293,37 +9301,34 @@ var app = (function () {
     			t5 = space();
     			div4 = element("div");
     			a1 = element("a");
-    			button = element("button");
-    			button.textContent = "Say Hello";
-    			attr_dev(div0, "class", "textLayer-preamble svelte-b127i6");
-    			add_location(div0, file$5, 7, 4, 243);
-    			attr_dev(div1, "class", "textLayer-title svelte-b127i6");
-    			add_location(div1, file$5, 8, 4, 309);
-    			attr_dev(div2, "class", "textLayer-description svelte-b127i6");
-    			add_location(div2, file$5, 17, 4, 533);
+    			create_component(gradientbutton.$$.fragment);
+    			attr_dev(div0, "class", "textLayer-preamble svelte-fu0whb");
+    			add_location(div0, file$5, 8, 4, 308);
+    			attr_dev(div1, "class", "textLayer-title svelte-fu0whb");
+    			add_location(div1, file$5, 9, 4, 374);
+    			attr_dev(div2, "class", "textLayer-description svelte-fu0whb");
+    			add_location(div2, file$5, 18, 4, 598);
     			attr_dev(i, "class", "fa-brands fa-linkedin fa-md");
-    			add_location(i, file$5, 23, 10, 775);
+    			add_location(i, file$5, 24, 10, 840);
     			attr_dev(a0, "href", "https://www.linkedin.com/in/tony-k-kwok/");
-    			attr_dev(a0, "class", "svelte-b127i6");
-    			add_location(a0, file$5, 22, 8, 712);
-    			attr_dev(div3, "class", "linkedin-container col-md-3 svelte-b127i6");
-    			add_location(div3, file$5, 21, 6, 661);
-    			attr_dev(button, "class", "btn btn-grad btn-lg svelte-b127i6");
-    			add_location(button, file$5, 31, 10, 1032);
+    			attr_dev(a0, "class", "svelte-fu0whb");
+    			add_location(a0, file$5, 23, 8, 777);
+    			attr_dev(div3, "class", "linkedin-container col-md-3 svelte-fu0whb");
+    			add_location(div3, file$5, 22, 6, 726);
     			attr_dev(a1, "href", a1_href_value = "mailto:tnrzk13@gmail.com?subject=" + /*contactInfo*/ ctx[0].subject);
     			attr_dev(a1, "id", "emailLink");
-    			attr_dev(a1, "class", "svelte-b127i6");
-    			add_location(a1, file$5, 27, 8, 908);
+    			attr_dev(a1, "class", "svelte-fu0whb");
+    			add_location(a1, file$5, 28, 8, 973);
     			attr_dev(div4, "class", "button-container-column col-md-9");
-    			add_location(div4, file$5, 26, 6, 852);
+    			add_location(div4, file$5, 27, 6, 917);
     			attr_dev(div5, "class", "button-container row");
-    			add_location(div5, file$5, 20, 4, 619);
-    			attr_dev(div6, "class", "textLayer svelte-b127i6");
-    			add_location(div6, file$5, 6, 2, 214);
+    			add_location(div5, file$5, 21, 4, 684);
+    			attr_dev(div6, "class", "textLayer svelte-fu0whb");
+    			add_location(div6, file$5, 7, 2, 279);
     			attr_dev(div7, "id", "contact");
     			attr_dev(div7, "style", div7_style_value = "height: calc(" + (/*titleHeight*/ ctx[1] - /*contactYOffset*/ ctx[2]) + "px); )");
-    			attr_dev(div7, "class", "svelte-b127i6");
-    			add_location(div7, file$5, 5, 0, 134);
+    			attr_dev(div7, "class", "svelte-fu0whb");
+    			add_location(div7, file$5, 6, 0, 199);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9347,7 +9352,7 @@ var app = (function () {
     			append_dev(div5, t5);
     			append_dev(div5, div4);
     			append_dev(div4, a1);
-    			append_dev(a1, button);
+    			mount_component(gradientbutton, a1, null);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -9368,15 +9373,18 @@ var app = (function () {
     		i: function intro(local) {
     			if (current) return;
     			transition_in(texttype.$$.fragment, local);
+    			transition_in(gradientbutton.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(texttype.$$.fragment, local);
+    			transition_out(gradientbutton.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div7);
     			destroy_component(texttype);
+    			destroy_component(gradientbutton);
     		}
     	};
 
@@ -9409,6 +9417,7 @@ var app = (function () {
 
     	$$self.$capture_state = () => ({
     		TextType,
+    		GradientButton,
     		contactInfo,
     		titleHeight,
     		contactYOffset

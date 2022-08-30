@@ -1,5 +1,6 @@
 <script>
   import TextType from "../TextType/TextType.svelte";
+  import GradientButton from "../Button/GradientButton.svelte";
   export let contactInfo, titleHeight, contactYOffset;
 </script>
 
@@ -29,7 +30,12 @@
           href="mailto:tnrzk13@gmail.com?subject={contactInfo.subject}"
           id="emailLink"
         >
-          <button class="btn btn-grad btn-lg">Say Hello</button>
+          <GradientButton
+            text="Say Hello"
+            buttonGradient={getComputedStyle(
+              document.querySelector(":root")
+            ).getPropertyValue("--gradient-button-blue-purple")}
+          />
         </a>
       </div>
     </div>
@@ -92,37 +98,6 @@
           scale: 110%;
           transition: 0.5s;
         }
-      }
-
-      .btn-grad {
-        text-align: center;
-        background-image: linear-gradient(
-          to right,
-          #24c6dc 0%,
-          #514a9d 51%,
-          #24c6dc 100%
-        );
-        margin: 1em;
-        padding: 0.75em 2.5em;
-        text-align: center;
-        text-transform: uppercase;
-        transition: 0.5s;
-        background-size: 200% auto;
-        color: white;
-        box-shadow: 0 0 20px #eee;
-        border-radius: 10px;
-        display: block;
-      }
-
-      .btn-grad:hover {
-        background-position: right center; /* change the direction of the change here */
-        color: #fff;
-        text-decoration: none;
-        scale: 110%;
-      }
-
-      .btn-grad:active {
-        filter: brightness(50%);
       }
     }
   }
