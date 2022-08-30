@@ -123,7 +123,7 @@
       </div> -->
     </div>
   </div>
-  <Navbar {boolMobileView} {browserName} />
+  <Navbar {boolMobileView} />
 {:else}
   <div class="container-fluid">
     <Parallax
@@ -133,6 +133,7 @@
       {titleInfo}
       {contactTop}
       {contactYOffset}
+      {browserName}
     />
     <div id="content-container" style="top: {titleHeight}px;">
       <div

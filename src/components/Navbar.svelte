@@ -1,7 +1,7 @@
 <script>
   import { slide } from "svelte/transition";
 
-  export let boolMobileView, browserName;
+  export let boolMobileView;
 
   let y;
   let showNavBar = false;

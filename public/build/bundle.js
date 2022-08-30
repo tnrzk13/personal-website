@@ -1422,11 +1422,11 @@ var app = (function () {
 
     function get_each_context$5(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[16] = list[i];
+    	child_ctx[18] = list[i];
     	return child_ctx;
     }
 
-    // (116:27) 
+    // (120:27) 
     function create_if_block_7(ctx) {
     	let img;
     	let img_src_value;
@@ -1436,13 +1436,13 @@ var app = (function () {
     			img = element("img");
 
     			set_style(img, "transform", "translateY(" + (/*boolShowContact*/ ctx[5]
-    			? /*getContactParallax*/ ctx[7](/*layer*/ ctx[16])
+    			? /*getContactParallax*/ ctx[7](/*layer*/ ctx[18])
     			: -/*y*/ ctx[4] + 10) + "px)");
 
-    			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + (/*layer*/ ctx[16] - 1) + ".avif")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[16] - 1));
+    			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + (/*layer*/ ctx[18] - 1) + "." + (/*boolSafari*/ ctx[8] ? 'png' : 'avif'))) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[18] - 1));
     			attr_dev(img, "class", "svelte-1le0myz");
-    			add_location(img, file$g, 116, 6, 3663);
+    			add_location(img, file$g, 120, 6, 3867);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1450,7 +1450,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			if (dirty & /*boolShowContact, y*/ 48) {
     				set_style(img, "transform", "translateY(" + (/*boolShowContact*/ ctx[5]
-    				? /*getContactParallax*/ ctx[7](/*layer*/ ctx[16])
+    				? /*getContactParallax*/ ctx[7](/*layer*/ ctx[18])
     				: -/*y*/ ctx[4] + 10) + "px)");
     			}
     		},
@@ -1465,14 +1465,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(116:27) ",
+    		source: "(120:27) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (108:26) 
+    // (112:26) 
     function create_if_block_6(ctx) {
     	let img;
     	let img_src_value;
@@ -1482,13 +1482,13 @@ var app = (function () {
     			img = element("img");
 
     			set_style(img, "transform", "translateY(" + (/*boolShowContact*/ ctx[5]
-    			? /*getContactParallax*/ ctx[7](/*layer*/ ctx[16])
-    			: -/*y*/ ctx[4] * (/*layer*/ ctx[16] - 1) / (/*layers*/ ctx[6].length - 1)) + "px)");
+    			? /*getContactParallax*/ ctx[7](/*layer*/ ctx[18])
+    			: -/*y*/ ctx[4] * (/*layer*/ ctx[18] - 1) / (/*layers*/ ctx[6].length - 1)) + "px)");
 
-    			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + (/*layer*/ ctx[16] - 1) + ".avif")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[16] - 1));
+    			if (!src_url_equal(img.src, img_src_value = "images/intro/0" + (/*layer*/ ctx[18] - 1) + "." + (/*boolSafari*/ ctx[8] ? 'png' : 'avif'))) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[18] - 1));
     			attr_dev(img, "class", "svelte-1le0myz");
-    			add_location(img, file$g, 108, 6, 3371);
+    			add_location(img, file$g, 112, 6, 3550);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1496,8 +1496,8 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			if (dirty & /*boolShowContact, y*/ 48) {
     				set_style(img, "transform", "translateY(" + (/*boolShowContact*/ ctx[5]
-    				? /*getContactParallax*/ ctx[7](/*layer*/ ctx[16])
-    				: -/*y*/ ctx[4] * (/*layer*/ ctx[16] - 1) / (/*layers*/ ctx[6].length - 1)) + "px)");
+    				? /*getContactParallax*/ ctx[7](/*layer*/ ctx[18])
+    				: -/*y*/ ctx[4] * (/*layer*/ ctx[18] - 1) / (/*layers*/ ctx[6].length - 1)) + "px)");
     			}
     		},
     		i: noop,
@@ -1511,14 +1511,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(108:26) ",
+    		source: "(112:26) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (100:47) 
+    // (104:47) 
     function create_if_block_5(ctx) {
     	let img;
     	let img_src_value;
@@ -1528,13 +1528,13 @@ var app = (function () {
     			img = element("img");
 
     			set_style(img, "transform", "translateY(" + (/*boolShowContact*/ ctx[5]
-    			? /*getContactParallax*/ ctx[7](/*layer*/ ctx[16])
-    			: -/*y*/ ctx[4] * (/*layer*/ ctx[16] - 1) / (/*layers*/ ctx[6].length - 1)) + "px)");
+    			? /*getContactParallax*/ ctx[7](/*layer*/ ctx[18])
+    			: -/*y*/ ctx[4] * (/*layer*/ ctx[18] - 1) / (/*layers*/ ctx[6].length - 1)) + "px)");
 
-    			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + (/*layer*/ ctx[16] - 1) + ".avif")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[16] - 1));
+    			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + (/*layer*/ ctx[18] - 1) + "." + (/*boolSafari*/ ctx[8] ? 'png' : 'avif'))) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "parallax layer " + (/*layer*/ ctx[18] - 1));
     			attr_dev(img, "class", "svelte-1le0myz");
-    			add_location(img, file$g, 100, 6, 3079);
+    			add_location(img, file$g, 104, 6, 3233);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1542,8 +1542,8 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			if (dirty & /*boolShowContact, y*/ 48) {
     				set_style(img, "transform", "translateY(" + (/*boolShowContact*/ ctx[5]
-    				? /*getContactParallax*/ ctx[7](/*layer*/ ctx[16])
-    				: -/*y*/ ctx[4] * (/*layer*/ ctx[16] - 1) / (/*layers*/ ctx[6].length - 1)) + "px)");
+    				? /*getContactParallax*/ ctx[7](/*layer*/ ctx[18])
+    				: -/*y*/ ctx[4] * (/*layer*/ ctx[18] - 1) / (/*layers*/ ctx[6].length - 1)) + "px)");
     			}
     		},
     		i: noop,
@@ -1557,14 +1557,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(100:47) ",
+    		source: "(104:47) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (76:68) 
+    // (80:68) 
     function create_if_block_2$1(ctx) {
     	let if_block_anchor;
     	let current;
@@ -1623,14 +1623,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(76:68) ",
+    		source: "(80:68) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (68:32) 
+    // (72:32) 
     function create_if_block_1$4(ctx) {
     	let img;
     	let img_src_value;
@@ -1640,13 +1640,13 @@ var app = (function () {
     			img = element("img");
 
     			set_style(img, "transform", "translateY(" + (/*boolShowContact*/ ctx[5]
-    			? /*getContactParallax*/ ctx[7](/*layer*/ ctx[16])
-    			: -/*y*/ ctx[4] * /*layer*/ ctx[16] / (/*layers*/ ctx[6].length - 1)) + "px)");
+    			? /*getContactParallax*/ ctx[7](/*layer*/ ctx[18])
+    			: -/*y*/ ctx[4] * /*layer*/ ctx[18] / (/*layers*/ ctx[6].length - 1)) + "px)");
 
-    			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[16] + ".avif")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[16]);
+    			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[18] + "." + (/*boolSafari*/ ctx[8] ? 'png' : 'avif'))) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[18]);
     			attr_dev(img, "class", "svelte-1le0myz");
-    			add_location(img, file$g, 68, 6, 1886);
+    			add_location(img, file$g, 72, 6, 2015);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1654,8 +1654,8 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			if (dirty & /*boolShowContact, y*/ 48) {
     				set_style(img, "transform", "translateY(" + (/*boolShowContact*/ ctx[5]
-    				? /*getContactParallax*/ ctx[7](/*layer*/ ctx[16])
-    				: -/*y*/ ctx[4] * /*layer*/ ctx[16] / (/*layers*/ ctx[6].length - 1)) + "px)");
+    				? /*getContactParallax*/ ctx[7](/*layer*/ ctx[18])
+    				: -/*y*/ ctx[4] * /*layer*/ ctx[18] / (/*layers*/ ctx[6].length - 1)) + "px)");
     			}
     		},
     		i: noop,
@@ -1669,14 +1669,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$4.name,
     		type: "if",
-    		source: "(68:32) ",
+    		source: "(72:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (60:4) {#if layer === 0}
+    // (64:4) {#if layer === 0}
     function create_if_block$8(ctx) {
     	let img;
     	let img_src_value;
@@ -1686,13 +1686,13 @@ var app = (function () {
     			img = element("img");
 
     			set_style(img, "transform", "translateY(" + (/*boolShowContact*/ ctx[5]
-    			? 'calc(' + /*getContactParallax*/ ctx[7](/*layer*/ ctx[16]) + 'px - 3em)'
-    			: -/*y*/ ctx[4] * /*layer*/ ctx[16] / (/*layers*/ ctx[6].length - 1) + 'px') + ")");
+    			? 'calc(' + /*getContactParallax*/ ctx[7](/*layer*/ ctx[18]) + 'px - 3em)'
+    			: -/*y*/ ctx[4] * /*layer*/ ctx[18] / (/*layers*/ ctx[6].length - 1) + 'px') + ")");
 
-    			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[16] + ".avif")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[16]);
+    			if (!src_url_equal(img.src, img_src_value = "images/intro/00" + /*layer*/ ctx[18] + "." + (/*boolSafari*/ ctx[8] ? 'png' : 'avif'))) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "parallax layer " + /*layer*/ ctx[18]);
     			attr_dev(img, "class", "svelte-1le0myz");
-    			add_location(img, file$g, 60, 6, 1573);
+    			add_location(img, file$g, 64, 6, 1677);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1700,8 +1700,8 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			if (dirty & /*boolShowContact, y*/ 48) {
     				set_style(img, "transform", "translateY(" + (/*boolShowContact*/ ctx[5]
-    				? 'calc(' + /*getContactParallax*/ ctx[7](/*layer*/ ctx[16]) + 'px - 3em)'
-    				: -/*y*/ ctx[4] * /*layer*/ ctx[16] / (/*layers*/ ctx[6].length - 1) + 'px') + ")");
+    				? 'calc(' + /*getContactParallax*/ ctx[7](/*layer*/ ctx[18]) + 'px - 3em)'
+    				: -/*y*/ ctx[4] * /*layer*/ ctx[18] / (/*layers*/ ctx[6].length - 1) + 'px') + ")");
     			}
     		},
     		i: noop,
@@ -1715,14 +1715,14 @@ var app = (function () {
     		block,
     		id: create_if_block$8.name,
     		type: "if",
-    		source: "(60:4) {#if layer === 0}",
+    		source: "(64:4) {#if layer === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (77:6) {#if y < containerHeight}
+    // (81:6) {#if y < containerHeight}
     function create_if_block_3(ctx) {
     	let div5;
     	let div0;
@@ -1778,19 +1778,19 @@ var app = (function () {
     			i = element("i");
     			t8 = space();
     			attr_dev(div0, "class", "textLayer-preamble svelte-1le0myz");
-    			add_location(div0, file$g, 78, 10, 2276);
+    			add_location(div0, file$g, 82, 10, 2430);
     			attr_dev(div1, "class", "textLayer-title");
-    			add_location(div1, file$g, 79, 10, 2346);
+    			add_location(div1, file$g, 83, 10, 2500);
     			attr_dev(div2, "class", "textLayer-subtitle svelte-1le0myz");
-    			add_location(div2, file$g, 80, 10, 2410);
+    			add_location(div2, file$g, 84, 10, 2564);
     			attr_dev(div3, "class", "textLayer-description svelte-1le0myz");
-    			add_location(div3, file$g, 93, 10, 2824);
+    			add_location(div3, file$g, 97, 10, 2978);
     			attr_dev(i, "class", "fa-solid fa-angles-down");
-    			add_location(i, file$g, 96, 34, 2950);
+    			add_location(i, file$g, 100, 34, 3104);
     			attr_dev(div4, "class", "scrolldown svelte-1le0myz");
-    			add_location(div4, file$g, 96, 10, 2926);
+    			add_location(div4, file$g, 100, 10, 3080);
     			attr_dev(div5, "class", "textLayer svelte-1le0myz");
-    			add_location(div5, file$g, 77, 8, 2241);
+    			add_location(div5, file$g, 81, 8, 2395);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div5, anchor);
@@ -1863,14 +1863,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(77:6) {#if y < containerHeight}",
+    		source: "(81:6) {#if y < containerHeight}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (90:12) {:else}
+    // (94:12) {:else}
     function create_else_block$5(ctx) {
     	let t_value = /*titleInfo*/ ctx[1].texts[0] + "";
     	let t;
@@ -1896,14 +1896,14 @@ var app = (function () {
     		block,
     		id: create_else_block$5.name,
     		type: "else",
-    		source: "(90:12) {:else}",
+    		source: "(94:12) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (82:32) {#if boolAnimateText}
+    // (86:32) {#if boolAnimateText}
     function create_if_block_4(ctx) {
     	let texttype;
     	let current;
@@ -1950,14 +1950,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(82:32) {#if boolAnimateText}",
+    		source: "(86:32) {#if boolAnimateText}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (59:2) {#each layers as layer}
+    // (63:2) {#each layers as layer}
     function create_each_block$5(ctx) {
     	let show_if;
     	let current_block_type_index;
@@ -1978,13 +1978,13 @@ var app = (function () {
 
     	function select_block_type(ctx, dirty) {
     		if (dirty & /*y, pageHalfDown*/ 24) show_if = null;
-    		if (/*layer*/ ctx[16] === 0) return 0;
-    		if (/*layer*/ ctx[16] < textLayer) return 1;
-    		if (show_if == null) show_if = !!(/*layer*/ ctx[16] === textLayer && /*y*/ ctx[4] <= Math.max(0, /*pageHalfDown*/ ctx[3]));
+    		if (/*layer*/ ctx[18] === 0) return 0;
+    		if (/*layer*/ ctx[18] < textLayer) return 1;
+    		if (show_if == null) show_if = !!(/*layer*/ ctx[18] === textLayer && /*y*/ ctx[4] <= Math.max(0, /*pageHalfDown*/ ctx[3]));
     		if (show_if) return 2;
-    		if (/*layer*/ ctx[16] >= textLayer && /*layer*/ ctx[16] < 11) return 3;
-    		if (/*layer*/ ctx[16] >= 11) return 4;
-    		if (/*layer*/ ctx[16] === 14) return 5;
+    		if (/*layer*/ ctx[18] >= textLayer && /*layer*/ ctx[18] < 11) return 3;
+    		if (/*layer*/ ctx[18] >= 11) return 4;
+    		if (/*layer*/ ctx[18] === 14) return 5;
     		return -1;
     	}
 
@@ -2063,7 +2063,7 @@ var app = (function () {
     		block,
     		id: create_each_block$5.name,
     		type: "each",
-    		source: "(59:2) {#each layers as layer}",
+    		source: "(63:2) {#each layers as layer}",
     		ctx
     	});
 
@@ -2083,7 +2083,7 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	add_render_callback(/*onwindowscroll*/ ctx[10]);
+    	add_render_callback(/*onwindowscroll*/ ctx[12]);
     	let each_value = /*layers*/ ctx[6];
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -2114,7 +2114,7 @@ var app = (function () {
     			? /*containerHeight*/ ctx[0]
     			: /*containerHeight*/ ctx[0] - /*y*/ ctx[4]) + "px");
 
-    			add_location(div, file$g, 51, 0, 1315);
+    			add_location(div, file$g, 55, 0, 1419);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2133,7 +2133,7 @@ var app = (function () {
     					scrolling = true;
     					clearTimeout(scrolling_timeout);
     					scrolling_timeout = setTimeout(clear_scrolling, 100);
-    					/*onwindowscroll*/ ctx[10]();
+    					/*onwindowscroll*/ ctx[12]();
     				});
 
     				mounted = true;
@@ -2147,7 +2147,7 @@ var app = (function () {
     				scrolling_timeout = setTimeout(clear_scrolling, 100);
     			}
 
-    			if (dirty & /*boolShowContact, getContactParallax, layers, y, textLayer, titleInfo, boolAnimateText, containerHeight, Math, pageHalfDown*/ 255) {
+    			if (dirty & /*boolShowContact, getContactParallax, layers, y, boolSafari, textLayer, titleInfo, boolAnimateText, containerHeight, Math, pageHalfDown*/ 511) {
     				each_value = /*layers*/ ctx[6];
     				validate_each_argument(each_value);
     				let i;
@@ -2234,6 +2234,7 @@ var app = (function () {
     	let { boolAnimateText = true } = $$props;
     	let { pageHalfDown = 1000 } = $$props;
     	let { contactTop, contactYOffset } = $$props;
+    	let { browserName } = $$props;
     	const layers = [...Array(numLayers).keys()];
     	const numImgLayers = numLayers - 1;
     	let y, imgHeight, offsetRatio, yScroll;
@@ -2263,13 +2264,17 @@ var app = (function () {
     		// (screen.height - window.innerHeight)
     	};
 
+    	// is the browser safari?
+    	let boolSafari = browserName === "safari";
+
     	const writable_props = [
     		'containerHeight',
     		'titleInfo',
     		'boolAnimateText',
     		'pageHalfDown',
     		'contactTop',
-    		'contactYOffset'
+    		'contactYOffset',
+    		'browserName'
     	];
 
     	Object.keys($$props).forEach(key => {
@@ -2285,8 +2290,9 @@ var app = (function () {
     		if ('titleInfo' in $$props) $$invalidate(1, titleInfo = $$props.titleInfo);
     		if ('boolAnimateText' in $$props) $$invalidate(2, boolAnimateText = $$props.boolAnimateText);
     		if ('pageHalfDown' in $$props) $$invalidate(3, pageHalfDown = $$props.pageHalfDown);
-    		if ('contactTop' in $$props) $$invalidate(8, contactTop = $$props.contactTop);
-    		if ('contactYOffset' in $$props) $$invalidate(9, contactYOffset = $$props.contactYOffset);
+    		if ('contactTop' in $$props) $$invalidate(9, contactTop = $$props.contactTop);
+    		if ('contactYOffset' in $$props) $$invalidate(10, contactYOffset = $$props.contactYOffset);
+    		if ('browserName' in $$props) $$invalidate(11, browserName = $$props.browserName);
     	};
 
     	$$self.$capture_state = () => ({
@@ -2298,6 +2304,7 @@ var app = (function () {
     		pageHalfDown,
     		contactTop,
     		contactYOffset,
+    		browserName,
     		numLayers,
     		layers,
     		textLayer,
@@ -2308,7 +2315,8 @@ var app = (function () {
     		yScroll,
     		boolShowContact,
     		update,
-    		getContactParallax
+    		getContactParallax,
+    		boolSafari
     	});
 
     	$$self.$inject_state = $$props => {
@@ -2316,13 +2324,15 @@ var app = (function () {
     		if ('titleInfo' in $$props) $$invalidate(1, titleInfo = $$props.titleInfo);
     		if ('boolAnimateText' in $$props) $$invalidate(2, boolAnimateText = $$props.boolAnimateText);
     		if ('pageHalfDown' in $$props) $$invalidate(3, pageHalfDown = $$props.pageHalfDown);
-    		if ('contactTop' in $$props) $$invalidate(8, contactTop = $$props.contactTop);
-    		if ('contactYOffset' in $$props) $$invalidate(9, contactYOffset = $$props.contactYOffset);
+    		if ('contactTop' in $$props) $$invalidate(9, contactTop = $$props.contactTop);
+    		if ('contactYOffset' in $$props) $$invalidate(10, contactYOffset = $$props.contactYOffset);
+    		if ('browserName' in $$props) $$invalidate(11, browserName = $$props.browserName);
     		if ('y' in $$props) $$invalidate(4, y = $$props.y);
     		if ('imgHeight' in $$props) imgHeight = $$props.imgHeight;
     		if ('offsetRatio' in $$props) offsetRatio = $$props.offsetRatio;
     		if ('yScroll' in $$props) yScroll = $$props.yScroll;
     		if ('boolShowContact' in $$props) $$invalidate(5, boolShowContact = $$props.boolShowContact);
+    		if ('boolSafari' in $$props) $$invalidate(8, boolSafari = $$props.boolSafari);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -2347,8 +2357,10 @@ var app = (function () {
     		boolShowContact,
     		layers,
     		getContactParallax,
+    		boolSafari,
     		contactTop,
     		contactYOffset,
+    		browserName,
     		onwindowscroll
     	];
     }
@@ -2362,8 +2374,9 @@ var app = (function () {
     			titleInfo: 1,
     			boolAnimateText: 2,
     			pageHalfDown: 3,
-    			contactTop: 8,
-    			contactYOffset: 9
+    			contactTop: 9,
+    			contactYOffset: 10,
+    			browserName: 11
     		});
 
     		dispatch_dev("SvelteRegisterComponent", {
@@ -2384,12 +2397,16 @@ var app = (function () {
     			console.warn("<Parallax> was created without expected prop 'titleInfo'");
     		}
 
-    		if (/*contactTop*/ ctx[8] === undefined && !('contactTop' in props)) {
+    		if (/*contactTop*/ ctx[9] === undefined && !('contactTop' in props)) {
     			console.warn("<Parallax> was created without expected prop 'contactTop'");
     		}
 
-    		if (/*contactYOffset*/ ctx[9] === undefined && !('contactYOffset' in props)) {
+    		if (/*contactYOffset*/ ctx[10] === undefined && !('contactYOffset' in props)) {
     			console.warn("<Parallax> was created without expected prop 'contactYOffset'");
+    		}
+
+    		if (/*browserName*/ ctx[11] === undefined && !('browserName' in props)) {
+    			console.warn("<Parallax> was created without expected prop 'browserName'");
     		}
     	}
 
@@ -2438,6 +2455,14 @@ var app = (function () {
     	}
 
     	set contactYOffset(value) {
+    		throw new Error("<Parallax>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get browserName() {
+    		throw new Error("<Parallax>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set browserName(value) {
     		throw new Error("<Parallax>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -9450,12 +9475,12 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/navbar/gorilla.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo gorilla");
     			attr_dev(img, "class", "svelte-5albg9");
-    			add_location(img, file$2, 28, 7, 705);
+    			add_location(img, file$2, 28, 7, 692);
     			attr_dev(a0, "class", "navbar-brand");
     			attr_dev(a0, "href", ".");
-    			add_location(a0, file$2, 27, 4, 664);
+    			add_location(a0, file$2, 27, 4, 651);
     			attr_dev(span, "class", "navbar-toggler-icon");
-    			add_location(span, file$2, 39, 6, 1020);
+    			add_location(span, file$2, 39, 6, 1007);
     			attr_dev(button0, "class", "navbar-toggler");
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "data-bs-toggle", "collapse");
@@ -9463,25 +9488,25 @@ var app = (function () {
     			attr_dev(button0, "aria-controls", "navbarNav");
     			attr_dev(button0, "aria-expanded", "false");
     			attr_dev(button0, "aria-label", "Toggle navigation");
-    			add_location(button0, file$2, 30, 4, 779);
+    			add_location(button0, file$2, 30, 4, 766);
     			attr_dev(a1, "class", "nav-item nav-link svelte-5albg9");
     			attr_dev(a1, "href", "#aboutme");
-    			add_location(a1, file$2, 43, 8, 1179);
+    			add_location(a1, file$2, 43, 8, 1166);
     			attr_dev(a2, "class", "nav-item nav-link svelte-5albg9");
     			attr_dev(a2, "href", "#career");
-    			add_location(a2, file$2, 44, 8, 1243);
+    			add_location(a2, file$2, 44, 8, 1230);
     			attr_dev(a3, "class", "nav-item nav-link svelte-5albg9");
     			attr_dev(a3, "href", "#projects");
-    			add_location(a3, file$2, 45, 8, 1307);
+    			add_location(a3, file$2, 45, 8, 1294);
     			attr_dev(a4, "class", "nav-item nav-link svelte-5albg9");
     			attr_dev(a4, "href", "#contact");
-    			add_location(a4, file$2, 46, 8, 1375);
+    			add_location(a4, file$2, 46, 8, 1362);
 
     			attr_dev(button1, "class", button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
     			? 'btn-grad-mobile'
     			: 'btn-grad') + " svelte-5albg9");
 
-    			add_location(button1, file$2, 54, 10, 1654);
+    			add_location(button1, file$2, 54, 10, 1641);
 
     			attr_dev(a5, "class", a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
     			? "download-container-mobile"
@@ -9489,15 +9514,15 @@ var app = (function () {
 
     			attr_dev(a5, "href", "download/Resume.pdf");
     			attr_dev(a5, "download", "TonyKwokResume");
-    			add_location(a5, file$2, 47, 8, 1441);
+    			add_location(a5, file$2, 47, 8, 1428);
     			attr_dev(ul, "class", "navbar-nav ms-auto");
-    			add_location(ul, file$2, 42, 6, 1138);
+    			add_location(ul, file$2, 42, 6, 1125);
     			attr_dev(div, "class", "collapse navbar-collapse");
     			attr_dev(div, "id", "navbarNav");
-    			add_location(div, file$2, 41, 4, 1077);
+    			add_location(div, file$2, 41, 4, 1064);
     			attr_dev(nav, "id", "navbar");
     			attr_dev(nav, "class", nav_class_value = "navbar navbar-expand-md navbar-dark fixed-top " + (/*boolMobileView*/ ctx[0] ? 'nav-mobile-background' : '') + " svelte-5albg9");
-    			add_location(nav, file$2, 20, 2, 489);
+    			add_location(nav, file$2, 20, 2, 476);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, nav, anchor);
@@ -9583,7 +9608,7 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	add_render_callback(/*onwindowscroll*/ ctx[4]);
+    	add_render_callback(/*onwindowscroll*/ ctx[3]);
     	let if_block = /*showNavBar*/ ctx[2] && create_if_block$2(ctx);
 
     	const block = {
@@ -9604,7 +9629,7 @@ var app = (function () {
     					scrolling = true;
     					clearTimeout(scrolling_timeout);
     					scrolling_timeout = setTimeout(clear_scrolling, 100);
-    					/*onwindowscroll*/ ctx[4]();
+    					/*onwindowscroll*/ ctx[3]();
     				});
 
     				mounted = true;
@@ -9672,7 +9697,7 @@ var app = (function () {
     function instance$2($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Navbar', slots, []);
-    	let { boolMobileView, browserName } = $$props;
+    	let { boolMobileView } = $$props;
     	let y;
     	let showNavBar = false;
     	let lastScrollTop;
@@ -9683,7 +9708,7 @@ var app = (function () {
     		lastScrollTop = scrollTop;
     	});
 
-    	const writable_props = ['boolMobileView', 'browserName'];
+    	const writable_props = ['boolMobileView'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Navbar> was created with unknown prop '${key}'`);
@@ -9695,13 +9720,11 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ('boolMobileView' in $$props) $$invalidate(0, boolMobileView = $$props.boolMobileView);
-    		if ('browserName' in $$props) $$invalidate(3, browserName = $$props.browserName);
     	};
 
     	$$self.$capture_state = () => ({
     		slide,
     		boolMobileView,
-    		browserName,
     		y,
     		showNavBar,
     		lastScrollTop
@@ -9709,7 +9732,6 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ('boolMobileView' in $$props) $$invalidate(0, boolMobileView = $$props.boolMobileView);
-    		if ('browserName' in $$props) $$invalidate(3, browserName = $$props.browserName);
     		if ('y' in $$props) $$invalidate(1, y = $$props.y);
     		if ('showNavBar' in $$props) $$invalidate(2, showNavBar = $$props.showNavBar);
     		if ('lastScrollTop' in $$props) lastScrollTop = $$props.lastScrollTop;
@@ -9719,13 +9741,13 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [boolMobileView, y, showNavBar, browserName, onwindowscroll];
+    	return [boolMobileView, y, showNavBar, onwindowscroll];
     }
 
     class Navbar extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$2, create_fragment$2, safe_not_equal, { boolMobileView: 0, browserName: 3 });
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, { boolMobileView: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -9740,10 +9762,6 @@ var app = (function () {
     		if (/*boolMobileView*/ ctx[0] === undefined && !('boolMobileView' in props)) {
     			console.warn("<Navbar> was created without expected prop 'boolMobileView'");
     		}
-
-    		if (/*browserName*/ ctx[3] === undefined && !('browserName' in props)) {
-    			console.warn("<Navbar> was created without expected prop 'browserName'");
-    		}
     	}
 
     	get boolMobileView() {
@@ -9751,14 +9769,6 @@ var app = (function () {
     	}
 
     	set boolMobileView(value) {
-    		throw new Error("<Navbar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get browserName() {
-    		throw new Error("<Navbar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set browserName(value) {
     		throw new Error("<Navbar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -10077,7 +10087,8 @@ var app = (function () {
     				boolAnimateText: /*boolAnimateText*/ ctx[4],
     				titleInfo: /*titleInfo*/ ctx[10],
     				contactTop: /*contactTop*/ ctx[6],
-    				contactYOffset: /*contactYOffset*/ ctx[2]
+    				contactYOffset: /*contactYOffset*/ ctx[2],
+    				browserName: /*browserName*/ ctx[9]
     			},
     			$$inline: true
     		});
@@ -10128,13 +10139,13 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "content-desktop svelte-1gsxggx");
     			add_render_callback(() => /*div0_elementresize_handler_1*/ ctx[14].call(div0));
-    			add_location(div0, file, 137, 6, 4261);
+    			add_location(div0, file, 138, 6, 4268);
     			attr_dev(div1, "id", "content-container");
     			set_style(div1, "top", /*titleHeight*/ ctx[0] + "px");
     			attr_dev(div1, "class", "svelte-1gsxggx");
-    			add_location(div1, file, 136, 4, 4195);
+    			add_location(div1, file, 137, 4, 4202);
     			attr_dev(div2, "class", "container-fluid svelte-1gsxggx");
-    			add_location(div2, file, 127, 2, 3990);
+    			add_location(div2, file, 127, 2, 3976);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10161,6 +10172,7 @@ var app = (function () {
     			if (dirty & /*boolAnimateText*/ 16) parallax_changes.boolAnimateText = /*boolAnimateText*/ ctx[4];
     			if (dirty & /*contactTop*/ 64) parallax_changes.contactTop = /*contactTop*/ ctx[6];
     			if (dirty & /*contactYOffset*/ 4) parallax_changes.contactYOffset = /*contactYOffset*/ ctx[2];
+    			if (dirty & /*browserName*/ 512) parallax_changes.browserName = /*browserName*/ ctx[9];
     			parallax.$set(parallax_changes);
     			const career_changes = {};
     			if (dirty & /*boolFadeAnimation*/ 8) career_changes.boolFadeAnimation = /*boolFadeAnimation*/ ctx[3];
@@ -10266,8 +10278,7 @@ var app = (function () {
 
     	navbar = new Navbar({
     			props: {
-    				boolMobileView: /*boolMobileView*/ ctx[8],
-    				browserName: /*browserName*/ ctx[9]
+    				boolMobileView: /*boolMobileView*/ ctx[8]
     			},
     			$$inline: true
     		});
@@ -10325,7 +10336,6 @@ var app = (function () {
     			career.$set(career_changes);
     			const navbar_changes = {};
     			if (dirty & /*boolMobileView*/ 256) navbar_changes.boolMobileView = /*boolMobileView*/ ctx[8];
-    			if (dirty & /*browserName*/ 512) navbar_changes.browserName = /*browserName*/ ctx[9];
     			navbar.$set(navbar_changes);
     		},
     		i: function intro(local) {

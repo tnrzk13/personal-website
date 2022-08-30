@@ -6,6 +6,7 @@
   export let boolAnimateText = true;
   export let pageHalfDown = 1000;
   export let contactTop, contactYOffset;
+  export let browserName;
 
   const numLayers = 11;
   const layers = [...Array(numLayers).keys()];
@@ -41,6 +42,9 @@
     );
   };
 
+  // is the browser safari?
+  let boolSafari = browserName === "safari";
+
   $: {
     boolShowContact = y > pageHalfDown;
     update();
@@ -62,7 +66,7 @@
         style="transform: translateY({boolShowContact
           ? 'calc(' + getContactParallax(layer) + 'px - 3em)'
           : (-y * layer) / (layers.length - 1) + 'px'})"
-        src="images/intro/00{layer}.avif"
+        src="images/intro/00{layer}.{boolSafari ? 'png' : 'avif'}"
         alt="parallax layer {layer}"
       />
     {:else if layer < textLayer}
@@ -70,7 +74,7 @@
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
           : (-y * layer) / (layers.length - 1)}px)"
-        src="images/intro/00{layer}.avif"
+        src="images/intro/00{layer}.{boolSafari ? 'png' : 'avif'}"
         alt="parallax layer {layer}"
       />
     {:else if layer === textLayer && y <= Math.max(0, pageHalfDown)}
@@ -102,7 +106,7 @@
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
           : (-y * (layer - 1)) / (layers.length - 1)}px)"
-        src="images/intro/00{layer - 1}.avif"
+        src="images/intro/00{layer - 1}.{boolSafari ? 'png' : 'avif'}"
         alt="parallax layer {layer - 1}"
       />
     {:else if layer >= 11}
@@ -110,7 +114,7 @@
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
           : (-y * (layer - 1)) / (layers.length - 1)}px)"
-        src="images/intro/0{layer - 1}.avif"
+        src="images/intro/0{layer - 1}.{boolSafari ? 'png' : 'avif'}"
         alt="parallax layer {layer - 1}"
       />
     {:else if layer === 14}
@@ -118,7 +122,7 @@
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
           : -y + 10}px)"
-        src="images/intro/0{layer - 1}.avif"
+        src="images/intro/0{layer - 1}.{boolSafari ? 'png' : 'avif'}"
         alt="parallax layer {layer - 1}"
       />
     {/if}
