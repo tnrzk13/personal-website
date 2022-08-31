@@ -62,11 +62,8 @@
 
 <style lang="scss">
   .nav-mobile-background {
-    background-image: linear-gradient(
-      109.6deg,
-      rgba(62, 161, 219, 1) 11.2%,
-      rgba(93, 52, 236, 1) 100.2%
-    );
+    background-color: var(--darkblue);
+    border-bottom: 3px solid white;
   }
 
   nav {

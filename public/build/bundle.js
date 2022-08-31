@@ -9922,7 +9922,7 @@ var app = (function () {
     			t10 = text("Resume");
     			if (!src_url_equal(img.src, img_src_value = "images/navbar/gorilla." + (isBrowserSafari() ? 'png' : 'avif'))) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo gorilla");
-    			attr_dev(img, "class", "svelte-rvzz0e");
+    			attr_dev(img, "class", "svelte-17kyp8w");
     			add_location(img, file$2, 24, 6, 723);
     			attr_dev(a0, "class", "navbar-brand");
     			attr_dev(a0, "href", ".");
@@ -9937,28 +9937,28 @@ var app = (function () {
     			attr_dev(button0, "aria-expanded", "false");
     			attr_dev(button0, "aria-label", "Toggle navigation");
     			add_location(button0, file$2, 29, 4, 855);
-    			attr_dev(a1, "class", "nav-item nav-link svelte-rvzz0e");
+    			attr_dev(a1, "class", "nav-item nav-link svelte-17kyp8w");
     			attr_dev(a1, "href", "#aboutme");
     			add_location(a1, file$2, 42, 8, 1255);
-    			attr_dev(a2, "class", "nav-item nav-link svelte-rvzz0e");
+    			attr_dev(a2, "class", "nav-item nav-link svelte-17kyp8w");
     			attr_dev(a2, "href", "#career");
     			add_location(a2, file$2, 43, 8, 1319);
-    			attr_dev(a3, "class", "nav-item nav-link svelte-rvzz0e");
+    			attr_dev(a3, "class", "nav-item nav-link svelte-17kyp8w");
     			attr_dev(a3, "href", "#projects");
     			add_location(a3, file$2, 44, 8, 1383);
-    			attr_dev(a4, "class", "nav-item nav-link svelte-rvzz0e");
+    			attr_dev(a4, "class", "nav-item nav-link svelte-17kyp8w");
     			attr_dev(a4, "href", "#contact");
     			add_location(a4, file$2, 45, 8, 1451);
 
     			attr_dev(button1, "class", button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
     			? 'btn-grad-mobile'
-    			: 'btn-grad') + " svelte-rvzz0e");
+    			: 'btn-grad') + " svelte-17kyp8w");
 
     			add_location(button1, file$2, 53, 10, 1730);
 
     			attr_dev(a5, "class", a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
     			? "download-container-mobile"
-    			: "download-container") + " svelte-rvzz0e"));
+    			: "download-container") + " svelte-17kyp8w"));
 
     			attr_dev(a5, "href", "download/Resume.pdf");
     			attr_dev(a5, "download", "TonyKwokResume");
@@ -9969,7 +9969,7 @@ var app = (function () {
     			attr_dev(div, "id", "navbarNav");
     			add_location(div, file$2, 40, 4, 1153);
     			attr_dev(nav, "id", "navbar");
-    			attr_dev(nav, "class", nav_class_value = "navbar navbar-expand-md navbar-dark fixed-top " + (/*boolMobileView*/ ctx[0] ? 'nav-mobile-background' : '') + " svelte-rvzz0e");
+    			attr_dev(nav, "class", nav_class_value = "navbar navbar-expand-md navbar-dark fixed-top " + (/*boolMobileView*/ ctx[0] ? 'nav-mobile-background' : '') + " svelte-17kyp8w");
     			add_location(nav, file$2, 17, 2, 513);
     		},
     		m: function mount(target, anchor) {
@@ -9998,17 +9998,17 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*boolMobileView*/ 1 && button1_class_value !== (button1_class_value = "btn " + (/*boolMobileView*/ ctx[0]
     			? 'btn-grad-mobile'
-    			: 'btn-grad') + " svelte-rvzz0e")) {
+    			: 'btn-grad') + " svelte-17kyp8w")) {
     				attr_dev(button1, "class", button1_class_value);
     			}
 
     			if (!current || dirty & /*boolMobileView*/ 1 && a5_class_value !== (a5_class_value = "" + (null_to_empty(/*boolMobileView*/ ctx[0]
     			? "download-container-mobile"
-    			: "download-container") + " svelte-rvzz0e"))) {
+    			: "download-container") + " svelte-17kyp8w"))) {
     				attr_dev(a5, "class", a5_class_value);
     			}
 
-    			if (!current || dirty & /*boolMobileView*/ 1 && nav_class_value !== (nav_class_value = "navbar navbar-expand-md navbar-dark fixed-top " + (/*boolMobileView*/ ctx[0] ? 'nav-mobile-background' : '') + " svelte-rvzz0e")) {
+    			if (!current || dirty & /*boolMobileView*/ 1 && nav_class_value !== (nav_class_value = "navbar navbar-expand-md navbar-dark fixed-top " + (/*boolMobileView*/ ctx[0] ? 'nav-mobile-background' : '') + " svelte-17kyp8w")) {
     				attr_dev(nav, "class", nav_class_value);
     			}
     		},
