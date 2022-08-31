@@ -7347,7 +7347,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (152:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}
+    // (151:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}
     function create_each_block$2(ctx) {
     	let card;
     	let current;
@@ -7396,14 +7396,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(152:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}",
+    		source: "(151:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (151:4) <SimpleGrid cols={window.innerWidth < smScreenSize ? 1 : 2}>
+    // (150:4) <SimpleGrid cols={window.innerWidth < smScreenSize ? 1 : 2}>
     function create_default_slot$2(ctx) {
     	let each_1_anchor;
     	let current;
@@ -7492,7 +7492,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(151:4) <SimpleGrid cols={window.innerWidth < smScreenSize ? 1 : 2}>",
+    		source: "(150:4) <SimpleGrid cols={window.innerWidth < smScreenSize ? 1 : 2}>",
     		ctx
     	});
 
@@ -7530,7 +7530,7 @@ var app = (function () {
 
     	gradientbutton = new GradientButton({
     			props: {
-    				text: "Download Resume",
+    				text: "Resume",
     				buttonGradient: getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-button-red-blue")
     			},
     			$$inline: true
@@ -7558,28 +7558,28 @@ var app = (function () {
     			a = element("a");
     			create_component(gradientbutton.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9 svelte-19hxwi1");
-    			add_location(h1, file$9, 148, 2, 4265);
-    			add_location(br0, file$9, 163, 4, 4770);
-    			add_location(br1, file$9, 163, 10, 4776);
-    			add_location(br2, file$9, 163, 16, 4782);
-    			add_location(h4, file$9, 166, 8, 4887);
+    			add_location(h1, file$9, 147, 2, 4222);
+    			add_location(br0, file$9, 162, 4, 4727);
+    			add_location(br1, file$9, 162, 10, 4733);
+    			add_location(br2, file$9, 162, 16, 4739);
+    			add_location(h4, file$9, 165, 8, 4844);
     			attr_dev(div0, "class", "resume-leader col-sm-6 offset-sm-3");
-    			add_location(div0, file$9, 165, 6, 4829);
+    			add_location(div0, file$9, 164, 6, 4786);
     			attr_dev(a, "href", "download/Resume.pdf");
     			attr_dev(a, "download", "TonyKwokResume");
     			attr_dev(a, "class", "svelte-19hxwi1");
-    			add_location(a, file$9, 169, 8, 5035);
+    			add_location(a, file$9, 168, 8, 4992);
     			attr_dev(div1, "class", "gradient-button-container col-sm-6 offset-sm-3 svelte-19hxwi1");
-    			add_location(div1, file$9, 168, 6, 4965);
+    			add_location(div1, file$9, 167, 6, 4922);
     			attr_dev(div2, "id", "resume-container");
     			attr_dev(div2, "class", "svelte-19hxwi1");
-    			add_location(div2, file$9, 164, 4, 4794);
+    			add_location(div2, file$9, 163, 4, 4751);
     			attr_dev(div3, "id", "card-list-container");
     			attr_dev(div3, "class", "card container-fluid col-md-9 svelte-19hxwi1");
-    			add_location(div3, file$9, 149, 2, 4326);
+    			add_location(div3, file$9, 148, 2, 4283);
     			attr_dev(div4, "id", "career");
     			attr_dev(div4, "class", "container-fluid col-sm-10 col-sm-1 svelte-19hxwi1");
-    			add_location(div4, file$9, 147, 0, 4201);
+    			add_location(div4, file$9, 146, 0, 4158);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7782,7 +7782,6 @@ var app = (function () {
     		Card: CardCareer,
     		SimpleGrid: SimpleGrid$1,
     		isBrowserSafari,
-    		text,
     		GradientButton,
     		boolFadeAnimation,
     		smScreenSize,

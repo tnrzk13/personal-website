@@ -2,7 +2,6 @@
   import Card from "./Cards/CardCareer.svelte";
   import { SimpleGrid } from "@svelteuidev/core";
   import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
-  import { text } from "svelte/internal";
   import GradientButton from "./Button/GradientButton.svelte";
 
   export let boolFadeAnimation = false;
@@ -169,7 +168,7 @@
       <div class="gradient-button-container col-sm-6 offset-sm-3">
         <a href="download/Resume.pdf" download="TonyKwokResume">
           <GradientButton
-            text="Download Resume"
+            text="Resume"
             buttonGradient={getComputedStyle(
               document.querySelector(":root")
             ).getPropertyValue("--gradient-button-red-blue")}
