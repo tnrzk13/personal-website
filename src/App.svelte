@@ -22,13 +22,14 @@
   let pageHalfDown = 999;
   // variables with initial values
   let boolMobileView = true;
-  let medScreenSize = 768;
+  let smScreenSize = 768;
+  let mdScreenSize = 992;
 
   let manageHeights = () => {
     // get Heights
     titleHeight = window.innerWidth * 0.5625;
     // calculations
-    boolMobileView = window.innerWidth < medScreenSize;
+    boolMobileView = window.innerWidth < smScreenSize;
     contactYOffset = titleHeight / 3;
     contactHeight = titleHeight - contactYOffset;
     pageHalfDown = (titleHeight + contentHeight) / 2;
@@ -46,7 +47,7 @@
     // get Heights
     titleHeight = document.body.offsetWidth * 0.5625;
     // calculations
-    boolMobileView = window.innerWidth < medScreenSize;
+    boolMobileView = window.innerWidth < smScreenSize;
     contactYOffset = titleHeight / 3;
     contactHeight = titleHeight - contactYOffset;
     pageHalfDown = (titleHeight + contentHeight) / 2;
@@ -120,7 +121,7 @@
         bind:clientHeight={contentHeight}
       >
         <AboutMe />
-        <Career {boolFadeAnimation} />
+        <Career {boolFadeAnimation} {mdScreenSize} />
         <Projects />
       </div>
       <ContactText {contactInfo} {titleHeight} {contactYOffset} />

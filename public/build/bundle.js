@@ -7338,28 +7338,28 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[5] = list[i].imgurl;
-    	child_ctx[6] = list[i].title;
-    	child_ctx[7] = list[i].subtitle;
-    	child_ctx[8] = list[i].techstack;
-    	child_ctx[9] = list[i].points;
-    	child_ctx[10] = list[i].logoColor;
+    	child_ctx[4] = list[i].imgurl;
+    	child_ctx[5] = list[i].title;
+    	child_ctx[6] = list[i].subtitle;
+    	child_ctx[7] = list[i].techstack;
+    	child_ctx[8] = list[i].points;
+    	child_ctx[9] = list[i].logoColor;
     	return child_ctx;
     }
 
-    // (151:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}
+    // (145:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}
     function create_each_block$2(ctx) {
     	let card;
     	let current;
 
     	card = new CardCareer({
     			props: {
-    				imgurl: /*imgurl*/ ctx[5],
-    				title: /*title*/ ctx[6],
-    				subtitle: /*subtitle*/ ctx[7],
-    				techstack: /*techstack*/ ctx[8],
-    				points: /*points*/ ctx[9],
-    				logoColor: /*logoColor*/ ctx[10],
+    				imgurl: /*imgurl*/ ctx[4],
+    				title: /*title*/ ctx[5],
+    				subtitle: /*subtitle*/ ctx[6],
+    				techstack: /*techstack*/ ctx[7],
+    				points: /*points*/ ctx[8],
+    				logoColor: /*logoColor*/ ctx[9],
     				boolFadeAnimation: /*boolFadeAnimation*/ ctx[0]
     			},
     			$$inline: true
@@ -7396,14 +7396,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(151:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}",
+    		source: "(145:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (150:4) <SimpleGrid cols={window.innerWidth < smScreenSize ? 1 : 2}>
+    // (144:4) <SimpleGrid cols={window.innerWidth < mdScreenSize ? 1 : 2}>
     function create_default_slot$2(ctx) {
     	let each_1_anchor;
     	let current;
@@ -7492,7 +7492,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(150:4) <SimpleGrid cols={window.innerWidth < smScreenSize ? 1 : 2}>",
+    		source: "(144:4) <SimpleGrid cols={window.innerWidth < mdScreenSize ? 1 : 2}>",
     		ctx
     	});
 
@@ -7521,7 +7521,7 @@ var app = (function () {
 
     	simplegrid = new SimpleGrid$1({
     			props: {
-    				cols: window.innerWidth < /*smScreenSize*/ ctx[1] ? 1 : 2,
+    				cols: window.innerWidth < /*mdScreenSize*/ ctx[1] ? 1 : 2,
     				$$slots: { default: [create_default_slot$2] },
     				$$scope: { ctx }
     			},
@@ -7558,28 +7558,28 @@ var app = (function () {
     			a = element("a");
     			create_component(gradientbutton.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9 svelte-19hxwi1");
-    			add_location(h1, file$9, 147, 2, 4222);
-    			add_location(br0, file$9, 162, 4, 4727);
-    			add_location(br1, file$9, 162, 10, 4733);
-    			add_location(br2, file$9, 162, 16, 4739);
-    			add_location(h4, file$9, 165, 8, 4844);
+    			add_location(h1, file$9, 141, 2, 4117);
+    			add_location(br0, file$9, 156, 4, 4622);
+    			add_location(br1, file$9, 156, 10, 4628);
+    			add_location(br2, file$9, 156, 16, 4634);
+    			add_location(h4, file$9, 159, 8, 4739);
     			attr_dev(div0, "class", "resume-leader col-sm-6 offset-sm-3");
-    			add_location(div0, file$9, 164, 6, 4786);
+    			add_location(div0, file$9, 158, 6, 4681);
     			attr_dev(a, "href", "download/Resume.pdf");
     			attr_dev(a, "download", "TonyKwokResume");
     			attr_dev(a, "class", "svelte-19hxwi1");
-    			add_location(a, file$9, 168, 8, 4992);
+    			add_location(a, file$9, 162, 8, 4887);
     			attr_dev(div1, "class", "gradient-button-container col-sm-6 offset-sm-3 svelte-19hxwi1");
-    			add_location(div1, file$9, 167, 6, 4922);
+    			add_location(div1, file$9, 161, 6, 4817);
     			attr_dev(div2, "id", "resume-container");
     			attr_dev(div2, "class", "svelte-19hxwi1");
-    			add_location(div2, file$9, 163, 4, 4751);
+    			add_location(div2, file$9, 157, 4, 4646);
     			attr_dev(div3, "id", "card-list-container");
     			attr_dev(div3, "class", "card container-fluid col-md-9 svelte-19hxwi1");
-    			add_location(div3, file$9, 148, 2, 4283);
+    			add_location(div3, file$9, 142, 2, 4178);
     			attr_dev(div4, "id", "career");
     			attr_dev(div4, "class", "container-fluid col-sm-10 col-sm-1 svelte-19hxwi1");
-    			add_location(div4, file$9, 146, 0, 4158);
+    			add_location(div4, file$9, 140, 0, 4053);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7606,8 +7606,9 @@ var app = (function () {
     		},
     		p: function update(ctx, [dirty]) {
     			const simplegrid_changes = {};
+    			if (dirty & /*mdScreenSize*/ 2) simplegrid_changes.cols = window.innerWidth < /*mdScreenSize*/ ctx[1] ? 1 : 2;
 
-    			if (dirty & /*$$scope, boolFadeAnimation*/ 8193) {
+    			if (dirty & /*$$scope, boolFadeAnimation*/ 4097) {
     				simplegrid_changes.$$scope = { dirty, ctx };
     			}
 
@@ -7646,13 +7647,7 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('_03_Career', slots, []);
     	let { boolFadeAnimation = false } = $$props;
-    	let smScreenSize = 576;
-
-    	class PointPart {
-    		constructor(style, text) {
-    			Object.assian(this, { style, text });
-    		}
-    	}
+    	let { mdScreenSize = 992 } = $$props;
 
     	class CardClass {
     		constructor(imgurl, title, subtitle, techstack, points, logoColor) {
@@ -7768,7 +7763,7 @@ var app = (function () {
     		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-amin"))
     	];
 
-    	const writable_props = ['boolFadeAnimation'];
+    	const writable_props = ['boolFadeAnimation', 'mdScreenSize'];
 
     	Object_1$1.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<_03_Career> was created with unknown prop '${key}'`);
@@ -7776,6 +7771,7 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ('boolFadeAnimation' in $$props) $$invalidate(0, boolFadeAnimation = $$props.boolFadeAnimation);
+    		if ('mdScreenSize' in $$props) $$invalidate(1, mdScreenSize = $$props.mdScreenSize);
     	};
 
     	$$self.$capture_state = () => ({
@@ -7784,15 +7780,14 @@ var app = (function () {
     		isBrowserSafari,
     		GradientButton,
     		boolFadeAnimation,
-    		smScreenSize,
-    		PointPart,
+    		mdScreenSize,
     		CardClass,
     		cardList
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('boolFadeAnimation' in $$props) $$invalidate(0, boolFadeAnimation = $$props.boolFadeAnimation);
-    		if ('smScreenSize' in $$props) $$invalidate(1, smScreenSize = $$props.smScreenSize);
+    		if ('mdScreenSize' in $$props) $$invalidate(1, mdScreenSize = $$props.mdScreenSize);
     		if ('cardList' in $$props) $$invalidate(2, cardList = $$props.cardList);
     	};
 
@@ -7800,13 +7795,13 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [boolFadeAnimation, smScreenSize, cardList];
+    	return [boolFadeAnimation, mdScreenSize, cardList];
     }
 
     class _03_Career extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$9, create_fragment$9, safe_not_equal, { boolFadeAnimation: 0 });
+    		init(this, options, instance$9, create_fragment$9, safe_not_equal, { boolFadeAnimation: 0, mdScreenSize: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -7821,6 +7816,14 @@ var app = (function () {
     	}
 
     	set boolFadeAnimation(value) {
+    		throw new Error("<_03_Career>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get mdScreenSize() {
+    		throw new Error("<_03_Career>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set mdScreenSize(value) {
     		throw new Error("<_03_Career>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -10473,7 +10476,7 @@ var app = (function () {
     const { window: window_1 } = globals;
     const file = "src\\App.svelte";
 
-    // (106:0) {:else}
+    // (107:0) {:else}
     function create_else_block(ctx) {
     	let div2;
     	let parallax;
@@ -10497,7 +10500,7 @@ var app = (function () {
     				containerHeight: /*titleHeight*/ ctx[0],
     				pageHalfDown: /*pageHalfDown*/ ctx[7],
     				boolAnimateText: /*boolAnimateText*/ ctx[4],
-    				titleInfo: /*titleInfo*/ ctx[9],
+    				titleInfo: /*titleInfo*/ ctx[10],
     				contactTop: /*contactTop*/ ctx[6],
     				contactYOffset: /*contactYOffset*/ ctx[2]
     			},
@@ -10508,7 +10511,8 @@ var app = (function () {
 
     	career = new _03_Career({
     			props: {
-    				boolFadeAnimation: /*boolFadeAnimation*/ ctx[3]
+    				boolFadeAnimation: /*boolFadeAnimation*/ ctx[3],
+    				mdScreenSize: /*mdScreenSize*/ ctx[9]
     			},
     			$$inline: true
     		});
@@ -10517,7 +10521,7 @@ var app = (function () {
 
     	contacttext = new ContactText({
     			props: {
-    				contactInfo: /*contactInfo*/ ctx[10],
+    				contactInfo: /*contactInfo*/ ctx[11],
     				titleHeight: /*titleHeight*/ ctx[0],
     				contactYOffset: /*contactYOffset*/ ctx[2]
     			},
@@ -10549,14 +10553,14 @@ var app = (function () {
     			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "content-desktop svelte-1gsxggx");
-    			add_render_callback(() => /*div0_elementresize_handler_1*/ ctx[13].call(div0));
-    			add_location(div0, file, 116, 6, 3634);
+    			add_render_callback(() => /*div0_elementresize_handler_1*/ ctx[14].call(div0));
+    			add_location(div0, file, 117, 6, 3658);
     			attr_dev(div1, "id", "content-container");
     			set_style(div1, "top", /*titleHeight*/ ctx[0] + "px");
     			attr_dev(div1, "class", "svelte-1gsxggx");
-    			add_location(div1, file, 115, 4, 3568);
+    			add_location(div1, file, 116, 4, 3592);
     			attr_dev(div2, "class", "container-fluid svelte-1gsxggx");
-    			add_location(div2, file, 106, 2, 3363);
+    			add_location(div2, file, 107, 2, 3387);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10569,7 +10573,7 @@ var app = (function () {
     			mount_component(career, div0, null);
     			append_dev(div0, t2);
     			mount_component(projects, div0, null);
-    			div0_resize_listener = add_resize_listener(div0, /*div0_elementresize_handler_1*/ ctx[13].bind(div0));
+    			div0_resize_listener = add_resize_listener(div0, /*div0_elementresize_handler_1*/ ctx[14].bind(div0));
     			append_dev(div1, t3);
     			mount_component(contacttext, div1, null);
     			insert_dev(target, t4, anchor);
@@ -10636,14 +10640,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(106:0) {:else}",
+    		source: "(107:0) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (86:0) {#if boolMobileView}
+    // (87:0) {#if boolMobileView}
     function create_if_block(ctx) {
     	let div2;
     	let titlemobile;
@@ -10665,7 +10669,7 @@ var app = (function () {
     	titlemobile = new TitleMobile({
     			props: {
     				boolAnimateText: /*boolAnimateText*/ ctx[4],
-    				titleInfo: /*titleInfo*/ ctx[9]
+    				titleInfo: /*titleInfo*/ ctx[10]
     			},
     			$$inline: true
     		});
@@ -10682,7 +10686,7 @@ var app = (function () {
     	projects = new _04_Projects({ $$inline: true });
 
     	contactwrapper = new ContactWrapper({
-    			props: { contactInfo: /*contactInfo*/ ctx[10] },
+    			props: { contactInfo: /*contactInfo*/ ctx[11] },
     			$$inline: true
     		});
 
@@ -10711,13 +10715,13 @@ var app = (function () {
     			create_component(navbar.$$.fragment);
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "content-mobile svelte-1gsxggx");
-    			add_render_callback(() => /*div0_elementresize_handler*/ ctx[12].call(div0));
-    			add_location(div0, file, 89, 6, 2957);
+    			add_render_callback(() => /*div0_elementresize_handler*/ ctx[13].call(div0));
+    			add_location(div0, file, 90, 6, 2981);
     			attr_dev(div1, "id", "content-container");
     			attr_dev(div1, "class", "svelte-1gsxggx");
-    			add_location(div1, file, 88, 4, 2921);
+    			add_location(div1, file, 89, 4, 2945);
     			attr_dev(div2, "class", "container-fluid svelte-1gsxggx");
-    			add_location(div2, file, 86, 2, 2835);
+    			add_location(div2, file, 87, 2, 2859);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10732,7 +10736,7 @@ var app = (function () {
     			mount_component(projects, div0, null);
     			append_dev(div0, t3);
     			mount_component(contactwrapper, div0, null);
-    			div0_resize_listener = add_resize_listener(div0, /*div0_elementresize_handler*/ ctx[12].bind(div0));
+    			div0_resize_listener = add_resize_listener(div0, /*div0_elementresize_handler*/ ctx[13].bind(div0));
     			insert_dev(target, t4, anchor);
     			mount_component(navbar, target, anchor);
     			current = true;
@@ -10784,7 +10788,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(86:0) {#if boolMobileView}",
+    		source: "(87:0) {#if boolMobileView}",
     		ctx
     	});
 
@@ -10805,7 +10809,7 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	add_render_callback(/*onwindowscroll*/ ctx[11]);
+    	add_render_callback(/*onwindowscroll*/ ctx[12]);
     	const if_block_creators = [create_if_block, create_else_block];
     	const if_blocks = [];
 
@@ -10835,7 +10839,7 @@ var app = (function () {
     					scrolling = true;
     					clearTimeout(scrolling_timeout);
     					scrolling_timeout = setTimeout(clear_scrolling, 100);
-    					/*onwindowscroll*/ ctx[11]();
+    					/*onwindowscroll*/ ctx[12]();
     				});
 
     				mounted = true;
@@ -10925,14 +10929,15 @@ var app = (function () {
     	// variables with initial values
     	let boolMobileView = true;
 
-    	let medScreenSize = 768;
+    	let smScreenSize = 768;
+    	let mdScreenSize = 992;
 
     	let manageHeights = () => {
     		// get Heights
     		$$invalidate(0, titleHeight = window.innerWidth * 0.5625);
 
     		// calculations
-    		$$invalidate(8, boolMobileView = window.innerWidth < medScreenSize);
+    		$$invalidate(8, boolMobileView = window.innerWidth < smScreenSize);
 
     		$$invalidate(2, contactYOffset = titleHeight / 3);
     		contactHeight = titleHeight - contactYOffset;
@@ -11018,7 +11023,8 @@ var app = (function () {
     		contactYOffset,
     		pageHalfDown,
     		boolMobileView,
-    		medScreenSize,
+    		smScreenSize,
+    		mdScreenSize,
     		manageHeights,
     		triggerDevMode,
     		titleInfo,
@@ -11037,10 +11043,11 @@ var app = (function () {
     		if ('contactYOffset' in $$props) $$invalidate(2, contactYOffset = $$props.contactYOffset);
     		if ('pageHalfDown' in $$props) $$invalidate(7, pageHalfDown = $$props.pageHalfDown);
     		if ('boolMobileView' in $$props) $$invalidate(8, boolMobileView = $$props.boolMobileView);
-    		if ('medScreenSize' in $$props) $$invalidate(16, medScreenSize = $$props.medScreenSize);
+    		if ('smScreenSize' in $$props) $$invalidate(17, smScreenSize = $$props.smScreenSize);
+    		if ('mdScreenSize' in $$props) $$invalidate(9, mdScreenSize = $$props.mdScreenSize);
     		if ('manageHeights' in $$props) manageHeights = $$props.manageHeights;
-    		if ('titleInfo' in $$props) $$invalidate(9, titleInfo = $$props.titleInfo);
-    		if ('contactInfo' in $$props) $$invalidate(10, contactInfo = $$props.contactInfo);
+    		if ('titleInfo' in $$props) $$invalidate(10, titleInfo = $$props.titleInfo);
+    		if ('contactInfo' in $$props) $$invalidate(11, contactInfo = $$props.contactInfo);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -11054,7 +11061,7 @@ var app = (function () {
     				$$invalidate(0, titleHeight = document.body.offsetWidth * 0.5625);
 
     				// calculations
-    				$$invalidate(8, boolMobileView = window.innerWidth < medScreenSize);
+    				$$invalidate(8, boolMobileView = window.innerWidth < smScreenSize);
 
     				$$invalidate(2, contactYOffset = titleHeight / 3);
     				contactHeight = titleHeight - contactYOffset;
@@ -11076,6 +11083,7 @@ var app = (function () {
     		contactTop,
     		pageHalfDown,
     		boolMobileView,
+    		mdScreenSize,
     		titleInfo,
     		contactInfo,
     		onwindowscroll,

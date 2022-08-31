@@ -5,14 +5,8 @@
   import GradientButton from "./Button/GradientButton.svelte";
 
   export let boolFadeAnimation = false;
+  export let mdScreenSize = 992;
 
-  let smScreenSize = 576;
-
-  class PointPart {
-    constructor(style, text) {
-      Object.assian(this, { style, text });
-    }
-  }
   class CardClass {
     constructor(imgurl, title, subtitle, techstack, points, logoColor) {
       Object.assign(this, {
@@ -147,7 +141,7 @@
 <div id="career" class="container-fluid col-sm-10 col-sm-1">
   <h1 class="title col-md-9">My last couple adventures</h1>
   <div id="card-list-container" class="card container-fluid col-md-9">
-    <SimpleGrid cols={window.innerWidth < smScreenSize ? 1 : 2}>
+    <SimpleGrid cols={window.innerWidth < mdScreenSize ? 1 : 2}>
       {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}
         <Card
           {imgurl}
