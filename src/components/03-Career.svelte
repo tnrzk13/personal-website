@@ -154,8 +154,8 @@
         />
       {/each}
     </SimpleGrid>
-    <br /><br /><br />
-    <div id="resume-container">
+    <!-- <br /><br /><br /> -->
+    <!-- <div id="resume-container">
       <div class="resume-leader col-sm-6 offset-sm-3">
         <h4>Want to find out more? Download my resume here!</h4>
       </div>
@@ -169,7 +169,7 @@
           />
         </a>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 

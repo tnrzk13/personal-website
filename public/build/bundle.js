@@ -7500,23 +7500,11 @@ var app = (function () {
     }
 
     function create_fragment$9(ctx) {
-    	let div4;
+    	let div1;
     	let h1;
     	let t1;
-    	let div3;
-    	let simplegrid;
-    	let t2;
-    	let br0;
-    	let br1;
-    	let br2;
-    	let t3;
-    	let div2;
     	let div0;
-    	let h4;
-    	let t5;
-    	let div1;
-    	let a;
-    	let gradientbutton;
+    	let simplegrid;
     	let current;
 
     	simplegrid = new SimpleGrid$1({
@@ -7528,80 +7516,32 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	gradientbutton = new GradientButton({
-    			props: {
-    				text: "Resume",
-    				buttonGradient: getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-button-red-blue")
-    			},
-    			$$inline: true
-    		});
-
     	const block = {
     		c: function create() {
-    			div4 = element("div");
+    			div1 = element("div");
     			h1 = element("h1");
     			h1.textContent = "My last couple adventures";
     			t1 = space();
-    			div3 = element("div");
-    			create_component(simplegrid.$$.fragment);
-    			t2 = space();
-    			br0 = element("br");
-    			br1 = element("br");
-    			br2 = element("br");
-    			t3 = space();
-    			div2 = element("div");
     			div0 = element("div");
-    			h4 = element("h4");
-    			h4.textContent = "Want to find out more? Download my resume here!";
-    			t5 = space();
-    			div1 = element("div");
-    			a = element("a");
-    			create_component(gradientbutton.$$.fragment);
+    			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9 svelte-19hxwi1");
     			add_location(h1, file$9, 141, 2, 4117);
-    			add_location(br0, file$9, 156, 4, 4622);
-    			add_location(br1, file$9, 156, 10, 4628);
-    			add_location(br2, file$9, 156, 16, 4634);
-    			add_location(h4, file$9, 159, 8, 4739);
-    			attr_dev(div0, "class", "resume-leader col-sm-6 offset-sm-3");
-    			add_location(div0, file$9, 158, 6, 4681);
-    			attr_dev(a, "href", "download/Resume.pdf");
-    			attr_dev(a, "download", "TonyKwokResume");
-    			attr_dev(a, "class", "svelte-19hxwi1");
-    			add_location(a, file$9, 162, 8, 4887);
-    			attr_dev(div1, "class", "gradient-button-container col-sm-6 offset-sm-3 svelte-19hxwi1");
-    			add_location(div1, file$9, 161, 6, 4817);
-    			attr_dev(div2, "id", "resume-container");
-    			attr_dev(div2, "class", "svelte-19hxwi1");
-    			add_location(div2, file$9, 157, 4, 4646);
-    			attr_dev(div3, "id", "card-list-container");
-    			attr_dev(div3, "class", "card container-fluid col-md-9 svelte-19hxwi1");
-    			add_location(div3, file$9, 142, 2, 4178);
-    			attr_dev(div4, "id", "career");
-    			attr_dev(div4, "class", "container-fluid col-sm-10 col-sm-1 svelte-19hxwi1");
-    			add_location(div4, file$9, 140, 0, 4053);
+    			attr_dev(div0, "id", "card-list-container");
+    			attr_dev(div0, "class", "card container-fluid col-md-9 svelte-19hxwi1");
+    			add_location(div0, file$9, 142, 2, 4178);
+    			attr_dev(div1, "id", "career");
+    			attr_dev(div1, "class", "container-fluid col-sm-10 col-sm-1 svelte-19hxwi1");
+    			add_location(div1, file$9, 140, 0, 4053);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div4, anchor);
-    			append_dev(div4, h1);
-    			append_dev(div4, t1);
-    			append_dev(div4, div3);
-    			mount_component(simplegrid, div3, null);
-    			append_dev(div3, t2);
-    			append_dev(div3, br0);
-    			append_dev(div3, br1);
-    			append_dev(div3, br2);
-    			append_dev(div3, t3);
-    			append_dev(div3, div2);
-    			append_dev(div2, div0);
-    			append_dev(div0, h4);
-    			append_dev(div2, t5);
-    			append_dev(div2, div1);
-    			append_dev(div1, a);
-    			mount_component(gradientbutton, a, null);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, h1);
+    			append_dev(div1, t1);
+    			append_dev(div1, div0);
+    			mount_component(simplegrid, div0, null);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -7617,18 +7557,15 @@ var app = (function () {
     		i: function intro(local) {
     			if (current) return;
     			transition_in(simplegrid.$$.fragment, local);
-    			transition_in(gradientbutton.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(simplegrid.$$.fragment, local);
-    			transition_out(gradientbutton.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div4);
+    			if (detaching) detach_dev(div1);
     			destroy_component(simplegrid);
-    			destroy_component(gradientbutton);
     		}
     	};
 
