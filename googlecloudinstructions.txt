@@ -1,0 +1,5 @@
+1. Go to Google storage
+2. Click on website name
+3. Delete all previous files
+4. Upload all new files
+  (Make sure to upload files and folders)
