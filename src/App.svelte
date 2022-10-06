@@ -69,7 +69,7 @@
     subtitle: "I build things with ",
     texts: ["data.", "style.", "code."],
     description:
-      "I'm a software developer who builds solutions to problems using data. Currently, I'm looking to join a company for my next adventure.",
+      "I'm a software developer who builds solutions to problems using data. For my next adventure, I'm looking to join a company that's leveraging information technologies to gain a competitive advantage.",
   };
   let contactInfo = {
     preamble: "Interested?",

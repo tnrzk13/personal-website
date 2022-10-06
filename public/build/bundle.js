@@ -10491,13 +10491,13 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "content-desktop svelte-1gsxggx");
     			add_render_callback(() => /*div0_elementresize_handler_1*/ ctx[14].call(div0));
-    			add_location(div0, file, 117, 6, 3658);
+    			add_location(div0, file, 117, 6, 3723);
     			attr_dev(div1, "id", "content-container");
     			set_style(div1, "top", /*titleHeight*/ ctx[0] + "px");
     			attr_dev(div1, "class", "svelte-1gsxggx");
-    			add_location(div1, file, 116, 4, 3592);
+    			add_location(div1, file, 116, 4, 3657);
     			attr_dev(div2, "class", "container-fluid svelte-1gsxggx");
-    			add_location(div2, file, 107, 2, 3387);
+    			add_location(div2, file, 107, 2, 3452);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10653,12 +10653,12 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "content-mobile svelte-1gsxggx");
     			add_render_callback(() => /*div0_elementresize_handler*/ ctx[13].call(div0));
-    			add_location(div0, file, 90, 6, 2981);
+    			add_location(div0, file, 90, 6, 3046);
     			attr_dev(div1, "id", "content-container");
     			attr_dev(div1, "class", "svelte-1gsxggx");
-    			add_location(div1, file, 89, 4, 2945);
+    			add_location(div1, file, 89, 4, 3010);
     			attr_dev(div2, "class", "container-fluid svelte-1gsxggx");
-    			add_location(div2, file, 87, 2, 2859);
+    			add_location(div2, file, 87, 2, 2924);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10907,7 +10907,7 @@ var app = (function () {
     		title: "Tony Kwok.",
     		subtitle: "I build things with ",
     		texts: ["data.", "style.", "code."],
-    		description: "I'm a software developer who builds solutions to problems using data. Currently, I'm looking to join a company for my next adventure."
+    		description: "I'm a software developer who builds solutions to problems using data. For my next adventure, I'm looking to join a company that's leveraging information technologies to gain a competitive advantage."
     	};
 
     	let contactInfo = {
