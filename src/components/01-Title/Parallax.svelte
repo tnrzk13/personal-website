@@ -14,6 +14,7 @@
   const numImgLayers = numLayers - 1;
   let y, imgHeight, offsetRatio, yScroll;
   let boolShowContact = false;
+  let contentBorderRadius = "3em";
 
   const update = () => {
     imgHeight = containerHeight - contactYOffset;
@@ -28,17 +29,18 @@
   };
 
   // calculates img shift when scrolling on the contact section
+  // the contact section is 2/3 the size of the title, so we only want to shift by 2/3 the amount
   const getContactParallax = (layer) => {
     const layerize = (x) => {
       return (x * layer) / numImgLayers;
     };
+    const reverseLayerize = (x) => {
+      return (x * (numImgLayers - layer)) / numImgLayers;
+    };
+    const titlebarHeight = screen.height - window.innerHeight;
     return Math.max(
       0,
-      layerize(imgHeight) -
-        layerize(yScroll * (1 + offsetRatio)) +
-        contactYOffset
-      // titlebar in web browser if not in fullscreen mode
-      // (screen.height - window.innerHeight)
+      layerize(imgHeight - yScroll) + reverseLayerize(contactYOffset)
     );
   };
 
@@ -60,9 +62,11 @@
   {#each layers as layer}
     {#if layer === 0}
       <img
-        style="transform: translateY({boolShowContact
-          ? 'calc(' + getContactParallax(layer) + 'px - 3em)'
-          : (-y * layer) / (layers.length - 1) + 'px'})"
+        style="transform: translateY(calc({boolShowContact
+          ? getContactParallax(layer)
+          : (-y * layer) / (layers.length - 1)}px {boolShowContact
+          ? '- ' + contentBorderRadius
+          : ''}))"
         src="images/intro/00{layer}.{isBrowserSafari() ? 'png' : 'avif'}"
         alt="parallax layer {layer}"
       />
