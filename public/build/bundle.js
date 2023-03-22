@@ -8885,7 +8885,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (54:6) {#each projList as projectInfo, index}
+    // (61:6) {#each projList as projectInfo, index}
     function create_each_block$1(ctx) {
     	let projectinstance;
     	let t;
@@ -8907,8 +8907,8 @@ var app = (function () {
     			t = space();
     			br0 = element("br");
     			br1 = element("br");
-    			add_location(br0, file$6, 55, 8, 2305);
-    			add_location(br1, file$6, 55, 14, 2311);
+    			add_location(br0, file$6, 62, 8, 2802);
+    			add_location(br1, file$6, 62, 14, 2808);
     		},
     		m: function mount(target, anchor) {
     			mount_component(projectinstance, target, anchor);
@@ -8939,14 +8939,14 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(54:6) {#each projList as projectInfo, index}",
+    		source: "(61:6) {#each projList as projectInfo, index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (53:4) <SimpleGrid cols={1}>
+    // (60:4) <SimpleGrid cols={1}>
     function create_default_slot(ctx) {
     	let each_1_anchor;
     	let current;
@@ -9035,7 +9035,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(53:4) <SimpleGrid cols={1}>",
+    		source: "(60:4) <SimpleGrid cols={1}>",
     		ctx
     	});
 
@@ -9068,12 +9068,12 @@ var app = (function () {
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9 svelte-1jaadhi");
-    			add_location(h1, file$6, 50, 2, 2045);
+    			add_location(h1, file$6, 57, 2, 2542);
     			attr_dev(div0, "class", "projects container-fluid col-md-9 svelte-1jaadhi");
-    			add_location(div0, file$6, 51, 2, 2111);
+    			add_location(div0, file$6, 58, 2, 2608);
     			attr_dev(div1, "id", "projects");
     			attr_dev(div1, "class", "container-fluid col-sm-10 offset-sm-1 svelte-1jaadhi");
-    			add_location(div1, file$6, 49, 0, 1976);
+    			add_location(div1, file$6, 56, 0, 2473);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9140,6 +9140,7 @@ var app = (function () {
     	let projList = [
     		new Project("This Website!", "images/04-project/website." + (isBrowserSafari() ? "png" : "avif"), new Urls(true, "https://tnrzk13.github.io/personal-website/", "https://github.com/tnrzk13/personal-website"), "Learned a new framework, brushed up on html and css, created and solved lots of bugs. Came to the conclusion that Svelte.JS is the best JS framework.", ["Javascript", "Svelte"]),
     		new Project("SoulDog", "images/04-project/souldog." + (isBrowserSafari() ? "png" : "avif"), new Urls(true, "https://souldog.herokuapp.com", "https://github.com/aarshio/SoulDog-CS348"), 'Webapp linked to database designed to match abandoned dogs with new dog owners. Features include account creation, Google authentication, search, and posting. Awarded "top project of the class" in CS348: Database Systems.', ["Javascript", "React", "Node.JS", "Knex JS", "SQL"]),
+    		new Project("Time Series Forecasting", "images/04-project/airpassengers." + (isBrowserSafari() ? "png" : "avif"), new Urls(true, "", "https://github.com/tnrzk13/TimeSeriesAirPassengers"), "Forecasted the number of air passengers using time series data. Used SARIMA and Holt-Winters Exponential Smoothing models to predict the number of passengers for the next 36 months.", ["Python", "SciKit Learn", "StatsModels", "Matplotlib", "Pandas", "SciPy"]),
     		new Project("Wumpus World", "images/04-project/wumpus." + (isBrowserSafari() ? "png" : "avif"), new Urls(), "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.", ["Python"])
     	];
 

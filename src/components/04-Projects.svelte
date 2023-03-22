@@ -38,6 +38,13 @@
       ["Javascript", "React", "Node.JS", "Knex JS", "SQL"]
     ),
     new Project(
+      "Time Series Forecasting",
+      "images/04-project/airpassengers." + (isBrowserSafari() ? "png" : "avif"),
+      new Urls(true, "", "https://github.com/tnrzk13/TimeSeriesAirPassengers"),
+      "Forecasted the number of air passengers using time series data. Used SARIMA and Holt-Winters Exponential Smoothing models to predict the number of passengers for the next 36 months.",
+      ["Python", "SciKit Learn", "StatsModels", "Matplotlib", "Pandas", "SciPy"]
+    ),
+    new Project(
       "Wumpus World",
       "images/04-project/wumpus." + (isBrowserSafari() ? "png" : "avif"),
       new Urls(),
