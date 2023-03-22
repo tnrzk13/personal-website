@@ -10,7 +10,10 @@
         <span>
           <a href={urls.projectUrl}>
             <h4 class="title">
-              {title} <i class="fa-solid fa-link" />
+              {title}
+              {#if urls.projectUrl !== ""}
+                <i class="fa-solid fa-link" />
+              {/if}
             </h4>
           </a>
           &nbsp; &nbsp;
