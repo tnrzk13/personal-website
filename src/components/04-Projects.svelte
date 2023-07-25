@@ -38,11 +38,23 @@
       ["Javascript", "React", "Node.JS", "Knex JS", "SQL"]
     ),
     new Project(
+      "Pneumonia Detection",
+      "images/04-project/pneumoniaXrayIdentifier." +
+        (isBrowserSafari() ? "png" : "avif"),
+      new Urls(
+        true,
+        "https://huggingface.co/spaces/tnrzk13/PneumoniaDetection",
+        "https://github.com/tnrzk13/TimeSeriesAirPassengers"
+      ),
+      "Developed a Deep Learning model using the FastAI library that diagnoses pneumonia with a 98.5% accuracy rate from chest X-ray images.",
+      ["Python", "SciKit Learn", "StatsModels", "Matplotlib", "Pandas", "SciPy"]
+    ),
+    new Project(
       "Time Series Forecasting",
       "images/04-project/airpassengers." + (isBrowserSafari() ? "png" : "avif"),
-      new Urls(true, "", "https://github.com/tnrzk13/TimeSeriesAirPassengers"),
+      new Urls(true, "", "https://github.com/tnrzk13/PneumoniaXrayIdentifier"),
       "Forecasted the number of air passengers using time series data. Used SARIMA and Holt-Winters Exponential Smoothing models to predict the number of passengers for the next 36 months.",
-      ["Python", "SciKit Learn", "StatsModels", "Matplotlib", "Pandas", "SciPy"]
+      ["Python", "Fast.ai", "Gradio"]
     ),
     new Project(
       "Wumpus World",
