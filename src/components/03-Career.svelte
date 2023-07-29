@@ -21,6 +21,41 @@
   }
   let cardList = [
     new CardClass(
+      "images/03-career/myriade." + (isBrowserSafari() ? "png" : "avif"),
+      "Full Stack Developer",
+      "Myriade",
+      ["PostgreSQL", "Node.JS", "Express.JS", "Docker"],
+      [
+        [
+          {
+            style: "bold",
+            text: "Optimized the platform's performance by 30% ",
+          },
+          {
+            style: "none",
+            text: "through non-blocking I/O model and middleware functions using Node.js and Express.js, reducing response time and increasing efficiency.",
+          },
+        ],
+        [
+          {
+            style: "none",
+            text: "Implemented a PostgreSQL database, ",
+          },
+          {
+            style: "bold",
+            text: "decreasing downtime by 40% and data retrieval speed by 50%",
+          },
+          {
+            style: "none",
+            text: "leading to improved application performance.",
+          },
+        ],
+      ],
+      getComputedStyle(document.querySelector(":root")).getPropertyValue(
+        "--gradient-flare"
+      )
+    ),
+    new CardClass(
       "images/03-career/360insights." + (isBrowserSafari() ? "png" : "avif"),
       "Full Stack Developer",
       "360insights",
@@ -29,17 +64,29 @@
         [
           {
             style: "none",
-            text: "Created API to test availability of internal services using Node.js, ",
+            text: "Developed a health-check API for testing and displaying the availability of 10+ internal services using Node.js, ",
           },
           {
             style: "bold",
-            text: "reducing debugging time by 10 mins for the team",
+            text: "saving developer time on debugging and reducing potential service downtime",
+          },
+          {
+            style: "none",
+            text: ".",
           },
         ],
         [
           {
             style: "none",
-            text: "Developed React.js components for client sales portals, resulting in satisfied clients",
+            text: "Built reusable UI components using React.js for client sales portals, ",
+          },
+          {
+            style: "bold",
+            text: "decreasing project maintenance by 20%",
+          },
+          {
+            style: "none",
+            text: ".",
           },
         ],
       ],
@@ -55,28 +102,44 @@
       [
         [
           {
+            style: "none",
+            text: "Introduced a database schema that resolved and prevented data conflicts, ",
+          },
+          {
             style: "bold",
-            text: "Automated data reports to reduce data reporting time to zero",
+            text: "improving development efficiency by 25%",
           },
           {
             style: "none",
-            text: ", using Power BI and Power Automate to feed data into a reporting app in real time",
+            text: " and reducing time spent on bug fixing.",
           },
         ],
         [
           {
             style: "none",
-            text: "Developed UI standards and component library in Power Apps to ",
+            text: "Automated data reporting through Power BI and Power Automate, completely ",
           },
           {
             style: "bold",
-            text: "increase app development efficiency by >20%",
+            text: "eliminating manual reporting time and ensuring up-to-date insights",
+          },
+          {
+            style: "none",
+            text: ".",
           },
         ],
         [
           {
             style: "none",
-            text: "Redesigned database schema to solve and prevent future data conflicts",
+            text: "Developed UI standards and a component library in Power Apps, ",
+          },
+          {
+            style: "bold",
+            text: "enhancing app development efficiency by 20%",
+          },
+          {
+            style: "none",
+            text: ".",
           },
         ],
       ],
@@ -93,17 +156,29 @@
         [
           {
             style: "none",
-            text: "Scraped and cleaned data using Pandas and MySQL, ",
+            text: "Developed a data collection, cleaning, and preprocessing script with Pandas and MySQL, ",
           },
           {
             style: "bold",
-            text: "allowing model prediction accuracy to rise >75%",
+            text: "improving the accuracy of NBA game prediction models by 50%",
+          },
+          {
+            style: "none",
+            text: " and contributing to a ",
+          },
+          {
+            style: "bold",
+            text: "successful MVP launch",
+          },
+          {
+            style: "none",
+            text: ".",
           },
         ],
         [
           {
             style: "none",
-            text: "Created Markov chain for data description using python for end user to understand key data points",
+            text: "Created a Markov chain to translate raw data into descriptive text, enhancing user understanding of NBA metrics .",
           },
         ],
       ],
@@ -120,13 +195,15 @@
         [
           {
             style: "none",
-            text: "Pitched, designed, and developed app for data reporting in SQL, VBA, MS Access",
+            text: "Designed and developed a data reporting app using SQL, VBA, and MS Access, automating the reporting process, ",
           },
-        ],
-        [
           {
             style: "bold",
-            text: "Resulted in complete automation of 1hr of reporting time daily to the sales department, and the primary role of co-ops",
+            text: "saving 300 hours of work annually",
+          },
+          {
+            style: "none",
+            text: ", and facilitating the work turnover process.",
           },
         ],
       ],

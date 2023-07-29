@@ -11,6 +11,7 @@
   --gradient-telegram: linear-gradient(to top left, #1c9292, #f2fcfe);
   --gradient-amin: linear-gradient(to top left, #8e2de2, #1cb5e0);
   --gradient-jack-dorsey-stock: linear-gradient(to bottom right, #380036, #0cbaba);
+  --gradient-flare: linear-gradient(to bottom right, #f12711, #f5af19);
 
   /* gradients for text */
   --gradient-pink-flavour: linear-gradient(315deg, #ffc0cb 35%, #800080);
