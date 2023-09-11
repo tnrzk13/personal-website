@@ -7536,13 +7536,13 @@ var app = (function () {
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9 svelte-19hxwi1");
-    			add_location(h1, file$9, 218, 2, 6322);
+    			add_location(h1, file$9, 218, 2, 6427);
     			attr_dev(div0, "id", "card-list-container");
     			attr_dev(div0, "class", "card container-fluid col-md-9 svelte-19hxwi1");
-    			add_location(div0, file$9, 219, 2, 6383);
+    			add_location(div0, file$9, 219, 2, 6488);
     			attr_dev(div1, "id", "career");
     			attr_dev(div1, "class", "container-fluid col-sm-10 col-sm-1 svelte-19hxwi1");
-    			add_location(div1, file$9, 217, 0, 6258);
+    			add_location(div1, file$9, 217, 0, 6363);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7611,37 +7611,41 @@ var app = (function () {
     	}
 
     	let cardList = [
-    		new CardClass("images/03-career/myriade." + (isBrowserSafari() ? "png" : "avif"),
-    		"Full Stack Developer",
-    		"Myriade",
-    		["PostgreSQL", "Node.JS", "Express.JS", "Docker"],
-    		[
-    				[
-    					{
-    						style: "bold",
-    						text: "Optimized the platform's performance by 30% "
-    					},
-    					{
-    						style: "none",
-    						text: "through non-blocking I/O model and middleware functions using Node.js and Express.js, reducing response time and increasing efficiency."
-    					}
-    				],
-    				[
-    					{
-    						style: "none",
-    						text: "Implemented a PostgreSQL database, "
-    					},
-    					{
-    						style: "bold",
-    						text: "decreasing downtime by 40% and data retrieval speed by 50%"
-    					},
-    					{
-    						style: "none",
-    						text: "leading to improved application performance."
-    					}
-    				]
-    			],
-    		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-flare")),
+    		// new CardClass(
+    		//   "images/03-career/myriade." + (isBrowserSafari() ? "png" : "avif"),
+    		//   "Full Stack Developer",
+    		//   "Myriade",
+    		//   ["PostgreSQL", "Node.JS", "Express.JS", "Docker"],
+    		//   [
+    		//     [
+    		//       {
+    		//         style: "bold",
+    		//         text: "Optimized the platform's performance by 30% ",
+    		//       },
+    		//       {
+    		//         style: "none",
+    		//         text: "through non-blocking I/O model and middleware functions using Node.js and Express.js, reducing response time and increasing efficiency.",
+    		//       },
+    		//     ],
+    		//     [
+    		//       {
+    		//         style: "none",
+    		//         text: "Implemented a PostgreSQL database, ",
+    		//       },
+    		//       {
+    		//         style: "bold",
+    		//         text: "decreasing downtime by 40% and data retrieval speed by 50%",
+    		//       },
+    		//       {
+    		//         style: "none",
+    		//         text: "leading to improved application performance.",
+    		//       },
+    		//     ],
+    		//   ],
+    		//   getComputedStyle(document.querySelector(":root")).getPropertyValue(
+    		//     "--gradient-flare"
+    		//   )
+    		// ),
     		new CardClass("images/03-career/360insights." + (isBrowserSafari() ? "png" : "avif"),
     		"Full Stack Developer",
     		"360insights",

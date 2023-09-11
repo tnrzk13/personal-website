@@ -20,41 +20,41 @@
     }
   }
   let cardList = [
-    new CardClass(
-      "images/03-career/myriade." + (isBrowserSafari() ? "png" : "avif"),
-      "Full Stack Developer",
-      "Myriade",
-      ["PostgreSQL", "Node.JS", "Express.JS", "Docker"],
-      [
-        [
-          {
-            style: "bold",
-            text: "Optimized the platform's performance by 30% ",
-          },
-          {
-            style: "none",
-            text: "through non-blocking I/O model and middleware functions using Node.js and Express.js, reducing response time and increasing efficiency.",
-          },
-        ],
-        [
-          {
-            style: "none",
-            text: "Implemented a PostgreSQL database, ",
-          },
-          {
-            style: "bold",
-            text: "decreasing downtime by 40% and data retrieval speed by 50%",
-          },
-          {
-            style: "none",
-            text: "leading to improved application performance.",
-          },
-        ],
-      ],
-      getComputedStyle(document.querySelector(":root")).getPropertyValue(
-        "--gradient-flare"
-      )
-    ),
+    // new CardClass(
+    //   "images/03-career/myriade." + (isBrowserSafari() ? "png" : "avif"),
+    //   "Full Stack Developer",
+    //   "Myriade",
+    //   ["PostgreSQL", "Node.JS", "Express.JS", "Docker"],
+    //   [
+    //     [
+    //       {
+    //         style: "bold",
+    //         text: "Optimized the platform's performance by 30% ",
+    //       },
+    //       {
+    //         style: "none",
+    //         text: "through non-blocking I/O model and middleware functions using Node.js and Express.js, reducing response time and increasing efficiency.",
+    //       },
+    //     ],
+    //     [
+    //       {
+    //         style: "none",
+    //         text: "Implemented a PostgreSQL database, ",
+    //       },
+    //       {
+    //         style: "bold",
+    //         text: "decreasing downtime by 40% and data retrieval speed by 50%",
+    //       },
+    //       {
+    //         style: "none",
+    //         text: "leading to improved application performance.",
+    //       },
+    //     ],
+    //   ],
+    //   getComputedStyle(document.querySelector(":root")).getPropertyValue(
+    //     "--gradient-flare"
+    //   )
+    // ),
     new CardClass(
       "images/03-career/360insights." + (isBrowserSafari() ? "png" : "avif"),
       "Full Stack Developer",
