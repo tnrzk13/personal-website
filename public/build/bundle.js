@@ -10601,13 +10601,13 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "content-desktop svelte-1gsxggx");
     			add_render_callback(() => /*div0_elementresize_handler_1*/ ctx[14].call(div0));
-    			add_location(div0, file, 117, 6, 3723);
+    			add_location(div0, file, 117, 6, 3709);
     			attr_dev(div1, "id", "content-container");
     			set_style(div1, "top", /*titleHeight*/ ctx[0] + "px");
     			attr_dev(div1, "class", "svelte-1gsxggx");
-    			add_location(div1, file, 116, 4, 3657);
+    			add_location(div1, file, 116, 4, 3643);
     			attr_dev(div2, "class", "container-fluid svelte-1gsxggx");
-    			add_location(div2, file, 107, 2, 3452);
+    			add_location(div2, file, 107, 2, 3438);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10763,12 +10763,12 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "content-mobile svelte-1gsxggx");
     			add_render_callback(() => /*div0_elementresize_handler*/ ctx[13].call(div0));
-    			add_location(div0, file, 90, 6, 3046);
+    			add_location(div0, file, 90, 6, 3032);
     			attr_dev(div1, "id", "content-container");
     			attr_dev(div1, "class", "svelte-1gsxggx");
-    			add_location(div1, file, 89, 4, 3010);
+    			add_location(div1, file, 89, 4, 2996);
     			attr_dev(div2, "class", "container-fluid svelte-1gsxggx");
-    			add_location(div2, file, 87, 2, 2924);
+    			add_location(div2, file, 87, 2, 2910);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -11017,7 +11017,7 @@ var app = (function () {
     		title: "Tony Kwok.",
     		subtitle: "I build things with ",
     		texts: ["data.", "style.", "code."],
-    		description: "I'm a software developer who builds solutions to problems using data. For my next adventure, I'm looking to join a company that's leveraging information technologies to gain a competitive advantage."
+    		description: "I'm a software engineer who crafts efficient software solutions to solve complex challenges. I'm ready to contribute to a forward-thinking company, create value, and grow with my team."
     	};
 
     	let contactInfo = {
