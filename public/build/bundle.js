@@ -8378,7 +8378,7 @@ var app = (function () {
     	return block;
     }
 
-    // (11:0) {#if projectIndex % 2 === 0 || window.innerWidth < smScreenSize}
+    // (11:0) {#if window.innerWidth < smScreenSize || projectIndex % 2 === 0}
     function create_if_block$3(ctx) {
     	let div3;
     	let div1;
@@ -8494,7 +8494,7 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(11:0) {#if projectIndex % 2 === 0 || window.innerWidth < smScreenSize}",
+    		source: "(11:0) {#if window.innerWidth < smScreenSize || projectIndex % 2 === 0}",
     		ctx
     	});
 
@@ -8798,7 +8798,7 @@ var app = (function () {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*projectIndex*/ ctx[0] % 2 === 0 || window.innerWidth < /*smScreenSize*/ ctx[3]) return 0;
+    		if (window.innerWidth < /*smScreenSize*/ ctx[3] || /*projectIndex*/ ctx[0] % 2 === 0) return 0;
     		return 1;
     	}
 
@@ -8981,12 +8981,12 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[3] = list[i];
-    	child_ctx[5] = i;
+    	child_ctx[4] = list[i];
+    	child_ctx[6] = i;
     	return child_ctx;
     }
 
-    // (73:6) {#each projList as projectInfo, index}
+    // (97:6) {#each projList as projectInfo, index}
     function create_each_block$1(ctx) {
     	let projectinstance;
     	let t;
@@ -8996,8 +8996,8 @@ var app = (function () {
 
     	projectinstance = new ProjectInstance({
     			props: {
-    				projectIndex: /*index*/ ctx[5],
-    				projectInfo: /*projectInfo*/ ctx[3]
+    				projectIndex: /*index*/ ctx[6],
+    				projectInfo: /*projectInfo*/ ctx[4]
     			},
     			$$inline: true
     		});
@@ -9008,8 +9008,8 @@ var app = (function () {
     			t = space();
     			br0 = element("br");
     			br1 = element("br");
-    			add_location(br0, file$6, 74, 8, 3315);
-    			add_location(br1, file$6, 74, 14, 3321);
+    			add_location(br0, file$6, 98, 8, 4063);
+    			add_location(br1, file$6, 98, 14, 4069);
     		},
     		m: function mount(target, anchor) {
     			mount_component(projectinstance, target, anchor);
@@ -9040,18 +9040,18 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(73:6) {#each projList as projectInfo, index}",
+    		source: "(97:6) {#each projList as projectInfo, index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (72:4) <SimpleGrid cols={1}>
+    // (96:4) <SimpleGrid cols={1}>
     function create_default_slot(ctx) {
     	let each_1_anchor;
     	let current;
-    	let each_value = /*projList*/ ctx[0];
+    	let each_value = /*projList*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -9080,8 +9080,8 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*projList*/ 1) {
-    				each_value = /*projList*/ ctx[0];
+    			if (dirty & /*projList*/ 2) {
+    				each_value = /*projList*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
 
@@ -9136,7 +9136,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(72:4) <SimpleGrid cols={1}>",
+    		source: "(96:4) <SimpleGrid cols={1}>",
     		ctx
     	});
 
@@ -9144,12 +9144,33 @@ var app = (function () {
     }
 
     function create_fragment$6(ctx) {
-    	let div1;
+    	let div3;
     	let h1;
     	let t1;
     	let div0;
+    	let t2;
+    	let br0;
+    	let br1;
+    	let t3;
+    	let br2;
+    	let br3;
+    	let t4;
+    	let div1;
+    	let techstack_1;
+    	let t5;
+    	let br4;
+    	let br5;
+    	let br6;
+    	let br7;
+    	let t6;
+    	let div2;
     	let simplegrid;
     	let current;
+
+    	techstack_1 = new Techstack({
+    			props: { techstack: /*techstack*/ ctx[0] },
+    			$$inline: true
+    		});
 
     	simplegrid = new SimpleGrid$1({
     			props: {
@@ -9162,35 +9183,79 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div1 = element("div");
+    			div3 = element("div");
     			h1 = element("h1");
     			h1.textContent = "Leveling up with side projects";
     			t1 = space();
     			div0 = element("div");
+    			t2 = text("My side projects reflect my dedication to innovation and problem-solving.\r\n    From building interactive web experiences with cutting-edge technologies to\r\n    developing AI-powered solutions, I thrive on turning ideas into impactful\r\n    realities.\r\n    ");
+    			br0 = element("br");
+    			br1 = element("br");
+    			t3 = text("\r\n    I can learn any technology, just as I have learned the following creating these\r\n    projects:\r\n    ");
+    			br2 = element("br");
+    			br3 = element("br");
+    			t4 = space();
+    			div1 = element("div");
+    			create_component(techstack_1.$$.fragment);
+    			t5 = space();
+    			br4 = element("br");
+    			br5 = element("br");
+    			br6 = element("br");
+    			br7 = element("br");
+    			t6 = space();
+    			div2 = element("div");
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9 svelte-1jaadhi");
-    			add_location(h1, file$6, 69, 2, 3055);
-    			attr_dev(div0, "class", "projects container-fluid col-md-9 svelte-1jaadhi");
-    			add_location(div0, file$6, 70, 2, 3121);
-    			attr_dev(div1, "id", "projects");
-    			attr_dev(div1, "class", "container-fluid col-sm-10 offset-sm-1 svelte-1jaadhi");
-    			add_location(div1, file$6, 68, 0, 2986);
+    			add_location(h1, file$6, 79, 2, 3235);
+    			add_location(br0, file$6, 85, 4, 3612);
+    			add_location(br1, file$6, 85, 10, 3618);
+    			add_location(br2, file$6, 88, 4, 3730);
+    			add_location(br3, file$6, 88, 10, 3736);
+    			attr_dev(div0, "class", "container-fluid description col-md-9");
+    			add_location(div0, file$6, 80, 2, 3301);
+    			add_location(br4, file$6, 92, 4, 3831);
+    			add_location(br5, file$6, 92, 10, 3837);
+    			add_location(br6, file$6, 92, 16, 3843);
+    			add_location(br7, file$6, 92, 22, 3849);
+    			attr_dev(div1, "class", "container-fluid col-md-9");
+    			add_location(div1, file$6, 90, 2, 3756);
+    			attr_dev(div2, "class", "projects container-fluid col-md-9 svelte-1jaadhi");
+    			add_location(div2, file$6, 94, 2, 3869);
+    			attr_dev(div3, "id", "projects");
+    			attr_dev(div3, "class", "container-fluid col-sm-10 offset-sm-1 svelte-1jaadhi");
+    			add_location(div3, file$6, 78, 0, 3166);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div1, anchor);
-    			append_dev(div1, h1);
-    			append_dev(div1, t1);
-    			append_dev(div1, div0);
-    			mount_component(simplegrid, div0, null);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, h1);
+    			append_dev(div3, t1);
+    			append_dev(div3, div0);
+    			append_dev(div0, t2);
+    			append_dev(div0, br0);
+    			append_dev(div0, br1);
+    			append_dev(div0, t3);
+    			append_dev(div0, br2);
+    			append_dev(div0, br3);
+    			append_dev(div3, t4);
+    			append_dev(div3, div1);
+    			mount_component(techstack_1, div1, null);
+    			append_dev(div1, t5);
+    			append_dev(div1, br4);
+    			append_dev(div1, br5);
+    			append_dev(div1, br6);
+    			append_dev(div1, br7);
+    			append_dev(div3, t6);
+    			append_dev(div3, div2);
+    			mount_component(simplegrid, div2, null);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
     			const simplegrid_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 128) {
     				simplegrid_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9198,15 +9263,18 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
+    			transition_in(techstack_1.$$.fragment, local);
     			transition_in(simplegrid.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
+    			transition_out(techstack_1.$$.fragment, local);
     			transition_out(simplegrid.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div1);
+    			if (detaching) detach_dev(div3);
+    			destroy_component(techstack_1);
     			destroy_component(simplegrid);
     		}
     	};
@@ -9238,6 +9306,8 @@ var app = (function () {
     		}
     	}
 
+    	let techstack = ["Fast.ai", "Svelte", "GCP", "Scikit-Learn", "Matplotlib", "Knex.JS"];
+
     	let projList = [
     		new Project("This Website!", "images/04-project/website." + (isBrowserSafari() ? "png" : "avif"), new Urls(true, "https://tnrzk13.github.io/personal-website/", "https://github.com/tnrzk13/personal-website"), "Learned a new framework, brushed up on html and css, created and solved lots of bugs. Came to the conclusion that Svelte.JS is the best JS framework.", ["Javascript", "Svelte"]),
     		new Project("SoulDog", "images/04-project/souldog." + (isBrowserSafari() ? "png" : "avif"), new Urls(true, "https://souldog.herokuapp.com", "https://github.com/aarshio/SoulDog-CS348"), 'Webapp linked to database designed to match abandoned dogs with new dog owners. Features include account creation, Google authentication, search, and posting. Awarded "top project of the class" in CS348: Database Systems.', ["Javascript", "React", "Node.JS", "Knex JS", "SQL"]),
@@ -9256,20 +9326,23 @@ var app = (function () {
     		ProjectInstance,
     		SimpleGrid: SimpleGrid$1,
     		isBrowserSafari,
+    		Techstack,
     		Urls,
     		Project,
+    		techstack,
     		projList
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('projList' in $$props) $$invalidate(0, projList = $$props.projList);
+    		if ('techstack' in $$props) $$invalidate(0, techstack = $$props.techstack);
+    		if ('projList' in $$props) $$invalidate(1, projList = $$props.projList);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [projList];
+    	return [techstack, projList];
     }
 
     class _04_Projects extends SvelteComponentDev {

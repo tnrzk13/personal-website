@@ -8,7 +8,7 @@
   let smScreenSize = 576;
 </script>
 
-{#if projectIndex % 2 === 0 || window.innerWidth < smScreenSize}
+{#if window.innerWidth < smScreenSize || projectIndex % 2 === 0}
   <div class="row project-container">
     <div class="img-container col-sm-7">
       <div class="main-img-container-even col-sm-10 main-img-container">

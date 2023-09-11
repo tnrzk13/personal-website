@@ -2,6 +2,7 @@
   import ProjectInstance from "./04-Projects/ProjectInstance.svelte";
   import { SimpleGrid } from "@svelteuidev/core";
   import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
+  import Techstack from "./Misc/Techstack.svelte";
 
   class Urls {
     constructor(boolUrlExists = false, projectUrl = "", codeUrl = "") {
@@ -13,6 +14,15 @@
       Object.assign(this, { title, imgurl, urls, text, techstack });
     }
   }
+
+  let techstack = [
+    "Fast.ai",
+    "Svelte",
+    "GCP",
+    "Scikit-Learn",
+    "Matplotlib",
+    "Knex.JS",
+  ];
 
   let projList = [
     new Project(
@@ -68,6 +78,20 @@
 
 <div id="projects" class="container-fluid col-sm-10 offset-sm-1">
   <h1 class="title col-md-9">Leveling up with side projects</h1>
+  <div class="container-fluid description col-md-9">
+    My side projects reflect my dedication to innovation and problem-solving.
+    From building interactive web experiences with cutting-edge technologies to
+    developing AI-powered solutions, I thrive on turning ideas into impactful
+    realities.
+    <br /><br />
+    I can learn any technology, just as I have learned the following creating these
+    projects:
+    <br /><br />
+  </div>
+  <div class="container-fluid col-md-9">
+    <Techstack {techstack} />
+    <br /><br /><br /><br />
+  </div>
   <div class="projects container-fluid col-md-9">
     <SimpleGrid cols={1}>
       {#each projList as projectInfo, index}
