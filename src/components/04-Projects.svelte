@@ -62,14 +62,22 @@
     new Project(
       "Time Series Forecasting",
       "images/04-project/airpassengers." + (isBrowserSafari() ? "png" : "avif"),
-      new Urls(true, "", "https://github.com/tnrzk13/TimeSeriesAirPassengers"),
+      new Urls(
+        true,
+        "https://github.com/tnrzk13/TimeSeriesAirPassengers",
+        "https://github.com/tnrzk13/TimeSeriesAirPassengers"
+      ),
       "Forecasted the number of air passengers using time series data. Used SARIMA and Holt-Winters Exponential Smoothing models to predict the number of passengers for the next 36 months.",
       ["Python", "SciKit Learn", "StatsModels", "Matplotlib", "Pandas", "SciPy"]
     ),
     new Project(
       "Wumpus World",
       "images/04-project/wumpus." + (isBrowserSafari() ? "png" : "avif"),
-      new Urls(),
+      new Urls(
+        true,
+        "https://gitfront.io/r/user-1077305/tL8pbBHp3emF/wumpusworld/",
+        "https://gitfront.io/r/user-1077305/tL8pbBHp3emF/wumpusworld/"
+      ),
       "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.",
       ["Python"]
     ),
