@@ -10,7 +10,7 @@
   import Loader from "./components/Loader.svelte";
 
   // dev mode
-  let boolFadeAnimation, boolShowLoadingScreen, boolAnimateText;
+  let boolShowLoadingScreen, boolAnimateText;
   // Heights
   let titleHeight, contactHeight, contentHeight;
   // scroll
@@ -56,9 +56,9 @@
   }
 
   const triggerDevMode = (isOn) => {
-    boolFadeAnimation = boolShowLoadingScreen = boolAnimateText = false;
+    boolShowLoadingScreen = boolAnimateText = false;
     if (!isOn) {
-      boolFadeAnimation = boolShowLoadingScreen = boolAnimateText = true;
+      boolShowLoadingScreen = boolAnimateText = true;
     }
   };
   triggerDevMode(false);
@@ -94,7 +94,7 @@
         bind:clientHeight={contentHeight}
       >
         <AboutMe />
-        <Career {boolFadeAnimation} />
+        <Career />
         <Projects />
         <ContactWrapper {contactInfo} />
       </div>
@@ -121,7 +121,7 @@
         bind:clientHeight={contentHeight}
       >
         <AboutMe />
-        <Career {boolFadeAnimation} {mdScreenSize} />
+        <Career {mdScreenSize} />
         <Projects />
       </div>
       <ContactText {contactInfo} {titleHeight} {contactYOffset} />

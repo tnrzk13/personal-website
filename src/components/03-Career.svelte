@@ -4,7 +4,6 @@
   import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
   import GradientButton from "./Button/GradientButton.svelte";
 
-  export let boolFadeAnimation = false;
   export let mdScreenSize = 992;
 
   class CardClass {
@@ -220,15 +219,7 @@
   <div id="card-list-container" class="card container-fluid col-md-9">
     <SimpleGrid cols={window.innerWidth < mdScreenSize ? 1 : 2}>
       {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}
-        <Card
-          {imgurl}
-          {title}
-          {subtitle}
-          {techstack}
-          {points}
-          {logoColor}
-          {boolFadeAnimation}
-        />
+        <Card {imgurl} {title} {subtitle} {techstack} {points} {logoColor} />
       {/each}
     </SimpleGrid>
     <!-- <br /><br /><br /> -->

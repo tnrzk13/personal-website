@@ -1,9 +1,7 @@
 <script>
   import CardProject from "../Cards/CardProject.svelte";
-  import FadeInWrapper from "../Misc/FadeInWrapper.svelte";
 
   export let projectIndex, projectInfo;
-  export let boolFadeAnimation = true;
 
   let smScreenSize = 576;
 </script>
@@ -13,15 +11,9 @@
     <div class="img-container col-sm-7">
       <div class="main-img-container-even col-sm-10 main-img-container">
         {#if projectInfo.urls.boolUrlExists}
-          <FadeInWrapper {boolFadeAnimation}>
-            <a href={projectInfo.urls.projectUrl}>
-              <img
-                class="main glowing"
-                src={projectInfo.imgurl}
-                alt="project"
-              />
-            </a>
-          </FadeInWrapper>
+          <a href={projectInfo.urls.projectUrl}>
+            <img class="main glowing" src={projectInfo.imgurl} alt="project" />
+          </a>
         {:else}
           <img class="main" src={projectInfo.imgurl} alt="project" />
         {/if}
@@ -51,15 +43,13 @@
         class="main-img-container-odd col-sm-10 offset-sm-2 main-img-container"
       >
         {#if projectInfo.urls.boolUrlExists}
-          <FadeInWrapper {boolFadeAnimation}>
-            <a href={projectInfo.urls.projectUrl}>
-              <img
-                class="main main-odd glowing"
-                src={projectInfo.imgurl}
-                alt="project"
-              />
-            </a>
-          </FadeInWrapper>
+          <a href={projectInfo.urls.projectUrl}>
+            <img
+              class="main main-odd glowing"
+              src={projectInfo.imgurl}
+              alt="project"
+            />
+          </a>
         {:else}
           <img class="main main-odd" src={projectInfo.imgurl} alt="project" />
         {/if}

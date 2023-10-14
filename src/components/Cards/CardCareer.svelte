@@ -1,8 +1,6 @@
 <script>
   import Techstack from "../Misc/Techstack.svelte";
-  import FadeInWrapper from "../Misc/FadeInWrapper.svelte";
 
-  export let boolFadeAnimation = false;
   export let imgurl;
   export let title;
   export let subtitle;
@@ -11,35 +9,33 @@
   export let techstack;
 </script>
 
-<FadeInWrapper {boolFadeAnimation}>
-  <div class="container-fluid card-container">
-    <div class="card m-2 cb1 text-center">
-      <div class="card-body">
-        <div class="circle-logo" style="background-image: {logoColor}">
-          <img class="logo" src={imgurl} alt="company logo" />
-        </div>
-        <h4 class="card-title">{title}</h4>
-        <h6 class="card-subtitle">{subtitle}</h6>
-        <div class="techstack-wrapper">
-          <Techstack {techstack} />
-        </div>
-        <p class="card-text">
-          {#each points as point}
-            <li>
-              {#each point as part}
-                {#if part.style === "bold"}
-                  <b>{part.text}</b>
-                {:else}
-                  <span class="point-part"> {part.text}</span>
-                {/if}
-              {/each}
-            </li>
-          {/each}
-        </p>
+<div class="container-fluid card-container">
+  <div class="card m-2 cb1 text-center">
+    <div class="card-body">
+      <div class="circle-logo" style="background-image: {logoColor}">
+        <img class="logo" src={imgurl} alt="company logo" />
       </div>
+      <h4 class="card-title">{title}</h4>
+      <h6 class="card-subtitle">{subtitle}</h6>
+      <div class="techstack-wrapper">
+        <Techstack {techstack} />
+      </div>
+      <p class="card-text">
+        {#each points as point}
+          <li>
+            {#each point as part}
+              {#if part.style === "bold"}
+                <b>{part.text}</b>
+              {:else}
+                <span class="point-part"> {part.text}</span>
+              {/if}
+            {/each}
+          </li>
+        {/each}
+      </p>
     </div>
   </div>
-</FadeInWrapper>
+</div>
 
 <style lang="scss">
   .card-container {
