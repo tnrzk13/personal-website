@@ -10,10 +10,24 @@
   <div class="row project-container">
     <div class="img-container col-sm-7">
       <div class="main-img-container-even col-sm-10 main-img-container">
-        {#if projectInfo.urls.boolUrlExists}
-          <a href={projectInfo.urls.projectUrl}>
-            <img class="main glowing" src={projectInfo.imgurl} alt="project" />
-          </a>
+        {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
+          {#if projectInfo.urls.projectUrl}
+            <a href={projectInfo.urls.projectUrl}>
+              <img
+                class="main glowing"
+                src={projectInfo.imgurl}
+                alt="project"
+              />
+            </a>
+          {:else}
+            <a href={projectInfo.urls.codeUrl}>
+              <img
+                class="main glowing"
+                src={projectInfo.imgurl}
+                alt="project"
+              />
+            </a>
+          {/if}
         {:else}
           <img class="main" src={projectInfo.imgurl} alt="project" />
         {/if}
@@ -42,14 +56,24 @@
       <div
         class="main-img-container-odd col-sm-10 offset-sm-2 main-img-container"
       >
-        {#if projectInfo.urls.boolUrlExists}
-          <a href={projectInfo.urls.projectUrl}>
-            <img
-              class="main main-odd glowing"
-              src={projectInfo.imgurl}
-              alt="project"
-            />
-          </a>
+        {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
+          {#if projectInfo.urls.projectUrl}
+            <a href={projectInfo.urls.projectUrl}>
+              <img
+                class="main main-odd glowing"
+                src={projectInfo.imgurl}
+                alt="project"
+              />
+            </a>
+          {:else}
+            <a href={projectInfo.urls.codeUrl}>
+              <img
+                class="main main-odd glowing"
+                src={projectInfo.imgurl}
+                alt="project"
+              />
+            </a>
+          {/if}
         {:else}
           <img class="main main-odd" src={projectInfo.imgurl} alt="project" />
         {/if}

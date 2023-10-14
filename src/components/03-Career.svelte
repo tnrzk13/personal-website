@@ -222,22 +222,6 @@
         <Card {imgurl} {title} {subtitle} {techstack} {points} {logoColor} />
       {/each}
     </SimpleGrid>
-    <!-- <br /><br /><br /> -->
-    <!-- <div id="resume-container">
-      <div class="resume-leader col-sm-6 offset-sm-3">
-        <h4>Want to find out more? Download my resume here!</h4>
-      </div>
-      <div class="gradient-button-container col-sm-6 offset-sm-3">
-        <a href="download/Resume.pdf" download="TonyKwokResume">
-          <GradientButton
-            text="Resume"
-            buttonGradient={getComputedStyle(
-              document.querySelector(":root")
-            ).getPropertyValue("--gradient-button-red-blue")}
-          />
-        </a>
-      </div>
-    </div> -->
   </div>
 </div>
 

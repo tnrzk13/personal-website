@@ -6,18 +6,24 @@
 <div class="div container-fluid">
   <div class="card border-0 m-2 cb1 text-center">
     <div class="card-body">
-      {#if urls.boolUrlExists}
+      {#if urls.projectUrl || urls.codeUrl}
         <span>
-          <a href={urls.projectUrl}>
-            <h4 class="title">
-              {title}
-              {#if urls.projectUrl !== ""}
+          {#if urls.projectUrl}
+            <a href={urls.projectUrl}>
+              <h4 class="title">
+                {title}
                 <i class="fa-solid fa-link" />
-              {/if}
-            </h4>
-          </a>
+              </h4>
+            </a>
+          {:else}
+            <a href={urls.codeUrl}>
+              <h4 class="title">
+                {title}
+              </h4>
+            </a>
+          {/if}
           &nbsp; &nbsp;
-          {#if urls.codeUrl !== ""}
+          {#if urls.codeUrl}
             <a href={urls.codeUrl}>
               <h4 class="title">
                 <i class="fa-brands fa-github" />

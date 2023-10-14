@@ -5,8 +5,8 @@
   import Techstack from "./Misc/Techstack.svelte";
 
   class Urls {
-    constructor(boolUrlExists = false, projectUrl = "", codeUrl = "") {
-      Object.assign(this, { boolUrlExists, projectUrl, codeUrl });
+    constructor(projectUrl = "", codeUrl = "") {
+      Object.assign(this, { projectUrl, codeUrl });
     }
   }
   class Project {
@@ -29,7 +29,6 @@
       "This Website!",
       "images/04-project/website." + (isBrowserSafari() ? "png" : "avif"),
       new Urls(
-        true,
         "https://tnrzk13.github.io/personal-website/",
         "https://github.com/tnrzk13/personal-website"
       ),
@@ -40,7 +39,6 @@
       "SoulDog",
       "images/04-project/souldog." + (isBrowserSafari() ? "png" : "avif"),
       new Urls(
-        true,
         "https://souldog.herokuapp.com",
         "https://github.com/aarshio/SoulDog-CS348"
       ),
@@ -52,7 +50,6 @@
       "images/04-project/pneumoniaXrayIdentifier." +
         (isBrowserSafari() ? "png" : "avif"),
       new Urls(
-        true,
         "https://huggingface.co/spaces/tnrzk13/PneumoniaDetection",
         "https://github.com/tnrzk13/PneumoniaXrayIdentifier"
       ),
@@ -62,11 +59,7 @@
     new Project(
       "Time Series Forecasting",
       "images/04-project/airpassengers." + (isBrowserSafari() ? "png" : "avif"),
-      new Urls(
-        true,
-        "https://github.com/tnrzk13/TimeSeriesAirPassengers",
-        "https://github.com/tnrzk13/TimeSeriesAirPassengers"
-      ),
+      new Urls("", "https://github.com/tnrzk13/TimeSeriesAirPassengers"),
       "Forecasted the number of air passengers using time series data. Used SARIMA and Holt-Winters Exponential Smoothing models to predict the number of passengers for the next 36 months.",
       ["Python", "SciKit Learn", "StatsModels", "Matplotlib", "Pandas", "SciPy"]
     ),
@@ -74,8 +67,7 @@
       "Wumpus World",
       "images/04-project/wumpus." + (isBrowserSafari() ? "png" : "avif"),
       new Urls(
-        true,
-        "https://gitfront.io/r/user-1077305/tL8pbBHp3emF/wumpusworld/",
+        "",
         "https://gitfront.io/r/user-1077305/tL8pbBHp3emF/wumpusworld/"
       ),
       "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.",
