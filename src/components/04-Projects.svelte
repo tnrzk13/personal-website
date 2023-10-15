@@ -73,6 +73,13 @@
       "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.",
       ["Python"]
     ),
+    new Project(
+      "Chess",
+      "images/04-project/chess." + (isBrowserSafari() ? "png" : "avif"),
+      new Urls("", "https://gitfront.io/r/user-1077305/ELvfgXx6E716/chess/"),
+      "Comprehensive implementation of Chess, featuring a self-designed user interface supporting both human-to-human and human-to-CPU gameplay across four different difficulty levels, with one against the chess engine itself - stockfish. Used design patterns like Observer and Factory Method.",
+      ["C++", "Makefile"]
+    ),
   ];
 </script>
 
