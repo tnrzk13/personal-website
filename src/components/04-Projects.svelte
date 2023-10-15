@@ -68,7 +68,7 @@
       "images/04-project/wumpus." + (isBrowserSafari() ? "png" : "avif"),
       new Urls(
         "",
-        "https://gitfront.io/r/user-1077305/tL8pbBHp3emF/wumpusworld/"
+        "https://gitfront.io/r/user-1077305/epuyjAbpQqjR/wumpusworld/"
       ),
       "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.",
       ["Python"]
