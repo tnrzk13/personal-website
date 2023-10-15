@@ -8316,8 +8316,8 @@ var app = (function () {
     			t = space();
     			br0 = element("br");
     			br1 = element("br");
-    			add_location(br0, file$6, 105, 8, 4586);
-    			add_location(br1, file$6, 105, 14, 4592);
+    			add_location(br0, file$6, 105, 8, 4591);
+    			add_location(br1, file$6, 105, 14, 4597);
     		},
     		m: function mount(target, anchor) {
     			mount_component(projectinstance, target, anchor);
@@ -8514,24 +8514,24 @@ var app = (function () {
     			div2 = element("div");
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9 svelte-1jaadhi");
-    			add_location(h1, file$6, 86, 2, 3758);
-    			add_location(br0, file$6, 92, 4, 4135);
-    			add_location(br1, file$6, 92, 10, 4141);
-    			add_location(br2, file$6, 95, 4, 4253);
-    			add_location(br3, file$6, 95, 10, 4259);
+    			add_location(h1, file$6, 86, 2, 3763);
+    			add_location(br0, file$6, 92, 4, 4140);
+    			add_location(br1, file$6, 92, 10, 4146);
+    			add_location(br2, file$6, 95, 4, 4258);
+    			add_location(br3, file$6, 95, 10, 4264);
     			attr_dev(div0, "class", "container-fluid description col-md-9");
-    			add_location(div0, file$6, 87, 2, 3824);
-    			add_location(br4, file$6, 99, 4, 4354);
-    			add_location(br5, file$6, 99, 10, 4360);
-    			add_location(br6, file$6, 99, 16, 4366);
-    			add_location(br7, file$6, 99, 22, 4372);
+    			add_location(div0, file$6, 87, 2, 3829);
+    			add_location(br4, file$6, 99, 4, 4359);
+    			add_location(br5, file$6, 99, 10, 4365);
+    			add_location(br6, file$6, 99, 16, 4371);
+    			add_location(br7, file$6, 99, 22, 4377);
     			attr_dev(div1, "class", "container-fluid col-md-9");
-    			add_location(div1, file$6, 97, 2, 4279);
+    			add_location(div1, file$6, 97, 2, 4284);
     			attr_dev(div2, "class", "projects container-fluid col-md-9 svelte-1jaadhi");
-    			add_location(div2, file$6, 101, 2, 4392);
+    			add_location(div2, file$6, 101, 2, 4397);
     			attr_dev(div3, "id", "projects");
     			attr_dev(div3, "class", "container-fluid col-sm-10 offset-sm-1 svelte-1jaadhi");
-    			add_location(div3, file$6, 85, 0, 3689);
+    			add_location(div3, file$6, 85, 0, 3694);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8621,7 +8621,7 @@ var app = (function () {
     		new Project("SoulDog", "images/04-project/souldog." + (isBrowserSafari() ? "png" : "avif"), new Urls("https://souldog.herokuapp.com", "https://github.com/aarshio/SoulDog-CS348"), 'Webapp linked to database designed to match abandoned dogs with new dog owners. Features include account creation, Google authentication, search, and posting. Awarded "top project of the class" in CS348: Database Systems.', ["Javascript", "React", "Node.JS", "Knex JS", "SQL"]),
     		new Project("Pneumonia Detection", "images/04-project/pneumoniaXrayIdentifier." + (isBrowserSafari() ? "png" : "avif"), new Urls("https://huggingface.co/spaces/tnrzk13/PneumoniaDetection", "https://github.com/tnrzk13/PneumoniaXrayIdentifier"), "Developed a Deep Learning model using the FastAI library that diagnoses pneumonia with a 98.5% accuracy rate from chest X-ray images.", ["Python", "Fast.ai", "Gradio"]),
     		new Project("Time Series Forecasting", "images/04-project/airpassengers." + (isBrowserSafari() ? "png" : "avif"), new Urls("", "https://github.com/tnrzk13/TimeSeriesAirPassengers"), "Forecasted the number of air passengers using time series data. Used SARIMA and Holt-Winters Exponential Smoothing models to predict the number of passengers for the next 36 months.", ["Python", "SciKit Learn", "StatsModels", "Matplotlib", "Pandas", "SciPy"]),
-    		new Project("Wumpus World", "images/04-project/wumpus." + (isBrowserSafari() ? "png" : "avif"), new Urls("", "https://gitfront.io/r/user-1077305/epuyjAbpQqjR/wumpusworld/"), "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.", ["Python"]),
+    		new Project("Wumpus World", "images/04-project/wumpusworld." + (isBrowserSafari() ? "png" : "avif"), new Urls("", "https://gitfront.io/r/user-1077305/epuyjAbpQqjR/wumpusworld/"), "Modeled rpg-like problem using reinforcement learning algorithms such as Q-Learning and SARSA. Each algorithm was paired with one strategy (e.g. greedy, softmax, etc...) to find the best combination for the problem.", ["Python"]),
     		new Project("Chess", "images/04-project/chess." + (isBrowserSafari() ? "png" : "avif"), new Urls("", "https://gitfront.io/r/user-1077305/ELvfgXx6E716/chess/"), "Comprehensive implementation of Chess, featuring a self-designed user interface supporting both human-to-human and human-to-CPU gameplay across four different difficulty levels, with one against the chess engine itself - stockfish. Used design patterns like Observer and Factory Method.", ["C++", "Makefile"])
     	];
 

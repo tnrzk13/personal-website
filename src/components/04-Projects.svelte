@@ -65,7 +65,7 @@
     ),
     new Project(
       "Wumpus World",
-      "images/04-project/wumpus." + (isBrowserSafari() ? "png" : "avif"),
+      "images/04-project/wumpusworld." + (isBrowserSafari() ? "png" : "avif"),
       new Urls(
         "",
         "https://gitfront.io/r/user-1077305/epuyjAbpQqjR/wumpusworld/"
