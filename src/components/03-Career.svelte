@@ -2,7 +2,6 @@
   import Card from "./Cards/CardCareer.svelte";
   import { SimpleGrid } from "@svelteuidev/core";
   import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
-  import GradientButton from "./Button/GradientButton.svelte";
 
   export let mdScreenSize = 992;
 
@@ -19,41 +18,6 @@
     }
   }
   let cardList = [
-    // new CardClass(
-    //   "images/03-career/myriade." + (isBrowserSafari() ? "png" : "avif"),
-    //   "Full Stack Developer",
-    //   "Myriade",
-    //   ["PostgreSQL", "Node.JS", "Express.JS", "Docker"],
-    //   [
-    //     [
-    //       {
-    //         style: "bold",
-    //         text: "Optimized the platform's performance by 30% ",
-    //       },
-    //       {
-    //         style: "none",
-    //         text: "through non-blocking I/O model and middleware functions using Node.js and Express.js, reducing response time and increasing efficiency.",
-    //       },
-    //     ],
-    //     [
-    //       {
-    //         style: "none",
-    //         text: "Implemented a PostgreSQL database, ",
-    //       },
-    //       {
-    //         style: "bold",
-    //         text: "decreasing downtime by 40% and data retrieval speed by 50%",
-    //       },
-    //       {
-    //         style: "none",
-    //         text: "leading to improved application performance.",
-    //       },
-    //     ],
-    //   ],
-    //   getComputedStyle(document.querySelector(":root")).getPropertyValue(
-    //     "--gradient-flare"
-    //   )
-    // ),
     new CardClass(
       "images/03-career/360insights." + (isBrowserSafari() ? "png" : "avif"),
       "Full Stack Developer",
@@ -233,7 +197,6 @@
     border: 1px solid transparent;
   }
   .container-fluid {
-    // border: 5px solid white;
     border: none;
     height: auto;
 
@@ -244,19 +207,6 @@
 
     #card-list-container {
       padding: 0;
-    }
-
-    #resume-container {
-      text-align: center;
-
-      .gradient-button-container {
-        display: flex;
-        justify-content: center;
-      }
-
-      a {
-        text-decoration: none;
-      }
     }
   }
 </style>

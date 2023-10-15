@@ -98,9 +98,6 @@
         <Projects />
         <ContactWrapper {contactInfo} />
       </div>
-      <!-- <div id="contact">
-        <ContactWrapper {contactInfo} />
-      </div> -->
     </div>
   </div>
   <Navbar {boolMobileView} />
@@ -159,11 +156,6 @@
       .content-mobile {
         background-color: var(--darkblue);
       }
-    }
-
-    #contact {
-      width: 100%;
-      height: 100vh;
     }
   }
 </style>
