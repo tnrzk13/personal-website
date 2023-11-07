@@ -19,6 +19,56 @@
   }
   let cardList = [
     new CardClass(
+      "images/03-career/jpmorgan." + (isBrowserSafari() ? "png" : "avif"),
+      "Software Engineering Virtual Experience Program",
+      "J.P. Morgan",
+      ["React"],
+      [
+        [
+          {
+            style: "none",
+            text: "Improved data visualization by implementing RESTful APIs to display historical stock prices and comparative ratio analysis to ",
+          },
+          {
+            style: "bold",
+            text: "save traders >100 hours",
+          },
+          {
+            style: "none",
+            text: ".",
+          },
+        ],
+      ],
+      getComputedStyle(document.querySelector(":root")).getPropertyValue(
+        "--gradient-very-blue"
+      )
+    ),
+    new CardClass(
+      "images/03-career/goldman." + (isBrowserSafari() ? "png" : "avif"),
+      "Software Engineering Virtual Experience Program",
+      "Goldman Sachs",
+      ["Hashcat"],
+      [
+        [
+          {
+            style: "none",
+            text: "Leveraged Hashcat to identify vulnerabilities inherent in the outdated hashing algorithm, and proposed measures to ",
+          },
+          {
+            style: "bold",
+            text: "bolster password security by 10,000x",
+          },
+          {
+            style: "none",
+            text: ".",
+          },
+        ],
+      ],
+      getComputedStyle(document.querySelector(":root")).getPropertyValue(
+        "--gradient-skyline"
+      )
+    ),
+    new CardClass(
       "images/03-career/360insights." + (isBrowserSafari() ? "png" : "avif"),
       "Full Stack Developer",
       "360insights",
@@ -31,7 +81,7 @@
           },
           {
             style: "bold",
-            text: "saving developer time on debugging and reducing potential service downtime",
+            text: "saving $1500 annually per team",
           },
           {
             style: "none",
@@ -52,6 +102,20 @@
             text: ".",
           },
         ],
+        [
+          {
+            style: "none",
+            text: "Enhanced the codebase by resolving 10 critical bugs, implemented comprehensive test suites using Jest, and contributed to the CI/CD pipeline, accelerating deployment processes and ",
+          },
+          {
+            style: "bold",
+            text: "boosting overall application performance by 10%",
+          },
+          {
+            style: "none",
+            text: ".",
+          },
+        ],
       ],
       getComputedStyle(document.querySelector(":root")).getPropertyValue(
         "--gradient-telegram"
@@ -66,6 +130,20 @@
         [
           {
             style: "none",
+            text: "Automated data reporting and created a unified reporting system through SQL and Power Apps to ",
+          },
+          {
+            style: "bold",
+            text: "reduce cost by >$1M",
+          },
+          {
+            style: "none",
+            text: ".",
+          },
+        ],
+        [
+          {
+            style: "none",
             text: "Introduced a database schema that resolved and prevented data conflicts, ",
           },
           {
@@ -74,21 +152,7 @@
           },
           {
             style: "none",
-            text: " and reducing time spent on bug fixing.",
-          },
-        ],
-        [
-          {
-            style: "none",
-            text: "Automated data reporting through Power BI and Power Automate, completely ",
-          },
-          {
-            style: "bold",
-            text: "eliminating manual reporting time and ensuring up-to-date insights",
-          },
-          {
-            style: "none",
-            text: ".",
+            text: "by reducing time spent on bug fixing and minimizing joins.",
           },
         ],
         [
@@ -119,19 +183,11 @@
         [
           {
             style: "none",
-            text: "Developed a data collection, cleaning, and preprocessing script with Pandas and MySQL, ",
+            text: "Developed a data collection, cleaning, and preprocessing script with Pandas and MySQL, which lead to a model accuracy of >85%, contributing to a",
           },
           {
             style: "bold",
-            text: "improving the accuracy of NBA game prediction models by 50%",
-          },
-          {
-            style: "none",
-            text: " and contributing to a ",
-          },
-          {
-            style: "bold",
-            text: "successful MVP launch",
+            text: "successful MVP launch and $160k funding for pre-seed",
           },
           {
             style: "none",
@@ -158,15 +214,15 @@
         [
           {
             style: "none",
-            text: "Designed and developed a data reporting app using SQL, VBA, and MS Access, automating the reporting process, ",
+            text: "Designed and developed a data reporting app using SQL, VBA, and MS Access, ",
           },
           {
             style: "bold",
-            text: "saving 300 hours of work annually",
+            text: "saving $10,000 annually ",
           },
           {
             style: "none",
-            text: ", and facilitating the work turnover process.",
+            text: "through reducing data reporting time by 300 hours",
           },
         ],
       ],
