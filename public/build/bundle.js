@@ -1,5 +1,5 @@
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35733/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 var app = (function () {
     'use strict';
 
@@ -9941,13 +9941,13 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "content-desktop svelte-1m6pum2");
     			add_render_callback(() => /*div0_elementresize_handler_1*/ ctx[13].call(div0));
-    			add_location(div0, file, 106, 12, 3509);
+    			add_location(div0, file, 106, 12, 3418);
     			attr_dev(div1, "id", "content-container");
     			set_style(div1, "top", /*titleHeight*/ ctx[0] + "px");
     			attr_dev(div1, "class", "svelte-1m6pum2");
-    			add_location(div1, file, 105, 8, 3437);
+    			add_location(div1, file, 105, 8, 3346);
     			attr_dev(div2, "class", "container-fluid svelte-1m6pum2");
-    			add_location(div2, file, 96, 4, 3184);
+    			add_location(div2, file, 96, 4, 3093);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10093,12 +10093,12 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "content-mobile svelte-1m6pum2");
     			add_render_callback(() => /*div0_elementresize_handler*/ ctx[12].call(div0));
-    			add_location(div0, file, 82, 12, 2811);
+    			add_location(div0, file, 82, 12, 2720);
     			attr_dev(div1, "id", "content-container");
     			attr_dev(div1, "class", "svelte-1m6pum2");
-    			add_location(div1, file, 81, 8, 2769);
+    			add_location(div1, file, 81, 8, 2678);
     			attr_dev(div2, "class", "container-fluid svelte-1m6pum2");
-    			add_location(div2, file, 79, 4, 2675);
+    			add_location(div2, file, 79, 4, 2584);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10344,7 +10344,7 @@ var app = (function () {
     		title: "Tony Kwok.",
     		subtitle: "I build things with ",
     		texts: ["data.", "style.", "code."],
-    		description: "I'm a software engineer who crafts efficient software solutions to solve complex challenges. I'm ready to contribute to a forward-thinking company, create value, and grow with my team."
+    		description: "I'm looking to crush it as a software engineer and put my team in a better place. Let's talk."
     	};
 
     	let contactInfo = {

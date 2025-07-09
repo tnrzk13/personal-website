@@ -69,7 +69,7 @@
         subtitle: "I build things with ",
         texts: ["data.", "style.", "code."],
         description:
-            "I'm a software engineer who crafts efficient software solutions to solve complex challenges. I'm ready to contribute to a forward-thinking company, create value, and grow with my team.",
+            "I'm looking to crush it as a software engineer and put my team in a better place. Let's talk.",
     };
     let contactInfo = {
         preamble: "Interested?",
