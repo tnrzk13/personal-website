@@ -19,6 +19,104 @@
   }
   let cardList = [
     new CardClass(
+      "images/03-career/alethea." + (isBrowserSafari() ? "png" : "avif"),
+      "Software Engineer",
+      "Alethea",
+      ["React", "Typescript", "Firebase", "Vite", "Typesense"],
+      [
+        [
+          {
+            style: "none",
+            text: "Contributed to a 7% month-over-month revenue growth and a 10% increase in monthly users by delivering key features that met the evolving needs of the user base.",
+          },
+        ],
+        [
+          {
+            style: "none",
+            text: "Increased billing revenue by ",
+          },
+          {
+            style: "bold",
+            text: "$10k month-over-month",
+          },
+          {
+            style: "none",
+            text: " by developing eConsult filters for specialist physicians on the platform.",
+          },
+        ],
+        [
+          {
+            style: "none",
+            text: "Increased product efficiency by ",
+          },
+          {
+            style: "bold",
+            text: "20%",
+          },
+          {
+            style: "none",
+            text: " by creating an internal testing architecture, and refactoring the codebase to updated packages.",
+          },
+        ],
+      ],
+      getComputedStyle(document.querySelector(":root")).getPropertyValue(
+        "--gradient-terminal"
+      )
+    ),
+    new CardClass(
+      "images/03-career/myriade." + (isBrowserSafari() ? "png" : "avif"),
+      "Software Developer",
+      "Myriade",
+      ["Node.js", "Express.js", "PostgreSQL"],
+      [
+        [
+          {
+            style: "none",
+            text: "Optimized the platform's performance by ",
+          },
+          {
+            style: "bold",
+            text: "30%",
+          },
+          {
+            style: "none",
+            text: " through non-blocking I/O model and middleware functions using Node.js and Express.js, reducing response time and increasing efficiency.",
+          },
+        ],
+        [
+          {
+            style: "none",
+            text: "Implemented a PostgreSQL database, decreasing downtime by ",
+          },
+          {
+            style: "bold",
+            text: "40%",
+          },
+          {
+            style: "none",
+            text: " and data retrieval speed by 50%, leading to improved application performance.",
+          },
+        ],
+        [
+          {
+            style: "none",
+            text: "Streamlined development and production environments using Docker-Compose, boosting deployment efficiency by ",
+          },
+          {
+            style: "bold",
+            text: "40%",
+          },
+          {
+            style: "none",
+            text: ".",
+          },
+        ],
+      ],
+      getComputedStyle(document.querySelector(":root")).getPropertyValue(
+        "--gradient-sweet-morning"
+      )
+    ),
+        new CardClass(
       "images/03-career/jpmorgan." + (isBrowserSafari() ? "png" : "avif"),
       "Software Engineering Virtual Experience Program",
       "J.P. Morgan",
