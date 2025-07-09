@@ -69,7 +69,7 @@
         subtitle: "I build things with ",
         texts: ["data.", "style.", "code."],
         description:
-            "I'm looking to crush it as a software engineer and put my team in a better place. Let's talk.",
+            "Ready to crush it, deliver, and put my team in a better place. Let's talk.",
     };
     let contactInfo = {
         preamble: "Interested?",
@@ -77,7 +77,7 @@
         subtitle: "",
         texts: ["Get in Touch!"],
         description:
-            "I'm currently looking for my next adventure. Contact me if you have any questions, or if you just want to say hello! My inbox is always open for you.",
+            "Looking for my next adventure. Let's do it together!",
         subject: "Getting in touch from your website",
     };
 </script>
