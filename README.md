@@ -51,18 +51,44 @@ If you want to use `baseUrl` or `path` aliases within your `tsconfig`, you need 
 
 ### With [Vercel](https://vercel.com)
 
-Install `vercel` if you haven't already:
+1. **Install the Vercel CLI** if you haven't already:
 
 ```bash
 npm install -g vercel
 ```
 
-Then, from within your project folder:
+2. **Login to Vercel**:
 
 ```bash
-cd public
-vercel deploy --name my-project
+vercel login
 ```
+
+3. **Deploy your site**:
+   - For a preview deployment (development):
+   ```bash
+   # From the root project folder
+   vercel
+   ```
+   
+   - For a production deployment:
+   ```bash
+   # From the root project folder
+   vercel --prod
+   ```
+
+4. **Configure Custom Domain**:
+   - Add your domain to Vercel:
+   ```bash
+   vercel domains add your-domain.com
+   ```
+   
+   - Update your DNS settings with your domain provider:
+     - Add an A record with:
+       - Host: www (or @)
+       - Value: 76.76.21.21
+     - Alternatively, set up a CNAME record pointing to cname.vercel-dns.com
+
+Vercel will automatically deploy your site from the root directory (no need to `cd` into the public folder). The `vercel.json` configuration file handles the build settings.
 
 ### With [surge](https://surge.sh/)
 
