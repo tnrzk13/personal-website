@@ -3122,38 +3122,38 @@ var app = (function () {
     			a = element("a");
     			img = element("img");
     			attr_dev(div0, "class", "empty row svelte-1q6l4r7");
-    			add_location(div0, file$c, 8, 2, 293);
+    			add_location(div0, file$c, 8, 2, 305);
     			attr_dev(h1, "class", "title col-md-9 svelte-1q6l4r7");
-    			add_location(h1, file$c, 9, 2, 322);
-    			add_location(br0, file$c, 16, 8, 703);
-    			add_location(br1, file$c, 16, 14, 709);
-    			add_location(br2, file$c, 20, 8, 964);
-    			add_location(br3, file$c, 20, 15, 971);
-    			add_location(br4, file$c, 22, 8, 1048);
-    			add_location(br5, file$c, 22, 14, 1054);
+    			add_location(h1, file$c, 9, 2, 334);
+    			add_location(br0, file$c, 16, 8, 715);
+    			add_location(br1, file$c, 16, 14, 721);
+    			add_location(br2, file$c, 20, 8, 976);
+    			add_location(br3, file$c, 20, 15, 983);
+    			add_location(br4, file$c, 22, 8, 1060);
+    			add_location(br5, file$c, 22, 14, 1066);
     			attr_dev(div1, "class", "description svelte-1q6l4r7");
-    			add_location(div1, file$c, 12, 6, 442);
+    			add_location(div1, file$c, 12, 6, 454);
     			attr_dev(div2, "class", "row svelte-1q6l4r7");
-    			add_location(div2, file$c, 25, 8, 1127);
+    			add_location(div2, file$c, 25, 8, 1139);
     			attr_dev(div3, "class", "row techlist1 m-0 p-0 svelte-1q6l4r7");
-    			add_location(div3, file$c, 24, 6, 1082);
+    			add_location(div3, file$c, 24, 6, 1094);
     			attr_dev(div4, "class", "text col-md-7 svelte-1q6l4r7");
-    			add_location(div4, file$c, 11, 4, 407);
+    			add_location(div4, file$c, 11, 4, 419);
     			attr_dev(img, "class", "aboutmeimg svelte-1q6l4r7");
     			if (!src_url_equal(img.src, img_src_value = "images/02-aboutme/self." + (isBrowserSafari() ? 'png' : 'avif'))) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "tony kwok");
-    			add_location(img, file$c, 33, 10, 1373);
+    			add_location(img, file$c, 33, 10, 1385);
     			attr_dev(a, "href", "https://www.linkedin.com/in/tony-k-kwok/");
-    			add_location(a, file$c, 32, 8, 1310);
+    			add_location(a, file$c, 32, 8, 1322);
     			attr_dev(div5, "class", "aboutmeimg-container svelte-1q6l4r7");
-    			add_location(div5, file$c, 31, 6, 1266);
+    			add_location(div5, file$c, 31, 6, 1278);
     			attr_dev(div6, "class", "imgdiv col-md-5 svelte-1q6l4r7");
-    			add_location(div6, file$c, 30, 4, 1229);
+    			add_location(div6, file$c, 30, 4, 1241);
     			attr_dev(div7, "class", "row col-md-9 svelte-1q6l4r7");
-    			add_location(div7, file$c, 10, 2, 375);
+    			add_location(div7, file$c, 10, 2, 387);
     			attr_dev(div8, "id", "aboutme");
     			attr_dev(div8, "class", "aboutMe container-fluid col-sm-10 offset-sm-1 svelte-1q6l4r7");
-    			add_location(div8, file$c, 7, 0, 217);
+    			add_location(div8, file$c, 7, 0, 229);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3218,7 +3218,7 @@ var app = (function () {
     function instance$d($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('_02_AboutMe', slots, []);
-    	let techstack = ["Python", "Javascript", "React", "SQL", "Node.JS"];
+    	let techstack = ["Typescript", "React", "Python", "SQL", "Node.JS", "Firebase"];
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {

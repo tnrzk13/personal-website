@@ -2,7 +2,7 @@
   import Techstack from "./Misc/Techstack.svelte";
   import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
 
-  let techstack = ["Python", "Javascript", "React", "SQL", "Node.JS"];
+  let techstack = ["Typescript", "React", "Python", "SQL", "Node.JS", "Firebase"];
 </script>
 
 <div id="aboutme" class="aboutMe container-fluid col-sm-10 offset-sm-1">
