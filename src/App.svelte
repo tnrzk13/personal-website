@@ -69,7 +69,7 @@
         subtitle: "I build things with ",
         texts: ["data.", "style.", "code."],
         description:
-            "Ready to crush it, deliver, and put my team in a better place. Let's talk.",
+            "I scale SaaS from scrappy to profitable. Full-stack with a bias for measurable impact, getting things done, and owning problems end-to-end.",
     };
     let contactInfo = {
         preamble: "Interested?",

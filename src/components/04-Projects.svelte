@@ -86,13 +86,7 @@
 <div id="projects" class="container-fluid col-sm-10 offset-sm-1">
   <h1 class="title col-md-9">Leveling up with side projects</h1>
   <div class="container-fluid description col-md-9">
-    My side projects reflect my dedication to innovation and problem-solving.
-    From building interactive web experiences with cutting-edge technologies to
-    developing AI-powered solutions, I thrive on turning ideas into impactful
-    realities.
-    <br /><br />
-    I can learn any technology, just as I have learned the following creating these
-    projects:
+    I can learn any technology, and I thrive on turning ideas into impactful realities. Here's some of the tech I've picked up on my own:
     <br /><br />
   </div>
   <div class="container-fluid col-md-9">

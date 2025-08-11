@@ -11,13 +11,11 @@
   <div class="row col-md-9">
     <div class="text col-md-7">
       <div class="description">
-        My interest began during my first co-op term as an accountant, when I
-        needed to manipulate data in Excel. It went from keyboard shortcuts to
-        VBA to quickly transferring out of my accounting program!
+        I'm a full-stack engineer (TS/React/GCP) who turns tech debt into growth - I've tripled revenue, 10x'd throughput, and turned companies profitable. Looking for a role where shipping, reliability, and revenue are on the scorecard - and I'm accountable for all three. 
         <br /><br />
-        Since then, I've worked as a Full Stack Developer, a Data Specialist, and
-        even an Innovation Catalyst! I recently enjoyed my post-graduation break
-        and now I’m looking for a company to join for my next adventure.
+        My interest in tech began during my first co-op term as an accountant, when I
+        needed to manipulate data in Excel. I went from keyboard shortcuts to
+        VBA to SQL to transferring out of my accounting program and into engineering roles. Read more about my story in the next section.
         <br /> <br />
         Here are a few technologies I’ve been working with:
         <br /><br />

@@ -27,35 +27,73 @@
         [
           {
             style: "none",
-            text: "Contributed to a 7% month-over-month revenue growth and a 10% increase in monthly users by delivering key features that met the evolving needs of the user base.",
+            text: "Grew monthly revenue ",
+          },
+          {
+            style: "bold",
+            text: "$50k -> $125k",
+          },
+          {
+            style: "none",
+            text: ", users ",
+          },
+          {
+            style: "bold",
+            text: "700 -> 2k",
+          },
+          {
+            style: "none",
+            text: ", and eConsults ",
+          },
+          {
+            style: "bold",
+            text: "1.3k -> 3.3k",
+          },
+          {
+            style: "none",
+            text: " in 12 months.",
+          },
+        ],
+        [
+          {
+            style: "bold",
+            text: "Restored deployments and slashed build times 3x",
+          },
+          {
+            style: "none",
+            text: " by eradicating two years of tech debt; re-architecting the Typescript, React, and Firebase codebase; and migrating to Vite.",
+          },
+        ],
+        [
+          {
+            style: "bold",
+            text: "Hit profitability",
+          },
+          {
+            style: "none",
+            text: " by launching premium subscriptions and batched fax alerts, sustaining ",
+          },
+          {
+            style: "bold",
+            text: "7% MoM revenue, 10% user growth",
+          },
+          {
+            style: "none",
+            text: ".",
           },
         ],
         [
           {
             style: "none",
-            text: "Increased billing revenue by ",
+            text: "Cut client onboarding from ",
           },
           {
             style: "bold",
-            text: "$10k month-over-month",
+            text: "days to minutes",
           },
           {
             style: "none",
-            text: " by developing eConsult filters for specialist physicians on the platform.",
-          },
-        ],
-        [
-          {
-            style: "none",
-            text: "Increased product efficiency by ",
-          },
-          {
-            style: "bold",
-            text: "20%",
-          },
-          {
-            style: "none",
-            text: " by creating an internal testing architecture, and refactoring the codebase to updated packages.",
+            text: " by automating the workflow with GCP Cloud Functions, eliminating manual errors.",
           },
         ],
       ],
@@ -72,7 +110,47 @@
         [
           {
             style: "none",
-            text: "Optimized the platform's performance by ",
+            text: "Turbocharged Monero payout API by converting to non‑blocking Node.js; ",
+          },
+          {
+            style: "bold",
+            text: "throughput jumped 10x (30 -> 300 req/s)",
+          },
+        ],
+        [
+          {
+            style: "none",
+            text: "Fortified finance endpoints with auth and balance‑validation middleware, ",
+          },
+          {
+            style: "bold",
+            text: "eradicating overdrafts and fraud",
+          },
+          {
+            style: "none",
+            text: " across ",
+          },
+          {
+            style: "bold",
+            text: "1k+",
+          },
+          {
+            style: "none",
+            text: " monthly transactions.",
+          },
+        ],
+        [
+          {
+            style: "none",
+            text: "Re‑indexed PostgreSQL ledgers, slicing mining‑history queries ",
+          },
+          {
+            style: "bold",
+            text: "5s -> 400ms",
+          },
+          {
+            style: "none",
+            text: " and shaving ",
           },
           {
             style: "bold",
@@ -80,31 +158,56 @@
           },
           {
             style: "none",
-            text: " through non-blocking I/O model and middleware functions using Node.js and Express.js, reducing response time and increasing efficiency.",
+            text: " off DB CPU.",
+          },
+        ],
+      ],
+      getComputedStyle(document.querySelector(":root")).getPropertyValue(
+        "--gradient-sweet-morning"
+      )
+    ),
+    new CardClass(
+      "images/03-career/npx." + (isBrowserSafari() ? "png" : "avif"),
+      "Innovation Catalyst Intern",
+      "Nuclear Promise X",
+      ["MSPowerApps", "PowerBI", "SQL", "Python"],
+      [
+        [
+          {
+            style: "none",
+            text: "Slashed report generation ",
+          },
+          {
+            style: "bold",
+            text: "2 days -> 5 min",
+          },
+          {
+            style: "none",
+            text: " by automating SQL and Power Apps pipeline - freed hundreds of engineer hours and secured $1M contract.",
           },
         ],
         [
           {
             style: "none",
-            text: "Implemented a PostgreSQL database, decreasing downtime by ",
+            text: "Architected reusable Power Apps component library adopted by six developers, saving ",
           },
           {
             style: "bold",
-            text: "40%",
+            text: "30 min per page",
           },
           {
             style: "none",
-            text: " and data retrieval speed by 50%, leading to improved application performance.",
+            text: " across 20‑page apps and standardizing UI.",
           },
         ],
         [
           {
             style: "none",
-            text: "Streamlined development and production environments using Docker-Compose, boosting deployment efficiency by ",
+            text: "Re‑engineered database schema and views, halving bug‑fix cycles and shrinking query latency ",
           },
           {
             style: "bold",
-            text: "40%",
+            text: "30s -> 1s",
           },
           {
             style: "none",
@@ -113,7 +216,159 @@
         ],
       ],
       getComputedStyle(document.querySelector(":root")).getPropertyValue(
-        "--gradient-sweet-morning"
+        "--gradient-lunada"
+      )
+    ),
+    new CardClass(
+      "images/03-career/360insights." + (isBrowserSafari() ? "png" : "avif"),
+      "Full Stack Developer",
+      "360insights",
+      ["Javascript", "Node.JS", "React"],
+      [
+        [
+          {
+            style: "none",
+            text: "Deployed Node.js health‑check API for 10+ microservices to GCP, cutting mean‑time‑to‑diagnose ",
+          },
+          {
+            style: "bold",
+            text: "30 min/incident",
+          },
+          {
+            style: "none",
+            text: " and reclaiming ",
+          },
+          {
+            style: "bold",
+            text: "$15k/yr",
+          },
+          {
+            style: "none",
+            text: " for 100‑engineer org.",
+          },
+        ],
+        [
+          {
+            style: "none",
+            text: "Authored reusable React component kit, cutting new‑page development effort ",
+          },
+          {
+            style: "bold",
+            text: "25% (~1 h)",
+          },
+          {
+            style: "none",
+            text: ", stamping out recurring UI bugs, and unifying UX across four projects.",
+          },
+        ],
+        [
+          {
+            style: "bold",
+            text: "Purged legacy defects",
+          },
+          {
+            style: "none",
+            text: " and wrote exhaustive Jest suites, lifting critical‑path coverage near ",
+          },
+          {
+            style: "bold",
+            text: "100%",
+          },
+          {
+            style: "none",
+            text: " and enforcing quality gates in Jenkins CI.",
+          },
+        ],
+      ],
+      getComputedStyle(document.querySelector(":root")).getPropertyValue(
+        "--gradient-telegram"
+      )
+    ),
+    new CardClass(
+      "images/03-career/quarter4." + (isBrowserSafari() ? "png" : "avif"),
+      "Database Specialist",
+      "Quarter4",
+      ["Python", "SQL"],
+      [
+        [
+          {
+            style: "bold",
+            text: "Secured $150k pre‑seed funding",
+          },
+          {
+            style: "none",
+            text: " by supercharging model accuracy ",
+          },
+          {
+            style: "bold",
+            text: "50% -> 85%",
+          },
+          {
+            style: "none",
+            text: " via Pandas and MySQL ETL across 40k rows.",
+          },
+        ],
+        [
+          {
+            style: "none",
+            text: "Engineered Markov‑chain text engine for sports stats, a key feature driving pre-seed funding.",
+          },
+        ],
+      ],
+      getComputedStyle(document.querySelector(":root")).getPropertyValue(
+        "--gradient-cosmic-fusion"
+      )
+    ),
+    new CardClass(
+      "images/03-career/marsh." + (isBrowserSafari() ? "png" : "avif"),
+      "Business Application Developer",
+      "Marsh",
+      ["VBA"],
+      [
+        [
+          {
+            style: "bold",
+            text: "Eliminated manual reporting in month #1",
+          },
+          {
+            style: "none",
+            text: " by deploying SQL and VBA Access app, slashing ",
+          },
+          {
+            style: "bold",
+            text: "300 hrs/yr",
+          },
+          {
+            style: "none",
+            text: " and saving ",
+          },
+          {
+            style: "bold",
+            text: "$10k",
+          },
+          {
+            style: "none",
+            text: ".",
+          },
+        ],
+        [
+          {
+            style: "none",
+            text: "Accelerated insight delivery and sliced data‑entry errors ",
+          },
+          {
+            style: "bold",
+            text: "40%",
+          },
+          {
+            style: "none",
+            text: " by revamping client dashboards.",
+          },
+        ],
+      ],
+
+      getComputedStyle(document.querySelector(":root")).getPropertyValue(
+        "--gradient-amin"
       )
     ),
         new CardClass(
@@ -125,11 +380,11 @@
         [
           {
             style: "none",
-            text: "Improved data visualization by implementing RESTful APIs to display historical stock prices and comparative ratio analysis to ",
+            text: "Productized historical-price + ratio-analysis endpoints behind the trading UI, turning multi-step Excel workflows into 1-click charts and ",
           },
           {
             style: "bold",
-            text: "save traders >100 hours",
+            text: "saving traders 100+ hours",
           },
           {
             style: "none",
@@ -164,169 +419,6 @@
       ],
       getComputedStyle(document.querySelector(":root")).getPropertyValue(
         "--gradient-skyline"
-      )
-    ),
-    new CardClass(
-      "images/03-career/360insights." + (isBrowserSafari() ? "png" : "avif"),
-      "Full Stack Developer",
-      "360insights",
-      ["Javascript", "Node.JS", "React"],
-      [
-        [
-          {
-            style: "none",
-            text: "Developed a health-check API for testing and displaying the availability of 10+ internal services using Node.js, ",
-          },
-          {
-            style: "bold",
-            text: "saving $1500 annually per team",
-          },
-          {
-            style: "none",
-            text: ".",
-          },
-        ],
-        [
-          {
-            style: "none",
-            text: "Built reusable UI components using React.js for client sales portals, ",
-          },
-          {
-            style: "bold",
-            text: "decreasing project maintenance by 20%",
-          },
-          {
-            style: "none",
-            text: ".",
-          },
-        ],
-        [
-          {
-            style: "none",
-            text: "Enhanced the codebase by resolving 10 critical bugs, implemented comprehensive test suites using Jest, and contributed to the CI/CD pipeline, accelerating deployment processes and ",
-          },
-          {
-            style: "bold",
-            text: "boosting overall application performance by 10%",
-          },
-          {
-            style: "none",
-            text: ".",
-          },
-        ],
-      ],
-      getComputedStyle(document.querySelector(":root")).getPropertyValue(
-        "--gradient-telegram"
-      )
-    ),
-    new CardClass(
-      "images/03-career/npx." + (isBrowserSafari() ? "png" : "avif"),
-      "Innovation Catalyst Intern",
-      "Nuclear Promise X",
-      ["MSPowerApps", "PowerBI", "SQL", "Python"],
-      [
-        [
-          {
-            style: "none",
-            text: "Automated data reporting and created a unified reporting system through SQL and Power Apps to ",
-          },
-          {
-            style: "bold",
-            text: "reduce cost by >$1M",
-          },
-          {
-            style: "none",
-            text: ".",
-          },
-        ],
-        [
-          {
-            style: "none",
-            text: "Introduced a database schema that resolved and prevented data conflicts, ",
-          },
-          {
-            style: "bold",
-            text: "improving development efficiency by 25%",
-          },
-          {
-            style: "none",
-            text: "by reducing time spent on bug fixing and minimizing joins.",
-          },
-        ],
-        [
-          {
-            style: "none",
-            text: "Developed UI standards and a component library in Power Apps, ",
-          },
-          {
-            style: "bold",
-            text: "enhancing app development efficiency by 20%",
-          },
-          {
-            style: "none",
-            text: ".",
-          },
-        ],
-      ],
-      getComputedStyle(document.querySelector(":root")).getPropertyValue(
-        "--gradient-lunada"
-      )
-    ),
-    new CardClass(
-      "images/03-career/quarter4." + (isBrowserSafari() ? "png" : "avif"),
-      "Database Specialist",
-      "Quarter4",
-      ["Python", "SQL"],
-      [
-        [
-          {
-            style: "none",
-            text: "Developed a data collection, cleaning, and preprocessing script with Pandas and MySQL, which lead to a model accuracy of >85%, contributing to a",
-          },
-          {
-            style: "bold",
-            text: "successful MVP launch and $160k funding for pre-seed",
-          },
-          {
-            style: "none",
-            text: ".",
-          },
-        ],
-        [
-          {
-            style: "none",
-            text: "Created a Markov chain to translate raw data into descriptive text, enhancing user understanding of NBA metrics .",
-          },
-        ],
-      ],
-      getComputedStyle(document.querySelector(":root")).getPropertyValue(
-        "--gradient-cosmic-fusion"
-      )
-    ),
-    new CardClass(
-      "images/03-career/marsh." + (isBrowserSafari() ? "png" : "avif"),
-      "Business Application Developer",
-      "Marsh",
-      ["VBA"],
-      [
-        [
-          {
-            style: "none",
-            text: "Designed and developed a data reporting app using SQL, VBA, and MS Access, ",
-          },
-          {
-            style: "bold",
-            text: "saving $10,000 annually ",
-          },
-          {
-            style: "none",
-            text: "through reducing data reporting time by 300 hours",
-          },
-        ],
-      ],
-
-      getComputedStyle(document.querySelector(":root")).getPropertyValue(
-        "--gradient-amin"
       )
     ),
   ];

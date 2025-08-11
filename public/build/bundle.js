@@ -3102,10 +3102,10 @@ var app = (function () {
     			div7 = element("div");
     			div4 = element("div");
     			div1 = element("div");
-    			t3 = text("My interest began during my first co-op term as an accountant, when I\r\n        needed to manipulate data in Excel. It went from keyboard shortcuts to\r\n        VBA to quickly transferring out of my accounting program!\r\n        ");
+    			t3 = text("I'm a full-stack engineer (TS/React/GCP) who turns tech debt into growth - I've tripled revenue, 10x'd throughput, and turned companies profitable. Looking for a role where shipping, reliability, and revenue are on the scorecard - and I'm accountable for all three. \r\n        ");
     			br0 = element("br");
     			br1 = element("br");
-    			t4 = text("\r\n        Since then, I've worked as a Full Stack Developer, a Data Specialist, and\r\n        even an Innovation Catalyst! I recently enjoyed my post-graduation break\r\n        and now I’m looking for a company to join for my next adventure.\r\n        ");
+    			t4 = text("\r\n        My interest in tech began during my first co-op term as an accountant, when I\r\n        needed to manipulate data in Excel. I went from keyboard shortcuts to\r\n        VBA to SQL to transferring out of my accounting program and into engineering roles. Read more about my story in the next section.\r\n        ");
     			br2 = element("br");
     			t5 = space();
     			br3 = element("br");
@@ -3125,30 +3125,30 @@ var app = (function () {
     			add_location(div0, file$c, 8, 2, 305);
     			attr_dev(h1, "class", "title col-md-9 svelte-1q6l4r7");
     			add_location(h1, file$c, 9, 2, 334);
-    			add_location(br0, file$c, 16, 8, 715);
-    			add_location(br1, file$c, 16, 14, 721);
-    			add_location(br2, file$c, 20, 8, 976);
-    			add_location(br3, file$c, 20, 15, 983);
-    			add_location(br4, file$c, 22, 8, 1060);
-    			add_location(br5, file$c, 22, 14, 1066);
+    			add_location(br0, file$c, 14, 8, 765);
+    			add_location(br1, file$c, 14, 14, 771);
+    			add_location(br2, file$c, 18, 8, 1092);
+    			add_location(br3, file$c, 18, 15, 1099);
+    			add_location(br4, file$c, 20, 8, 1176);
+    			add_location(br5, file$c, 20, 14, 1182);
     			attr_dev(div1, "class", "description svelte-1q6l4r7");
     			add_location(div1, file$c, 12, 6, 454);
     			attr_dev(div2, "class", "row svelte-1q6l4r7");
-    			add_location(div2, file$c, 25, 8, 1139);
+    			add_location(div2, file$c, 23, 8, 1255);
     			attr_dev(div3, "class", "row techlist1 m-0 p-0 svelte-1q6l4r7");
-    			add_location(div3, file$c, 24, 6, 1094);
+    			add_location(div3, file$c, 22, 6, 1210);
     			attr_dev(div4, "class", "text col-md-7 svelte-1q6l4r7");
     			add_location(div4, file$c, 11, 4, 419);
     			attr_dev(img, "class", "aboutmeimg svelte-1q6l4r7");
     			if (!src_url_equal(img.src, img_src_value = "images/02-aboutme/self." + (isBrowserSafari() ? 'png' : 'avif'))) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "tony kwok");
-    			add_location(img, file$c, 33, 10, 1385);
+    			add_location(img, file$c, 31, 10, 1501);
     			attr_dev(a, "href", "https://www.linkedin.com/in/tony-k-kwok/");
-    			add_location(a, file$c, 32, 8, 1322);
+    			add_location(a, file$c, 30, 8, 1438);
     			attr_dev(div5, "class", "aboutmeimg-container svelte-1q6l4r7");
-    			add_location(div5, file$c, 31, 6, 1278);
+    			add_location(div5, file$c, 29, 6, 1394);
     			attr_dev(div6, "class", "imgdiv col-md-5 svelte-1q6l4r7");
-    			add_location(div6, file$c, 30, 4, 1241);
+    			add_location(div6, file$c, 28, 4, 1357);
     			attr_dev(div7, "class", "row col-md-9 svelte-1q6l4r7");
     			add_location(div7, file$c, 10, 2, 387);
     			attr_dev(div8, "id", "aboutme");
@@ -6651,7 +6651,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (339:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}
+    // (431:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}
     function create_each_block$1(ctx) {
     	let card;
     	let current;
@@ -6695,14 +6695,14 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(339:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}",
+    		source: "(431:6) {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (338:4) <SimpleGrid cols={window.innerWidth < mdScreenSize ? 1 : 2}>
+    // (430:4) <SimpleGrid cols={window.innerWidth < mdScreenSize ? 1 : 2}>
     function create_default_slot$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -6793,7 +6793,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(338:4) <SimpleGrid cols={window.innerWidth < mdScreenSize ? 1 : 2}>",
+    		source: "(430:4) <SimpleGrid cols={window.innerWidth < mdScreenSize ? 1 : 2}>",
     		ctx
     	});
 
@@ -6826,13 +6826,13 @@ var app = (function () {
     			div0 = element("div");
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9 svelte-1pyb0ip");
-    			add_location(h1, file$9, 335, 2, 9780);
+    			add_location(h1, file$9, 427, 2, 11487);
     			attr_dev(div0, "id", "card-list-container");
     			attr_dev(div0, "class", "card container-fluid col-md-9 svelte-1pyb0ip");
-    			add_location(div0, file$9, 336, 2, 9841);
+    			add_location(div0, file$9, 428, 2, 11548);
     			attr_dev(div1, "id", "career");
     			attr_dev(div1, "class", "container-fluid col-sm-10 col-sm-1 svelte-1pyb0ip");
-    			add_location(div1, file$9, 334, 0, 9716);
+    			add_location(div1, file$9, 426, 0, 11423);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6908,32 +6908,46 @@ var app = (function () {
     				[
     					{
     						style: "none",
-    						text: "Contributed to a 7% month-over-month revenue growth and a 10% increase in monthly users by delivering key features that met the evolving needs of the user base."
-    					}
+    						text: "Grew monthly revenue "
+    					},
+    					{ style: "bold", text: "$50k -> $125k" },
+    					{ style: "none", text: ", users " },
+    					{ style: "bold", text: "700 -> 2k" },
+    					{ style: "none", text: ", and eConsults " },
+    					{ style: "bold", text: "1.3k -> 3.3k" },
+    					{ style: "none", text: " in 12 months." }
     				],
     				[
     					{
+    						style: "bold",
+    						text: "Restored deployments and slashed build times 3x"
+    					},
+    					{
     						style: "none",
-    						text: "Increased billing revenue by "
+    						text: " by eradicating two years of tech debt; re-architecting the Typescript, React, and Firebase codebase; and migrating to Vite."
+    					}
+    				],
+    				[
+    					{ style: "bold", text: "Hit profitability" },
+    					{
+    						style: "none",
+    						text: " by launching premium subscriptions and batched fax alerts, sustaining "
     					},
     					{
     						style: "bold",
-    						text: "$10k month-over-month"
+    						text: "7% MoM revenue, 10% user growth"
     					},
-    					{
-    						style: "none",
-    						text: " by developing eConsult filters for specialist physicians on the platform."
-    					}
+    					{ style: "none", text: "." }
     				],
     				[
     					{
     						style: "none",
-    						text: "Increased product efficiency by "
+    						text: "Cut client onboarding from "
     					},
-    					{ style: "bold", text: "20%" },
+    					{ style: "bold", text: "days to minutes" },
     					{
     						style: "none",
-    						text: " by creating an internal testing architecture, and refactoring the codebase to updated packages."
+    						text: " by automating the workflow with GCP Cloud Functions, eliminating manual errors."
     					}
     				]
     			],
@@ -6946,35 +6960,184 @@ var app = (function () {
     				[
     					{
     						style: "none",
-    						text: "Optimized the platform's performance by "
+    						text: "Turbocharged Monero payout API by converting to non‑blocking Node.js; "
     					},
+    					{
+    						style: "bold",
+    						text: "throughput jumped 10x (30 -> 300 req/s)"
+    					}
+    				],
+    				[
+    					{
+    						style: "none",
+    						text: "Fortified finance endpoints with auth and balance‑validation middleware, "
+    					},
+    					{
+    						style: "bold",
+    						text: "eradicating overdrafts and fraud"
+    					},
+    					{ style: "none", text: " across " },
+    					{ style: "bold", text: "1k+" },
+    					{
+    						style: "none",
+    						text: " monthly transactions."
+    					}
+    				],
+    				[
+    					{
+    						style: "none",
+    						text: "Re‑indexed PostgreSQL ledgers, slicing mining‑history queries "
+    					},
+    					{ style: "bold", text: "5s -> 400ms" },
+    					{ style: "none", text: " and shaving " },
     					{ style: "bold", text: "30%" },
-    					{
-    						style: "none",
-    						text: " through non-blocking I/O model and middleware functions using Node.js and Express.js, reducing response time and increasing efficiency."
-    					}
-    				],
-    				[
-    					{
-    						style: "none",
-    						text: "Implemented a PostgreSQL database, decreasing downtime by "
-    					},
-    					{ style: "bold", text: "40%" },
-    					{
-    						style: "none",
-    						text: " and data retrieval speed by 50%, leading to improved application performance."
-    					}
-    				],
-    				[
-    					{
-    						style: "none",
-    						text: "Streamlined development and production environments using Docker-Compose, boosting deployment efficiency by "
-    					},
-    					{ style: "bold", text: "40%" },
-    					{ style: "none", text: "." }
+    					{ style: "none", text: " off DB CPU." }
     				]
     			],
     		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-sweet-morning")),
+    		new CardClass("images/03-career/npx." + (isBrowserSafari() ? "png" : "avif"),
+    		"Innovation Catalyst Intern",
+    		"Nuclear Promise X",
+    		["MSPowerApps", "PowerBI", "SQL", "Python"],
+    		[
+    				[
+    					{
+    						style: "none",
+    						text: "Slashed report generation "
+    					},
+    					{ style: "bold", text: "2 days -> 5 min" },
+    					{
+    						style: "none",
+    						text: " by automating SQL and Power Apps pipeline - freed hundreds of engineer hours and secured $1M contract."
+    					}
+    				],
+    				[
+    					{
+    						style: "none",
+    						text: "Architected reusable Power Apps component library adopted by six developers, saving "
+    					},
+    					{ style: "bold", text: "30 min per page" },
+    					{
+    						style: "none",
+    						text: " across 20‑page apps and standardizing UI."
+    					}
+    				],
+    				[
+    					{
+    						style: "none",
+    						text: "Re‑engineered database schema and views, halving bug‑fix cycles and shrinking query latency "
+    					},
+    					{ style: "bold", text: "30s -> 1s" },
+    					{ style: "none", text: "." }
+    				]
+    			],
+    		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-lunada")),
+    		new CardClass("images/03-career/360insights." + (isBrowserSafari() ? "png" : "avif"),
+    		"Full Stack Developer",
+    		"360insights",
+    		["Javascript", "Node.JS", "React"],
+    		[
+    				[
+    					{
+    						style: "none",
+    						text: "Deployed Node.js health‑check API for 10+ microservices to GCP, cutting mean‑time‑to‑diagnose "
+    					},
+    					{ style: "bold", text: "30 min/incident" },
+    					{ style: "none", text: " and reclaiming " },
+    					{ style: "bold", text: "$15k/yr" },
+    					{
+    						style: "none",
+    						text: " for 100‑engineer org."
+    					}
+    				],
+    				[
+    					{
+    						style: "none",
+    						text: "Authored reusable React component kit, cutting new‑page development effort "
+    					},
+    					{ style: "bold", text: "25% (~1 h)" },
+    					{
+    						style: "none",
+    						text: ", stamping out recurring UI bugs, and unifying UX across four projects."
+    					}
+    				],
+    				[
+    					{
+    						style: "bold",
+    						text: "Purged legacy defects"
+    					},
+    					{
+    						style: "none",
+    						text: " and wrote exhaustive Jest suites, lifting critical‑path coverage near "
+    					},
+    					{ style: "bold", text: "100%" },
+    					{
+    						style: "none",
+    						text: " and enforcing quality gates in Jenkins CI."
+    					}
+    				]
+    			],
+    		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-telegram")),
+    		new CardClass("images/03-career/quarter4." + (isBrowserSafari() ? "png" : "avif"),
+    		"Database Specialist",
+    		"Quarter4",
+    		["Python", "SQL"],
+    		[
+    				[
+    					{
+    						style: "bold",
+    						text: "Secured $150k pre‑seed funding"
+    					},
+    					{
+    						style: "none",
+    						text: " by supercharging model accuracy "
+    					},
+    					{ style: "bold", text: "50% -> 85%" },
+    					{
+    						style: "none",
+    						text: " via Pandas and MySQL ETL across 40k rows."
+    					}
+    				],
+    				[
+    					{
+    						style: "none",
+    						text: "Engineered Markov‑chain text engine for sports stats, a key feature driving pre-seed funding."
+    					}
+    				]
+    			],
+    		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-cosmic-fusion")),
+    		new CardClass("images/03-career/marsh." + (isBrowserSafari() ? "png" : "avif"),
+    		"Business Application Developer",
+    		"Marsh",
+    		["VBA"],
+    		[
+    				[
+    					{
+    						style: "bold",
+    						text: "Eliminated manual reporting in month #1"
+    					},
+    					{
+    						style: "none",
+    						text: " by deploying SQL and VBA Access app, slashing "
+    					},
+    					{ style: "bold", text: "300 hrs/yr" },
+    					{ style: "none", text: " and saving " },
+    					{ style: "bold", text: "$10k" },
+    					{ style: "none", text: "." }
+    				],
+    				[
+    					{
+    						style: "none",
+    						text: "Accelerated insight delivery and sliced data‑entry errors "
+    					},
+    					{ style: "bold", text: "40%" },
+    					{
+    						style: "none",
+    						text: " by revamping client dashboards."
+    					}
+    				]
+    			],
+    		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-amin")),
     		new CardClass("images/03-career/jpmorgan." + (isBrowserSafari() ? "png" : "avif"),
     		"Software Engineering Virtual Experience Program",
     		"J.P. Morgan",
@@ -6983,11 +7146,11 @@ var app = (function () {
     				[
     					{
     						style: "none",
-    						text: "Improved data visualization by implementing RESTful APIs to display historical stock prices and comparative ratio analysis to "
+    						text: "Productized historical-price + ratio-analysis endpoints behind the trading UI, turning multi-step Excel workflows into 1-click charts and "
     					},
     					{
     						style: "bold",
-    						text: "save traders >100 hours"
+    						text: "saving traders 100+ hours"
     					},
     					{ style: "none", text: "." }
     				]
@@ -7010,135 +7173,7 @@ var app = (function () {
     					{ style: "none", text: "." }
     				]
     			],
-    		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-skyline")),
-    		new CardClass("images/03-career/360insights." + (isBrowserSafari() ? "png" : "avif"),
-    		"Full Stack Developer",
-    		"360insights",
-    		["Javascript", "Node.JS", "React"],
-    		[
-    				[
-    					{
-    						style: "none",
-    						text: "Developed a health-check API for testing and displaying the availability of 10+ internal services using Node.js, "
-    					},
-    					{
-    						style: "bold",
-    						text: "saving $1500 annually per team"
-    					},
-    					{ style: "none", text: "." }
-    				],
-    				[
-    					{
-    						style: "none",
-    						text: "Built reusable UI components using React.js for client sales portals, "
-    					},
-    					{
-    						style: "bold",
-    						text: "decreasing project maintenance by 20%"
-    					},
-    					{ style: "none", text: "." }
-    				],
-    				[
-    					{
-    						style: "none",
-    						text: "Enhanced the codebase by resolving 10 critical bugs, implemented comprehensive test suites using Jest, and contributed to the CI/CD pipeline, accelerating deployment processes and "
-    					},
-    					{
-    						style: "bold",
-    						text: "boosting overall application performance by 10%"
-    					},
-    					{ style: "none", text: "." }
-    				]
-    			],
-    		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-telegram")),
-    		new CardClass("images/03-career/npx." + (isBrowserSafari() ? "png" : "avif"),
-    		"Innovation Catalyst Intern",
-    		"Nuclear Promise X",
-    		["MSPowerApps", "PowerBI", "SQL", "Python"],
-    		[
-    				[
-    					{
-    						style: "none",
-    						text: "Automated data reporting and created a unified reporting system through SQL and Power Apps to "
-    					},
-    					{
-    						style: "bold",
-    						text: "reduce cost by >$1M"
-    					},
-    					{ style: "none", text: "." }
-    				],
-    				[
-    					{
-    						style: "none",
-    						text: "Introduced a database schema that resolved and prevented data conflicts, "
-    					},
-    					{
-    						style: "bold",
-    						text: "improving development efficiency by 25%"
-    					},
-    					{
-    						style: "none",
-    						text: "by reducing time spent on bug fixing and minimizing joins."
-    					}
-    				],
-    				[
-    					{
-    						style: "none",
-    						text: "Developed UI standards and a component library in Power Apps, "
-    					},
-    					{
-    						style: "bold",
-    						text: "enhancing app development efficiency by 20%"
-    					},
-    					{ style: "none", text: "." }
-    				]
-    			],
-    		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-lunada")),
-    		new CardClass("images/03-career/quarter4." + (isBrowserSafari() ? "png" : "avif"),
-    		"Database Specialist",
-    		"Quarter4",
-    		["Python", "SQL"],
-    		[
-    				[
-    					{
-    						style: "none",
-    						text: "Developed a data collection, cleaning, and preprocessing script with Pandas and MySQL, which lead to a model accuracy of >85%, contributing to a"
-    					},
-    					{
-    						style: "bold",
-    						text: "successful MVP launch and $160k funding for pre-seed"
-    					},
-    					{ style: "none", text: "." }
-    				],
-    				[
-    					{
-    						style: "none",
-    						text: "Created a Markov chain to translate raw data into descriptive text, enhancing user understanding of NBA metrics ."
-    					}
-    				]
-    			],
-    		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-cosmic-fusion")),
-    		new CardClass("images/03-career/marsh." + (isBrowserSafari() ? "png" : "avif"),
-    		"Business Application Developer",
-    		"Marsh",
-    		["VBA"],
-    		[
-    				[
-    					{
-    						style: "none",
-    						text: "Designed and developed a data reporting app using SQL, VBA, and MS Access, "
-    					},
-    					{
-    						style: "bold",
-    						text: "saving $10,000 annually "
-    					},
-    					{
-    						style: "none",
-    						text: "through reducing data reporting time by 300 hours"
-    					}
-    				]
-    			],
-    		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-amin"))
+    		getComputedStyle(document.querySelector(":root")).getPropertyValue("--gradient-skyline"))
     	];
 
     	const writable_props = ['mdScreenSize'];
@@ -8417,7 +8452,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (104:6) {#each projList as projectInfo, index}
+    // (98:6) {#each projList as projectInfo, index}
     function create_each_block(ctx) {
     	let projectinstance;
     	let t;
@@ -8439,8 +8474,8 @@ var app = (function () {
     			t = space();
     			br0 = element("br");
     			br1 = element("br");
-    			add_location(br0, file$6, 105, 8, 4591);
-    			add_location(br1, file$6, 105, 14, 4597);
+    			add_location(br0, file$6, 99, 8, 4357);
+    			add_location(br1, file$6, 99, 14, 4363);
     		},
     		m: function mount(target, anchor) {
     			mount_component(projectinstance, target, anchor);
@@ -8471,14 +8506,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(104:6) {#each projList as projectInfo, index}",
+    		source: "(98:6) {#each projList as projectInfo, index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (103:4) <SimpleGrid cols={1}>
+    // (97:4) <SimpleGrid cols={1}>
     function create_default_slot(ctx) {
     	let each_1_anchor;
     	let current;
@@ -8569,7 +8604,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(103:4) <SimpleGrid cols={1}>",
+    		source: "(97:4) <SimpleGrid cols={1}>",
     		ctx
     	});
 
@@ -8585,17 +8620,14 @@ var app = (function () {
     	let br0;
     	let br1;
     	let t3;
-    	let br2;
-    	let br3;
-    	let t4;
     	let div1;
     	let techstack_1;
-    	let t5;
+    	let t4;
+    	let br2;
+    	let br3;
     	let br4;
     	let br5;
-    	let br6;
-    	let br7;
-    	let t6;
+    	let t5;
     	let div2;
     	let simplegrid;
     	let current;
@@ -8621,39 +8653,34 @@ var app = (function () {
     			h1.textContent = "Leveling up with side projects";
     			t1 = space();
     			div0 = element("div");
-    			t2 = text("My side projects reflect my dedication to innovation and problem-solving.\r\n    From building interactive web experiences with cutting-edge technologies to\r\n    developing AI-powered solutions, I thrive on turning ideas into impactful\r\n    realities.\r\n    ");
+    			t2 = text("I can learn any technology, and I thrive on turning ideas into impactful realities. Here's some of the tech I've picked up on my own:\r\n    ");
     			br0 = element("br");
     			br1 = element("br");
-    			t3 = text("\r\n    I can learn any technology, just as I have learned the following creating these\r\n    projects:\r\n    ");
-    			br2 = element("br");
-    			br3 = element("br");
-    			t4 = space();
+    			t3 = space();
     			div1 = element("div");
     			create_component(techstack_1.$$.fragment);
-    			t5 = space();
+    			t4 = space();
+    			br2 = element("br");
+    			br3 = element("br");
     			br4 = element("br");
     			br5 = element("br");
-    			br6 = element("br");
-    			br7 = element("br");
-    			t6 = space();
+    			t5 = space();
     			div2 = element("div");
     			create_component(simplegrid.$$.fragment);
     			attr_dev(h1, "class", "title col-md-9 svelte-1jaadhi");
     			add_location(h1, file$6, 86, 2, 3763);
-    			add_location(br0, file$6, 92, 4, 4140);
-    			add_location(br1, file$6, 92, 10, 4146);
-    			add_location(br2, file$6, 95, 4, 4258);
-    			add_location(br3, file$6, 95, 10, 4264);
+    			add_location(br0, file$6, 89, 4, 4024);
+    			add_location(br1, file$6, 89, 10, 4030);
     			attr_dev(div0, "class", "container-fluid description col-md-9");
     			add_location(div0, file$6, 87, 2, 3829);
-    			add_location(br4, file$6, 99, 4, 4359);
-    			add_location(br5, file$6, 99, 10, 4365);
-    			add_location(br6, file$6, 99, 16, 4371);
-    			add_location(br7, file$6, 99, 22, 4377);
+    			add_location(br2, file$6, 93, 4, 4125);
+    			add_location(br3, file$6, 93, 10, 4131);
+    			add_location(br4, file$6, 93, 16, 4137);
+    			add_location(br5, file$6, 93, 22, 4143);
     			attr_dev(div1, "class", "container-fluid col-md-9");
-    			add_location(div1, file$6, 97, 2, 4284);
+    			add_location(div1, file$6, 91, 2, 4050);
     			attr_dev(div2, "class", "projects container-fluid col-md-9 svelte-1jaadhi");
-    			add_location(div2, file$6, 101, 2, 4397);
+    			add_location(div2, file$6, 95, 2, 4163);
     			attr_dev(div3, "id", "projects");
     			attr_dev(div3, "class", "container-fluid col-sm-10 offset-sm-1 svelte-1jaadhi");
     			add_location(div3, file$6, 85, 0, 3694);
@@ -8669,18 +8696,15 @@ var app = (function () {
     			append_dev(div0, t2);
     			append_dev(div0, br0);
     			append_dev(div0, br1);
-    			append_dev(div0, t3);
-    			append_dev(div0, br2);
-    			append_dev(div0, br3);
-    			append_dev(div3, t4);
+    			append_dev(div3, t3);
     			append_dev(div3, div1);
     			mount_component(techstack_1, div1, null);
-    			append_dev(div1, t5);
+    			append_dev(div1, t4);
+    			append_dev(div1, br2);
+    			append_dev(div1, br3);
     			append_dev(div1, br4);
     			append_dev(div1, br5);
-    			append_dev(div1, br6);
-    			append_dev(div1, br7);
-    			append_dev(div3, t6);
+    			append_dev(div3, t5);
     			append_dev(div3, div2);
     			mount_component(simplegrid, div2, null);
     			current = true;
@@ -9941,13 +9965,13 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "content-desktop svelte-1m6pum2");
     			add_render_callback(() => /*div0_elementresize_handler_1*/ ctx[13].call(div0));
-    			add_location(div0, file, 106, 12, 3302);
+    			add_location(div0, file, 106, 12, 3367);
     			attr_dev(div1, "id", "content-container");
     			set_style(div1, "top", /*titleHeight*/ ctx[0] + "px");
     			attr_dev(div1, "class", "svelte-1m6pum2");
-    			add_location(div1, file, 105, 8, 3230);
+    			add_location(div1, file, 105, 8, 3295);
     			attr_dev(div2, "class", "container-fluid svelte-1m6pum2");
-    			add_location(div2, file, 96, 4, 2977);
+    			add_location(div2, file, 96, 4, 3042);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10093,12 +10117,12 @@ var app = (function () {
     			attr_dev(div0, "id", "content");
     			attr_dev(div0, "class", "content-mobile svelte-1m6pum2");
     			add_render_callback(() => /*div0_elementresize_handler*/ ctx[12].call(div0));
-    			add_location(div0, file, 82, 12, 2604);
+    			add_location(div0, file, 82, 12, 2669);
     			attr_dev(div1, "id", "content-container");
     			attr_dev(div1, "class", "svelte-1m6pum2");
-    			add_location(div1, file, 81, 8, 2562);
+    			add_location(div1, file, 81, 8, 2627);
     			attr_dev(div2, "class", "container-fluid svelte-1m6pum2");
-    			add_location(div2, file, 79, 4, 2468);
+    			add_location(div2, file, 79, 4, 2533);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10344,7 +10368,7 @@ var app = (function () {
     		title: "Tony Kwok.",
     		subtitle: "I build things with ",
     		texts: ["data.", "style.", "code."],
-    		description: "Ready to crush it, deliver, and put my team in a better place. Let's talk."
+    		description: "I scale SaaS from scrappy to profitable. Full-stack with a bias for measurable impact, getting things done, and owning problems end-to-end."
     	};
 
     	let contactInfo = {
