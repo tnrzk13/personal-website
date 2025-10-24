@@ -9014,7 +9014,7 @@ var app = (function () {
     			add_location(a0, file$4, 23, 8, 777);
     			attr_dev(div3, "class", "linkedin-container col-md-3 svelte-fu0whb");
     			add_location(div3, file$4, 22, 6, 726);
-    			attr_dev(a1, "href", a1_href_value = "mailto:tnrzk13@gmail.com?subject=" + /*contactInfo*/ ctx[0].subject);
+    			attr_dev(a1, "href", a1_href_value = "mailto:thisistonykwok@gmail.com?subject=" + /*contactInfo*/ ctx[0].subject);
     			attr_dev(a1, "id", "emailLink");
     			attr_dev(a1, "class", "svelte-fu0whb");
     			add_location(a1, file$4, 28, 8, 973);
@@ -9061,7 +9061,7 @@ var app = (function () {
     			texttype.$set(texttype_changes);
     			if ((!current || dirty & /*contactInfo*/ 1) && t3_value !== (t3_value = /*contactInfo*/ ctx[0].description + "")) set_data_dev(t3, t3_value);
 
-    			if (!current || dirty & /*contactInfo*/ 1 && a1_href_value !== (a1_href_value = "mailto:tnrzk13@gmail.com?subject=" + /*contactInfo*/ ctx[0].subject)) {
+    			if (!current || dirty & /*contactInfo*/ 1 && a1_href_value !== (a1_href_value = "mailto:thisistonykwok@gmail.com?subject=" + /*contactInfo*/ ctx[0].subject)) {
     				attr_dev(a1, "href", a1_href_value);
     			}
 
@@ -9275,8 +9275,8 @@ var app = (function () {
     			attr_dev(span0, "class", "linkedin-container");
     			add_location(span0, file$3, 22, 6, 626);
     			attr_dev(button, "class", "btn btn-grad btn-lg svelte-6a4fco");
-    			add_location(button, file$3, 32, 10, 975);
-    			attr_dev(a1, "href", a1_href_value = "mailto:tnrzk13@gmail.com?subject=" + /*contactInfo*/ ctx[0].subject);
+    			add_location(button, file$3, 32, 10, 982);
+    			attr_dev(a1, "href", a1_href_value = "mailto:thisistonykwok@gmail.com?subject=" + /*contactInfo*/ ctx[0].subject);
     			attr_dev(a1, "id", "emailLink");
     			attr_dev(a1, "class", "svelte-6a4fco");
     			add_location(a1, file$3, 28, 8, 851);
@@ -9325,7 +9325,7 @@ var app = (function () {
     			texttype.$set(texttype_changes);
     			if ((!current || dirty & /*contactInfo*/ 1) && t3_value !== (t3_value = /*contactInfo*/ ctx[0].description + "")) set_data_dev(t3, t3_value);
 
-    			if (!current || dirty & /*contactInfo*/ 1 && a1_href_value !== (a1_href_value = "mailto:tnrzk13@gmail.com?subject=" + /*contactInfo*/ ctx[0].subject)) {
+    			if (!current || dirty & /*contactInfo*/ 1 && a1_href_value !== (a1_href_value = "mailto:thisistonykwok@gmail.com?subject=" + /*contactInfo*/ ctx[0].subject)) {
     				attr_dev(a1, "href", a1_href_value);
     			}
     		},

@@ -27,7 +27,7 @@
       </span>
       <span class="button-container">
         <a
-          href="mailto:tnrzk13@gmail.com?subject={contactInfo.subject}"
+          href="mailto:thisistonykwok@gmail.com?subject={contactInfo.subject}"
           id="emailLink"
         >
           <button class="btn btn-grad btn-lg">Say Hello</button>

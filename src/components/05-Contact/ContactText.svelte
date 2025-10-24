@@ -27,7 +27,7 @@
       </div>
       <div class="button-container-column col-md-9">
         <a
-          href="mailto:tnrzk13@gmail.com?subject={contactInfo.subject}"
+          href="mailto:thisistonykwok@gmail.com?subject={contactInfo.subject}"
           id="emailLink"
         >
           <GradientButton
