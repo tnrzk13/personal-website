@@ -20,6 +20,7 @@
     let contactTop = $state(999);
     let contactYOffset = $state(0);
     let pageHalfDown = $state(999);
+    let footerHeight = $state(0);
     let boolMobileView = $state(true);
 
     const manageHeights = () => {
@@ -102,6 +103,7 @@
             {titleInfo}
             {contactTop}
             {contactYOffset}
+            {footerHeight}
             scrollY={y}
         />
         <div id="content-container" style="top: {titleHeight}px;">
@@ -123,7 +125,9 @@
             <footer>
                 <ContactText {contactInfo} {titleHeight} {contactYOffset} />
             </footer>
-            <Footer />
+            <div bind:clientHeight={footerHeight}>
+                <Footer />
+            </div>
         </div>
     </div>
     <Navbar {boolMobileView} scrollY={y} />
