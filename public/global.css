@@ -73,7 +73,25 @@
     padding: 0;
 }
 
-h1.title {
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: 9999;
+    padding: 0.75em 1.5em;
+    background: white;
+    color: var(--darkblue);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 0 0 0.5em 0;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+h2.section-title {
     padding-left: 0.75rem;
     font-family: "Montserrat", sans-serif;
     font-size: 4em;
@@ -84,10 +102,6 @@ h1.title {
     word-break: break-word;
 }
 
-h4 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
-}
 
 @keyframes -global-fade-in {
     0% {

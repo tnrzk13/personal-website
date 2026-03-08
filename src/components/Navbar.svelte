@@ -15,6 +15,7 @@
 </script>
 
 {#if !boolMobileView || showNavBar}
+  <header>
   <nav
     id="navbar"
     class="navbar navbar-expand-md navbar-dark fixed-top
@@ -45,19 +46,18 @@
         <a class="nav-item nav-link" href="#projects">Projects</a>
         <a class="nav-item nav-link" href="#contact">Contact</a>
         <a
-          class={boolMobileView
-            ? "download-container-mobile"
-            : "download-container"}
+          class="btn {boolMobileView
+            ? 'download-container-mobile btn-grad-mobile'
+            : 'download-container btn-grad'}"
           href="download/Resume.pdf"
           download="TonyKwokResume"
         >
-          <button class="btn {boolMobileView ? 'btn-grad-mobile' : 'btn-grad'}">
-            Resume
-          </button>
+          Resume
         </a>
       </ul>
     </div>
   </nav>
+  </header>
 {/if}
 
 <style lang="scss">

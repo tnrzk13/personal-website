@@ -63,16 +63,24 @@
     <div class="container-fluid">
         <TitleMobile {boolAnimateText} {titleInfo} />
         <div id="content-container">
-            <div
-                id="content"
+            <main
+                id="main-content"
                 class="content-mobile"
                 bind:clientHeight={contentHeight}
             >
-                <AboutMe />
-                <Career />
-                <Projects />
-                <ContactWrapper {contactInfo} />
-            </div>
+                <section id="aboutme-section" aria-label="About me">
+                    <AboutMe />
+                </section>
+                <section aria-label="Career">
+                    <Career />
+                </section>
+                <section aria-label="Projects">
+                    <Projects />
+                </section>
+                <footer>
+                    <ContactWrapper {contactInfo} />
+                </footer>
+            </main>
         </div>
     </div>
     <Navbar {boolMobileView} scrollY={y} />
@@ -88,16 +96,24 @@
             scrollY={y}
         />
         <div id="content-container" style="top: {titleHeight}px;">
-            <div
-                id="content"
+            <main
+                id="main-content"
                 class="content-desktop"
                 bind:clientHeight={contentHeight}
             >
-                <AboutMe />
-                <Career />
-                <Projects />
-            </div>
-            <ContactText {contactInfo} {titleHeight} {contactYOffset} />
+                <section id="aboutme-section" aria-label="About me">
+                    <AboutMe />
+                </section>
+                <section aria-label="Career">
+                    <Career />
+                </section>
+                <section aria-label="Projects">
+                    <Projects />
+                </section>
+            </main>
+            <footer>
+                <ContactText {contactInfo} {titleHeight} {contactYOffset} />
+            </footer>
         </div>
     </div>
     <Navbar {boolMobileView} scrollY={y} />
@@ -119,7 +135,7 @@
             color: white;
             overflow: hidden;
 
-            #content {
+            main {
                 position: relative;
                 z-index: 2;
                 border-radius: 0 0 50% 50% / 0 0 3em 3em;
