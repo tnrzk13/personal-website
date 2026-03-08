@@ -153,7 +153,7 @@
     .textLayer {
       position: absolute;
       text-align: left;
-      font-size: 5vw;
+      font-size: min(5vw, 9vh);
       font-family: "Montserrat", sans-serif;
       color: black;
       left: 1.5em;
@@ -164,20 +164,20 @@
       margin-top: 0;
 
       .textLayer-preamble {
-        font-size: 1.3vw;
+        font-size: min(1.3vw, 2.5vh);
       }
 
       .textLayer-subtitle {
-        font-size: 5vw;
+        font-size: min(4.5vw, 8vh);
       }
 
       .textLayer-description {
-        font-size: 1.3vw;
+        font-size: min(1.3vw, 2.5vh);
         right: 80%;
       }
 
       .scrolldown {
-        font-size: 3vw;
+        font-size: min(2.5vw, 4vh);
         padding-top: 0.5em;
         text-align: center;
         background-image: linear-gradient(
