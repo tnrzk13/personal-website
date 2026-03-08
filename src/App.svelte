@@ -8,12 +8,11 @@
     import Career from "./components/03-Career.svelte";
     import Projects from "./components/04-Projects.svelte";
     import ContactText from "./components/05-Contact/ContactText.svelte";
-    import ContactWrapper from "./components/05-Contact/ContactWrapper.svelte";
+    import ContactMobile from "./components/05-Contact/ContactMobile.svelte";
     import Footer from "./components/Footer.svelte";
     import Navbar from "./components/Navbar.svelte";
     import { SM_SCREEN_PX } from "./utils/breakpoints";
 
-    let boolAnimateText = $state(true);
     let titleHeight = $state(0);
     let contentHeight = $state(0);
     let y = $state(0);
@@ -70,7 +69,7 @@
 
 {#if boolMobileView}
     <div class="page-wrapper">
-        <TitleMobile {boolAnimateText} {titleInfo} />
+        <TitleMobile {titleInfo} />
         <div id="content-container">
             <main
                 id="main-content"
@@ -87,7 +86,7 @@
                     <Projects />
                 </section>
                 <footer>
-                    <ContactWrapper {contactInfo} />
+                    <ContactMobile {contactInfo} />
                 </footer>
             </main>
             <Footer />
@@ -99,7 +98,6 @@
         <Parallax
             containerHeight={titleHeight}
             {pageHalfDown}
-            {boolAnimateText}
             {titleInfo}
             {contactTop}
             {contactYOffset}
