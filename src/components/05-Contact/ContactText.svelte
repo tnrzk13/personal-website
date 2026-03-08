@@ -92,11 +92,11 @@
           text-decoration: none;
           color: black;
           font-size: 3rem;
+          transition: 0.5s;
         }
         a:hover {
           color: white;
           scale: 110%;
-          transition: 0.5s;
         }
       }
     }

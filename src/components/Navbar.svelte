@@ -76,19 +76,19 @@
     img {
       width: auto;
       height: 1.5em;
+      transition: 0.5s;
     }
 
     img:hover {
       scale: 110%;
-      transition: 0.5s;
     }
 
     a.nav-item {
       color: white;
+      transition: 0.5s;
     }
     a.nav-item:hover {
       scale: 110%;
-      transition: 0.5s;
     }
 
     a.download-container {

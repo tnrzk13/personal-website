@@ -76,11 +76,11 @@
           .fa-linkedin {
             text-decoration: none;
             color: white;
+            transition: 0.5s;
           }
           .fa-linkedin:hover {
             color: black;
             scale: 110%;
-            transition: 0.5s;
           }
         }
 
