@@ -79,6 +79,7 @@
       display: flex;
       flex-wrap: wrap;
       max-width: 75%;
+      margin-inline: auto;
     }
     .text {
       box-sizing: border-box;

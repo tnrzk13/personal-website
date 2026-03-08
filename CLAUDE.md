@@ -23,9 +23,14 @@ Also take an a11y snapshot (`take_snapshot`) to verify the tree.
 - Refactors that don't change rendering
 - Dependency updates
 
+### Dev Server
+- Port is pinned to **5173** (`strictPort: true` in vite.config.js)
+- Before starting `npm run dev`, check if port 5173 is already in use: `lsof -i :5173 -t`
+- Never start a second dev server - reuse the existing one
+
 ### MCP Commands Reference
 Ensure dev server is running (`npm run dev`), then:
-- `navigate_page` to http://localhost:8080
+- `navigate_page` to http://localhost:5173
 - `emulate` viewport `1440x900x1`, then `take_screenshot` for desktop
 - `emulate` viewport `375x812x1,mobile,touch`, then `take_screenshot` for mobile
 - `list_console_messages` to check for errors

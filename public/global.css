@@ -73,6 +73,12 @@
     padding: 0;
 }
 
+body {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
 .skip-link {
     position: absolute;
     top: -100%;
@@ -156,6 +162,7 @@ h2.section-title {
 
 .content-width {
   max-width: 75%;
+  margin-inline: auto;
 }
 @media (max-width: 767px) {
   .content-width { max-width: 100%; }
