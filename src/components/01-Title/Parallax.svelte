@@ -45,6 +45,27 @@
     update();
   });
 
+  const getLayerScale = (layer) => {
+    if (layer >= 7) return " scale(1.04)";
+    if (layer >= 5) return " scale(1.02)";
+    return "";
+  };
+
+  const getLayerOpacity = (layer) => {
+    if (layer === 0) return 0.85;
+    if (layer === 1) return 0.92;
+    return 1;
+  };
+
+  const getLayerOffsetPx = (layer) => {
+    if (layer >= 9) return 10;
+    if (layer >= 7) return 25;
+    if (layer >= 5) return 40;
+    if (layer >= 4) return 50;
+    if (layer >= 1) return 50;
+    return 0;
+  };
+
   $effect(() => {
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
@@ -67,15 +88,15 @@
           ? getContactParallax(layer)
           : (-y * layer) / (layers.length - 1)}px {boolShowContact
           ? '- ' + contentBorderRadius
-          : ''}))"
+          : ''})); opacity: {getLayerOpacity(layer)}"
         src="images/intro/00{layer}.{isBrowserSafari() ? 'png' : 'avif'}"
         alt="parallax layer {layer}"
       />
     {:else if layer < textLayer}
       <img
-        style="transform: translateY({boolShowContact
+        style="transform: translateY({(boolShowContact
           ? getContactParallax(layer)
-          : (-y * layer) / (layers.length - 1)}px)"
+          : (-y * layer) / (layers.length - 1)) + getLayerOffsetPx(layer)}px); opacity: {getLayerOpacity(layer)}"
         src="images/intro/00{layer}.{isBrowserSafari() ? 'png' : 'avif'}"
         alt="parallax layer {layer}"
       />
@@ -105,9 +126,9 @@
       {/if}
     {:else if layer >= textLayer && layer < 11}
       <img
-        style="transform: translateY({boolShowContact
+        style="transform: translateY({(boolShowContact
           ? getContactParallax(layer)
-          : (-y * (layer - 1)) / (layers.length - 1)}px)"
+          : (-y * (layer - 1)) / (layers.length - 1)) + getLayerOffsetPx(layer)}px){getLayerScale(layer)}"
         src="images/intro/00{layer - 1}.{isBrowserSafari() ? 'png' : 'avif'}"
         alt="parallax layer {layer - 1}"
       />
