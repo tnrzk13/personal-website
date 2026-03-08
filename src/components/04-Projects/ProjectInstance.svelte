@@ -1,7 +1,6 @@
 <script>
   import CardProject from "../Cards/CardProject.svelte";
   import { SM_SCREEN_PX } from "../../utils/breakpoints";
-
   let { projectIndex, projectInfo } = $props();
 
   let innerWidth = $state(window.innerWidth);
@@ -14,7 +13,7 @@
   });
 </script>
 
-<div class="row project-container" class:reversed={isReversed}>
+<div class="row project-container reveal" class:reversed={isReversed} style="transition-delay: {projectIndex * 100 + 550}ms">
   <div class="img-container col-sm-7">
     <div class="main-img-container col-sm-10" class:offset-sm-2={isReversed}>
       {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
@@ -67,6 +66,7 @@
         margin: 0;
         width: 100%;
         border-radius: 1rem;
+        transition: 0.5s;
       }
 
       img.glowing {
@@ -79,7 +79,6 @@
 
     img:hover {
       scale: 110%;
-      transition: 0.5s;
     }
   }
 </style>

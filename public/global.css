@@ -103,6 +103,28 @@ h2.section-title {
 }
 
 
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.revealed,
+.revealed .reveal {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    [data-reveal-section] .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 @keyframes -global-fade-in {
     0% {
         opacity: 0;

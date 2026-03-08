@@ -1,10 +1,10 @@
 <script>
   import Techstack from "../Misc/Techstack.svelte";
 
-  let { imgurl, title, subtitle, points, logoColor, techstack } = $props();
+  let { imgurl, title, subtitle, points, logoColor, techstack, revealDelayMs = 0 } = $props();
 </script>
 
-<div class="container-fluid card-container">
+<div class="container-fluid card-container reveal" style="transition-delay: {revealDelayMs}ms">
   <div class="card m-2 cb1 text-center">
     <div class="card-body">
       <div class="circle-logo" style="background-image: {logoColor}">

@@ -1,20 +1,21 @@
 <script>
   import Techstack from "./Misc/Techstack.svelte";
   import { getImagePath } from "../utils/imagePath";
+  import TextReveal from "./TextReveal.svelte";
 
   let techstack = ["Typescript", "React", "Python", "SQL", "Node.JS", "Firebase"];
 </script>
 
-<div id="aboutme" class="aboutMe container-fluid col-sm-10 offset-sm-1">
-  <h2 class="section-title col-md-9">A little about me</h2>
-  <div class="row col-md-9">
+<div id="aboutme" class="aboutMe container-fluid col-sm-10 offset-sm-1" data-reveal-section>
+  <TextReveal text="A little about me" class="section-title col-md-9" />
+  <div class="row col-md-9 reveal" style="transition-delay: 400ms">
     <div class="text col-md-7">
       <div class="description">
-        <p>I’m a full-stack engineer (TS/React/GCP) who turns tech debt into growth - I’ve tripled revenue, 10x’d throughput, and turned companies profitable. Looking for a role where shipping, reliability, and revenue are on the scorecard - and I’m accountable for all three.</p>
+        <p>I'm a full-stack engineer (TS/React/GCP) who turns tech debt into growth - I've tripled revenue, 10x'd throughput, and turned companies profitable. Looking for a role where shipping, reliability, and revenue are on the scorecard - and I'm accountable for all three.</p>
         <p>My interest in tech began during my first co-op term as an accountant, when I
         needed to manipulate data in Excel. I went from keyboard shortcuts to
         VBA to SQL to transferring out of my accounting program and into engineering roles. Read more about my story in the next section.</p>
-        <p>Here are a few technologies I’ve been working with:</p>
+        <p>Here are a few technologies I've been working with:</p>
       </div>
       <div class="row techlist1 m-0 p-0">
         <div class="row">
@@ -62,11 +63,11 @@
           max-width: 15em;
           height: auto;
           border-radius: 50%;
+          transition: 0.5s;
         }
 
         img.aboutmeimg:hover {
           scale: 110%;
-          transition: 0.5s;
           box-shadow: 0 0 65px #6dd5fa, 0 0 0 1px rgb(255 255 255 / 10%),
             0 2px 2px rgb(0 0 0 / 3%), 0 4px 4px rgb(0 0 0 / 4%),
             0 10px 8px rgb(0 0 0 / 5%), 0 15px 15px rgb(0 0 0 / 6%),
@@ -75,7 +76,7 @@
       }
     }
 
-    h2.section-title {
+    :global(h2.section-title) {
       margin: 0 auto 0.5em auto;
       background-image: var(--gradient-pink-blue);
     }

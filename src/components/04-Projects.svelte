@@ -2,6 +2,7 @@
   import ProjectInstance from "./04-Projects/ProjectInstance.svelte";
   import Techstack from "./Misc/Techstack.svelte";
   import { projList } from "../data/projects";
+  import TextReveal from "./TextReveal.svelte";
 
   let techstack = [
     "Fast.ai",
@@ -13,12 +14,12 @@
   ];
 </script>
 
-<div id="projects" class="container-fluid col-sm-10 offset-sm-1">
-  <h2 class="section-title col-md-9">Leveling up with side projects</h2>
-  <div class="container-fluid description col-md-9">
+<div id="projects" class="container-fluid col-sm-10 offset-sm-1" data-reveal-section>
+  <TextReveal text="Leveling up with side projects" class="section-title col-md-9" />
+  <div class="container-fluid description col-md-9 reveal" style="transition-delay: 400ms">
     I can learn any technology, and I thrive on turning ideas into impactful realities. Here's some of the tech I've picked up on my own:
   </div>
-  <div class="techstack-container container-fluid col-md-9">
+  <div class="techstack-container container-fluid col-md-9 reveal" style="transition-delay: 450ms">
     <Techstack {techstack} />
   </div>
   <div class="projects container-fluid col-md-9">
@@ -32,7 +33,7 @@
   #projects {
     border: 1px solid transparent;
 
-    h2.section-title {
+    :global(h2.section-title) {
       background-image: var(--gradient-relaxing-red);
     }
 
