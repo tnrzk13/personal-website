@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import TextType from "../TextType/TextType.svelte";
-  import { isBrowserSafari } from "../Browser/BrowserCheck.svelte";
+  import { getImagePath } from "../../utils/imagePath";
 
   let { containerHeight, titleInfo, boolAnimateText = true, pageHalfDown = 1000, contactTop, contactYOffset } = $props();
 
@@ -89,7 +89,7 @@
           : (-y * layer) / (layers.length - 1)}px {boolShowContact
           ? '- ' + contentBorderRadius
           : ''})); opacity: {getLayerOpacity(layer)}"
-        src="images/intro/00{layer}.{isBrowserSafari() ? 'png' : 'avif'}"
+        src={getImagePath(`images/intro/00${layer}`)}
         alt="parallax layer {layer}"
       />
     {:else if layer < textLayer}
@@ -97,7 +97,7 @@
         style="transform: translateY({(boolShowContact
           ? getContactParallax(layer)
           : (-y * layer) / (layers.length - 1)) + getLayerOffsetPx(layer)}px); opacity: {getLayerOpacity(layer)}"
-        src="images/intro/00{layer}.{isBrowserSafari() ? 'png' : 'avif'}"
+        src={getImagePath(`images/intro/00${layer}`)}
         alt="parallax layer {layer}"
       />
     {:else if layer === textLayer && y <= Math.max(0, pageHalfDown)}
@@ -129,7 +129,7 @@
         style="transform: translateY({(boolShowContact
           ? getContactParallax(layer)
           : (-y * (layer - 1)) / (layers.length - 1)) + getLayerOffsetPx(layer)}px){getLayerScale(layer)}"
-        src="images/intro/00{layer - 1}.{isBrowserSafari() ? 'png' : 'avif'}"
+        src={getImagePath(`images/intro/00${layer - 1}`)}
         alt="parallax layer {layer - 1}"
       />
     {:else if layer >= 11}
@@ -137,7 +137,7 @@
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
           : (-y * (layer - 1)) / (layers.length - 1)}px)"
-        src="images/intro/0{layer - 1}.{isBrowserSafari() ? 'png' : 'avif'}"
+        src={getImagePath(`images/intro/0${layer - 1}`)}
         alt="parallax layer {layer - 1}"
       />
     {:else if layer === 14}
@@ -145,7 +145,7 @@
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
           : -y + 10}px)"
-        src="images/intro/0{layer - 1}.{isBrowserSafari() ? 'png' : 'avif'}"
+        src={getImagePath(`images/intro/0${layer - 1}`)}
         alt="parallax layer {layer - 1}"
       />
     {/if}

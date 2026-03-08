@@ -1,4 +1,5 @@
 <script lang="ts">
+    import type { TitleInfo, ContactInfo } from "./types";
     import Parallax from "./components/01-Title/Parallax.svelte";
     import TitleMobile from "./components/01-Title/TitleMobile.svelte";
     import AboutMe from "./components/02-AboutMe.svelte";
@@ -39,7 +40,7 @@
         return () => window.removeEventListener("resize", manageHeights);
     });
 
-    let titleInfo = {
+    let titleInfo: TitleInfo = {
         preamble: "Hi, my name is",
         title: "Tony Kwok.",
         subtitle: "I build things with ",
@@ -47,7 +48,7 @@
         description:
             "I scale SaaS from scrappy to profitable. Full-stack with a bias for measurable impact, getting things done, and owning problems end-to-end.",
     };
-    let contactInfo = {
+    let contactInfo: ContactInfo = {
         preamble: "Interested?",
         title: "",
         subtitle: "",
@@ -94,7 +95,7 @@
                 bind:clientHeight={contentHeight}
             >
                 <AboutMe />
-                <Career {mdScreenSize} />
+                <Career />
                 <Projects />
             </div>
             <ContactText {contactInfo} {titleHeight} {contactYOffset} />

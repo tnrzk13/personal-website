@@ -1,6 +1,6 @@
 <script>
   import Techstack from "./Misc/Techstack.svelte";
-  import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
+  import { getImagePath } from "../utils/imagePath";
 
   let techstack = ["Typescript", "React", "Python", "SQL", "Node.JS", "Firebase"];
 </script>
@@ -31,7 +31,7 @@
         <a href="https://www.linkedin.com/in/tony-k-kwok/">
           <img
             class="aboutmeimg"
-            src="images/02-aboutme/self.{isBrowserSafari() ? 'png' : 'avif'}"
+            src={getImagePath("images/02-aboutme/self")}
             alt="tony kwok"
           />
         </a>

@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import { slide } from "svelte/transition";
-  import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
+  import { getImagePath } from "../utils/imagePath";
   let { boolMobileView } = $props();
 
   let showNavBar = $state(false);
@@ -22,13 +22,13 @@
 {#if !boolMobileView || showNavBar}
   <nav
     id="navbar"
-    class="navbar navbar-expand-md navbar-dark fixed-top 
+    class="navbar navbar-expand-md navbar-dark fixed-top
       {boolMobileView ? 'nav-mobile-background' : ''}"
     transition:slide
   >
     <a class="navbar-brand" href=".">
       <img
-        src="images/navbar/gorilla.{isBrowserSafari() ? 'png' : 'avif'}"
+        src={getImagePath("images/navbar/gorilla")}
         alt="logo gorilla"
       />
     </a>
