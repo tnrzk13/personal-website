@@ -17,7 +17,6 @@
     </div>
     <div class="textLayer-description">
       {contactInfo.description}
-      <br /><br />
     </div>
     <div class="links-container">
       <span class="linkedin-container">
@@ -39,7 +38,7 @@
 
 <style lang="scss">
   #contact-mobile-wrapper {
-    height: 100vh;
+    min-height: auto;
     background-image: linear-gradient(
       109.6deg,
       rgba(62, 161, 219, 1) 11.2%,
@@ -52,7 +51,7 @@
       font-size: 3em;
       color: white;
       line-height: normal;
-      padding: 3.5em 0.5em 0 0.5em;
+      padding: 3.5em 0.5em 3.5em 0.5em;
 
       .textLayer-preamble {
         font-size: 0.5em;
@@ -60,6 +59,7 @@
 
       .textLayer-description {
         font-size: 0.5em;
+        margin-bottom: 1em;
       }
 
       a#emailLink {

@@ -6,19 +6,15 @@
 </script>
 
 <div id="aboutme" class="aboutMe container-fluid col-sm-10 offset-sm-1">
-  <div class="empty row" />
   <h2 class="section-title col-md-9">A little about me</h2>
   <div class="row col-md-9">
     <div class="text col-md-7">
       <div class="description">
-        I'm a full-stack engineer (TS/React/GCP) who turns tech debt into growth - I've tripled revenue, 10x'd throughput, and turned companies profitable. Looking for a role where shipping, reliability, and revenue are on the scorecard - and I'm accountable for all three. 
-        <br /><br />
-        My interest in tech began during my first co-op term as an accountant, when I
+        <p>I’m a full-stack engineer (TS/React/GCP) who turns tech debt into growth - I’ve tripled revenue, 10x’d throughput, and turned companies profitable. Looking for a role where shipping, reliability, and revenue are on the scorecard - and I’m accountable for all three.</p>
+        <p>My interest in tech began during my first co-op term as an accountant, when I
         needed to manipulate data in Excel. I went from keyboard shortcuts to
-        VBA to SQL to transferring out of my accounting program and into engineering roles. Read more about my story in the next section.
-        <br /> <br />
-        Here are a few technologies I’ve been working with:
-        <br /><br />
+        VBA to SQL to transferring out of my accounting program and into engineering roles. Read more about my story in the next section.</p>
+        <p>Here are a few technologies I’ve been working with:</p>
       </div>
       <div class="row techlist1 m-0 p-0">
         <div class="row">
@@ -49,6 +45,7 @@
   .aboutMe {
     height: auto;
     color: white;
+    padding-top: 6em;
 
     .techlist1 .row {
       padding: 0;
@@ -78,10 +75,6 @@
       }
     }
 
-    .empty {
-      height: 20em;
-    }
-
     h2.section-title {
       margin: 0 auto 0.5em auto;
       background-image: var(--gradient-pink-blue);
@@ -95,6 +88,14 @@
     }
     .description {
       box-sizing: border-box;
+
+      p {
+        margin: 0 0 1em 0;
+      }
+
+      p:last-child {
+        margin-bottom: 0.5em;
+      }
     }
   }
 </style>

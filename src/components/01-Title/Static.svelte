@@ -9,7 +9,6 @@
     <h1 class="textLayer-title">{titleInfo.title}</h1>
     <div class="textLayer-description">
       {titleInfo.description}
-      <br />
     </div>
     <div class="textLayer-subtitle">
       {titleInfo.subtitle}{#if boolAnimateText}

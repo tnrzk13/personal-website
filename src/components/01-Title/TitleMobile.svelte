@@ -9,7 +9,6 @@
     <h1 class="textLayer-title">{titleInfo.title}</h1>
     <div class="textLayer-description">
       {titleInfo.description}
-      <br />
     </div>
     <div class="textLayer-subtitle">
       {titleInfo.subtitle}
@@ -25,7 +24,6 @@
         {titleInfo.texts[0]}
       {/if}
     </div>
-    <br /><br />
   </div>
 </div>
 
@@ -39,7 +37,7 @@
       font-size: 4rem;
       color: white;
       line-height: normal;
-      padding: 2em 0.25em 0 0.25em;
+      padding: 2em 0.25em 2em 0.25em;
 
       .textLayer-preamble,
       .textLayer-description {

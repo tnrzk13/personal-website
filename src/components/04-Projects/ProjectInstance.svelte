@@ -35,7 +35,6 @@
     />
   </div>
 </div>
-<br /><br />
 
 <style lang="scss">
   @media (max-width: 767px) {
@@ -45,6 +44,8 @@
   }
 
   .project-container {
+    margin-bottom: 2.5em;
+
     &.reversed {
       .img-container {
         order: 2;
