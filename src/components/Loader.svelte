@@ -6,7 +6,15 @@
   const loadingText = "Tony Kwok".toUpperCase().split("");
   const loadingTextLength = loadingText.length;
 
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
   $effect(() => {
+    if (prefersReducedMotion) {
+      boolShowLoadingScreen = false;
+      return;
+    }
     const timer = setTimeout(() => { boolShowLoadingScreen = false; }, 3000);
     return () => clearTimeout(timer);
   });

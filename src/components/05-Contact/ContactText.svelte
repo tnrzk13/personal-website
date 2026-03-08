@@ -94,7 +94,7 @@
         }
         a:hover {
           color: white;
-          scale: 110%;
+          scale: 105%;
         }
       }
 

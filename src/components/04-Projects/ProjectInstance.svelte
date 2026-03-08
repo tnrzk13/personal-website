@@ -89,7 +89,7 @@
     }
 
     img:hover {
-      scale: 110%;
+      scale: 105%;
     }
   }
 

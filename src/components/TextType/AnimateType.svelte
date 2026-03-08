@@ -4,7 +4,18 @@
 
   let state = $state("");
 
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
   let localTexts = texts.map(t => ({ word: t, direction: "type&delete" }));
+
+  const showFinalText = () => {
+    const lastWord = repeat_n_words > 0
+      ? texts[repeat_n_words - 1]
+      : texts[texts.length - 1];
+    state = lastWord;
+  };
 
   const createRepeatArray = () => {
     localTexts = localTexts.slice(0, repeat_n_words);
@@ -46,7 +57,11 @@
   };
 
   onMount(() => {
-    animateType();
+    if (prefersReducedMotion) {
+      showFinalText();
+    } else {
+      animateType();
+    }
   });
 </script>
 

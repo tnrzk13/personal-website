@@ -64,7 +64,7 @@
         }
 
         img.aboutmeimg:hover {
-          scale: 110%;
+          scale: 105%;
           box-shadow: 0 0 65px #6dd5fa, 0 0 0 1px rgb(255 255 255 / 10%),
             0 2px 2px rgb(0 0 0 / 3%), 0 4px 4px rgb(0 0 0 / 4%),
             0 10px 8px rgb(0 0 0 / 5%), 0 15px 15px rgb(0 0 0 / 6%),

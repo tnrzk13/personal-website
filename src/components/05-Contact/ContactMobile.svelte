@@ -80,7 +80,7 @@
           }
           .fa-linkedin:hover {
             color: black;
-            scale: 110%;
+            scale: 105%;
           }
         }
 
@@ -100,7 +100,7 @@
         }
 
         .btn-grad:hover {
-          scale: 110%;
+          scale: 105%;
         }
 
         .btn-grad:active {
