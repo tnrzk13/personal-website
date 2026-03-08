@@ -2,9 +2,9 @@
   let { text = "Button", buttonGradient } = $props();
 </script>
 
-<button class="btn btn-grad btn-lg" style="background-image: {buttonGradient};">
+<span class="btn-grad" role="button" style="background-image: {buttonGradient};">
   {text}
-</button>
+</span>
 
 <style lang="scss">
   .btn-grad {
