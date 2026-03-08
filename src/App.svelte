@@ -185,6 +185,10 @@
             .content-mobile {
                 background-color: var(--darkblue);
             }
+
+            &:has(.content-mobile) {
+                position: relative;
+            }
         }
     }
 </style>
