@@ -19,13 +19,13 @@
     <div class="textLayer-description">
       {contactInfo.description}
     </div>
-    <div class="button-container row">
-      <div class="linkedin-container col-md-3">
+    <div class="button-container">
+      <div class="linkedin-container">
         <a href="https://www.linkedin.com/in/tony-k-kwok/" aria-label="LinkedIn profile">
           <i class="fa-brands fa-linkedin fa-md" aria-hidden="true"></i>
         </a>
       </div>
-      <div class="button-container-column col-md-9">
+      <div class="button-container-column">
         <a
           href="mailto:thisistonykwok@gmail.com?subject={contactInfo.subject}"
           id="emailLink"
@@ -81,12 +81,15 @@
     }
 
     .button-container {
+      display: flex;
+      flex-wrap: wrap;
       font-size: 1rem;
 
       .linkedin-container {
         display: flex;
         justify-content: right;
         align-items: center;
+        flex: 0 0 25%;
 
         a {
           text-decoration: none;
@@ -98,6 +101,17 @@
           color: white;
           scale: 110%;
         }
+      }
+
+      .button-container-column {
+        flex: 0 0 75%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .button-container {
+        .linkedin-container { flex: 0 0 100%; }
+        .button-container-column { flex: 0 0 100%; }
       }
     }
   }

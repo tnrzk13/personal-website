@@ -4,7 +4,7 @@
 </script>
 
 <div id="contact-mobile-wrapper">
-  <div class="textLayer col-sm-10 offset-sm-1">
+  <div class="textLayer section-inset">
     <div class="textLayer-preamble">{contactInfo.preamble}</div>
     <div class="textLayer-title">
       <TextType

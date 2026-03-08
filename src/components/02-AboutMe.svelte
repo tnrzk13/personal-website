@@ -6,10 +6,10 @@
   let techstack = ["Typescript", "React", "Python", "SQL", "Node.JS", "Firebase"];
 </script>
 
-<div id="aboutme" class="aboutMe container-fluid col-sm-10 offset-sm-1" data-reveal-section>
-  <TextReveal text="A little about me" class="section-title col-md-9" />
-  <div class="row col-md-9 reveal" style="transition-delay: 400ms">
-    <div class="text col-md-7">
+<div id="aboutme" class="aboutMe section-inset" data-reveal-section>
+  <TextReveal text="A little about me" class="section-title content-width" />
+  <div class="about-content reveal" style="transition-delay: 400ms">
+    <div class="text">
       <div class="description">
         <p>I'm a full-stack engineer (TS/React/GCP) who turns tech debt into growth - I've tripled revenue, 10x'd throughput, and turned companies profitable. Looking for a role where shipping, reliability, and revenue are on the scorecard - and I'm accountable for all three.</p>
         <p>My interest in tech began during my first co-op term as an accountant, when I
@@ -17,13 +17,11 @@
         VBA to SQL to transferring out of my accounting program and into engineering roles. Read more about my story in the next section.</p>
         <p>Here are a few technologies I've been working with:</p>
       </div>
-      <div class="row techlist1 m-0 p-0">
-        <div class="row">
+      <div class="techlist1">
           <Techstack {techstack} />
-        </div>
       </div>
     </div>
-    <div class="imgdiv col-md-5">
+    <div class="imgdiv">
       <div class="aboutmeimg-container">
         <a href="https://www.linkedin.com/in/tony-k-kwok/">
           <img
@@ -48,14 +46,11 @@
     color: white;
     padding-top: 6em;
 
-    .techlist1 .row {
-      padding: 0;
-    }
-
     .imgdiv {
       position: relative;
       box-sizing: border-box;
       display: grid;
+      flex: 0 0 41.67%;
       .aboutmeimg-container {
         justify-self: center;
         align-self: center;
@@ -80,12 +75,15 @@
       margin: 0 auto 0.5em auto;
       background-image: var(--gradient-pink-blue);
     }
-    .row {
-      margin: 0 auto;
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 75%;
     }
     .text {
       box-sizing: border-box;
       font-size: 1em;
+      flex: 0 0 58.33%;
     }
     .description {
       box-sizing: border-box;
@@ -97,6 +95,14 @@
       p:last-child {
         margin-bottom: 0.5em;
       }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .aboutMe {
+      .about-content { max-width: 100%; }
+      .text { flex: 0 0 100%; }
+      .imgdiv { flex: 0 0 100%; }
     }
   }
 </style>

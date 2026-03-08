@@ -13,9 +13,9 @@
   });
 </script>
 
-<div class="row project-container reveal" class:reversed={isReversed} style="transition-delay: {projectIndex * 100 + 550}ms">
-  <div class="img-container col-sm-7">
-    <div class="main-img-container col-sm-10" class:offset-sm-2={isReversed}>
+<div class="project-container reveal" class:reversed={isReversed} style="transition-delay: {projectIndex * 100 + 550}ms">
+  <div class="img-container">
+    <div class="main-img-container" class:reversed-offset={isReversed}>
       {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
         <a href={projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}>
           <img class="main glowing" src={projectInfo.imgurl} alt="project" />
@@ -25,7 +25,7 @@
       {/if}
     </div>
   </div>
-  <div class="proj-description col-sm-5">
+  <div class="proj-description">
     <CardProject
       title={projectInfo.title}
       urls={projectInfo.urls}
@@ -43,6 +43,8 @@
   }
 
   .project-container {
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 2.5em;
 
     &.reversed {
@@ -56,10 +58,12 @@
 
     .proj-description {
       padding: 0;
+      flex: 0 0 41.67%;
     }
     .img-container {
       align-self: center;
       position: relative;
+      flex: 0 0 58.33%;
 
       img.main {
         padding: 0;
@@ -77,8 +81,24 @@
       }
     }
 
+    .main-img-container {
+      width: 83.33%;
+    }
+    .reversed-offset {
+      margin-left: 16.67%;
+    }
+
     img:hover {
       scale: 110%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .project-container {
+      .img-container { flex: 0 0 100%; }
+      .proj-description { flex: 0 0 100%; }
+      .main-img-container { width: 100%; }
+      .reversed-offset { margin-left: 0; }
     }
   }
 </style>

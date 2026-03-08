@@ -4,7 +4,7 @@
 </script>
 
 <div class="textLayerWrapper">
-  <div class="textLayer col-sm-10 offset-sm-1">
+  <div class="textLayer section-inset">
     <p class="textLayer-preamble">{titleInfo.preamble}</p>
     <h1 class="textLayer-title">{titleInfo.title}</h1>
     <div class="textLayer-description">

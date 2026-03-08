@@ -13,8 +13,8 @@
 </script>
 
 {#if boolShowLoadingScreen}
-  <div id="loading-screen" class="loading container-fluid" transition:fade>
-    <div class="loading-text container-fluid">
+  <div id="loading-screen" class="loading" transition:fade>
+    <div class="loading-text">
       {#each loadingText as letter, index}
         <span style="animation-delay: {index / loadingTextLength}s;"
           >{letter}</span
@@ -29,6 +29,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     height: 100%;
     background: var(--blue);
     z-index: 999;
@@ -37,6 +38,7 @@
 
   .loading-text {
     position: fixed;
+    width: 100%;
     margin: auto;
     text-align: center;
     justify-self: center;

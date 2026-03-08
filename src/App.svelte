@@ -67,7 +67,7 @@
 <svelte:window bind:scrollY={y} />
 
 {#if boolMobileView}
-    <div class="container-fluid">
+    <div class="page-wrapper">
         <TitleMobile {boolAnimateText} {titleInfo} />
         <div id="content-container">
             <main
@@ -92,7 +92,7 @@
     </div>
     <Navbar {boolMobileView} scrollY={y} />
 {:else}
-    <div class="container-fluid">
+    <div class="page-wrapper">
         <Parallax
             containerHeight={titleHeight}
             {pageHalfDown}
@@ -127,7 +127,7 @@
 {/if}
 
 <style lang="scss">
-    .container-fluid {
+    .page-wrapper {
         position: relative;
         width: 100%;
         padding: 0;

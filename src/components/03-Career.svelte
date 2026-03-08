@@ -4,9 +4,9 @@
   import TextReveal from "./TextReveal.svelte";
 </script>
 
-<div id="career" class="container-fluid col-sm-10 col-sm-1" data-reveal-section>
-  <TextReveal text="My last couple adventures" class="section-title col-md-9" />
-  <div id="card-list-container" class="card container-fluid col-md-9">
+<div id="career" class="section-inset" data-reveal-section>
+  <TextReveal text="My last couple adventures" class="section-title content-width" />
+  <div id="card-list-container" class="content-width">
     <div class="card-grid">
       {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }, i}
         <Card {imgurl} {title} {subtitle} {techstack} {points} {logoColor} revealDelayMs={i * 120 + 500} />
@@ -21,15 +21,7 @@
   }
   #career {
     border: 1px solid transparent;
-  }
-  .container-fluid {
-    border: none;
     height: auto;
-
-    .card {
-      background-color: transparent;
-      background-image: none;
-    }
 
     #card-list-container {
       padding: 0;

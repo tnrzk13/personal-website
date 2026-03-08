@@ -4,8 +4,8 @@
   let { imgurl, title, subtitle, points, logoColor, techstack, revealDelayMs = 0 } = $props();
 </script>
 
-<div class="container-fluid card-container reveal" style="transition-delay: {revealDelayMs}ms">
-  <div class="card m-2 cb1 text-center">
+<div class="card-container reveal" style="transition-delay: {revealDelayMs}ms">
+  <div class="career-card">
     <div class="card-body">
       <div class="circle-logo" style="background-image: {logoColor}">
         <img class="logo" src={imgurl} alt="company logo" />
@@ -37,11 +37,13 @@
     padding: 0;
     margin-bottom: 2.5rem;
 
-    .card {
+    .career-card {
       color: white;
       border-radius: 1rem;
       border: none;
       background-color: transparent;
+      margin: 0.5rem;
+      text-align: center;
     }
     .card-body {
       text-align: left;

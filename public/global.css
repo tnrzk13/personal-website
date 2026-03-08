@@ -144,3 +144,19 @@ h2.section-title {
         opacity: 0;
     }
 }
+
+/* Layout utilities replacing Bootstrap grid */
+.section-inset {
+  width: 83.33%;
+  margin-inline: auto;
+}
+@media (max-width: 767px) {
+  .section-inset { width: 100%; padding-inline: 1rem; }
+}
+
+.content-width {
+  max-width: 75%;
+}
+@media (max-width: 767px) {
+  .content-width { max-width: 100%; }
+}

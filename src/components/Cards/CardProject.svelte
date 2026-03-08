@@ -3,8 +3,8 @@
   import Techstack from "../Misc/Techstack.svelte";
 </script>
 
-<div class="div container-fluid">
-  <div class="card border-0 m-2 cb1 text-center">
+<div class="project-card-wrapper">
+  <div class="project-card">
     <div class="card-body">
       {#if urls.projectUrl || urls.codeUrl}
         <span class="title-row">
@@ -40,13 +40,16 @@
 </div>
 
 <style lang="scss">
-  .container-fluid {
+  .project-card-wrapper {
     padding: 0;
 
-    .card {
+    .project-card {
       color: white;
       border-radius: 1rem;
       background-color: transparent;
+      border: none;
+      margin: 0.5rem;
+      text-align: center;
     }
 
     .card-body {
