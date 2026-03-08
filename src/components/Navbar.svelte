@@ -89,9 +89,8 @@
         </li>
         <li>
           <a
-            class="resume-btn {boolMobileView
-              ? 'resume-btn-mobile'
-              : 'resume-btn-desktop'}"
+            class="resume-btn"
+            class:resume-btn-desktop={!boolMobileView}
             href="download/Resume.pdf"
             download="TonyKwokResume"
             onclick={() => navOpen = false}
@@ -181,16 +180,11 @@
       }
     }
 
-    a.resume-btn-desktop {
-      margin-left: 0.5em;
+    a.resume-btn {
       text-decoration: none;
     }
 
-    a.resume-btn-mobile {
-      text-decoration: none;
-    }
-
-    .resume-btn-desktop {
+    .resume-btn {
       background-image: var(--gradient-button-red-blue);
       padding: 0.3em 2em;
       text-align: center;
@@ -206,26 +200,15 @@
       background-position: right center;
       text-decoration: none;
       transform: scale(1.05);
+      color: #fff;
     }
 
     .resume-btn:active {
       filter: brightness(80%);
     }
 
-    .resume-btn-desktop:hover {
-      color: #fff;
-    }
-
-    .resume-btn-mobile {
-      background-image: var(--gradient-button-red-blue);
-      padding: 0.3em 2em;
-      text-align: center;
-      text-transform: uppercase;
-      transition: background-position 0.4s ease, transform 0.3s ease;
-      background-size: 200% auto;
-      color: white;
-      border-radius: 20px;
-      display: block;
+    .resume-btn-desktop {
+      margin-left: 0.5em;
     }
   }
 
