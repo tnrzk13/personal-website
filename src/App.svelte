@@ -50,7 +50,7 @@
     let titleInfo: TitleInfo = {
         preamble: "Hi, my name is",
         title: "Tony Kwok.",
-        subtitle: "I build things with ",
+        subtitle: "I build with ",
         texts: ["data.", "style.", "code."],
         description:
             "I scale SaaS from scrappy to profitable. Full-stack with a bias for measurable impact, getting things done, and owning problems end-to-end.",
