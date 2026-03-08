@@ -9,6 +9,7 @@
     import Projects from "./components/04-Projects.svelte";
     import ContactText from "./components/05-Contact/ContactText.svelte";
     import ContactWrapper from "./components/05-Contact/ContactWrapper.svelte";
+    import Footer from "./components/Footer.svelte";
     import Navbar from "./components/Navbar.svelte";
     import { SM_SCREEN_PX } from "./utils/breakpoints";
 
@@ -88,6 +89,7 @@
                     <ContactWrapper {contactInfo} />
                 </footer>
             </main>
+            <Footer />
         </div>
     </div>
     <Navbar {boolMobileView} scrollY={y} />
@@ -121,6 +123,7 @@
             <footer>
                 <ContactText {contactInfo} {titleHeight} {contactYOffset} />
             </footer>
+            <Footer />
         </div>
     </div>
     <Navbar {boolMobileView} scrollY={y} />
@@ -146,6 +149,10 @@
                 position: relative;
                 z-index: 2;
                 border-radius: 0 0 50% 50% / 0 0 3em 3em;
+
+                section + section {
+                    padding-top: clamp(6rem, 12vw, 18rem);
+                }
             }
 
             .content-desktop {

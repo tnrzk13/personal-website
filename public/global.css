@@ -101,7 +101,7 @@ h2.section-title {
     padding-left: 0.75rem;
     font-family: "Montserrat", sans-serif;
     font-size: 4em;
-    margin: 8em auto 1em auto;
+    margin: 0 auto 1em auto;
     color: transparent;
     -webkit-background-clip: text;
     background-image: var(--gradient-cool-sky);

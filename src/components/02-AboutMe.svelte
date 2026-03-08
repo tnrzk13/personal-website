@@ -28,6 +28,7 @@
             class="aboutmeimg"
             src={getImagePath("images/02-aboutme/self")}
             alt="tony kwok"
+            loading="lazy"
           />
         </a>
       </div>
@@ -72,7 +73,7 @@
     }
 
     :global(h2.section-title) {
-      margin: 0 auto 0.5em auto;
+      margin-bottom: 0.5em;
       background-image: var(--gradient-pink-blue);
     }
     .about-content {
