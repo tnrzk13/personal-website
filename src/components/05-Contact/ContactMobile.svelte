@@ -21,8 +21,8 @@
     </div>
     <div class="links-container">
       <span class="linkedin-container">
-        <a href="https://www.linkedin.com/in/tony-k-kwok/">
-          <i class="fa-brands fa-linkedin fa-lg" />
+        <a href="https://www.linkedin.com/in/tony-k-kwok/" aria-label="LinkedIn profile">
+          <i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
         </a>
       </span>
       <span class="button-container">
@@ -30,7 +30,7 @@
           href="mailto:thisistonykwok@gmail.com?subject={contactInfo.subject}"
           id="emailLink"
         >
-          <button class="btn btn-grad btn-lg">Say Hello</button>
+          <span class="btn-grad" role="button">Say Hello</span>
         </a>
       </span>
     </div>
@@ -70,6 +70,7 @@
         display: flex;
         justify-items: center;
         align-items: center;
+        font-size: 0.5em;
 
         .linkedin-container {
           .fa-linkedin {
@@ -86,9 +87,9 @@
         .btn-grad {
           text-align: center;
           margin: 1em;
-          padding: 0.75em 2.5em;
-          text-align: center;
+          padding: 0.5em 1.75em;
           text-transform: uppercase;
+          font-size: 0.85em;
           transition: 0.5s;
           background-size: 200% auto;
           color: white;

@@ -21,8 +21,8 @@
     </div>
     <div class="button-container row">
       <div class="linkedin-container col-md-3">
-        <a href="https://www.linkedin.com/in/tony-k-kwok/">
-          <i class="fa-brands fa-linkedin fa-md" />
+        <a href="https://www.linkedin.com/in/tony-k-kwok/" aria-label="LinkedIn profile">
+          <i class="fa-brands fa-linkedin fa-md" aria-hidden="true"></i>
         </a>
       </div>
       <div class="button-container-column col-md-9">
