@@ -4,7 +4,7 @@
 </script>
 
 <div id="career" class="container-fluid col-sm-10 col-sm-1">
-  <h1 class="title col-md-9">My last couple adventures</h1>
+  <h2 class="section-title col-md-9">My last couple adventures</h2>
   <div id="card-list-container" class="card container-fluid col-md-9">
     <div class="card-grid">
       {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }}
@@ -15,7 +15,7 @@
 </div>
 
 <style lang="scss">
-  h1.title {
+  h2.section-title {
     background-image: var(--gradient-cool-sky);
   }
   #career {

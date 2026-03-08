@@ -7,32 +7,31 @@
   <div class="card border-0 m-2 cb1 text-center">
     <div class="card-body">
       {#if urls.projectUrl || urls.codeUrl}
-        <span>
+        <span class="title-row">
           {#if urls.projectUrl}
-            <a href={urls.projectUrl}>
-              <h4 class="title">
+            <a href={urls.projectUrl} aria-label="View {title} project">
+              <h3 class="title">
                 {title}
-                <i class="fa-solid fa-link" />
-              </h4>
+                <i class="fa-solid fa-link" aria-hidden="true"></i>
+              </h3>
             </a>
           {:else}
-            <a href={urls.codeUrl}>
-              <h4 class="title">
+            <a href={urls.codeUrl} aria-label="View {title} source code">
+              <h3 class="title">
                 {title}
-              </h4>
+              </h3>
             </a>
           {/if}
-          &nbsp; &nbsp;
           {#if urls.codeUrl}
-            <a href={urls.codeUrl}>
-              <h4 class="title">
-                <i class="fa-brands fa-github" />
-              </h4>
+            <a href={urls.codeUrl} aria-label="View {title} source code on GitHub" class="github-link">
+              <span class="title">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </span>
             </a>
           {/if}
         </span>
       {:else}
-        <h4 class="title">{title}</h4>
+        <h3 class="title">{title}</h3>
       {/if}
       <br /><br />
       <p class="text">{text}</p>
@@ -63,11 +62,17 @@
         filter: brightness(50%);
       }
 
-      h4 {
+      h3, span.title {
         font-family: "Montserrat", sans-serif;
         font-size: 1.5rem;
         padding: 1.5rem 0 0.5rem 0;
         display: inline;
+      }
+
+      .title-row {
+        display: flex;
+        align-items: baseline;
+        gap: 0.75rem;
       }
     }
   }

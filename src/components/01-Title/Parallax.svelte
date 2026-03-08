@@ -100,8 +100,8 @@
     {:else if layer === textLayer && scrollY <= Math.max(0, pageHalfDown)}
       {#if scrollY < containerHeight}
         <div class="textLayer">
-          <div class="textLayer-preamble">{titleInfo.preamble}</div>
-          <div class="textLayer-title">{titleInfo.title}</div>
+          <p class="textLayer-preamble">{titleInfo.preamble}</p>
+          <h1 class="textLayer-title">{titleInfo.title}</h1>
           <div class="textLayer-subtitle">
             {titleInfo.subtitle}{#if boolAnimateText}
               <TextType
@@ -118,7 +118,7 @@
           <div class="textLayer-description">
             {titleInfo.description}
           </div>
-          <div class="scrolldown"><i class="fa-solid fa-angles-down" /></div>
+          <div class="scrolldown"><i class="fa-solid fa-angles-down" aria-hidden="true"></i></div>
         </div>
       {/if}
     {:else if layer >= textLayer && layer < 11}
@@ -181,12 +181,16 @@
       padding-top: 0;
       margin-top: 0;
 
+      .textLayer-title {
+        font-size: min(7vw, 12vh);
+      }
+
       .textLayer-preamble {
         font-size: min(1.3vw, 2.5vh);
       }
 
       .textLayer-subtitle {
-        font-size: min(4.5vw, 8vh);
+        font-size: min(3.5vw, 6vh);
       }
 
       .textLayer-description {

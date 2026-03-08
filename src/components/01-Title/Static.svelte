@@ -5,8 +5,8 @@
 
 <div class="textLayerWrapper">
   <div class="textLayer col-sm-10 offset-sm-1">
-    <div class="textLayer-preamble">{titleInfo.preamble}</div>
-    <div class="textLayer-title">{titleInfo.title}</div>
+    <p class="textLayer-preamble">{titleInfo.preamble}</p>
+    <h1 class="textLayer-title">{titleInfo.title}</h1>
     <div class="textLayer-description">
       {titleInfo.description}
       <br />
@@ -24,7 +24,7 @@
         {titleInfo.texts[0]}
       {/if}
     </div>
-    <div class="scrolldown"><i class="fa-solid fa-angles-down" /></div>
+    <div class="scrolldown"><i class="fa-solid fa-angles-down" aria-hidden="true"></i></div>
   </div>
 </div>
 
@@ -40,8 +40,16 @@
       line-height: normal;
       padding: 2em 0.25em 0 0.25em;
 
+      .textLayer-title {
+        font-size: 1.5em;
+      }
+
       .textLayer-preamble {
         font-size: 0.5em;
+      }
+
+      .textLayer-subtitle {
+        font-size: 0.7em;
       }
 
       .textLayer-description {

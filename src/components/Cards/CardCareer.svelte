@@ -10,12 +10,12 @@
       <div class="circle-logo" style="background-image: {logoColor}">
         <img class="logo" src={imgurl} alt="company logo" />
       </div>
-      <h4 class="card-title">{title}</h4>
-      <h6 class="card-subtitle">{subtitle}</h6>
+      <h3 class="card-title">{title}</h3>
+      <p class="card-subtitle">{subtitle}</p>
       <div class="techstack-wrapper">
         <Techstack {techstack} />
       </div>
-      <p class="card-text">
+      <ul class="card-text">
         {#each points as point}
           <li>
             {#each point as part}
@@ -27,7 +27,7 @@
             {/each}
           </li>
         {/each}
-      </p>
+      </ul>
     </div>
   </div>
 </div>
@@ -46,12 +46,12 @@
     .card-body {
       text-align: left;
       padding: 0;
-      h4 {
+      h3 {
         font-family: "Montserrat", sans-serif;
         font-size: 1.25rem;
         padding: 1.5rem 0 0.5rem 0;
       }
-      h6 {
+      p.card-subtitle {
         font-size: 1.15rem;
         padding-bottom: 0.5rem;
         color: rgb(200, 200, 200);

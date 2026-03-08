@@ -5,8 +5,8 @@
 
 <div class="textLayerWrapper">
   <div class="textLayer col-sm-10 offset-sm-1">
-    <div class="textLayer-preamble">{titleInfo.preamble}</div>
-    <div class="textLayer-title">{titleInfo.title}</div>
+    <p class="textLayer-preamble">{titleInfo.preamble}</p>
+    <h1 class="textLayer-title">{titleInfo.title}</h1>
     <div class="textLayer-description">
       {titleInfo.description}
       <br />
@@ -46,8 +46,15 @@
         font-size: 0.35em;
       }
 
-      .textLayer-title,
+      .textLayer-title {
+        font-size: 1.5em;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-image: var(--gradient-mint-blue-dark);
+      }
+
       .textLayer-subtitle {
+        font-size: 0.65em;
         color: transparent;
         -webkit-background-clip: text;
         background-image: var(--gradient-mint-blue-dark);
