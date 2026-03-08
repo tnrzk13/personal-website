@@ -8,9 +8,7 @@
     import ContactText from "./components/05-Contact/ContactText.svelte";
     import ContactWrapper from "./components/05-Contact/ContactWrapper.svelte";
     import Navbar from "./components/Navbar.svelte";
-
-    const smScreenSize = 768;
-    const mdScreenSize = 992;
+    import { SM_SCREEN_PX } from "./utils/breakpoints";
 
     let boolAnimateText = $state(true);
     let titleHeight = $state(0);
@@ -23,7 +21,7 @@
 
     const manageHeights = () => {
         titleHeight = window.innerHeight;
-        boolMobileView = window.innerWidth < smScreenSize;
+        boolMobileView = window.innerWidth < SM_SCREEN_PX;
         contactYOffset = titleHeight / 3;
         pageHalfDown = (titleHeight + contentHeight) / 2;
         contactTop = contentHeight;

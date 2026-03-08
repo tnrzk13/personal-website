@@ -1,86 +1,40 @@
 <script>
   import CardProject from "../Cards/CardProject.svelte";
+  import { SM_SCREEN_PX } from "../../utils/breakpoints";
 
   let { projectIndex, projectInfo } = $props();
 
-  let smScreenSize = 576;
+  let innerWidth = $state(window.innerWidth);
+  const isReversed = $derived(innerWidth >= SM_SCREEN_PX && projectIndex % 2 !== 0);
+
+  $effect(() => {
+    const onResize = () => (innerWidth = window.innerWidth);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  });
 </script>
 
-{#if window.innerWidth < smScreenSize || projectIndex % 2 === 0}
-  <div class="row project-container">
-    <div class="img-container col-sm-7">
-      <div class="main-img-container-even col-sm-10 main-img-container">
-        {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
-          {#if projectInfo.urls.projectUrl}
-            <a href={projectInfo.urls.projectUrl}>
-              <img
-                class="main glowing"
-                src={projectInfo.imgurl}
-                alt="project"
-              />
-            </a>
-          {:else}
-            <a href={projectInfo.urls.codeUrl}>
-              <img
-                class="main glowing"
-                src={projectInfo.imgurl}
-                alt="project"
-              />
-            </a>
-          {/if}
-        {:else}
-          <img class="main" src={projectInfo.imgurl} alt="project" />
-        {/if}
-      </div>
-    </div>
-    <div class="proj-description col-sm-5">
-      <CardProject
-        title={projectInfo.title}
-        urls={projectInfo.urls}
-        text={projectInfo.text}
-        techstack={projectInfo.techstack}
-      />
+<div class="row project-container" class:reversed={isReversed}>
+  <div class="img-container col-sm-7">
+    <div class="main-img-container col-sm-10" class:offset-sm-2={isReversed}>
+      {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
+        <a href={projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}>
+          <img class="main glowing" src={projectInfo.imgurl} alt="project" />
+        </a>
+      {:else}
+        <img class="main" src={projectInfo.imgurl} alt="project" />
+      {/if}
     </div>
   </div>
-{:else}
-  <div class="row project-container">
-    <div class="proj-description col-sm-5">
-      <CardProject
-        title={projectInfo.title}
-        urls={projectInfo.urls}
-        text={projectInfo.text}
-        techstack={projectInfo.techstack}
-      />
-    </div>
-    <div class="img-container col-sm-7">
-      <div
-        class="main-img-container-odd col-sm-10 offset-sm-2 main-img-container"
-      >
-        {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
-          {#if projectInfo.urls.projectUrl}
-            <a href={projectInfo.urls.projectUrl}>
-              <img
-                class="main main-odd glowing"
-                src={projectInfo.imgurl}
-                alt="project"
-              />
-            </a>
-          {:else}
-            <a href={projectInfo.urls.codeUrl}>
-              <img
-                class="main main-odd glowing"
-                src={projectInfo.imgurl}
-                alt="project"
-              />
-            </a>
-          {/if}
-        {:else}
-          <img class="main main-odd" src={projectInfo.imgurl} alt="project" />
-        {/if}
-      </div>
-    </div>
+  <div class="proj-description col-sm-5">
+    <CardProject
+      title={projectInfo.title}
+      urls={projectInfo.urls}
+      text={projectInfo.text}
+      techstack={projectInfo.techstack}
+    />
   </div>
-{/if}
+</div>
 <br /><br />
 
 <style lang="scss">
@@ -91,16 +45,21 @@
   }
 
   .project-container {
+    &.reversed {
+      .img-container {
+        order: 2;
+      }
+      .proj-description {
+        order: 1;
+      }
+    }
+
     .proj-description {
       padding: 0;
     }
     .img-container {
       align-self: center;
       position: relative;
-
-      .main-img-container-odd {
-        right: 0;
-      }
 
       img.main {
         padding: 0;
