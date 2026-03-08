@@ -18,10 +18,10 @@
     <div class="main-img-container" class:reversed-offset={isReversed}>
       {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
         <a href={projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}>
-          <img class="main glowing" src={projectInfo.imgurl} alt="project" />
+          <img class="main glowing" src={projectInfo.imgurl} alt="project" loading="lazy" />
         </a>
       {:else}
-        <img class="main" src={projectInfo.imgurl} alt="project" />
+        <img class="main" src={projectInfo.imgurl} alt="project" loading="lazy" />
       {/if}
     </div>
   </div>
