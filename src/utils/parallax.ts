@@ -5,9 +5,10 @@ export const getContactParallax = (
   yScroll: number,
   contactYOffset: number
 ): number => {
-  const layerize = (x: number) => (x * layer) / numImgLayers;
+  const parallaxDepth = numImgLayers + 4;
+  const layerize = (x: number) => (x * layer) / parallaxDepth;
   const reverseLayerize = (x: number) =>
-    (x * (numImgLayers - layer)) / numImgLayers;
+    (x * (parallaxDepth - layer)) / parallaxDepth;
   return Math.max(
     0,
     layerize(imgHeight - yScroll) + reverseLayerize(contactYOffset)

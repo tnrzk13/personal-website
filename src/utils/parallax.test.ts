@@ -91,10 +91,18 @@ describe("getContactParallax", () => {
     expect(result).toBe(contactYOffset);
   });
 
-  it("returns imgHeight - yScroll for max layer (full parallax)", () => {
+  it("blends scroll and offset for max layer (no layer reaches full scroll rate)", () => {
     const yScroll = 100;
     const result = getContactParallax(numImgLayers, numImgLayers, imgHeight, yScroll, contactYOffset);
-    expect(result).toBe(imgHeight - yScroll);
+    const parallaxDepth = numImgLayers + 4;
+    const expected = ((imgHeight - yScroll) * numImgLayers) / parallaxDepth +
+                     (contactYOffset * (parallaxDepth - numImgLayers)) / parallaxDepth;
+    expect(result).toBeCloseTo(expected);
+  });
+
+  it("front layer has positive value at old snap point", () => {
+    const result = getContactParallax(numImgLayers, numImgLayers, imgHeight, imgHeight, contactYOffset);
+    expect(result).toBeGreaterThan(0);
   });
 
   it("clamps to 0 (never returns negative)", () => {
