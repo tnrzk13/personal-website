@@ -21,7 +21,7 @@
     let boolMobileView = $state(true);
 
     const manageHeights = () => {
-        titleHeight = window.innerWidth * 0.5625;
+        titleHeight = window.innerHeight;
         boolMobileView = window.innerWidth < smScreenSize;
         contactYOffset = titleHeight / 3;
         pageHalfDown = (titleHeight + contentHeight) / 2;

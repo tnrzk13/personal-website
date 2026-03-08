@@ -143,7 +143,9 @@
     img {
       position: absolute;
       width: 100%;
-      height: auto;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center bottom;
       will-change: transform;
       left: 0;
     }
