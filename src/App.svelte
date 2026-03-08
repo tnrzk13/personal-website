@@ -1,5 +1,7 @@
 <script lang="ts">
     import type { TitleInfo, ContactInfo } from "./types";
+    import Lenis from "lenis";
+    import "lenis/dist/lenis.css";
     import Parallax from "./components/01-Title/Parallax.svelte";
     import TitleMobile from "./components/01-Title/TitleMobile.svelte";
     import AboutMe from "./components/02-AboutMe.svelte";
@@ -36,6 +38,11 @@
     $effect(() => {
         window.addEventListener("resize", manageHeights);
         return () => window.removeEventListener("resize", manageHeights);
+    });
+
+    $effect(() => {
+        const lenis = new Lenis({ autoRaf: true, anchors: true });
+        return () => lenis.destroy();
     });
 
     let titleInfo: TitleInfo = {
