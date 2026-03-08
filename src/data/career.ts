@@ -1,9 +1,6 @@
 import { getImagePath } from "../utils/imagePath";
 import type { CareerCard } from "../types";
 
-const getCssVar = (name: string): string =>
-  getComputedStyle(document.querySelector(":root")!).getPropertyValue(name);
-
 export const cardList: CareerCard[] = [
   {
     imgurl: getImagePath("images/03-career/alethea"),
@@ -84,7 +81,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: getCssVar("--gradient-terminal"),
+    logoColor: "var(--gradient-terminal)",
   },
   {
     imgurl: getImagePath("images/03-career/myriade"),
@@ -147,7 +144,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: getCssVar("--gradient-sweet-morning"),
+    logoColor: "var(--gradient-sweet-morning)",
   },
   {
     imgurl: getImagePath("images/03-career/npx"),
@@ -198,7 +195,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: getCssVar("--gradient-lunada"),
+    logoColor: "var(--gradient-lunada)",
   },
   {
     imgurl: getImagePath("images/03-career/360insights"),
@@ -261,7 +258,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: getCssVar("--gradient-telegram"),
+    logoColor: "var(--gradient-telegram)",
   },
   {
     imgurl: getImagePath("images/03-career/quarter4"),
@@ -294,7 +291,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: getCssVar("--gradient-cosmic-fusion"),
+    logoColor: "var(--gradient-cosmic-fusion)",
   },
   {
     imgurl: getImagePath("images/03-career/marsh"),
@@ -343,7 +340,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: getCssVar("--gradient-amin"),
+    logoColor: "var(--gradient-amin)",
   },
   {
     imgurl: getImagePath("images/03-career/jpmorgan"),
@@ -366,7 +363,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: getCssVar("--gradient-very-blue"),
+    logoColor: "var(--gradient-very-blue)",
   },
   {
     imgurl: getImagePath("images/03-career/goldman"),
@@ -389,6 +386,6 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: getCssVar("--gradient-skyline"),
+    logoColor: "var(--gradient-skyline)",
   },
 ];
