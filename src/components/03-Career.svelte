@@ -2,9 +2,10 @@
   import Card from "./Cards/CardCareer.svelte";
   import { cardList } from "../data/career";
   import TextReveal from "./TextReveal.svelte";
+  import { reveal } from "../actions/reveal";
 </script>
 
-<div id="career" class="section-inset" data-reveal-section>
+<div id="career" class="section-inset" data-reveal-section use:reveal>
   <TextReveal text="My last couple adventures" class="section-title content-width" />
   <div id="card-list-container" class="content-width">
     <div class="card-grid">

@@ -2,11 +2,12 @@
   import Techstack from "./Misc/Techstack.svelte";
   import { getImagePath } from "../utils/imagePath";
   import TextReveal from "./TextReveal.svelte";
+  import { reveal } from "../actions/reveal";
 
   let techstack = ["Typescript", "React", "Python", "SQL", "Node.JS", "Firebase"];
 </script>
 
-<div id="aboutme" class="aboutMe section-inset" data-reveal-section>
+<div id="aboutme" class="aboutMe section-inset" data-reveal-section use:reveal>
   <TextReveal text="A little about me" class="section-title content-width" />
   <div class="about-content reveal" style="transition-delay: 400ms">
     <div class="text">
