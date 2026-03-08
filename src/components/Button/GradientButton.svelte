@@ -1,20 +1,15 @@
 <script>
-  let { text = "Button", buttonGradient } = $props();
+  let { text = "Button" } = $props();
 </script>
 
-<span class="btn-grad" role="button" style="background-image: {buttonGradient};">
+<span class="btn-grad" role="button">
   {text}
 </span>
 
 <style lang="scss">
   .btn-grad {
     text-align: center;
-    background-image: linear-gradient(
-      to right,
-      #24c6dc 0%,
-      #514a9d 51%,
-      #24c6dc 100%
-    );
+    background-image: var(--gradient-button-blue-purple);
     margin: 1em;
     padding: 0.75em 2.5em;
     text-align: center;

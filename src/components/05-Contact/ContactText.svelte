@@ -1,5 +1,5 @@
 <script>
-  import TextType from "../TextType/TextType.svelte";
+  import AnimateType from "../TextType/AnimateType.svelte";
   import GradientButton from "../Button/GradientButton.svelte";
   let { contactInfo, titleHeight, contactYOffset } = $props();
 </script>
@@ -8,7 +8,7 @@
   <div class="textLayer">
     <div class="textLayer-preamble">{contactInfo.preamble}</div>
     <div class="textLayer-title">
-      <TextType
+      <AnimateType
         texts={contactInfo.texts}
         delay={100}
         num_loops={999}
@@ -30,12 +30,7 @@
           href="mailto:thisistonykwok@gmail.com?subject={contactInfo.subject}"
           id="emailLink"
         >
-          <GradientButton
-            text="Say Hello"
-            buttonGradient={getComputedStyle(
-              document.querySelector(":root")
-            ).getPropertyValue("--gradient-button-blue-purple")}
-          />
+          <GradientButton text="Say Hello" />
         </a>
       </div>
     </div>
