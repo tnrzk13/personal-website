@@ -19,12 +19,13 @@
     padding: 0.75em 2.5em;
     text-align: center;
     text-transform: uppercase;
+    font-size: 1.25rem;
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
     box-shadow: 0 0 20px #eee;
     border-radius: 10px;
-    display: block;
+    display: inline-block;
     font-family: "Montserrat", sans-serif;
   }
 

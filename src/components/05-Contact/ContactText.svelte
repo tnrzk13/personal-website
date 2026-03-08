@@ -81,6 +81,8 @@
     }
 
     .button-container {
+      font-size: 1rem;
+
       .linkedin-container {
         display: flex;
         justify-content: right;
@@ -89,6 +91,7 @@
         a {
           text-decoration: none;
           color: black;
+          font-size: 3rem;
         }
         a:hover {
           color: white;
