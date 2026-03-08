@@ -1,6 +1,6 @@
 <script>
-  let { titleInfo, boolAnimateText } = $props();
-  import TextType from "../TextType/TextType.svelte";
+  let { titleInfo } = $props();
+  import AnimateType from "../TextType/AnimateType.svelte";
 </script>
 
 <div class="textLayerWrapper">
@@ -17,17 +17,13 @@
     </div>
     <div class="textLayer-subtitle">
       {titleInfo.subtitle}
-      {#if boolAnimateText}
-        <TextType
+        <AnimateType
           texts={titleInfo.texts}
           delay={100}
           num_loops={2}
           repeat_n_words={1}
           blinker_iter_count={14}
         />
-      {:else}
-        {titleInfo.texts[0]}
-      {/if}
     </div>
   </div>
 </div>

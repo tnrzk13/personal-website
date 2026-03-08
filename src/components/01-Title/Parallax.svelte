@@ -1,10 +1,10 @@
 <script>
   import { onMount } from "svelte";
-  import TextType from "../TextType/TextType.svelte";
+  import AnimateType from "../TextType/AnimateType.svelte";
   import { getImagePath } from "../../utils/imagePath";
   import { getContactParallax as getContactParallaxBase, getLayerScale, getLayerOpacity, getLayerOffsetPx } from "../../utils/parallax";
 
-  let { containerHeight, titleInfo, boolAnimateText = true, pageHalfDown = 1000, contactTop, contactYOffset, footerHeight = 0, scrollY = 0 } = $props();
+  let { containerHeight, titleInfo, pageHalfDown = 1000, contactTop, contactYOffset, footerHeight = 0, scrollY = 0 } = $props();
 
   const numLayers = 11;
   const layers = [...Array(numLayers).keys()];
@@ -72,17 +72,13 @@
           <p class="textLayer-preamble">{titleInfo.preamble}</p>
           <h1 class="textLayer-title">{titleInfo.title}</h1>
           <div class="textLayer-subtitle">
-            {titleInfo.subtitle}{#if boolAnimateText}
-              <TextType
+            {titleInfo.subtitle}<AnimateType
                 texts={titleInfo.texts}
                 delay={100}
                 num_loops={2}
                 repeat_n_words={1}
                 blinker_iter_count={10}
               />
-            {:else}
-              {titleInfo.texts[0]}
-            {/if}
           </div>
           <div class="textLayer-description">
             {titleInfo.description}
@@ -96,22 +92,6 @@
           ? getContactParallax(layer)
           : (-scrollY * (layer - 1)) / (layers.length - 1)) + getLayerOffsetPx(layer)}px){getLayerScale(layer)}"
         src={getImagePath(`images/intro/00${layer - 1}`)}
-        alt="parallax layer {layer - 1}"
-      />
-    {:else if layer >= 11}
-      <img
-        style="transform: translateY({boolShowContact
-          ? getContactParallax(layer)
-          : (-scrollY * (layer - 1)) / (layers.length - 1)}px)"
-        src={getImagePath(`images/intro/0${layer - 1}`)}
-        alt="parallax layer {layer - 1}"
-      />
-    {:else if layer === 14}
-      <img
-        style="transform: translateY({boolShowContact
-          ? getContactParallax(layer)
-          : -scrollY + 10}px)"
-        src={getImagePath(`images/intro/0${layer - 1}`)}
         alt="parallax layer {layer - 1}"
       />
     {/if}
