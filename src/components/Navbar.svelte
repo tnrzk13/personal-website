@@ -1,7 +1,7 @@
 <script>
   import { slide } from "svelte/transition";
   import { getImagePath } from "../utils/imagePath";
-  import GradientButton from "./Button/GradientButton.svelte";
+
   let { boolMobileView, scrollY = 0 } = $props();
 
   let showNavBar = $state(false);
@@ -51,12 +51,9 @@
           href="download/Resume.pdf"
           download="TonyKwokResume"
         >
-          <GradientButton
-            text="Resume"
-            buttonGradient={boolMobileView
-              ? "linear-gradient(to right, #fc354c 0%, #0abfbc 51%, #fc354c 100%)"
-              : "var(--gradient-button-red-blue)"}
-          />
+          <button class="btn {boolMobileView ? 'btn-grad-mobile' : 'btn-grad'}">
+            Resume
+          </button>
         </a>
       </ul>
     </div>
@@ -102,6 +99,50 @@
 
     a.download-container-mobile {
       text-decoration: none;
+    }
+
+    .btn-grad {
+      background-image: var(--gradient-button-red-blue);
+      padding-right: 2em;
+      padding-left: 2em;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;
+      box-shadow: 0 0 20px #eee;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .btn:hover {
+      background-position: right center;
+      text-decoration: none;
+      scale: 110%;
+    }
+
+    .btn:active {
+      filter: brightness(50%);
+    }
+
+    .btn-grad:hover {
+      color: #fff;
+    }
+
+    .btn-grad-mobile {
+      background-image: linear-gradient(
+        to right,
+        #fc354c 0%,
+        #0abfbc 51%,
+        #fc354c 100%
+      );
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;
+      box-shadow: 0 0 20px #eee;
+      display: block;
     }
   }
 </style>
