@@ -164,6 +164,23 @@
                     var(--blue) 5%,
                     var(--darkblue) 50%
                 );
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5em;
+                    left: 0;
+                    right: 0;
+                    height: 10em;
+                    background: radial-gradient(
+                        80% 100% at 50% 0%,
+                        #040d21 15%,
+                        rgba(4, 13, 33, 0.65) 45%,
+                        rgba(4, 13, 33, 0.25) 70%,
+                        transparent
+                    );
+                    pointer-events: none;
+                }
             }
 
             .content-mobile {
