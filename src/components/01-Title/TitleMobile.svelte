@@ -4,6 +4,11 @@
 </script>
 
 <div class="textLayerWrapper">
+  <picture class="hero-bg">
+    <source srcset="images/intro/000.avif" type="image/avif" />
+    <img src="images/intro/000.png" alt="" role="presentation" />
+  </picture>
+  <div class="hero-overlay"></div>
   <div class="textLayer section-inset">
     <p class="textLayer-preamble">{titleInfo.preamble}</p>
     <h1 class="textLayer-title">{titleInfo.title}</h1>
@@ -29,9 +34,39 @@
 
 <style lang="scss">
   .textLayerWrapper {
+    position: relative;
+    overflow: hidden;
     background-color: var(--darkblue);
 
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(
+        to bottom,
+        rgba(4, 13, 33, 0.45) 0%,
+        rgba(4, 13, 33, 0.6) 40%,
+        rgba(4, 13, 33, 0.92) 75%,
+        var(--darkblue) 100%
+      );
+    }
+
     .textLayer {
+      position: relative;
+      z-index: 2;
       text-align: left;
       font-family: "Montserrat", sans-serif;
       font-size: 4rem;
