@@ -7,6 +7,7 @@ export interface CareerCard {
   imgurl: string;
   title: string;
   subtitle: string;
+  datePeriod: string;
   techstack: string[];
   points: TextPart[][];
   logoColor: string;

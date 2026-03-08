@@ -6,6 +6,7 @@ export const cardList: CareerCard[] = [
     imgurl: getImagePath("images/03-career/alethea"),
     title: "Software Engineer",
     subtitle: "Alethea",
+    datePeriod: "2022 - 2024",
     techstack: ["React", "Typescript", "Firebase", "Vite", "Typesense"],
     points: [
       [
@@ -87,6 +88,7 @@ export const cardList: CareerCard[] = [
     imgurl: getImagePath("images/03-career/myriade"),
     title: "Software Developer",
     subtitle: "Myriade",
+    datePeriod: "2021 - 2022",
     techstack: ["Node.js", "Express.js", "PostgreSQL"],
     points: [
       [
@@ -150,6 +152,7 @@ export const cardList: CareerCard[] = [
     imgurl: getImagePath("images/03-career/npx"),
     title: "Innovation Catalyst Intern",
     subtitle: "Nuclear Promise X",
+    datePeriod: "2020 - 2021",
     techstack: ["MSPowerApps", "PowerBI", "SQL", "Python"],
     points: [
       [
@@ -201,6 +204,7 @@ export const cardList: CareerCard[] = [
     imgurl: getImagePath("images/03-career/360insights"),
     title: "Full Stack Developer",
     subtitle: "360insights",
+    datePeriod: "2020",
     techstack: ["Javascript", "Node.JS", "React"],
     points: [
       [
@@ -264,6 +268,7 @@ export const cardList: CareerCard[] = [
     imgurl: getImagePath("images/03-career/quarter4"),
     title: "Database Specialist",
     subtitle: "Quarter4",
+    datePeriod: "2019 - 2020",
     techstack: ["Python", "SQL"],
     points: [
       [
@@ -297,6 +302,7 @@ export const cardList: CareerCard[] = [
     imgurl: getImagePath("images/03-career/marsh"),
     title: "Business Application Developer",
     subtitle: "Marsh",
+    datePeriod: "2019",
     techstack: ["VBA"],
     points: [
       [
@@ -346,6 +352,7 @@ export const cardList: CareerCard[] = [
     imgurl: getImagePath("images/03-career/jpmorgan"),
     title: "Software Engineering Virtual Experience Program",
     subtitle: "J.P. Morgan",
+    datePeriod: "2020",
     techstack: ["React"],
     points: [
       [
@@ -369,6 +376,7 @@ export const cardList: CareerCard[] = [
     imgurl: getImagePath("images/03-career/goldman"),
     title: "Software Engineering Virtual Experience Program",
     subtitle: "Goldman Sachs",
+    datePeriod: "2020",
     techstack: ["Hashcat"],
     points: [
       [

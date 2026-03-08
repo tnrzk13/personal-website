@@ -1,17 +1,22 @@
 <script>
   import Techstack from "../Misc/Techstack.svelte";
 
-  let { imgurl, title, subtitle, points, logoColor, techstack, revealDelayMs = 0 } = $props();
+  let { imgurl, title, subtitle, datePeriod, points, logoColor, techstack, revealDelayMs = 0 } = $props();
 </script>
 
 <div class="card-container reveal" style="transition-delay: {revealDelayMs}ms">
   <div class="career-card">
-    <div class="card-body">
+    <div class="card-header">
       <div class="circle-logo" style="background-image: {logoColor}">
-        <img class="logo" src={imgurl} alt="company logo" />
+        <img class="logo" src={imgurl} alt="company logo" loading="lazy" />
       </div>
-      <h3 class="card-title">{title}</h3>
-      <p class="card-subtitle">{subtitle}</p>
+      <div class="header-text">
+        <h3 class="card-title">{title}</h3>
+        <p class="card-subtitle">{subtitle}</p>
+      </div>
+      <span class="date-period">{datePeriod}</span>
+    </div>
+    <div class="card-body">
       <div class="techstack-wrapper">
         <Techstack {techstack} />
       </div>
@@ -40,36 +45,71 @@
     .career-card {
       color: white;
       border-radius: 1rem;
-      border: none;
-      background-color: transparent;
-      margin: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 1.75rem;
       text-align: center;
+      transition: border-color 0.3s ease, background 0.3s ease;
+
+      &:hover {
+        border-color: rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.05);
+      }
     }
-    .card-body {
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .header-text {
+      flex: 1;
       text-align: left;
-      padding: 0;
+      min-width: 0;
+
       h3 {
         font-family: "Montserrat", sans-serif;
         font-size: 1.25rem;
-        padding: 1.5rem 0 0.5rem 0;
+        line-height: 1.3;
       }
       p.card-subtitle {
-        font-size: 1.15rem;
-        padding-bottom: 0.5rem;
+        font-size: 1.05rem;
         color: rgb(200, 200, 200);
+        margin-top: 0.15rem;
       }
+    }
+
+    .date-period {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+      white-space: nowrap;
+      align-self: flex-start;
+      margin-top: 0.25rem;
+    }
+
+    .card-body {
+      text-align: left;
+      padding: 0;
 
       span.point-part {
         color: rgb(200, 200, 200);
       }
     }
+
     .circle-logo {
-      width: 5em;
-      height: 5em;
+      width: 4em;
+      height: 4em;
+      min-width: 4em;
       border-radius: 50%;
       display: grid;
+
       img.logo {
-        width: 4em;
+        width: 3.2em;
         height: auto;
         margin-left: auto;
         margin-right: auto;
@@ -80,7 +120,7 @@
 
     .techstack-wrapper {
       margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
     }
   }
 </style>

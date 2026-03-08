@@ -8,8 +8,8 @@
   <TextReveal text="My last couple adventures" class="section-title content-width" />
   <div id="card-list-container" class="content-width">
     <div class="card-grid">
-      {#each cardList as { imgurl, title, subtitle, techstack, points, logoColor }, i}
-        <Card {imgurl} {title} {subtitle} {techstack} {points} {logoColor} revealDelayMs={i * 120 + 500} />
+      {#each cardList as { imgurl, title, subtitle, datePeriod, techstack, points, logoColor }, i}
+        <Card {imgurl} {title} {subtitle} {datePeriod} {techstack} {points} {logoColor} revealDelayMs={i * 120 + 500} />
       {/each}
     </div>
   </div>
