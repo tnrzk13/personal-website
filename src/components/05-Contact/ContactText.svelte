@@ -81,10 +81,7 @@
     }
 
     .button-container {
-      // justify-self: center;
-
       .linkedin-container {
-        // border: 3px solid white;
         display: flex;
         justify-content: right;
         align-items: center;

@@ -10,9 +10,5 @@
 
 <style lang="scss">
   #contact-wrapper {
-    // position: fixed;
-    // bottom: 0;
-    // z-index: -1;
-    // width: 100%;
   }
 </style>
