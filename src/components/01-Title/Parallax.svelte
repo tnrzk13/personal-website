@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import TextType from "../TextType/TextType.svelte";
   import { getImagePath } from "../../utils/imagePath";
+  import { getContactParallax as getContactParallaxBase, getLayerScale, getLayerOpacity, getLayerOffsetPx } from "../../utils/parallax";
 
   let { containerHeight, titleInfo, boolAnimateText = true, pageHalfDown = 1000, contactTop, contactYOffset, scrollY = 0 } = $props();
 
@@ -24,46 +25,14 @@
     update();
   });
 
-  // calculates img shift when scrolling on the contact section
-  // the contact section is 2/3 the size of the title, so we only want to shift by 2/3 the amount
   const getContactParallax = (layer) => {
-    const layerize = (x) => {
-      return (x * layer) / numImgLayers;
-    };
-    const reverseLayerize = (x) => {
-      return (x * (numImgLayers - layer)) / numImgLayers;
-    };
-    return Math.max(
-      0,
-      layerize(imgHeight - yScroll) + reverseLayerize(contactYOffset)
-    );
+    return getContactParallaxBase(layer, numImgLayers, imgHeight, yScroll, contactYOffset);
   };
 
   $effect(() => {
     boolShowContact = scrollY > pageHalfDown;
     update();
   });
-
-  const getLayerScale = (layer) => {
-    if (layer >= 7) return " scale(1.04)";
-    if (layer >= 5) return " scale(1.02)";
-    return "";
-  };
-
-  const getLayerOpacity = (layer) => {
-    if (layer === 0) return 0.85;
-    if (layer === 1) return 0.92;
-    return 1;
-  };
-
-  const getLayerOffsetPx = (layer) => {
-    if (layer >= 9) return 10;
-    if (layer >= 7) return 25;
-    if (layer >= 5) return 40;
-    if (layer >= 4) return 50;
-    if (layer >= 1) return 50;
-    return 0;
-  };
 
   $effect(() => {
     window.addEventListener("resize", update);
