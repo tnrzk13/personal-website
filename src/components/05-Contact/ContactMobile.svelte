@@ -1,13 +1,13 @@
 <script>
   let { contactInfo } = $props();
-  import TextType from "../TextType/TextType.svelte";
+  import AnimateType from "../TextType/AnimateType.svelte";
 </script>
 
 <div id="contact-mobile-wrapper">
   <div class="textLayer section-inset">
     <div class="textLayer-preamble">{contactInfo.preamble}</div>
     <div class="textLayer-title">
-      <TextType
+      <AnimateType
         texts={contactInfo.texts}
         delay={100}
         num_loops={999}

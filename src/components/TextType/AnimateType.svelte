@@ -4,7 +4,7 @@
 
   let state = $state("");
 
-  let localTexts = texts.map(t => ({ ...t }));
+  let localTexts = texts.map(t => ({ word: t, direction: "type&delete" }));
 
   const createRepeatArray = () => {
     localTexts = localTexts.slice(0, repeat_n_words);
