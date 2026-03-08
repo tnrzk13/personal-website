@@ -1,5 +1,5 @@
 <script>
-  export let techstack = [];
+  let { techstack = [] } = $props();
 </script>
 
 <span class="techstack-container">

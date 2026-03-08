@@ -1,18 +1,14 @@
 <script>
   import { onMount } from "svelte";
-  export let texts = [];
-  export let delay = 60;
-  export let word_complete_delay = 1000;
-  export let num_loops = 1;
-  export let repeat_n_words = 0;
-  export let blink_time = 1000;
-  export let blinker_iter_count = "infinite";
+  let { texts = [], delay = 60, word_complete_delay = 1000, num_loops = 1, repeat_n_words = 0, blink_time = 1000, blinker_iter_count = "infinite" } = $props();
 
-  let state = "";
+  let state = $state("");
+
+  let localTexts = texts.map(t => ({ ...t }));
 
   const createRepeatArray = () => {
-    texts = texts.slice(0, repeat_n_words);
-    texts[texts.length - 1].direction = "type";
+    localTexts = localTexts.slice(0, repeat_n_words);
+    localTexts[localTexts.length - 1].direction = "type";
   };
 
   const animateType = () => {
@@ -23,7 +19,7 @@
         createRepeatArray();
       }
 
-      texts.forEach(({ direction, word }) => {
+      localTexts.forEach(({ direction, word }) => {
         for (let i = 0; i < word.length; i++) {
           setTimeout(() => {
             state = state + word[i];

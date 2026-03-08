@@ -1,5 +1,5 @@
 <script>
-  export let titleInfo, boolAnimateText;
+  let { titleInfo, boolAnimateText } = $props();
   import TextType from "../TextType/TextType.svelte";
 </script>
 

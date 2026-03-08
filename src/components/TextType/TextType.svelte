@@ -1,22 +1,12 @@
 <script>
-  export let texts, delay, num_loops, repeat_n_words, blinker_iter_count;
+  let { texts, delay, num_loops, repeat_n_words, blinker_iter_count } = $props();
   import AnimateType from "./AnimateType.svelte";
 
-  class TypeText {
-    constructor(word, direction) {
-      Object.assign(this, { word, direction });
-    }
-  }
-
-  let typeTexts = [];
-  texts.forEach((element) => {
-    typeTexts.push(new TypeText(element, "type&delete"));
-  });
-  texts = typeTexts;
+  let processedTexts = texts.map((element) => ({ word: element, direction: "type&delete" }));
 </script>
 
 <AnimateType
-  {texts}
+  texts={processedTexts}
   {delay}
   {num_loops}
   {repeat_n_words}

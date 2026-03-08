@@ -2,7 +2,7 @@
   import Card from "./Cards/CardCareer.svelte";
   import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
 
-  export let mdScreenSize = 992;
+  let { mdScreenSize = 992 } = $props();
 
   class CardClass {
     constructor(imgurl, title, subtitle, techstack, points, logoColor) {

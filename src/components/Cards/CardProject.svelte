@@ -1,5 +1,5 @@
 <script>
-  export let title, urls, text, techstack;
+  let { title, urls, text, techstack } = $props();
   import Techstack from "../Misc/Techstack.svelte";
 </script>
 

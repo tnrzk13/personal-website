@@ -3,17 +3,17 @@
   import TextType from "../TextType/TextType.svelte";
   import { isBrowserSafari } from "../Browser/BrowserCheck.svelte";
 
-  export let containerHeight, titleInfo;
-  export let boolAnimateText = true;
-  export let pageHalfDown = 1000;
-  export let contactTop, contactYOffset;
+  let { containerHeight, titleInfo, boolAnimateText = true, pageHalfDown = 1000, contactTop, contactYOffset } = $props();
 
   const numLayers = 11;
   const layers = [...Array(numLayers).keys()];
   const textLayer = 3;
   const numImgLayers = numLayers - 1;
-  let y, imgHeight, offsetRatio, yScroll;
-  let boolShowContact = false;
+  let y = $state(0);
+  let imgHeight = $state(0);
+  let offsetRatio = $state(0);
+  let yScroll = $state(0);
+  let boolShowContact = $state(false);
   let contentBorderRadius = "3em";
 
   const update = () => {
@@ -24,9 +24,6 @@
   onMount(() => {
     update();
   });
-  window.onresize = () => {
-    update();
-  };
 
   // calculates img shift when scrolling on the contact section
   // the contact section is 2/3 the size of the title, so we only want to shift by 2/3 the amount
@@ -37,17 +34,21 @@
     const reverseLayerize = (x) => {
       return (x * (numImgLayers - layer)) / numImgLayers;
     };
-    const titlebarHeight = screen.height - window.innerHeight;
     return Math.max(
       0,
       layerize(imgHeight - yScroll) + reverseLayerize(contactYOffset)
     );
   };
 
-  $: {
+  $effect(() => {
     boolShowContact = y > pageHalfDown;
     update();
-  }
+  });
+
+  $effect(() => {
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  });
 </script>
 
 <svelte:window bind:scrollY={y} />

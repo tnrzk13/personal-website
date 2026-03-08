@@ -1,7 +1,7 @@
 <script>
   import TextType from "../TextType/TextType.svelte";
   import GradientButton from "../Button/GradientButton.svelte";
-  export let contactInfo, titleHeight, contactYOffset;
+  let { contactInfo, titleHeight, contactYOffset } = $props();
 </script>
 
 <div id="contact" style="height: calc({titleHeight - contactYOffset}px); )">

@@ -1,12 +1,8 @@
 <script>
   import ContactMobile from "./ContactMobile.svelte";
 
-  export let contactInfo;
-
-  let y;
+  let { contactInfo } = $props();
 </script>
-
-<svelte:window bind:scrollY={y} />
 
 <div id="contact-wrapper">
   <ContactMobile {contactInfo} />

@@ -7,61 +7,37 @@
     import ContactText from "./components/05-Contact/ContactText.svelte";
     import ContactWrapper from "./components/05-Contact/ContactWrapper.svelte";
     import Navbar from "./components/Navbar.svelte";
-    import Loader from "./components/Loader.svelte";
 
-    // dev mode
-    let boolShowLoadingScreen, boolAnimateText;
-    // Heights
-    let titleHeight, contactHeight, contentHeight;
-    // scroll
-    let y;
-    // top of contact component
-    let contactTop = 999;
-    // calculated variables
-    let contactYOffset;
-    let pageHalfDown = 999;
-    // variables with initial values
-    let boolMobileView = true;
-    let smScreenSize = 768;
-    let mdScreenSize = 992;
+    const smScreenSize = 768;
+    const mdScreenSize = 992;
 
-    let manageHeights = () => {
-        // get Heights
+    let boolAnimateText = $state(true);
+    let titleHeight = $state(0);
+    let contentHeight = $state(0);
+    let y = $state(0);
+    let contactTop = $state(999);
+    let contactYOffset = $state(0);
+    let pageHalfDown = $state(999);
+    let boolMobileView = $state(true);
+
+    const manageHeights = () => {
         titleHeight = window.innerWidth * 0.5625;
-        // calculations
         boolMobileView = window.innerWidth < smScreenSize;
         contactYOffset = titleHeight / 3;
-        contactHeight = titleHeight - contactYOffset;
         pageHalfDown = (titleHeight + contentHeight) / 2;
-        // contactTop
         contactTop = contentHeight;
     };
-    window.onload = () => {
-        manageHeights();
-    };
-    window.onresize = () => {
-        manageHeights();
-    };
 
-    $: {
-        // get Heights
-        titleHeight = document.body.offsetWidth * 0.5625;
-        // calculations
-        boolMobileView = window.innerWidth < smScreenSize;
-        contactYOffset = titleHeight / 3;
-        contactHeight = titleHeight - contactYOffset;
-        pageHalfDown = (titleHeight + contentHeight) / 2;
-        // contactTop
-        contactTop = contentHeight;
-    }
+    $effect(() => {
+        // Re-run when contentHeight changes (from bind:clientHeight)
+        contentHeight;
+        manageHeights();
+    });
 
-    const triggerDevMode = (isOn) => {
-        boolShowLoadingScreen = boolAnimateText = false;
-        if (!isOn) {
-            boolShowLoadingScreen = boolAnimateText = true;
-        }
-    };
-    triggerDevMode(false);
+    $effect(() => {
+        window.addEventListener("resize", manageHeights);
+        return () => window.removeEventListener("resize", manageHeights);
+    });
 
     let titleInfo = {
         preamble: "Hi, my name is",

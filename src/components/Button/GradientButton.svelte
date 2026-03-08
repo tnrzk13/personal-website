@@ -1,6 +1,5 @@
 <script>
-  export let text = "Button";
-  export let buttonGradient;
+  let { text = "Button", buttonGradient } = $props();
 </script>
 
 <button class="btn btn-grad btn-lg" style="background-image: {buttonGradient};">

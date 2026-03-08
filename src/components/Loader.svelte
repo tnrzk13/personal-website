@@ -1,14 +1,15 @@
 <script>
   import { fade } from "svelte/transition";
 
-  let loadingText = "Tony Kwok";
-  loadingText = loadingText.toUpperCase().split("");
-  let loadingTextLength = loadingText.length;
+  let { boolShowLoadingScreen = $bindable() } = $props();
 
-  export let boolShowLoadingScreen;
-  window.onload = () => {
-    setTimeout((boolShowLoadingScreen = false), 3000);
-  };
+  const loadingText = "Tony Kwok".toUpperCase().split("");
+  const loadingTextLength = loadingText.length;
+
+  $effect(() => {
+    const timer = setTimeout(() => { boolShowLoadingScreen = false; }, 3000);
+    return () => clearTimeout(timer);
+  });
 </script>
 
 {#if boolShowLoadingScreen}

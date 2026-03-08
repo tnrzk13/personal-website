@@ -1,5 +1,5 @@
 <script>
-  export let contactInfo;
+  let { contactInfo } = $props();
   import TextType from "../TextType/TextType.svelte";
 </script>
 

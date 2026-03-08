@@ -1,12 +1,7 @@
 <script>
   import Techstack from "../Misc/Techstack.svelte";
 
-  export let imgurl;
-  export let title;
-  export let subtitle;
-  export let points;
-  export let logoColor;
-  export let techstack;
+  let { imgurl, title, subtitle, points, logoColor, techstack } = $props();
 </script>
 
 <div class="container-fluid card-container">

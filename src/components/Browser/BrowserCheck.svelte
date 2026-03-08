@@ -1,26 +1,16 @@
-<script context="module">
-  // check type of browser
-  export let isBrowserSafari = () => {
-    return fnBrowserDetect() === "safari";
-  };
-  let fnBrowserDetect = () => {
-    let browserName;
+<script module>
+  function fnBrowserDetect() {
     let userAgent = navigator.userAgent;
 
-    if (userAgent.match(/chrome|chromium|crios/i)) {
-      browserName = "chrome";
-    } else if (userAgent.match(/firefox|fxios/i)) {
-      browserName = "firefox";
-    } else if (userAgent.match(/safari/i)) {
-      browserName = "safari";
-    } else if (userAgent.match(/opr\//i)) {
-      browserName = "opera";
-    } else if (userAgent.match(/edg/i)) {
-      browserName = "edge";
-    } else {
-      browserName = "No browser detection";
-    }
+    if (userAgent.match(/chrome|chromium|crios/i)) return "chrome";
+    if (userAgent.match(/firefox|fxios/i)) return "firefox";
+    if (userAgent.match(/safari/i)) return "safari";
+    if (userAgent.match(/opr\//i)) return "opera";
+    if (userAgent.match(/edg/i)) return "edge";
+    return "unknown";
+  }
 
-    return browserName;
-  };
+  export function isBrowserSafari() {
+    return fnBrowserDetect() === "safari";
+  }
 </script>

@@ -1,7 +1,7 @@
 <script>
   import CardProject from "../Cards/CardProject.svelte";
 
-  export let projectIndex, projectInfo;
+  let { projectIndex, projectInfo } = $props();
 
   let smScreenSize = 576;
 </script>

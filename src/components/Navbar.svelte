@@ -1,16 +1,21 @@
 <script>
+  import { onMount } from "svelte";
   import { slide } from "svelte/transition";
   import { isBrowserSafari } from "./Browser/BrowserCheck.svelte";
-  export let boolMobileView;
+  let { boolMobileView } = $props();
 
-  let showNavBar = false;
+  let showNavBar = $state(false);
+  let lastScrollTop = 0;
 
-  let lastScrollTop;
-  window.addEventListener("scroll", function () {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) showNavBar = false;
-    else showNavBar = true;
-    lastScrollTop = scrollTop;
+  onMount(() => {
+    const onScroll = () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) showNavBar = false;
+      else showNavBar = true;
+      lastScrollTop = scrollTop;
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   });
 </script>
 
