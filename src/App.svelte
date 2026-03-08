@@ -150,8 +150,6 @@
             main {
                 position: relative;
                 z-index: 2;
-                border-radius: 0 0 50% 50% / 0 0 3em 3em;
-                padding-bottom: 2em;
 
                 section + section {
                     padding-top: clamp(6rem, 12vw, 18rem);
@@ -159,6 +157,8 @@
             }
 
             .content-desktop {
+                border-radius: 0 0 50% 50% / 0 0 3em 3em;
+                padding-bottom: 2em;
                 background-image: linear-gradient(
                     var(--blue) 5%,
                     var(--darkblue) 50%
