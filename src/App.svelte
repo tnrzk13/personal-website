@@ -75,7 +75,7 @@
             </div>
         </div>
     </div>
-    <Navbar {boolMobileView} />
+    <Navbar {boolMobileView} scrollY={y} />
 {:else}
     <div class="container-fluid">
         <Parallax
@@ -85,6 +85,7 @@
             {titleInfo}
             {contactTop}
             {contactYOffset}
+            scrollY={y}
         />
         <div id="content-container" style="top: {titleHeight}px;">
             <div
@@ -99,7 +100,7 @@
             <ContactText {contactInfo} {titleHeight} {contactYOffset} />
         </div>
     </div>
-    <Navbar {boolMobileView} />
+    <Navbar {boolMobileView} scrollY={y} />
 {/if}
 
 <style lang="scss">

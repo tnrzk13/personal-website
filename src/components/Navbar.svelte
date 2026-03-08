@@ -1,21 +1,16 @@
 <script>
-  import { onMount } from "svelte";
   import { slide } from "svelte/transition";
   import { getImagePath } from "../utils/imagePath";
-  let { boolMobileView } = $props();
+  import GradientButton from "./Button/GradientButton.svelte";
+  let { boolMobileView, scrollY = 0 } = $props();
 
   let showNavBar = $state(false);
   let lastScrollTop = 0;
 
-  onMount(() => {
-    const onScroll = () => {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (scrollTop > lastScrollTop) showNavBar = false;
-      else showNavBar = true;
-      lastScrollTop = scrollTop;
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+  $effect(() => {
+    if (scrollY > lastScrollTop) showNavBar = false;
+    else showNavBar = true;
+    lastScrollTop = scrollY;
   });
 </script>
 
@@ -56,9 +51,12 @@
           href="download/Resume.pdf"
           download="TonyKwokResume"
         >
-          <button class="btn {boolMobileView ? 'btn-grad-mobile' : 'btn-grad'}">
-            Resume
-          </button>
+          <GradientButton
+            text="Resume"
+            buttonGradient={boolMobileView
+              ? "linear-gradient(to right, #fc354c 0%, #0abfbc 51%, #fc354c 100%)"
+              : "var(--gradient-button-red-blue)"}
+          />
         </a>
       </ul>
     </div>
@@ -104,50 +102,6 @@
 
     a.download-container-mobile {
       text-decoration: none;
-    }
-
-    .btn-grad {
-      background-image: var(--gradient-button-red-blue);
-      padding-right: 2em;
-      padding-left: 2em;
-      text-align: center;
-      text-transform: uppercase;
-      transition: 0.5s;
-      background-size: 200% auto;
-      color: white;
-      box-shadow: 0 0 20px #eee;
-      border-radius: 10px;
-      display: block;
-    }
-
-    .btn:hover {
-      background-position: right center; /* change the direction of the change here */
-      text-decoration: none;
-      scale: 110%;
-    }
-
-    .btn:active {
-      filter: brightness(50%);
-    }
-
-    .btn-grad:hover {
-      color: #fff;
-    }
-
-    .btn-grad-mobile {
-      background-image: linear-gradient(
-        to right,
-        #fc354c 0%,
-        #0abfbc 51%,
-        #fc354c 100%
-      );
-      text-align: center;
-      text-transform: uppercase;
-      transition: 0.5s;
-      background-size: 200% auto;
-      color: white;
-      box-shadow: 0 0 20px #eee;
-      display: block;
     }
   }
 </style>

@@ -3,13 +3,12 @@
   import TextType from "../TextType/TextType.svelte";
   import { getImagePath } from "../../utils/imagePath";
 
-  let { containerHeight, titleInfo, boolAnimateText = true, pageHalfDown = 1000, contactTop, contactYOffset } = $props();
+  let { containerHeight, titleInfo, boolAnimateText = true, pageHalfDown = 1000, contactTop, contactYOffset, scrollY = 0 } = $props();
 
   const numLayers = 11;
   const layers = [...Array(numLayers).keys()];
   const textLayer = 3;
   const numImgLayers = numLayers - 1;
-  let y = $state(0);
   let imgHeight = $state(0);
   let offsetRatio = $state(0);
   let yScroll = $state(0);
@@ -19,7 +18,7 @@
   const update = () => {
     imgHeight = containerHeight - contactYOffset;
     offsetRatio = contactYOffset / containerHeight;
-    yScroll = Math.max(0, y - contactTop);
+    yScroll = Math.max(0, scrollY - contactTop);
   };
   onMount(() => {
     update();
@@ -41,7 +40,7 @@
   };
 
   $effect(() => {
-    boolShowContact = y > pageHalfDown;
+    boolShowContact = scrollY > pageHalfDown;
     update();
   });
 
@@ -72,21 +71,19 @@
   });
 </script>
 
-<svelte:window bind:scrollY={y} />
-
 <div
   id="parallax"
   class="parallax-container {boolShowContact
     ? 'contact-section'
     : 'title-section'}"
-  style="height: {boolShowContact ? containerHeight : containerHeight - y}px;"
+  style="height: {boolShowContact ? containerHeight : containerHeight - scrollY}px;"
 >
   {#each layers as layer}
     {#if layer === 0}
       <img
         style="transform: translateY(calc({boolShowContact
           ? getContactParallax(layer)
-          : (-y * layer) / (layers.length - 1)}px {boolShowContact
+          : (-scrollY * layer) / (layers.length - 1)}px {boolShowContact
           ? '- ' + contentBorderRadius
           : ''})); opacity: {getLayerOpacity(layer)}"
         src={getImagePath(`images/intro/00${layer}`)}
@@ -96,12 +93,12 @@
       <img
         style="transform: translateY({(boolShowContact
           ? getContactParallax(layer)
-          : (-y * layer) / (layers.length - 1)) + getLayerOffsetPx(layer)}px); opacity: {getLayerOpacity(layer)}"
+          : (-scrollY * layer) / (layers.length - 1)) + getLayerOffsetPx(layer)}px); opacity: {getLayerOpacity(layer)}"
         src={getImagePath(`images/intro/00${layer}`)}
         alt="parallax layer {layer}"
       />
-    {:else if layer === textLayer && y <= Math.max(0, pageHalfDown)}
-      {#if y < containerHeight}
+    {:else if layer === textLayer && scrollY <= Math.max(0, pageHalfDown)}
+      {#if scrollY < containerHeight}
         <div class="textLayer">
           <div class="textLayer-preamble">{titleInfo.preamble}</div>
           <div class="textLayer-title">{titleInfo.title}</div>
@@ -128,7 +125,7 @@
       <img
         style="transform: translateY({(boolShowContact
           ? getContactParallax(layer)
-          : (-y * (layer - 1)) / (layers.length - 1)) + getLayerOffsetPx(layer)}px){getLayerScale(layer)}"
+          : (-scrollY * (layer - 1)) / (layers.length - 1)) + getLayerOffsetPx(layer)}px){getLayerScale(layer)}"
         src={getImagePath(`images/intro/00${layer - 1}`)}
         alt="parallax layer {layer - 1}"
       />
@@ -136,7 +133,7 @@
       <img
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
-          : (-y * (layer - 1)) / (layers.length - 1)}px)"
+          : (-scrollY * (layer - 1)) / (layers.length - 1)}px)"
         src={getImagePath(`images/intro/0${layer - 1}`)}
         alt="parallax layer {layer - 1}"
       />
@@ -144,7 +141,7 @@
       <img
         style="transform: translateY({boolShowContact
           ? getContactParallax(layer)
-          : -y + 10}px)"
+          : -scrollY + 10}px)"
         src={getImagePath(`images/intro/0${layer - 1}`)}
         alt="parallax layer {layer - 1}"
       />
