@@ -58,10 +58,10 @@
 
       a {
         text-decoration: none;
-        color: white;
+        color: #64acff;
       }
       a:hover {
-        filter: brightness(50%);
+        filter: brightness(75%);
       }
 
       h3, span.title {
@@ -75,7 +75,7 @@
         margin-top: 1.5em;
 
         :global(strong) {
-          color: #64acff;
+          color: #f0b866;
           font-weight: 600;
         }
       }
