@@ -19,9 +19,12 @@
       {contactInfo.description}
     </div>
     <div class="links-container">
-      <span class="linkedin-container">
+      <span class="icon-links">
         <a href="https://www.linkedin.com/in/tony-k-kwok/" aria-label="LinkedIn profile">
           <i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/tnrzk13" aria-label="GitHub profile">
+          <i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
         </a>
       </span>
       <span class="button-container">
@@ -33,6 +36,7 @@
         </a>
       </span>
     </div>
+    <p class="copyright">&copy; 2025 Tony Kwok</p>
   </div>
 </div>
 
@@ -51,7 +55,7 @@
       font-size: 3em;
       color: white;
       line-height: normal;
-      padding: 3.5em 0.5em 3.5em 0.5em;
+      padding: 3.5em 0.5em 2em 0.5em;
 
       .textLayer-preamble {
         font-size: 0.5em;
@@ -72,13 +76,17 @@
         align-items: center;
         font-size: 0.5em;
 
-        .linkedin-container {
-          .fa-linkedin {
+        .icon-links {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+
+          a {
             text-decoration: none;
             color: white;
             transition: 0.5s;
           }
-          .fa-linkedin:hover {
+          a:hover {
             color: black;
             scale: 105%;
           }
@@ -107,6 +115,13 @@
           filter: brightness(50%);
         }
       }
+    }
+
+    .copyright {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+      padding-bottom: 2em;
     }
   }
 </style>

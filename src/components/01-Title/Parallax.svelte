@@ -4,7 +4,7 @@
   import { getImagePath } from "../../utils/imagePath";
   import { getContactParallax as getContactParallaxBase, getLayerScale, getLayerOpacity, getLayerOffsetPx } from "../../utils/parallax";
 
-  let { containerHeight, titleInfo, pageHalfDown = 1000, contactTop, contactYOffset, footerHeight = 0, scrollY = 0 } = $props();
+  let { containerHeight, titleInfo, pageHalfDown = 1000, contactTop, contactYOffset, scrollY = 0 } = $props();
 
   const numLayers = 11;
   const layers = [...Array(numLayers).keys()];
@@ -25,8 +25,9 @@
     update();
   });
 
+  const contactParallaxSpeed = 1.2;
   const getContactParallax = (layer) => {
-    return getContactParallaxBase(layer, numImgLayers, imgHeight, yScroll, contactYOffset);
+    return getContactParallaxBase(layer, numImgLayers, imgHeight, yScroll * contactParallaxSpeed, contactYOffset);
   };
 
   $effect(() => {
@@ -45,13 +46,13 @@
   class="parallax-container {boolShowContact
     ? 'contact-section'
     : 'title-section'}"
-  style="height: {boolShowContact ? containerHeight : containerHeight - scrollY}px; --img-height: {boolShowContact ? `calc(100vh - ${footerHeight}px)` : '100vh'};"
+  style="height: {boolShowContact ? containerHeight : containerHeight - scrollY}px;"
 >
   {#each layers as layer}
     {#if layer === 0}
       <img
         style="transform: translateY(calc({boolShowContact
-          ? getContactParallax(layer) * 0.6
+          ? getContactParallax(layer) * 0.7
           : (-scrollY * layer) / (layers.length - 1)}px {boolShowContact
           ? '- ' + contentBorderRadius
           : ''})); opacity: {getLayerOpacity(layer)}"
@@ -110,7 +111,7 @@
     img {
       position: absolute;
       width: 100%;
-      height: var(--img-height, 100vh);
+      height: 100vh;
       object-fit: cover;
       object-position: center bottom;
       will-change: transform;

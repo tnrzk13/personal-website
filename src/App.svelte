@@ -9,7 +9,6 @@
     import Projects from "./components/04-Projects.svelte";
     import ContactText from "./components/05-Contact/ContactText.svelte";
     import ContactMobile from "./components/05-Contact/ContactMobile.svelte";
-    import Footer from "./components/Footer.svelte";
     import Navbar from "./components/Navbar.svelte";
     import { SM_SCREEN_PX } from "./utils/breakpoints";
 
@@ -19,7 +18,6 @@
     let contactTop = $state(999);
     let contactYOffset = $state(0);
     let pageHalfDown = $state(999);
-    let footerHeight = $state(0);
     let boolMobileView = $state(true);
 
     const manageHeights = () => {
@@ -90,7 +88,6 @@
                     <ContactMobile {contactInfo} />
                 </footer>
             </main>
-            <Footer />
         </div>
     </div>
     <Navbar {boolMobileView} scrollY={y} />
@@ -102,7 +99,6 @@
             {titleInfo}
             {contactTop}
             {contactYOffset}
-            {footerHeight}
             scrollY={y}
         />
         <div id="content-container" style="top: {titleHeight}px;">
@@ -124,9 +120,6 @@
             <footer>
                 <ContactText {contactInfo} {titleHeight} {contactYOffset} />
             </footer>
-            <div bind:clientHeight={footerHeight}>
-                <Footer />
-            </div>
         </div>
     </div>
     <Navbar {boolMobileView} scrollY={y} />

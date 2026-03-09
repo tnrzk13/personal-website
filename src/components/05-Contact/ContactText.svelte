@@ -20,9 +20,12 @@
       {contactInfo.description}
     </div>
     <div class="button-container">
-      <div class="linkedin-container">
+      <div class="icon-links">
         <a href="https://www.linkedin.com/in/tony-k-kwok/" aria-label="LinkedIn profile">
           <i class="fa-brands fa-linkedin fa-md" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/tnrzk13" aria-label="GitHub profile">
+          <i class="fa-brands fa-github fa-md" aria-hidden="true"></i>
         </a>
       </div>
       <div class="button-container-column">
@@ -34,6 +37,7 @@
         </a>
       </div>
     </div>
+    <p class="copyright">&copy; 2025 Tony Kwok</p>
   </div>
 </div>
 
@@ -51,7 +55,7 @@
       left: 1.5em;
       right: 54%;
       line-height: normal;
-      padding-top: 5rem;
+      padding-top: 3rem;
       margin-top: 0;
       display: grid;
     }
@@ -80,11 +84,12 @@
       flex-wrap: wrap;
       font-size: 1rem;
 
-      .linkedin-container {
+      .icon-links {
         display: flex;
         justify-content: right;
         align-items: center;
         flex: 0 0 25%;
+        gap: 0.75rem;
 
         a {
           text-decoration: none;
@@ -103,9 +108,15 @@
       }
     }
 
+    .copyright {
+      font-size: 0.8rem;
+      color: rgba(0, 0, 0, 0.5);
+      margin-top: 1.5rem;
+    }
+
     @media (max-width: 767px) {
       .button-container {
-        .linkedin-container { flex: 0 0 100%; }
+        .icon-links { flex: 0 0 100%; }
         .button-container-column { flex: 0 0 100%; }
       }
     }
