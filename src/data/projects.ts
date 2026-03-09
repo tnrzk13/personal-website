@@ -11,6 +11,7 @@ export const projList: ProjectData[] = [
     },
     text: "Built with <strong>Svelte</strong> from scratch - learned a new framework, brushed up on HTML and CSS, and solved lots of bugs along the way.",
     techstack: ["Javascript", "Svelte"],
+    tags: ["Web"],
     featured: true,
   },
   {
@@ -22,6 +23,7 @@ export const projList: ProjectData[] = [
     },
     text: 'Awarded <strong>"top project of the class"</strong> in CS348: Database Systems. Full-stack webapp matching abandoned dogs with new owners, featuring Google auth, search, and posting.',
     techstack: ["Javascript", "React", "Node.JS", "Knex JS", "SQL"],
+    tags: ["Web"],
     featured: true,
   },
   {
@@ -33,6 +35,7 @@ export const projList: ProjectData[] = [
     },
     text: "Deep Learning model that diagnoses pneumonia with <strong>98.5% accuracy</strong> from chest X-ray images, built with FastAI and deployed on HuggingFace.",
     techstack: ["Python", "Fast.ai", "Gradio"],
+    tags: ["ML"],
     featured: true,
   },
   {
@@ -44,6 +47,7 @@ export const projList: ProjectData[] = [
     },
     text: "Forecasted air passenger volumes <strong>36 months ahead</strong> using SARIMA and Holt-Winters Exponential Smoothing models.",
     techstack: ["Python", "SciKit Learn", "StatsModels", "Matplotlib", "Pandas", "SciPy"],
+    tags: ["ML"],
   },
   {
     title: "Wumpus World",
@@ -54,6 +58,7 @@ export const projList: ProjectData[] = [
     },
     text: "Solved an RPG-like problem using <strong>reinforcement learning</strong> (Q-Learning, SARSA) paired with exploration strategies (greedy, softmax) to find optimal combinations.",
     techstack: ["Python"],
+    tags: ["ML"],
   },
   {
     title: "Chess",
@@ -64,5 +69,6 @@ export const projList: ProjectData[] = [
     },
     text: "Full chess implementation with <strong>4 difficulty levels</strong> including Stockfish, supporting human-vs-human and human-vs-CPU. Built with Observer and Factory Method patterns.",
     techstack: ["C++", "Makefile"],
+    tags: ["Systems"],
   },
 ];
