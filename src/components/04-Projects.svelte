@@ -15,7 +15,7 @@
 </script>
 
 <div id="projects" class="section-inset" data-reveal-section use:reveal>
-  <TextReveal text="Leveling up with side projects" class="section-title content-width" />
+  <TextReveal text="Built with passion" class="section-title content-width" />
   <div class="description content-width reveal" style="transition-delay: 400ms">
     I can learn any technology, and I thrive on turning ideas into impactful realities. Here are some of the projects I've built on my own:
   </div>
