@@ -11,6 +11,7 @@ export interface CareerCard {
   techstack: string[];
   points: TextPart[][];
   logoColor: string;
+  tier: "featured" | "compact";
 }
 
 export interface ProjectUrls {
