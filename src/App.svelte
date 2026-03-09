@@ -84,9 +84,9 @@
                 <section aria-label="Career">
                     <Career />
                 </section>
-                <section id="testimonials-section" aria-label="Testimonials">
+                <!-- <section id="testimonials-section" aria-label="Testimonials">
                     <Testimonials />
-                </section>
+                </section> -->
                 <section aria-label="Projects">
                     <Projects />
                 </section>
@@ -120,9 +120,9 @@
                 <section aria-label="Career">
                     <Career />
                 </section>
-                <section id="testimonials-section" aria-label="Testimonials">
+                <!-- <section id="testimonials-section" aria-label="Testimonials">
                     <Testimonials />
-                </section>
+                </section> -->
                 <section aria-label="Projects">
                     <Projects />
                 </section>
