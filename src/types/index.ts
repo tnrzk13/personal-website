@@ -40,3 +40,8 @@ export interface TitleInfo {
 export interface ContactInfo extends TitleInfo {
   subject: string;
 }
+
+export interface ImpactMetric {
+  value: string;
+  label: string;
+}
