@@ -4,6 +4,7 @@
     import "lenis/dist/lenis.css";
     import Parallax from "./components/01-Title/Parallax.svelte";
     import TitleMobile from "./components/01-Title/TitleMobile.svelte";
+    import ImpactMetrics from "./components/02b-ImpactMetrics.svelte";
     import AboutMe from "./components/02-AboutMe.svelte";
     import Career from "./components/03-Career.svelte";
     import Projects from "./components/04-Projects.svelte";
@@ -75,6 +76,7 @@
                 class="content-mobile"
                 bind:clientHeight={contentHeight}
             >
+                <ImpactMetrics />
                 <section id="aboutme-section" aria-label="About me">
                     <AboutMe />
                 </section>
@@ -107,6 +109,7 @@
                 class="content-desktop"
                 bind:clientHeight={contentHeight}
             >
+                <ImpactMetrics />
                 <section id="aboutme-section" aria-label="About me">
                     <AboutMe />
                 </section>
