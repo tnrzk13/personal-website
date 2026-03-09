@@ -20,10 +20,10 @@
     </div>
     <div class="links-container">
       <span class="icon-links">
-        <a href="https://www.linkedin.com/in/tony-k-kwok/" aria-label="LinkedIn profile">
+        <a href="https://www.linkedin.com/in/tony-k-kwok/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
           <i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
         </a>
-        <a href="https://github.com/tnrzk13" aria-label="GitHub profile">
+        <a href="https://github.com/tnrzk13" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
           <i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
         </a>
       </span>

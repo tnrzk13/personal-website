@@ -1,6 +1,7 @@
 <script>
   import AnimateType from "../TextType/AnimateType.svelte";
   import GradientButton from "../Button/GradientButton.svelte";
+  import { magneticHover } from "../../utils/magneticHover";
   let { contactInfo, titleHeight, contactYOffset } = $props();
 </script>
 
@@ -21,10 +22,10 @@
     </div>
     <div class="button-container">
       <div class="icon-links">
-        <a href="https://www.linkedin.com/in/tony-k-kwok/" aria-label="LinkedIn profile">
+        <a href="https://www.linkedin.com/in/tony-k-kwok/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" use:magneticHover>
           <i class="fa-brands fa-linkedin fa-md" aria-hidden="true"></i>
         </a>
-        <a href="https://github.com/tnrzk13" aria-label="GitHub profile">
+        <a href="https://github.com/tnrzk13" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" use:magneticHover>
           <i class="fa-brands fa-github fa-md" aria-hidden="true"></i>
         </a>
       </div>
@@ -32,6 +33,7 @@
         <a
           href="mailto:thisistonykwok@gmail.com?subject={contactInfo.subject}"
           id="emailLink"
+          use:magneticHover
         >
           <GradientButton text="Say Hello" />
         </a>

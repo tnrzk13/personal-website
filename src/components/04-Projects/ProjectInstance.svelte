@@ -17,7 +17,7 @@
   <div class="img-container">
     <div class="main-img-container" class:reversed-offset={isReversed}>
       {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
-        <a href={projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}>
+        <a href={projectInfo.urls.projectUrl || projectInfo.urls.codeUrl} target="_blank" rel="noopener noreferrer">
           <img class="main glowing" src={projectInfo.imgurl} alt="project" loading="lazy" />
         </a>
       {:else}

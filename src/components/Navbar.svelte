@@ -1,5 +1,6 @@
 <script>
   import { getImagePath } from "../utils/imagePath";
+  import { magneticHover } from "../utils/magneticHover";
 
   let { boolMobileView, scrollY = 0 } = $props();
 
@@ -76,16 +77,16 @@
     <div class="nav-links" class:open={navOpen}>
       <ul>
         <li>
-          <a class="nav-link" class:active={activeSection === "aboutme"} href="#aboutme" onclick={() => navOpen = false}>About</a>
+          <a class="nav-link" class:active={activeSection === "aboutme"} href="#aboutme" onclick={() => navOpen = false} use:magneticHover>About</a>
         </li>
         <li>
-          <a class="nav-link" class:active={activeSection === "career"} href="#career" onclick={() => navOpen = false}>Career</a>
+          <a class="nav-link" class:active={activeSection === "career"} href="#career" onclick={() => navOpen = false} use:magneticHover>Career</a>
         </li>
         <li>
-          <a class="nav-link" class:active={activeSection === "projects"} href="#projects" onclick={() => navOpen = false}>Projects</a>
+          <a class="nav-link" class:active={activeSection === "projects"} href="#projects" onclick={() => navOpen = false} use:magneticHover>Projects</a>
         </li>
         <li>
-          <a class="nav-link" class:active={activeSection === "contact"} href="#contact" onclick={() => navOpen = false}>Contact</a>
+          <a class="nav-link" class:active={activeSection === "contact"} href="#contact" onclick={() => navOpen = false} use:magneticHover>Contact</a>
         </li>
         <li>
           <a
@@ -94,6 +95,7 @@
             href="download/Resume.pdf"
             download="TonyKwokResume"
             onclick={() => navOpen = false}
+            use:magneticHover
           >
             Resume
           </a>
@@ -189,7 +191,7 @@
       padding: 0.3em 2em;
       text-align: center;
       text-transform: uppercase;
-      transition: background-position 0.4s ease, transform 0.3s ease;
+      transition: background-position 0.4s ease, scale 0.3s ease;
       background-size: 200% auto;
       color: white;
       border-radius: 20px;
@@ -199,7 +201,7 @@
     .resume-btn:hover {
       background-position: right center;
       text-decoration: none;
-      transform: scale(1.05);
+      scale: 1.05;
       color: #fff;
     }
 
