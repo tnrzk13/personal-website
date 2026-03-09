@@ -14,6 +14,7 @@
   const NAV_LINKS = [
     { href: "#aboutme", label: "About", section: "aboutme" },
     { href: "#career", label: "Career", section: "career" },
+    { href: "#testimonials", label: "Testimonials", section: "testimonials" },
     { href: "#projects", label: "Projects", section: "projects" },
     { href: "#contact", label: "Contact", section: "contact" },
   ];

@@ -45,3 +45,10 @@ export interface ImpactMetric {
   value: string;
   label: string;
 }
+
+export interface Testimonial {
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+}
