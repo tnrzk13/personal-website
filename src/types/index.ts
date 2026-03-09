@@ -39,3 +39,10 @@ export interface TitleInfo {
 export interface ContactInfo extends TitleInfo {
   subject: string;
 }
+
+export interface Testimonial {
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+}

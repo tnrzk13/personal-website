@@ -6,6 +6,7 @@
     import TitleMobile from "./components/01-Title/TitleMobile.svelte";
     import AboutMe from "./components/02-AboutMe.svelte";
     import Career from "./components/03-Career.svelte";
+    import Testimonials from "./components/03b-Testimonials/Testimonials.svelte";
     import Projects from "./components/04-Projects.svelte";
     import ContactText from "./components/05-Contact/ContactText.svelte";
     import ContactMobile from "./components/05-Contact/ContactMobile.svelte";
@@ -81,6 +82,9 @@
                 <section aria-label="Career">
                     <Career />
                 </section>
+                <section id="testimonials-section" aria-label="Testimonials">
+                    <Testimonials />
+                </section>
                 <section aria-label="Projects">
                     <Projects />
                 </section>
@@ -112,6 +116,9 @@
                 </section>
                 <section aria-label="Career">
                     <Career />
+                </section>
+                <section id="testimonials-section" aria-label="Testimonials">
+                    <Testimonials />
                 </section>
                 <section aria-label="Projects">
                     <Projects />
