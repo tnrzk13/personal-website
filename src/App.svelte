@@ -41,7 +41,7 @@
 
     $effect(() => {
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-        const lenis = new Lenis({ autoRaf: true, anchors: true });
+        const lenis = new Lenis({ autoRaf: true, anchors: true, naiveDimensions: true });
         return () => lenis.destroy();
     });
 
@@ -152,7 +152,7 @@
 
             .content-desktop {
                 border-radius: 0 0 50% 50% / 0 0 3em 3em;
-                padding-bottom: 2em;
+                padding-bottom: 4em;
                 background-image: linear-gradient(
                     var(--blue) 5%,
                     var(--darkblue) 50%
