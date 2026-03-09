@@ -1,6 +1,7 @@
 <script>
-  let { contactInfo } = $props();
   import AnimateType from "../TextType/AnimateType.svelte";
+  import { LINKEDIN_URL, GITHUB_URL, EMAIL, COPYRIGHT } from "../../data/contact";
+  let { contactInfo } = $props();
 </script>
 
 <div id="contact-mobile-wrapper">
@@ -20,23 +21,23 @@
     </div>
     <div class="links-container">
       <span class="icon-links">
-        <a href="https://www.linkedin.com/in/tony-k-kwok/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
           <i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
         </a>
-        <a href="https://github.com/tnrzk13" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
           <i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
         </a>
       </span>
       <span class="button-container">
         <a
-          href="mailto:thisistonykwok@gmail.com?subject={contactInfo.subject}"
+          href="mailto:{EMAIL}?subject={contactInfo.subject}"
           id="emailLink"
         >
           <span class="btn-grad" role="button">Say Hello</span>
         </a>
       </span>
     </div>
-    <p class="copyright">&copy; 2025 Tony Kwok</p>
+    <p class="copyright">&copy; {COPYRIGHT}</p>
   </div>
 </div>
 

@@ -55,11 +55,6 @@
 :root {
     --blue: rgb(6, 0, 87);
     --darkblue: #040d21;
-    --gradient-happy-fisher: linear-gradient(to bottom right, #89f7fe, #66a6ff);
-    --gradient-happy-fisher-left: linear-gradient(to left, #89f7fe, #66a6ff);
-    --gradient-quepal: linear-gradient(to bottom right, #38ef7d, #11998e);
-    --gradient-piglet: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
-    --gradient-plum-plate: linear-gradient(to bottom right, #667eea, #764ba2);
     --gradient-cosmic-fusion: linear-gradient(
         to bottom right,
         #ff00cc,
@@ -73,12 +68,6 @@
     );
     --gradient-telegram: linear-gradient(to top left, #1c9292, #f2fcfe);
     --gradient-amin: linear-gradient(to top left, #8e2de2, #1cb5e0);
-    --gradient-jack-dorsey-stock: linear-gradient(
-        to bottom right,
-        #380036,
-        #0cbaba
-    );
-    --gradient-flare: linear-gradient(to bottom right, #f12711, #f5af19);
     --gradient-very-blue: linear-gradient(to bottom right, #0575e6, #021b79);
     --gradient-skyline: linear-gradient(to bottom right, #1488cc, #2b32b2);
     --gradient-terminal: linear-gradient(to top left, #000000, #0f9b0f);

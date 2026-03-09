@@ -11,7 +11,13 @@
   let aboutSectionTop = $state(0);
 
   const SCROLL_HIDE_THRESHOLD = 50;
-  const sectionIds = ["aboutme", "career", "projects", "contact"];
+  const NAV_LINKS = [
+    { href: "#aboutme", label: "About", section: "aboutme" },
+    { href: "#career", label: "Career", section: "career" },
+    { href: "#projects", label: "Projects", section: "projects" },
+    { href: "#contact", label: "Contact", section: "contact" },
+  ];
+  const sectionIds = NAV_LINKS.map(l => l.section);
 
   $effect(() => {
     const aboutEl = document.getElementById("aboutme");
@@ -76,18 +82,11 @@
     </button>
     <div class="nav-links" class:open={navOpen}>
       <ul>
-        <li>
-          <a class="nav-link" class:active={activeSection === "aboutme"} href="#aboutme" onclick={() => navOpen = false} use:magneticHover>About</a>
-        </li>
-        <li>
-          <a class="nav-link" class:active={activeSection === "career"} href="#career" onclick={() => navOpen = false} use:magneticHover>Career</a>
-        </li>
-        <li>
-          <a class="nav-link" class:active={activeSection === "projects"} href="#projects" onclick={() => navOpen = false} use:magneticHover>Projects</a>
-        </li>
-        <li>
-          <a class="nav-link" class:active={activeSection === "contact"} href="#contact" onclick={() => navOpen = false} use:magneticHover>Contact</a>
-        </li>
+        {#each NAV_LINKS as { href, label, section }}
+          <li>
+            <a class="nav-link" class:active={activeSection === section} {href} onclick={() => navOpen = false} use:magneticHover>{label}</a>
+          </li>
+        {/each}
         <li>
           <a
             class="resume-btn"

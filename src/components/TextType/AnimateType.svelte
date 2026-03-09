@@ -41,12 +41,12 @@
           for (let i = 0; i < word.length; i++) {
             if (i === 0) {
               setTimeout(() => {
-                state = state.substr(0, state.length - 1);
+                state = state.slice(0, -1);
               }, typing_delay + word_complete_delay);
               typing_delay = typing_delay + delay + word_complete_delay;
             } else {
               setTimeout(() => {
-                state = state.substr(0, state.length - 1);
+                state = state.slice(0, -1);
               }, typing_delay);
               typing_delay = typing_delay + delay;
             }

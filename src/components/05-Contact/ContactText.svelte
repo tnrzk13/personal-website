@@ -2,10 +2,11 @@
   import AnimateType from "../TextType/AnimateType.svelte";
   import GradientButton from "../Button/GradientButton.svelte";
   import { magneticHover } from "../../utils/magneticHover";
+  import { LINKEDIN_URL, GITHUB_URL, EMAIL, COPYRIGHT } from "../../data/contact";
   let { contactInfo, titleHeight, contactYOffset } = $props();
 </script>
 
-<div id="contact" style="height: calc({titleHeight - contactYOffset}px); )">
+<div id="contact" style="height: {titleHeight - contactYOffset}px">
   <div class="textLayer">
     <div class="textLayer-preamble">{contactInfo.preamble}</div>
     <div class="textLayer-title">
@@ -22,16 +23,16 @@
     </div>
     <div class="button-container">
       <div class="icon-links">
-        <a href="https://www.linkedin.com/in/tony-k-kwok/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" use:magneticHover>
+        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" use:magneticHover>
           <i class="fa-brands fa-linkedin fa-md" aria-hidden="true"></i>
         </a>
-        <a href="https://github.com/tnrzk13" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" use:magneticHover>
+        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" use:magneticHover>
           <i class="fa-brands fa-github fa-md" aria-hidden="true"></i>
         </a>
       </div>
       <div class="button-container-column">
         <a
-          href="mailto:thisistonykwok@gmail.com?subject={contactInfo.subject}"
+          href="mailto:{EMAIL}?subject={contactInfo.subject}"
           id="emailLink"
           use:magneticHover
         >
@@ -39,7 +40,7 @@
         </a>
       </div>
     </div>
-    <p class="copyright">&copy; 2025 Tony Kwok</p>
+    <p class="copyright">&copy; {COPYRIGHT}</p>
   </div>
 </div>
 

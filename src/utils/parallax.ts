@@ -31,7 +31,6 @@ export const getLayerOffsetPx = (layer: number): number => {
   if (layer >= 9) return 10;
   if (layer >= 7) return 25;
   if (layer >= 5) return 40;
-  if (layer >= 4) return 50;
   if (layer >= 1) return 50;
   return 0;
 };

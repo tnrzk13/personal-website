@@ -94,7 +94,7 @@ export const cardList: CareerCard[] = [
       [
         {
           style: "none",
-          text: "Turbocharged Monero payout API by converting to non\u2011blocking Node.js; ",
+          text: "Turbocharged Monero payout API by converting to non-blocking Node.js; ",
         },
         {
           style: "bold",
@@ -104,7 +104,7 @@ export const cardList: CareerCard[] = [
       [
         {
           style: "none",
-          text: "Fortified finance endpoints with auth and balance\u2011validation middleware, ",
+          text: "Fortified finance endpoints with auth and balance-validation middleware, ",
         },
         {
           style: "bold",
@@ -126,7 +126,7 @@ export const cardList: CareerCard[] = [
       [
         {
           style: "none",
-          text: "Re\u2011indexed PostgreSQL ledgers, slicing mining\u2011history queries ",
+          text: "Re-indexed PostgreSQL ledgers, slicing mining-history queries ",
         },
         {
           style: "bold",
@@ -180,13 +180,13 @@ export const cardList: CareerCard[] = [
         },
         {
           style: "none",
-          text: " across 20\u2011page apps and standardizing UI.",
+          text: " across 20-page apps and standardizing UI.",
         },
       ],
       [
         {
           style: "none",
-          text: "Re\u2011engineered database schema and views, halving bug\u2011fix cycles and shrinking query latency ",
+          text: "Re-engineered database schema and views, halving bug-fix cycles and shrinking query latency ",
         },
         {
           style: "bold",
@@ -210,7 +210,7 @@ export const cardList: CareerCard[] = [
       [
         {
           style: "none",
-          text: "Deployed Node.js health\u2011check API for 10+ microservices to GCP, cutting mean\u2011time\u2011to\u2011diagnose ",
+          text: "Deployed Node.js health-check API for 10+ microservices to GCP, cutting mean-time-to-diagnose ",
         },
         {
           style: "bold",
@@ -226,13 +226,13 @@ export const cardList: CareerCard[] = [
         },
         {
           style: "none",
-          text: " for 100\u2011engineer org.",
+          text: " for 100-engineer org.",
         },
       ],
       [
         {
           style: "none",
-          text: "Authored reusable React component kit, cutting new\u2011page development effort ",
+          text: "Authored reusable React component kit, cutting new-page development effort ",
         },
         {
           style: "bold",
@@ -250,7 +250,7 @@ export const cardList: CareerCard[] = [
         },
         {
           style: "none",
-          text: " and wrote exhaustive Jest suites, lifting critical\u2011path coverage near ",
+          text: " and wrote exhaustive Jest suites, lifting critical-path coverage near ",
         },
         {
           style: "bold",
@@ -274,7 +274,7 @@ export const cardList: CareerCard[] = [
       [
         {
           style: "bold",
-          text: "Secured $150k pre\u2011seed funding",
+          text: "Secured $150k pre-seed funding",
         },
         {
           style: "none",
@@ -292,7 +292,7 @@ export const cardList: CareerCard[] = [
       [
         {
           style: "none",
-          text: "Engineered Markov\u2011chain text engine for sports stats, a key feature driving pre-seed funding.",
+          text: "Engineered Markov-chain text engine for sports stats, a key feature driving pre-seed funding.",
         },
       ],
     ],
@@ -334,7 +334,7 @@ export const cardList: CareerCard[] = [
       [
         {
           style: "none",
-          text: "Accelerated insight delivery and sliced data\u2011entry errors ",
+          text: "Accelerated insight delivery and sliced data-entry errors ",
         },
         {
           style: "bold",
