@@ -41,7 +41,7 @@
 
     $effect(() => {
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-        const lenis = new Lenis({ autoRaf: true, anchors: true, naiveDimensions: true });
+        const lenis = new Lenis({ autoRaf: true, anchors: true });
         return () => lenis.destroy();
     });
 
@@ -101,7 +101,7 @@
             {contactYOffset}
             scrollY={y}
         />
-        <div id="content-container" style="top: {titleHeight}px;">
+        <div id="content-container" style="margin-top: {titleHeight}px;">
             <main
                 id="main-content"
                 class="content-desktop"
@@ -133,7 +133,7 @@
         margin: 0;
 
         #content-container {
-            position: absolute;
+            position: relative;
             width: 100%;
             height: auto;
             display: flex;
@@ -180,9 +180,6 @@
                 background-color: var(--darkblue);
             }
 
-            &:has(.content-mobile) {
-                position: relative;
-            }
         }
     }
 </style>

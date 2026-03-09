@@ -101,11 +101,13 @@
 
 <style lang="scss">
   .contact-section {
+    top: auto;
     bottom: 0;
   }
 
   .parallax-container {
     position: fixed;
+    top: 0;
     width: 100%;
 
     img {
