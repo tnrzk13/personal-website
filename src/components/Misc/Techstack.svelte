@@ -14,22 +14,25 @@
 
     .techstack {
       width: auto;
-      font-size: 0.8rem;
-      font-weight: 500;
-      background-color: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 999px;
+      background-color: #303443;
+      border-radius: 1rem;
       margin: 0.25rem 0;
-      padding: 0.15em 0.7rem;
+      padding: 0 0.75rem;
       display: inline-block;
-      color: rgba(255, 255, 255, 0.5);
-      transition: color 0.25s ease, border-color 0.25s ease;
+      transition: transform 0.2s ease, background-color 0.2s ease,
+        box-shadow 0.2s ease;
 
       @media (hover: hover) {
         &:hover {
-          color: rgba(255, 255, 255, 0.75);
-          border-color: rgba(255, 255, 255, 0.2);
+          transform: scale(1.06);
+          background-color: #3a3f52;
+          box-shadow: 0 0 8px rgba(100, 172, 255, 0.3);
         }
+      }
+
+      &:active {
+        transform: scale(1.06);
+        background-color: #3a3f52;
       }
     }
     .techstack:first-child {

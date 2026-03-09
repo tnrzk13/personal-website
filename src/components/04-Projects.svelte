@@ -88,11 +88,11 @@
 
     .filter-tab {
       font-family: "Inter", system-ui, sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      padding: 0.4em 1.2em;
+      font-size: 1.05rem;
+      font-weight: 600;
+      padding: 0.45em 1.5em;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
       background: transparent;
       color: rgba(255, 255, 255, 0.6);
       cursor: pointer;
@@ -100,13 +100,13 @@
 
       &:hover {
         color: white;
-        border-color: rgba(255, 255, 255, 0.35);
+        border-color: rgba(255, 255, 255, 0.4);
       }
 
       &.active {
         color: white;
-        border-color: rgba(100, 172, 255, 0.6);
-        background: rgba(100, 172, 255, 0.12);
+        border-color: rgba(100, 172, 255, 0.7);
+        background: rgba(100, 172, 255, 0.15);
       }
     }
 
