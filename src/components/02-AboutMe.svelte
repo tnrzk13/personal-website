@@ -12,11 +12,9 @@
   <div class="about-content reveal" style="transition-delay: 400ms">
     <div class="text">
       <div class="description">
-        <p>I'm a full-stack engineer (TS/React/GCP) who turns tech debt into growth - I've tripled revenue, 10x'd throughput, and turned companies profitable. Looking for a role where shipping, reliability, and revenue are on the scorecard - and I'm accountable for all three.</p>
-        <p>My interest in tech began during my first co-op term as an accountant, when I
-        needed to manipulate data in Excel. I went from keyboard shortcuts to
-        VBA to SQL to transferring out of my accounting program and into engineering roles. Read more about my story in the next section.</p>
-        <p>Here are a few technologies I've been working with:</p>
+        <p>Full-stack engineer (TS/React/GCP). I've tripled revenue, 10x'd throughput, and turned companies profitable. I thrive where shipping, reliability, and revenue are on the scorecard - and I own all three.</p>
+        <p>I stumbled into tech as an accounting co-op wrangling Excel data - keyboard shortcuts led to VBA, VBA led to SQL, and SQL led me out of accounting for good. More on that in the next section.</p>
+        <p>Technologies I've been working with:</p>
       </div>
       <div class="techlist1">
           <Techstack {techstack} />
@@ -24,7 +22,7 @@
     </div>
     <div class="imgdiv">
       <div class="aboutmeimg-container">
-        <a href="https://www.linkedin.com/in/tony-k-kwok/">
+        <a href="https://www.linkedin.com/in/tony-k-kwok/" target="_blank" rel="noopener noreferrer">
           <img
             class="aboutmeimg"
             src={getImagePath("images/02-aboutme/self")}
