@@ -32,7 +32,6 @@
 
     .compact-img-container {
       width: 100%;
-      overflow: hidden;
 
       a {
         display: block;
@@ -41,7 +40,7 @@
       img {
         width: 100%;
         display: block;
-        border-radius: 1rem 1rem 0 0;
+        border-radius: 1rem;
         transition: scale 0.4s ease;
       }
 
