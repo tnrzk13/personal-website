@@ -12,9 +12,9 @@
   <div class="about-content reveal" style="transition-delay: 400ms">
     <div class="text">
       <div class="description">
-        <p>Full-stack engineer (TS/React/GCP). I've tripled revenue, 10x'd throughput, and turned companies profitable. I thrive where shipping, reliability, and revenue are on the scorecard - and I own all three.</p>
+        <p>Full-stack engineer who owns problems end-to-end - from architecture to deployment to the revenue it drives. I thrive on growth-stage teams where shipping, reliability, and business outcomes are all on the scorecard.</p>
         <p>I stumbled into tech as an accounting co-op wrangling Excel data - keyboard shortcuts led to VBA, VBA led to SQL, and SQL led me out of accounting for good. More on that in the next section.</p>
-        <p>Technologies I've been working with:</p>
+        <p>Technologies I’ve been working with:</p>
       </div>
       <div class="techlist1">
           <Techstack {techstack} />
