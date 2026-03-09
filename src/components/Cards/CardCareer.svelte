@@ -119,8 +119,7 @@
     }
 
     .techstack-wrapper {
-      margin-top: 0.5rem;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1.25rem;
     }
   }
 </style>

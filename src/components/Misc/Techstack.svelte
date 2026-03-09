@@ -10,29 +10,28 @@
 
 <style lang="scss">
   .techstack-container {
+    display: block;
     padding: 0;
+    margin-top: 1.25rem;
 
     .techstack {
       width: auto;
-      background-color: #303443;
-      border-radius: 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
       margin: 0.25rem 0;
-      padding: 0 0.75rem;
+      padding: 0.2em 0.85rem;
       display: inline-block;
-      transition: transform 0.2s ease, background-color 0.2s ease,
-        box-shadow 0.2s ease;
+      color: rgba(255, 255, 255, 0.6);
+      transition: color 0.25s ease, border-color 0.25s ease;
 
       @media (hover: hover) {
         &:hover {
-          transform: scale(1.06);
-          background-color: #3a3f52;
-          box-shadow: 0 0 8px rgba(100, 172, 255, 0.3);
+          color: white;
+          border-color: rgba(255, 255, 255, 0.35);
         }
-      }
-
-      &:active {
-        transform: scale(1.06);
-        background-color: #3a3f52;
       }
     }
     .techstack:first-child {
