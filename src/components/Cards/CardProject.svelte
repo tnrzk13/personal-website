@@ -33,7 +33,7 @@
       {:else}
         <h3 class="title">{title}</h3>
       {/if}
-      <p class="text">{text}</p>
+      <p class="text">{@html text}</p>
       <Techstack {techstack} />
     </div>
   </div>
@@ -73,6 +73,11 @@
 
       .text {
         margin-top: 1.5em;
+
+        :global(strong) {
+          color: #64acff;
+          font-weight: 600;
+        }
       }
 
       .title-row {

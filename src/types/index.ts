@@ -24,6 +24,7 @@ export interface ProjectData {
   urls: ProjectUrls;
   text: string;
   techstack: string[];
+  featured?: boolean;
 }
 
 export interface TitleInfo {

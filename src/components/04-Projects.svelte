@@ -1,33 +1,36 @@
 <script>
   import ProjectInstance from "./04-Projects/ProjectInstance.svelte";
-  import Techstack from "./Misc/Techstack.svelte";
+  import ProjectCompact from "./04-Projects/ProjectCompact.svelte";
   import { projList } from "../data/projects";
   import TextReveal from "./TextReveal.svelte";
   import { reveal } from "../actions/reveal";
 
-  let techstack = [
-    "Fast.ai",
-    "Svelte",
-    "GCP",
-    "Scikit-Learn",
-    "Matplotlib",
-    "Knex.JS",
-  ];
+  const featuredProjects = projList.filter((p) => p.featured);
+  const otherProjects = projList.filter((p) => !p.featured);
+  const otherBaseDelayMs = featuredProjects.length * 100 + 550;
 </script>
 
 <div id="projects" class="section-inset" data-reveal-section use:reveal>
   <TextReveal text="Leveling up with side projects" class="section-title content-width" />
   <div class="description content-width reveal" style="transition-delay: 400ms">
-    I can learn any technology, and I thrive on turning ideas into impactful realities. Here's some of the tech I've picked up on my own:
-  </div>
-  <div class="techstack-container content-width reveal" style="transition-delay: 450ms">
-    <Techstack {techstack} />
+    I can learn any technology, and I thrive on turning ideas into impactful realities. Here are some of the projects I've built on my own:
   </div>
   <div class="projects content-width">
-    {#each projList as projectInfo, index}
+    {#each featuredProjects as projectInfo, index}
       <ProjectInstance projectIndex={index} {projectInfo} />
     {/each}
   </div>
+
+  {#if otherProjects.length > 0}
+    <h3 class="other-heading content-width reveal" style="transition-delay: {otherBaseDelayMs}ms">
+      Other Projects
+    </h3>
+    <div class="compact-grid content-width">
+      {#each otherProjects as projectInfo, index}
+        <ProjectCompact {projectInfo} delayMs={otherBaseDelayMs + (index + 1) * 100} />
+      {/each}
+    </div>
+  {/if}
 </div>
 
 <style lang="scss">
@@ -39,15 +42,30 @@
     }
 
     .description {
-      margin-bottom: 1em;
-    }
-
-    .techstack-container {
       margin-bottom: 3em;
     }
 
     .projects {
       padding: 0;
+    }
+
+    .other-heading {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.5rem;
+      color: white;
+      margin-top: 2em;
+      margin-bottom: 1.5em;
+    }
+
+    .compact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5em;
+      padding: 0;
+
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 </style>
