@@ -83,6 +83,7 @@ export const cardList: CareerCard[] = [
       ],
     ],
     logoColor: "var(--gradient-terminal)",
+    tier: "featured",
   },
   {
     imgurl: getImagePath("images/03-career/myriade"),
@@ -147,6 +148,7 @@ export const cardList: CareerCard[] = [
       ],
     ],
     logoColor: "var(--gradient-sweet-morning)",
+    tier: "featured",
   },
   {
     imgurl: getImagePath("images/03-career/npx"),
@@ -199,6 +201,7 @@ export const cardList: CareerCard[] = [
       ],
     ],
     logoColor: "var(--gradient-lunada)",
+    tier: "compact",
   },
   {
     imgurl: getImagePath("images/03-career/360insights"),
@@ -263,6 +266,7 @@ export const cardList: CareerCard[] = [
       ],
     ],
     logoColor: "var(--gradient-telegram)",
+    tier: "featured",
   },
   {
     imgurl: getImagePath("images/03-career/quarter4"),
@@ -297,6 +301,7 @@ export const cardList: CareerCard[] = [
       ],
     ],
     logoColor: "var(--gradient-cosmic-fusion)",
+    tier: "compact",
   },
   {
     imgurl: getImagePath("images/03-career/marsh"),
@@ -347,6 +352,7 @@ export const cardList: CareerCard[] = [
       ],
     ],
     logoColor: "var(--gradient-amin)",
+    tier: "compact",
   },
   {
     imgurl: getImagePath("images/03-career/jpmorgan"),
@@ -371,6 +377,7 @@ export const cardList: CareerCard[] = [
       ],
     ],
     logoColor: "var(--gradient-very-blue)",
+    tier: "compact",
   },
   {
     imgurl: getImagePath("images/03-career/goldman"),
@@ -395,5 +402,6 @@ export const cardList: CareerCard[] = [
       ],
     ],
     logoColor: "var(--gradient-skyline)",
+    tier: "compact",
   },
 ];
