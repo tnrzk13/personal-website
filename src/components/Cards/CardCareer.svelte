@@ -1,11 +1,13 @@
 <script>
   import Techstack from "../Misc/Techstack.svelte";
+  import GlassCard from "./GlassCard.svelte";
 
   let { imgurl, title, subtitle, datePeriod, points, logoColor, techstack, revealDelayMs = 0 } = $props();
 </script>
 
 <div class="card-container reveal" style="transition-delay: {revealDelayMs}ms">
-  <div class="career-card">
+  <GlassCard>
+    <div class="career-content">
     <div class="card-header">
       <div class="circle-logo" style="background-image: {logoColor}">
         <img class="logo" src={imgurl} alt="company logo" loading="lazy" />
@@ -34,29 +36,19 @@
         {/each}
       </ul>
     </div>
-  </div>
+    </div>
+  </GlassCard>
 </div>
 
 <style lang="scss">
   .card-container {
     padding: 0;
     margin-bottom: 2.5rem;
+    color: white;
+    text-align: center;
 
-    .career-card {
-      color: white;
-      border-radius: 1rem;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+    .career-content {
       padding: 1.75rem;
-      text-align: center;
-      transition: border-color 0.3s ease, background 0.3s ease;
-
-      &:hover {
-        border-color: rgba(255, 255, 255, 0.15);
-        background: rgba(255, 255, 255, 0.05);
-      }
     }
 
     .card-header {

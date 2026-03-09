@@ -1,5 +1,4 @@
 <script>
-  import ProjectInstance from "./04-Projects/ProjectInstance.svelte";
   import ProjectCompact from "./04-Projects/ProjectCompact.svelte";
   import { projList } from "../data/projects";
   import TextReveal from "./TextReveal.svelte";
@@ -9,17 +8,9 @@
   const tags = [ALL_TAG, ...new Set(projList.flatMap((p) => p.tags))];
 
   let activeTag = $state(ALL_TAG);
-  const isAll = $derived(activeTag === ALL_TAG);
 
   const filteredProjects = $derived(
-    isAll ? projList : projList.filter((p) => p.tags.includes(activeTag))
-  );
-  const featuredProjects = $derived(filteredProjects.filter((p) => p.featured));
-  const otherProjects = $derived(
-    isAll ? filteredProjects.filter((p) => !p.featured) : filteredProjects
-  );
-  const otherBaseDelayMs = $derived(
-    isAll ? featuredProjects.length * 100 + 550 : 550
+    activeTag === ALL_TAG ? projList : projList.filter((p) => p.tags.includes(activeTag))
   );
 </script>
 
@@ -41,26 +32,11 @@
     {/each}
   </div>
 
-  {#if isAll}
-    <div class="projects content-width">
-      {#each featuredProjects as projectInfo, index}
-        <ProjectInstance projectIndex={index} {projectInfo} />
-      {/each}
-    </div>
-  {/if}
-
-  {#if otherProjects.length > 0}
-    {#if isAll}
-      <h3 class="other-heading content-width reveal" style="transition-delay: {otherBaseDelayMs}ms">
-        Other Projects
-      </h3>
-    {/if}
-    <div class="compact-grid content-width">
-      {#each otherProjects as projectInfo, index (projectInfo.title)}
-        <ProjectCompact {projectInfo} delayMs={otherBaseDelayMs + (index + 1) * 100} />
-      {/each}
-    </div>
-  {/if}
+  <div class="compact-grid content-width">
+    {#each filteredProjects as projectInfo, index (projectInfo.title)}
+      <ProjectCompact {projectInfo} delayMs={550 + (index + 1) * 100} />
+    {/each}
+  </div>
 </div>
 
 <style lang="scss">
@@ -73,10 +49,6 @@
 
     .description {
       margin-bottom: 2em;
-    }
-
-    .projects {
-      padding: 0;
     }
 
     .filter-tabs {
@@ -108,14 +80,6 @@
         border-color: rgba(100, 172, 255, 0.7);
         background: rgba(100, 172, 255, 0.15);
       }
-    }
-
-    .other-heading {
-      font-family: "Montserrat", sans-serif;
-      font-size: 1.5rem;
-      color: white;
-      margin-top: 2em;
-      margin-bottom: 1.5em;
     }
 
     .compact-grid {
