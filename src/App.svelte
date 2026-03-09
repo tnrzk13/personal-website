@@ -66,8 +66,8 @@
     let titleInfo = {
         preamble: "Hi, my name is",
         title: "Tony Kwok.",
-        subtitle: "I build things with ",
-        texts: ["data.", "style.", "code."],
+        subtitle: "I ",
+        texts: ["scale SaaS.", "ship fast.", "drive revenue."],
         description:
             "I scale SaaS from scrappy to profitable. Full-stack with a bias for measurable impact, getting things done, and owning problems end-to-end.",
     };
@@ -77,7 +77,7 @@
         subtitle: "",
         texts: ["Get in Touch!"],
         description:
-            "Looking for my next adventure. Let's do it together!",
+            "Open to growth-stage teams where I can make outsized impact. Let's build something worth scaling.",
         subject: "Getting in touch from your website",
     };
 </script>
