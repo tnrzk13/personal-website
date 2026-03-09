@@ -89,7 +89,26 @@
       padding: 0;
 
       span.point-part {
-        color: rgb(200, 200, 200);
+        color: white;
+      }
+
+      b {
+        color: var(--bold-highlight);
+      }
+    }
+
+    .card-text {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 0.4rem;
+
+        &::before {
+          content: "\2022";
+          margin-right: 0.5em;
+          color: rgba(255, 255, 255, 0.4);
+        }
       }
     }
 

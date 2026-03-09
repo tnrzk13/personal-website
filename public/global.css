@@ -55,6 +55,7 @@
 :root {
     --blue: rgb(6, 0, 87);
     --darkblue: #040d21;
+    --bold-highlight: #f0b866;
     --gradient-cosmic-fusion: linear-gradient(
         to bottom right,
         #ff00cc,

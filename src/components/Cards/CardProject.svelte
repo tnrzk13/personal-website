@@ -75,7 +75,7 @@
         margin-top: 1.5em;
 
         :global(strong) {
-          color: #f0b866;
+          color: var(--bold-highlight);
           font-weight: 600;
         }
       }

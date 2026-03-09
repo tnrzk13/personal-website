@@ -154,7 +154,7 @@
 
     li {
       font-size: 0.9rem;
-      color: rgb(200, 200, 200);
+      color: white;
 
       &::before {
         content: "\2022";
@@ -163,7 +163,7 @@
       }
 
       b {
-        color: white;
+        color: var(--bold-highlight);
       }
     }
   }
