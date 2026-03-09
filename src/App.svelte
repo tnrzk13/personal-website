@@ -149,7 +149,7 @@
             display: flex;
             flex-direction: column;
             color: white;
-            overflow: hidden;
+            overflow-x: hidden;
 
             main {
                 position: relative;
