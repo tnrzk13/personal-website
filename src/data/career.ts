@@ -6,7 +6,7 @@ export const cardList: CareerCard[] = [
     imgurl: getImagePath("images/03-career/alethea"),
     title: "Software Engineer",
     subtitle: "Alethea",
-    datePeriod: "2022 - 2024",
+    datePeriod: "2024 - 2026",
     techstack: ["React", "Typescript", "Firebase", "Vite", "Typesense"],
     points: [
       [
@@ -88,7 +88,7 @@ export const cardList: CareerCard[] = [
     imgurl: getImagePath("images/03-career/myriade"),
     title: "Software Developer",
     subtitle: "Myriade",
-    datePeriod: "2021 - 2022",
+    datePeriod: "2022 - 2024",
     techstack: ["Node.js", "Express.js", "PostgreSQL"],
     points: [
       [
@@ -152,7 +152,7 @@ export const cardList: CareerCard[] = [
     imgurl: getImagePath("images/03-career/npx"),
     title: "Innovation Catalyst Intern",
     subtitle: "Nuclear Promise X",
-    datePeriod: "2020 - 2021",
+    datePeriod: "2021",
     techstack: ["MSPowerApps", "PowerBI", "SQL", "Python"],
     points: [
       [
@@ -268,7 +268,7 @@ export const cardList: CareerCard[] = [
     imgurl: getImagePath("images/03-career/quarter4"),
     title: "Database Specialist",
     subtitle: "Quarter4",
-    datePeriod: "2019 - 2020",
+    datePeriod: "2019",
     techstack: ["Python", "SQL"],
     points: [
       [
@@ -302,7 +302,7 @@ export const cardList: CareerCard[] = [
     imgurl: getImagePath("images/03-career/marsh"),
     title: "Business Application Developer",
     subtitle: "Marsh",
-    datePeriod: "2019",
+    datePeriod: "2018",
     techstack: ["VBA"],
     points: [
       [
