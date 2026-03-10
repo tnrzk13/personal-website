@@ -123,9 +123,10 @@
                 <!-- <section id="testimonials-section" aria-label="Testimonials">
                     <Testimonials />
                 </section> -->
-                <section aria-label="Projects" class="projects-section">
+                <section aria-label="Projects">
                     <Projects />
                 </section>
+                <div class="curve-interior"></div>
             </main>
             <div class="curve-shadow"></div>
             <footer>
@@ -173,8 +174,8 @@
                 background-color: var(--darkblue);
             }
 
-            .projects-section {
-                padding-bottom: 4em;
+            .curve-interior {
+                height: 3em;
             }
 
             .curve-shadow {

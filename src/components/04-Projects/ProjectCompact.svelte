@@ -27,6 +27,10 @@
 </div>
 
 <style lang="scss">
+  .compact-project {
+    height: 100%;
+  }
+
   .compact-img-container {
     width: 100%;
 
