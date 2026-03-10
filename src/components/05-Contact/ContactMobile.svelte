@@ -56,10 +56,15 @@
       font-size: 3em;
       color: white;
       line-height: normal;
-      padding: 3.5em 0.5em 2em 0.5em;
+      padding: 2em 0.5em 0.5em 0.5em;
 
       .textLayer-preamble {
         font-size: 0.5em;
+      }
+
+      .textLayer-title {
+        // Reserve 2 lines so typing animation doesn't cause layout shift
+        min-height: 2.5em;
       }
 
       .textLayer-description {
@@ -122,7 +127,8 @@
       font-size: 0.8rem;
       color: rgba(255, 255, 255, 0.5);
       text-align: center;
-      padding-bottom: 2em;
+      margin-top: 1.5em;
+      padding-bottom: 1.5em;
     }
   }
 </style>

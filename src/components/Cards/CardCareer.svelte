@@ -3,11 +3,26 @@
   import GlassCard from "./GlassCard.svelte";
 
   let { imgurl, title, subtitle, datePeriod, points, logoColor, techstack, revealDelayMs = 0 } = $props();
+
+  const VISIBLE_BULLET_COUNT = 2;
+  let expanded = $state(false);
+  const hasExtra = points.length > VISIBLE_BULLET_COUNT;
+  const canHover = typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
+  const visiblePoints = points.slice(0, VISIBLE_BULLET_COUNT);
+  const extraPoints = points.slice(VISIBLE_BULLET_COUNT);
 </script>
 
 <div class="card-container reveal" style="transition-delay: {revealDelayMs}ms">
   <GlassCard>
-    <div class="career-content">
+    <button
+      class="career-content"
+      class:expandable={hasExtra}
+      onclick={() => { if (hasExtra && !canHover) expanded = !expanded; }}
+      onmouseenter={() => { if (hasExtra && canHover) expanded = true; }}
+      onmouseleave={() => { if (hasExtra && canHover) expanded = false; }}
+      aria-expanded={hasExtra ? expanded : undefined}
+      type="button"
+    >
     <div class="card-header">
       <div class="circle-logo" style="background-image: {logoColor}">
         <img class="logo" src={imgurl} alt="company logo" loading="lazy" />
@@ -17,13 +32,18 @@
         <p class="card-subtitle">{subtitle}</p>
       </div>
       <span class="date-period">{datePeriod}</span>
+      {#if hasExtra}
+        <svg class="chevron" class:open={expanded} width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      {/if}
     </div>
     <div class="card-body">
       <div class="techstack-wrapper">
         <Techstack {techstack} />
       </div>
       <ul class="card-text">
-        {#each points as point}
+        {#each visiblePoints as point}
           <li>
             {#each point as part}
               {#if part.style === "bold"}
@@ -35,8 +55,25 @@
           </li>
         {/each}
       </ul>
+      {#if hasExtra}
+        <div class="extra-bullets" class:open={expanded}>
+          <ul class="card-text extra-list">
+            {#each extraPoints as point}
+              <li>
+                {#each point as part}
+                  {#if part.style === "bold"}
+                    <b>{part.text}</b>
+                  {:else}
+                    <span class="point-part"> {part.text}</span>
+                  {/if}
+                {/each}
+              </li>
+            {/each}
+          </ul>
+        </div>
+      {/if}
     </div>
-    </div>
+    </button>
   </GlassCard>
 </div>
 
@@ -49,6 +86,19 @@
 
     .career-content {
       padding: 1.75rem;
+      width: 100%;
+      background: none;
+      border: none;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: default;
+
+      @media (hover: none) {
+        &.expandable {
+          cursor: pointer;
+        }
+      }
     }
 
     .card-header {
@@ -84,6 +134,18 @@
       margin-top: 0.25rem;
     }
 
+    .chevron {
+      color: rgba(255, 255, 255, 0.4);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+      align-self: flex-start;
+      margin-top: 0.25rem;
+
+      &.open {
+        transform: rotate(180deg);
+      }
+    }
+
     .card-body {
       text-align: left;
       padding: 0;
@@ -109,6 +171,25 @@
           margin-right: 0.5em;
           color: rgba(255, 255, 255, 0.4);
         }
+      }
+    }
+
+    .extra-bullets {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.35s ease;
+
+      &.open {
+        grid-template-rows: 1fr;
+      }
+    }
+
+    .extra-list {
+      overflow: hidden;
+      margin: 0;
+
+      li {
+        padding-top: 0.5rem;
       }
     }
 
