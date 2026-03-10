@@ -123,10 +123,11 @@
                 <!-- <section id="testimonials-section" aria-label="Testimonials">
                     <Testimonials />
                 </section> -->
-                <section aria-label="Projects">
+                <section aria-label="Projects" class="projects-section">
                     <Projects />
                 </section>
             </main>
+            <div class="curve-shadow"></div>
             <footer>
                 <ContactText {contactInfo} {titleHeight} {contactYOffset} />
             </footer>
@@ -162,16 +163,31 @@
 
             .content-desktop {
                 border-radius: 0 0 50% 50% / 0 0 3em 3em;
-                padding-bottom: 4em;
                 background-image: linear-gradient(
                     var(--blue) 5%,
                     var(--darkblue) 50%
                 );
+            }
 
-                &::after {
+            .content-mobile {
+                background-color: var(--darkblue);
+            }
+
+            .projects-section {
+                padding-bottom: 4em;
+            }
+
+            .curve-shadow {
+                position: relative;
+                width: 100%;
+                height: 0;
+                z-index: 3;
+                pointer-events: none;
+
+                &::before {
                     content: '';
                     position: absolute;
-                    bottom: -5em;
+                    top: -5em;
                     left: 0;
                     right: 0;
                     height: 10em;
@@ -184,10 +200,6 @@
                     );
                     pointer-events: none;
                 }
-            }
-
-            .content-mobile {
-                background-color: var(--darkblue);
             }
 
         }
