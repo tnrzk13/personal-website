@@ -175,7 +175,7 @@
             }
 
             .curve-interior {
-                height: 3em;
+                height: 6em;
             }
 
             .curve-shadow {
