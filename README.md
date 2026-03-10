@@ -17,6 +17,7 @@ Svelte 5 portfolio site featuring an 11-layer parallax hero, smooth scrolling, m
 - Magnetic hover effects on buttons and links
 - Text reveal animations on scroll
 - Career timeline with expandable cards
+- Ambient color orbs that drift behind glass cards, giving backdrop-filter a colored glow
 - Project showcase with tag filtering (grid on desktop, carousel on mobile)
 - Accessibility: skip-to-content, ARIA labels, reduced-motion support
 
