@@ -12,6 +12,7 @@
     import ContactText from "./components/05-Contact/ContactText.svelte";
     import ContactMobile from "./components/05-Contact/ContactMobile.svelte";
     import Navbar from "./components/Navbar.svelte";
+    import AmbientOrbs from "./components/AmbientOrbs.svelte";
     import { SM_SCREEN_PX } from "./utils/breakpoints";
 
     let titleHeight = $state(0);
@@ -77,6 +78,7 @@
                 class="content-mobile"
                 bind:clientHeight={contentHeight}
             >
+                <AmbientOrbs />
                 <ImpactMetrics />
                 <section id="aboutme-section" aria-label="About me">
                     <AboutMe />
@@ -113,6 +115,7 @@
                 class="content-desktop"
                 bind:clientHeight={contentHeight}
             >
+                <AmbientOrbs />
                 <ImpactMetrics />
                 <section id="aboutme-section" aria-label="About me">
                     <AboutMe />
@@ -158,6 +161,11 @@
 
                 section + section {
                     padding-top: clamp(6rem, 12vw, 18rem);
+                }
+
+                section, :global(.metrics-strip) {
+                    position: relative;
+                    z-index: 1;
                 }
             }
 
