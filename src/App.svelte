@@ -126,7 +126,6 @@
                 <section aria-label="Projects">
                     <Projects />
                 </section>
-                <div class="curve-interior"></div>
             </main>
             <div class="curve-shadow"></div>
             <footer>
@@ -164,6 +163,7 @@
 
             .content-desktop {
                 border-radius: 0 0 50% 50% / 0 0 3em 3em;
+                padding-bottom: 6em;
                 background-image: linear-gradient(
                     var(--blue) 5%,
                     var(--darkblue) 50%
@@ -174,14 +174,8 @@
                 background-color: var(--darkblue);
             }
 
-            .curve-interior {
-                height: 6em;
-            }
-
             .curve-shadow {
                 position: relative;
-                width: 100%;
-                height: 0;
                 z-index: 3;
                 pointer-events: none;
 
@@ -199,7 +193,6 @@
                         rgba(4, 13, 33, 0.25) 70%,
                         transparent
                     );
-                    pointer-events: none;
                 }
             }
 
