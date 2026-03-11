@@ -130,7 +130,6 @@
                     <Projects />
                 </section>
             </main>
-            <div class="curve-shadow"></div>
             <footer>
                 <ContactText {contactInfo} {titleHeight} {contactYOffset} />
             </footer>
@@ -153,7 +152,7 @@
             display: flex;
             flex-direction: column;
             color: white;
-            overflow-x: hidden;
+            overflow-x: clip;
 
             main {
                 position: relative;
@@ -176,32 +175,11 @@
                     var(--blue) 5%,
                     var(--darkblue) 50%
                 );
+                box-shadow: 0 1.5em 3em -0.5em rgba(4, 13, 33, 0.8);
             }
 
             .content-mobile {
                 background-color: var(--darkblue);
-            }
-
-            .curve-shadow {
-                position: relative;
-                z-index: 3;
-                pointer-events: none;
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: -5em;
-                    left: 0;
-                    right: 0;
-                    height: 10em;
-                    background: radial-gradient(
-                        80% 100% at 50% 0%,
-                        #040d21 15%,
-                        rgba(4, 13, 33, 0.65) 45%,
-                        rgba(4, 13, 33, 0.25) 70%,
-                        transparent
-                    );
-                }
             }
 
         }
