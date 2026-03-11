@@ -30,8 +30,8 @@
       <div class="header-text">
         <h3 class="card-title">{title}</h3>
         <p class="card-subtitle">{subtitle}</p>
+        <span class="date-period">{datePeriod}</span>
       </div>
-      <span class="date-period">{datePeriod}</span>
       {#if hasExtra}
         <svg class="chevron" class:open={expanded} width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
           <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -124,15 +124,27 @@
         color: rgb(200, 200, 200);
         margin-top: 0.15rem;
       }
-    }
 
-    .date-period {
-      font-family: "Montserrat", sans-serif;
-      font-size: 0.85rem;
-      color: rgba(255, 255, 255, 0.5);
-      white-space: nowrap;
-      align-self: flex-start;
-      margin-top: 0.25rem;
+      .date-period {
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.5);
+        white-space: nowrap;
+        display: block;
+        margin-top: 0.25rem;
+
+        @media (min-width: 768px) {
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin-top: 0;
+        }
+      }
+
+      @media (min-width: 768px) {
+        position: relative;
+        padding-right: 6.5rem;
+      }
     }
 
     .chevron {
