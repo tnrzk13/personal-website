@@ -12,7 +12,7 @@
     import ContactText from "./components/05-Contact/ContactText.svelte";
     import ContactMobile from "./components/05-Contact/ContactMobile.svelte";
     import Navbar from "./components/Navbar.svelte";
-    import AmbientOrbs from "./components/AmbientOrbs.svelte";
+    import AuroraBackground from "./components/AuroraBackground.svelte";
     import { SM_SCREEN_PX } from "./utils/breakpoints";
 
     let titleHeight = $state(0);
@@ -78,7 +78,7 @@
                 class="content-mobile"
                 bind:clientHeight={contentHeight}
             >
-                <AmbientOrbs />
+                <AuroraBackground />
                 <ImpactMetrics />
                 <section id="aboutme-section" aria-label="About me">
                     <AboutMe />
@@ -115,7 +115,7 @@
                 class="content-desktop"
                 bind:clientHeight={contentHeight}
             >
-                <AmbientOrbs />
+                <AuroraBackground />
                 <ImpactMetrics />
                 <section id="aboutme-section" aria-label="About me">
                     <AboutMe />
