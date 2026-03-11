@@ -191,251 +191,92 @@
     }
 
     @keyframes blob-1 {
-        0%, 100% {
-            transform: translate(0, 0) scale(1);
-            border-radius: 40% 60% 55% 45% / 55% 40% 60% 50%;
-        }
-        25% {
-            transform: translate(25vw, 5vh) scale(1.12, 0.95);
-            border-radius: 55% 45% 48% 52% / 42% 58% 50% 50%;
-        }
-        50% {
-            transform: translate(15vw, -8vh) scale(0.88, 1.06);
-            border-radius: 48% 52% 60% 40% / 50% 50% 45% 55%;
-        }
-        75% {
-            transform: translate(30vw, 10vh) scale(1.05, 0.92);
-            border-radius: 42% 58% 50% 50% / 58% 42% 55% 45%;
-        }
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        25% { transform: translate(25vw, 5vh) scale(1.12, 0.95); }
+        50% { transform: translate(15vw, -8vh) scale(0.88, 1.06); }
+        75% { transform: translate(30vw, 10vh) scale(1.05, 0.92); }
     }
 
     @keyframes blob-2 {
-        0%, 100% {
-            transform: translate(0, 0) scale(1);
-            border-radius: 55% 45% 50% 50% / 45% 55% 45% 55%;
-        }
-        25% {
-            transform: translate(-20vw, 8vh) scale(0.9, 1.08);
-            border-radius: 45% 55% 58% 42% / 52% 48% 55% 45%;
-        }
-        50% {
-            transform: translate(-10vw, 25vh) scale(1.14, 0.93);
-            border-radius: 50% 50% 42% 58% / 58% 42% 50% 50%;
-        }
-        75% {
-            transform: translate(-25vw, 5vh) scale(0.92, 1.04);
-            border-radius: 58% 42% 45% 55% / 40% 60% 52% 48%;
-        }
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        25% { transform: translate(-20vw, 8vh) scale(0.9, 1.08); }
+        50% { transform: translate(-10vw, 25vh) scale(1.14, 0.93); }
+        75% { transform: translate(-25vw, 5vh) scale(0.92, 1.04); }
     }
 
     @keyframes blob-3 {
-        0%, 100% {
-            transform: translate(0, 0) scale(1);
-            border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
-        }
-        20% {
-            transform: translate(20vw, -5vh) scale(1.08, 0.94);
-            border-radius: 52% 48% 45% 55% / 55% 45% 48% 52%;
-        }
-        40% {
-            transform: translate(10vw, 10vh) scale(0.88, 1.06);
-            border-radius: 40% 60% 52% 48% / 48% 52% 60% 40%;
-        }
-        60% {
-            transform: translate(25vw, 5vh) scale(1.12, 0.9);
-            border-radius: 58% 42% 40% 60% / 42% 58% 52% 48%;
-        }
-        80% {
-            transform: translate(5vw, -10vh) scale(0.93, 1.08);
-            border-radius: 48% 52% 55% 45% / 55% 45% 42% 58%;
-        }
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        20% { transform: translate(20vw, -5vh) scale(1.08, 0.94); }
+        40% { transform: translate(10vw, 10vh) scale(0.88, 1.06); }
+        60% { transform: translate(25vw, 5vh) scale(1.12, 0.9); }
+        80% { transform: translate(5vw, -10vh) scale(0.93, 1.08); }
     }
 
     @keyframes blob-4 {
-        0%, 100% {
-            transform: translate(0, 0) scale(1);
-            border-radius: 60% 40% 45% 55% / 40% 60% 50% 50%;
-        }
-        25% {
-            transform: translate(-15vw, -10vh) scale(1.1, 0.92);
-            border-radius: 48% 52% 55% 45% / 52% 48% 42% 58%;
-        }
-        50% {
-            transform: translate(-25vw, 5vh) scale(0.9, 1.08);
-            border-radius: 55% 45% 42% 58% / 45% 55% 58% 42%;
-        }
-        75% {
-            transform: translate(10vw, -15vh) scale(1.06, 0.95);
-            border-radius: 42% 58% 52% 48% / 58% 42% 45% 55%;
-        }
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        25% { transform: translate(-15vw, -10vh) scale(1.1, 0.92); }
+        50% { transform: translate(-25vw, 5vh) scale(0.9, 1.08); }
+        75% { transform: translate(10vw, -15vh) scale(1.06, 0.95); }
     }
 
     @keyframes blob-5 {
-        0%, 100% {
-            transform: translate(0, 0) scale(1);
-            border-radius: 50% 50% 55% 45% / 55% 45% 40% 60%;
-        }
-        20% {
-            transform: translate(-15vw, -10vh) scale(1.08, 0.92);
-            border-radius: 42% 58% 48% 52% / 48% 52% 55% 45%;
-        }
-        40% {
-            transform: translate(-5vw, 8vh) scale(0.88, 1.06);
-            border-radius: 55% 45% 42% 58% / 42% 58% 48% 52%;
-        }
-        60% {
-            transform: translate(-20vw, -5vh) scale(1.1, 0.93);
-            border-radius: 48% 52% 58% 42% / 55% 45% 42% 58%;
-        }
-        80% {
-            transform: translate(-10vw, 12vh) scale(0.93, 1.06);
-            border-radius: 58% 42% 45% 55% / 45% 55% 52% 48%;
-        }
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        20% { transform: translate(-15vw, -10vh) scale(1.08, 0.92); }
+        40% { transform: translate(-5vw, 8vh) scale(0.88, 1.06); }
+        60% { transform: translate(-20vw, -5vh) scale(1.1, 0.93); }
+        80% { transform: translate(-10vw, 12vh) scale(0.93, 1.06); }
     }
 
     @keyframes blob-6 {
-        0%, 100% {
-            transform: translate(0, 0) scale(1);
-            border-radius: 42% 58% 48% 52% / 52% 48% 58% 42%;
-        }
-        25% {
-            transform: translate(20vw, -8vh) scale(1.08, 0.93);
-            border-radius: 55% 45% 55% 45% / 45% 55% 42% 58%;
-        }
-        50% {
-            transform: translate(30vw, 5vh) scale(0.9, 1.08);
-            border-radius: 48% 52% 42% 58% / 58% 42% 52% 48%;
-        }
-        75% {
-            transform: translate(10vw, -12vh) scale(1.1, 0.92);
-            border-radius: 52% 48% 58% 42% / 42% 58% 48% 52%;
-        }
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        25% { transform: translate(20vw, -8vh) scale(1.08, 0.93); }
+        50% { transform: translate(30vw, 5vh) scale(0.9, 1.08); }
+        75% { transform: translate(10vw, -12vh) scale(1.1, 0.92); }
     }
 
     @keyframes blob-7 {
-        0%, 100% {
-            transform: translate(0, 0) scale(1);
-            border-radius: 58% 42% 52% 48% / 48% 52% 42% 58%;
-        }
-        20% {
-            transform: translate(-18vw, 6vh) scale(0.92, 1.06);
-            border-radius: 45% 55% 42% 58% / 55% 45% 58% 42%;
-        }
-        40% {
-            transform: translate(-8vw, -10vh) scale(1.1, 0.92);
-            border-radius: 52% 48% 58% 42% / 42% 58% 45% 55%;
-        }
-        60% {
-            transform: translate(-22vw, 3vh) scale(0.88, 1.05);
-            border-radius: 42% 58% 45% 55% / 58% 42% 52% 48%;
-        }
-        80% {
-            transform: translate(-5vw, -8vh) scale(1.06, 0.94);
-            border-radius: 55% 45% 52% 48% / 45% 55% 48% 52%;
-        }
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        20% { transform: translate(-18vw, 6vh) scale(0.92, 1.06); }
+        40% { transform: translate(-8vw, -10vh) scale(1.1, 0.92); }
+        60% { transform: translate(-22vw, 3vh) scale(0.88, 1.05); }
+        80% { transform: translate(-5vw, -8vh) scale(1.06, 0.94); }
     }
 
     @keyframes blob-8 {
-        0%, 100% {
-            transform: translate(0, 0) scale(1);
-            border-radius: 45% 55% 42% 58% / 58% 42% 55% 45%;
-        }
-        25% {
-            transform: translate(15vw, -6vh) scale(1.12, 0.93);
-            border-radius: 55% 45% 58% 42% / 42% 58% 45% 55%;
-        }
-        50% {
-            transform: translate(25vw, 8vh) scale(0.9, 1.06);
-            border-radius: 42% 58% 48% 52% / 52% 48% 58% 42%;
-        }
-        75% {
-            transform: translate(8vw, -10vh) scale(1.06, 0.94);
-            border-radius: 58% 42% 52% 48% / 48% 52% 42% 58%;
-        }
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        25% { transform: translate(15vw, -6vh) scale(1.12, 0.93); }
+        50% { transform: translate(25vw, 8vh) scale(0.9, 1.06); }
+        75% { transform: translate(8vw, -10vh) scale(1.06, 0.94); }
     }
 
     @keyframes blob-9 {
-        0%, 100% {
-            transform: translate(0, 0) scale(1);
-            border-radius: 52% 48% 58% 42% / 42% 58% 48% 52%;
-        }
-        25% {
-            transform: translate(-18vw, 6vh) scale(1.08, 0.93);
-            border-radius: 42% 58% 45% 55% / 55% 45% 58% 42%;
-        }
-        50% {
-            transform: translate(-8vw, -8vh) scale(0.92, 1.06);
-            border-radius: 58% 42% 52% 48% / 48% 52% 42% 58%;
-        }
-        75% {
-            transform: translate(-22vw, 10vh) scale(1.1, 0.9);
-            border-radius: 45% 55% 48% 52% / 52% 48% 55% 45%;
-        }
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        25% { transform: translate(-18vw, 6vh) scale(1.08, 0.93); }
+        50% { transform: translate(-8vw, -8vh) scale(0.92, 1.06); }
+        75% { transform: translate(-22vw, 10vh) scale(1.1, 0.9); }
     }
 
     @keyframes blob-10 {
-        0%, 100% {
-            transform: translate(0, 0) scale(1);
-            border-radius: 48% 52% 45% 55% / 55% 45% 52% 48%;
-        }
-        20% {
-            transform: translate(-12vw, 8vh) scale(0.9, 1.06);
-            border-radius: 55% 45% 52% 48% / 42% 58% 45% 55%;
-        }
-        40% {
-            transform: translate(8vw, -6vh) scale(1.1, 0.92);
-            border-radius: 42% 58% 58% 42% / 55% 45% 48% 52%;
-        }
-        60% {
-            transform: translate(-18vw, 10vh) scale(0.93, 1.08);
-            border-radius: 52% 48% 42% 58% / 48% 52% 58% 42%;
-        }
-        80% {
-            transform: translate(5vw, -12vh) scale(1.08, 0.94);
-            border-radius: 45% 55% 55% 45% / 52% 48% 42% 58%;
-        }
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        20% { transform: translate(-12vw, 8vh) scale(0.9, 1.06); }
+        40% { transform: translate(8vw, -6vh) scale(1.1, 0.92); }
+        60% { transform: translate(-18vw, 10vh) scale(0.93, 1.08); }
+        80% { transform: translate(5vw, -12vh) scale(1.08, 0.94); }
     }
 
     @keyframes blob-11 {
-        0%, 100% {
-            transform: translate(0, 0) scale(1);
-            border-radius: 55% 45% 52% 48% / 45% 55% 48% 52%;
-        }
-        25% {
-            transform: translate(15vw, -8vh) scale(1.1, 0.93);
-            border-radius: 42% 58% 45% 55% / 58% 42% 55% 45%;
-        }
-        50% {
-            transform: translate(-10vw, 6vh) scale(0.9, 1.06);
-            border-radius: 58% 42% 55% 45% / 42% 58% 42% 58%;
-        }
-        75% {
-            transform: translate(20vw, 10vh) scale(1.06, 0.94);
-            border-radius: 48% 52% 42% 58% / 55% 45% 52% 48%;
-        }
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        25% { transform: translate(15vw, -8vh) scale(1.1, 0.93); }
+        50% { transform: translate(-10vw, 6vh) scale(0.9, 1.06); }
+        75% { transform: translate(20vw, 10vh) scale(1.06, 0.94); }
     }
 
     @keyframes blob-12 {
-        0%, 100% {
-            transform: translate(0, 0) scale(1);
-            border-radius: 42% 58% 55% 45% / 50% 50% 42% 58%;
-        }
-        20% {
-            transform: translate(-20vw, -5vh) scale(1.08, 0.93);
-            border-radius: 55% 45% 42% 58% / 42% 58% 55% 45%;
-        }
-        40% {
-            transform: translate(-10vw, 8vh) scale(0.88, 1.06);
-            border-radius: 48% 52% 58% 42% / 55% 45% 48% 52%;
-        }
-        60% {
-            transform: translate(-25vw, -8vh) scale(1.12, 0.9);
-            border-radius: 52% 48% 45% 55% / 45% 55% 52% 48%;
-        }
-        80% {
-            transform: translate(-8vw, 5vh) scale(0.93, 1.06);
-            border-radius: 45% 55% 52% 48% / 52% 48% 58% 42%;
-        }
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        20% { transform: translate(-20vw, -5vh) scale(1.08, 0.93); }
+        40% { transform: translate(-10vw, 8vh) scale(0.88, 1.06); }
+        60% { transform: translate(-25vw, -8vh) scale(1.12, 0.9); }
+        80% { transform: translate(-8vw, 5vh) scale(0.93, 1.06); }
     }
 
     @media (max-width: 767px) {
