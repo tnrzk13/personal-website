@@ -223,6 +223,8 @@ h2.section-title::after {
 
 /* Layout utilities replacing Bootstrap grid */
 .section-inset {
+  position: relative;
+  z-index: 1;
   width: 83.33%;
   margin-inline: auto;
 }

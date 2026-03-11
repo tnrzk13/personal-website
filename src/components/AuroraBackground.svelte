@@ -1,16 +1,35 @@
-<div class="aurora" aria-hidden="true">
-    <div class="aurora-blob blob-1"></div>
-    <div class="aurora-blob blob-2"></div>
-    <div class="aurora-blob blob-3"></div>
-    <div class="aurora-blob blob-4"></div>
-    <div class="aurora-blob blob-5"></div>
-    <div class="aurora-blob blob-6"></div>
-    <div class="aurora-blob blob-7"></div>
-    <div class="aurora-blob blob-8"></div>
-    <div class="aurora-blob blob-9"></div>
-    <div class="aurora-blob blob-10"></div>
-    <div class="aurora-blob blob-11"></div>
-    <div class="aurora-blob blob-12"></div>
+<script lang="ts">
+    type BlobGroup = 'top' | 'career' | 'bottom';
+
+    const BLOB_GROUPS: Record<BlobGroup, { id: number; top: string }[]> = {
+        top:    [{ id: 1, top: '10%' }, { id: 2, top: '17%' }, { id: 3, top: '67%' }],
+        career: [{ id: 4, top: '9%' }, { id: 9, top: '23%' }, { id: 5, top: '40%' }, { id: 6, top: '69%' }, { id: 7, top: '100%' }],
+        bottom: [{ id: 10, top: '20%' }, { id: 8, top: '31%' }, { id: 11, top: '60%' }, { id: 12, top: '77%' }],
+    };
+
+    let { group, freezeHeight = false }: { group: BlobGroup, freezeHeight?: boolean } = $props();
+
+    let auroraEl: HTMLDivElement;
+    let frozenHeightPx = $state(0);
+
+    $effect(() => {
+        if (!freezeHeight || !auroraEl?.parentElement) return;
+        const updateHeight = () => { frozenHeightPx = auroraEl.parentElement!.clientHeight; };
+        updateHeight();
+        window.addEventListener('resize', updateHeight);
+        return () => window.removeEventListener('resize', updateHeight);
+    });
+</script>
+
+<div
+    class="aurora"
+    aria-hidden="true"
+    bind:this={auroraEl}
+    style={freezeHeight && frozenHeightPx ? `height: ${frozenHeightPx}px` : undefined}
+>
+    {#each BLOB_GROUPS[group] as blob (blob.id)}
+        <div class="aurora-blob blob-{blob.id}" style="top: {blob.top}"></div>
+    {/each}
 </div>
 
 <style>
@@ -19,7 +38,6 @@
         inset: 0;
         z-index: 0;
         pointer-events: none;
-        border-radius: inherit;
     }
 
     .aurora-blob {
@@ -32,7 +50,6 @@
     .blob-1 {
         width: 700px;
         height: 550px;
-        top: 3%;
         left: 10%;
         background: radial-gradient(ellipse at 30% 40%, rgba(109, 213, 250, 1) 0%, rgba(109, 213, 250, 0.4) 50%, transparent 70%);
         filter: blur(50px);
@@ -45,7 +62,6 @@
     .blob-2 {
         width: 640px;
         height: 520px;
-        top: 5%;
         right: 8%;
         background: radial-gradient(ellipse at 65% 35%, rgba(252, 165, 241, 1) 0%, rgba(252, 165, 241, 0.4) 50%, transparent 70%);
         filter: blur(50px);
@@ -58,7 +74,6 @@
     .blob-3 {
         width: 750px;
         height: 600px;
-        top: 20%;
         left: 5%;
         background: radial-gradient(ellipse at 40% 65%, rgba(142, 45, 226, 1) 0%, rgba(142, 45, 226, 0.4) 50%, transparent 70%);
         filter: blur(55px);
@@ -71,7 +86,6 @@
     .blob-4 {
         width: 650px;
         height: 520px;
-        top: 33%;
         left: 15%;
         background: radial-gradient(ellipse at 70% 30%, rgba(240, 184, 102, 1) 0%, rgba(240, 184, 102, 0.4) 50%, transparent 70%);
         filter: blur(70px);
@@ -84,7 +98,6 @@
     .blob-5 {
         width: 750px;
         height: 600px;
-        top: 44%;
         right: 3%;
         background: radial-gradient(ellipse at 35% 55%, rgba(5, 117, 230, 1) 0%, rgba(5, 117, 230, 0.4) 50%, transparent 70%);
         filter: blur(75px);
@@ -97,7 +110,6 @@
     .blob-6 {
         width: 700px;
         height: 580px;
-        top: 54%;
         left: 8%;
         background: radial-gradient(ellipse at 60% 45%, rgba(109, 213, 250, 1) 0%, rgba(109, 213, 250, 0.4) 50%, transparent 70%);
         filter: blur(75px);
@@ -110,7 +122,6 @@
     .blob-7 {
         width: 720px;
         height: 580px;
-        top: 65%;
         left: 25%;
         background: radial-gradient(ellipse at 25% 60%, rgba(252, 165, 241, 1) 0%, rgba(252, 165, 241, 0.4) 50%, transparent 70%);
         filter: blur(80px);
@@ -123,7 +134,6 @@
     .blob-8 {
         width: 750px;
         height: 600px;
-        top: 76%;
         right: 5%;
         background: radial-gradient(ellipse at 55% 30%, rgba(142, 45, 226, 1) 0%, rgba(142, 45, 226, 0.4) 50%, transparent 70%);
         filter: blur(80px);
@@ -136,7 +146,6 @@
     .blob-9 {
         width: 650px;
         height: 530px;
-        top: 38%;
         right: 10%;
         background: radial-gradient(ellipse at 45% 70%, rgba(240, 184, 102, 1) 0%, rgba(240, 184, 102, 0.4) 50%, transparent 70%);
         filter: blur(70px);
@@ -149,7 +158,6 @@
     .blob-10 {
         width: 700px;
         height: 560px;
-        top: 72%;
         left: 5%;
         background: radial-gradient(ellipse at 30% 50%, rgba(109, 213, 250, 1) 0%, rgba(109, 213, 250, 0.4) 50%, transparent 70%);
         filter: blur(80px);
@@ -162,7 +170,6 @@
     .blob-11 {
         width: 720px;
         height: 580px;
-        top: 86%;
         left: 20%;
         background: radial-gradient(ellipse at 65% 40%, rgba(5, 117, 230, 1) 0%, rgba(5, 117, 230, 0.4) 50%, transparent 70%);
         filter: blur(80px);
@@ -175,7 +182,6 @@
     .blob-12 {
         width: 680px;
         height: 540px;
-        top: 92%;
         right: 8%;
         background: radial-gradient(ellipse at 50% 65%, rgba(240, 184, 102, 1) 0%, rgba(240, 184, 102, 0.4) 50%, transparent 70%);
         filter: blur(75px);

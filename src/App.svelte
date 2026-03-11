@@ -78,18 +78,17 @@
                 class="content-mobile"
                 bind:clientHeight={contentHeight}
             >
-                <AuroraBackground />
                 <ImpactMetrics />
                 <section id="aboutme-section" aria-label="About me">
+                    <AuroraBackground group="top" />
                     <AboutMe />
                 </section>
                 <section aria-label="Career">
+                    <AuroraBackground group="career" freezeHeight />
                     <Career />
                 </section>
-                <!-- <section id="testimonials-section" aria-label="Testimonials">
-                    <Testimonials />
-                </section> -->
                 <section aria-label="Projects">
+                    <AuroraBackground group="bottom" />
                     <Projects />
                 </section>
                 <footer>
@@ -115,18 +114,17 @@
                 class="content-desktop"
                 bind:clientHeight={contentHeight}
             >
-                <AuroraBackground />
                 <ImpactMetrics />
                 <section id="aboutme-section" aria-label="About me">
+                    <AuroraBackground group="top" />
                     <AboutMe />
                 </section>
                 <section aria-label="Career">
+                    <AuroraBackground group="career" freezeHeight />
                     <Career />
                 </section>
-                <!-- <section id="testimonials-section" aria-label="Testimonials">
-                    <Testimonials />
-                </section> -->
                 <section aria-label="Projects">
+                    <AuroraBackground group="bottom" />
                     <Projects />
                 </section>
             </main>
