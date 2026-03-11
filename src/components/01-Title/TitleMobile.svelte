@@ -87,6 +87,7 @@
         color: transparent;
         -webkit-background-clip: text;
         background-image: var(--gradient-mint-blue-dark);
+        min-height: 2lh;
       }
 
       .textLayer-description {
