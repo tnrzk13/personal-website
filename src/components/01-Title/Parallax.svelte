@@ -76,9 +76,9 @@
             {titleInfo.subtitle}<AnimateType
                 texts={titleInfo.texts}
                 delay={100}
-                num_loops={2}
-                repeat_n_words={1}
-                blinker_iter_count={10}
+                num_loops={1000}
+                repeat_n_words={0}
+                blinker_iter_count={"infinite"}
               />
           </div>
           <div class="textLayer-description">
