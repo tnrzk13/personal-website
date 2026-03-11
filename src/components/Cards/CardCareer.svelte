@@ -83,6 +83,7 @@
     margin-bottom: 2.5rem;
     color: white;
     text-align: center;
+    min-width: 0;
 
     .career-content {
       padding: 1.75rem;
