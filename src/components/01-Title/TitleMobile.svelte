@@ -68,7 +68,7 @@
       font-size: 4rem;
       color: white;
       line-height: normal;
-      padding: 2em 0.25em 2em 0.25em;
+      padding: 2em 0.25em 0.75em 0.25em;
 
       .textLayer-preamble,
       .textLayer-description {
