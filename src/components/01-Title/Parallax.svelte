@@ -10,6 +10,7 @@
   const layers = [...Array(numLayers).keys()];
   const textLayer = 3;
   const numImgLayers = numLayers - 1;
+  const parallaxSpeedDivisor = numImgLayers - 1;
   let imgHeight = $state(0);
   let offsetRatio = $state(0);
   let yScroll = $state(0);
@@ -53,7 +54,7 @@
       <img
         style="transform: translateY(calc({boolShowContact
           ? getContactParallax(layer) * 0.7
-          : (-scrollY * layer) / (layers.length - 1)}px {boolShowContact
+          : (-scrollY * layer) / parallaxSpeedDivisor}px {boolShowContact
           ? '- ' + contentBorderRadius
           : ''})); opacity: {getLayerOpacity(layer)}"
         src={getImagePath(`images/intro/00${layer}`)}
@@ -63,7 +64,7 @@
       <img
         style="transform: translateY({(boolShowContact
           ? getContactParallax(layer)
-          : (-scrollY * layer) / (layers.length - 1)) + getLayerOffsetPx(layer)}px); opacity: {getLayerOpacity(layer)}"
+          : (-scrollY * layer) / parallaxSpeedDivisor) + getLayerOffsetPx(layer)}px); opacity: {getLayerOpacity(layer)}"
         src={getImagePath(`images/intro/00${layer}`)}
         alt="parallax layer {layer}"
       />
@@ -91,7 +92,7 @@
       <img
         style="transform: translateY({(boolShowContact
           ? getContactParallax(layer)
-          : (-scrollY * (layer - 1)) / (layers.length - 1)) + getLayerOffsetPx(layer)}px){getLayerScale(layer)}"
+          : (-scrollY * (layer - 1)) / parallaxSpeedDivisor) + getLayerOffsetPx(layer)}px){getLayerScale(layer)}"
         src={getImagePath(`images/intro/00${layer - 1}`)}
         alt="parallax layer {layer - 1}"
       />
