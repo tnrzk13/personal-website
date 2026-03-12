@@ -3,6 +3,7 @@
   let { texts = [], delay = 60, word_complete_delay = 1000, num_loops = 1, repeat_n_words = 0, blink_time = 1000, blinker_iter_count = "infinite" } = $props();
 
   let state = $state("");
+  let timeoutId;
 
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
@@ -23,37 +24,49 @@
   };
 
   const animateType = () => {
-    let typing_delay = 100;
+    let loopCount = 0;
+    let isFirstChar = true;
 
-    for (let loop = 0; loop < num_loops; loop++) {
-      if (num_loops != 1 && repeat_n_words != 0 && loop === num_loops - 1) {
+    const typeChar = (wordIdx, charIdx) => {
+      const { word, direction } = localTexts[wordIdx];
+      timeoutId = setTimeout(() => {
+        isFirstChar = false;
+        state += word[charIdx];
+        if (charIdx + 1 < word.length) {
+          typeChar(wordIdx, charIdx + 1);
+        } else if (direction === "type&delete") {
+          deleteChar(wordIdx, word.length, true);
+        } else {
+          advanceWord(wordIdx + 1);
+        }
+      }, isFirstChar ? 100 : delay);
+    };
+
+    const deleteChar = (wordIdx, remaining, pauseFirst = false) => {
+      timeoutId = setTimeout(() => {
+        state = state.slice(0, -1);
+        if (remaining > 1) {
+          deleteChar(wordIdx, remaining - 1);
+        } else {
+          advanceWord(wordIdx + 1);
+        }
+      }, pauseFirst ? word_complete_delay + delay : delay);
+    };
+
+    const advanceWord = (wordIdx) => {
+      if (wordIdx < localTexts.length) {
+        typeChar(wordIdx, 0);
+        return;
+      }
+      loopCount++;
+      if (loopCount >= num_loops) return;
+      if (loopCount === num_loops - 1 && num_loops !== 1 && repeat_n_words !== 0) {
         createRepeatArray();
       }
+      typeChar(0, 0);
+    };
 
-      localTexts.forEach(({ direction, word }) => {
-        for (let i = 0; i < word.length; i++) {
-          setTimeout(() => {
-            state = state + word[i];
-          }, typing_delay);
-          typing_delay = typing_delay + delay;
-        }
-        if (direction === "type&delete") {
-          for (let i = 0; i < word.length; i++) {
-            if (i === 0) {
-              setTimeout(() => {
-                state = state.slice(0, -1);
-              }, typing_delay + word_complete_delay);
-              typing_delay = typing_delay + delay + word_complete_delay;
-            } else {
-              setTimeout(() => {
-                state = state.slice(0, -1);
-              }, typing_delay);
-              typing_delay = typing_delay + delay;
-            }
-          }
-        }
-      });
-    }
+    typeChar(0, 0);
   };
 
   onMount(() => {
@@ -62,6 +75,7 @@
     } else {
       animateType();
     }
+    return () => clearTimeout(timeoutId);
   });
 </script>
 
