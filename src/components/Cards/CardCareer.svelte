@@ -28,8 +28,10 @@
         <img class="logo" src={imgurl} alt="company logo" loading="lazy" />
       </div>
       <div class="header-text">
-        <h3 class="card-title">{title}</h3>
-        <p class="card-subtitle">{subtitle}</p>
+        <div class="header-titles">
+          <h3 class="card-title">{title}</h3>
+          <p class="card-subtitle">{subtitle}</p>
+        </div>
         <span class="date-period">{datePeriod}</span>
       </div>
       {#if hasExtra}
@@ -111,18 +113,28 @@
 
     .header-text {
       flex: 1;
-      text-align: left;
       min-width: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      column-gap: 1rem;
+      row-gap: 0.25rem;
 
-      h3 {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.25rem;
-        line-height: 1.3;
-      }
-      p.card-subtitle {
-        font-size: 1.05rem;
-        color: rgb(200, 200, 200);
-        margin-top: 0.15rem;
+      .header-titles {
+        flex: 1 1 auto;
+        min-width: 0;
+        text-align: left;
+
+        h3 {
+          font-family: "Montserrat", sans-serif;
+          font-size: 1.25rem;
+          line-height: 1.3;
+        }
+        p.card-subtitle {
+          font-size: 1.05rem;
+          color: rgb(200, 200, 200);
+          margin-top: 0.15rem;
+        }
       }
 
       .date-period {
@@ -130,20 +142,6 @@
         font-size: 0.85rem;
         color: rgba(255, 255, 255, 0.5);
         white-space: nowrap;
-        display: block;
-        margin-top: 0.25rem;
-
-        @media (min-width: 768px) {
-          position: absolute;
-          top: 0;
-          right: 0;
-          margin-top: 0;
-        }
-      }
-
-      @media (min-width: 768px) {
-        position: relative;
-        padding-right: 6.5rem;
       }
     }
 

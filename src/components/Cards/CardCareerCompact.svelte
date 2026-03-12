@@ -24,10 +24,12 @@
           <img src={imgurl} alt="company logo" loading="lazy" />
         </div>
         <div class="compact-info">
-          <h3 class="compact-title">{title}</h3>
-          <p class="compact-subtitle">{subtitle}</p>
+          <div class="compact-titles">
+            <h3 class="compact-title">{title}</h3>
+            <p class="compact-subtitle">{subtitle}</p>
+          </div>
+          <span class="compact-date">{datePeriod}</span>
         </div>
-        <span class="compact-date">{datePeriod}</span>
         {#if hasExtra}
           <svg class="chevron" class:open={expanded} width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
             <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -114,25 +116,34 @@
   .compact-info {
     flex: 1;
     min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    column-gap: 1rem;
+    row-gap: 0.15rem;
 
-    h3 {
+    .compact-titles {
+      flex: 1 1 auto;
+      min-width: 0;
+
+      h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: rgb(200, 200, 200);
+        margin-top: 0.1rem;
+      }
+    }
+
+    .compact-date {
       font-family: "Montserrat", sans-serif;
-      font-size: 1rem;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+      white-space: nowrap;
     }
-
-    p {
-      font-size: 0.9rem;
-      color: rgb(200, 200, 200);
-      margin-top: 0.1rem;
-    }
-  }
-
-  .compact-date {
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.5);
-    white-space: nowrap;
-    align-self: flex-start;
   }
 
   .chevron {
