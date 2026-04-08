@@ -15,6 +15,31 @@ export const projList: ProjectData[] = [
     featured: true,
   },
   {
+    title: "Voice Dictation",
+    imgurl: getImagePath("images/04-project/voicedictation"),
+    videoUrl: "images/04-project/voicedictation.mp4",
+    urls: {
+      projectUrl: "",
+      codeUrl: "https://github.com/tnrzk13/voice-dictation",
+    },
+    text: "Real-time Linux voice transcription tool with a <strong>client-daemon architecture</strong> that keeps Whisper loaded for minimal latency, featuring streaming self-correction and spoken formatting commands.",
+    techstack: ["Python", "Whisper", "CUDA"],
+    tags: ["Systems"],
+    featured: true,
+  },
+  {
+    title: "YouTube Audio Chunker",
+    imgurl: getImagePath("images/04-project/youtubechunker"),
+    urls: {
+      projectUrl: "",
+      codeUrl: "https://github.com/tnrzk13/youtube-audio-chunker",
+    },
+    text: "<strong>Tauri desktop app</strong> that downloads YouTube audio, splits it into navigable chunks, and sideloads to Garmin watches, with a SvelteKit frontend and Python processing backend.",
+    techstack: ["Python", "SvelteKit", "Tauri", "ffmpeg"],
+    tags: ["Web"],
+    featured: true,
+  },
+  {
     title: "SoulDog",
     imgurl: getImagePath("images/04-project/souldog"),
     urls: {
@@ -41,6 +66,7 @@ export const projList: ProjectData[] = [
   {
     title: "This Website!",
     imgurl: getImagePath("images/04-project/website"),
+    videoUrl: "images/04-project/website.mp4",
     urls: {
       projectUrl: "https://tnrzk13.github.io/personal-website/",
       codeUrl: "https://github.com/tnrzk13/personal-website",

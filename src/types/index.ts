@@ -22,6 +22,7 @@ export interface ProjectUrls {
 export interface ProjectData {
   title: string;
   imgurl: string;
+  videoUrl?: string;
   urls: ProjectUrls;
   text: string;
   techstack: string[];

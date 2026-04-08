@@ -1,5 +1,6 @@
 <script>
   import CardProject from "../Cards/CardProject.svelte";
+  import { lazyPlayback } from "../../actions/lazyPlayback";
   import { SM_SCREEN_PX } from "../../utils/breakpoints";
   let { projectIndex, projectInfo } = $props();
 
@@ -16,12 +17,30 @@
 <div class="project-container reveal" class:reversed={isReversed} style="transition-delay: {projectIndex * 100 + 550}ms">
   <div class="img-container">
     <div class="main-img-container" class:reversed-offset={isReversed}>
+      {#snippet media(glowing)}
+        {#if projectInfo.videoUrl}
+          <video
+            class="main"
+            class:glowing
+            src={projectInfo.videoUrl}
+            poster={projectInfo.imgurl}
+            preload="none"
+            muted
+            loop
+            playsinline
+            use:lazyPlayback
+          ></video>
+        {:else}
+          <img class="main" class:glowing src={projectInfo.imgurl} alt="project" loading="lazy" />
+        {/if}
+      {/snippet}
+
       {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
         <a href={projectInfo.urls.projectUrl || projectInfo.urls.codeUrl} target="_blank" rel="noopener noreferrer">
-          <img class="main glowing" src={projectInfo.imgurl} alt="project" loading="lazy" />
+          {@render media(true)}
         </a>
       {:else}
-        <img class="main" src={projectInfo.imgurl} alt="project" loading="lazy" />
+        {@render media(false)}
       {/if}
     </div>
   </div>
@@ -65,7 +84,7 @@
       position: relative;
       flex: 0 0 58.33%;
 
-      img.main {
+      img.main, video.main {
         padding: 0;
         margin: 0;
         width: 100%;
@@ -73,7 +92,7 @@
         transition: 0.5s;
       }
 
-      img.glowing {
+      img.glowing, video.glowing {
         box-shadow: 0 0 65px rgb(237 78 80), 0 0 0 1px rgb(255 255 255 / 10%),
           0 2px 2px rgb(0 0 0 / 3%), 0 4px 4px rgb(0 0 0 / 4%),
           0 10px 8px rgb(0 0 0 / 5%), 0 15px 15px rgb(0 0 0 / 6%),
@@ -88,7 +107,7 @@
       margin-left: 16.67%;
     }
 
-    img:hover {
+    img:hover, video:hover {
       scale: 105%;
     }
   }
