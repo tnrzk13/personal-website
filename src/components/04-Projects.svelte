@@ -126,9 +126,9 @@
       <CardProjectCompact
         title={proj.title}
         imgBase={proj.imgBase}
-        oneliner={proj.oneliner}
         urls={proj.urls}
         text={proj.text}
+        details={proj.details}
         techstack={proj.techstack}
         {revealDelayMs}
       />

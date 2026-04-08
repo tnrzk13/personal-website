@@ -8,17 +8,17 @@
   let {
     title,
     imgBase,
-    oneliner,
     urls,
     text,
+    details = [],
     techstack,
     revealDelayMs = 0,
   }: {
     title: string;
     imgBase: string;
-    oneliner: string;
     urls: ProjectUrls;
     text: string;
+    details?: string[];
     techstack: string[];
     revealDelayMs?: number;
   } = $props();
@@ -73,7 +73,7 @@
               ><IconGitHub /></a>
             {/if}
           </div>
-          <p class="compact-oneliner">{oneliner}</p>
+          <p class="compact-summary">{@html text}</p>
         </div>
         <svg
           class="chevron"
@@ -89,7 +89,13 @@
       </div>
       <div class="extra-content" class:open={expanded}>
         <div class="extra-inner">
-          <p class="expanded-text">{@html text}</p>
+          {#if details.length > 0}
+            <ul class="details-list">
+              {#each details as detail}
+                <li>{@html detail}</li>
+              {/each}
+            </ul>
+          {/if}
           <Techstack {techstack} />
         </div>
       </div>
@@ -126,14 +132,11 @@
   .compact-thumb {
     width: 35%;
     min-width: 35%;
-    aspect-ratio: 4 / 3;
     overflow: hidden;
     border-radius: 1rem 0 0 0;
 
     img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
       display: block;
     }
   }
@@ -187,11 +190,16 @@
     }
   }
 
-  .compact-oneliner {
+  .compact-summary {
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.6);
     margin: 0.35rem 0 0 0;
-    line-height: 1.3;
+    line-height: 1.4;
+
+    :global(strong) {
+      color: var(--bold-highlight);
+      font-weight: 600;
+    }
   }
 
   .chevron {
@@ -226,16 +234,22 @@
     }
   }
 
-  .expanded-text {
-    padding: 0.75rem 0 0;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.75);
-    line-height: 1.5;
+  .details-list {
+    margin: 0.75rem 0 0;
+    padding: 0.75rem 0 0 1.25em;
+    list-style: disc;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 
-    :global(strong) {
-      color: var(--bold-highlight);
-      font-weight: 600;
+    li {
+      margin-bottom: 0.4em;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.75);
+
+      :global(strong) {
+        color: var(--bold-highlight);
+        font-weight: 600;
+      }
     }
   }
 </style>

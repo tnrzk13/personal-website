@@ -123,13 +123,19 @@
 
       .details-list {
         margin: 1em 0 0.5em;
-        padding-left: 1.25em;
-        list-style: disc;
+        padding: 0;
+        list-style: none;
 
         li {
           margin-bottom: 0.5em;
           line-height: 1.5;
           color: rgba(255, 255, 255, 0.8);
+
+          &::before {
+            content: "\2022";
+            margin-right: 0.5em;
+            color: rgba(255, 255, 255, 0.4);
+          }
 
           :global(strong) {
             color: var(--bold-highlight);
