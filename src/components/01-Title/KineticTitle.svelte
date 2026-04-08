@@ -90,6 +90,12 @@
     layoutReady = true;
   }
 
+  function showDecodedFrame(): void {
+    skipToDecoded(chars);
+    entranceComplete = true;
+    renderFrame();
+  }
+
   // --- Rendering ---
 
   function renderFrame(): void {
@@ -113,6 +119,20 @@
 
   // --- Animation loop ---
 
+  function scheduleNextIdleGlitch(timestamp: number): void {
+    nextIdleGlitchAtMs = timestamp + nextIdleGlitchDelayMs();
+  }
+
+  function tickIdleGlitch(timestamp: number): void {
+    if (idleGlitchState) {
+      idleGlitchState = updateIdleGlitch(chars, frameCount, idleGlitchState);
+      if (!idleGlitchState) scheduleNextIdleGlitch(timestamp);
+    } else if (cursorX === null && cursorY === null && timestamp >= nextIdleGlitchAtMs) {
+      idleGlitchState = startIdleGlitch(chars, frameCount);
+      if (!idleGlitchState) scheduleNextIdleGlitch(timestamp);
+    }
+  }
+
   function animationLoop(timestamp: number): void {
     if (!layoutReady) {
       rafId = requestAnimationFrame(animationLoop);
@@ -124,22 +144,9 @@
     const wasEntranceComplete = entranceComplete;
     entranceComplete = updateEntrance(chars, timestamp - startTimeMs) || entranceComplete;
     if (entranceComplete) {
-      if (!wasEntranceComplete) {
-        nextIdleGlitchAtMs = timestamp + nextIdleGlitchDelayMs();
-      }
+      if (!wasEntranceComplete) scheduleNextIdleGlitch(timestamp);
       updateHoverGlitch(chars, cursorX, cursorY, frameCount, fontSizePx);
-
-      if (idleGlitchState) {
-        idleGlitchState = updateIdleGlitch(chars, frameCount, idleGlitchState);
-        if (!idleGlitchState) {
-          nextIdleGlitchAtMs = timestamp + nextIdleGlitchDelayMs();
-        }
-      } else if (cursorX === null && cursorY === null && timestamp >= nextIdleGlitchAtMs) {
-        idleGlitchState = startIdleGlitch(chars, frameCount);
-        if (!idleGlitchState) {
-          nextIdleGlitchAtMs = timestamp + nextIdleGlitchDelayMs();
-        }
-      }
+      tickIdleGlitch(timestamp);
     }
     renderFrame();
     rafId = requestAnimationFrame(animationLoop);
@@ -173,11 +180,7 @@
 
   function handleResize(): void {
     layoutText();
-    if (prefersReducedMotion) {
-      skipToDecoded(chars);
-      entranceComplete = true;
-      renderFrame();
-    }
+    if (prefersReducedMotion) showDecodedFrame();
   }
 
   // --- Lifecycle ---
@@ -190,9 +193,7 @@
     document.fonts.ready.then(() => {
       layoutText();
       if (prefersReducedMotion) {
-        skipToDecoded(chars);
-        entranceComplete = true;
-        renderFrame();
+        showDecodedFrame();
       } else if (visible) {
         startLoop();
       }

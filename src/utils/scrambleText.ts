@@ -1,13 +1,21 @@
 const SCRAMBLE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*!?";
 
-export const DECODE_STAGGER_MS = 80;
-export const DECODE_START_DELAY_MS = 400;
-export const GLITCH_RADIUS_PX = 100;
+const DECODE_STAGGER_MS = 80;
+const DECODE_START_DELAY_MS = 400;
+const GLITCH_RADIUS_PX = 100;
 const REDECODE_DELAY_MS = 60;
 
-export const IDLE_GLITCH_MIN_MS = 5000;
-export const IDLE_GLITCH_MAX_MS = 10000;
+const IDLE_GLITCH_MIN_MS = 5000;
+const IDLE_GLITCH_MAX_MS = 10000;
 const IDLE_GLITCH_DURATION_FRAMES = 40;
+
+// Character center is offset from the baseline; these approximate the glyph midpoint
+const CHAR_CENTER_Y_OFFSET = 0.35;
+const CHAR_CENTER_X_OFFSET = 0.3;
+// Controls how staggered the redecode ripple is after cursor leaves
+const REDECODE_STAGGER_DIVISOR = 10;
+const REDECODE_JITTER_RANGE = 3;
+const ASSUMED_FRAME_MS = 16;
 
 export interface CharLayout {
   char: string;
@@ -81,13 +89,16 @@ export function updateHoverGlitch(
   frameCount: number,
   fontSizePx: number,
 ): void {
-  for (const ch of chars) {
+  const hasCursor = cursorX !== null && cursorY !== null;
+
+  for (let i = 0; i < chars.length; i++) {
+    const ch = chars[i];
     if (ch.char === " ") continue;
 
-    if (cursorX !== null && cursorY !== null) {
-      const charCenterY = ch.restY - fontSizePx * 0.35;
-      const dx = ch.restX + fontSizePx * 0.3 - cursorX;
-      const dy = charCenterY - cursorY;
+    if (hasCursor) {
+      const charCenterY = ch.restY - fontSizePx * CHAR_CENTER_Y_OFFSET;
+      const dx = ch.restX + fontSizePx * CHAR_CENTER_X_OFFSET - cursorX!;
+      const dy = charCenterY - cursorY!;
       const distance = Math.sqrt(dx * dx + dy * dy);
 
       if (distance < GLITCH_RADIUS_PX) {
@@ -96,12 +107,11 @@ export function updateHoverGlitch(
         ch.redecodeAtFrame = 0;
       } else if (ch.glitched && ch.redecodeAtFrame === 0) {
         const distFromEdge = distance - GLITCH_RADIUS_PX;
-        const staggerFrames = Math.floor(distFromEdge / 10) + Math.floor(Math.random() * 3);
+        const staggerFrames = Math.floor(distFromEdge / REDECODE_STAGGER_DIVISOR) + Math.floor(Math.random() * REDECODE_JITTER_RANGE);
         ch.redecodeAtFrame = frameCount + staggerFrames;
       }
     } else if (ch.glitched && ch.redecodeAtFrame === 0) {
-      const charIdx = chars.indexOf(ch);
-      const staggerFrames = Math.floor(charIdx * REDECODE_DELAY_MS / 16);
+      const staggerFrames = Math.floor(i * REDECODE_DELAY_MS / ASSUMED_FRAME_MS);
       ch.redecodeAtFrame = frameCount + staggerFrames;
     }
 
