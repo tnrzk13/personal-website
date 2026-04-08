@@ -1,5 +1,7 @@
 <script>
   import AnimateType from "../TextType/AnimateType.svelte";
+  import IconLinkedIn from "../Icons/IconLinkedIn.svelte";
+  import IconGitHub from "../Icons/IconGitHub.svelte";
   import { LINKEDIN_URL, GITHUB_URL, EMAIL, COPYRIGHT } from "../../data/contact";
   let { contactInfo } = $props();
 </script>
@@ -22,10 +24,10 @@
     <div class="links-container">
       <span class="icon-links">
         <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-          <i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+          <IconLinkedIn />
         </a>
         <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-          <i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+          <IconGitHub />
         </a>
       </span>
       <span class="button-container">
@@ -86,6 +88,11 @@
           display: flex;
           align-items: center;
           gap: 0.75rem;
+
+          :global(svg) {
+            width: 1em;
+            height: 1em;
+          }
 
           a {
             text-decoration: none;

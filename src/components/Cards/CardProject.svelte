@@ -1,6 +1,8 @@
 <script>
   let { title, urls, text, techstack } = $props();
   import Techstack from "../Misc/Techstack.svelte";
+  import IconLink from "../Icons/IconLink.svelte";
+  import IconGitHub from "../Icons/IconGitHub.svelte";
 </script>
 
 <div class="project-card-wrapper">
@@ -12,7 +14,7 @@
             <a href={urls.projectUrl} target="_blank" rel="noopener noreferrer" aria-label="View {title} project">
               <h3 class="title">
                 {title}
-                <i class="fa-solid fa-link" aria-hidden="true"></i>
+                <IconLink />
               </h3>
             </a>
           {:else}
@@ -25,7 +27,7 @@
           {#if urls.codeUrl}
             <a href={urls.codeUrl} target="_blank" rel="noopener noreferrer" aria-label="View {title} source code on GitHub" class="github-link">
               <span class="title">
-                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                <IconGitHub />
               </span>
             </a>
           {/if}
@@ -62,6 +64,12 @@
       }
       a:hover {
         filter: brightness(75%);
+      }
+
+      :global(svg) {
+        width: 0.8em;
+        height: 0.8em;
+        vertical-align: baseline;
       }
 
       h3, span.title {

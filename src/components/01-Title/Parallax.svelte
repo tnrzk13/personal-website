@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import AnimateType from "../TextType/AnimateType.svelte";
+  import IconAnglesDown from "../Icons/IconAnglesDown.svelte";
   import { getImagePath } from "../../utils/imagePath";
   import { getContactParallax as getContactParallaxBase, getLayerScale, getLayerOpacity, getLayerOffsetPx } from "../../utils/parallax";
 
@@ -85,7 +86,7 @@
           <div class="textLayer-description">
             {titleInfo.description}
           </div>
-          <div class="scrolldown"><i class="fa-solid fa-angles-down" aria-hidden="true"></i></div>
+          <div class="scrolldown"><IconAnglesDown /></div>
         </div>
       {/if}
     {:else if layer >= textLayer && layer < 11}
@@ -155,6 +156,11 @@
         font-size: min(2.5vw, 4vh);
         padding-top: 0.5em;
         text-align: center;
+
+        :global(svg) {
+          width: 1em;
+          height: 1em;
+        }
         background-image: linear-gradient(
           180deg,
           white,
