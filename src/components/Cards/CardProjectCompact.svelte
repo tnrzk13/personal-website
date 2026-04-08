@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import GlassCard from "./GlassCard.svelte";
   import Techstack from "../Misc/Techstack.svelte";
   import IconLink from "../Icons/IconLink.svelte";
