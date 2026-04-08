@@ -85,7 +85,7 @@
             </main>
         </div>
     </div>
-    <Navbar boolMobileView={isMobile.value} scrollY={y} />
+    <Navbar boolMobileView={isMobile.value} scrollY={y} {titleHeight} />
 {:else}
     <div class="page-wrapper">
         <Parallax
@@ -121,7 +121,7 @@
             </footer>
         </div>
     </div>
-    <Navbar boolMobileView={isMobile.value} scrollY={y} />
+    <Navbar boolMobileView={isMobile.value} scrollY={y} {titleHeight} />
 {/if}
 
 <style lang="scss">

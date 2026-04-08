@@ -1,7 +1,7 @@
 <script>
   import { magneticHover } from "../utils/magneticHover";
 
-  let { boolMobileView, scrollY = 0 } = $props();
+  let { boolMobileView, scrollY = 0, titleHeight = 0 } = $props();
 
   let showNavBar = $state(true);
   let navOpen = $state(false);
@@ -20,6 +20,7 @@
   const sectionIds = NAV_LINKS.map(l => l.section);
 
   $effect(() => {
+    if (titleHeight === undefined) return;
     const aboutEl = document.getElementById("aboutme");
     if (aboutEl) aboutSectionTop = aboutEl.getBoundingClientRect().top + window.scrollY;
   });
