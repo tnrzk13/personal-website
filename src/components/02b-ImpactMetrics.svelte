@@ -1,12 +1,55 @@
 <script lang="ts">
     import { metrics } from "../data/metrics";
-    import { reveal } from "../actions/reveal";
+
+    const DURATION_MS = 2000;
+    const STAGGER_MS = 150;
+
+    let currentValues: number[] = $state(metrics.map(() => 0));
+
+    function easeOutCubic(t: number): number {
+        return 1 - Math.pow(1 - t, 3);
+    }
+
+    function countUpOnReveal(node: HTMLElement) {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (!entry.isIntersecting) return;
+                observer.disconnect();
+
+                if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                    currentValues = metrics.map((m) => m.target);
+                    return;
+                }
+
+                metrics.forEach((metric, i) => {
+                    setTimeout(() => {
+                        const start = performance.now();
+
+                        function tick(now: number) {
+                            const elapsed = now - start;
+                            const progress = Math.min(elapsed / DURATION_MS, 1);
+                            currentValues[i] = Math.round(easeOutCubic(progress) * metric.target);
+                            if (progress < 1) requestAnimationFrame(tick);
+                        }
+
+                        requestAnimationFrame(tick);
+                    }, i * STAGGER_MS);
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        observer.observe(node);
+        return { destroy: () => observer.disconnect() };
+    }
 </script>
 
-<div class="metrics-strip content-width" data-reveal-section use:reveal>
-    {#each metrics as { value, label }, i}
-        <div class="metric reveal" style="transition-delay: {50 + i * 60}ms">
-            <span class="metric-value">{value}</span>
+<div class="metrics-strip content-width" use:countUpOnReveal>
+    {#each metrics as { prefix, suffix, label }, i}
+        <div class="metric">
+            <span class="metric-value">
+                {prefix ?? ""}{currentValues[i]}{suffix}
+            </span>
             <span class="metric-label">{label}</span>
         </div>
     {/each}

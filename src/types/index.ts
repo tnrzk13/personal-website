@@ -43,7 +43,12 @@ export interface ContactInfo extends TitleInfo {
 }
 
 export interface ImpactMetric {
-  value: string;
+  /** The numeric target to count up to */
+  target: number;
+  /** Text before the number (e.g. "$") */
+  prefix?: string;
+  /** Text after the number (e.g. "x", "%", "k+") */
+  suffix: string;
   label: string;
 }
 
