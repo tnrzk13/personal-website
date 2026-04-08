@@ -5,6 +5,10 @@ export const DECODE_START_DELAY_MS = 400;
 export const GLITCH_RADIUS_PX = 100;
 const REDECODE_DELAY_MS = 60;
 
+export const IDLE_GLITCH_MIN_MS = 5000;
+export const IDLE_GLITCH_MAX_MS = 10000;
+const IDLE_GLITCH_DURATION_FRAMES = 40;
+
 export interface CharLayout {
   char: string;
   displayChar: string;
@@ -117,4 +121,45 @@ export function skipToDecoded(chars: CharLayout[]): void {
     ch.displayChar = ch.char;
     ch.entranceDecoded = true;
   }
+}
+
+// --- Idle glitch (single-character hint) ---
+
+export interface IdleGlitchState {
+  charIdx: number;
+  redecodeAtFrame: number;
+}
+
+export function nextIdleGlitchDelayMs(): number {
+  return IDLE_GLITCH_MIN_MS + Math.random() * (IDLE_GLITCH_MAX_MS - IDLE_GLITCH_MIN_MS);
+}
+
+/** Scramble one random non-space character. Returns null if no candidates. */
+export function startIdleGlitch(
+  chars: CharLayout[],
+  frameCount: number,
+): IdleGlitchState | null {
+  const candidates: number[] = [];
+  for (let i = 0; i < chars.length; i++) {
+    if (chars[i].char !== " " && !chars[i].glitched) candidates.push(i);
+  }
+  if (candidates.length === 0) return null;
+  const idx = candidates[Math.floor(Math.random() * candidates.length)];
+  chars[idx].displayChar = randomScrambleChar();
+  return { charIdx: idx, redecodeAtFrame: frameCount + IDLE_GLITCH_DURATION_FRAMES };
+}
+
+/** Cycle the idle-glitched character through random glyphs, redecode when done. */
+export function updateIdleGlitch(
+  chars: CharLayout[],
+  frameCount: number,
+  state: IdleGlitchState,
+): IdleGlitchState | null {
+  const ch = chars[state.charIdx];
+  if (frameCount >= state.redecodeAtFrame) {
+    ch.displayChar = ch.char;
+    return null;
+  }
+  ch.displayChar = randomScrambleChar();
+  return state;
 }

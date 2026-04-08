@@ -5,8 +5,12 @@
     createCharLayouts,
     updateEntrance,
     updateHoverGlitch,
+    startIdleGlitch,
+    updateIdleGlitch,
+    nextIdleGlitchDelayMs,
     skipToDecoded,
     type CharLayout,
+    type IdleGlitchState,
   } from "../../utils/scrambleText";
 
   let {
@@ -39,6 +43,8 @@
   let startTimeMs = 0;
   let entranceComplete = false;
   let frameCount = 0;
+  let idleGlitchState: IdleGlitchState | null = null;
+  let nextIdleGlitchAtMs = Infinity;
 
   // --- Canvas setup ---
 
@@ -79,6 +85,8 @@
     startTimeMs = 0;
     entranceComplete = false;
     frameCount = 0;
+    idleGlitchState = null;
+    nextIdleGlitchAtMs = Infinity;
     layoutReady = true;
   }
 
@@ -113,9 +121,25 @@
     if (!startTimeMs) startTimeMs = timestamp;
     frameCount++;
 
+    const wasEntranceComplete = entranceComplete;
     entranceComplete = updateEntrance(chars, timestamp - startTimeMs) || entranceComplete;
     if (entranceComplete) {
+      if (!wasEntranceComplete) {
+        nextIdleGlitchAtMs = timestamp + nextIdleGlitchDelayMs();
+      }
       updateHoverGlitch(chars, cursorX, cursorY, frameCount, fontSizePx);
+
+      if (idleGlitchState) {
+        idleGlitchState = updateIdleGlitch(chars, frameCount, idleGlitchState);
+        if (!idleGlitchState) {
+          nextIdleGlitchAtMs = timestamp + nextIdleGlitchDelayMs();
+        }
+      } else if (cursorX === null && cursorY === null && timestamp >= nextIdleGlitchAtMs) {
+        idleGlitchState = startIdleGlitch(chars, frameCount);
+        if (!idleGlitchState) {
+          nextIdleGlitchAtMs = timestamp + nextIdleGlitchDelayMs();
+        }
+      }
     }
     renderFrame();
     rafId = requestAnimationFrame(animationLoop);
@@ -207,5 +231,6 @@
 
   canvas {
     display: block;
+    cursor: pointer;
   }
 </style>
