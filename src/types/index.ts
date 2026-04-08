@@ -27,7 +27,8 @@ export interface ProjectData {
   text: string;
   techstack: string[];
   tags: string[];
-  featured?: boolean;
+  tier: "featured" | "compact";
+  oneliner: string;
 }
 
 export interface TitleInfo {

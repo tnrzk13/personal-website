@@ -49,4 +49,18 @@ describe("projList (project data)", () => {
       expect(proj.urls.codeUrl).toBeTruthy();
     }
   });
+
+  it("each entry has a valid tier", () => {
+    for (const proj of projList) {
+      expect(["featured", "compact"]).toContain(proj.tier);
+    }
+  });
+
+  it("each compact entry has a oneliner", () => {
+    for (const proj of projList) {
+      if (proj.tier === "compact") {
+        expect(proj.oneliner).toBeTruthy();
+      }
+    }
+  });
 });

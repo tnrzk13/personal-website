@@ -11,7 +11,8 @@ export const projList: ProjectData[] = [
     text: "Deep Learning model that diagnoses pneumonia with <strong>98.5% accuracy</strong> from chest X-ray images, built with FastAI and deployed on HuggingFace.",
     techstack: ["Python", "Fast.ai", "Gradio"],
     tags: ["ML"],
-    featured: true,
+    tier: "featured",
+    oneliner: "Deep learning X-ray diagnosis model",
   },
   {
     title: "Voice Dictation",
@@ -24,7 +25,8 @@ export const projList: ProjectData[] = [
     text: "Real-time Linux voice transcription tool with a <strong>client-daemon architecture</strong> that keeps Whisper loaded for minimal latency, featuring streaming self-correction and spoken formatting commands.",
     techstack: ["Python", "Whisper", "CUDA"],
     tags: ["Systems"],
-    featured: true,
+    tier: "featured",
+    oneliner: "Real-time Linux voice transcription tool",
   },
   {
     title: "YouTube Audio Chunker",
@@ -36,7 +38,8 @@ export const projList: ProjectData[] = [
     text: "<strong>Tauri desktop app</strong> that downloads YouTube audio, splits it into navigable chunks, and sideloads to Garmin watches, with a SvelteKit frontend and Python processing backend.",
     techstack: ["Python", "SvelteKit", "Tauri", "ffmpeg"],
     tags: ["Web"],
-    featured: true,
+    tier: "featured",
+    oneliner: "Desktop app for Garmin audio sideloading",
   },
   {
     title: "SoulDog",
@@ -48,7 +51,8 @@ export const projList: ProjectData[] = [
     text: 'Awarded <strong>"top project of the class"</strong> in CS348: Database Systems. Full-stack webapp matching abandoned dogs with new owners, featuring Google auth, search, and posting.',
     techstack: ["Javascript", "React", "Node.JS", "Knex JS", "SQL"],
     tags: ["Web"],
-    featured: true,
+    tier: "compact",
+    oneliner: "Full-stack dog adoption webapp",
   },
   {
     title: "Time Series Forecasting",
@@ -60,7 +64,8 @@ export const projList: ProjectData[] = [
     text: "Forecasted air passenger volumes <strong>36 months ahead</strong> using SARIMA and Holt-Winters Exponential Smoothing models.",
     techstack: ["Python", "SciKit Learn", "StatsModels", "Matplotlib", "Pandas", "SciPy"],
     tags: ["ML"],
-    featured: true,
+    tier: "compact",
+    oneliner: "Air passenger volume prediction",
   },
   {
     title: "This Website!",
@@ -73,6 +78,8 @@ export const projList: ProjectData[] = [
     text: "Built with <strong>Svelte</strong> from scratch - learned a new framework, brushed up on HTML and CSS, and solved lots of bugs along the way.",
     techstack: ["Javascript", "Svelte"],
     tags: ["Web"],
+    tier: "compact",
+    oneliner: "Svelte portfolio site built from scratch",
   },
   {
     title: "Chess",
@@ -84,6 +91,8 @@ export const projList: ProjectData[] = [
     text: "Full chess implementation with <strong>4 difficulty levels</strong> including Stockfish, supporting human-vs-human and human-vs-CPU. Built with Observer and Factory Method patterns.",
     techstack: ["C++", "Makefile"],
     tags: ["Systems"],
+    tier: "compact",
+    oneliner: "Full chess engine with Stockfish AI",
   },
   {
     title: "Wumpus World",
@@ -95,5 +104,7 @@ export const projList: ProjectData[] = [
     text: "Solved an RPG-like problem using <strong>reinforcement learning</strong> (Q-Learning, SARSA) paired with exploration strategies (greedy, softmax) to find optimal combinations.",
     techstack: ["Python"],
     tags: ["ML"],
+    tier: "compact",
+    oneliner: "Reinforcement learning RPG solver",
   },
 ];
