@@ -69,7 +69,7 @@
       :global(svg) {
         width: 0.8em;
         height: 0.8em;
-        vertical-align: baseline;
+        vertical-align: -0.125em;
       }
 
       h3, span.title {
