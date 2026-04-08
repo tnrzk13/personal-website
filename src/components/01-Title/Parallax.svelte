@@ -57,7 +57,7 @@
   class="parallax-container {boolShowContact
     ? 'contact-section'
     : 'title-section'}"
-  style="height: {boolShowContact ? containerHeight : containerHeight - scrollY}px;"
+  style:--parallax-h="{boolShowContact ? containerHeight : containerHeight - scrollY}px"
 >
   {#each layers as layer}
     {#if layer === 0}
@@ -137,6 +137,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    height: var(--parallax-h);
 
     img {
       position: absolute;

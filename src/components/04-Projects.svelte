@@ -2,14 +2,12 @@
   import ProjectCompact from "./04-Projects/ProjectCompact.svelte";
   import { projList } from "../data/projects";
   import TextReveal from "./TextReveal.svelte";
-
-  import { SM_SCREEN_PX } from "../utils/breakpoints";
+  import { isMobile } from '../utils/mediaQuery.svelte';
 
   const ALL_TAG = "All";
   const tags = [ALL_TAG, ...new Set(projList.flatMap((p) => p.tags))];
 
   let activeTag = $state(ALL_TAG);
-  let isMobile = $state(false);
   let activeSlide = $state(0);
   let carouselEl = $state(null);
   let carouselHeightPx = $state(0);
@@ -17,10 +15,6 @@
   const filteredProjects = $derived(
     activeTag === ALL_TAG ? projList : projList.filter((p) => p.tags.includes(activeTag))
   );
-
-  function checkMobile() {
-    isMobile = window.innerWidth < SM_SCREEN_PX;
-  }
 
   function updateCarouselHeight() {
     if (!carouselEl) return;
@@ -51,12 +45,6 @@
   }
 
   $effect(() => {
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  });
-
-  $effect(() => {
     if (!carouselEl) return;
     const slides = carouselEl.querySelectorAll(".carousel-slide");
     const images = Array.from(slides).flatMap(s => [...s.querySelectorAll("img")]);
@@ -67,7 +55,7 @@
   });
 
   $effect(() => {
-    // Reset to first slide when filter changes
+    activeTag;
     activeSlide = 0;
     if (carouselEl) carouselEl.scrollLeft = 0;
   });
@@ -91,13 +79,13 @@
     {/each}
   </div>
 
-  {#if isMobile}
+  {#if isMobile.value}
     <div class="carousel-container content-width reveal" style="transition-delay: 250ms">
       <div
         class="carousel"
         bind:this={carouselEl}
         onscroll={handleScroll}
-        style="height: {carouselHeightPx}px"
+        style:--carousel-h="{carouselHeightPx}px"
       >
         {#each filteredProjects as projectInfo, index (projectInfo.title)}
           <div class="carousel-slide">
@@ -185,6 +173,7 @@
     }
 
     .carousel {
+      height: var(--carousel-h);
       display: flex;
       align-items: flex-start;
       gap: 0.75rem;

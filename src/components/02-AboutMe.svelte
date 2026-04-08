@@ -2,7 +2,7 @@
   import Techstack from "./Misc/Techstack.svelte";
   import TextReveal from "./TextReveal.svelte";
   import FlowAroundCircle from "./FlowAroundCircle.svelte";
-  import { SM_SCREEN_PX } from "../utils/breakpoints";
+  import { isMobile } from '../utils/mediaQuery.svelte';
 
   const PORTRAIT_RADIUS_PX = 160;
   const PORTRAIT_TOP_OFFSET_PX = 20;
@@ -18,22 +18,12 @@
     "Technologies I've been working with:",
   ];
 
-  let boolMobileView = $state(true);
-
-  $effect(() => {
-    const onResize = () => {
-      boolMobileView = window.innerWidth < SM_SCREEN_PX;
-    };
-    onResize();
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  });
 </script>
 
 <div id="aboutme" class="aboutMe section-inset" data-reveal-section>
   <TextReveal text="A little about me" class="section-title content-width" />
 
-  {#if boolMobileView}
+  {#if isMobile.value}
     <div class="about-content reveal" style="transition-delay: 150ms">
       <div class="text">
         <div class="description">

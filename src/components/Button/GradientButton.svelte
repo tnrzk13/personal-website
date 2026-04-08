@@ -2,7 +2,7 @@
   let { text = "Button" } = $props();
 </script>
 
-<span class="btn-grad" role="button">
+<span class="btn-grad">
   {text}
 </span>
 

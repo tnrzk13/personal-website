@@ -80,7 +80,7 @@
 
       .links-container {
         display: flex;
-        justify-items: center;
+        justify-content: center;
         align-items: center;
         font-size: 0.5em;
 

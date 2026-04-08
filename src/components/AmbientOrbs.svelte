@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { SM_SCREEN_PX } from "../utils/breakpoints";
+    import { isMobile as isMobileQuery } from '../utils/mediaQuery.svelte';
 
     interface OrbConfig {
         color: string;
@@ -30,13 +30,6 @@
 
     let orbsEl: HTMLDivElement;
     let visible = $state(false);
-    let isMobile = $state(typeof window !== "undefined" && window.innerWidth < SM_SCREEN_PX);
-
-    $effect(() => {
-        const onResize = () => { isMobile = window.innerWidth < SM_SCREEN_PX; };
-        window.addEventListener("resize", onResize);
-        return () => window.removeEventListener("resize", onResize);
-    });
 
     $effect(() => {
         if (!orbsEl) return;
@@ -48,7 +41,7 @@
         return () => observer.disconnect();
     });
 
-    const orbs = $derived(isMobile ? MOBILE_ORBS : DESKTOP_ORBS);
+    const orbs = $derived(isMobileQuery.value ? MOBILE_ORBS : DESKTOP_ORBS);
 
     function orbStyle(orb: OrbConfig): string {
         const pos = orb.leftPercent != null

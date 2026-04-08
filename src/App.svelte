@@ -7,39 +7,27 @@
     import ImpactMetrics from "./components/02b-ImpactMetrics.svelte";
     import AboutMe from "./components/02-AboutMe.svelte";
     import Career from "./components/03-Career.svelte";
-    import Testimonials from "./components/03b-Testimonials/Testimonials.svelte";
     import Projects from "./components/04-Projects.svelte";
     import ContactText from "./components/05-Contact/ContactText.svelte";
     import ContactMobile from "./components/05-Contact/ContactMobile.svelte";
     import Navbar from "./components/Navbar.svelte";
     import AuroraBackground from "./components/AuroraBackground.svelte";
-    import { SM_SCREEN_PX } from "./utils/breakpoints";
+    import { isMobile } from './utils/mediaQuery.svelte';
 
     let titleHeight = $state(0);
     let contentHeight = $state(0);
     let y = $state(0);
-    let contactTop = $state(999);
-    let contactYOffset = $state(0);
-    let pageHalfDown = $state(999);
-    let boolMobileView = $state(true);
+    let contactYOffset = $derived(titleHeight / 3);
+    let pageHalfDown = $derived((titleHeight + contentHeight) / 2);
 
-    const manageHeights = () => {
+    const updateTitleHeight = () => {
         titleHeight = window.innerHeight;
-        boolMobileView = window.innerWidth < SM_SCREEN_PX;
-        contactYOffset = titleHeight / 3;
-        pageHalfDown = (titleHeight + contentHeight) / 2;
-        contactTop = contentHeight;
     };
 
     $effect(() => {
-        // Re-run when contentHeight changes (from bind:clientHeight)
-        contentHeight;
-        manageHeights();
-    });
-
-    $effect(() => {
-        window.addEventListener("resize", manageHeights);
-        return () => window.removeEventListener("resize", manageHeights);
+        updateTitleHeight();
+        window.addEventListener("resize", updateTitleHeight);
+        return () => window.removeEventListener("resize", updateTitleHeight);
     });
 
     $effect(() => {
@@ -69,7 +57,7 @@
 
 <svelte:window bind:scrollY={y} />
 
-{#if boolMobileView}
+{#if isMobile.value}
     <div class="page-wrapper">
         <TitleMobile {titleInfo} />
         <div id="content-container">
@@ -97,18 +85,18 @@
             </main>
         </div>
     </div>
-    <Navbar {boolMobileView} scrollY={y} />
+    <Navbar boolMobileView={isMobile.value} scrollY={y} />
 {:else}
     <div class="page-wrapper">
         <Parallax
             containerHeight={titleHeight}
             {pageHalfDown}
             {titleInfo}
-            {contactTop}
+            contactTop={contentHeight}
             {contactYOffset}
             scrollY={y}
         />
-        <div id="content-container" style="margin-top: {titleHeight}px;">
+        <div id="content-container" style:--title-h="{titleHeight}px">
             <main
                 id="main-content"
                 class="content-desktop"
@@ -133,7 +121,7 @@
             </footer>
         </div>
     </div>
-    <Navbar {boolMobileView} scrollY={y} />
+    <Navbar boolMobileView={isMobile.value} scrollY={y} />
 {/if}
 
 <style lang="scss">
@@ -146,6 +134,7 @@
         #content-container {
             position: relative;
             width: 100%;
+            margin-top: var(--title-h);
             height: auto;
             display: flex;
             flex-direction: column;

@@ -2,6 +2,4 @@ import { mount } from "svelte";
 import App from "./App.svelte";
 import "../public/global.css";
 
-const app = mount(App, { target: document.body });
-
-export default app;
+mount(App, { target: document.body });

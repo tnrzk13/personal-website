@@ -31,26 +31,21 @@
   });
 
   $effect(() => {
-    const observers = [];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) activeSection = entry.target.id;
+        }
+      },
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
 
     for (const id of sectionIds) {
       const el = document.getElementById(id);
-      if (!el) continue;
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          for (const entry of entries) {
-            if (entry.isIntersecting) activeSection = id;
-          }
-        },
-        { rootMargin: "-40% 0px -55% 0px" }
-      );
-
-      observer.observe(el);
-      observers.push(observer);
+      if (el) observer.observe(el);
     }
 
-    return () => observers.forEach((o) => o.disconnect());
+    return () => observer.disconnect();
   });
 
   let navbarHeight = 48;

@@ -1,18 +1,11 @@
 <script>
   import CardProject from "../Cards/CardProject.svelte";
   import { lazyPlayback } from "../../actions/lazyPlayback";
-  import { SM_SCREEN_PX } from "../../utils/breakpoints";
+  import { isMobile } from '../../utils/mediaQuery.svelte';
   import { REVEAL_STAGGER_MS } from "../../actions/reveal";
   let { projectIndex, projectInfo } = $props();
 
-  let innerWidth = $state(window.innerWidth);
-  const isReversed = $derived(innerWidth >= SM_SCREEN_PX && projectIndex % 2 !== 0);
-
-  $effect(() => {
-    const onResize = () => (innerWidth = window.innerWidth);
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  });
+  const isReversed = $derived(!isMobile.value && projectIndex % 2 !== 0);
 </script>
 
 <div class="project-container reveal" class:reversed={isReversed} style="transition-delay: {projectIndex * REVEAL_STAGGER_MS + 250}ms">
