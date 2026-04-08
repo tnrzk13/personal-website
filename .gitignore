@@ -4,5 +4,5 @@
 .DS_Store
 .vercel
 .playwright-mcp/
+.claude/worktrees/
 *.png
-!public/images/readme-preview.png
