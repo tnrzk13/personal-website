@@ -52,6 +52,7 @@
         title={projectInfo.title}
         urls={projectInfo.urls}
         text={projectInfo.text}
+        details={projectInfo.details}
         techstack={projectInfo.techstack}
         {expanded}
       />

@@ -1,5 +1,5 @@
 <script>
-  let { title, urls, text, techstack, expanded = false } = $props();
+  let { title, urls, text, details = [], techstack, expanded = false } = $props();
   import Techstack from "../Misc/Techstack.svelte";
   import IconLink from "../Icons/IconLink.svelte";
   import IconGitHub from "../Icons/IconGitHub.svelte";
@@ -38,7 +38,15 @@
       <p class="text">{@html text}</p>
       <Techstack {techstack} />
       <div class="extra-content" class:open={expanded}>
-        <div class="extra-inner"></div>
+        <div class="extra-inner">
+          {#if details.length > 0}
+            <ul class="details-list">
+              {#each details as detail}
+                <li>{@html detail}</li>
+              {/each}
+            </ul>
+          {/if}
+        </div>
       </div>
     </div>
   </div>
@@ -112,7 +120,23 @@
 
     .extra-inner {
       overflow: hidden;
-      padding: 0 1em;
+
+      .details-list {
+        margin: 1em 0 0.5em;
+        padding-left: 1.25em;
+        list-style: disc;
+
+        li {
+          margin-bottom: 0.5em;
+          line-height: 1.5;
+          color: rgba(255, 255, 255, 0.8);
+
+          :global(strong) {
+            color: var(--bold-highlight);
+            font-weight: 600;
+          }
+        }
+      }
     }
 
     .chevron-row {

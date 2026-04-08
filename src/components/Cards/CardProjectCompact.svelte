@@ -74,7 +74,6 @@
             {/if}
           </div>
           <p class="compact-oneliner">{oneliner}</p>
-          <Techstack {techstack} />
         </div>
         <svg
           class="chevron"
@@ -91,6 +90,7 @@
       <div class="extra-content" class:open={expanded}>
         <div class="extra-inner">
           <p class="expanded-text">{@html text}</p>
+          <Techstack {techstack} />
         </div>
       </div>
     </button>
@@ -124,8 +124,9 @@
   }
 
   .compact-thumb {
-    width: 140px;
-    min-width: 140px;
+    width: 35%;
+    min-width: 35%;
+    aspect-ratio: 4 / 3;
     overflow: hidden;
     border-radius: 1rem 0 0 0;
 
@@ -141,10 +142,6 @@
     flex: 1;
     min-width: 0;
     padding: 0.875rem 1rem;
-
-    :global(.techstack-container) {
-      margin-top: 0.75rem;
-    }
   }
 
   .compact-title-row {
@@ -221,10 +218,16 @@
 
   .extra-inner {
     overflow: hidden;
+    padding: 0 1rem;
+
+    :global(.techstack-container) {
+      margin-top: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
   }
 
   .expanded-text {
-    padding: 0.75rem 1rem 1rem;
+    padding: 0.75rem 0 0;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.75);
     line-height: 1.5;

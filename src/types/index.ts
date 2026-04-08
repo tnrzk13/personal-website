@@ -25,6 +25,7 @@ export interface ProjectData {
   videoUrl?: string;
   urls: ProjectUrls;
   text: string;
+  details?: string[];
   techstack: string[];
   tags: string[];
   tier: "featured" | "compact";
