@@ -11,6 +11,7 @@
 
     let auroraEl: HTMLDivElement;
     let frozenHeightPx = $state(0);
+    let visible = $state(false);
 
     $effect(() => {
         if (!freezeHeight || !auroraEl?.parentElement) return;
@@ -19,10 +20,21 @@
         window.addEventListener('resize', updateHeight);
         return () => window.removeEventListener('resize', updateHeight);
     });
+
+    $effect(() => {
+        if (!auroraEl) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => { visible = entry.isIntersecting; },
+            { rootMargin: '200px' }
+        );
+        observer.observe(auroraEl);
+        return () => observer.disconnect();
+    });
 </script>
 
 <div
     class="aurora"
+    class:paused={!visible}
     aria-hidden="true"
     bind:this={auroraEl}
     style={freezeHeight && frozenHeightPx ? `height: ${frozenHeightPx}px` : undefined}
@@ -328,6 +340,10 @@
             width: 410px; height: 325px;
             filter: blur(48px); opacity: 0.30;
         }
+    }
+
+    .aurora.paused .aurora-blob {
+        animation-play-state: paused;
     }
 
     @media (prefers-reduced-motion: reduce) {
