@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import AnimateType from "../TextType/AnimateType.svelte";
+  import KineticTitle from "./KineticTitle.svelte";
   import { getContactParallax as getContactParallaxBase, getLayerScale, getLayerOpacity, getLayerOffsetPx } from "../../utils/parallax";
 
   let { containerHeight, titleInfo, pageHalfDown = 1000, contactTop, contactYOffset, scrollY = 0 } = $props();
@@ -88,7 +89,14 @@
       {#if scrollY < containerHeight}
         <div class="textLayer">
           <p class="textLayer-preamble">{titleInfo.preamble}</p>
-          <h1 class="textLayer-title">{titleInfo.title}</h1>
+          <h1 class="textLayer-title sr-only">{titleInfo.title}</h1>
+          <KineticTitle
+            text={titleInfo.title}
+            fontFamily="'Montserrat', sans-serif"
+            fontWeight={700}
+            color="black"
+            visible={scrollY < containerHeight}
+          />
           <div class="textLayer-subtitle">
             {titleInfo.subtitle}<AnimateType
                 texts={titleInfo.texts}
@@ -138,6 +146,7 @@
       object-position: center bottom;
       will-change: transform;
       left: 0;
+      pointer-events: none;
     }
 
     .textLayer {
