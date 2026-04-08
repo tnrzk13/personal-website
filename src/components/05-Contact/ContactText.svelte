@@ -1,5 +1,7 @@
 <script>
   import AnimateType from "../TextType/AnimateType.svelte";
+  import IconLinkedIn from "../Icons/IconLinkedIn.svelte";
+  import IconGitHub from "../Icons/IconGitHub.svelte";
   import GradientButton from "../Button/GradientButton.svelte";
   import { magneticHover } from "../../utils/magneticHover";
   import { LINKEDIN_URL, GITHUB_URL, EMAIL, COPYRIGHT } from "../../data/contact";
@@ -24,10 +26,10 @@
     <div class="button-container">
       <div class="icon-links">
         <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" use:magneticHover>
-          <i class="fa-brands fa-linkedin fa-md" aria-hidden="true"></i>
+          <IconLinkedIn />
         </a>
         <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" use:magneticHover>
-          <i class="fa-brands fa-github fa-md" aria-hidden="true"></i>
+          <IconGitHub />
         </a>
       </div>
       <div class="button-container-column">
@@ -93,6 +95,11 @@
         align-items: center;
         flex: 0 0 25%;
         gap: 0.75rem;
+
+        :global(svg) {
+          width: 1em;
+          height: 1em;
+        }
 
         a {
           text-decoration: none;
