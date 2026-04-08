@@ -2,6 +2,7 @@
   import CardProject from "../Cards/CardProject.svelte";
   import { lazyPlayback } from "../../actions/lazyPlayback";
   import { SM_SCREEN_PX } from "../../utils/breakpoints";
+  import { REVEAL_STAGGER_MS } from "../../actions/reveal";
   let { projectIndex, projectInfo } = $props();
 
   let innerWidth = $state(window.innerWidth);
@@ -14,7 +15,7 @@
   });
 </script>
 
-<div class="project-container reveal" class:reversed={isReversed} style="transition-delay: {projectIndex * 60 + 250}ms">
+<div class="project-container reveal" class:reversed={isReversed} style="transition-delay: {projectIndex * REVEAL_STAGGER_MS + 250}ms">
   <div class="img-container">
     <div class="main-img-container" class:reversed-offset={isReversed}>
       {#snippet media(glowing)}
