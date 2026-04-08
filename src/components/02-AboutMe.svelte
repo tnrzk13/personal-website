@@ -1,40 +1,95 @@
-<script>
+<script lang="ts">
   import Techstack from "./Misc/Techstack.svelte";
   import TextReveal from "./TextReveal.svelte";
+  import FlowAroundCircle from "./FlowAroundCircle.svelte";
+  import { SM_SCREEN_PX } from "../utils/breakpoints";
 
+  const PORTRAIT_RADIUS_PX = 160;
+  const PORTRAIT_TOP_OFFSET_PX = 20;
+  const BODY_FONT = "16px 'Inter', sans-serif";
+  const LINE_HEIGHT_PX = 25.6; // 16px * 1.6 line-height
 
   let techstack = ["Typescript", "React", "Python", "SQL", "Node.JS", "Firebase"];
+
+  const bioParagraphs = [
+    "Engineer building AI systems that go beyond chatbots - orchestrating multi-agent workflows, shipping voice-first interfaces that make websites conversational, and creating AI assistants that rival human help at scale. I care about the craft behind AI engineering: making these systems reliable, fast, and genuinely useful in production.",
+    "Before going deep on AI, I spent years as a full-stack engineer shipping products that moved the needle - growing monthly revenue 150%, scaling user bases 3x, and turning multi-day manual processes into one-click automations. I bring that same bias toward measurable outcomes to everything I build.",
+    "I'm always building. Side projects range from a GPU-accelerated voice dictation daemon with streaming self-correction to a Tauri desktop app that intelligently chunks audio for smartwatches. I stumbled into tech as an accounting co-op wrangling Excel data - keyboard shortcuts led to VBA, VBA led to SQL, and SQL led me out of accounting for good. More on that in the next section.",
+    "Technologies I've been working with:",
+  ];
+
+  let boolMobileView = $state(true);
+
+  $effect(() => {
+    const onResize = () => {
+      boolMobileView = window.innerWidth < SM_SCREEN_PX;
+    };
+    onResize();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  });
 </script>
 
 <div id="aboutme" class="aboutMe section-inset" data-reveal-section>
   <TextReveal text="A little about me" class="section-title content-width" />
-  <div class="about-content reveal" style="transition-delay: 150ms">
-    <div class="text">
-      <div class="description">
-        <p>Full-stack engineer who owns problems end-to-end - from architecture to deployment to the revenue it drives. I thrive on growth-stage teams where shipping, reliability, and business outcomes are all on the scorecard.</p>
-        <p>I stumbled into tech as an accounting co-op wrangling Excel data - keyboard shortcuts led to VBA, VBA led to SQL, and SQL led me out of accounting for good. More on that in the next section.</p>
-        <p>Technologies I’ve been working with:</p>
-      </div>
-      <div class="techlist1">
+
+  {#if boolMobileView}
+    <div class="about-content reveal" style="transition-delay: 150ms">
+      <div class="text">
+        <div class="description">
+          {#each bioParagraphs as paragraph}
+            <p>{paragraph}</p>
+          {/each}
+        </div>
+        <div class="techlist1">
           <Techstack {techstack} />
+        </div>
+      </div>
+      <div class="imgdiv">
+        <div class="aboutmeimg-container">
+          <a href="https://www.linkedin.com/in/tony-k-kwok/" target="_blank" rel="noopener noreferrer">
+            <picture>
+              <source srcset="images/02-aboutme/self.avif" type="image/avif">
+              <img
+                class="aboutmeimg"
+                src="images/02-aboutme/self.png"
+                alt="tony kwok"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="imgdiv">
-      <div class="aboutmeimg-container">
-        <a href="https://www.linkedin.com/in/tony-k-kwok/" target="_blank" rel="noopener noreferrer">
-          <picture>
-            <source srcset="images/02-aboutme/self.avif" type="image/avif">
-            <img
-              class="aboutmeimg"
-              src="images/02-aboutme/self.png"
-              alt="tony kwok"
-              loading="lazy"
-            />
-          </picture>
-        </a>
+  {:else}
+    <div class="about-content reveal" style="transition-delay: 150ms">
+      <FlowAroundCircle
+        paragraphs={bioParagraphs}
+        circleRadiusPx={PORTRAIT_RADIUS_PX}
+        circleTopOffsetPx={PORTRAIT_TOP_OFFSET_PX}
+        circleRightMarginPx={80}
+        font={BODY_FONT}
+        lineHeightPx={LINE_HEIGHT_PX}
+      >
+        <div class="aboutmeimg-container">
+          <a href="https://www.linkedin.com/in/tony-k-kwok/" target="_blank" rel="noopener noreferrer">
+            <picture>
+              <source srcset="images/02-aboutme/self.avif" type="image/avif">
+              <img
+                class="aboutmeimg"
+                src="images/02-aboutme/self.png"
+                alt="tony kwok"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+        </div>
+      </FlowAroundCircle>
+      <div class="techlist1 techlist-desktop">
+        <Techstack {techstack} />
       </div>
     </div>
-  </div>
+  {/if}
 </div>
 
 <style lang="scss">
@@ -56,20 +111,23 @@
       .aboutmeimg-container {
         justify-self: center;
         align-self: center;
-        img.aboutmeimg {
-          max-width: 15em;
-          height: auto;
-          border-radius: 50%;
-          transition: 0.5s;
-        }
+      }
+    }
 
-        img.aboutmeimg:hover {
-          scale: 105%;
-          box-shadow: 0 0 65px #6dd5fa, 0 0 0 1px rgb(255 255 255 / 10%),
-            0 2px 2px rgb(0 0 0 / 3%), 0 4px 4px rgb(0 0 0 / 4%),
-            0 10px 8px rgb(0 0 0 / 5%), 0 15px 15px rgb(0 0 0 / 6%),
-            0 30px 30px rgb(0 0 0 / 7%), 0 70px 65px rgb(0 0 0 / 9%);
-        }
+    .aboutmeimg-container {
+      img.aboutmeimg {
+        max-width: 20em;
+        height: auto;
+        border-radius: 50%;
+        transition: 0.5s;
+      }
+
+      img.aboutmeimg:hover {
+        scale: 105%;
+        box-shadow: 0 0 65px #6dd5fa, 0 0 0 1px rgb(255 255 255 / 10%),
+          0 2px 2px rgb(0 0 0 / 3%), 0 4px 4px rgb(0 0 0 / 4%),
+          0 10px 8px rgb(0 0 0 / 5%), 0 15px 15px rgb(0 0 0 / 6%),
+          0 30px 30px rgb(0 0 0 / 7%), 0 70px 65px rgb(0 0 0 / 9%);
       }
     }
 
@@ -98,6 +156,10 @@
       p:last-child {
         margin-bottom: 0.5em;
       }
+    }
+    .techlist-desktop {
+      margin-top: 1em;
+      width: 100%;
     }
   }
 
