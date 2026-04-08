@@ -25,17 +25,17 @@
     revealDelayMs?: number;
   } = $props();
 
-  const { expanded, onclick, onmouseenter, onmouseleave } = createExpandable();
+  const expandable = createExpandable();
 </script>
 
 <div class="compact-project reveal" style="transition-delay: {revealDelayMs}ms">
   <GlassCard>
     <button
       class="compact-content"
-      {onclick}
-      {onmouseenter}
-      {onmouseleave}
-      aria-expanded={expanded}
+      onclick={expandable.onclick}
+      onmouseenter={expandable.onmouseenter}
+      onmouseleave={expandable.onmouseleave}
+      aria-expanded={expandable.expanded}
       type="button"
     >
       <div class="compact-row">
@@ -76,9 +76,9 @@
           </div>
           <p class="compact-summary">{@html text}</p>
         </div>
-        <ChevronIcon open={expanded} />
+        <ChevronIcon open={expandable.expanded} />
       </div>
-      <div class="extra-content" class:open={expanded}>
+      <div class="extra-content" class:open={expandable.expanded}>
         <div class="extra-inner">
           {#if details.length > 0}
             <ul class="details-list">

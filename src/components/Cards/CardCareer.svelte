@@ -9,7 +9,7 @@
 
   const VISIBLE_BULLET_COUNT = 2;
   const hasExtra = points.length > VISIBLE_BULLET_COUNT;
-  const { expanded, onclick, onmouseenter, onmouseleave } = createExpandable(hasExtra);
+  const expandable = createExpandable(hasExtra);
   const visiblePoints = points.slice(0, VISIBLE_BULLET_COUNT);
   const extraPoints = points.slice(VISIBLE_BULLET_COUNT);
 </script>
@@ -19,10 +19,10 @@
     <button
       class="career-content"
       class:expandable={hasExtra}
-      {onclick}
-      {onmouseenter}
-      {onmouseleave}
-      aria-expanded={hasExtra ? expanded : undefined}
+      onclick={expandable.onclick}
+      onmouseenter={expandable.onmouseenter}
+      onmouseleave={expandable.onmouseleave}
+      aria-expanded={hasExtra ? expandable.expanded : undefined}
       type="button"
     >
     <div class="card-header">
@@ -40,7 +40,7 @@
         <span class="date-period">{datePeriod}</span>
       </div>
       {#if hasExtra}
-        <ChevronIcon open={expanded} />
+        <ChevronIcon open={expandable.expanded} />
       {/if}
     </div>
     <div class="card-body">
@@ -49,7 +49,7 @@
       </div>
       <BulletList points={visiblePoints} />
       {#if hasExtra}
-        <div class="extra-bullets" class:open={expanded}>
+        <div class="extra-bullets" class:open={expandable.expanded}>
           <div class="extra-list">
             <BulletList points={extraPoints} />
           </div>

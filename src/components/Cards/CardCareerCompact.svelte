@@ -7,7 +7,7 @@
   let { imgBase, title, subtitle, datePeriod, points, logoColor, revealDelayMs = 0 } = $props();
 
   const hasExtra = points.length > 1;
-  const { expanded, onclick, onmouseenter, onmouseleave } = createExpandable(hasExtra);
+  const expandable = createExpandable(hasExtra);
 </script>
 
 <div class="compact-card reveal" style="transition-delay: {revealDelayMs}ms">
@@ -15,10 +15,10 @@
     <button
       class="compact-content"
       class:expandable={hasExtra}
-      {onclick}
-      {onmouseenter}
-      {onmouseleave}
-      aria-expanded={hasExtra ? expanded : undefined}
+      onclick={expandable.onclick}
+      onmouseenter={expandable.onmouseenter}
+      onmouseleave={expandable.onmouseleave}
+      aria-expanded={hasExtra ? expandable.expanded : undefined}
       type="button"
     >
       <div class="compact-header">
@@ -36,7 +36,7 @@
           <span class="compact-date">{datePeriod}</span>
         </div>
         {#if hasExtra}
-          <ChevronIcon open={expanded} />
+          <ChevronIcon open={expandable.expanded} />
         {/if}
       </div>
       {#if points.length > 0}
@@ -45,7 +45,7 @@
         </div>
       {/if}
       {#if hasExtra}
-        <div class="extra-bullets" class:open={expanded}>
+        <div class="extra-bullets" class:open={expandable.expanded}>
           <div class="extra-list">
             <BulletList points={points.slice(1)} />
           </div>

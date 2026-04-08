@@ -7,17 +7,17 @@
 
   let { projectInfo, revealDelayMs = 0 }: { projectInfo: ProjectData; revealDelayMs?: number } = $props();
 
-  const { expanded, onclick, onmouseenter, onmouseleave } = createExpandable();
+  const expandable = createExpandable();
 </script>
 
 <div class="compact-project reveal" style="transition-delay: {revealDelayMs}ms">
   <GlassCard>
     <button
       class="expand-trigger"
-      {onclick}
-      {onmouseenter}
-      {onmouseleave}
-      aria-expanded={expanded}
+      onclick={expandable.onclick}
+      onmouseenter={expandable.onmouseenter}
+      onmouseleave={expandable.onmouseleave}
+      aria-expanded={expandable.expanded}
       type="button"
     >
       <div class="compact-img-container">
@@ -54,7 +54,7 @@
         text={projectInfo.text}
         details={projectInfo.details}
         techstack={projectInfo.techstack}
-        {expanded}
+        expanded={expandable.expanded}
       />
     </button>
   </GlassCard>
