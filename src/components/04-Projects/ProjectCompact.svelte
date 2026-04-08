@@ -5,44 +5,57 @@
   import type { ProjectData } from "../../types";
 
   let { projectInfo, revealDelayMs = 0 }: { projectInfo: ProjectData; revealDelayMs?: number } = $props();
+
+  let expanded = $state(false);
+  const canHover = typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
 </script>
 
 <div class="compact-project reveal" style="transition-delay: {revealDelayMs}ms">
   <GlassCard>
-    <div class="compact-img-container">
-      {#snippet media()}
-        {#if projectInfo.videoUrl}
-          <video
-            src={projectInfo.videoUrl}
-            poster="{projectInfo.imgBase}.avif"
-            preload="none"
-            muted
-            loop
-            playsinline
-            use:lazyPlayback
-          ></video>
-        {:else}
-          <picture>
-            <source srcset="{projectInfo.imgBase}.avif" type="image/avif">
-            <img src="{projectInfo.imgBase}.png" alt={projectInfo.title} loading="lazy" />
-          </picture>
-        {/if}
-      {/snippet}
+    <button
+      class="expand-trigger"
+      onclick={() => { if (!canHover) expanded = !expanded; }}
+      onmouseenter={() => { if (canHover) expanded = true; }}
+      onmouseleave={() => { if (canHover) expanded = false; }}
+      aria-expanded={expanded}
+      type="button"
+    >
+      <div class="compact-img-container">
+        {#snippet media()}
+          {#if projectInfo.videoUrl}
+            <video
+              src={projectInfo.videoUrl}
+              poster="{projectInfo.imgBase}.avif"
+              preload="none"
+              muted
+              loop
+              playsinline
+              use:lazyPlayback
+            ></video>
+          {:else}
+            <picture>
+              <source srcset="{projectInfo.imgBase}.avif" type="image/avif">
+              <img src="{projectInfo.imgBase}.png" alt={projectInfo.title} loading="lazy" />
+            </picture>
+          {/if}
+        {/snippet}
 
-      {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
-        <a href={projectInfo.urls.projectUrl || projectInfo.urls.codeUrl} target="_blank" rel="noopener noreferrer">
+        {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
+          <a href={projectInfo.urls.projectUrl || projectInfo.urls.codeUrl} target="_blank" rel="noopener noreferrer">
+            {@render media()}
+          </a>
+        {:else}
           {@render media()}
-        </a>
-      {:else}
-        {@render media()}
-      {/if}
-    </div>
-    <CardProject
-      title={projectInfo.title}
-      urls={projectInfo.urls}
-      text={projectInfo.text}
-      techstack={projectInfo.techstack}
-    />
+        {/if}
+      </div>
+      <CardProject
+        title={projectInfo.title}
+        urls={projectInfo.urls}
+        text={projectInfo.text}
+        techstack={projectInfo.techstack}
+        {expanded}
+      />
+    </button>
   </GlassCard>
 </div>
 
@@ -63,5 +76,17 @@
       display: block;
       border-radius: 1rem 1rem 0 0;
     }
+  }
+
+  .expand-trigger {
+    width: 100%;
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: default;
+    padding: 0;
+    @media (hover: none) { cursor: pointer; }
   }
 </style>

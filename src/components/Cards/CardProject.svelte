@@ -1,5 +1,5 @@
 <script>
-  let { title, urls, text, techstack } = $props();
+  let { title, urls, text, techstack, expanded = false } = $props();
   import Techstack from "../Misc/Techstack.svelte";
   import IconLink from "../Icons/IconLink.svelte";
   import IconGitHub from "../Icons/IconGitHub.svelte";
@@ -37,7 +37,15 @@
       {/if}
       <p class="text">{@html text}</p>
       <Techstack {techstack} />
+      <div class="extra-content" class:open={expanded}>
+        <div class="extra-inner"></div>
+      </div>
     </div>
+  </div>
+  <div class="chevron-row">
+    <svg class="chevron" class:open={expanded} width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </div>
 </div>
 
@@ -93,6 +101,30 @@
         align-items: baseline;
         gap: 0.75rem;
       }
+    }
+
+    .extra-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.35s ease;
+      &.open { grid-template-rows: 1fr; }
+    }
+
+    .extra-inner {
+      overflow: hidden;
+      padding: 0 1em;
+    }
+
+    .chevron-row {
+      display: flex;
+      justify-content: center;
+      padding: 0.25rem 0 0.5rem;
+    }
+
+    .chevron {
+      color: rgba(255, 255, 255, 0.25);
+      transition: transform 0.3s ease;
+      &.open { transform: rotate(180deg); }
     }
   }
 </style>
