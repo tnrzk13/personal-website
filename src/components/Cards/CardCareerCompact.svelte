@@ -107,12 +107,12 @@
     min-width: 2.5em;
     border-radius: 50%;
     display: grid;
+    place-items: center;
 
     img {
+      display: block;
       width: 2em;
       height: auto;
-      align-self: center;
-      justify-self: center;
     }
   }
 

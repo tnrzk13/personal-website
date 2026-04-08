@@ -213,14 +213,12 @@
       min-width: 4em;
       border-radius: 50%;
       display: grid;
+      place-items: center;
 
       img.logo {
+        display: block;
         width: 3.2em;
         height: auto;
-        margin-left: auto;
-        margin-right: auto;
-        align-self: center;
-        justify-self: center;
       }
     }
 
