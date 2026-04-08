@@ -2,7 +2,7 @@
   import Techstack from "../Misc/Techstack.svelte";
   import GlassCard from "./GlassCard.svelte";
 
-  let { imgurl, title, subtitle, datePeriod, points, logoColor, techstack, revealDelayMs = 0 } = $props();
+  let { imgBase, title, subtitle, datePeriod, points, logoColor, techstack, revealDelayMs = 0 } = $props();
 
   const VISIBLE_BULLET_COUNT = 2;
   let expanded = $state(false);
@@ -25,7 +25,10 @@
     >
     <div class="card-header">
       <div class="circle-logo" style="background-image: {logoColor}">
-        <img class="logo" src={imgurl} alt="company logo" loading="lazy" />
+        <picture>
+          <source srcset="{imgBase}.avif" type="image/avif">
+          <img class="logo" src="{imgBase}.png" alt="company logo" loading="lazy" />
+        </picture>
       </div>
       <div class="header-text">
         <div class="header-titles">

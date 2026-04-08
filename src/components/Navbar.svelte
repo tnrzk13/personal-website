@@ -1,5 +1,4 @@
 <script>
-  import { getImagePath } from "../utils/imagePath";
   import { magneticHover } from "../utils/magneticHover";
 
   let { boolMobileView, scrollY = 0 } = $props();
@@ -64,10 +63,10 @@
     class:scrolled={isScrolled}
   >
     <a class="nav-brand" href=".">
-      <img
-        src={getImagePath("images/navbar/gorilla")}
-        alt="logo gorilla"
-      />
+      <picture>
+        <source srcset="images/navbar/gorilla.avif" type="image/avif">
+        <img src="images/navbar/gorilla.png" alt="logo gorilla" />
+      </picture>
     </a>
     <button
       class="nav-toggle"

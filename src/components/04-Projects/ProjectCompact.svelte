@@ -14,7 +14,7 @@
         {#if projectInfo.videoUrl}
           <video
             src={projectInfo.videoUrl}
-            poster={projectInfo.imgurl}
+            poster="{projectInfo.imgBase}.avif"
             preload="none"
             muted
             loop
@@ -22,7 +22,10 @@
             use:lazyPlayback
           ></video>
         {:else}
-          <img src={projectInfo.imgurl} alt={projectInfo.title} loading="lazy" />
+          <picture>
+            <source srcset="{projectInfo.imgBase}.avif" type="image/avif">
+            <img src="{projectInfo.imgBase}.png" alt={projectInfo.title} loading="lazy" />
+          </picture>
         {/if}
       {/snippet}
 

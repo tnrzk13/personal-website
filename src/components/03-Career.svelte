@@ -13,16 +13,16 @@
   <TextReveal text="My last couple adventures" class="section-title content-width" />
   <div id="card-list-container" class="content-width">
     <div class="card-grid">
-      {#each featuredCards as { imgurl, title, subtitle, datePeriod, techstack, points, logoColor }, i}
-        <Card {imgurl} {title} {subtitle} {datePeriod} {techstack} {points} {logoColor} revealDelayMs={i * 60 + 50} />
+      {#each featuredCards as { imgBase, title, subtitle, datePeriod, techstack, points, logoColor }, i}
+        <Card {imgBase} {title} {subtitle} {datePeriod} {techstack} {points} {logoColor} revealDelayMs={i * 60 + 50} />
       {/each}
     </div>
 
     <h3 class="earlier-heading reveal" style="transition-delay: {featuredCards.length * 60 + 100}ms">Earlier Experience</h3>
 
     <div class="compact-grid">
-      {#each compactCards as { imgurl, title, subtitle, datePeriod, points, logoColor }, i}
-        <CardCompact {imgurl} {title} {subtitle} {datePeriod} {points} {logoColor} revealDelayMs={featuredCards.length * 60 + 150 + i * 60} />
+      {#each compactCards as { imgBase, title, subtitle, datePeriod, points, logoColor }, i}
+        <CardCompact {imgBase} {title} {subtitle} {datePeriod} {points} {logoColor} revealDelayMs={featuredCards.length * 60 + 150 + i * 60} />
       {/each}
     </div>
   </div>

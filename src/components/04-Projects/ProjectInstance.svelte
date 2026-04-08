@@ -24,7 +24,7 @@
             class="main"
             class:glowing
             src={projectInfo.videoUrl}
-            poster={projectInfo.imgurl}
+            poster="{projectInfo.imgBase}.avif"
             preload="none"
             muted
             loop
@@ -32,7 +32,10 @@
             use:lazyPlayback
           ></video>
         {:else}
-          <img class="main" class:glowing src={projectInfo.imgurl} alt="project" loading="lazy" />
+          <picture>
+            <source srcset="{projectInfo.imgBase}.avif" type="image/avif">
+            <img class="main" class:glowing src="{projectInfo.imgBase}.png" alt="project" loading="lazy" />
+          </picture>
         {/if}
       {/snippet}
 

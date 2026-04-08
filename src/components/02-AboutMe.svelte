@@ -1,6 +1,5 @@
 <script>
   import Techstack from "./Misc/Techstack.svelte";
-  import { getImagePath } from "../utils/imagePath";
   import TextReveal from "./TextReveal.svelte";
 
 
@@ -23,12 +22,15 @@
     <div class="imgdiv">
       <div class="aboutmeimg-container">
         <a href="https://www.linkedin.com/in/tony-k-kwok/" target="_blank" rel="noopener noreferrer">
-          <img
-            class="aboutmeimg"
-            src={getImagePath("images/02-aboutme/self")}
-            alt="tony kwok"
-            loading="lazy"
-          />
+          <picture>
+            <source srcset="images/02-aboutme/self.avif" type="image/avif">
+            <img
+              class="aboutmeimg"
+              src="images/02-aboutme/self.png"
+              alt="tony kwok"
+              loading="lazy"
+            />
+          </picture>
         </a>
       </div>
     </div>

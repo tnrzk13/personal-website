@@ -1,8 +1,4 @@
-import { describe, expect, it, vi } from "vitest";
-
-vi.mock("../utils/browser", () => ({
-  isBrowserSafari: vi.fn(() => false),
-}));
+import { describe, expect, it } from "vitest";
 
 import { cardList } from "./career";
 import { projList } from "./projects";
@@ -19,7 +15,7 @@ describe("cardList (career data)", () => {
       expect(card.subtitle).toBeTruthy();
       expect(card.techstack.length).toBeGreaterThan(0);
       expect(card.points.length).toBeGreaterThan(0);
-      expect(card.imgurl).toBeTruthy();
+      expect(card.imgBase).toBeTruthy();
       expect(card.logoColor).toBeTruthy();
     }
   });
@@ -46,7 +42,7 @@ describe("projList (project data)", () => {
   it("each entry has required fields", () => {
     for (const proj of projList) {
       expect(proj.title).toBeTruthy();
-      expect(proj.imgurl).toBeTruthy();
+      expect(proj.imgBase).toBeTruthy();
       expect(proj.text).toBeTruthy();
       expect(proj.techstack.length).toBeGreaterThan(0);
       expect(proj.urls).toBeDefined();
