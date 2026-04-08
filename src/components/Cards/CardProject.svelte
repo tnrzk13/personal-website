@@ -1,8 +1,10 @@
 <script>
-  let { title, urls, text, details = [], techstack, expanded = false } = $props();
   import Techstack from "../Misc/Techstack.svelte";
-  import IconLink from "../Icons/IconLink.svelte";
+
   import IconGitHub from "../Icons/IconGitHub.svelte";
+  import ChevronIcon from "../Icons/ChevronIcon.svelte";
+
+  let { title, urls, text, details = [], techstack, expanded = false } = $props();
 </script>
 
 <div class="project-card-wrapper">
@@ -14,7 +16,6 @@
             <a href={urls.projectUrl} target="_blank" rel="noopener noreferrer" aria-label="View {title} project">
               <h3 class="title">
                 {title}
-                <IconLink />
               </h3>
             </a>
           {:else}
@@ -51,9 +52,7 @@
     </div>
   </div>
   <div class="chevron-row">
-    <svg class="chevron" class:open={expanded} width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-      <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
+    <ChevronIcon open={expanded} />
   </div>
 </div>
 
@@ -151,10 +150,8 @@
       padding: 0.25rem 0 0.5rem;
     }
 
-    .chevron {
+    :global(.chevron) {
       color: rgba(255, 255, 255, 0.25);
-      transition: transform 0.3s ease;
-      &.open { transform: rotate(180deg); }
     }
   }
 </style>

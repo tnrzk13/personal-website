@@ -4,6 +4,7 @@
   import { projList } from "../data/projects";
   import TextReveal from "./TextReveal.svelte";
   import { isMobile } from '../utils/mediaQuery.svelte';
+  import { balanceColumns } from "../utils/balanceColumns";
 
   const ALL_TAG = "All";
   const WEIGHT = { featured: 3, compact: 1 };
@@ -18,42 +19,7 @@
     activeTag === ALL_TAG ? projList : projList.filter((p) => p.tags.includes(activeTag))
   );
 
-  const columns = $derived.by(() => {
-    const sorted = [...filteredProjects].sort((a, b) => {
-      if (a.tier === b.tier) return 0;
-      return a.tier === "featured" ? -1 : 1;
-    }).map((p, i) => ({ ...p, sortedIndex: i }));
-
-    const featured = sorted.filter(p => p.tier === "featured");
-    const compact = sorted.filter(p => p.tier !== "featured");
-
-    const left = [];
-    const right = [];
-    let leftWeight = 0;
-    let rightWeight = 0;
-
-    for (const proj of featured) {
-      if (leftWeight <= rightWeight) {
-        left.push(proj);
-        leftWeight += WEIGHT[proj.tier];
-      } else {
-        right.push(proj);
-        rightWeight += WEIGHT[proj.tier];
-      }
-    }
-
-    for (const proj of compact) {
-      if (leftWeight <= rightWeight) {
-        left.push(proj);
-        leftWeight += WEIGHT[proj.tier];
-      } else {
-        right.push(proj);
-        rightWeight += WEIGHT[proj.tier];
-      }
-    }
-
-    return { left, right };
-  });
+  const columns = $derived.by(() => balanceColumns(filteredProjects, WEIGHT));
 
   function updateCarouselHeight() {
     if (!carouselEl) return;

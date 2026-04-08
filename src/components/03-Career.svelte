@@ -3,44 +3,10 @@
   import CardCompact from "./Cards/CardCareerCompact.svelte";
   import { cardList } from "../data/career";
   import TextReveal from "./TextReveal.svelte";
+  import { balanceColumns } from "../utils/balanceColumns";
 
   const WEIGHT = { featured: 3, compact: 1 };
-  const allCards = [...cardList]
-    .sort((a, b) => {
-      if (a.tier === b.tier) return 0;
-      return a.tier === "featured" ? -1 : 1;
-    })
-    .map((card, i) => ({ ...card, sortedIndex: i }));
-
-  const featured = allCards.filter(c => c.tier === "featured");
-  const compact = allCards.filter(c => c.tier !== "featured");
-
-  const leftColumn = [];
-  const rightColumn = [];
-  let leftWeight = 0;
-  let rightWeight = 0;
-
-  // Place featured cards first
-  for (const card of featured) {
-    if (leftWeight <= rightWeight) {
-      leftColumn.push(card);
-      leftWeight += WEIGHT[card.tier];
-    } else {
-      rightColumn.push(card);
-      rightWeight += WEIGHT[card.tier];
-    }
-  }
-
-  // Greedily assign compact cards to shorter column
-  for (const card of compact) {
-    if (leftWeight <= rightWeight) {
-      leftColumn.push(card);
-      leftWeight += WEIGHT[card.tier];
-    } else {
-      rightColumn.push(card);
-      rightWeight += WEIGHT[card.tier];
-    }
-  }
+  const { left: leftColumn, right: rightColumn } = balanceColumns(cardList, WEIGHT)
 </script>
 
 {#snippet renderCard(card, unifiedIndex)}

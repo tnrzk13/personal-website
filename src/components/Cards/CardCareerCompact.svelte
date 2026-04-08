@@ -1,11 +1,13 @@
 <script>
   import GlassCard from "./GlassCard.svelte";
+  import BulletList from "../Misc/BulletList.svelte";
+  import ChevronIcon from "../Icons/ChevronIcon.svelte";
+  import { createExpandable } from "../../utils/expandable.svelte";
 
   let { imgBase, title, subtitle, datePeriod, points, logoColor, revealDelayMs = 0 } = $props();
 
-  let expanded = $state(false);
   const hasExtra = points.length > 1;
-  const canHover = typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
+  const { expanded, onclick, onmouseenter, onmouseleave } = createExpandable(hasExtra);
 </script>
 
 <div class="compact-card reveal" style="transition-delay: {revealDelayMs}ms">
@@ -13,9 +15,9 @@
     <button
       class="compact-content"
       class:expandable={hasExtra}
-      onclick={() => { if (hasExtra && !canHover) expanded = !expanded; }}
-      onmouseenter={() => { if (hasExtra && canHover) expanded = true; }}
-      onmouseleave={() => { if (hasExtra && canHover) expanded = false; }}
+      {onclick}
+      {onmouseenter}
+      {onmouseleave}
       aria-expanded={hasExtra ? expanded : undefined}
       type="button"
     >
@@ -34,39 +36,19 @@
           <span class="compact-date">{datePeriod}</span>
         </div>
         {#if hasExtra}
-          <svg class="chevron" class:open={expanded} width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <ChevronIcon open={expanded} />
         {/if}
       </div>
       {#if points.length > 0}
-        <ul class="bullet-list">
-          <li>
-            {#each points[0] as part}
-              {#if part.style === "bold"}
-                <b>{part.text}</b>
-              {:else}
-                <span class="point-part">{part.text}</span>
-              {/if}
-            {/each}
-          </li>
-        </ul>
+        <div class="visible-bullet">
+          <BulletList points={points.slice(0, 1)} />
+        </div>
       {/if}
       {#if hasExtra}
         <div class="extra-bullets" class:open={expanded}>
-          <ul class="bullet-list extra-list">
-            {#each points.slice(1) as point}
-              <li>
-                {#each point as part}
-                  {#if part.style === "bold"}
-                    <b>{part.text}</b>
-                  {:else}
-                    <span class="point-part">{part.text}</span>
-                  {/if}
-                {/each}
-              </li>
-            {/each}
-          </ul>
+          <div class="extra-list">
+            <BulletList points={points.slice(1)} />
+          </div>
         </div>
       {/if}
     </button>
@@ -149,36 +131,18 @@
     }
   }
 
-  .chevron {
+  .compact-header :global(.chevron) {
     color: rgba(255, 255, 255, 0.4);
-    transition: transform 0.3s ease;
     flex-shrink: 0;
     align-self: flex-start;
     margin-top: 0.25rem;
-
-    &.open {
-      transform: rotate(180deg);
-    }
   }
 
-  .bullet-list {
-    list-style: none;
-    padding: 0;
-    margin: 0.75rem 0 0 0;
+  .visible-bullet {
+    margin-top: 0.75rem;
 
-    li {
+    :global(.bullet-list li) {
       font-size: 0.9rem;
-      color: white;
-
-      &::before {
-        content: "\2022";
-        margin-right: 0.5em;
-        color: rgba(255, 255, 255, 0.4);
-      }
-
-      b {
-        color: var(--bold-highlight);
-      }
     }
   }
 
@@ -194,9 +158,13 @@
 
   .extra-list {
     overflow: hidden;
-    margin: 0;
 
-    li {
+    :global(.bullet-list) {
+      margin: 0;
+    }
+
+    :global(.bullet-list li) {
+      font-size: 0.9rem;
       padding-top: 0.5rem;
     }
   }

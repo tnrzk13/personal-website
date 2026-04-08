@@ -1,8 +1,10 @@
 <script lang="ts">
   import GlassCard from "./GlassCard.svelte";
   import Techstack from "../Misc/Techstack.svelte";
-  import IconLink from "../Icons/IconLink.svelte";
+
   import IconGitHub from "../Icons/IconGitHub.svelte";
+  import ChevronIcon from "../Icons/ChevronIcon.svelte";
+  import { createExpandable } from "../../utils/expandable.svelte";
   import type { ProjectUrls } from "../../types";
 
   let {
@@ -23,17 +25,16 @@
     revealDelayMs?: number;
   } = $props();
 
-  let expanded = $state(false);
-  const canHover = typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
+  const { expanded, onclick, onmouseenter, onmouseleave } = createExpandable();
 </script>
 
 <div class="compact-project reveal" style="transition-delay: {revealDelayMs}ms">
   <GlassCard>
     <button
       class="compact-content"
-      onclick={() => { if (!canHover) expanded = !expanded; }}
-      onmouseenter={() => { if (canHover) expanded = true; }}
-      onmouseleave={() => { if (canHover) expanded = false; }}
+      {onclick}
+      {onmouseenter}
+      {onmouseleave}
       aria-expanded={expanded}
       type="button"
     >
@@ -52,7 +53,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit {title} project"
-              ><h3 class="compact-title">{title} <IconLink /></h3></a>
+              ><h3 class="compact-title">{title}</h3></a>
             {:else if urls.codeUrl}
               <a
                 href={urls.codeUrl}
@@ -75,17 +76,7 @@
           </div>
           <p class="compact-summary">{@html text}</p>
         </div>
-        <svg
-          class="chevron"
-          class:open={expanded}
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <ChevronIcon open={expanded} />
       </div>
       <div class="extra-content" class:open={expanded}>
         <div class="extra-inner">
@@ -202,16 +193,11 @@
     }
   }
 
-  .chevron {
+  .compact-row :global(.chevron) {
     color: rgba(255, 255, 255, 0.25);
-    transition: transform 0.3s ease;
     flex-shrink: 0;
     align-self: center;
     margin: 0 0.75rem;
-
-    &.open {
-      transform: rotate(180deg);
-    }
   }
 
   .extra-content {

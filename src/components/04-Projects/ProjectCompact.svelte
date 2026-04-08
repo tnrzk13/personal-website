@@ -2,21 +2,21 @@
   import CardProject from "../Cards/CardProject.svelte";
   import GlassCard from "../Cards/GlassCard.svelte";
   import { lazyPlayback } from "../../actions/lazyPlayback";
+  import { createExpandable } from "../../utils/expandable.svelte";
   import type { ProjectData } from "../../types";
 
   let { projectInfo, revealDelayMs = 0 }: { projectInfo: ProjectData; revealDelayMs?: number } = $props();
 
-  let expanded = $state(false);
-  const canHover = typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
+  const { expanded, onclick, onmouseenter, onmouseleave } = createExpandable();
 </script>
 
 <div class="compact-project reveal" style="transition-delay: {revealDelayMs}ms">
   <GlassCard>
     <button
       class="expand-trigger"
-      onclick={() => { if (!canHover) expanded = !expanded; }}
-      onmouseenter={() => { if (canHover) expanded = true; }}
-      onmouseleave={() => { if (canHover) expanded = false; }}
+      {onclick}
+      {onmouseenter}
+      {onmouseleave}
       aria-expanded={expanded}
       type="button"
     >
