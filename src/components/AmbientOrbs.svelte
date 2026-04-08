@@ -28,12 +28,24 @@
         { color: "rgba(5, 117, 230, 0.28)", sizePx: 320, topPercent: 70, rightPercent: 5, blurPx: 70, driftX: 75, driftY: -65, driftDurationSec: 16 },
     ];
 
+    let orbsEl: HTMLDivElement;
+    let visible = $state(false);
     let isMobile = $state(typeof window !== "undefined" && window.innerWidth < SM_SCREEN_PX);
 
     $effect(() => {
         const onResize = () => { isMobile = window.innerWidth < SM_SCREEN_PX; };
         window.addEventListener("resize", onResize);
         return () => window.removeEventListener("resize", onResize);
+    });
+
+    $effect(() => {
+        if (!orbsEl) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => { visible = entry.isIntersecting; },
+            { rootMargin: '200px' }
+        );
+        observer.observe(orbsEl);
+        return () => observer.disconnect();
     });
 
     const orbs = $derived(isMobile ? MOBILE_ORBS : DESKTOP_ORBS);
@@ -56,7 +68,7 @@
     }
 </script>
 
-<div class="ambient-orbs" aria-hidden="true">
+<div class="ambient-orbs" class:paused={!visible} aria-hidden="true" bind:this={orbsEl}>
     {#each orbs as orb, i (i)}
         <div class="orb" style={orbStyle(orb)}></div>
     {/each}
@@ -83,6 +95,10 @@
         25% { transform: translate(var(--drift-x), var(--drift-y)); }
         50% { transform: translate(calc(var(--drift-x) * -0.5), calc(var(--drift-y) * 1.2)); }
         75% { transform: translate(calc(var(--drift-x) * 0.8), calc(var(--drift-y) * -0.6)); }
+    }
+
+    .ambient-orbs.paused .orb {
+        animation-play-state: paused;
     }
 
     @media (prefers-reduced-motion: reduce) {
