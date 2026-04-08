@@ -1,7 +1,6 @@
 <script>
   import { onMount } from "svelte";
   import AnimateType from "../TextType/AnimateType.svelte";
-  import IconAnglesDown from "../Icons/IconAnglesDown.svelte";
   import { getContactParallax as getContactParallaxBase, getLayerScale, getLayerOpacity, getLayerOffsetPx } from "../../utils/parallax";
 
   let { containerHeight, titleInfo, pageHalfDown = 1000, contactTop, contactYOffset, scrollY = 0 } = $props();
@@ -102,7 +101,6 @@
           <div class="textLayer-description">
             {titleInfo.description}
           </div>
-          <div class="scrolldown"><IconAnglesDown /></div>
         </div>
       {/if}
     {:else if layer >= textLayer && layer < 11}
@@ -172,22 +170,6 @@
         right: 80%;
       }
 
-      .scrolldown {
-        font-size: min(2.5vw, 4vh);
-        padding-top: 0.5em;
-        text-align: center;
-
-        :global(svg) {
-          width: 1em;
-          height: 1em;
-          animation: scrolldownFill 2s infinite linear;
-        }
-      }
-
-      @keyframes scrolldownFill {
-        0%, 100% { fill: white; }
-        50% { fill: #c531ad; }
-      }
     }
   }
 </style>
