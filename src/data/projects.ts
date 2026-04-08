@@ -60,7 +60,6 @@ export const projList: ProjectData[] = [
     title: "SoulDog",
     imgBase: "images/04-project/souldog",
     urls: {
-      projectUrl: "https://souldog.herokuapp.com",
       codeUrl: "https://github.com/aarshio/SoulDog-CS348",
     },
     text: 'Awarded <strong>"top project of the class"</strong> in CS348: Database Systems. Full-stack webapp matching abandoned dogs with new owners.',
