@@ -31,9 +31,19 @@
     return getContactParallaxBase(layer, numImgLayers, imgHeight, yScroll * contactParallaxSpeed, contactYOffset);
   };
 
+  let rafId = 0;
   $effect(() => {
-    boolShowContact = scrollY > pageHalfDown;
-    update();
+    // Read reactive deps to subscribe
+    const currentScrollY = scrollY;
+    const currentPageHalfDown = pageHalfDown;
+
+    cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      boolShowContact = currentScrollY > currentPageHalfDown;
+      update();
+    });
+
+    return () => cancelAnimationFrame(rafId);
   });
 
   $effect(() => {
@@ -62,6 +72,7 @@
       />
     {:else if layer < textLayer}
       <img
+        loading="lazy"
         style="transform: translateY({(boolShowContact
           ? getContactParallax(layer)
           : (-scrollY * layer) / parallaxSpeedDivisor) + getLayerOffsetPx(layer)}px); opacity: {getLayerOpacity(layer)}"
@@ -90,6 +101,7 @@
       {/if}
     {:else if layer >= textLayer && layer < 11}
       <img
+        loading="lazy"
         style="transform: translateY({(boolShowContact
           ? getContactParallax(layer)
           : (-scrollY * (layer - 1)) / parallaxSpeedDivisor) + getLayerOffsetPx(layer)}px){getLayerScale(layer)}"
