@@ -180,27 +180,13 @@
         :global(svg) {
           width: 1em;
           height: 1em;
+          animation: scrolldownFill 2s infinite linear;
         }
-        background-image: linear-gradient(
-          180deg,
-          white,
-          #c531ad,
-          white,
-          #c531ad
-        );
-        -webkit-background-clip: text;
-        color: transparent;
-        background-size: 100% 300%;
-        animation: animateBg 2s infinite linear;
       }
 
-      @keyframes animateBg {
-        0% {
-          background-position: bottom;
-        }
-        100% {
-          background-position: top;
-        }
+      @keyframes scrolldownFill {
+        0%, 100% { fill: white; }
+        50% { fill: #c531ad; }
       }
     }
   }
