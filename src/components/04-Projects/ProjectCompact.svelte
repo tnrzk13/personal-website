@@ -11,10 +11,16 @@
     <div class="compact-img-container">
       {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
         <a href={projectInfo.urls.projectUrl || projectInfo.urls.codeUrl} target="_blank" rel="noopener noreferrer">
-          <img src={projectInfo.imgurl} alt={projectInfo.title} loading="lazy" />
+          <picture>
+            <source srcset="{projectInfo.imgBase}.avif" type="image/avif">
+            <img src="{projectInfo.imgBase}.png" alt={projectInfo.title} loading="lazy" />
+          </picture>
         </a>
       {:else}
-        <img src={projectInfo.imgurl} alt={projectInfo.title} loading="lazy" />
+        <picture>
+          <source srcset="{projectInfo.imgBase}.avif" type="image/avif">
+          <img src="{projectInfo.imgBase}.png" alt={projectInfo.title} loading="lazy" />
+        </picture>
       {/if}
     </div>
     <CardProject

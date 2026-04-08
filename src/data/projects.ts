@@ -1,10 +1,9 @@
-import { getImagePath } from "../utils/imagePath";
 import type { ProjectData } from "../types";
 
 export const projList: ProjectData[] = [
   {
     title: "Pneumonia Detection",
-    imgurl: getImagePath("images/04-project/pneumoniaXrayIdentifier"),
+    imgBase: "images/04-project/pneumoniaXrayIdentifier",
     urls: {
       projectUrl: "https://huggingface.co/spaces/tnrzk13/PneumoniaDetection",
       codeUrl: "https://github.com/tnrzk13/PneumoniaXrayIdentifier",
@@ -16,7 +15,7 @@ export const projList: ProjectData[] = [
   },
   {
     title: "SoulDog",
-    imgurl: getImagePath("images/04-project/souldog"),
+    imgBase: "images/04-project/souldog",
     urls: {
       projectUrl: "https://souldog.herokuapp.com",
       codeUrl: "https://github.com/aarshio/SoulDog-CS348",
@@ -28,7 +27,7 @@ export const projList: ProjectData[] = [
   },
   {
     title: "Time Series Forecasting",
-    imgurl: getImagePath("images/04-project/airpassengers"),
+    imgBase: "images/04-project/airpassengers",
     urls: {
       projectUrl: "",
       codeUrl: "https://github.com/tnrzk13/TimeSeriesAirPassengers",
@@ -40,7 +39,7 @@ export const projList: ProjectData[] = [
   },
   {
     title: "This Website!",
-    imgurl: getImagePath("images/04-project/website"),
+    imgBase: "images/04-project/website",
     urls: {
       projectUrl: "https://tnrzk13.github.io/personal-website/",
       codeUrl: "https://github.com/tnrzk13/personal-website",
@@ -51,7 +50,7 @@ export const projList: ProjectData[] = [
   },
   {
     title: "Chess",
-    imgurl: getImagePath("images/04-project/chess"),
+    imgBase: "images/04-project/chess",
     urls: {
       projectUrl: "",
       codeUrl: "https://gitfront.io/r/user-1077305/ELvfgXx6E716/chess/",
@@ -62,7 +61,7 @@ export const projList: ProjectData[] = [
   },
   {
     title: "Wumpus World",
-    imgurl: getImagePath("images/04-project/wumpusworld"),
+    imgBase: "images/04-project/wumpusworld",
     urls: {
       projectUrl: "",
       codeUrl: "https://gitfront.io/r/user-1077305/epuyjAbpQqjR/wumpusworld/",

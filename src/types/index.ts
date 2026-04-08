@@ -4,7 +4,7 @@ export interface TextPart {
 }
 
 export interface CareerCard {
-  imgurl: string;
+  imgBase: string;
   title: string;
   subtitle: string;
   datePeriod: string;
@@ -21,7 +21,7 @@ export interface ProjectUrls {
 
 export interface ProjectData {
   title: string;
-  imgurl: string;
+  imgBase: string;
   urls: ProjectUrls;
   text: string;
   techstack: string[];

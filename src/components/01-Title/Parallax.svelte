@@ -1,7 +1,6 @@
 <script>
   import { onMount } from "svelte";
   import AnimateType from "../TextType/AnimateType.svelte";
-  import { getImagePath } from "../../utils/imagePath";
   import { getContactParallax as getContactParallaxBase, getLayerScale, getLayerOpacity, getLayerOffsetPx } from "../../utils/parallax";
 
   let { containerHeight, titleInfo, pageHalfDown = 1000, contactTop, contactYOffset, scrollY = 0 } = $props();
@@ -51,23 +50,30 @@
 >
   {#each layers as layer}
     {#if layer === 0}
-      <img
-        style="transform: translateY(calc({boolShowContact
-          ? getContactParallax(layer) * 0.7
-          : (-scrollY * layer) / parallaxSpeedDivisor}px {boolShowContact
-          ? '- ' + contentBorderRadius
-          : ''})); opacity: {getLayerOpacity(layer)}"
-        src={getImagePath(`images/intro/00${layer}`)}
-        alt="parallax layer {layer}"
-      />
+      <picture>
+        <source srcset="images/intro/00{layer}.avif" type="image/avif">
+        <img
+          style="transform: translateY(calc({boolShowContact
+            ? getContactParallax(layer) * 0.7
+            : (-scrollY * layer) / parallaxSpeedDivisor}px {boolShowContact
+            ? '- ' + contentBorderRadius
+            : ''})); opacity: {getLayerOpacity(layer)}"
+          src="images/intro/00{layer}.png"
+          alt="parallax layer {layer}"
+        />
+      </picture>
     {:else if layer < textLayer}
-      <img
-        style="transform: translateY({(boolShowContact
-          ? getContactParallax(layer)
-          : (-scrollY * layer) / parallaxSpeedDivisor) + getLayerOffsetPx(layer)}px); opacity: {getLayerOpacity(layer)}"
-        src={getImagePath(`images/intro/00${layer}`)}
-        alt="parallax layer {layer}"
-      />
+      <picture>
+        <source srcset="images/intro/00{layer}.avif" type="image/avif">
+        <img
+          style="transform: translateY({(boolShowContact
+            ? getContactParallax(layer)
+            : (-scrollY * layer) / parallaxSpeedDivisor) + getLayerOffsetPx(layer)}px); opacity: {getLayerOpacity(layer)}"
+          src="images/intro/00{layer}.png"
+          alt="parallax layer {layer}"
+          loading="lazy"
+        />
+      </picture>
     {:else if layer === textLayer && scrollY <= Math.max(0, pageHalfDown)}
       {#if scrollY < containerHeight}
         <div class="textLayer">
@@ -89,13 +95,17 @@
         </div>
       {/if}
     {:else if layer >= textLayer && layer < 11}
-      <img
-        style="transform: translateY({(boolShowContact
-          ? getContactParallax(layer)
-          : (-scrollY * (layer - 1)) / parallaxSpeedDivisor) + getLayerOffsetPx(layer)}px){getLayerScale(layer)}"
-        src={getImagePath(`images/intro/00${layer - 1}`)}
-        alt="parallax layer {layer - 1}"
-      />
+      <picture>
+        <source srcset="images/intro/00{layer - 1}.avif" type="image/avif">
+        <img
+          style="transform: translateY({(boolShowContact
+            ? getContactParallax(layer)
+            : (-scrollY * (layer - 1)) / parallaxSpeedDivisor) + getLayerOffsetPx(layer)}px){getLayerScale(layer)}"
+          src="images/intro/00{layer - 1}.png"
+          alt="parallax layer {layer - 1}"
+          loading="lazy"
+        />
+      </picture>
     {/if}
   {/each}
 </div>

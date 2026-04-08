@@ -1,7 +1,7 @@
 <script>
   import GlassCard from "./GlassCard.svelte";
 
-  let { imgurl, title, subtitle, datePeriod, points, logoColor, revealDelayMs = 0 } = $props();
+  let { imgBase, title, subtitle, datePeriod, points, logoColor, revealDelayMs = 0 } = $props();
 
   let expanded = $state(false);
   const hasExtra = points.length > 1;
@@ -21,7 +21,10 @@
     >
       <div class="compact-header">
         <div class="compact-logo" style="background-image: {logoColor}">
-          <img src={imgurl} alt="company logo" loading="lazy" />
+          <picture>
+            <source srcset="{imgBase}.avif" type="image/avif">
+            <img src="{imgBase}.png" alt="company logo" loading="lazy" />
+          </picture>
         </div>
         <div class="compact-info">
           <div class="compact-titles">

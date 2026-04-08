@@ -18,10 +18,16 @@
     <div class="main-img-container" class:reversed-offset={isReversed}>
       {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
         <a href={projectInfo.urls.projectUrl || projectInfo.urls.codeUrl} target="_blank" rel="noopener noreferrer">
-          <img class="main glowing" src={projectInfo.imgurl} alt="project" loading="lazy" />
+          <picture>
+            <source srcset="{projectInfo.imgBase}.avif" type="image/avif">
+            <img class="main glowing" src="{projectInfo.imgBase}.png" alt="project" loading="lazy" />
+          </picture>
         </a>
       {:else}
-        <img class="main" src={projectInfo.imgurl} alt="project" loading="lazy" />
+        <picture>
+          <source srcset="{projectInfo.imgBase}.avif" type="image/avif">
+          <img class="main" src="{projectInfo.imgBase}.png" alt="project" loading="lazy" />
+        </picture>
       {/if}
     </div>
   </div>
