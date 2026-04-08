@@ -8,6 +8,7 @@ export function reveal(
     options?: { delay?: number; propagateTo?: string; propagateDelayMs?: number }
 ) {
     let propagateTimer: ReturnType<typeof setTimeout> | undefined;
+    let rafId: number | undefined;
 
     const revealNode = (skipDelay = false) => {
         node.classList.add(REVEAL_CLASS);
@@ -49,10 +50,21 @@ export function reveal(
 
     observer.observe(node);
 
+    // Browser restores scroll position after mount, so elements above
+    // the viewport appear in-viewport at mount time. Check after one
+    // frame when scroll restoration has completed.
+    rafId = requestAnimationFrame(() => {
+        if (node.getBoundingClientRect().bottom <= 0) {
+            revealNode(true);
+            observer.unobserve(node);
+        }
+    });
+
     return {
         destroy() {
             observer.disconnect();
             clearTimeout(propagateTimer);
+            if (rafId !== undefined) cancelAnimationFrame(rafId);
         },
     };
 }
