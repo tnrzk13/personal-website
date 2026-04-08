@@ -121,7 +121,7 @@
   {:else}
     <div class="compact-grid content-width">
       {#each filteredProjects as projectInfo, index (projectInfo.title)}
-        <ProjectCompact {projectInfo} delayMs={550 + (index + 1) * 100} />
+        <ProjectCompact {projectInfo} revealDelayMs={550 + (index + 1) * 100} />
       {/each}
     </div>
   {/if}

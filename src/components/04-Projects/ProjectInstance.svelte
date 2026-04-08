@@ -1,6 +1,7 @@
 <script>
   import CardProject from "../Cards/CardProject.svelte";
   import { SM_SCREEN_PX } from "../../utils/breakpoints";
+  import { REVEAL_STAGGER_MS } from "../../actions/reveal";
   let { projectIndex, projectInfo } = $props();
 
   let innerWidth = $state(window.innerWidth);
@@ -13,7 +14,7 @@
   });
 </script>
 
-<div class="project-container reveal" class:reversed={isReversed} style="transition-delay: {projectIndex * 100 + 550}ms">
+<div class="project-container reveal" class:reversed={isReversed} style="transition-delay: {projectIndex * REVEAL_STAGGER_MS + 550}ms">
   <div class="img-container">
     <div class="main-img-container" class:reversed-offset={isReversed}>
       {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}

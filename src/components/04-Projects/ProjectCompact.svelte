@@ -3,10 +3,10 @@
   import GlassCard from "../Cards/GlassCard.svelte";
   import type { ProjectData } from "../../types";
 
-  let { projectInfo, delayMs = 0 }: { projectInfo: ProjectData; delayMs?: number } = $props();
+  let { projectInfo, revealDelayMs = 0 }: { projectInfo: ProjectData; revealDelayMs?: number } = $props();
 </script>
 
-<div class="compact-project reveal" style="transition-delay: {delayMs}ms">
+<div class="compact-project reveal" style="transition-delay: {revealDelayMs}ms">
   <GlassCard>
     <div class="compact-img-container">
       {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
