@@ -36,7 +36,7 @@
                     }, i * STAGGER_MS);
                 });
             },
-            { threshold: 0.2 }
+            { rootMargin: "0px 0px -40% 0px", threshold: 0 }
         );
 
         observer.observe(node);
@@ -44,7 +44,7 @@
     }
 </script>
 
-<div class="metrics-strip content-width" use:countUpOnReveal>
+<div class="metrics-strip" use:countUpOnReveal>
     {#each metrics as { prefix, suffix, label }, i}
         <div class="metric">
             <span class="metric-value">
@@ -60,8 +60,15 @@
         display: flex;
         justify-content: center;
         gap: clamp(2rem, 5vw, 4rem);
-        padding: clamp(2rem, 4vw, 4rem) 0;
+        padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 3vw, 3rem);
         flex-wrap: wrap;
+        margin-top: -3.5rem;
+        background: rgba(4, 13, 33, 0.55);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-radius: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        max-width: fit-content;
     }
 
     .metric {
@@ -94,8 +101,9 @@
         .metrics-strip {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+            gap: 1.5rem 2rem;
             justify-items: center;
+            margin-top: -2rem;
         }
     }
 </style>

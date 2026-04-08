@@ -160,9 +160,15 @@
                     padding-top: clamp(6rem, 12vw, 18rem);
                 }
 
-                section, :global(.metrics-strip) {
+                section {
                     position: relative;
                     z-index: 1;
+                }
+
+                :global(.metrics-strip) {
+                    position: relative;
+                    z-index: 2;
+                    margin-inline: auto;
                 }
             }
 
