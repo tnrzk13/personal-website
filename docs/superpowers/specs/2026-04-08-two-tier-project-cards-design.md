@@ -69,18 +69,20 @@ Add expandable section to existing featured card:
 
 Same hover/click interaction pattern as compact cards.
 
-### Modified: `ProjectCompact.svelte` (container component)
+### Modified: `04-Projects.svelte` (section container)
 
 **Desktop layout:**
 - Both tiers flow in the same 2-column grid with no visual separator
 - Featured cards appear first, compact cards follow
 - Column balancing uses the same weighted algorithm as career section
   - Featured cards get higher weight than compact cards
+- Renders featured projects via `ProjectCompact` (existing) and compact projects via a new compact wrapper
 
-**Mobile layout:**
-- Single carousel mixing both card types
-- Both featured and compact cards render in the same carousel format (current card style)
-- Expand via tap
+**Mobile layout (carousel) - minimal changes:**
+- The existing carousel already renders all projects through the same `ProjectCompact` component
+- The two-tier split is a desktop-only visual distinction
+- On mobile, all cards continue to use the current full-card carousel format
+- Only change: add tap-to-expand behavior to carousel cards (no layout changes)
 
 **Filtering:**
 - Filter tabs (All/ML/Systems/Web) filter across both tiers
@@ -109,4 +111,5 @@ Reuse the career section pattern from `CardCareerCompact.svelte`:
 | `src/data/projects.ts` | Add `tier` and `oneliner` values to all projects |
 | `src/components/Cards/CardProjectCompact.svelte` | New component |
 | `src/components/Cards/CardProject.svelte` | Add expand/collapse section |
-| `src/components/04-Projects/ProjectCompact.svelte` | Two-tier grid layout, weighted columns |
+| `src/components/04-Projects/ProjectCompact.svelte` | Add expand/collapse to existing card |
+| `src/components/04-Projects.svelte` | Two-tier grid layout, weighted columns, render compact cards on desktop |
