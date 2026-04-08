@@ -4,26 +4,72 @@
   import { cardList } from "../data/career";
   import TextReveal from "./TextReveal.svelte";
 
+  const WEIGHT = { featured: 3, compact: 1 };
+  const allCards = [...cardList]
+    .sort((a, b) => {
+      if (a.tier === b.tier) return 0;
+      return a.tier === "featured" ? -1 : 1;
+    })
+    .map((card, i) => ({ ...card, sortedIndex: i }));
 
-  const featuredCards = $derived(cardList.filter(c => c.tier === "featured"));
-  const compactCards = $derived(cardList.filter(c => c.tier === "compact"));
+  const featured = allCards.filter(c => c.tier === "featured");
+  const compact = allCards.filter(c => c.tier !== "featured");
+
+  const leftColumn = [];
+  const rightColumn = [];
+  let leftWeight = 0;
+  let rightWeight = 0;
+
+  // Place featured cards first
+  for (const card of featured) {
+    if (leftWeight <= rightWeight) {
+      leftColumn.push(card);
+      leftWeight += WEIGHT[card.tier];
+    } else {
+      rightColumn.push(card);
+      rightWeight += WEIGHT[card.tier];
+    }
+  }
+
+  // Greedily assign compact cards to shorter column
+  for (const card of compact) {
+    if (leftWeight <= rightWeight) {
+      leftColumn.push(card);
+      leftWeight += WEIGHT[card.tier];
+    } else {
+      rightColumn.push(card);
+      rightWeight += WEIGHT[card.tier];
+    }
+  }
 </script>
+
+{#snippet renderCard(card, unifiedIndex)}
+  {@const revealDelayMs = unifiedIndex * 60 + 50}
+  {#if card.tier === "featured"}
+    <Card imgBase={card.imgBase} title={card.title} subtitle={card.subtitle} datePeriod={card.datePeriod} techstack={card.techstack} points={card.points} logoColor={card.logoColor} {revealDelayMs} />
+  {:else}
+    <CardCompact imgBase={card.imgBase} title={card.title} subtitle={card.subtitle} datePeriod={card.datePeriod} points={card.points} logoColor={card.logoColor} {revealDelayMs} />
+  {/if}
+{/snippet}
 
 <div id="career" class="section-inset" data-reveal-section>
   <TextReveal text="My last couple adventures" class="section-title content-width" />
   <div id="card-list-container" class="content-width">
-    <div class="card-grid">
-      {#each featuredCards as { imgBase, title, subtitle, datePeriod, techstack, points, logoColor }, i}
-        <Card {imgBase} {title} {subtitle} {datePeriod} {techstack} {points} {logoColor} revealDelayMs={i * 60 + 50} />
-      {/each}
-    </div>
-
-    <h3 class="earlier-heading reveal" style="transition-delay: {featuredCards.length * 60 + 100}ms">Earlier Experience</h3>
-
-    <div class="compact-grid">
-      {#each compactCards as { imgBase, title, subtitle, datePeriod, points, logoColor }, i}
-        <CardCompact {imgBase} {title} {subtitle} {datePeriod} {points} {logoColor} revealDelayMs={featuredCards.length * 60 + 150 + i * 60} />
-      {/each}
+    <div class="card-columns">
+      <div class="card-column">
+        {#each leftColumn as card}
+          <div class="card-slot" style="order: {card.sortedIndex}">
+            {@render renderCard(card, card.sortedIndex)}
+          </div>
+        {/each}
+      </div>
+      <div class="card-column">
+        {#each rightColumn as card}
+          <div class="card-slot" style="order: {card.sortedIndex}">
+            {@render renderCard(card, card.sortedIndex)}
+          </div>
+        {/each}
+      </div>
     </div>
   </div>
 </div>
@@ -40,32 +86,30 @@
       padding: 0;
     }
 
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+    .card-columns {
+      display: flex;
       gap: 1rem;
+    }
 
-      @media (max-width: 992px) {
-        grid-template-columns: 1fr;
+    .card-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-width: 0;
+    }
+
+    .card-slot :global(.card-container) {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 992px) {
+      .card-columns {
+        flex-direction: column;
       }
-    }
 
-    .earlier-heading {
-      font-family: "Montserrat", sans-serif;
-      font-size: 1.1rem;
-      color: rgba(255, 255, 255, 0.5);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin: 2rem 0 1.5rem 0;
-    }
-
-    .compact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-
-      @media (max-width: 992px) {
-        grid-template-columns: 1fr;
+      .card-column {
+        display: contents;
       }
     }
   }
