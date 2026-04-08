@@ -2,14 +2,14 @@
   import { testimonials } from "../../data/testimonials";
   import TestimonialCard from "./TestimonialCard.svelte";
   import TextReveal from "../TextReveal.svelte";
-  import { reveal } from "../../actions/reveal";
+
 </script>
 
-<div id="testimonials" class="section-inset" data-reveal-section use:reveal>
+<div id="testimonials" class="section-inset" data-reveal-section>
   <TextReveal text="What others say" class="section-title content-width" />
   <div class="testimonial-grid content-width">
     {#each testimonials as testimonial, i}
-      <TestimonialCard {testimonial} revealDelayMs={500 + i * 150} />
+      <TestimonialCard {testimonial} revealDelayMs={50 + i * 60} />
     {/each}
   </div>
 </div>

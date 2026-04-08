@@ -2,7 +2,7 @@
   import ProjectCompact from "./04-Projects/ProjectCompact.svelte";
   import { projList } from "../data/projects";
   import TextReveal from "./TextReveal.svelte";
-  import { reveal } from "../actions/reveal";
+
   import { SM_SCREEN_PX } from "../utils/breakpoints";
 
   const ALL_TAG = "All";
@@ -73,13 +73,13 @@
   });
 </script>
 
-<div id="projects" class="section-inset" data-reveal-section use:reveal>
+<div id="projects" class="section-inset" data-reveal-section>
   <TextReveal text="Built with passion" class="section-title content-width" />
-  <div class="description content-width reveal" style="transition-delay: 400ms">
+  <div class="description content-width reveal" style="transition-delay: 150ms">
     I can learn any technology, and I thrive on turning ideas into impactful realities. Here are some of the projects I've built on my own:
   </div>
 
-  <div class="filter-tabs content-width reveal" style="transition-delay: 500ms">
+  <div class="filter-tabs content-width reveal" style="transition-delay: 200ms">
     {#each tags as tag}
       <button
         class="filter-tab"
@@ -92,7 +92,7 @@
   </div>
 
   {#if isMobile}
-    <div class="carousel-container content-width reveal" style="transition-delay: 550ms">
+    <div class="carousel-container content-width reveal" style="transition-delay: 250ms">
       <div
         class="carousel"
         bind:this={carouselEl}
@@ -121,7 +121,7 @@
   {:else}
     <div class="compact-grid content-width">
       {#each filteredProjects as projectInfo, index (projectInfo.title)}
-        <ProjectCompact {projectInfo} delayMs={550 + (index + 1) * 100} />
+        <ProjectCompact {projectInfo} delayMs={250 + (index + 1) * 60} />
       {/each}
     </div>
   {/if}

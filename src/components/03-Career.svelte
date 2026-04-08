@@ -3,26 +3,26 @@
   import CardCompact from "./Cards/CardCareerCompact.svelte";
   import { cardList } from "../data/career";
   import TextReveal from "./TextReveal.svelte";
-  import { reveal } from "../actions/reveal";
+
 
   const featuredCards = $derived(cardList.filter(c => c.tier === "featured"));
   const compactCards = $derived(cardList.filter(c => c.tier === "compact"));
 </script>
 
-<div id="career" class="section-inset" data-reveal-section use:reveal>
+<div id="career" class="section-inset" data-reveal-section>
   <TextReveal text="My last couple adventures" class="section-title content-width" />
   <div id="card-list-container" class="content-width">
     <div class="card-grid">
       {#each featuredCards as { imgurl, title, subtitle, datePeriod, techstack, points, logoColor }, i}
-        <Card {imgurl} {title} {subtitle} {datePeriod} {techstack} {points} {logoColor} revealDelayMs={i * 120 + 500} />
+        <Card {imgurl} {title} {subtitle} {datePeriod} {techstack} {points} {logoColor} revealDelayMs={i * 60 + 50} />
       {/each}
     </div>
 
-    <h3 class="earlier-heading reveal" style="transition-delay: {featuredCards.length * 120 + 600}ms">Earlier Experience</h3>
+    <h3 class="earlier-heading reveal" style="transition-delay: {featuredCards.length * 60 + 100}ms">Earlier Experience</h3>
 
     <div class="compact-grid">
       {#each compactCards as { imgurl, title, subtitle, datePeriod, points, logoColor }, i}
-        <CardCompact {imgurl} {title} {subtitle} {datePeriod} {points} {logoColor} revealDelayMs={featuredCards.length * 120 + 700 + i * 100} />
+        <CardCompact {imgurl} {title} {subtitle} {datePeriod} {points} {logoColor} revealDelayMs={featuredCards.length * 60 + 150 + i * 60} />
       {/each}
     </div>
   </div>

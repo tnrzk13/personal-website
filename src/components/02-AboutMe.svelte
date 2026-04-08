@@ -2,14 +2,14 @@
   import Techstack from "./Misc/Techstack.svelte";
   import { getImagePath } from "../utils/imagePath";
   import TextReveal from "./TextReveal.svelte";
-  import { reveal } from "../actions/reveal";
+
 
   let techstack = ["Typescript", "React", "Python", "SQL", "Node.JS", "Firebase"];
 </script>
 
-<div id="aboutme" class="aboutMe section-inset" data-reveal-section use:reveal>
+<div id="aboutme" class="aboutMe section-inset" data-reveal-section>
   <TextReveal text="A little about me" class="section-title content-width" />
-  <div class="about-content reveal" style="transition-delay: 400ms">
+  <div class="about-content reveal" style="transition-delay: 150ms">
     <div class="text">
       <div class="description">
         <p>Full-stack engineer who owns problems end-to-end - from architecture to deployment to the revenue it drives. I thrive on growth-stage teams where shipping, reliability, and business outcomes are all on the scorecard.</p>

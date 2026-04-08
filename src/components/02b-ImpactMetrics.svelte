@@ -5,7 +5,7 @@
 
 <div class="metrics-strip content-width" data-reveal-section use:reveal>
     {#each metrics as { value, label }, i}
-        <div class="metric reveal" style="transition-delay: {200 + i * 150}ms">
+        <div class="metric reveal" style="transition-delay: {50 + i * 60}ms">
             <span class="metric-value">{value}</span>
             <span class="metric-label">{label}</span>
         </div>

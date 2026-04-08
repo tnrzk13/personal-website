@@ -14,7 +14,7 @@
   });
 </script>
 
-<div class="project-container reveal" class:reversed={isReversed} style="transition-delay: {projectIndex * 100 + 550}ms">
+<div class="project-container reveal" class:reversed={isReversed} style="transition-delay: {projectIndex * 60 + 250}ms">
   <div class="img-container">
     <div class="main-img-container" class:reversed-offset={isReversed}>
       {#snippet media(glowing)}
