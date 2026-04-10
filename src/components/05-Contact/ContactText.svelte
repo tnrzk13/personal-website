@@ -120,7 +120,7 @@
 
     .copyright {
       font-size: 0.8rem;
-      color: rgba(0, 0, 0, 0.5);
+      color: rgba(0, 0, 0, 0.7);
       margin-top: 1.5rem;
     }
 

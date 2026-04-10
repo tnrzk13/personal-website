@@ -201,7 +201,7 @@ h2.section-title::after {
   width: 83.33%;
   margin-inline: auto;
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .section-inset { width: 100%; padding-inline: 1rem; }
 }
 
@@ -209,7 +209,7 @@ h2.section-title::after {
   max-width: 75%;
   margin-inline: auto;
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .content-width { max-width: 100%; }
 }
 

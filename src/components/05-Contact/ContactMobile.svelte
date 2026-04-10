@@ -132,7 +132,7 @@
 
     .copyright {
       font-size: 0.8rem;
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.7);
       text-align: center;
       margin-top: 1.5em;
       padding-bottom: 1.5em;

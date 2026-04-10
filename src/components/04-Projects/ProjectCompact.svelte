@@ -41,7 +41,7 @@
         {/snippet}
 
         {#if projectInfo.urls.projectUrl || projectInfo.urls.codeUrl}
-          <a href={projectInfo.urls.projectUrl || projectInfo.urls.codeUrl} target="_blank" rel="noopener noreferrer">
+          <a href={projectInfo.urls.projectUrl || projectInfo.urls.codeUrl} target="_blank" rel="noopener noreferrer" aria-label="{projectInfo.title}">
             {@render media()}
           </a>
         {:else}
