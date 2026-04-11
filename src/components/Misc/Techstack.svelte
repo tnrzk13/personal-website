@@ -3,7 +3,7 @@
 </script>
 
 <span class="techstack-container">
-  {#each techstack as tech, i}{#if i > 0}<span class="sep"> &middot; </span>{/if}{tech}{/each}
+  {#each techstack as tech, i}{#if i > 0}{" · "}{/if}{tech}{/each}
 </span>
 
 <style lang="scss">
@@ -13,10 +13,5 @@
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.45);
     line-height: 1.6;
-
-    .sep {
-      margin: 0 0.15em;
-      opacity: 0.6;
-    }
   }
 </style>

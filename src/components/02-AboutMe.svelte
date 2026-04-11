@@ -9,7 +9,7 @@
   const BODY_FONT = "16px 'Inter', sans-serif";
   const LINE_HEIGHT_PX = 25.6; // 16px * 1.6 line-height
 
-  let techstack = ["Typescript", "React", "Python", "SQL", "Node.JS", "Firebase"];
+  let techstack = ["Python", "Typescript", "React", "Node.js", "SQL", "Firebase", "Svelte"];
 
   const bioParagraphs = [
     "Engineer building AI systems that go beyond chatbots - orchestrating multi-agent workflows, shipping voice-first interfaces that make websites conversational, and creating AI assistants that rival human help at scale. I care about the craft behind AI engineering: making these systems reliable, fast, and genuinely useful in production.",
