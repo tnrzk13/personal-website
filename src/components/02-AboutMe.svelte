@@ -153,9 +153,14 @@
     }
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 1023px) {
     .aboutMe {
       .about-content { max-width: 100%; }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .aboutMe {
       .text { flex: 0 0 100%; }
       .imgdiv { flex: 0 0 100%; }
     }
