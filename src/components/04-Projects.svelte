@@ -4,9 +4,9 @@
   import { projList } from "../data/projects";
   import TextReveal from "./TextReveal.svelte";
   import { balanceColumns } from "../utils/balanceColumns";
+  import { COMPACT_BREAKPOINT_PX } from "../utils/breakpoints";
 
   const ALL_TAG = "All";
-  const COMPACT_BREAKPOINT_PX = 640;
   const WEIGHT = { featured: 3, compact: 1 };
   const tags = [ALL_TAG, ...new Set(projList.flatMap((p) => p.tags))];
 

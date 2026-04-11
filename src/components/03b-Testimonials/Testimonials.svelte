@@ -29,7 +29,7 @@
     gap: 1.5rem;
     padding: 0;
 
-    @media (max-width: 992px) {
+    @media (max-width: 1023px) {
       grid-template-columns: repeat(2, 1fr);
     }
 
