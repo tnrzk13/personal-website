@@ -136,7 +136,6 @@ body {
 
 h2.section-title {
     position: relative;
-    padding-left: 0.75rem;
     font-family: "Montserrat", sans-serif;
     font-size: clamp(2.5em, 5vw, 4.5em);
     font-weight: 700;
@@ -202,7 +201,10 @@ h2.section-title::after {
   margin-inline: auto;
 }
 @media (max-width: 1023px) {
-  .section-inset { width: 100%; padding-inline: 1rem; }
+  .section-inset { width: 100%; padding-inline: 1.5rem; }
+}
+@media (max-width: 767px) {
+  .section-inset { padding-inline: 1rem; }
 }
 
 .content-width {
