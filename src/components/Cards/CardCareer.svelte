@@ -44,9 +44,6 @@
       {/if}
     </div>
     <div class="card-body">
-      <div class="techstack-wrapper">
-        <Techstack {techstack} />
-      </div>
       <BulletList points={visiblePoints} />
       {#if hasExtra}
         <div class="extra-bullets" class:open={expandable.expanded}>
@@ -55,6 +52,9 @@
           </div>
         </div>
       {/if}
+      <div class="techstack-wrapper">
+        <Techstack {techstack} />
+      </div>
     </div>
     </button>
   </GlassCard>
@@ -136,6 +136,12 @@
     .card-body {
       text-align: left;
       padding: 0;
+
+      @media (max-width: 639px) {
+        > :global(.bullet-list li:nth-child(2)) {
+          display: none;
+        }
+      }
     }
 
     .extra-bullets {
@@ -175,8 +181,5 @@
       }
     }
 
-    .techstack-wrapper {
-      margin-bottom: 1.25rem;
-    }
   }
 </style>
