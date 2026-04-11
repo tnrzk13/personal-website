@@ -1,10 +1,11 @@
 <script>
   import GlassCard from "./GlassCard.svelte";
   import BulletList from "../Misc/BulletList.svelte";
+  import Techstack from "../Misc/Techstack.svelte";
   import ChevronIcon from "../Icons/ChevronIcon.svelte";
   import { createExpandable } from "../../utils/expandable.svelte";
 
-  let { imgBase, title, subtitle, datePeriod, points, logoColor, revealDelayMs = 0 } = $props();
+  let { imgBase, title, subtitle, datePeriod, points, logoColor, techstack, revealDelayMs = 0 } = $props();
 
   const hasExtra = points.length > 1;
   const expandable = createExpandable(hasExtra);
@@ -51,6 +52,7 @@
           </div>
         </div>
       {/if}
+      <Techstack {techstack} />
     </button>
   </GlassCard>
 </div>
@@ -74,6 +76,11 @@
       &.expandable {
         cursor: pointer;
       }
+    }
+
+    :global(.techstack-container) {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
     }
   }
 
