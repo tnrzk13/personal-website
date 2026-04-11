@@ -3,17 +3,15 @@
   import CardProjectCompact from "./Cards/CardProjectCompact.svelte";
   import { projList } from "../data/projects";
   import TextReveal from "./TextReveal.svelte";
-  import { isMobile } from '../utils/mediaQuery.svelte';
   import { balanceColumns } from "../utils/balanceColumns";
 
   const ALL_TAG = "All";
+  const COMPACT_BREAKPOINT_PX = 640;
   const WEIGHT = { featured: 3, compact: 1 };
   const tags = [ALL_TAG, ...new Set(projList.flatMap((p) => p.tags))];
 
   let activeTag = $state(ALL_TAG);
-  let activeSlide = $state(0);
-  let carouselEl = $state(null);
-  let carouselHeightPx = $state(0);
+  let isNarrow = $state(window.innerWidth < COMPACT_BREAKPOINT_PX);
 
   const filteredProjects = $derived(
     activeTag === ALL_TAG ? projList : projList.filter((p) => p.tags.includes(activeTag))
@@ -21,48 +19,12 @@
 
   const columns = $derived.by(() => balanceColumns(filteredProjects, WEIGHT));
 
-  function updateCarouselHeight() {
-    if (!carouselEl) return;
-    const slides = carouselEl.querySelectorAll(".carousel-slide");
-    let maxHeight = 0;
-    slides.forEach(s => { if (s.offsetHeight > maxHeight) maxHeight = s.offsetHeight; });
-    carouselHeightPx = maxHeight;
-  }
-
-  function getSlideStepPx() {
-    if (!carouselEl) return 0;
-    const slides = carouselEl.querySelectorAll(".carousel-slide");
-    if (slides.length < 2) return slides[0]?.offsetWidth ?? 0;
-    return slides[1].offsetLeft - slides[0].offsetLeft;
-  }
-
-  function handleScroll() {
-    if (!carouselEl) return;
-    const step = getSlideStepPx();
-    if (step === 0) return;
-    activeSlide = Math.round(carouselEl.scrollLeft / step);
-  }
-
-  function scrollToSlide(index) {
-    if (!carouselEl) return;
-    const step = getSlideStepPx();
-    carouselEl.scrollTo({ left: index * step, behavior: "smooth" });
-  }
-
   $effect(() => {
-    if (!carouselEl) return;
-    const slides = carouselEl.querySelectorAll(".carousel-slide");
-    const images = Array.from(slides).flatMap(s => [...s.querySelectorAll("img")]);
-    const onLoad = () => updateCarouselHeight();
-    images.forEach(img => img.addEventListener("load", onLoad));
-    updateCarouselHeight();
-    return () => images.forEach(img => img.removeEventListener("load", onLoad));
-  });
-
-  $effect(() => {
-    activeTag;
-    activeSlide = 0;
-    if (carouselEl) carouselEl.scrollLeft = 0;
+    const mql = window.matchMedia(`(max-width: ${COMPACT_BREAKPOINT_PX - 1}px)`);
+    const onChange = (e) => { isNarrow = e.matches; };
+    mql.addEventListener("change", onChange);
+    isNarrow = mql.matches;
+    return () => mql.removeEventListener("change", onChange);
   });
 </script>
 
@@ -101,32 +63,20 @@
     {/if}
   {/snippet}
 
-  {#if isMobile.value}
-    <div class="carousel-container content-width reveal" style="transition-delay: 250ms">
-      <div
-        class="carousel"
-        bind:this={carouselEl}
-        onscroll={handleScroll}
-        style:--carousel-h="{carouselHeightPx}px"
-      >
-        {#each filteredProjects as projectInfo, index (projectInfo.title)}
-          <div class="carousel-slide">
-            <ProjectCompact {projectInfo} />
-          </div>
-        {/each}
-      </div>
-      {#if filteredProjects.length > 1}
-        <div class="carousel-dots">
-          {#each filteredProjects as _, index}
-            <button
-              class="dot"
-              class:active={activeSlide === index}
-              onclick={() => scrollToSlide(index)}
-              aria-label="Go to project {index + 1}"
-            ></button>
-          {/each}
-        </div>
-      {/if}
+  {#if isNarrow}
+    <div class="compact-stack content-width">
+      {#each filteredProjects as proj, i (proj.title)}
+        {@const revealDelayMs = 250 + (i + 1) * 60}
+        <CardProjectCompact
+          title={proj.title}
+          imgBase={proj.imgBase}
+          urls={proj.urls}
+          text={proj.text}
+          details={proj.details}
+          techstack={proj.techstack}
+          {revealDelayMs}
+        />
+      {/each}
     </div>
   {:else}
     <div class="project-columns content-width">
@@ -191,6 +141,12 @@
       }
     }
 
+    .compact-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
     .project-columns {
       display: flex;
       gap: 1.5rem;
@@ -202,59 +158,6 @@
       flex-direction: column;
       gap: 1.5rem;
       min-width: 0;
-    }
-
-    .carousel-container {
-      position: relative;
-      // Bleed past section padding so the peeking card reaches the screen edge
-      margin-right: -1rem;
-      margin-bottom: 3rem;
-    }
-
-    .carousel {
-      height: var(--carousel-h);
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      overflow-x: auto;
-      overflow-y: hidden;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      overscroll-behavior-x: contain;
-      padding-right: 1rem;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
-
-    .carousel-slide {
-      flex: 0 0 85%;
-      scroll-snap-align: start;
-    }
-
-    .carousel-dots {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: 1.25rem;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      border: none;
-      background: rgba(255, 255, 255, 0.3);
-      padding: 0;
-      cursor: pointer;
-      transition: background 0.25s ease, transform 0.25s ease;
-
-      &.active {
-        background: rgba(100, 172, 255, 0.8);
-        transform: scale(1.3);
-      }
     }
   }
 </style>
