@@ -14,7 +14,7 @@
   {#if card.tier === "featured"}
     <Card imgBase={card.imgBase} title={card.title} subtitle={card.subtitle} datePeriod={card.datePeriod} techstack={card.techstack} points={card.points} logoColor={card.logoColor} {revealDelayMs} />
   {:else}
-    <CardCompact imgBase={card.imgBase} title={card.title} subtitle={card.subtitle} datePeriod={card.datePeriod} points={card.points} logoColor={card.logoColor} {revealDelayMs} />
+    <CardCompact imgBase={card.imgBase} title={card.title} subtitle={card.subtitle} datePeriod={card.datePeriod} techstack={card.techstack} points={card.points} logoColor={card.logoColor} {revealDelayMs} />
   {/if}
 {/snippet}
 
@@ -69,7 +69,7 @@
       margin-bottom: 0;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 639px) {
       .card-columns {
         flex-direction: column;
       }
