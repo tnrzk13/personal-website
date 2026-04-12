@@ -12,9 +12,9 @@
 {#snippet renderCard(card, unifiedIndex)}
   {@const revealDelayMs = unifiedIndex * 60 + 50}
   {#if card.tier === "featured"}
-    <Card imgBase={card.imgBase} title={card.title} subtitle={card.subtitle} datePeriod={card.datePeriod} techstack={card.techstack} points={card.points} logoColor={card.logoColor} {revealDelayMs} />
+    <Card imgBase={card.imgBase} title={card.title} subtitle={card.subtitle} datePeriod={card.datePeriod} techstack={card.techstack} points={card.points} {revealDelayMs} />
   {:else}
-    <CardCompact imgBase={card.imgBase} title={card.title} subtitle={card.subtitle} datePeriod={card.datePeriod} techstack={card.techstack} points={card.points} logoColor={card.logoColor} {revealDelayMs} />
+    <CardCompact imgBase={card.imgBase} title={card.title} subtitle={card.subtitle} datePeriod={card.datePeriod} techstack={card.techstack} points={card.points} {revealDelayMs} />
   {/if}
 {/snippet}
 

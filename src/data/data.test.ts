@@ -16,7 +16,7 @@ describe("cardList (career data)", () => {
       expect(card.techstack.length).toBeGreaterThan(0);
       expect(card.points.length).toBeGreaterThan(0);
       expect(card.imgBase).toBeTruthy();
-      expect(card.logoColor).toBeTruthy();
+
     }
   });
 

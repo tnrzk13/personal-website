@@ -4,7 +4,7 @@ export const cardList: CareerCard[] = [
   {
     imgBase: "images/03-career/alethea",
     title: "Software Engineer",
-    subtitle: "Alethea",
+    subtitle: "Alethea Medical",
     datePeriod: "2024 - 2026",
     techstack: ["React", "Typescript", "Firebase", "Vite", "Typesense"],
     points: [
@@ -81,7 +81,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: "var(--gradient-terminal)",
+
     tier: "featured",
   },
   {
@@ -146,7 +146,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: "var(--gradient-sweet-morning)",
+
     tier: "featured",
   },
   {
@@ -199,7 +199,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: "var(--gradient-lunada)",
+
     tier: "compact",
   },
   {
@@ -264,7 +264,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: "var(--gradient-telegram)",
+
     tier: "featured",
   },
   {
@@ -299,7 +299,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: "var(--gradient-cosmic-fusion)",
+
     tier: "compact",
   },
   {
@@ -350,7 +350,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: "var(--gradient-amin)",
+
     tier: "compact",
   },
   {
@@ -375,7 +375,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: "var(--gradient-very-blue)",
+
     tier: "compact",
   },
   {
@@ -400,7 +400,7 @@ export const cardList: CareerCard[] = [
         },
       ],
     ],
-    logoColor: "var(--gradient-skyline)",
+
     tier: "compact",
   },
 ];

@@ -10,7 +10,6 @@ export interface CareerCard {
   datePeriod: string;
   techstack: string[];
   points: TextPart[][];
-  logoColor: string;
   tier: "featured" | "compact";
 }
 
