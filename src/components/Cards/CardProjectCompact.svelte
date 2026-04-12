@@ -64,9 +64,7 @@
               ><h3 class="compact-title">{title}</h3></a>
             {:else}
               <h3 class="compact-title">{title}</h3>
-            {/if}
-            {#if urls.codeUrl}
-              <a
+            {/if} {#if urls.codeUrl}<a
                 href={urls.codeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -140,9 +138,6 @@
   }
 
   .compact-title-row {
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
 
     a {
       text-decoration: none;
