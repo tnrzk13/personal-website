@@ -59,7 +59,6 @@
 
     /* section title gradients - same family, different temperatures */
     --gradient-title-base: linear-gradient(315deg, white 50%, #6dd5fa 80%);
-    --gradient-title-periwinkle: linear-gradient(315deg, white 50%, #c8b8e8 80%);
     --gradient-title-sky: linear-gradient(315deg, white 50%, #9bb8e8 80%);
     --gradient-title-blue: linear-gradient(315deg, white 50%, #64acff 80%);
 
