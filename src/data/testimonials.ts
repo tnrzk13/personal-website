@@ -6,7 +6,7 @@ export const testimonials: Testimonial[] = [
       "Tony took our codebase from unmaintainable to a system we could ship confidently from. His impact on revenue was measurable from month one.",
     author: "Placeholder Name",
     role: "CEO",
-    company: "Alethea",
+    company: "Alethea Medical",
   },
   {
     quote:
