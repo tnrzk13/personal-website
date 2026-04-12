@@ -71,7 +71,7 @@
         return `transform: translateY(${translateY}px); opacity: ${getLayerOpacity(layer)}`;
       }
 
-      if (layer > textLayer) {
+      if (layer >= textLayer) {
         const imgLayer = layer - 1;
         const baseTranslateY = boolShowContact
           ? getContactParallax(layer)
