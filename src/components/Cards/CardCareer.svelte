@@ -5,7 +5,7 @@
   import ChevronIcon from "../Icons/ChevronIcon.svelte";
   import { createExpandable } from "../../utils/expandable.svelte";
 
-  let { imgBase, title, subtitle, datePeriod, points, logoColor, techstack, revealDelayMs = 0 } = $props();
+  let { imgBase, title, subtitle, datePeriod, points, techstack, revealDelayMs = 0 } = $props();
 
   const VISIBLE_BULLET_COUNT = 2;
   const hasExtra = points.length > VISIBLE_BULLET_COUNT;
@@ -19,18 +19,16 @@
     <button
       class="career-content"
       class:expandable={hasExtra}
+      onpointerdown={expandable.onpointerdown}
       onclick={expandable.onclick}
-      onmouseenter={expandable.onmouseenter}
-      onmouseleave={expandable.onmouseleave}
+      onpointerenter={expandable.onpointerenter}
+      onpointerleave={expandable.onpointerleave}
       aria-expanded={hasExtra ? expandable.expanded : undefined}
       type="button"
     >
     <div class="card-header">
-      <div class="circle-logo" style="background-image: {logoColor}">
-        <picture>
-          <source srcset="{imgBase}.avif" type="image/avif">
-          <img class="logo" src="{imgBase}.png" alt="company logo" loading="lazy" />
-        </picture>
+      <div class="circle-logo">
+        <img class="logo" src="{imgBase}.png" alt="company logo" loading="lazy" />
       </div>
       <div class="header-text">
         <div class="header-titles">
@@ -171,13 +169,13 @@
       height: 4em;
       min-width: 4em;
       border-radius: 50%;
-      display: grid;
-      place-items: center;
+      overflow: hidden;
 
       img.logo {
         display: block;
-        width: 3.2em;
-        height: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
 

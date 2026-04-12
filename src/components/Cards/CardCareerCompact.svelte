@@ -5,7 +5,7 @@
   import ChevronIcon from "../Icons/ChevronIcon.svelte";
   import { createExpandable } from "../../utils/expandable.svelte";
 
-  let { imgBase, title, subtitle, datePeriod, points, logoColor, techstack, revealDelayMs = 0 } = $props();
+  let { imgBase, title, subtitle, datePeriod, points, techstack, revealDelayMs = 0 } = $props();
 
   const hasExtra = points.length > 1;
   const expandable = createExpandable(hasExtra);
@@ -16,18 +16,16 @@
     <button
       class="compact-content"
       class:expandable={hasExtra}
+      onpointerdown={expandable.onpointerdown}
       onclick={expandable.onclick}
-      onmouseenter={expandable.onmouseenter}
-      onmouseleave={expandable.onmouseleave}
+      onpointerenter={expandable.onpointerenter}
+      onpointerleave={expandable.onpointerleave}
       aria-expanded={hasExtra ? expandable.expanded : undefined}
       type="button"
     >
       <div class="compact-header">
-        <div class="compact-logo" style="background-image: {logoColor}">
-          <picture>
-            <source srcset="{imgBase}.avif" type="image/avif">
-            <img src="{imgBase}.png" alt="company logo" loading="lazy" />
-          </picture>
+        <div class="compact-logo">
+          <img src="{imgBase}.png" alt="company logo" loading="lazy" />
         </div>
         <div class="compact-info">
           <div class="compact-titles">
@@ -95,13 +93,13 @@
     height: 2.5em;
     min-width: 2.5em;
     border-radius: 50%;
-    display: grid;
-    place-items: center;
+    overflow: hidden;
 
     img {
       display: block;
-      width: 2em;
-      height: auto;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 

@@ -32,9 +32,10 @@
   <GlassCard>
     <button
       class="compact-content"
+      onpointerdown={expandable.onpointerdown}
       onclick={expandable.onclick}
-      onmouseenter={expandable.onmouseenter}
-      onmouseleave={expandable.onmouseleave}
+      onpointerenter={expandable.onpointerenter}
+      onpointerleave={expandable.onpointerleave}
       aria-expanded={expandable.expanded}
       type="button"
     >

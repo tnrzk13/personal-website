@@ -1,20 +1,22 @@
-import { canHover } from "./canHover";
-
 export function createExpandable(hasExtra: boolean = true) {
   let expanded = $state(false);
+  let lastPointerType = "";
 
   return {
     get expanded() {
       return expanded;
     },
+    onpointerdown(e: PointerEvent) {
+      lastPointerType = e.pointerType;
+    },
     onclick() {
-      if (hasExtra && !canHover) expanded = !expanded;
+      if (hasExtra && lastPointerType !== "mouse") expanded = !expanded;
     },
-    onmouseenter() {
-      if (hasExtra && canHover) expanded = true;
+    onpointerenter(e: PointerEvent) {
+      if (hasExtra && e.pointerType === "mouse") expanded = true;
     },
-    onmouseleave() {
-      if (hasExtra && canHover) expanded = false;
+    onpointerleave(e: PointerEvent) {
+      if (hasExtra && e.pointerType === "mouse") expanded = false;
     },
   };
 }
