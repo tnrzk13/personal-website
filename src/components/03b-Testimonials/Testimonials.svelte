@@ -16,7 +16,7 @@
 
 <style>
   :global(h2.section-title) {
-    background-image: var(--gradient-bora-bora);
+    background-image: var(--gradient-title-sky);
   }
 
   #testimonials {

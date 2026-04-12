@@ -79,18 +79,18 @@
         font-size: 1.5em;
         color: transparent;
         -webkit-background-clip: text;
-        background-image: var(--gradient-mint-blue-dark);
+        background-image: var(--gradient-mint-cyan);
       }
 
       .textLayer-subtitle {
         font-size: 0.65em;
         color: transparent;
         -webkit-background-clip: text;
-        background-image: var(--gradient-mint-blue-dark);
+        background-image: var(--gradient-mint-cyan);
         min-height: 2lh;
 
         :global(.blinker) {
-          background-image: var(--gradient-mint-blue-dark);
+          background-image: var(--gradient-mint-cyan);
           -webkit-background-clip: text;
         }
       }

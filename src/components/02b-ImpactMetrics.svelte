@@ -82,7 +82,7 @@
         font-family: "Montserrat", sans-serif;
         font-weight: 700;
         font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-        background-image: var(--gradient-cool-sky);
+        background-image: var(--gradient-title-base);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

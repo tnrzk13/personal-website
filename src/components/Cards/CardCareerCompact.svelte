@@ -123,7 +123,7 @@
 
       p {
         font-size: 0.9rem;
-        color: rgb(200, 200, 200);
+        color: rgba(255, 255, 255, 0.78);
         margin-top: 0.1rem;
       }
     }

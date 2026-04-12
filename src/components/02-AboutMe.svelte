@@ -123,7 +123,7 @@
 
     :global(h2.section-title) {
       margin-bottom: 0.5em;
-      background-image: var(--gradient-pink-blue);
+      background-image: var(--gradient-title-periwinkle);
     }
     .about-content {
       display: flex;

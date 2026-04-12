@@ -154,8 +154,7 @@
         bottom: 0;
         width: 0;
         height: 2px;
-        background: var(--gradient-button-red-blue);
-        background-size: 200% auto;
+        background: #6dd5fa;
         transition: width 0.3s ease;
       }
 
@@ -181,7 +180,7 @@
     }
 
     .resume-btn {
-      background-image: var(--gradient-button-red-blue);
+      background-image: var(--gradient-button);
       padding: 0.3em 2em;
       text-align: center;
       text-transform: uppercase;

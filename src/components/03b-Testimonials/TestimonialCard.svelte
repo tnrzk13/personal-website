@@ -30,7 +30,7 @@
       font-size: 3rem;
       font-family: "Georgia", serif;
       line-height: 1;
-      background-image: var(--gradient-cool-sky);
+      background-image: var(--gradient-title-base);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

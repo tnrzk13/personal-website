@@ -41,9 +41,6 @@
 </div>
 
 <style>
-  :global(h2.section-title) {
-    background-image: var(--gradient-cool-sky);
-  }
   #career {
     border: 1px solid transparent;
     height: auto;

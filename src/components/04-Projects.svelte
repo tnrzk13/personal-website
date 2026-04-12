@@ -103,7 +103,7 @@
     border: 1px solid transparent;
 
     :global(h2.section-title) {
-      background-image: var(--gradient-relaxing-red);
+      background-image: var(--gradient-title-blue);
     }
 
     .description {
@@ -136,8 +136,8 @@
 
       &.active {
         color: white;
-        border-color: rgba(100, 172, 255, 0.7);
-        background: rgba(100, 172, 255, 0.15);
+        border-color: rgba(109, 213, 250, 0.7);
+        background: rgba(109, 213, 250, 0.15);
       }
     }
 

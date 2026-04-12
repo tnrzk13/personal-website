@@ -6,3 +6,4 @@
 .playwright-mcp/
 .claude/worktrees/
 *.png
+.superpowers/

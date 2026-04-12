@@ -141,7 +141,7 @@
 
     a {
       text-decoration: none;
-      color: #64acff;
+      color: #6dd5fa;
 
       &:hover {
         filter: brightness(75%);

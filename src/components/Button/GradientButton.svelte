@@ -9,7 +9,7 @@
 <style lang="scss">
   .btn-grad {
     text-align: center;
-    background-image: var(--gradient-button-blue-purple);
+    background-image: var(--gradient-button);
     margin: 1em;
     padding: 0.75em 2.5em;
     text-align: center;
