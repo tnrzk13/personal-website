@@ -35,7 +35,7 @@
           href="mailto:{EMAIL}?subject={contactInfo.subject}"
           id="emailLink"
         >
-          <span class="btn-grad" role="button">Say Hello</span>
+          <span class="btn-grad">Say Hello</span>
         </a>
       </span>
     </div>

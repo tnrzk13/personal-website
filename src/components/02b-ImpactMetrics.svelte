@@ -55,7 +55,7 @@
     {/each}
 </div>
 
-<style lang="scss">
+<style>
     .metrics-strip {
         display: flex;
         justify-content: center;

@@ -51,7 +51,7 @@
   </div>
 </div>
 
-<style lang="scss">
+<style>
   @media (max-width: 767px) {
     .main-img-container {
       padding: 0 1em;

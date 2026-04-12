@@ -1,15 +1,15 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
   let { texts = [], delay = 60, word_complete_delay = 1000, num_loops = 1, repeat_n_words = 0, blink_time = 1000, blinker_iter_count = "infinite" } = $props();
 
   let state = $state("");
-  let timeoutId;
+  let timeoutId: ReturnType<typeof setTimeout>;
 
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
 
-  let localTexts = texts.map(t => ({ word: t, direction: "type&delete" }));
+  let localTexts = [];
 
   const showFinalText = () => {
     const lastWord = repeat_n_words > 0
@@ -70,6 +70,7 @@
   };
 
   onMount(() => {
+    localTexts = texts.map(t => ({ word: t, direction: "type&delete" }));
     if (prefersReducedMotion) {
       showFinalText();
     } else {

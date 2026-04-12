@@ -3,7 +3,7 @@
 
   let { text, tag = "h2", class: className = "" } = $props();
 
-  const words = text.split(" ");
+  const words = $derived(text.split(" "));
   const STAGGER_MS = 50;
 </script>
 

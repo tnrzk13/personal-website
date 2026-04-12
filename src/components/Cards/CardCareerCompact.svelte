@@ -7,8 +7,8 @@
 
   let { imgBase, title, subtitle, datePeriod, points, techstack, revealDelayMs = 0 } = $props();
 
-  const hasExtra = points.length > 1;
-  const expandable = createExpandable(hasExtra);
+  const hasExtra = $derived(points.length > 1);
+  const expandable = createExpandable(() => hasExtra);
 </script>
 
 <div class="compact-card reveal" style="transition-delay: {revealDelayMs}ms">

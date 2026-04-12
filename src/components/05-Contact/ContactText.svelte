@@ -46,7 +46,7 @@
   </div>
 </div>
 
-<style lang="scss">
+<style>
   #contact {
     background-color: transparent;
     z-index: 999;
@@ -67,17 +67,10 @@
 
     .textLayer-preamble {
       font-size: 1.3vw;
-      font-family: "Montserrat", sans-serif;
-    }
-
-    .textLayer-title {
-      font-family: "Montserrat", sans-serif;
     }
 
     .textLayer-description {
       font-size: 1.3vw;
-      right: 80%;
-      font-family: "Montserrat", sans-serif;
     }
 
     a#emailLink {

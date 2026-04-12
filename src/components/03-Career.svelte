@@ -40,7 +40,7 @@
   </div>
 </div>
 
-<style lang="scss">
+<style>
   :global(h2.section-title) {
     background-image: var(--gradient-cool-sky);
   }

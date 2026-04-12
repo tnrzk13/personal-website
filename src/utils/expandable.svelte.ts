@@ -1,4 +1,5 @@
-export function createExpandable(hasExtra: boolean = true) {
+export function createExpandable(hasExtra: (() => boolean) | boolean = true) {
+  const getHasExtra = typeof hasExtra === "function" ? hasExtra : () => hasExtra;
   let expanded = $state(false);
   let lastPointerType = "";
 
@@ -10,13 +11,13 @@ export function createExpandable(hasExtra: boolean = true) {
       lastPointerType = e.pointerType;
     },
     onclick() {
-      if (hasExtra && lastPointerType !== "mouse") expanded = !expanded;
+      if (getHasExtra() && lastPointerType !== "mouse") expanded = !expanded;
     },
     onpointerenter(e: PointerEvent) {
-      if (hasExtra && e.pointerType === "mouse") expanded = true;
+      if (getHasExtra() && e.pointerType === "mouse") expanded = true;
     },
     onpointerleave(e: PointerEvent) {
-      if (hasExtra && e.pointerType === "mouse") expanded = false;
+      if (getHasExtra() && e.pointerType === "mouse") expanded = false;
     },
   };
 }

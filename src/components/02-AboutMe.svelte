@@ -82,7 +82,7 @@
   {/if}
 </div>
 
-<style lang="scss">
+<style>
   @media (max-width: 767px) {
     .imgdiv {
       padding-top: 2em;

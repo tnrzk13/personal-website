@@ -50,6 +50,40 @@
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
   });
+
+  const titleScrollTranslateY = (layer) => (-scrollY * layer) / parallaxSpeedDivisor;
+
+  let layerStyles = $derived.by(() => {
+    return layers.map((layer) => {
+      if (layer === 0) {
+        const translateY = boolShowContact
+          ? getContactParallax(layer) * 0.7
+          : titleScrollTranslateY(layer);
+        const borderRadiusOffset = boolShowContact ? ` - ${contentBorderRadius}` : "";
+        return `transform: translateY(calc(${translateY}px${borderRadiusOffset})); opacity: ${getLayerOpacity(layer)}`;
+      }
+
+      if (layer < textLayer) {
+        const baseTranslateY = boolShowContact
+          ? getContactParallax(layer)
+          : titleScrollTranslateY(layer);
+        const translateY = baseTranslateY + getLayerOffsetPx(layer);
+        return `transform: translateY(${translateY}px); opacity: ${getLayerOpacity(layer)}`;
+      }
+
+      if (layer > textLayer) {
+        const imgLayer = layer - 1;
+        const baseTranslateY = boolShowContact
+          ? getContactParallax(layer)
+          : (-scrollY * imgLayer) / parallaxSpeedDivisor;
+        const translateY = baseTranslateY + getLayerOffsetPx(layer);
+        const scale = getLayerScale(layer);
+        return `transform: translateY(${translateY}px)${scale}`;
+      }
+
+      return "";
+    });
+  });
 </script>
 
 <div
@@ -64,11 +98,7 @@
       <picture>
         <source srcset="images/intro/00{layer}.avif" type="image/avif">
         <img
-          style="transform: translateY(calc({boolShowContact
-            ? getContactParallax(layer) * 0.7
-            : (-scrollY * layer) / parallaxSpeedDivisor}px {boolShowContact
-            ? '- ' + contentBorderRadius
-            : ''})); opacity: {getLayerOpacity(layer)}"
+          style={layerStyles[layer]}
           src="images/intro/00{layer}.png"
           alt="parallax layer {layer}"
         />
@@ -78,9 +108,7 @@
         <source srcset="images/intro/00{layer}.avif" type="image/avif">
         <img
           loading="lazy"
-          style="transform: translateY({(boolShowContact
-            ? getContactParallax(layer)
-            : (-scrollY * layer) / parallaxSpeedDivisor) + getLayerOffsetPx(layer)}px); opacity: {getLayerOpacity(layer)}"
+          style={layerStyles[layer]}
           src="images/intro/00{layer}.png"
           alt="parallax layer {layer}"
         />
@@ -116,9 +144,7 @@
         <source srcset="images/intro/00{layer - 1}.avif" type="image/avif">
         <img
           loading="lazy"
-          style="transform: translateY({(boolShowContact
-            ? getContactParallax(layer)
-            : (-scrollY * (layer - 1)) / parallaxSpeedDivisor) + getLayerOffsetPx(layer)}px){getLayerScale(layer)}"
+          style={layerStyles[layer]}
           src="images/intro/00{layer - 1}.png"
           alt="parallax layer {layer - 1}"
         />

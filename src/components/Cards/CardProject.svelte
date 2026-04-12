@@ -75,7 +75,7 @@
         vertical-align: -0.2em;
       }
 
-      h3, span.title {
+      h3 {
         font-family: "Montserrat", sans-serif;
         font-size: 1.5rem;
         padding: 1.5rem 0 0.5rem 0;
@@ -89,9 +89,6 @@
           color: var(--bold-highlight);
           font-weight: 600;
         }
-      }
-
-      .title-row {
       }
     }
 

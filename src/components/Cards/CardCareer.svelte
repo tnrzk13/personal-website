@@ -8,10 +8,10 @@
   let { imgBase, title, subtitle, datePeriod, points, techstack, revealDelayMs = 0 } = $props();
 
   const VISIBLE_BULLET_COUNT = 2;
-  const hasExtra = points.length > VISIBLE_BULLET_COUNT;
-  const expandable = createExpandable(hasExtra);
-  const visiblePoints = points.slice(0, VISIBLE_BULLET_COUNT);
-  const extraPoints = points.slice(VISIBLE_BULLET_COUNT);
+  const hasExtra = $derived(points.length > VISIBLE_BULLET_COUNT);
+  const expandable = createExpandable(() => hasExtra);
+  const visiblePoints = $derived(points.slice(0, VISIBLE_BULLET_COUNT));
+  const extraPoints = $derived(points.slice(VISIBLE_BULLET_COUNT));
 </script>
 
 <div class="card-container reveal" style="transition-delay: {revealDelayMs}ms">
@@ -58,7 +58,7 @@
   </GlassCard>
 </div>
 
-<style lang="scss">
+<style>
   .card-container {
     padding: 0;
     margin-bottom: 2.5rem;
