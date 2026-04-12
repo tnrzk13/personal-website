@@ -15,7 +15,8 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 1.25rem;
-    transition: 0.5s;
+    transition: background-position var(--hover-duration) var(--hover-ease),
+      scale var(--hover-duration) var(--hover-ease);
     background-size: 200% auto;
     color: white;
     box-shadow: 0 0 20px #eee;
@@ -24,14 +25,16 @@
     font-family: "Montserrat", sans-serif;
   }
 
-  .btn-grad:hover {
-    background-position: right center;
-    color: #fff;
-    text-decoration: none;
-    scale: 105%;
+  @media (hover: hover) {
+    .btn-grad:hover {
+      background-position: right center;
+      color: #fff;
+      text-decoration: none;
+      scale: var(--hover-scale);
+    }
   }
 
   .btn-grad:active {
-    filter: brightness(50%);
+    filter: brightness(var(--hover-active-brightness));
   }
 </style>

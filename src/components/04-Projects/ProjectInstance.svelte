@@ -86,7 +86,7 @@
         margin: 0;
         width: 100%;
         border-radius: 1rem;
-        transition: 0.5s;
+        transition: scale var(--hover-duration) var(--hover-ease);
       }
 
       img.glowing, video.glowing {
@@ -104,8 +104,10 @@
       margin-left: 16.67%;
     }
 
-    img:hover, video:hover {
-      scale: 105%;
+    @media (hover: hover) {
+      img:hover, video:hover {
+        scale: var(--hover-scale);
+      }
     }
   }
 

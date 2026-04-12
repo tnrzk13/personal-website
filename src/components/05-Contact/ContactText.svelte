@@ -3,7 +3,6 @@
   import IconLinkedIn from "../Icons/IconLinkedIn.svelte";
   import IconGitHub from "../Icons/IconGitHub.svelte";
   import GradientButton from "../Button/GradientButton.svelte";
-  import { magneticHover } from "../../utils/magneticHover";
   import { LINKEDIN_URL, GITHUB_URL, EMAIL, COPYRIGHT } from "../../data/contact";
   let { contactInfo, titleHeight, contactYOffset } = $props();
 </script>
@@ -25,10 +24,10 @@
     </div>
     <div class="button-container">
       <div class="icon-links">
-        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" use:magneticHover>
+        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
           <IconLinkedIn />
         </a>
-        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" use:magneticHover>
+        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
           <IconGitHub />
         </a>
       </div>
@@ -36,7 +35,6 @@
         <a
           href="mailto:{EMAIL}?subject={contactInfo.subject}"
           id="emailLink"
-          use:magneticHover
         >
           <GradientButton text="Say Hello" />
         </a>
@@ -98,11 +96,14 @@
           text-decoration: none;
           color: black;
           font-size: 3rem;
-          transition: 0.5s;
+          transition: color var(--hover-duration) var(--hover-ease),
+            scale var(--hover-duration) var(--hover-ease);
         }
-        a:hover {
-          color: white;
-          scale: 105%;
+        @media (hover: hover) {
+          a:hover {
+            color: white;
+            scale: var(--hover-scale);
+          }
         }
       }
 

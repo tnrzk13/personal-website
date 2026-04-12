@@ -1,6 +1,4 @@
 <script>
-  import { magneticHover } from "../utils/magneticHover";
-
   let { boolMobileView, scrollY = 0, titleHeight = 0 } = $props();
 
   let showNavBar = $state(true);
@@ -79,7 +77,7 @@
       <ul>
         {#each NAV_LINKS as { href, label, section }}
           <li>
-            <a class="nav-link" class:active={activeSection === section} {href} onclick={() => navOpen = false} use:magneticHover>{label}</a>
+            <a class="nav-link" class:active={activeSection === section} {href} onclick={() => navOpen = false}>{label}</a>
           </li>
         {/each}
         <li>
@@ -89,7 +87,6 @@
             href="download/Resume.pdf"
             download="TonyKwokResume"
             onclick={() => navOpen = false}
-            use:magneticHover
           >
             Resume
           </a>
@@ -132,11 +129,13 @@
     img {
       width: auto;
       height: 1.5em;
-      transition: transform 0.3s ease;
+      transition: scale var(--hover-duration) var(--hover-ease);
     }
 
-    img:hover {
-      transform: scale(1.05);
+    @media (hover: hover) {
+      img:hover {
+        scale: var(--hover-scale);
+      }
     }
 
     a.nav-link {
@@ -145,7 +144,7 @@
       font-weight: 500;
       position: relative;
       padding-bottom: 0.15em;
-      transition: color 0.3s ease;
+      transition: color var(--hover-duration) var(--hover-ease);
 
       &::after {
         content: "";
@@ -155,14 +154,16 @@
         width: 0;
         height: 2px;
         background: #6dd5fa;
-        transition: width 0.3s ease;
+        transition: width var(--hover-duration) var(--hover-ease);
       }
 
-      &:hover {
-        color: white;
+      @media (hover: hover) {
+        &:hover {
+          color: white;
 
-        &::after {
-          width: 100%;
+          &::after {
+            width: 100%;
+          }
         }
       }
 
@@ -184,22 +185,25 @@
       padding: 0.3em 2em;
       text-align: center;
       text-transform: uppercase;
-      transition: background-position 0.4s ease, scale 0.3s ease;
+      transition: background-position var(--hover-duration) var(--hover-ease),
+        scale var(--hover-duration) var(--hover-ease);
       background-size: 200% auto;
       color: white;
       border-radius: 20px;
       display: block;
     }
 
-    .resume-btn:hover {
-      background-position: right center;
-      text-decoration: none;
-      scale: 1.05;
-      color: #fff;
+    @media (hover: hover) {
+      .resume-btn:hover {
+        background-position: right center;
+        text-decoration: none;
+        scale: var(--hover-scale);
+        color: #fff;
+      }
     }
 
     .resume-btn:active {
-      filter: brightness(80%);
+      filter: brightness(var(--hover-active-brightness));
     }
 
     .resume-btn-desktop {

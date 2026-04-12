@@ -65,8 +65,10 @@
         text-decoration: none;
         color: #6dd5fa;
       }
-      a:hover {
-        filter: brightness(75%);
+      @media (hover: hover) {
+        a:hover {
+          filter: brightness(75%);
+        }
       }
 
       :global(svg) {

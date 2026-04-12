@@ -93,11 +93,14 @@
           a {
             text-decoration: none;
             color: white;
-            transition: 0.5s;
+            transition: color var(--hover-duration) var(--hover-ease),
+              scale var(--hover-duration) var(--hover-ease);
           }
-          a:hover {
-            color: black;
-            scale: 105%;
+          @media (hover: hover) {
+            a:hover {
+              color: black;
+              scale: var(--hover-scale);
+            }
           }
         }
 
@@ -107,7 +110,7 @@
           padding: 0.5em 1.75em;
           text-transform: uppercase;
           font-size: 0.85em;
-          transition: 0.5s;
+          transition: scale var(--hover-duration) var(--hover-ease);
           background-size: 200% auto;
           color: white;
           box-shadow: 0 0 20px #eee;
@@ -116,12 +119,14 @@
           display: block;
         }
 
-        .btn-grad:hover {
-          scale: 105%;
+        @media (hover: hover) {
+          .btn-grad:hover {
+            scale: var(--hover-scale);
+          }
         }
 
         .btn-grad:active {
-          filter: brightness(50%);
+          filter: brightness(var(--hover-active-brightness));
         }
       }
     }

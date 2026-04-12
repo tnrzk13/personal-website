@@ -143,8 +143,10 @@
       text-decoration: none;
       color: #6dd5fa;
 
-      &:hover {
-        filter: brightness(75%);
+      @media (hover: hover) {
+        &:hover {
+          filter: brightness(75%);
+        }
       }
     }
 
@@ -167,8 +169,10 @@
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
 
-    &:hover {
-      color: white;
+    @media (hover: hover) {
+      &:hover {
+        color: white;
+      }
     }
 
     :global(svg) {

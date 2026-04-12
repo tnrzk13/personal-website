@@ -72,6 +72,13 @@
         #4a9ae0 51%,
         #6dd5fa 100%
     );
+
+    /* hover interaction tokens */
+    --hover-scale: 1.05;
+    --hover-duration-fast: 0.25s;
+    --hover-duration: 0.3s;
+    --hover-ease: ease;
+    --hover-active-brightness: 80%;
 }
 
 * {

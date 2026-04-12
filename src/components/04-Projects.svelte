@@ -127,11 +127,15 @@
       background: transparent;
       color: rgba(255, 255, 255, 0.6);
       cursor: pointer;
-      transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+      transition: color var(--hover-duration-fast) var(--hover-ease),
+        border-color var(--hover-duration-fast) var(--hover-ease),
+        background-color var(--hover-duration-fast) var(--hover-ease);
 
-      &:hover {
-        color: white;
-        border-color: rgba(255, 255, 255, 0.4);
+      @media (hover: hover) {
+        &:hover {
+          color: white;
+          border-color: rgba(255, 255, 255, 0.4);
+        }
       }
 
       &.active {
