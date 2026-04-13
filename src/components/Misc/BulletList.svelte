@@ -25,7 +25,7 @@
     margin: 0;
 
     li {
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.6rem;
 
       &::before {
         content: "\2022";

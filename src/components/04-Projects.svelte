@@ -121,7 +121,7 @@
       font-family: "Inter", system-ui, sans-serif;
       font-size: 1.05rem;
       font-weight: 600;
-      padding: 0.45em 1.5em;
+      padding: 0.6em 1.75em;
       border-radius: 999px;
       border: 1.5px solid rgba(255, 255, 255, 0.2);
       background: transparent;

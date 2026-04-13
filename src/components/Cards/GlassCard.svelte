@@ -39,7 +39,7 @@
     height: 100%;
     border-radius: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     will-change: transform;
@@ -49,7 +49,7 @@
   @media (hover: hover) {
     .glass-card:hover {
       border-color: rgba(255, 255, 255, 0.15);
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.12);
     }
   }
 </style>

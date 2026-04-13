@@ -107,7 +107,7 @@
         h3 {
           font-family: "Montserrat", sans-serif;
           font-size: 1.25rem;
-          line-height: 1.3;
+          line-height: 1.4;
         }
         p.card-subtitle {
           font-size: 1.05rem;

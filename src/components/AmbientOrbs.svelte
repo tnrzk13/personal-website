@@ -22,10 +22,10 @@
     ];
 
     const MOBILE_ORBS: OrbConfig[] = [
-        { color: "rgba(109, 213, 250, 0.28)", sizePx: 350, topPercent: 5, leftPercent: 10, blurPx: 70, driftX: 80, driftY: 60, driftDurationSec: 15 },
-        { color: "rgba(252, 165, 241, 0.24)", sizePx: 320, topPercent: 26, rightPercent: 0, blurPx: 70, driftX: -70, driftY: 80, driftDurationSec: 18 },
-        { color: "rgba(142, 45, 226, 0.22)", sizePx: 400, topPercent: 48, leftPercent: 5, blurPx: 80, driftX: 90, driftY: -70, driftDurationSec: 20 },
-        { color: "rgba(5, 117, 230, 0.28)", sizePx: 320, topPercent: 70, rightPercent: 5, blurPx: 70, driftX: 75, driftY: -65, driftDurationSec: 16 },
+        { color: "rgba(109, 213, 250, 0.18)", sizePx: 350, topPercent: 5, leftPercent: 10, blurPx: 70, driftX: 80, driftY: 60, driftDurationSec: 15 },
+        { color: "rgba(252, 165, 241, 0.15)", sizePx: 320, topPercent: 26, rightPercent: 0, blurPx: 70, driftX: -70, driftY: 80, driftDurationSec: 18 },
+        { color: "rgba(142, 45, 226, 0.15)", sizePx: 400, topPercent: 48, leftPercent: 5, blurPx: 80, driftX: 90, driftY: -70, driftDurationSec: 20 },
+        { color: "rgba(5, 117, 230, 0.18)", sizePx: 320, topPercent: 70, rightPercent: 5, blurPx: 70, driftX: 75, driftY: -65, driftDurationSec: 16 },
     ];
 
     let orbsEl: HTMLDivElement;

@@ -166,6 +166,13 @@
   }
 
   .github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    margin: -0.5rem;
+    padding: 0.5rem;
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
 
@@ -176,8 +183,8 @@
     }
 
     :global(svg) {
-      width: 1em;
-      height: 1em;
+      width: 1.1em;
+      height: 1.1em;
     }
   }
 
@@ -185,7 +192,7 @@
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.6);
     margin: 0.35rem 0 0 0;
-    line-height: 1.4;
+    line-height: 1.6;
 
     :global(strong) {
       color: var(--bold-highlight);

@@ -68,11 +68,11 @@
       font-size: 4rem;
       color: white;
       line-height: normal;
-      padding: 2em 0.25em 0.75em 0.25em;
+      padding: 2em 1rem 0.75em 1rem;
 
       .textLayer-preamble,
       .textLayer-description {
-        font-size: 0.35em;
+        font-size: 0.4em;
       }
 
       .textLayer-title {

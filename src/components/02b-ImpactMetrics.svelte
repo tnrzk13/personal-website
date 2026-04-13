@@ -91,8 +91,8 @@
 
     .metric-label {
         font-family: "Inter", system-ui, sans-serif;
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.65);
         text-transform: uppercase;
         letter-spacing: 0.05em;
     }

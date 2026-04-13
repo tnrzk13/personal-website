@@ -51,14 +51,14 @@
 
     .card-columns {
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
     }
 
     .card-column {
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.5rem;
       min-width: 0;
     }
 

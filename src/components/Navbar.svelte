@@ -218,42 +218,42 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.5em;
-    width: 36px;
-    height: 36px;
+    padding: 0.75em;
+    width: 48px;
+    height: 48px;
     position: relative;
 
     .hamburger-line {
       display: block;
-      width: 22px;
+      width: 24px;
       height: 2px;
       background: white;
       border-radius: 2px;
       position: absolute;
-      left: 7px;
+      left: 12px;
       transition: transform 0.3s ease, opacity 0.3s ease;
 
       &:nth-child(1) {
-        top: 9px;
+        top: 15px;
       }
       &:nth-child(2) {
-        top: 17px;
+        top: 23px;
       }
       &:nth-child(3) {
-        top: 25px;
+        top: 31px;
       }
     }
 
     &.open {
       .hamburger-line:nth-child(1) {
-        top: 17px;
+        top: 23px;
         transform: rotate(45deg);
       }
       .hamburger-line:nth-child(2) {
         opacity: 0;
       }
       .hamburger-line:nth-child(3) {
-        top: 17px;
+        top: 23px;
         transform: rotate(-45deg);
       }
     }
@@ -299,7 +299,13 @@
       ul {
         flex-direction: column;
         width: 100%;
-        gap: 0.75rem;
+        gap: 1rem;
+      }
+
+      li a {
+        display: block;
+        min-height: 44px;
+        line-height: 44px;
       }
 
       &.open {

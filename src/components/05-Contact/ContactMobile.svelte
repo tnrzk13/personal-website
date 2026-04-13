@@ -83,14 +83,19 @@
         .icon-links {
           display: flex;
           align-items: center;
-          gap: 0.75rem;
+          gap: 1rem;
 
           :global(svg) {
-            width: 1em;
-            height: 1em;
+            width: 1.25em;
+            height: 1.25em;
           }
 
           a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 44px;
+            min-height: 44px;
             text-decoration: none;
             color: white;
             transition: color var(--hover-duration) var(--hover-ease),

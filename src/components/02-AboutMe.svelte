@@ -142,7 +142,7 @@
       box-sizing: border-box;
 
       p {
-        margin: 0 0 1em 0;
+        margin: 0 0 1.5em 0;
       }
 
       p:last-child {
